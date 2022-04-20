@@ -1,0 +1,227 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: 20px 0;
+  z-index: 10;
+  transition: all .1s linear, padding 0s !important;
+  //transform: translateY(15px);
+
+  &.scroll {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 1);
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 1);
+  }
+
+  @media #{$tablet-big-screen} {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 1);
+    padding: 7px 0;
+  }
+
+  $scroll: '.header.scroll';
+  $active: '.header.active';
+
+  &__block {
+    @include flex-row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 150px;
+    height: 55px;
+    background: url(../../../img/logo.svg);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      width: 79px;
+      height: 30px;
+    }
+  }
+
+  &__toggle-button {
+    display: none;
+
+    @media #{$tablet-big-screen} {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      width: 30px;
+      height: 30px;
+
+      &:before,
+      &:after {
+        @include after-absolute;
+        background: $white;
+      }
+
+      &:before {
+        width: 30px;
+        height: 30px;
+        mask: url(../../../img/menu.svg);
+        -webkit-mask: url(../../../img/menu.svg);
+        @include mask-contain-center;
+      }
+
+      &:after {
+        @include absolute-center;
+        width: 24px;
+        height: 24px;
+        background: $white;
+        mask: url(../../../img/close.svg);
+        -webkit-mask: url(../../../img/close.svg);
+        @include mask-contain-center;
+        mask-position: right center !important;
+        -webkit-mask-position: right center !important;
+        opacity: 0;
+      }
+
+      &.active:before {
+        opacity: 0
+      }
+      &.active:after {
+        opacity: 1
+      }
+
+
+    }
+  }
+
+
+  &__item {
+    @include flex-row-center;
+
+    @media #{$tablet-big-screen} {
+      position: absolute;
+      left: -15px;
+      top: -7px;
+      width: calc(100% + 30px);
+      @include flex-column-center;
+      height: 100vh;
+      background: $black;
+      z-index: 15;
+      opacity: 0;
+      visibility: hidden;
+
+      #{$active} & {
+        opacity: 1;
+        visibility: visible;
+      }
+
+    }
+  }
+
+  &__menu {
+    @include flex-row-center;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__menu-item {
+    color: $white;
+    margin-left: 4vw;
+    position: relative;
+    padding-bottom: 6px;
+    padding-top: 10px;
+    cursor: pointer;
+
+    @media #{$tablet-big-screen} {
+      margin-left: 0;
+      font-size: 20px;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background: $white;
+      transform: scaleX(0);
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    &.active:after,
+    &:hover:after {
+      transform: scaleX(1);
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+    color: $white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 90px;
+
+    @media #{$tablet-big-screen} {
+      margin-left: 0;
+      margin-top: 35px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: $green;
+    }
+
+    &:hover:after {
+      background: $green;
+    }
+
+    &:after {
+      @include after-absolute;
+      background: $white;
+      width: 16px;
+      height: 16px;
+      mask: url(../../../img/phone.svg);
+      -webkit-mask: url(../../../img/phone.svg);
+      @include mask-contain-center;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__lead {
+    background: $white;
+    height: 56px;
+    @include flex-row-center;
+    white-space: nowrap;
+    font-weight: 600;
+    padding: 0 39px;
+    font-size: 15px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-left: 55px;
+
+    @media #{$tablet-big-screen} {
+      @include margin-auto;
+      margin-top: 50px;
+    }
+
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+
+}

@@ -1,0 +1,60 @@
+//-------------------
+//Цвета
+$black: #000000 !default;
+$white: #ffffff;
+
+$green: #5ae596;
+$magenta: #3a2f6a;
+$magenta-light: #9288ba;
+$red: #ca2d0e;
+$red-light: #eb2903;
+$gray: #444444;
+$gray-light: #848484;
+$blue-light: #f0f7fd;
+$blue: #589cdd;
+
+
+$side-padding: 15px;
+
+//Сглаживание
+$main-transition: all .2s ease-in;
+
+//-------------------
+//Переменные селекта
+//Параметры кнопки
+$select-button-height: 56;
+$select-button-width: 100%;
+$select-button-min-width: 58;
+$select-button-border-radius: 28;
+$select-button-padding-left: 20;
+$select-button-padding-right: 20;
+$select-button-border-width: 1;
+$select-button-border-color: rgba(255,255,255,.0);
+$select-button-background: rgba(255,255,255,.2);
+
+//Параметры текста
+$select-font-size: 14;
+$select-font-weight: 300;
+$select-font-color: $white;
+$select-font-placeholder-color: rgba(255,255,255,.4);
+$select-font-placeholder-active-color: $black;
+
+//Параметры иконки
+$select-icon-image-url: '(../../../img/small-arrow.svg)';
+$select-icon-image-width: 10;
+$select-icon-image-height: 6;
+$select-icon-right: 10;
+
+//Параметры враппера меню
+$select-menu-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+$select-menu-max-height: 200;
+
+//Параметры пунктов меню
+$select-inner-button-background: #eaeaea;
+$select-inner-button-color: #000000;
+
+@mixin select-button-active {
+  //background: #929292!important;
+  background: $white!important;
+  color: #000 !important;
+}

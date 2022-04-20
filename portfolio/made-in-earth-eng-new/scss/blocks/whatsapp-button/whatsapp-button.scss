@@ -1,0 +1,48 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.whatsapp-button {
+  //display: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  background: url(../../../img/whatsapp.svg);
+  @include background-contain-center;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+
+  @keyframes whatsapp {
+    0% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.2) rotate(-15deg);
+    }
+    80% {
+      transform: scale(1.2) rotate(15deg);
+    }
+    85% {
+      transform: scale(1.2) rotate(-15deg);
+    }
+    90% {
+      transform: scale(1.2) rotate(15deg);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  animation: whatsapp 2s linear;
+  animation-iteration-count: infinite;
+
+  @media #{$tablet-big-screen} {
+    display: block;
+  }
+
+}

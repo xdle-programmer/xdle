@@ -1,0 +1,66 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  width: 65%;
+  letter-spacing: 1px;
+
+  @media #{$tablet-big-screen} {
+    font-size: 24px;
+    width: 100%;
+    letter-spacing: normal;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &--center {
+    text-align: center;
+    width: 100%;
+  }
+
+  &--small {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      @include after-absolute;
+      width: 100px;
+      height: 30px;
+      background: $green;
+      left: -30px;
+      transform: translateX(-100%) translateY(-50%);
+      top: 50%;
+
+      @media #{$tablet-big-screen} {
+        left: 0;
+        top: 2px;
+        transform: none;
+        width: 70px;
+        height: 20px;
+
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 10px;
+      line-height: 24px;
+      font-size: 16px;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 80px;
+      }
+    }
+  }
+
+}

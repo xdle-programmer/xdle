@@ -1,0 +1,79 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+html {
+  overflow-x: hidden;
+  transition: none!important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @include font-default('');
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  background: $black;
+  transition: none!important;
+
+  &.open-portfolio-modal {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+#test {
+  width: 50px;
+  height: 100px;
+  position: fixed;
+  right: 0;
+  top: calc(50vh - 50px);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  z-index: 10000;
+
+  & > div {
+    font-size: 12px;
+    color: $white;
+    @include flex-row-center;
+    background: red;
+  }
+}
+
+select {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button, input, textarea {
+  border: none;
+  background: none;
+}
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
