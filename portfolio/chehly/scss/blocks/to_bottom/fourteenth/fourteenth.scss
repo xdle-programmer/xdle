@@ -1,0 +1,66 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.fourteenth {
+  padding-bottom: 120px;
+
+  @media #{$tablet-small-screen} {
+    padding-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  &__block {
+  }
+  &__title {
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
+  &__list-item {
+    padding: 0 40px;
+    text-align: center;
+  }
+  &__list-item-title {
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $red-dark;
+  }
+
+  &__list-item-img {
+    margin: 30px auto;
+    width: 112px;
+    height: 112px;
+    box-shadow: 0 0 50px 7px rgba(88, 15, 15, 0.75);
+    border-radius: 50%;
+    @include background-cover-center;
+
+    @media #{$tablet-small-screen} {
+      margin: 15px auto;
+    }
+  }
+
+  &__list-item-text {
+    color: $white;
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: center;
+
+    @media #{$tablet-small-screen} {
+      margin-top: 0;
+    }
+  }
+}

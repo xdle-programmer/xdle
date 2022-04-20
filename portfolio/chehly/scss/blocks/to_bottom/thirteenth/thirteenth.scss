@@ -1,0 +1,208 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.thirteenth {
+  @include flex-column-center;
+  padding-bottom: 120px;
+
+  @media #{$tablet-small-screen} {
+    padding-bottom: 90px;
+    padding-top: 90px;
+  }
+
+  &__title {
+    display: inline-block;
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background: $red-dark;
+    padding: 5px 30px;
+    @include margin-auto;
+    margin-bottom: 20px;
+  }
+  &__list {
+    position: relative;
+    height: 550px;
+    width: 100%;
+
+    @media #{$tablet-small-screen} {
+      height: auto;
+    }
+  }
+  &__list-item {
+    position: absolute;
+    @include flex-row;
+    width: 330px;
+
+    @media #{$tablet-small-screen} {
+      position: relative;
+      width: 100%;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      transform: none !important;
+      margin-bottom: 30px;
+    }
+
+    &:nth-of-type(1) {
+      top: 0;
+      @include flex-column-center;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:nth-of-type(2) {
+      top: 155px;
+      @include flex-row;
+      left: 30px;
+    }
+    &:nth-of-type(3) {
+      top: 155px;
+      @include flex-row;
+      right: 30px;
+    }
+    &:nth-of-type(4) {
+      bottom: 180px;
+      @include flex-row;
+      left: 30px;
+    }
+    &:nth-of-type(5) {
+      bottom: 180px;
+      @include flex-row;
+      right: 30px;
+    }
+    &:nth-of-type(6) {
+      bottom: 0;
+      @include flex-column-center;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  $item-1: '.thirteenth__list-item:nth-of-type(1)';
+  $item-2: '.thirteenth__list-item:nth-of-type(2)';
+  $item-3: '.thirteenth__list-item:nth-of-type(3)';
+  $item-4: '.thirteenth__list-item:nth-of-type(4)';
+  $item-5: '.thirteenth__list-item:nth-of-type(5)';
+  $item-6: '.thirteenth__list-item:nth-of-type(6)';
+
+  &__list-item-icon {
+    width: 38px;
+    height: 48px;
+    @include background-contain-center;
+    margin: 5px 15px;
+
+    @media #{$tablet-small-screen} {
+      margin-bottom: 15px;
+    }
+
+    #{$item-1} & {
+      order: 2;
+
+      @media #{$tablet-small-screen} {
+        order: 1;
+      }
+    }
+  }
+  &__list-item-desc {
+
+    @media #{$tablet-small-screen} {
+      order: 2 !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    #{$item-1} & {
+      order: 1;
+
+    }
+
+    #{$item-2} & {
+      width: calc(100% - 58px);
+      order: -1;
+      text-align: right;
+    }
+
+    #{$item-3} & {
+      width: calc(100% - 58px);
+    }
+
+    #{$item-4} & {
+      width: calc(100% - 58px);
+      order: -1;
+      text-align: right;
+    }
+
+    #{$item-5} & {
+      width: calc(100% - 58px);
+    }
+
+  }
+  &__list-item-desc-title {
+    font-size: 16px;
+    color: $red-dark;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__list-item-desc-text {
+    color: #010101;
+    font-size: 16px;
+  }
+
+  &__list-img {
+    position: absolute;
+    @include absolute-center;
+    width: 260px;
+    height: 260px;
+    @include background-contain-center;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #a92e2f;
+      opacity: 0.25;
+      border-radius: 50%;
+    }
+
+    @media #{$tablet-small-screen} {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      margin: 30px auto;
+      margin-top: 50px;
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 33px;
+    margin-top: 20px;
+
+    &:before {
+      @include after-absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: url(../../../img/thirteenth_check.webp);
+      @include background-contain-center;
+      width: 23px;
+      height: 31px;
+    }
+  }
+}

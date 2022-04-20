@@ -1,0 +1,80 @@
+.fifteenth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 120px; }
+  @media (max-width: 1023px) {
+    .fifteenth {
+      padding-top: 20px;
+      padding-bottom: 70px; } }
+  .fifteenth__title {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background: #a92e2f;
+    padding: 5px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; }
+  .fifteenth__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .fifteenth__list-wrapper {
+    width: 810px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 1023px) {
+      .fifteenth__list-wrapper {
+        width: 100%; } }
+  .fifteenth__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .fifteenth__list .owl-dots {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+    .fifteenth__list .owl-dot {
+      width: 17px;
+      height: 17px;
+      border: 1px solid #a92e2f !important;
+      background-color: #ffffff !important;
+      border-radius: 50%;
+      margin: 8px;
+      cursor: pointer;
+      position: relative; }
+      .fifteenth__list .owl-dot:after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #a92e2f;
+        opacity: 0; }
+      .fifteenth__list .owl-dot:hover, .fifteenth__list .owl-dot.active {
+        background-color: #a92e2f !important; }
+      .fifteenth__list .owl-dot:hover:after, .fifteenth__list .owl-dot.active:after {
+        opacity: 0.3; }
+  .fifteenth__list-item {
+    width: 210px;
+    height: 301px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 1023px) {
+      .fifteenth__list-item {
+        margin-left: auto;
+        margin-right: auto; } }

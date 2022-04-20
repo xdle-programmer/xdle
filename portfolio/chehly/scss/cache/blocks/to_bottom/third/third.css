@@ -1,0 +1,130 @@
+.third {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 120px; }
+  .third__title {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background: #a92e2f;
+    padding: 5px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; }
+  .third__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px; }
+  .third__table {
+    width: 645px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    border-radius: 5px; }
+    @media (max-width: 1023px) {
+      .third__table {
+        width: 100%;
+        grid-template-columns: 175px calc(100% - 175px); } }
+  .third__table-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .third__table-carousel .owl-prev,
+    .third__table-carousel .owl-next {
+      position: absolute;
+      width: 11px !important;
+      height: 29px !important;
+      background: url(../../../img/arrow_side.png) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      top: 50%;
+      transform: translateY(-50%) scaleX(-1); }
+      .third__table-carousel .owl-prev:focus, .third__table-carousel .owl-prev:active,
+      .third__table-carousel .owl-next:focus,
+      .third__table-carousel .owl-next:active {
+        outline: none !important; }
+    .third__table-carousel .owl-next {
+      left: auto;
+      right: 10px;
+      transform: translateY(-50%); }
+    .third__table-carousel .owl-prev {
+      right: auto;
+      left: 10px;
+      transform: translateY(-50%) scaleX(-1); }
+    .third__table-carousel .owl-prev span,
+    .third__table-carousel .owl-next span {
+      display: none; }
+  @media (max-width: 1023px) {
+    .third__table-col {
+      margin-top: 25px; } }
+  .third__table-col.selected {
+    border: 1px solid #ef2526;
+    box-shadow: 0 0 44px 2px rgba(169, 46, 47, 0.35);
+    z-index: 1;
+    border-radius: 5px; }
+    @media (max-width: 1023px) {
+      .third__table-col.selected {
+        margin-top: 0; } }
+  .third__table-cell {
+    height: 53px;
+    border-bottom: 1px solid transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px; }
+    .third__table-cell:nth-of-type(1) {
+      background: linear-gradient(to top, #000000 0%, #565656 100%); }
+    .third__table-cell:nth-of-type(2), .third__table-cell:nth-of-type(4) {
+      background: #e4e4e4;
+      color: #000; }
+    .third__table-cell:nth-of-type(3), .third__table-cell:nth-of-type(5) {
+      background: #f1f0f0;
+      color: #000; }
+    .third__table-col.selected .third__table-cell:nth-of-type(1) {
+      background: linear-gradient(to top, #a92e2f 0%, #f74243 100%);
+      height: 70px;
+      margin-top: -17px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+      @media (max-width: 1023px) {
+        .third__table-col.selected .third__table-cell:nth-of-type(1) {
+          margin-top: 0; } }
+    .third__table-col.selected .third__table-cell:nth-of-type(2),
+    .third__table-col.selected .third__table-cell:nth-of-type(3),
+    .third__table-col.selected .third__table-cell:nth-of-type(4),
+    .third__table-col.selected .third__table-cell:nth-of-type(5),
+    .third__table-col.selected .third__table-cell:nth-of-type(6) {
+      background: #fff;
+      border-bottom: 1px solid rgba(239, 37, 38, 0.22);
+      color: #ef2526; }
+  .third__table-col:nth-of-type(1) .third__table-cell:nth-of-type(1) {
+    border-top-left-radius: 5px; }
+  .third__table-carousel .third__table-col:nth-of-type(1) .third__table-cell:nth-of-type(1) {
+    border-top-left-radius: 0; }
+  .third__table-col:nth-last-of-type(1) .third__table-cell:nth-of-type(1) {
+    border-top-right-radius: 5px; }
+  .third__table-cell-button {
+    width: 90%;
+    padding: 7px 0; }
+    .third__table-col.selected .third__table-cell-button:after {
+      opacity: 1; }
+  .third__desc {
+    margin-top: 20px;
+    width: 678px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center; }
+    @media (max-width: 1023px) {
+      .third__desc {
+        width: 100%; } }

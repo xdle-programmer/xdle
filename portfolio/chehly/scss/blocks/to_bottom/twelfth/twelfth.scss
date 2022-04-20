@@ -1,0 +1,81 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.twelfth {
+  color: $white;
+  text-align: center;
+  padding-bottom: 100px;
+
+  @media #{$tablet-small-screen} {
+    padding-bottom: 0;
+  }
+
+  &__block {
+    position: relative;
+    @include flex-column-center;
+  }
+
+  &__img {
+    position: absolute;
+    width: 292px;
+    height: 413px;
+    background: url(../../../img/chair_2.webp);
+    @include background-contain-center;
+    right: 13px;
+    bottom: -105px;
+    filter: drop-shadow(0 0px 21px rgba(169, 46, 47, 0.5));
+
+    @media #{$tablet-small-screen} {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      order: 5;
+      margin-top: 20px;
+      margin-bottom: -80px;
+    }
+  }
+
+  &__title {
+    width: 494px;
+    color: $red;
+    font-size: 24px;
+    margin-bottom: 15px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+  &__subtitle {
+    width: 400px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: $white;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    color: $red;
+    font-size: 24px;
+    margin-bottom: 15px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      font-size: 24px;
+      order: 4;
+    }
+  }
+
+  &__button {
+    padding: 10px 25px;
+    margin-bottom: 20px;
+
+    @media #{$tablet-small-screen} {
+      order: 3;
+    }
+  }
+
+}

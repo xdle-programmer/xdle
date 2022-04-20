@@ -1,0 +1,98 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.menu {
+
+  @media #{$tablet-small-screen} {
+    position: relative;
+  }
+
+  &__button {
+
+    @media #{$tablet-small-screen} {
+      background: url(../../../img/menu.svg);
+      @include background-contain-center;
+      width: 71px;
+      height: 19px;
+      @include margin-auto;
+      margin-top: 12px;
+    }
+
+  }
+
+  &__items {
+    color: $white;
+    @include flex-row-center;
+    margin-top: 35px;
+
+    @media #{$tablet-small-screen} {
+      //position: absolute;
+      //top: 0;
+      //left: 0;
+      //width: 100%;
+      @include flex-column-center;
+      margin-top: 0;
+      //transform-origin: top;
+      //transform: scaleY(0);
+      //visibility: hidden;
+      display: none;
+
+      &.active {
+        //transform: scaleY(1);
+        //visibility: visible;
+        display: flex;
+      }
+
+    }
+  }
+  &__item {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    position: relative;
+    margin-right: 28px;
+    cursor: pointer;
+
+    &:after {
+      @include after-absolute;
+      top: 1px;
+      right: -13px;
+      background: #7b7a7a;
+      width: 2px;
+      height: 13px;
+    }
+
+    &:nth-last-of-type(1):after {
+      display: none;
+    }
+
+    &:before {
+      @include after-absolute;
+      width: 100%;
+      bottom: -5px;
+      height: 2px;
+      background: $red;
+      box-shadow: 0 0 14px 1px rgba(169, 46, 47, 0.75);
+      opacity: 0;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-top: 10px;
+      font-size: 20px;
+      margin-right: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+  }
+
+}

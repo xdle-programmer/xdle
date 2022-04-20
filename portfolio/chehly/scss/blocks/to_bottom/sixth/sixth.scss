@@ -1,0 +1,117 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.sixth {
+
+  &__block {
+    color: $white;
+    @include flex-column-center;
+    padding-bottom: 120px;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background: $red-dark;
+    padding: 5px 30px;
+    @include margin-auto;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+  }
+  &__desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+  }
+  &__desc-img {
+    height: 100%;
+    @include background-cover-center;
+    box-shadow: 0 0 45px 9px rgba(169, 46, 47, 0.75);
+
+    @media #{$tablet-small-screen} {
+      height: 214px;
+    }
+  }
+  &__desc-info {
+  }
+  &__desc-info-title {
+    font-size: 18px;
+    text-align: center;
+    @include flex-column-center;
+  }
+  &__desc-info-table {
+    margin-top: 25px;
+  }
+  &__desc-info-table-header {
+    background-image: linear-gradient(to top, #000000 0%, #565656 100%);
+    @include flex-row-center;
+    padding: 10px;
+  }
+  &__desc-info-table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background: #e4e4e4;
+    color: $black;
+
+    &:nth-of-type(odd) {
+      background: $white;
+    }
+  }
+  &__desc-info-table-cell {
+    min-height: 53px;
+    @include flex-row-center;
+    text-align: center;
+    padding: 10px;
+  }
+  &__list {
+    margin-top: 35px;
+  }
+  &__list-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 400;
+    color: $white;
+
+    &:after {
+      @include after-absolute;
+      width: 18px;
+      height: 20px;
+      background: url(../../../img/check.webp);
+      @include background-contain-center;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media #{$tablet-small-screen} {
+        left: 15px;
+        top: 0;
+        transform: translateY(0);
+      }
+
+    }
+
+    @media #{$tablet-small-screen} {
+      text-align: center;
+    }
+
+  }
+}

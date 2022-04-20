@@ -1,0 +1,138 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.footer {
+  background: #020202;
+  color: $white;
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    height: 173px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      height: auto;
+      padding: 25px 0;
+      grid-gap: 25px;
+    }
+  }
+
+  &__logo-wrapper {
+    @include flex-column-center;
+    align-items: flex-start;
+
+    @media #{$tablet-small-screen} {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    @include flex-column-center;
+    width: 170px;
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  &__logo-text {
+    color: $white;
+    text-align: center;
+  }
+  &__logo-ip {
+    color: #fdfbfb;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  &__logo-link {
+    color: $red;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  &__callback {
+    @include flex-column-center;
+
+    @media #{$tablet-small-screen} {
+      order: 3;
+    }
+  }
+  &__callback-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &__callback-link {
+    font-size: 21px;
+    @include flex-row;
+    align-items: center;
+    color: $red;
+
+    &:before {
+      content: '';
+      display: block;
+      margin-right: 10px;
+      background: url(../../../img/phone_icon.webp);
+      @include background-contain-center;
+      width: 20px;
+      height: 20px;
+
+    }
+  }
+  &__callback-desc {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  &__callback-button {
+    padding: 10px;
+  }
+  &__contacts {
+    @include flex-column;
+    align-items: flex-end;
+
+    @media #{$tablet-small-screen} {
+      align-items: center;
+    }
+  }
+  &__contacts-address {
+    margin-bottom: 10px;
+  }
+  &__contacts-phone {
+    margin-bottom: 10px;
+    color: $red;
+    font-size: 16px;
+    @include flex-row-center;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 73px;
+      height: 20px;
+      background: url(../../../img/messengers.webp);
+      @include background-contain-center;
+      margin-right: 10px;
+    }
+  }
+  &__contacts-worktime {
+    margin-bottom: 10px;
+  }
+  &__contacts-social {
+    @include flex-row;
+
+    @media #{$tablet-small-screen} {
+      @include flex-row-center;
+    }
+  }
+  &__contacts-social-name {
+  }
+  &__contacts-social-img {
+    background: url(../../../img/vk.png);
+    @include background-contain-center;width: 24px;
+    height: 14px;
+    margin-left: 10px;
+  }
+}

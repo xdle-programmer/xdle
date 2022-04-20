@@ -1,0 +1,22 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.zoom {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    @include after-absolute;
+    @include absolute-center;
+    width: 26px;
+    height: 26px;
+    background: url(../../../img/zoom.png);
+    @include background-contain-center;
+  }
+
+  &--big:after {
+    width: 39px;
+    height: 39px;
+  }
+}
