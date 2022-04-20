@@ -1,0 +1,173 @@
+.footer {
+  background: #000000;
+  color: #ffffff;
+  padding-top: 47px; }
+  .footer__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #838489;
+    padding-bottom: 18px; }
+    @media (max-width: 1279px) {
+      .footer__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; } }
+  .footer__menu-item {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 29px;
+    text-decoration: underline; }
+  @media (max-width: 1279px) {
+    .footer__buttons {
+      order: -1;
+      margin-bottom: 30px; } }
+  .footer__buttons-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 44px; }
+  .footer__buttons-contact-item {
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #838489;
+    padding: 10px 23px;
+    padding-left: 52px;
+    margin-left: 18px;
+    white-space: nowrap;
+    border-radius: 5px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer; }
+    @media (max-width: 1279px) {
+      .footer__buttons-contact-item {
+        margin-right: 10px;
+        margin-left: 0;
+        padding: 10px 15px;
+        padding-left: 40px; } }
+    .footer__buttons-contact-item:hover {
+      border-color: #ffffff; }
+    .footer__buttons-contact-item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 13px;
+      background: #ffffff; }
+      @media (max-width: 1279px) {
+        .footer__buttons-contact-item:after {
+          left: 7px; } }
+    .footer__buttons-contact-item--chat:after {
+      mask: url(../../../img/icons/chat.svg);
+      -webkit-mask: url(../../../img/icons/chat.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .footer__buttons-contact-item--mail:after {
+      mask: url(../../../img/icons/mail.svg);
+      -webkit-mask: url(../../../img/icons/mail.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+  .footer__app-title {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+    margin-bottom: 20px; }
+    @media (max-width: 1279px) {
+      .footer__app-title {
+        text-align: left; } }
+  .footer__app-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end; }
+    @media (max-width: 1279px) {
+      .footer__app-buttons {
+        justify-content: flex-start; } }
+  .footer__app-button {
+    background: #3d3e48;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-left: 31px;
+    position: relative; }
+    @media (max-width: 1279px) {
+      .footer__app-button {
+        margin-left: 0;
+        margin-right: 30px; } }
+    .footer__app-button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffff;
+      width: 32px;
+      height: 32px; }
+    .footer__app-button--apple:after {
+      mask: url(../../../img/icons/apple.svg);
+      -webkit-mask: url(../../../img/icons/apple.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .footer__app-button--android:after {
+      mask: url(../../../img/icons/googlepay.svg);
+      -webkit-mask: url(../../../img/icons/googlepay.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+  .footer__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'logo links' 'copyright settings';
+    padding: 33px 0;
+    padding-bottom: 45px; }
+  .footer__logo {
+    grid-area: logo;
+    margin-top: 13px; }
+  .footer__copyright {
+    grid-area: copyright;
+    font-size: 14px;
+    margin-top: 10px; }
+  .footer__links {
+    grid-area: links;
+    text-align: right; }
+  .footer__link {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-bottom: 30px; }
+  .footer__interface-settings {
+    grid-area: settings;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end; }
+  .footer__interface-settings-item {
+    margin-left: 30px; }

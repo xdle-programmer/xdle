@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.services {
+
+  &__title {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    width: calc(50% - 4px);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+  &__item-img-block {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    @include flex-row;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .0) 15%, rgba(0, 0, 0, .0) 85%, rgba(0, 0, 0, .2) 100%);
+    }
+  }
+  &__item-img {
+    height: 100%;
+    width: 100%;
+    @include background-cover-center;
+  }
+  &__item-img-desc {
+    padding: 10px;
+    $line-height: 19;
+    line-height: #{$line-height}px;
+    height: #{($line-height * 2) + 20}px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 300;
+    @include flex-row-center;
+    text-align: center;
+    background: #f1f1f1;
+  }
+}

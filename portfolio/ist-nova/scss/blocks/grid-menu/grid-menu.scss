@@ -1,0 +1,99 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.grid-menu {
+  @include flex-row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  @media #{$mobile-big-screen} {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(25% - 10px);
+
+    @media #{$mobile-big-screen} {
+      width: 48%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 190%;
+    overflow: hidden;
+  }
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include flex-column;
+    justify-content: flex-end;
+    padding: 25px;
+
+    @media #{$tablet-small-screen} {
+      padding: 10px;
+    }
+
+  }
+
+  &__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include background-cover-center;
+    z-index: -1;
+  }
+
+  &__wrapper:hover &__background {
+    transform: scale(1.04);
+  }
+
+  &__title {
+    $line-height: 36;
+    color: $white;
+    font-family: 'Antiqua', sans-serif;
+    position: relative;
+    z-index: 0;
+    font-size: 40px;
+    line-height: #{$line-height}px;
+    height: #{$line-height * 2}px;
+    @include flex-row;
+    align-items: center;
+    overflow: hidden;
+
+    @media #{$tablet-small-screen} {
+      $line-height: 30;
+      font-size: 26px;
+      line-height: #{$line-height}px;
+      height: #{$line-height * 2}px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 22px;
+    }
+
+  }
+
+  &__gradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
+    z-index: -1;
+    transform-origin: bottom;
+  }
+
+  &__wrapper:hover &__gradient {
+    transform: scaleY(1.4);
+  }
+}

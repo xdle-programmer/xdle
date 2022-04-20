@@ -1,0 +1,44 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.review {
+
+  &__item-wrapper {
+  }
+
+  &__item {
+    @include scroll;
+    min-height: 100px;
+    max-height: 400px;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    &.two-col {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__col {
+
+    &.disabled {
+      display: none;
+    }
+  }
+
+  &__col-header {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+
+  &__col-values {
+    font-size: 14px;
+  }
+
+  &__col-value {
+    margin-bottom: 3px;
+  }
+
+}

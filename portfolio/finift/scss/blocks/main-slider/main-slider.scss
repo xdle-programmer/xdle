@@ -1,0 +1,248 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-slider {
+  width: 100%;
+
+  &__wrapper {
+
+  }
+
+  &__slider {
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      width: 31px !important;
+      height: 81px !important;
+      background: url(../../../img/slider-arrow-blue.png) !important;
+      top: calc(50% - 70px);
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+
+    }
+
+    & .owl-next {
+      right: 0;
+    }
+
+    & .owl-prev {
+      left: 0;
+      transform: scaleX(-1) translateY(-50%);
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+    & .owl-prev.disabled,
+    & .owl-next.disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    & .owl-dots {
+      @include flex-row-center;
+    }
+
+    & .owl-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 2px solid #93b7d1 !important;
+      background: none !important;
+      margin: 10px;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        border: 2px solid #ff7f50 !important;
+        background: #ff7f50 !important;
+      }
+    }
+
+    & .owl-dots.disabled {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: calc(100vh - 145px);
+    padding-bottom: 40px;
+    @include flex-row-center;
+
+    @media #{$tablet-small-screen} {
+      height: 750px;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    height: 100%;
+    @include background-cover-center;
+    @include flex-row-center;
+
+    @media #{$tablet-small-screen} {
+      align-items: flex-start;
+      padding-top: 100px;
+    }
+  }
+
+  &__item-title {
+    color: $white;
+    text-align: center;
+  }
+
+  &__item-title-big {
+    font-size: 66px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 32px;
+    }
+  }
+
+  &__item-title-normal {
+    font-size: 37px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 17px;
+    }
+  }
+
+  &__item-title-small {
+    font-size: 24px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 17px;
+    }
+  }
+
+  &__item-footer {
+    position: absolute;
+    bottom: 10px;
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  &__item-footer-desc {
+    text-align: right;
+
+    @media #{$tablet-small-screen} {
+      text-align: center;
+    }
+  }
+
+  &__item-footer-desc-type {
+    font-size: 22px;
+    color: $white;
+  }
+
+  &__item-footer-desc-name {
+    font-size: 62px;
+    color: $white;
+    line-height: 39px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 46px;
+    }
+  }
+
+  &__item-footer-desc-price {
+    font-size: 86px;
+    color: #75aadb;
+    line-height: 70px;
+    margin-top: 22px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 66px;
+    }
+  }
+
+  &__item-footer-desc-currency {
+    font-size: 22px;
+    color: #75aadb;
+  }
+
+  &__item-footer-img {
+    @include flex-row-center;
+
+    @media #{$tablet-small-screen} {
+      height: 130px;
+    }
+  }
+
+  &__item-footer-img-inner {
+    width: 100%;
+    height: 100%;
+    @include background-contain-center;
+  }
+
+  &__item-footer-form {
+
+    @media #{$tablet-small-screen} {
+      text-align: center;
+    }
+
+  }
+
+  &__item-footer-form-name {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: $white;
+  }
+
+  &__item-footer-form-input {
+    height: 65px;
+    border: 1px solid #93b7d1;
+    background: none;
+    width: 100%;
+    color: $white;
+    padding-left: 15px;
+    font-size: 31px;
+    margin-bottom: 15px;
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    &::-moz-placeholder {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    &:-moz-placeholder {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba(255, 255, 255, .7);
+    }
+  }
+
+  &__item-footer-form-button {
+    height: 65px;
+    color: $white;
+    @include flex-column-center;
+    width: 100%;
+    background: #ff7f50;
+    font-size: 31px;
+    text-transform: uppercase;
+  }
+}

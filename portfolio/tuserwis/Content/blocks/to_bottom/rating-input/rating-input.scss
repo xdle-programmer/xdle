@@ -1,0 +1,54 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.rating-input {
+  @include flex-row-center;
+  justify-content: space-between;
+  width: 100%;
+
+
+  &__title {
+
+  }
+
+  &__input {
+    width: 100px;
+    height: 20px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: $gray;
+      mask: url(../../../img/rating.svg);
+      -webkit-mask: url(../../../img/rating.svg);
+      @include mask-contain-center;
+      @include background-contain-center;
+      opacity: .1;
+    }
+  }
+
+  &__input-val {
+    @include after-absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    transition: none;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: #ffa500;
+      mask: url(../../../img/rating.svg);
+      -webkit-mask: url(../../../img/rating.svg);
+      @include mask-contain-center;
+      mask-position: center left!important;
+      -webkit-mask-position: center left!important;
+      mask-size: 100px 20px!important;
+      -webkit-mask-size: 100px 20px!important;
+      transition: none;
+    }
+  }
+}

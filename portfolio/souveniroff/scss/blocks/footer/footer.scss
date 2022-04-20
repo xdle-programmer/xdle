@@ -1,0 +1,247 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+
+  @include layout-padding;
+  margin-top: 50px;
+  background: $blue;
+  color: $white;
+
+  &__top {
+    @include flex-row;
+    padding: 50px 0;
+    justify-content: space-between;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 20px 0;
+      padding-bottom: 0;
+    }
+
+  }
+
+
+  &__logo-block {
+
+  }
+
+  &__logo {
+    margin-bottom: 35px;
+
+    @media #{$tablet-small-screen} {
+      width: 120px !important;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include margin-auto;
+      width: 100% !important;
+      height: 60px !important;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 15px;
+    }
+
+  }
+
+
+  &__icons {
+    @include flex-row;
+
+    @media #{$mobile-big-screen} {
+      @include flex-row-center;
+    }
+  }
+
+  &__icons-item {
+    width: 30px !important;
+    height: 30px;
+    margin-right: 20px;
+
+    @media #{$tablet-big-screen} {
+      margin-right: 5px;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 20px !important;
+      height: 20px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 30px !important;
+      height: 30px;
+      margin-right: 20px;
+    }
+
+  }
+
+  &__icons-item:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+
+  &__icons-item:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+
+  &__col {
+
+    @media #{$mobile-big-screen} {
+      margin-top: 30px;
+    }
+  }
+
+  &__col-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 13px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+    }
+  }
+
+  &__col-link {
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 11px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  &__col-desc {
+    font-size: 14px;
+    max-width: 250px;
+    line-height: 23px;
+    margin-bottom: 15px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 11px;
+      max-width: 180px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+      max-width: 100%;
+    }
+  }
+
+  &__newsletter {
+    @include flex-row;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 16vw;
+    min-width: 250px;
+    height: 30px;
+
+    @media #{$tablet-small-screen} {
+      width: 16vw;
+      min-width: 180px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &__newsletter-input {
+    @include flex-row;
+    width: calc(100% - 125px);
+    height: 100%;
+    background: $white;
+    padding-left: 10px;
+
+    @media #{$tablet-small-screen} {
+      width: calc(100% - 95px);
+    }
+
+  }
+
+  &__newsletter-button {
+    @include flex-row-center;
+    width: 125px;
+    font-size: 12px;
+    font-weight: 700;
+    height: 100%;
+    background: #eb5757;
+    color: $white;
+
+    @media #{$tablet-small-screen} {
+      font-size: 11px;
+      width: 95px;
+    }
+
+  }
+
+  &__bottom {
+    @include flex-row-center;
+    padding: 30px 0;
+
+    @media #{$mobile-big-screen} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__bottom-item {
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid $white;
+    font-size: 14px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 11px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+  }
+
+  &__bottom-item:nth-child(1) {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  &__bottom-item--link:hover {
+    text-decoration: underline;
+  }
+
+  &__bottom-item--logo {
+
+    @media #{$mobile-big-screen} {
+      color: transparent;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background: url(/img/logo_dev.svg) no-repeat center center;
+      background-size: contain;
+      height: 50px;
+    }
+  }
+}

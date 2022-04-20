@@ -1,0 +1,54 @@
+.bottom-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .bottom-menu__button {
+    width: 0;
+    height: 100%;
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative; }
+    .bottom-menu__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+      background: #232324; }
+    .bottom-menu__button.active, .bottom-menu__button:hover {
+      background: #232324; }
+    .bottom-menu__button.active:after, .bottom-menu__button:hover:after {
+      background: #ffffff; }
+    .bottom-menu__button--like:after {
+      mask: url(../../../img/like.svg);
+      -webkit-mask: url(../../../img/like.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .bottom-menu__button--chat:after {
+      mask: url(../../../img/chat.svg);
+      -webkit-mask: url(../../../img/chat.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .bottom-menu__button--scroll:after {
+      mask: url(../../../img/up-arrows.svg);
+      -webkit-mask: url(../../../img/up-arrows.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }

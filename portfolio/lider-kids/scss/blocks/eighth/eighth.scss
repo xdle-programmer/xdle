@@ -1,0 +1,232 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.eighth {
+  position: relative;
+  padding-top: 862px;
+  padding-bottom: 194px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 280px;
+    padding-bottom: 150px;
+  }
+
+  &__rules {
+    position: absolute;
+    top: 32px;
+    left: 133px;
+
+    @media #{$tablet-big-screen} {
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__block {
+    position: absolute;
+    right: -83px;
+    top: 0;
+    width: 929px;
+    height: 1024px;
+    background-color: #f8f7f7;
+    border-radius: 50%;
+    @include flex-column;
+    padding-top: 122px;
+    padding-left: 195px;
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      height: auto;
+      background-color: #f8f7f7;
+      border-radius: 0;
+      padding: 20px;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  &__title-inner {
+    @include font-intro-bold;
+    color: $blue;
+
+    &:nth-of-type(2) {
+      color: $orange;
+    }
+
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 31px;
+    padding-right: 220px;
+
+    @media #{$tablet-big-screen} {
+      padding-right: 0;
+    }
+  }
+  &__inner-block {
+    width: 728px;
+    height: 176px;
+    border: 8px solid #ffd34c;
+    @include flex-row;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 29px;
+    padding-left: 50px;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+  &__inner-block-text {
+    @include font-intro-reg;
+    font-size: 30px;
+  }
+  &__inner-block-img {
+    position: absolute;
+    width: 196px;
+    height: 256px;
+    right: 21px;
+    bottom: 0;
+    background: url(../../../img/eighth-block-img.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+  &__text {
+    font-size: 20px;
+  }
+  &__subtext {
+    @include font-intro-reg;
+    font-size: 36px;
+    margin-top: 30px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+  }
+  &__grid-item {
+    background: $yellow;
+    height: 222px;
+    font-size: 25px;
+    padding: 20px 40px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 75px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 15px;
+      height: auto;
+      padding: 37px 40px;
+      text-align: left;
+    }
+  }
+  &__grid-item-letter {
+    color: $white;
+    @include font-intro-bold;
+    font-size: 100px;
+    display: inline;
+    letter-spacing: -5px;
+  }
+
+  &__bottom {
+    position: relative;
+    margin-top: 64px;
+    @include flex-column-center;
+  }
+  &__bottom-title {
+    font-size: 48px;
+    @include font-intro-reg;
+    color: $white;
+    background: $orange;
+    padding: 17px 51px;
+    position: relative;
+    z-index: 2;
+
+    @media #{$tablet-big-screen} {
+      font-size: 26px;
+    }
+  }
+  &__bottom-text {
+    font-size: 24px;
+    margin: 14px auto;
+    width: 782px;
+    text-align: center;
+
+    @media #{$tablet-big-screen} {
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+  &__bottom-img-1 {
+    position: absolute;
+    left: -10px;
+    top: 14px;
+    width: 157px;
+    height: 154px;
+    background: url(../../../img/eighth-bottom-1.png);
+    @include background-contain-center;
+    z-index: 3;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+  &__bottom-img-2 {
+    position: absolute;
+    left: 132px;
+    top: -357px;
+    background: url(../../../img/eighth-bottom-2.png);
+    @include background-contain-center;
+    width: 255px;
+    height: 400px;
+    z-index: 1;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+  &__bottom-img-3 {
+    position: absolute;
+    right: -58px;
+    top: 28px;
+    background: url(../../../img/eighth-bottom-3.png);
+    @include background-contain-center;
+    width: 168px;
+    height: 124px;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+  &__img {
+    width: 858px;
+    height: 854px;
+    position: absolute;
+    left: -620px;
+    top: 88px;
+    background: url(../../../img/eighth-img.png);
+    @include background-contain-center;
+    z-index: 3;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+}

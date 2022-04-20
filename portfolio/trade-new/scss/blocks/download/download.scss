@@ -1,0 +1,41 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.download {
+  width: 100%;
+  @include flex-row-center;
+  position: relative;
+  overflow: hidden;
+  height: 6px;
+  border-radius: 4px;
+
+  @media #{$tablet-small-screen} {
+    margin-bottom: 10px;
+  }
+
+  $full: '.download--full';
+
+  &__state {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    background: #303842;
+
+    &--background {
+      z-index: 1;
+    }
+    &--progress {
+      z-index: 2;
+      @include gradient;
+
+      #{$full} & {
+        background: #18ea58 !important;
+      }
+    }
+  }
+}
+

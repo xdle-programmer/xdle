@@ -1,0 +1,171 @@
+.filter-list__button {
+  display: none !important; }
+  @media (max-width: 767px) {
+    .filter-list__button {
+      display: flex !important;
+      width: calc(100% - 20px);
+      margin: 0 auto;
+      margin-bottom: 30px; } }
+
+@media (max-width: 767px) {
+  .filter-list__items {
+    background: #ffffff;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 50px;
+    height: 100vh;
+    overflow-y: scroll;
+    opacity: 0;
+    visibility: hidden;
+    transition: none; }
+    .filter-list__items * {
+      transition: none; }
+    .filter-list__items.active {
+      opacity: 1;
+      visibility: visible; } }
+
+.filter-list__button-close {
+  display: none; }
+  @media (max-width: 767px) {
+    .filter-list__button-close {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      background: #000000;
+      mask: url(../../../img/close.svg);
+      -webkit-mask: url(../../../img/close.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+      cursor: pointer; } }
+
+.filter-list__button-search {
+  display: none !important; }
+  @media (max-width: 767px) {
+    .filter-list__button-search {
+      display: flex !important;
+      width: 100% !important;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 3; } }
+
+.filter-list__item {
+  margin-bottom: 50px; }
+
+.filter-list__header {
+  margin-bottom: 15px; }
+
+.filter-list__header-title {
+  font-size: 22px;
+  color: #878787; }
+  .filter-list__item--has-item .filter-list__header-title {
+    padding-left: 34px;
+    position: relative;
+    cursor: pointer; }
+    .filter-list__item--has-item .filter-list__header-title:hover {
+      color: #4291ca; }
+  .filter-list__item--has-item .filter-list__header-title:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 27px;
+    height: 27px;
+    left: 0;
+    top: 1px;
+    background: url(../../../img/check-plus.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    opacity: 0;
+    z-index: 2; }
+  .filter-list__item--has-item .filter-list__header-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 27px;
+    height: 27px;
+    left: 0;
+    top: 1px;
+    background: url(../../../img/check-minus.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    opacity: 1;
+    z-index: 1; }
+  .filter-list__item--has-item.active .filter-list__header-title:after {
+    opacity: 1; }
+
+.filter-list__item--has-item .filter-list__content {
+  display: none; }
+
+.filter-list__item--has-item.active .filter-list__content {
+  display: block; }
+
+.filter-list__content-sort-list-item {
+  color: #878787;
+  padding-left: 37px;
+  cursor: pointer;
+  font-size: 19px;
+  position: relative;
+  margin-bottom: 10px; }
+  .filter-list__content-sort-list-item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 27px;
+    height: 27px;
+    left: 0;
+    top: -1px;
+    background: url(../../../img/sort-icon.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    opacity: 0; }
+  .filter-list__content-sort-list-item:hover {
+    color: #4291ca; }
+  .filter-list__content-sort-list-item.active {
+    color: #000000; }
+  .filter-list__content-sort-list-item.active:after {
+    opacity: 1; }
+
+.filter-list__content-check-list {
+  padding-left: 37px; }
+  .filter-list__content-check-list--wide {
+    padding-left: 0; }
+
+.filter-list__content-check-list-item {
+  color: #878787;
+  padding-left: 24px;
+  cursor: pointer;
+  font-size: 19px;
+  position: relative;
+  margin-bottom: 10px; }
+  .filter-list__content-check-list-item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 15px;
+    left: 0;
+    top: 6px;
+    background: url(../../../img/check-plus.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    opacity: 0; }
+  .filter-list__content-check-list-item:hover {
+    color: #4291ca; }
+  .filter-list__content-check-list-item.active {
+    color: #000000; }
+  .filter-list__content-check-list-item.active:after {
+    opacity: 1; }

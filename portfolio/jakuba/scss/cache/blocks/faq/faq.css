@@ -1,0 +1,96 @@
+.faq {
+  position: relative;
+  width: 100%; }
+  .faq__item {
+    margin-bottom: 20px; }
+    @media (max-height: 820px) {
+      .faq__item {
+        margin-bottom: 0px; } }
+  .faq__item-header {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between; }
+    @media (max-height: 820px) {
+      .faq__item-header {
+        padding: 7px 0; } }
+  .faq__item-header-name {
+    font-size: 26px;
+    font-display: auto;
+    font-family: "Noto Serif", serif; }
+    @media (max-height: 820px) {
+      .faq__item-header-name {
+        font-size: 20px; } }
+  .faq__item-header-open {
+    width: 30px;
+    height: 30px;
+    background: url(../../../img/section-20/plus.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    min-width: 30px; }
+  .faq__item-inner {
+    position: absolute;
+    border: 1px solid #dcdcdc;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 26px;
+    font-display: auto;
+    font-family: "Noto Serif", serif;
+    padding: 25px;
+    padding-right: 80px;
+    line-height: 40px; }
+    @media (max-width: 1279px) {
+      .faq__item-inner {
+        font-size: 14px;
+        padding: 25px;
+        padding-right: 5px;
+        line-height: 20px; } }
+    .faq__item-inner:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      right: 25px;
+      top: 30px;
+      transform: rotate(45deg);
+      background: url(../../../img/section-20/plus.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .faq__item-inner.active {
+      opacity: 1;
+      visibility: visible; }
+  @media (max-width: 1279px) {
+    .faq__item-inner-text {
+      height: 100%;
+      overflow-y: auto;
+      padding-right: 80px; }
+      .faq__item-inner-text::-webkit-scrollbar-button {
+        background-image: none;
+        background-repeat: no-repeat;
+        width: 5px;
+        height: 0; }
+      .faq__item-inner-text::-webkit-scrollbar-track {
+        background: #ffffff; }
+      .faq__item-inner-text::-webkit-scrollbar-thumb {
+        background-color: #ff3636;
+        cursor: pointer; }
+      .faq__item-inner-text::-webkit-scrollbar-thumb:hover {
+        background-color: #ff3636; }
+      .faq__item-inner-text::-webkit-resizer {
+        background-image: none;
+        background-repeat: no-repeat;
+        width: 4px;
+        height: 0; }
+      .faq__item-inner-text::-webkit-scrollbar {
+        width: 5px; } }

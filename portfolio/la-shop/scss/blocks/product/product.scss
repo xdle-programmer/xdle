@@ -1,0 +1,276 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.product {
+  width: 100%;
+  background: $white;
+  padding-bottom: 50px;
+
+  &__preview {
+    width: calc(60% - 40px);
+
+    @media #{$desktop-small-screen} {
+      width: calc(50% - 40px);
+    }
+
+    @media #{$tablet-small-screen} {
+      width: calc(100% - 64px);
+      @include margin-auto;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: calc(100% + 20px);
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+  }
+  &__preview-slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 90%;
+    margin-bottom: 20px;
+
+    @media #{$mobile-big-screen} {
+      padding-bottom: 100%;
+    }
+  }
+
+  &__preview-slider-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__preview-slider {
+    width: 100%;
+
+  }
+  &__preview-item-block {
+    width: 100%;
+    padding-bottom: 90%;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      padding-bottom: 100%;
+    }
+  }
+
+  &__preview-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include background-contain-center;
+  }
+
+  &__preview-small {
+    @include flex-row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    @media #{$tablet-small-screen} {
+      margin-top: 10px;
+      order: -1;
+      justify-content: center;
+      width: 100%;
+    }
+
+  }
+
+  &__preview-small-item-block {
+    width: 100px;
+    padding-bottom: 100px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      width: calc(14.25% - 8px);
+      padding-bottom: 12%;
+      margin-right: 9px;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+  }
+
+  &__preview-small-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include background-contain-center;
+    border: 1px solid;
+    @include natural-border-color;
+
+    &:hover {
+      border: 1px solid;
+      @include main-border-color;
+    }
+  }
+
+  &__preview .owl-next, &__preview .owl-prev {
+    position: absolute;
+    top: 50% !important;
+    left: -10px !important;
+    opacity: .4 !important;
+    width: 32px;
+    height: 54px;
+    transform: translateY(-50%) scaleX(-1) !important;
+    background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDc5Mi4wMzMgNzkyLjAzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzkyLjAzMyA3OTIuMDMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGcgaWQ9Il94MzhfIj4KCQk8Zz4KCQkJPHBhdGggZD0iTTYxNy44NTgsMzcwLjg5NkwyMjEuNTEzLDkuNzA1Yy0xMy4wMDYtMTIuOTQtMzQuMDk5LTEyLjk0LTQ3LjEwNSwwYy0xMy4wMDYsMTIuOTM5LTEzLjAwNiwzMy45MzQsMCw0Ni44NzQgICAgIGwzNzIuNDQ3LDMzOS40MzhMMTc0LjQ0MSw3MzUuNDU0Yy0xMy4wMDYsMTIuOTQtMTMuMDA2LDMzLjkzNSwwLDQ2Ljg3NHMzNC4wOTksMTIuOTM5LDQ3LjEwNCwwbDM5Ni4zNDYtMzYxLjE5MSAgICAgYzYuOTMyLTYuODk4LDkuOTA0LTE2LjA0Myw5LjQ0MS0yNS4wODdDNjI3Ljc2MywzODYuOTcyLDYyNC43OTIsMzc3LjgyOCw2MTcuODU4LDM3MC44OTZ6IiBmaWxsPSIjMDAwMDAwIi8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) !important;
+    @include background-contain-center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  &__preview .owl-next {
+    left: auto !important;
+    right: -10px !important;
+    transform: translateY(-50%) scaleX(1) !important;
+
+  }
+
+  &__preview .owl-next span, &__preview .owl-prev span {
+    display: none;
+  }
+
+  &__preview .owl-next:focus, &__preview .owl-prev:focus {
+    outline: none;
+  }
+
+  &__preview .owl-dots {
+    text-align: center;
+  }
+
+  &__preview .owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $yellow !important;
+    @include natural-background;
+    margin: 10px 3px;
+
+    &.active {
+      @include main-background;
+    }
+  }
+
+  &__desc {
+    width: 40%;
+
+    @media #{$desktop-small-screen} {
+      width: 50%;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      @include flex-column-center;
+    }
+  }
+
+  &__desc-name {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 24px;
+    }
+
+  }
+
+  &__desc-price {
+    @include flex-row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    @media #{$mobile-big-screen} {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+  }
+  &__desc-price-name {
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @media #{$mobile-big-screen} {
+      font-size: 10px;
+    }
+
+  }
+  &__desc-price-value {
+    font-size: 24px;
+    margin-left: 15px;
+
+    @media #{$mobile-big-screen} {
+      margin-left: auto;
+    }
+
+  }
+  &__desc-price-value-old {
+    font-size: 20px;
+    color: $gray-light;
+    margin-left: 15px;
+    text-decoration: line-through;
+
+    @media #{$mobile-big-screen} {
+      margin-left: auto;
+    }
+
+  }
+
+  &__desc-characteristics {
+    margin-top: 20px;
+  }
+
+  &__desc-characteristics-item {
+    @include flex-row;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+    }
+  }
+
+  &__desc-characteristics-name {
+    font-weight: 500;
+  }
+
+  &__desc-characteristics-value {
+    margin-left: 5px;
+    text-transform: uppercase;
+  }
+
+  &__buy-button {
+    @include natural-background;
+    @include flex-row-center;
+    width: 400px;
+    margin-top: 50px;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+  }
+
+}

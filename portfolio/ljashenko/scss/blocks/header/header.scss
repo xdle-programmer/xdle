@@ -1,0 +1,70 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+  position: fixed;
+  background: $gray-dark;
+  height: 50px;
+  @include flex-row-center;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  @media #{$mobile-big-screen} {
+    justify-content: flex-end;
+    padding: 0 10px;
+  }
+
+  &--scroll {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__menu-button {
+
+    @media #{$mobile-big-screen} {
+      display: block;
+      width: 35px;
+      height: 35px;
+      background: white;
+      z-index: 10;
+      background: url(../../../img/menu.svg);
+      @include background-contain-center;
+    }
+  }
+  &__menu {
+    @include flex-row-center;
+
+    @media #{$mobile-big-screen} {
+      position: absolute;
+      @include flex-column;
+      top: 0;
+      left: 0;
+      background: $gray-dark;
+      width: 100%;
+      padding: 0 10px;
+      opacity: 0;
+      visibility: hidden;
+      transform-origin: top;
+      transform: scaleY(0);
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+      }
+    }
+  }
+  &__link {
+    color: $white;
+    margin: 0 30px;
+
+    @media #{$mobile-big-screen} {
+      margin: 10px 0;
+    }
+  }
+}

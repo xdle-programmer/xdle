@@ -1,0 +1,35 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.filter-accessories {
+  @include flex-column;
+
+  &__item {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__checkbox {
+
+  }
+
+  &__count {
+    @include flex-row;
+    font-size: 14px;
+  }
+  &__count:before {
+    content: '(';
+    display: inline;
+  }
+  &__count:after {
+    content: ')';
+    display: inline;
+  }
+}

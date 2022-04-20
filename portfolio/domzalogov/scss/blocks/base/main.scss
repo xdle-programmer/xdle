@@ -1,0 +1,171 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url(../../fonts/OpenSans-Regular.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url(../../fonts/OpenSans-SemiBold.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url(../../fonts/OpenSans-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rouble';
+  src: url(../../fonts/rouble.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'OpenSans', sans-serif;
+  color: #363636;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+i {
+  color: inherit;
+}
+
+body *,
+body *:before,
+body *:after {
+  transition: all .5s ease-in;
+}
+
+.rouble {
+  display: inline-block;
+  position: relative;
+  margin-left: .1em;
+  font-size: inherit;
+  font-weight: inherit;
+
+  &:before {
+    content: 'P';
+    color: #000;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    background: #000;
+    height: 6%;
+    width: 67%;
+    left: 0;
+    position: absolute;
+    top: 63%;
+  }
+
+  &--gray {
+    color: #363636;
+
+    &:before {
+      color: #363636;
+    }
+
+    &:after {
+      background: #363636;
+    }
+  }
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.section {
+  margin-bottom: 50px;
+
+  &--gray {
+    background: #f5f5f5;
+  }
+
+  &--padding {
+    padding: 50px 0;
+  }
+}
+
+button, input {
+  border: none;
+  background: none;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+ul {
+  padding-left: 17px;
+}
+
+li {
+
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 14px;
+  color: #404040;
+  margin: 15px 0;
+  font-weight: 300;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 110px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 50px;
+  }
+}
+
+.center {
+  @include flex-row-center;
+}
+
+
+.test {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%!important;
+}

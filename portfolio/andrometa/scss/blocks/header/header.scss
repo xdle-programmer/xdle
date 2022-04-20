@@ -1,0 +1,380 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.header {
+  font-size: 15px;
+  position: relative;
+
+  &__top {
+    background: $blue;
+    color: $white;
+  }
+
+  &__top-block {
+    @include flex-row-center;
+    justify-content: space-between;
+    height: 50px;
+  }
+
+  &__top-menu {
+    @include flex-row-center;
+    height: 100%;
+  }
+
+  &__top-menu-item {
+    margin-right: 23px;
+    @include flex-row-center;
+    position: relative;
+    height: 100%;
+  }
+
+  &__top-menu-item-link {
+    @include flex-row-center;
+    height: 100%;
+    padding: 0 18px;
+
+    &:after {
+      @include after-absolute;
+      width: calc(100% - 36px);
+      left: 18px;
+      background: $white;
+      bottom: 11px;
+      height: 1px;
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &:hover:after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  $link-hover: '.header__top-menu-item-link:hover';
+
+  &__top-menu-item-submenu {
+    position: absolute;
+    top: 100%;
+    background: $blue;
+    left: 0;
+    z-index: 5;
+    width: 274px;
+    opacity: 0;
+    transform: scaleY(0);
+    visibility: hidden;
+    transform-origin: top;
+
+    &:hover,
+    #{$link-hover} + & {
+      opacity: 1;
+      transform: scaleY(1);
+      visibility: visible;
+    }
+  }
+
+  &__top-menu-item-submenu-link {
+    padding: 15px 18px;
+
+    &:hover {
+      background: $blue-light;
+    }
+  }
+
+  &__top-contacts {
+    @include flex-row-center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__top-contacts-address {
+    height: 100%;
+    @include flex-row-center;
+    padding: 0 37px;
+    border-left: 1px solid $blue-extra-light;
+
+    &:hover {
+      background: $blue-middle;
+    }
+  }
+
+  &__top-contacts-icons {
+    height: 100%;
+    @include flex-row-center;
+    padding: 0 30px;
+    border-right: 1px solid $blue-extra-light;
+    border-left: 1px solid $blue-extra-light;
+  }
+
+  &__top-contacts-icon {
+    height: 20px;
+    width: 20px;
+    background: $white;
+    margin-right: 11px;
+
+    &:hover {
+      background: $blue-light;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    &--fb {
+      mask: url(../../../img/icons/facebook.png);
+      -webkit-mask: url(../../../img/icons/facebook.png);
+      @include mask-contain-center;
+    }
+
+    &--yt {
+      mask: url(../../../img/icons/youtube.png);
+      -webkit-mask: url(../../../img/icons/youtube.png);
+      @include mask-contain-center;
+    }
+  }
+
+  &__top-contacts-question {
+    height: 100%;
+    @include flex-row-center;
+    padding: 0 37px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: calc(100% - 74px);
+      height: 1px;
+      border-bottom: 1px dotted $white;
+      left: 37px;
+      top: calc(50% + 8px);
+    }
+
+    &:hover {
+      background: $blue-middle;
+    }
+  }
+
+  &__top-contacts-calc {
+    background: $red;
+    height: 100%;
+    @include flex-row-center;
+    width: 194px;
+
+    &:hover {
+      background: $blue-light;
+    }
+  }
+
+  &__bottom {
+    height: 90px;
+  }
+
+  &__bottom-block {
+    height: 100%;
+    @include flex-row-center;
+    justify-content: space-between;
+    padding-left: 11px;
+  }
+
+  &__bottom-logo {
+    width: 225px;
+    height: 100%;
+    background: url(../../../img/logo/logo-blue.png);
+    @include background-contain-center;
+  }
+
+  &__bottom-items {
+    @include flex-row-center;
+    height: 50px;
+  }
+
+  &__bottom-item-phones {
+    margin-right: 94px;
+    @include flex-row-center;
+    justify-content: space-between;
+  }
+
+  &__bottom-item-phone {
+    margin-left: 47px;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+  }
+
+  &__bottom-item-phone-item {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__bottom-item-phone-desc {
+
+    &--link {
+      color: $blue;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__bottom-item-about {
+    margin-right: 50px;
+  }
+
+  &__bottom-item-about-item {
+    margin-bottom: 5px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom-item-mail {
+    margin-right: 55px;
+  }
+
+  &__bottom-item-mail-item {
+    font-size: 20px;
+    font-weight: 500;
+    color: $blue;
+    margin-bottom: 2px;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__bottom-item-mail-desc {
+  }
+
+  &__bottom-item-order {
+    width: 194px;
+    height: 100%;
+    border: 2px solid $blue;
+    @include flex-row-center;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 26px;
+      height: 23px;
+      background: $blue;
+      mask: url(../../../img/icon-order.png);
+      -webkit-mask: url(../../../img/icon-order.png);
+      @include mask-contain-center;
+      margin-right: 14px;
+      margin-left: -19px;
+    }
+
+    &:hover:before {
+      background: $white;
+    }
+
+    &:hover {
+      background: $red;
+      border-color: $red;
+      color: $white;
+    }
+  }
+
+  &__sticky {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transition: top 0s !important;
+    z-index: 2;
+
+    &--fixed {
+      background: $blue;
+      top: 0;
+      position: fixed;
+      z-index: 10;
+      box-shadow: 0 0 12px 2px rgba(0, 32, 91, 0.5);
+    }
+  }
+
+  $header-fixed: '.header__sticky--fixed';
+
+  &__sticky-block {
+    color: $white;
+    @include flex-row;
+    justify-content: space-between;
+    padding: 25px 0;
+
+    &--short {
+      padding-left: 291px;
+    }
+
+    #{$header-fixed} & {
+      padding: 1px 25px;
+      padding-left: 260px;
+    }
+  }
+
+  &__sticky-logo {
+    height: 67px;
+    width: 211px;
+    opacity: 0;
+    background: url(../../../img/logo/logo-white.png);
+    margin-top: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+
+    #{$header-fixed} & {
+      opacity: 1;
+    }
+  }
+
+  &__sticky-menu {
+    @include flex-row;
+  }
+
+  &__sticky-menu-item {
+    font-weight: 700;
+    padding: 9px 20px;
+    white-space: nowrap;
+    margin: 7px;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      border-color: $red;
+    }
+  }
+
+  &__sticky-menu-item-line {
+    font-size: 20px;
+
+    #{$header-fixed} & {
+      font-size: 17px;
+    }
+  }
+
+  &__sticky-contacts {
+    width: 211px;
+    height: auto;
+    overflow: hidden;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    text-align: right;
+    opacity: 0;
+
+    #{$header-fixed} & {
+      opacity: 1;
+    }
+  }
+
+  &__sticky-contacts-item {
+    color: $white;
+    white-space: nowrap;
+    font-size: 18px;
+  }
+}

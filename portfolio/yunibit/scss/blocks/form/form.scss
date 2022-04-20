@@ -1,0 +1,29 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.form {
+  &__input-block {
+    position: relative;
+
+    &--phone:after {
+      @include after-absolute;
+      width: 17px;
+      height: 16px;
+      left: 16px;
+      background: url(../../../img/phone-input.png);
+      @include background-contain-center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__input {
+    border: 1px solid #d9d9d9;
+    height: 100%;
+    width: 100%;
+    padding-left: 42px;
+  }
+
+  &__button {
+  }
+}

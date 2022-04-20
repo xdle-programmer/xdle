@@ -1,0 +1,33 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  font-size: 40px;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &--antiqua {
+    font-family: 'Antiqua', sans-serif;
+  }
+
+  &:after {
+    @include after-absolute;
+    background: $black;
+    width: 80px;
+    height: 2px;
+    top: 0;
+    left: 0;
+  }
+
+  @media #{$tablet-small-screen} {
+    font-size: 33px;
+  }
+
+  @media #{$mobile-big-screen} {
+    font-size: 24px;
+  }
+
+}

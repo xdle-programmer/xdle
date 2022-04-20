@@ -1,0 +1,48 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  border: 1px solid #dfdfdf;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    color: $red;
+  }
+
+  &--big {
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &--yellow {
+    background: $yellow;
+    border: 1px solid $yellow;
+    color: #333;
+
+    &:hover {
+      background: $yellow-dark;
+      border: 1px solid $yellow-dark;
+      color: #333;
+    }
+  }
+
+  &--white-border {
+    background: transparent;
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: #333;
+    }
+  }
+
+}

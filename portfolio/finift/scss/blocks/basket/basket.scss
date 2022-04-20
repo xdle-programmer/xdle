@@ -1,0 +1,147 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.basket {
+
+  &__items {
+    margin-top: 60px;
+  }
+  &__item {
+    background: $gray-light;
+    display: grid;
+    grid-template-columns: 190px 1fr 190px 190px;
+    grid-gap: 70px;
+    align-items: center;
+    margin-bottom: 80px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 190px 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      justify-content: center;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  &__item-img {
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      height: 170px;
+    }
+  }
+  &__item-img-inner {
+    position: absolute;
+    @include absolute-center;
+    width: 170px;
+    height: 150px;
+    @include background-contain-center;
+  }
+  &__item-name {
+
+  }
+  &__item-name-type {
+    font-size: 16px;
+  }
+  &__item-name-item {
+    font-size: 30px;
+  }
+  &__item-counter {
+    @include flex-row-center;
+  }
+  &__item-counter-button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+    }
+
+    &--minus {
+      &:before {
+        background: url(../../../img/check-minus.svg);
+        @include background-contain-center;
+        opacity: 1;
+      }
+
+      &:after {
+        background: url(../../../img/check-minus-blue.svg);
+        @include background-contain-center;
+        opacity: 0;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+
+    }
+    &--plus {
+      &:before {
+        background: url(../../../img/check-plus-gray.svg);
+        @include background-contain-center;
+        opacity: 1;
+      }
+
+      &:after {
+        background: url(../../../img/check-plus.svg);
+        @include background-contain-center;
+        opacity: 0;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+    }
+  }
+  &__item-counter-inner {
+    font-size: 60px;
+    margin: 0 20px;
+  }
+  &__item-price {
+    @include flex-row-center;
+    align-items: baseline;
+  }
+
+  &__item-price-inner {
+    font-size: 30px;
+  }
+
+  &__item-price-currency {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  &__result {
+  }
+
+  &__result-price {
+    color: #34293b;
+    width: fit-content;
+    margin-left: auto;
+  }
+  &__result-title {
+    font-size: 17px;
+  }
+  &__result-price-inner {
+    font-size: 63px;
+  }
+  &__result-currency {
+    font-size: 17px;
+    width: 100%;
+    text-align: right;
+  }
+  &__result-button {
+    margin-top: 30px;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,19 @@
+.zoom {
+  position: relative;
+  cursor: pointer; }
+  .zoom:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    background: url("../../../img/zoom.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .zoom--big:after {
+    width: 39px;
+    height: 39px; }

@@ -1,0 +1,150 @@
+.why-we {
+  background-color: #061335;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  width: 100%;
+  padding: 100px 0;
+  padding-bottom: 25%;
+  position: relative; }
+  .why-we:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-99%);
+    padding-bottom: 5.87%;
+    background: url(/img/why_we_top.svg);
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important; }
+  .why-we:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, #061335 0%, rgba(6, 19, 53, 0) 100%); }
+  .why-we__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between; }
+    @media (max-width: 1279px) {
+      .why-we__block {
+        flex-wrap: wrap; } }
+  .why-we__desc {
+    width: calc(100% - 816px);
+    padding-right: 10px; }
+    @media (max-width: 1279px) {
+      .why-we__desc {
+        width: 100%;
+        text-align: center; } }
+  .why-we__desc-text {
+    color: #6479a8;
+    margin: 30px 0;
+    line-height: 27px; }
+  .why-we__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 816px; }
+    @media (max-width: 1279px) {
+      .why-we__items {
+        width: 100%;
+        margin-top: 30px; } }
+  .why-we__item {
+    margin: 1px;
+    width: 270px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ec008c 0%, #940057 100%);
+    position: relative;
+    padding: 40px;
+    overflow: hidden; }
+    .why-we__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 10px;
+      top: 10px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      background: #17203d; }
+    .why-we__item:hover:after {
+      opacity: 0; }
+    @media (max-width: 1279px) {
+      .why-we__item {
+        width: calc(33.3% - 2px); } }
+    @media (max-width: 767px) {
+      .why-we__item {
+        width: 100%; } }
+  .why-we__item-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 1; }
+    .why-we__item-icon:before, .why-we__item-icon:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url(/img/why_we_icons-sprite.svg);
+      background-size: 600% 200%;
+      background-position-y: 100%; }
+    .why-we__item-icon:after {
+      opacity: 0;
+      background-position-y: 0; }
+      .why-we__item:hover .why-we__item-icon:after {
+        opacity: 1; }
+    .why-we__item:hover .why-we__item-icon:before {
+      opacity: 0; }
+    .why-we__item-icon--handshake:before, .why-we__item-icon--handshake:after {
+      background-position-x: 600%; }
+    .why-we__item-icon--balloon:before, .why-we__item-icon--balloon:after {
+      background-position-x: 500%; }
+    .why-we__item-icon--glasses:before, .why-we__item-icon--glasses:after {
+      background-position-x: 400%; }
+    .why-we__item-icon--hat:before, .why-we__item-icon--hat:after {
+      background-position-x: 300%; }
+    .why-we__item-icon--speech:before, .why-we__item-icon--speech:after {
+      background-position-x: 200%; }
+    .why-we__item-icon--bulb:before, .why-we__item-icon--bulb:after {
+      background-position-x: 100%; }
+  .why-we__item-name {
+    line-height: 22px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ec008c;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-transform: uppercase; }
+    .why-we__item:hover .why-we__item-name {
+      color: #ffffff; }
+  .why-we__item-desc {
+    color: #6479a8;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+    margin-top: 10px; }
+    .why-we__item:hover .why-we__item-desc {
+      color: #ffffff; }

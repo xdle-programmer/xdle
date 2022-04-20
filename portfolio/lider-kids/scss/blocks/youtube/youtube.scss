@@ -1,0 +1,39 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.18%;
+  @include background-cover-center;
+  cursor: pointer;
+
+  & iframe {
+    position: absolute;
+    @include absolute-fill;
+  }
+
+  &__button {
+    position: absolute;
+    @include absolute-center;
+    width: 68px;
+    height: 48px;
+    background: url(../../../img/youtube-button.svg);
+    @include background-contain-center;
+    opacity: .9;
+    filter: grayscale(1);
+  }
+
+  &:hover &__button {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+
+  &__load {
+    @include preloader;
+    position: absolute;
+    @include absolute-center;
+  }
+
+}

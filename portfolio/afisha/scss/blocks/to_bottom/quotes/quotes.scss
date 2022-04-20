@@ -1,0 +1,43 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.quotes {
+  background: #232324;
+  padding: 70px 0;
+
+  &__block {
+  }
+  &__items {
+  }
+
+  &__item {
+    color: $white;
+    font-weight: 300;
+    font-size: 24px;
+    min-height: 150px;
+    @include flex-row-center;
+    text-align: center;
+
+    @media #{$mobile-big-screen} {
+      font-size: 22px;
+    }
+  }
+
+  & .owl-dots {
+    text-align: center;
+  }
+
+  & .owl-dot {
+    width: 7px;
+    height: 7px;
+    margin: 10px;
+    border-radius: 50%;
+    background: #666 !important;
+
+    &:hover,
+    &.active {
+      background: #fff !important;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.banner {
+  @include background-cover-center;
+  width: 100%;
+  height: 570px;
+  padding: 96px;
+  border-radius: 5px;
+  @include flex-column;
+
+  @media #{$mobile-big-screen} {
+    padding: 30px 20px;
+  }
+
+  &--small {
+    height: 390px;
+    padding: 75px 45px;
+
+    @media #{$mobile-big-screen} {
+      padding: 30px 20px;
+    }
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--top {
+    justify-content: flex-start;
+  }
+
+  &--bottom {
+    justify-content: flex-end;
+  }
+
+  &--top-center {
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+  }
+
+  &__title {
+    font-size: 60px;
+    color: $white;
+    font-weight: 100;
+    margin-bottom: 30px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 25px;
+    }
+
+    &--small {
+      font-size: 30px;
+
+      @media #{$mobile-big-screen} {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &--top-center &__title {
+    margin-bottom: 0;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+
+}

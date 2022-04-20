@@ -1,0 +1,72 @@
+//-------------------
+//Color
+$black: #000000 !default;
+$white: #ffffff;
+$gray: #202427;
+$gray-light: #fafafa;
+$blue: #0092E8;
+$red: #ff5c4a;
+$blue-light: #d8eeff;
+$magenta: #ab47bc;
+$magenta-light: #f8eafb;
+
+// Shadows
+
+$main-shadow: 0 3px 6px rgba(0,0,0, .1), 0 3px 6px rgba(0,0,0, .1);
+$focus-within-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+
+
+//Transition
+$shadow-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+
+//-------------------
+//Selector
+//Button
+$select-button-height: 36;
+$select-button-width: 100%;
+$select-button-min-width: 180;
+$select-button-border-radius: 3;
+$select-button-padding-left: 15;
+$select-button-padding-right: 15;
+$select-button-border-width: 1;
+$select-button-border-color: #eaeaea;
+$select-button-background: #fafafa;
+
+//Fonts
+
+$main-font: 'Open sans', sans-serif;
+$topic-font: 'Proza Libre', sans-serif;
+
+
+//Text
+$select-font-size: 16;
+$select-font-weight: 400;
+$select-font-color: #000;
+$select-font-placeholder-color: rgba(32, 36, 39, 0.2);
+$select-font-placeholder-active-color: #000;
+
+//Icon
+$select-icon-image-url: '(../../../img/arrow-magenta.svg)';
+$select-icon-image-width: 7;
+$select-icon-image-height: 6;
+$select-icon-right: 12;
+
+//Menu wrapper
+$select-menu-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+$select-menu-max-height: 200;
+
+//Menu points
+$select-inner-button-background: #eaeaea;
+$select-inner-button-color: #000000;
+
+@mixin select-button-active {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: $blue !important;
+}
+
+@mixin sort-select-button-active {
+    background: transparent !important;
+    color: #b9b9b9 !important;
+}

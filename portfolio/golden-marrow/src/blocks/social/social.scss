@@ -1,0 +1,56 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.social {
+  @include flex-row-center;
+
+  &__item {
+    width: 22px;
+    height: 22px;
+    background: var(--beige-color);
+    border-radius: 50%;
+    margin-right: 7px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--blue-color);
+    }
+
+    &--tw:after {
+      mask: url(assets/img/twitter.svg);
+      -webkit-mask: url(assets/img/twitter.svg);
+    }
+
+    &--fb:after {
+      mask: url(assets/img/facebook.svg);
+      -webkit-mask: url(assets/img/facebook.svg);
+    }
+
+    &--vk:after {
+      mask: url(assets/img/vk.svg);
+      -webkit-mask: url(assets/img/vk.svg);
+    }
+
+    &--ok:after {
+      mask: url(assets/img/odnoklassniki.svg);
+      -webkit-mask: url(assets/img/odnoklassniki.svg);
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 65%;
+      height: 65%;
+      background: var(--white-color);
+      @include mask-contain-center;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+  }
+}
+

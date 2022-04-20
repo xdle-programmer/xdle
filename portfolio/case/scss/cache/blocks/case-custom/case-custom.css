@@ -1,0 +1,198 @@
+.case-custom {
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: 40px; }
+  .case-custom--small-top {
+    margin-top: 20px; }
+  @media (max-width: 1023px) {
+    .case-custom {
+      margin-left: 0;
+      margin-right: 0; } }
+  .case-custom__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: -25px;
+    margin-right: -25px; }
+    @media (max-width: 1900px) {
+      .case-custom__wrapper {
+        margin-left: -20px;
+        margin-right: -20px; } }
+    @media (max-width: 767px) {
+      .case-custom__wrapper {
+        margin-left: -8px;
+        margin-right: -8px; } }
+  .case-custom__item {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 40px;
+    width: calc((100% / 7) - 50px);
+    background: linear-gradient(to bottom, rgba(72, 72, 72, 0.2) 0%, rgba(72, 72, 72, 0.2) 30%, rgba(72, 72, 72, 0.2));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    position: relative;
+    height: 230px; }
+    .case-custom__item--no-button {
+      height: 110px;
+      width: calc((100% / 8) - 50px); }
+    .case-custom__item--red {
+      background: linear-gradient(to bottom, rgba(72, 72, 72, 0.2) 0%, rgba(72, 72, 72, 0.2) 30%, rgba(99, 40, 22, 0.8)); }
+    .case-custom__item--orange {
+      background: linear-gradient(to bottom, rgba(72, 72, 72, 0.2) 0%, rgba(72, 72, 72, 0.2) 30%, rgba(110, 72, 18, 0.8)); }
+    .case-custom__item--yellow {
+      background: linear-gradient(to bottom, rgba(72, 72, 72, 0.2) 0%, rgba(72, 72, 72, 0.2) 30%, rgba(105, 112, 18, 0.8)); }
+    .case-custom__item--green {
+      background: linear-gradient(to bottom, rgba(72, 72, 72, 0.2) 0%, rgba(72, 72, 72, 0.2) 30%, rgba(62, 99, 23, 0.8)); }
+    .case-custom__item--blue {
+      background: linear-gradient(to bottom, rgba(72, 72, 72, 0.2) 0%, rgba(72, 72, 72, 0.2) 30%, rgba(19, 107, 62, 0.8)); }
+    @media (max-width: 1900px) {
+      .case-custom__item {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        width: calc((100% / 5) - 40px); } }
+    @media (max-width: 1599px) {
+      .case-custom__item {
+        width: calc((100% / 4) - 40px); } }
+    @media (max-width: 1023px) {
+      .case-custom__item {
+        width: calc((100% / 3) - 40px); } }
+    @media (max-width: 767px) {
+      .case-custom__item {
+        width: calc((100% / 2) - 16px);
+        margin-left: 8px;
+        margin-right: 8px; } }
+    @media (max-width: 374px) {
+      .case-custom__item {
+        width: 100%; } }
+  .case-custom__item-corners {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .case-custom__item-corners-item {
+    position: absolute; }
+    .case-custom__item-corners-item:before, .case-custom__item-corners-item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 9px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.4); }
+      .case__item:hover .case-custom__item-corners-item:before, .case__item:hover .case-custom__item-corners-item:after {
+        background: white; }
+    .case-custom__item-corners-item:after {
+      transform: rotate(90deg); }
+    .case-custom__item-corners-item:nth-of-type(1) {
+      left: -4px;
+      top: 0px; }
+    .case-custom__item-corners-item:nth-of-type(2) {
+      right: 5px;
+      top: 0px; }
+    .case-custom__item-corners-item:nth-of-type(3) {
+      left: -4px;
+      bottom: 1px; }
+    .case-custom__item-corners-item:nth-of-type(4) {
+      right: 5px;
+      bottom: 1px; }
+  .case-custom__item-img-block {
+    width: 160px;
+    height: 160px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    top: 46%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: url(../../img/case-custom.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .case-custom__item--no-button .case-custom__item-img-block {
+      width: 140px;
+      top: 50%; }
+  .case-custom__item-img {
+    width: 90% !important; }
+    .case__item:hover .case-custom__item-img {
+      transform: scale(1.05); }
+  .case-custom__item-title {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 15px;
+    width: 100%; }
+  .case-custom__item-name {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    background: #fff;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin-bottom: 20px; }
+  .case-custom__item-bet {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    background: #fff;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin-bottom: 20px; }
+  .case-custom__item-buttons {
+    position: absolute;
+    top: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px; }
+  .case-custom__item-price-item {
+    height: 30px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 20px; }
+  .case-custom__item-price-more {
+    height: 30px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 400;
+    background: #fff;
+    border-radius: 20px; }

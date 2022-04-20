@@ -1,0 +1,132 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.profile {
+  @include flex-row;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+
+  @media #{$tablet-small-screen} {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  &__img {
+    width: 1000px;
+    margin-left: auto;
+    height: 100%;
+    @include flex-row;
+    justify-content: flex-end;
+    position: relative;
+
+    @media #{$desktop-big-screen} {
+      width: calc(100% - 400px);
+      padding-left: 20px;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  &__img-background {
+    position: absolute;
+    @include background-cover-center;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1600px;
+    z-index: -1;
+
+    @media #{$tablet-small-screen} {
+      height: 400px;
+    }
+  }
+
+  &__img-item {
+    height: 100%;
+    width: 100%;
+    @include flex-row;
+    align-items: center;
+  }
+
+  &__img-item-link {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  &__info {
+    width: 400px;
+    margin-right: auto;
+    height: 100%;
+    position: relative;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &__info-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1000px;
+    z-index: -1;
+    background: $green;
+  }
+
+  &__info-item {
+    padding-left: 60px;
+    height: 100%;
+    @include flex-column;
+    justify-content: center;
+
+    @media #{$tablet-small-screen} {
+      padding: 20px;
+    }
+  }
+
+  &__info-item-photo {
+    width: 275px;
+    height: 275px;
+    @include background-cover-center;
+    border: 5px solid $white;
+
+    @media #{$tablet-small-screen} {
+      @include margin-auto;
+    }
+  }
+
+  &__info-item-title {
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: 100;
+
+    @media #{$tablet-small-screen} {
+      margin-top: 15px;
+    }
+  }
+
+  &__info-item-name {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__info-item-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 100;
+  }
+
+  &__info-item-link {
+    margin-top: 40px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

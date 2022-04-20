@@ -1,0 +1,52 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.user-bar-menu {
+  background: #38414b;
+  position: absolute;
+  top: 54px;
+  left: 75px;
+  width: calc(100% - 99px);
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transition: all .3s ease-in;
+
+  &.active {
+    transform: scaleY(1);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__item {
+    @include flex-row;
+    width: 100%;
+    height: 41px;
+    border-bottom: 2px solid #303741;
+  }
+  &__item-icon {
+    height: 41px;
+    width: 41px;
+    @include flex-row-center;
+  }
+
+  &__item-icon-img {
+  }
+  &__item-text {
+    height: 41px;
+    @include flex-row;
+    align-items: center;
+    font-weight: 900;
+    font-size: 12px;
+    font-style: italic;
+    box-shadow: 0 0 #000;
+    color: #7f8a99;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

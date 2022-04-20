@@ -1,0 +1,147 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.article-preview {
+  display: grid;
+  grid-template-columns: 254px 1fr;
+  grid-gap: 30px;
+  min-height: 212px;
+
+  $open-article: ' .article-preview.open';
+
+  &__img-block {
+
+  }
+
+  &__img {
+    height: 212px;
+    width: 100%;
+    @include background-cover-center;
+
+    &:nth-of-type(n + 2) {
+      margin-top: 30px;
+      display: none;
+      opacity: 0;
+    }
+
+    #{$open-article} &:nth-of-type(n + 2) {
+      display: block;
+      opacity: 1;
+    }
+
+  }
+
+  &__desc {
+    //min-height: 100%;
+    @include flex-column;
+    margin-top: -8px;
+  }
+
+  &__desc-title {
+    font-size: 23px;
+    line-height: 33px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  &__desc-block {
+    position: relative;
+    transition: none;
+
+    #{$open-article} & {
+      overflow: hidden;
+    }
+  }
+
+  &__desc-main {
+  }
+
+  &__desc-natural {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    padding: 15px 0;
+
+    #{$open-article} & {
+      opacity: 1;
+      visibility: visible;
+      position: static;
+    }
+  }
+
+  &__desc-subtitle {
+    font-size: 17px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+
+  &__desc-text {
+    font-size: 15px;
+    line-height: 23px;
+    padding-right: 180px;
+    padding-bottom: 20px;
+  }
+
+  &__desc-button {
+    margin-top: auto;
+    color: $blue;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 15px;
+    width: fit-content;
+    position: relative;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:after {
+      @include after-absolute;
+      background: $blue;
+      width: 9px;
+      height: 14px;
+      mask: url(../../../img/arrow-down.png);
+      -webkit-mask: url(../../../img/arrow-down.png);
+      @include mask-contain-center;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      #{$open-article} & {
+        transform: translateY(-50%) scaleY(-1);
+      }
+    }
+
+    &:hover:after {
+      background: $red;
+    }
+  }
+
+
+  &__desc-button-inner {
+
+    &--open {
+
+      #{$open-article} & {
+        display: none;
+      }
+    }
+
+    &--close {
+      display: none;
+
+      #{$open-article} & {
+        display: block;
+      }
+    }
+  }
+
+  &__desc-button:hover &__desc-button-inner {
+    color: $red;
+  }
+
+}

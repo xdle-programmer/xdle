@@ -1,0 +1,32 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.phone {
+  font-size: 12px;
+  @include flex-row;
+
+  @media #{$desktop-small-screen} {
+    font-size: 9px;
+  }
+
+
+  @media #{$mobile-big-screen} {
+    font-size: 13px;
+  }
+
+
+  &__item {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid $black;
+    color: $black;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+
+}

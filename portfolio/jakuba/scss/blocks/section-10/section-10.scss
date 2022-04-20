@@ -1,0 +1,84 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section-10 {
+  @include flex-column-center;
+  background: url(../../../img/section-10/background.jpg);
+  background-color: #f5f5f5;
+  @include background-contain-center;
+  width: 2575px;
+  padding-left: 230px;
+  //padding-bottom: 5vh;
+  z-index: 1;
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    order: 8;
+    padding: 70px 30px;
+    @include background-cover-center;
+  }
+
+  &__title {
+    font-size: 90px;
+    line-height: 123px;
+    text-align: center;
+    @include font-noto('');
+    //font-weight: 700;
+    margin-bottom: 5vh;
+
+
+    @media #{$tablet-big-screen} {
+      font-size: 40px;
+      line-height: 45px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button {
+    font-size: 18px;
+    height: 76px;
+    width: 390px;
+    background: $red;
+    color: $white;
+    @include flex-row-center;
+    cursor: pointer;
+
+    @media #{$tablet-big-screen} {
+      font-size: 16px;
+      height: 50px;
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    margin-top: 50px;
+    position: relative;
+    margin-right: 50px;
+    cursor: pointer;
+
+    &:after {
+      @include after-absolute;
+      width: 46px;
+      height: 31px;
+      background: $gray-light;
+      mask: url(../../../img/arrow-right.png);
+      -webkit-mask: url(../../../img/arrow-right.png);
+      @include mask-contain-center;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -100px;
+
+      @media #{$tablet-big-screen} {
+        right: -50px;
+        width: 30px;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      margin-right: 50px;
+    }
+
+  }
+}

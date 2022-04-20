@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    [[blocks/head.html*1]]
+    <title>UI Guide</title>
+</head>
+
+<body>
+
+
+<div class="ui-guide__header"></div>
+
+<section class="section">
+    <div class="section__wrapper">
+        <div class="layout">
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Заголовки</div>
+                <div class="ui-guide__desc">Для заголовков H1 используется класс title и классы-модификаторы title--left
+                    (выравнивает заголовок
+                    по левму краю) title--marker (добавляет точки перед заголовком)
+                </div>
+
+
+                <h1 class="title">Заголовок H1 с классом title</h1>
+                <h1 class="title title--marker">Заголовок H1 с классами title и title--marker</h1>
+                <h1 class="title title--left">Заголовок H1 с классами title и title--left</h1>
+                <h1 class="title title--marker title--left">Заголовок H1 с классами title, title--marker и
+                    title--left</h1>
+
+                <h2>Заголовок H2</h2>
+                <h3>Заголовок H3</h3>
+                <h4>Заголовок H4</h4>
+                <h5>Заголовок H5</h5>
+                <h6>Заголовок H6</h6>
+            </div>
+
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Область контента</div>
+                <div class="ui-guide__desc">
+                    Для размещения контента на всю ширину страницы, его следует поместить в блок с классом layout. При
+                    необходимости задать отступ, используйте класс layout-padding-top
+                </div>
+
+                <div class="layout">
+                    <p><b>Текст в блоке с классом layout</b></p>
+                    <p>Разнообразный и богатый опыт дальнейшее развитие различных
+                        форм деятельности позволяет оценить значение дальнейших направлений развития. Повседневная
+                        практика показывает, что постоянное информационно-пропагандистское обеспечение нашей
+                        деятельности в значительной степени обуславливает создание систем массового участия. Не следует,
+                        однако забывать, что рамки и место обучения кадров представляет собой интересный эксперимент
+                        проверки существенных финансовых и административных условий.</p>
+                </div>
+
+                <div class="ui-guide__desc">
+                    Для размещения контента в две колонки, его следует поместить в блок с классами layout и layout--flex
+                    и внутри этого блока положить блоки с классом layout-half
+                </div>
+
+                <div class="layout layout--flex">
+                    <div class="layout-half"><p><b>Текст в блоке с классом layout-half внутри блока с классами layout и
+                        layout--flex</b></p>
+                        <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности
+                            позволяет оценить значение дальнейших направлений развития. Повседневная практика
+                            показывает,
+                            что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной
+                            степени обуславливает создание систем массового участия.</p></div>
+                    <div class="layout-half"><p><b>Текст в блоке с классом layout-half внутри блока с классами layout и
+                        layout--flex</b></p>
+                        <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности
+                            позволяет оценить значение дальнейших направлений развития. Повседневная практика
+                            показывает,
+                            что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной
+                            степени обуславливает создание систем массового участия.</p></div>
+                </div>
+
+
+            </div>
+
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Кнопки и ссылки</div>
+
+
+                <div class="ui-guide__desc">
+                    Верстка выполнена по БЭМ-методолгии и для стилизации кнопки нужно к любому элементу (button, span,
+                    div, a
+                    и т.п.) применить класс button. Для стилизации белой кнопки нужно применить классы button и
+                    button--white
+                </div>
+
+                <p>
+                    <span class="button">button</span>
+                </p>
+                <p>
+                    <span class="button button--white">button button--white</span>
+                </p>
+            </div>
+
+
+
+
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Таблица</div>
+                <div class="ui-guide__desc">
+                    Для стилизации таблиц и подсветки строк классы не требуются. Используйте стандартные table, tr и th
+                </div>
+                <div class="layout layout--flex">
+                    <div class="layout-half layout-padding-top">
+                        <table>
+                            <tr>
+                                <th>Заголовок</th>
+                                <th>Заголовок</th>
+                                <th>Заголовок</th>
+                                <th>Заголовок</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="layout-half">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Фотографии</div>
+                <div class="ui-guide__desc">
+                    Для фотографий предусмотрено несколько вариантов размещения в контенте. В первую очередь, фотографии
+                    можно встраивать в текст. Для этого к фотографии нужно применить класс img-left (фото будет слева от текста) или img-right (фото будет справа от текста)
+                </div>
+                <div class="layout">
+                    <p><b>Фото в тексте с классом img-left</b></p>
+                    <p>
+                        <img src="/img/article_3.png" class="img-left">
+                        Разнообразный и богатый опыт дальнейшее развитие различных
+                        форм деятельности позволяет оценить значение дальнейших направлений развития. Повседневная
+                        практика показывает, что постоянное информационно-пропагандистское обеспечение нашей
+                        деятельности в значительной степени обуславливает создание систем массового участия. Не следует,
+                        однако забывать, что рамки и место обучения кадров представляет собой интересный эксперимент
+                        проверки существенных финансовых и административных условий.
+                    </p>
+                    <p>Разнообразный и богатый опыт дальнейшее развитие различных
+                        форм деятельности позволяет оценить значение дальнейших направлений развития. Повседневная
+                        практика показывает, что постоянное информационно-пропагандистское обеспечение нашей
+                        деятельности в значительной степени обуславливает создание систем массового участия.</p>
+
+                </div>
+                <div class="layout layout-padding-top">
+                        <p><b>Фото в тексте с классом img-right</b></p>
+                        <p>
+                            <img src="/img/article_1.png" class="img-right">
+                            Разнообразный и богатый опыт дальнейшее развитие различных
+                            форм деятельности позволяет оценить значение дальнейших направлений развития. Повседневная
+                            практика показывает, что постоянное информационно-пропагандистское обеспечение нашей
+                            деятельности в значительной степени обуславливает создание систем массового участия. Не следует,
+                            однако забывать, что рамки и место обучения кадров представляет собой интересный эксперимент
+                            проверки существенных финансовых и административных условий.
+                        </p>
+                        <p>Разнообразный и богатый опыт дальнейшее развитие различных
+                            форм деятельности позволяет оценить значение дальнейших направлений развития. Повседневная
+                            практика показывает, что постоянное информационно-пропагандистское обеспечение нашей
+                            деятельности в значительной степени обуславливает создание систем массового участия.</p>
+
+                    <p>Разнообразный и богатый опыт дальнейшее развитие различных
+                        форм деятельности позволяет оценить значение дальнейших направлений развития. Повседневная
+                        практика показывает, что постоянное информационно-пропагандистское обеспечение нашей
+                        деятельности в значительной степени обуславливает создание систем массового участия.</p>
+
+                </div>
+                <div class="layout layout-padding-top">
+                <div class="ui-guide__desc">
+                    Для размещения фотографии на всю ширину контента следует применить класс img-fill
+                </div>
+                <p>
+                    <img src="/img/goods-brand__img.jpg" class="img-fill">
+                </p>
+                </div>
+                <div class="ui-guide__desc">
+                    Для размещения нескольких фотографий предусмотрено несколько вариантов - в две, три и четыре колонки. Для стилизации только фотографий, нужно положить их в блок с классами layout и layout--flex и каждой фотографии применить класс img-half (для размешения в две колонки), img-third (в три колонки) или img-quarter (в четыре колонки)
+                </div>
+
+                <div class="layout layout--flex">
+                    <img src="/img/goods-brand__img.jpg" class="img-half">
+                    <img src="/img/goods-brand__img.jpg" class="img-half">
+                    <img src="/img/goods-brand__img.jpg" class="img-third">
+                    <img src="/img/goods-brand__img.jpg" class="img-third">
+                    <img src="/img/goods-brand__img.jpg" class="img-third">
+                    <img src="/img/goods-brand__img.jpg" class="img-quarter">
+                    <img src="/img/goods-brand__img.jpg" class="img-quarter">
+                    <img src="/img/goods-brand__img.jpg" class="img-quarter">
+                    <img src="/img/goods-brand__img.jpg" class="img-quarter">
+                </div>
+
+                <div class="ui-guide__desc">
+                    Если под фотографиями нужно разместить описание, то следует применить такую же конструкцию, с одним отличие - классы img-half, img-third или img-quarter нужно применить к элементу div к этому же диву применить класс img-desc, а внутри div разместить фото c классом img-fill и описание
+                </div>
+
+                <div class="layout layout--flex">
+                    <div class="img-half img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-half img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-third img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-third img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-third img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-quarter img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-quarter img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-quarter img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                    <div class="img-quarter img-desc"><img src="/img/goods-brand__img.jpg" class="img-fill">Описание фотографии, при необходимости может быть в несколько строк</div>
+                </div>
+
+                <div class="ui-guide__desc">
+                    Также описание фотографии можно разместить не под фотографией, а непосредственно на ней. В этом случае описание будет видно при наведении. Для этого нужно фото задать свойством background для элемента с классом description__photo. Количество колонок регулируют аналогичные классы - description__photo--quarter и description__photo--third. Описание нужно положить внутрь, с классом description__photo-text<br><br>Опционально можно кастомизировать фотографии - для тени вокруг фото нужно применить класс shadow, для затемнения фото при наведении нужно разместить внутрь элемент с классом description__photo-hover
+                </div>
+                <div class="layout layout--flex">
+                    <div class="description__photo shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+                    <div class="description__photo shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+                    <div class="description__photo description__photo--third shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+                    <div class="description__photo description__photo--third shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+                    <div class="description__photo description__photo--third shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+
+                    <div class="description__photo description__photo--quarter shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+                    <div class="description__photo description__photo--quarter shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+                    <div class="description__photo description__photo--quarter shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+                    <div class="description__photo description__photo--quarter shadow" style="background: url(../img/goods-brand__img.jpg)">
+                        <div class="description__photo-hover"></div>
+                        <div class="description__photo-text">
+                            Короткое описание фотографии
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!--.description__photo {-->
+                <!--.description__photo&#45;&#45;quarter {-->
+                <!--.description__photo&#45;&#45;fill {-->
+                <!--width: 100%;-->
+                <!--}-->
+
+                <!--.description__photo&#45;&#45;third-->
+            </div>
+
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Блок загрузки</div>
+                <div class="ui-guide__desc">
+                    Для размещения блока загрузки файлов скопируйте конструкцию download-block из примера ниже. При желании, иконку PDF можно заменить на любую другую, но важно соблюдать пропорции 1х1
+                </div>
+                <div class="layout layout--flex">
+                    <div class="layout-half layout-padding-top">
+                        <div class="download-block download-block--new shadow">
+                            <div class="download-block__links">
+                                <div class="download-block__logo">
+                                    <img src="/img/pdf.png">
+                                </div>
+
+                                <a href="#" class="download-block__link">Цены на септик<span>(PDF. 16 мб)</span></a>
+                                <a href="#" class="download-block__link">Тех. информация<span>(PDF. 16 мб)</span></a>
+
+                            </div>
+
+
+                            <div class="download-block__text">
+                                Всегда рады оказать вам услуги: <a href="#" class="green-underline inline">Подбор
+                                оборудования</a>,
+                                <a href="#" class="green-underline inline">Установка септиков</a>, <a href="#"
+                                                                                                      class="green-underline inline">Обслуживание
+                                септиков</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Чекбоксы и радиобаттоны</div>
+                <div class="ui-guide__desc">
+                    Для размещения блока загрузки файлов скопируйте конструкцию input и label из примера ниже. Особое внимание на аттрибуты id у input и for у label - они должны соответствовать друг другу.
+                </div>
+                <div class="layout layout--flex">
+                    <div class="layout-half">
+                        <div class="radio-button">
+                        <input type="radio" name="radio" class="radio-button__input" id="radio_1">
+                        <label class="radio-button__label" for="radio_1">Вариант 1</label>
+                        <input type="radio" name="radio" class="radio-button__input" id="radio_2">
+                        <label class="radio-button__label" for="radio_2">Вариант 2</label>
+                        <input type="radio" name="radio" class="radio-button__input" id="radio_3">
+                        <label class="radio-button__label" for="radio_3">Вариант 3</label>
+                        <input type="radio" name="radio" class="radio-button__input" id="radio_4">
+                        <label class="radio-button__label" for="radio_4">Вариант 4</label>
+                        </div>
+                    </div>
+                    <div class="layout-half">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_1" class="checkbox__input"/> <label for="checkbox_1" class="checkbox__label">Вариант 1</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_2" class="checkbox__input"/> <label for="checkbox_2" class="checkbox__label">Вариант 2</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_3" class="checkbox__input"/> <label for="checkbox_3" class="checkbox__label">Вариант 3</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_4" class="checkbox__input"/> <label for="checkbox_4" class="checkbox__label">Вариант 4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="ui-guide__item">
+                <div class="ui-guide__title">Списки</div>
+                <div class="ui-guide__desc">
+                    Для стилизации списков применять классы не требуются. Используйте списки UL и OL
+                </div>
+                <div class="layout layout--flex">
+                    <div class="layout-half">
+                        <p>Список UL</p>
+                        <ul>
+                            <li>декорирование природными материалами;</li>
+                            <li>декорирование искусственными объемными
+                                предметами по типу камня или элементами декора;
+                            </li>
+                            <li>декорирование с помощью флористики;</li>
+                            <li>декорирование с помощью отдельных конструкций.</li>
+                        </ul>
+                    </div>
+                    <div class="layout-half">
+                        <p>Список OL</p>
+                        <ol>
+                            <li>декорирование природными материалами;</li>
+                            <li>декорирование искусственными объемными
+                                предметами по типу камня или элементами декора;
+                            </li>
+                            <li>декорирование с помощью флористики;</li>
+                            <li>декорирование с помощью отдельных конструкций.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "gltf-blender-io-tests",
+  "version": "1.0.0",
+  "description": "Test suite for glTF-Blender-IO",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "gltf-validator": "^2.0.0-dev.3.2",
+    "mocha": "^7.0.0",
+    "mochawesome": "^4.1.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter mochawesome",
+    "test-bail": "mocha -b --reporter mochawesome",
+    "test-blender279b": "mocha -b --reporter mochawesome -g blender279b",
+    "test-blender28": "mocha -b --reporter mochawesome -g blender28",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js"
+  },
+  "mocha": {
+    "timeout": 60000
+  }
+}

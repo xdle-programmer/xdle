@@ -1,0 +1,79 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: 500;
+  font-size: 12px;
+  background: transparent;
+  border: 2px solid $white;
+  color: $white;
+  cursor: pointer;
+  transition: all .2s ease-in;
+  position: relative;
+
+  &:active,
+  &:visited {
+    color: $white;
+  }
+
+  &--black {
+    border: 2px solid $black;
+    color: $black;
+  }
+
+  &--black:active,
+  &--black:visited {
+    color: $black;
+  }
+
+  &:hover {
+    background: $white;
+    color: $black;
+  }
+
+  &--black:hover {
+    background: $black;
+    color: $white;
+  }
+
+  &--animation {
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      border: 2px solid $white;
+      border-radius: inherit;
+      opacity: 0;
+      transform: scale(0.6, 0.6);
+      transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+      transition: inherit;
+    }
+
+    &:hover:before {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+
+  }
+
+  &--black {
+
+    &:before {
+      border: 2px solid $black;
+    }
+
+  }
+
+  &:nth-of-type(1n + 1) {
+    margin-right: 20px;
+  }
+
+
+}

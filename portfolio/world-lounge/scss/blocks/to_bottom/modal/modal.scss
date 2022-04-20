@@ -1,0 +1,87 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.modal {
+
+  &__background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 56, 83, 0.9);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  &__block {
+    position: absolute;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  &__close {
+    z-index: 1002;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    background: url(../../../../img/close.svg);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+    }
+  }
+
+  &__lead {
+    width: 380px;
+    padding: 50px;
+    border-radius: 15px;
+    background: $white;
+
+    @media #{$tablet-big-screen} {
+      width: 90vw;
+      padding: 20px;
+    }
+  }
+
+  &__thank {
+    width: 400px;
+    padding: 50px;
+    border-radius: 15px;
+    background: $white;
+    @include flex-column-center;
+    text-align: center;
+    color: #343853;
+    font-size: 28px;
+
+    @media #{$tablet-big-screen} {
+      width: 95vw;
+    }
+  }
+
+}

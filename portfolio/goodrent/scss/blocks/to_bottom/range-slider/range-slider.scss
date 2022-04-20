@@ -1,0 +1,110 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.range-slider {
+  & *,
+  & *:before,
+  & *:after {
+    transition: none;
+  }
+
+
+  &__inputs {
+    @include flex-row;
+    justify-content: space-between;
+    margin-left: auto;
+    height: 100%;
+    position: relative;
+
+    &--hidden {
+      display: none;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 15px;
+      height: 1px;
+      background: $black;
+    }
+  }
+
+  &__input {
+    @include flex-row;
+    width: 85px;
+    height: 100%;
+    border: 1px solid #999;
+    padding-left: 15px;
+    color: $gray;
+
+    &:nth-of-type(2) {
+      margin-left: 35px;
+    }
+  }
+
+  &__item {
+    width: calc(100% - 26px);
+    margin-bottom: 17px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  &__item-line {
+    height: 6px !important;
+    border: none !important;
+    background: #e7e7e7 !important;
+  }
+  &__item-progress {
+    height: 6px !important;
+    border: none !important;
+    background: #6c376d !important;
+  }
+
+  &__item-handle {
+    width: 26px !important;
+    height: 26px !important;
+    background: #4d254e !important;
+    border-radius: 50% !important;
+    border: none !important;
+    top: -11px !important;
+    cursor: pointer !important;
+
+    &:hover {
+      background: #6c376d !important;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__item-handle:focus {
+    outline: none !important;
+  }
+
+  &__item-handle:after {
+    @include after-absolute;
+    @include absolute-center;
+    background: url(../../../../img/handler.svg);
+    @include background-contain-center;
+    width: 4px;
+    height: 6px;
+  }
+
+  &__values {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  &__value {
+    @include flex-row;
+    align-items: baseline;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__value-item {
+
+  }
+  &__value-currency {
+    margin-left: 3px;
+  }
+
+}

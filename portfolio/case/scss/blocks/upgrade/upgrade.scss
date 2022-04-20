@@ -1,0 +1,385 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.upgrade {
+  padding-top: 30px;
+
+  &__preview-block {
+    @include flex-row;
+    justify-content: space-between;
+
+    @media #{$desktop-small-screen} {
+      padding: 0 100px;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      padding: 0;
+    }
+  }
+
+  &__preview-change-icon {
+    width: 53px;
+    height: 34px;
+    margin-top: 80px;
+    background: url(../../img/change-icon.png);
+    @include background-contain-center;
+
+    @media #{$mobile-big-screen} {
+      width: 25px;
+      height: 15px;
+      margin: 15px 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__preview-item {
+    width: 33%;
+
+    @media #{$mobile-big-screen} {
+      width: 50%;
+    }
+  }
+
+  $preview-hover: '.upgrade__preview-item:hover';
+
+  &__preview-item-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background: linear-gradient(to bottom, rgba(127, 127, 127, .1), rgba(127, 127, 127, .6));
+  }
+
+  &__preview-item-corners {
+    position: absolute;
+    @include absolute-fill;
+  }
+  &__preview-item-corners-item {
+    position: absolute;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 0;
+      width: 9px;
+      height: 1px;
+      background: rgba(255, 255, 255, .4);
+
+      #{$preview-hover} & {
+        background: rgba(255, 255, 255, 1);
+      }
+    }
+
+    &:after {
+      transform: rotate(90deg);
+    }
+
+    &:nth-of-type(1) {
+      left: -4px;
+      top: 0px;
+    }
+    &:nth-of-type(2) {
+      right: 5px;
+      top: 0px;
+    }
+    &:nth-of-type(3) {
+      left: -4px;
+      bottom: 1px;
+    }
+    &:nth-of-type(4) {
+      right: 5px;
+      bottom: 1px;
+    }
+
+  }
+
+  &__preview-item-img-block {
+    position: absolute;
+    @include absolute-fill;
+    @include flex-row-center;
+  }
+  &__preview-item-img {
+    width: 90%;
+    height: auto;
+  }
+  &__preview-item-desc {
+    position: absolute;
+    @include absolute-fill;
+    @include flex-column;
+    padding: 25px 20px;
+    justify-content: flex-end;
+  }
+  &__preview-item-desc-name {
+    color: #aaaaac;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: auto;
+    text-shadow: 2px 0px 1px rgba(0, 0, 0, .7);
+  }
+  &__preview-item-desc-category {
+    color: #aaaaac;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 3px;
+    text-shadow: 2px 0px 1px rgba(0, 0, 0, .7);
+  }
+
+  &__preview-price {
+    position: absolute;
+    @include absolute-fill;
+    @include flex-row-center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 2px 0px 1px rgba(0, 0, 0, .7);
+  }
+
+  &__preview-subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    background: #dd9c0a;
+    @include text-shadow;
+    margin: 15px 0;
+    margin-top: 20px;
+
+    @media #{$mobile-big-screen} {
+      margin: 8px 0;
+    }
+  }
+
+  &__select {
+    @include flex-row-center;
+    width: 130px;
+    @include margin-auto;
+  }
+
+  &__bet {
+    margin-top: 50px;
+    @include flex-column-center;
+    width: 100%;
+
+    @media #{$mobile-big-screen} {
+      margin-top: 15px;
+    }
+  }
+  &__bet-success {
+    font-size: 15px;
+    color: #aad624;
+    @include flex-row-center;
+    margin-bottom: 30px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url(../../img/check.png);
+      @include background-contain-center;
+      margin-right: 15px;
+    }
+  }
+  &__bet-improve {
+    @include flex-row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$desktop-big-screen} {
+      @include flex-column-center;
+    }
+
+    @media #{$desktop-small-screen} {
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      padding: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 10px;
+    }
+  }
+  &__bet-improve-item {
+    width: calc(50% - 162px);
+
+    &--right {
+      text-align: right;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      width: auto;
+    }
+
+    @media #{$desktop-big-screen} {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    @media #{$desktop-small-screen} {
+      width: calc(50% - 162px);
+    }
+
+    @media #{$mobile-big-screen} {
+      width: auto;
+    }
+  }
+  &__bet-improve-item-title {
+    background: #afafb0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include text-shadow;
+  }
+  &__bet-improve-item-text {
+    background: #dd9c0a;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include text-shadow;
+  }
+  &__bet-improve-button {
+    background: #c2952e;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    font-size: 16px;
+    width: 224px;
+    margin: 0 50px;
+    font-weight: 700;
+    color: #000;
+    @include flex-row-center;
+    border-radius: 5px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url(../../img/upgrade.png);
+      @include background-contain-center;
+      margin-right: 25px;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      width: auto;
+      margin: 0;
+    }
+
+    @media #{$desktop-big-screen} {
+      margin-bottom: 15px;
+    }
+
+    @media #{$desktop-small-screen} {
+      width: 224px;
+      margin: 0 50px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: auto;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+  }
+  &__bet-slider {
+    margin-top: 50px;
+    @include flex-column-center;
+    width: 100%;
+    padding: 0 70px;
+
+    @media #{$desktop-big-screen} {
+      padding: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-top: 15px;
+    }
+  }
+  &__bet-slider-title {
+    background: #afafb0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include text-shadow;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__bet-slider-button {
+    margin-bottom: 15px;
+    background: #c2952e;
+    text-transform: uppercase;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    @include flex-row-center;
+  }
+  &__bet-slider-input {
+    width: 100%;
+  }
+
+  &__bet-input {
+    margin-top: 50px;
+    @include flex-column-center;
+    width: 100%;
+    padding: 0 30px;
+
+    @media #{$desktop-big-screen} {
+      padding: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 10px;
+    }
+
+  }
+  &__bet-input-title {
+    background: #dd9c0a;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include text-shadow;
+    margin-bottom: 15px;
+  }
+  &__bet-input-item {
+    background: rgba(26, 28, 30, .7);
+    border: 1px solid #3c3c3d;
+    @include flex-row-center;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__bet-checkbox {
+    margin-top: 70px;
+    @include flex-row-center;
+
+    @media #{$mobile-big-screen} {
+      margin-top: 15px;
+    }
+  }
+
+  &__how-it-work-button {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #b3b8b4, #f0f4ef);
+    margin-top: 25px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+}

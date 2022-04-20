@@ -1,0 +1,374 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.structure {
+  position: relative;
+  z-index: 6;
+
+  &__main {
+    width: 350px;
+    height: 350px;
+    margin: 232px auto;
+    background: url(assets/img/planet-big-orbit.svg);
+    @include background-contain-center;
+    margin-bottom: 410px;
+
+    @media #{$mobile-big-screen}{
+      width: 100%;
+      height: auto;
+      margin: 0;
+      background: none;
+      margin-top: 100px;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    background: var(--white-color);
+    width: 212px;
+    position: absolute;
+    padding-bottom: 10px;
+    z-index: 1;
+
+    //2c1a4b
+    //a71a35
+    //6c2835
+
+    #{$night} & {
+      background: linear-gradient(127deg, #2c1a4b , #a71a35, #6c2835);
+    }
+
+    @media #{$mobile-big-screen}{
+      position: relative;
+      left: auto!important;
+      top: auto!important;
+      margin-bottom: 50px;
+    }
+
+    &--active {
+      background: var(--beige-color);
+      z-index: 2;
+
+      @media #{$mobile-big-screen}{
+        width: 100%;
+      }
+    }
+
+    &--1 {
+      left: 585px;
+      top: 0;
+
+      @media #{$mobile-big-screen}{
+        margin-left: auto;
+      }
+    }
+
+    &--2 {
+      left: 218px;
+      top: 205px
+    }
+
+    &--3 {
+      left: 135px;
+      top: 359px;
+
+      @media #{$mobile-big-screen}{
+        margin-left: auto;
+      }
+    }
+
+    &--4 {
+      left: 585px;
+      top: 176px
+    }
+
+    &--5 {
+      left: 706px;
+      top: 338px;
+
+      @media #{$mobile-big-screen}{
+        margin-left: auto;
+      }
+    }
+
+    &--6 {
+      left: 431px;
+      top: 490px
+    }
+
+    &--7 {
+      left: 431px;
+      top: 640px;
+
+      @media #{$mobile-big-screen}{
+        margin-left: auto;
+      }
+    }
+
+    &--8 {
+      left: 100px;
+      top: 800px
+    }
+
+    &--9 {
+      left: 496px;
+      top: 800px;
+
+      @media #{$mobile-big-screen}{
+        margin-left: auto;
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+    }
+
+    &--1:after {
+      width: 121px;
+      height: 100px;
+      transform: scaleX(-1);
+      background: url(assets/img/planet-big-item-big.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-big-item-big-dark.svg);
+      }
+
+      @include background-contain-center;
+      left: -109px;
+      top: 10px;
+    }
+
+    &--1:before {
+      @include after-absolute;
+      width: 1px;
+      height: 180px;
+      background: var(--beige-color);
+      left: -44px;
+      top: 57px;
+      opacity: .5;
+    }
+
+    &--2:after {
+      width: 40px;
+      height: 40px;
+      background: url(assets/img/planet-big-item-small.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-big-item-small-dark.svg);
+      }
+
+      @include background-contain-center;
+      right: -29px;
+      top: 20px;
+    }
+
+    &--3:after {
+      width: 60px;
+      height: 60px;
+      background: url(assets/img/planet-big-item-big.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-big-item-big-dark.svg);
+      }
+
+
+      @include background-contain-center;
+      right: -29px;
+      top: 20px;
+
+      @media #{$mobile-big-screen}{
+        left: -45px;
+      }
+    }
+
+    &--4:after {
+      width: 80px;
+      height: 80px;
+      transform: scaleX(-1);
+      background: url(assets/img/planet-big-item-big.svg);
+
+
+      #{$night} & {
+        background: url(assets/img/planet-big-item-big-dark.svg);
+      }
+
+      @include background-contain-center;
+      right: -69px;
+      top: 10px;
+    }
+
+    &--5:after {
+      width: 40px;
+      height: 40px;
+      background: url(assets/img/planet-big-item-small.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-big-item-small-dark.svg);
+      }
+
+      @include background-contain-center;
+      right: -29px;
+      top: 20px;
+
+      @media #{$mobile-big-screen}{
+        left: -35px;
+      }
+    }
+
+    &--6:after {
+      width: 120px;
+      height: 120px;
+      background: url(assets/img/planet-free.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-free-dark.svg);
+      }
+
+      @include background-contain-center;
+      left: -105px;
+      top: 5px;
+
+      @media #{$mobile-big-screen}{
+        right: -105px;
+        left: auto;
+      }
+    }
+
+    &--6:before {
+      @include after-absolute;
+      width: 1px;
+      height: 156px;
+      background: var(--beige-color);
+      left: -60px;
+      top: 43px;
+      opacity: .5;
+    }
+
+    &--7:after {
+      width: 50px;
+      height: 50px;
+      background: url(assets/img/planet-big-item-small.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-big-item-small-dark.svg);
+      }
+
+      @include background-contain-center;
+      left: -40px;
+      top: 20px;
+    }
+
+    &--7:before {
+      @include after-absolute;
+      width: 200px;
+      height: 200px;
+      background: url(assets/img/planet-big-orbit.svg);
+      @include background-contain-center;
+      left: -130px;
+      top: 43px;
+      z-index: -1;
+    }
+
+    &--8:after {
+      width: 60px;
+      height: 60px;
+      background: url(assets/img/planet-free.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-free-dark.svg);
+      }
+
+      transform: scaleX(-1);
+      @include background-contain-center;
+      right: -35px;
+      top: 5px;
+    }
+
+
+    &--9:after {
+      width: 80px;
+      height: 80px;
+      transform: scaleX(-1);
+      background: url(assets/img/planet-big-item-big.svg);
+
+      #{$night} & {
+        background: url(assets/img/planet-big-item-big-dark.svg);
+      }
+
+      @include background-contain-center;
+      left: -69px;
+      top: 10px;
+    }
+
+    @media #{$mobile-big-screen}{
+      &:before {
+        display: none;
+      }
+    }
+
+  }
+
+  $active: '.structure__item--active';
+
+  &__item-title {
+    font-size: 16px;
+    text-transform: uppercase;
+
+    #{$active} & {
+      color: var(--white-color);
+    }
+
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+  }
+
+  &__item-subtitle {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    #{$active} & {
+      color: var(--white-color);
+    }
+
+    #{$night} & {
+      color: var(--beige-color);
+    }
+  }
+
+  &__item-text {
+    display: none;
+    color: var(--white-color);
+  }
+
+  &__item-button {
+    height: 15px;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &:after {
+      @include after-absolute;
+      width: 10px;
+      height: 10px;
+      @include absolute-center;
+      background: var(--beige-color);
+      mask: url(assets/img/arrow.png);
+      @include mask-contain-center;
+
+      #{$active} & {
+        background: var(--white-color);
+        transform: translate(-50%, -50%) scaleY(-1);
+      }
+    }
+
+    &:hover:after {
+      background: var(--blue-color);
+    }
+  }
+
+}

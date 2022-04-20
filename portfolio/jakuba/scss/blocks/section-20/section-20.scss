@@ -1,0 +1,56 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section-20 {
+  @include flex-column-center;
+
+  width: 1800px;
+  padding: 1vh 220px;
+  padding-top: 3vh;
+
+  @media #{$desktop-small-screen} {
+    width: 1300px;
+  }
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    order: 16;
+    padding: 30px;
+    @include flex-column;
+  }
+
+
+  &__title {
+    font-size: 50px;
+    text-align: left;
+    @include font-noto('');
+    font-weight: 700;
+    margin-bottom: 70px;
+    position: relative;
+    width: 100%;
+
+    &:after {
+      @include after-absolute;
+      width: 100px;
+      left: 0;
+      bottom: -20px;
+      background: $red;
+      height: 3px;
+    }
+
+    @media #{$desktop-small-screen} {
+      font-size: 36px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 24px;
+    }
+
+  }
+
+  &__items {
+    width: 100%;
+  }
+
+}

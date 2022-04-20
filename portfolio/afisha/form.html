@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>Digital Design Studio</title>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles_to_head.css" media="screen, projection, print">
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="poster-master">
+    <form class="poster-master__form layout-main">
+        <div class="poster-master__page active">
+            <div class="poster-master__header">
+                <div class="poster-master__header-logo"></div>
+                <div class="poster-master__header-title poster-master__header-title--without-step">Выберите тариф</div>
+                <div class="poster-master__header-step"></div>
+            </div>
+            <div class="poster-master__desc">Хорошо, когда есть выбор!</div>
+            <div class="poster-master__content">
+                <div class="poster-master__rates">
+
+                    <div class="poster-master__rate-item poster-master__rate-item--standart">
+                        <div class="poster-master__rate-item-name">СТАНДАРТ</div>
+                        <div class="poster-master__rate-item-desc">Оптимальное решение для небольших мероприятий</div>
+                        <div class="poster-master__rate-item-price">
+                            <div class="poster-master__rate-item-price-from">от</div>
+                            <div class="poster-master__rate-item-price-value">500</div>
+                            <div class="poster-master__rate-item-price-currency">р</div>
+                        </div>
+                        <div class="poster-master__rate-item-services">
+                            <div class="poster-master__rate-item-services-item">Низкая стоимость афиши</div>
+                            <div class="poster-master__rate-item-services-item">возможность одной правки</div>
+                            <div class="poster-master__rate-item-services-item">Размер под печать До А4</div>
+                        </div>
+                        <div class="poster-master__rate-item-button next-screen">Заказать</div>
+                    </div>
+
+                    <div class="poster-master__rate-item poster-master__rate-item--premium">
+                        <div class="poster-master__rate-item-name">ПРЕМИУМ</div>
+                        <div class="poster-master__rate-item-desc">разработка Уникального дизайна афиши</div>
+                        <div class="poster-master__rate-item-price">
+                            <div class="poster-master__rate-item-price-from">от</div>
+                            <div class="poster-master__rate-item-price-value">1000</div>
+                            <div class="poster-master__rate-item-price-currency">р</div>
+                        </div>
+                        <div class="poster-master__rate-item-services">
+                            <div class="poster-master__rate-item-services-item">Проработка деталей дизайна</div>
+                            <div class="poster-master__rate-item-services-item">Реализация вашей идеи</div>
+                            <div class="poster-master__rate-item-services-item">Возможность нескольких правок</div>
+                            <div class="poster-master__rate-item-services-item">ИндИВИДУАЛЬНЫЙ ПОДХОД</div>
+                        </div>
+                        <div class="poster-master__rate-item-button next-screen">Заказать</div>
+                    </div>
+
+                    <div class="poster-master__rate-item poster-master__rate-item--all">
+                        <div class="poster-master__rate-item-name">Все включено</div>
+                        <div class="poster-master__rate-item-desc">Для тех кто хочет получить максимум</div>
+                        <div class="poster-master__rate-item-price">
+                            <div class="poster-master__rate-item-price-value">3000</div>
+                            <div class="poster-master__rate-item-price-currency">р</div>
+                        </div>
+                        <div class="poster-master__rate-item-services">
+                            <div class="poster-master__rate-item-services-item">Макет афиши</div>
+                            <div class="poster-master__rate-item-services-item">Макеты для соц.сетей</div>
+                            <div class="poster-master__rate-item-services-item">макет Билета</div>
+                            <div class="poster-master__rate-item-services-item">скидка более 30%</div>
+                        </div>
+                        <div class="poster-master__rate-item-button next-screen">Заказать</div>
+                    </div>
+                    <input type="hidden" name="poster-master-rates">
+                </div>
+            </div>
+
+            <div class="poster-master__footer">
+                <div class="poster-master__footer-process">
+                    <div class="poster-master__footer-process-item">Заполните бриф</div>
+                    <div class="poster-master__footer-process-item">Утверждение брифа</div>
+                    <div class="poster-master__footer-process-item">Внесите оплату</div>
+                    <div class="poster-master__footer-process-item">Получите готовую афишу</div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="poster-master__page next">
+            <div class="poster-master__header">
+                <div class="poster-master__header-logo"></div>
+                <div class="poster-master__header-title">Заполните бриф</div>
+                <div class="poster-master__header-step">1/3</div>
+            </div>
+            <div class="poster-master__desc">Для понимания задачи, пожалуйста, заполните данную форму.</div>
+            <div class="poster-master__content">
+                <div class="poster-master__title">Раскажите о себе</div>
+                <div class="poster-master__inputs-block">
+                    <input name="poster-master-email" required type="text"
+                           class="poster-master__input poster-master__input--email"
+                           placeholder="Ваш электронный адрес*">
+                    <input name="poster-master-name" required type="text"
+                           class="poster-master__input poster-master__input--name" placeholder="Как к вам обращаться*">
+                    <input name="poster-master-promo" type="text"
+                           class="poster-master__input poster-master__input--promo" placeholder="Ваш Промокод">
+                    <input name="poster-master-phone" required type="tel"
+                           class="poster-master__input poster-master__input--phone" placeholder="НОМЕР ТЕЛЕФОНА *">
+                    <input name="poster-master-messenger" type="hidden">
+                    <div class="poster-master__icons-select poster-master__icons-select--messenger">
+                        <div class="poster-master__icons-select-item poster-master__icons-select-item--messenger poster-master__icons-select-item--viber" data-messenger-name="viber"></div>
+                        <div class="poster-master__icons-select-item poster-master__icons-select-item--messenger poster-master__icons-select-item--whatsapp" data-messenger-name="whatsapp"></div>
+                        <div class="poster-master__icons-select-item poster-master__icons-select-item--messenger poster-master__icons-select-item--telegram" data-messenger-name="telegram"></div>
+                    </div>
+                </div>
+                <div class="poster-master__title">ИНФОРМАЦИЯ НА АФИШУ</div>
+                <div class="poster-master__inputs-block">
+                    <textarea name="poster-master-about-event"
+                              class="poster-master__input poster-master__input--textarea poster-master__input--about-event"
+                              placeholder="ИНФОРМАЦИЯ НА АФИШУ"></textarea>
+                    <input name="poster-master-date" type="text"
+                           class="poster-master__input poster-master__input--date"
+                           placeholder="дата мероприятия">
+
+                    <input name="poster-master-date-test" type="text"
+                           class="poster-master__input poster-master__input--date"
+                           placeholder="дата мероприятия">
+
+                    <input name="poster-master-contact-to-poster" type="text"
+                           class="poster-master__input poster-master__input--contact-to-poster"
+                           placeholder="Контактная информация на афишу">
+                </div>
+            </div>
+            <div class="poster-master__footer">
+                <div class="poster-master__footer-buttons">
+                    <div class="poster-master__footer-button-prev prev-screen">Назад</div>
+                    <div class="poster-master__footer-button-next next-screen">Далее</div>
+                </div>
+                <div class="poster-master__footer-desc">Пункты, обязательные для заполнения (*)</div>
+                <div class="poster-master__footer-dots">
+                    <div class="poster-master__footer-dot active"></div>
+                    <div class="poster-master__footer-dot"></div>
+                    <div class="poster-master__footer-dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="poster-master__page next">
+            <div class="poster-master__header">
+                <div class="poster-master__header-logo"></div>
+                <div class="poster-master__header-title">Немного деталей</div>
+                <div class="poster-master__header-step">2/3</div>
+            </div>
+            <div class="poster-master__desc">Для понимания задачи, пожалуйста, заполните данную форму.</div>
+            <div class="poster-master__content">
+                <div class="poster-master__title">Уточнение деталей</div>
+                <div class="poster-master__details-header">
+                    <div class="poster-master__size-select">
+                        <div class="poster-master__size-select-name">РАзмер афиши</div>
+                        <input name="poster-master-paper-size" type="hidden">
+                        <div class="poster-master__size-select-items">
+                            <div class="poster-master__size-select-item" data-paper-size="a6">a6</div>
+                            <div class="poster-master__size-select-item" data-paper-size="a5">a5</div>
+                            <div class="poster-master__size-select-item" data-paper-size="a4">a4</div>
+                            <div class="poster-master__size-select-item" data-paper-size="a3">a3</div>
+                            <div class="poster-master__size-select-item" data-paper-size="a2">a2</div>
+                            <div class="poster-master__size-select-item" data-paper-size="a1">a1</div>
+                            <div class="poster-master__size-select-item" data-paper-size="a0">a0</div>
+                        </div>
+                    </div>
+
+                    <div class="poster-master__social-select">
+                        <div class="poster-master__social-select-name">Социальные Сети</div>
+                        <div class="poster-master__social-select-items">
+                            <input name="poster-master-social" type="hidden">
+                            <div class="poster-master__icons-select poster-master__icons-select--social">
+                                <div class="poster-master__icons-select-item poster-master__icons-select-item--social poster-master__icons-select-item--vk" data-social-name="vk"></div>
+                                <div class="poster-master__icons-select-item poster-master__icons-select-item--social poster-master__icons-select-item--insta" data-social-name="insta"></div>
+                                <div class="poster-master__icons-select-item poster-master__icons-select-item--social poster-master__icons-select-item--facebook" data-social-name="facebook"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="poster-master__details-block">
+                    <div class="poster-master__details-paper">
+                        <div class="paper">
+                            <div class="paper__item paper__item--a0 select-paper-size" data-paper-size="a0">
+                                <div class="paper__desc paper__desc--a0">
+                                    <div class="paper__name paper__name--a0">A0</div>
+                                    <div class="paper__size paper__size--a0">841<span>x</span>1189</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a1 select-paper-size" data-paper-size="a1">
+                                <div class="paper__desc paper__desc--a1">
+                                    <div class="paper__name paper__name--a1">A1</div>
+                                    <div class="paper__size paper__size--a1">594<span>x</span>841</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a2 select-paper-size" data-paper-size="a2">
+                                <div class="paper__desc paper__desc--a2">
+                                    <div class="paper__name paper__name--a2">A2</div>
+                                    <div class="paper__size paper__size--a2">420<span>x</span>594</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a3 select-paper-size" data-paper-size="a3">
+                                <div class="paper__desc paper__desc--a3">
+                                    <div class="paper__name paper__name--a3">A3</div>
+                                    <div class="paper__size paper__size--a3">297<span>x</span>420</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a4 select-paper-size" data-paper-size="a4">
+                                <div class="paper__desc paper__desc--a4">
+                                    <div class="paper__name paper__name--a4">A4</div>
+                                    <div class="paper__size paper__size--a4">210<span>x</span>297</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a5 select-paper-size" data-paper-size="a5">
+                                <div class="paper__desc paper__desc--a5">
+                                    <div class="paper__name paper__name--a5">A5</div>
+                                    <div class="paper__size paper__size--a5">148<span>x</span>210</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a6 select-paper-size" data-paper-size="a6">
+                                <div class="paper__desc paper__desc--a6">
+                                    <div class="paper__name paper__name--a6">A6</div>
+                                    <div class="paper__size paper__size--a6">105<span>x</span>148</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a7 select-paper-size">
+                                <div class="paper__desc paper__desc--a7">
+                                    <div class="paper__name paper__name--a7">A7</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--a8 select-paper-size">
+                                <div class="paper__desc paper__desc--a8">
+                                    <div class="paper__name paper__name--a8">A8</div>
+                                </div>
+                            </div>
+                            <div class="paper__item paper__item--last"></div>
+
+                        </div>
+                    </div>
+                    <div class="poster-master__details-inputs">
+                        <div class="poster-master__details-item">
+                            <input type="checkbox" name="poster-master-other-size-checkbox"
+                                   id="poster-master-other-size-checkbox"
+                                   class="poster-master__details-checkbox"/>
+                            <label for="poster-master-other-size-checkbox"
+                                   class="poster-master__details-checkbox-title">Другие
+                                размеры</label>
+                            <div class="poster-master__details-checkbox-subtitle">Стоимость дополнительных размеров
+                                расчитывается индивидуально
+                            </div>
+                        </div>
+
+                        <div class="poster-master__details-item">
+                            <input type="checkbox" name="poster-master-social-adv-checkbox"
+                                   id="poster-master-social-adv-checkbox"
+                                   class="poster-master__details-checkbox"/>
+                            <label for="poster-master-social-adv-checkbox"
+                                   class="poster-master__details-checkbox-title">Таргетированная
+                                реклама</label>
+                            <div class="poster-master__details-checkbox-subtitle">Подготовка афиши для рекламы в соц
+                                сетях
+                            </div>
+                        </div>
+
+                        <div class="poster-master__details-item">
+                            <div class="poster-master__details-select-block">
+                                <div class="poster-master__details-select-name">Фото на афише</div>
+                                <select name="poster-master-photo" class="poster-master__details-select">
+                                    <option>Option A</option>
+                                    <option>Option B</option>
+                                    <option>Option C</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="poster-master__details-item">
+                            <div class="poster-master__details-select-block">
+                                <div class="poster-master__details-select-name">Пожелания к афише</div>
+                                <select name="poster-master-wishes-select" class="poster-master__details-select">
+                                    <option>Option A</option>
+                                    <option>Option B</option>
+                                    <option>Option C</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="poster-master__details-item">
+                            <input type="checkbox" name="poster-master-psd-checkbox" id="poster-master-psd-checkbox"
+                                   class="poster-master__details-checkbox"/>
+                            <label for="poster-master-psd-checkbox" class="poster-master__details-checkbox-title">Исходник
+                                Афиши</label>
+                            <div class="poster-master__details-checkbox-subtitle">Высылается в формате psd</div>
+                        </div>
+
+                        <div class="poster-master__details-item">
+                            <textarea name="poster-master-wishes"
+                                      class="poster-master__input poster-master__input--textarea poster-master__input--wishes"></textarea>
+                        </div>
+
+                        <div class="poster-master__details-item">
+                            <div class="poster-master__details-select-block">
+                                <div class="poster-master__details-select-name">Сроки выполнения</div>
+                                <select name="poster-master-deadline" class="poster-master__details-select">
+                                    <option>2 дня</option>
+                                    <option>3 дня</option>
+                                    <option>5 дней</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="poster-master__details-item">
+                            <input type="checkbox" name="poster-master-print-poster-checkbox"
+                                   id="poster-master-print-poster-checkbox"
+                                   class="poster-master__details-checkbox"/>
+                            <label for="poster-master-print-poster-checkbox"
+                                   class="poster-master__details-checkbox-title">печать
+                                афиши</label>
+                            <div class="poster-master__details-checkbox-subtitle">Подготовка макета афиши под печать
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster-master__details-footer">
+                    <div class="poster-master__details-footer-file">
+                        <div class="poster-master__details-footer-file-title">Для отправки дополнительных материалов
+                            (логотипы, фото, примеры работ) не более 25 МБ
+                        </div>
+
+                        <input type="file" name="poster-master-poster-file" id="poster-master-poster-file"
+                               class="poster-master__details-file"/>
+                        <label for="poster-master-poster-file" class="poster-master__details-file-name">
+                            <div class="poster-master__details-file-name-title">ЗАГРУЗИТЬ ФАЙЛЫ</div>
+                            <div id="poster-master__details-file-name-item"></div>
+                        </label>
+
+                    </div>
+                    <div class="poster-master__details-footer-price-block">
+                        <div class="poster-master__details-footer-price">
+                            <div class="poster-master__details-footer-price-text">
+                                Предварительная<br>стоимость
+                            </div>
+                            <div class="poster-master__details-footer-price-item">
+                                <div class="poster-master__details-footer-price-item-value">500</div>
+                                <div class="poster-master__details-footer-price-item-currency">Р</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-master__footer">
+                <div class="poster-master__footer-buttons">
+                    <div class="poster-master__footer-button-prev prev-screen">Назад</div>
+                    <div class="poster-master__footer-button-next next-screen">Далее</div>
+                </div>
+                <div class="poster-master__footer-desc">Пункты, обязательные для заполнения (*)</div>
+                <div class="poster-master__footer-dots">
+                    <div class="poster-master__footer-dot"></div>
+                    <div class="poster-master__footer-dot active"></div>
+                    <div class="poster-master__footer-dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="poster-master__page next">
+            <div class="poster-master__header">
+                <div class="poster-master__header-logo"></div>
+                <div class="poster-master__header-title">Почти готово</div>
+                <div class="poster-master__header-step">3/3</div>
+            </div>
+            <div class="poster-master__desc"></div>
+            <div class="poster-master__content">
+                <div class="poster-master__title">Прежде чем отправить заявку, проверьте заполненные данные</div>
+
+
+                <div class="poster-master__result">
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Ваш электронный адрес</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">РАзмер афиши</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Как к вам обращаться</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Социальные Сети</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">НОМЕР ТЕЛЕФОНА</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Фото на афише</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Ваш Промокод</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Таргетированная реклама</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">ИНФОРМАЦИЯ НА АФИШУ</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">БУДУТ ЛИ Другие размеры</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Контактная информация на афишу</div>
+                        <div class="poster-master__result-name">Текст текст текст Текст текст текстТекст текст текст
+                            Текст текст текстТекст текст текст Текст текст текстТекст текст текст Текст текст текстТекст
+                            текст текстТекст текст текст Текст текст текстТекст текст текст Текст текст текст
+                        </div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Пожелания к афише</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Дата мероприятия</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Исходник Афиши</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                    <div class="poster-master__result-block">
+                        <div class="poster-master__result-item">Печать афиши</div>
+                        <div class="poster-master__result-name">Текст текст текст</div>
+                    </div>
+                </div>
+
+                <div class="poster-master__result-footer">
+                    <div class="poster-master__result">
+                        <div class="poster-master__result-block">
+                            <div class="poster-master__result-item">Предварительная стоимость</div>
+                            <div class="poster-master__result-name">2000 рублей</div>
+                        </div>
+                        <div class="poster-master__result-block">
+                            <div class="poster-master__result-item">Приблизительная Готовность афиши</div>
+                            <div class="poster-master__result-name">04.04.2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster-master__result-footer-icons">
+                    <div class="poster-master__result-footer-icon-block">
+                        <div class="poster-master__result-footer-icon poster-master__result-footer-icon--clock"></div>
+                        <div class="poster-master__result-footer-icon-text">Среднее время обработки заявки: 3 часа.
+                        </div>
+                    </div>
+
+                    <div class="poster-master__result-footer-icon-block">
+                        <div class="poster-master__result-footer-icon poster-master__result-footer-icon--cactus"></div>
+                        <div class="poster-master__result-footer-icon-text">Итоговая стоимость и сроки вашего заказа
+                            согласовываются после обработки вашего технического задания
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster-master__result-footer-text">По результатам работы возможно внесение не более 1
+                    доработки или переделки, не вошедших в бриф (не считая технических сбоев, обнаруженных ошибок и
+                    т.п.). Дальнейшие исправления афиши будет происходить за дополнительную плату.
+                </div>
+
+
+            </div>
+
+
+            <div class="poster-master__footer">
+                <div class="poster-master__result-footer-agree">
+
+                    <input type="checkbox" name="poster-master-agree"
+                           id="poster-master-agree" required checked
+                           class="poster-master__result-footer-agree-checkbox"/>
+                    <label for="poster-master-agree"
+                           class="poster-master__result-footer-agree-checkbox-title">Я согласен на обработку
+                        персональных данных</label>
+
+
+                </div>
+
+                <div class="poster-master__footer-buttons">
+                    <div class="poster-master__footer-button-prev prev-screen">Назад</div>
+                    <button type="submit" class="poster-master__footer-button-next poster-master__footer-button-next--submit">Далее</button>
+                </div>
+                <div class="poster-master__footer-desc">Нажимая кнопку «Отправить», я принимаю условия Пользовательского
+                    соглашения и даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным
+                    законом
+                    от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой
+                    конфиденциальности.
+                </div>
+                <div class="poster-master__footer-dots">
+                    <div class="poster-master__footer-dot"></div>
+                    <div class="poster-master__footer-dot"></div>
+                    <div class="poster-master__footer-dot active"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+<script src="plugins/jquery.inputmask.bundle.min.js"></script>
+<link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.theme.default.min.css">
+<script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+<script src="plugins/gyronorm.complete.min.js"></script>
+<link rel="stylesheet" href="plugins/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="plugins/photoswipe/default-skin/default-skin.css">
+<script src="plugins/photoswipe/photoswipe.min.js"></script>
+<script src="plugins/photoswipe/photoswipe-ui-default.min.js"></script>
+</body>
+</html>

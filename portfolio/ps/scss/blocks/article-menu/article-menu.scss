@@ -1,0 +1,37 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.article-menu {
+  border-left: 5px solid #3B3B3B;
+  width: 100%;
+  margin-top: 103px;
+
+  @media #{$tablet-small-screen} {
+    margin-top: 20px;
+  }
+
+
+  &__title {
+    font-family: Montserrat-bold, sans-serif;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  &__link {
+    margin-bottom: 10px;
+    @include flex-row;
+    align-items: center;
+    min-height: 34px;
+    background: $white;
+    color: $black;
+    padding-left: 20px;
+
+    &:hover,
+    &.active {
+      background: #87674F;
+      color: $white;
+    }
+  }
+
+}

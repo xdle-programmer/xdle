@@ -1,0 +1,69 @@
+﻿@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.pagination-container {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+ul.pagination {
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    & li {
+        height: 100%;
+        width: 40px;
+        display: flex;
+        background-color: #fff;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 400;
+        box-shadow: 0 1px 3px rgba(0,0,0,.2), 0 2px 1px -1px rgba(0,0,0,.12), 0 1px 1px rgba(0,0,0,.14);
+        cursor: pointer;
+
+        &.arrow-step-back {
+            background: url("../img/left-arrow-pagination.png") center no-repeat;
+            background-color: #fff;
+            margin-right: 10px;
+        }
+
+        &.arrow-step-back:hover {
+            background: url("../img/left-arrow-white-pagination.png") center no-repeat;
+            background-color: #0092e8;
+        }
+
+        &.arrow-step-forward {
+            background: url("../img/right-arrow-pagination.png") center no-repeat;
+            background-color: #fff;
+            margin-left: 10px;
+        }
+
+        &.arrow-step-forward:hover {
+            background: url("../img/right-arrow-white-pagination.png") center no-repeat;
+            background-color: #0092e8;
+        }
+
+        &:hover {
+            background-color: #0092e8;
+            color: #fff;
+        }
+
+        &.active {
+            color: #fff;
+            background-color: #0092e8;
+        }
+    }
+}
+

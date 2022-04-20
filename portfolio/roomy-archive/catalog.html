@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>Roomy</title>
+</head>
+<link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+
+<body>
+
+    <div class="wrapper wrapper--inner">
+
+    <header class="header header--authorized">
+        <div class="header__block layout">
+            <div class="header__switch header__switch--desktop">
+                <div class="role-switch">
+                    <div class="role-switch__item">Продавец</div>
+                    <div class="role-switch__item active">Покупатель</div>
+                </div>
+            </div>
+
+            <div class="header__count header__count--desktop">
+                <div class="profile-balance">
+                    <div class="profile-balance__state">
+                        <div class="profile-balance__state-name">Счет</div>
+                        <div class="profile-balance__state-number">
+                            € 25<span class="profile-balance__state-number-small">.05</span>
+                        </div>
+                    </div>
+                    <div class="profile-balance__button">
+                        <div class="profile-balance__button-icon"></div>
+                        <div class="profile-balance__button-text">Пополнить</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__profile">
+
+                <div class="header__profile-about header__profile-about--desktop">
+                    <div class="header__profile-about-name">Иван Иванович</div>
+                    <div class="header__profile-about-id">ID 24564</div>
+                </div>
+
+                <div class="header__profile-menu-button">
+                    <img class="header__profile-menu-button-icon" src="img/user-icon.svg">
+                </div>
+                <div class="header__profile-menu">
+                    <div style="display: none">
+
+                        <div class="header__profile-about">
+                            <div class="header__profile-about-name">Иван Иванович</div>
+                            <div class="header__profile-about-id">ID 24564</div>
+                        </div>
+
+                        <div class="header__switch">
+                            <div class="role-switch">
+                                <div class="role-switch__item">Продавец</div>
+                                <div class="role-switch__item active">Покупатель</div>
+                            </div>
+                        </div>
+
+                        <div class="header__count">
+                            <div class="profile-balance">
+                                <div class="profile-balance__state">
+                                    <div class="profile-balance__state-name">Счет</div>
+                                    <div class="profile-balance__state-number">
+                                        € 25<span class="profile-balance__state-number-small">.05</span>
+                                    </div>
+                                </div>
+                                <div class="profile-balance__button">
+                                    <div class="profile-balance__button-icon"></div>
+                                    <div class="profile-balance__button-text">Пополнить</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="header__profile-menu-link">Управление профилем</div>
+                    <div class="header__profile-menu-logout">Выйти</div>
+                </div>
+            </div>
+
+            <div class="header__interface-settings">
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--white">
+                        <div class="dropdown-circle__button">€</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">€</div>
+                                <div class="dropdown-circle__list-item-text">Евро</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">$</div>
+                                <div class="dropdown-circle__list-item-text">Доллар</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--white">
+                        <div class="dropdown-circle__button">ES</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">EN</div>
+                                <div class="dropdown-circle__list-item-text">Английский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">ES</div>
+                                <div class="dropdown-circle__list-item-text">Испанский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">RU</div>
+                                <div class="dropdown-circle__list-item-text">Русский</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu side-menu--hide">
+        <div class="side-menu__logo">
+            <div class="side-menu__logo-icon"></div>
+            <div class="side-menu__logo-text-block">
+                <div class="side-menu__logo-text side-menu__logo-text--1">Ro</div>
+                <div class="side-menu__logo-text side-menu__logo-text--2">o</div>
+                <div class="side-menu__logo-text side-menu__logo-text--3">my</div>
+            </div>
+        </div>
+        <div class="side-menu__items">
+            <div class="side-menu__item active">
+                <div class="side-menu__item-icon side-menu__item-icon--dashboard"></div>
+                <div class="side-menu__item-text">Рабочий стол</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--catalog"></div>
+                <div class="side-menu__item-text">Каталог</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--applications"></div>
+                <div class="side-menu__item-text">Заявки</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--deal"></div>
+                <div class="side-menu__item-text">Сделки</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--favorites"></div>
+                <div class="side-menu__item-text">Избранное</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--saved"></div>
+                <div class="side-menu__item-text">Сохраненные поиски</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--settings"></div>
+                <div class="side-menu__item-text">Настройки кабинета</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="layout">
+        <div class="main-title">Каталог</div>
+
+        <div class="catalog-filter">
+            <div class="catalog-filter__inputs">
+                <div class="catalog-filter__inputs-item">
+                    <div class="multi-select placeholder">
+                        <div class="multi-select__button">
+                            <div class="multi-select__button-value"></div>
+                            <div class="multi-select__button-clear"></div>
+                            <div class="multi-select__button-icon"></div>
+                        </div>
+                        <div class="multi-select__list">
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="Дом" id="main_filter_prop_type_1"/>
+                                <label class="multi-select__list-item-label" for="main_filter_prop_type_1">
+                                    <span class="multi-select__list-item-text">Дом</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="Квартира" id="main_filter_prop_type_2"/>
+                                <label class="multi-select__list-item-label" for="main_filter_prop_type_2">
+                                    <span class="multi-select__list-item-text">Квартира</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="Офис" id="main_filter_prop_type_3"/>
+                                <label class="multi-select__list-item-label" for="main_filter_prop_type_3">
+                                    <span class="multi-select__list-item-text">Офис</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="Садовый участок" id="main_filter_prop_type_4"/>
+                                <label class="multi-select__list-item-label" for="main_filter_prop_type_4">
+                                    <span class="multi-select__list-item-text">Садовый участок</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="placeholder__item">Вид недвижимости</div>
+                    </div>
+                </div>
+
+                <div class="catalog-filter__inputs-item">
+                    <div class="input-autocomplete input-autocomplete--main-catalog-filter placeholder">
+                        <div class="input-autocomplete__button">
+                            <input type="text" class="input-autocomplete__text" placeholder="Страна">
+                            <div class="placeholder__item">Страна</div>
+                            <div class="input-autocomplete__button-clear"></div>
+                            <datalist>
+                                <option value="1">Испания</option>
+                                <option value="2">Италия</option>
+                                <option value="3">Польша</option>
+                                <option value="4">Исландия</option>
+                                <option value="5">Греция</option>
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-filter__inputs-item">
+                    <div class="input-autocomplete input-autocomplete--main-catalog-filter placeholder">
+                        <div class="input-autocomplete__button">
+                            <input type="text" class="input-autocomplete__text" placeholder="Город">
+                            <div class="placeholder__item">Город</div>
+                            <div class="input-autocomplete__button-clear"></div>
+                            <datalist>
+                                <option value="	1"> Барселона</option>
+                                <option value="	2"> Валенсия</option>
+                                <option value="	3"> Севилья</option>
+                                <option value="	4"> Сарагоса</option>
+                                <option value="	5"> Малага</option>
+                                <option value="	6"> Мурсия</option>
+                                <option value="	7"> Пальма</option>
+                                <option value="	9"> Бильбао</option>
+                                <option value="	10"> Аликанте</option>
+                                <option value="	11"> Кордова</option>
+                                <option value="	12"> Вальядолид</option>
+                                <option value="	13"> Виго</option>
+                                <option value="	14"> Хихон</option>
+                                <option value="	15"> Оспиталет</option>
+                                <option value="	16"> Ла-Корунья</option>
+                                <option value="	17"> Гранада</option>
+                                <option value="	18"> Витория</option>
+                                <option value="	19"> Эльче</option>
+                                <option value="	20"> Овьедо</option>
+
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-filter__inputs-item">
+                    <div class="multi-select placeholder">
+                        <div class="multi-select__button">
+                            <div class="multi-select__button-value"></div>
+                            <div class="multi-select__button-clear"></div>
+                            <div class="multi-select__button-icon"></div>
+                        </div>
+                        <div class="multi-select__list">
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="До $10 000" id="main_filter_price_1"/>
+                                <label class="multi-select__list-item-label" for="main_filter_price_1">
+                                    <span class="multi-select__list-item-text">До $10 000</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От $10 000 до $20 000" id="main_filter_price_2"/>
+                                <label class="multi-select__list-item-label" for="main_filter_price_2">
+                                    <span class="multi-select__list-item-text">От $10 000 до $20 000</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От $20 000 до $30 000" id="main_filter_price_3"/>
+                                <label class="multi-select__list-item-label" for="main_filter_price_3">
+                                    <span class="multi-select__list-item-text">От $20 000 до $30 000</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От $30 000 до $40 000" id="main_filter_price_4"/>
+                                <label class="multi-select__list-item-label" for="main_filter_price_4">
+                                    <span class="multi-select__list-item-text">От $30 000 до $40 000</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От $40 000 до $50 000" id="main_filter_price_5"/>
+                                <label class="multi-select__list-item-label" for="main_filter_price_5">
+                                    <span class="multi-select__list-item-text">От $40 000 до $50 000</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От $50 000" id="main_filter_price_6"/>
+                                <label class="multi-select__list-item-label" for="main_filter_price_6">
+                                    <span class="multi-select__list-item-text">От $50 000</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="placeholder__item">Цена</div>
+                    </div>
+                </div>
+
+                <div class="catalog-filter__inputs-item">
+                    <div class="multi-select placeholder">
+                        <div class="multi-select__button">
+                            <div class="multi-select__button-value"></div>
+                            <div class="multi-select__button-clear"></div>
+                            <div class="multi-select__button-icon"></div>
+                        </div>
+                        <div class="multi-select__list">
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="1" id="main_filter_room_1"/>
+                                <label class="multi-select__list-item-label" for="main_filter_room_1">
+                                    <span class="multi-select__list-item-text">1</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="2" id="main_filter_room_2"/>
+                                <label class="multi-select__list-item-label" for="main_filter_room_2">
+                                    <span class="multi-select__list-item-text">2</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="3" id="main_filter_room_3"/>
+                                <label class="multi-select__list-item-label" for="main_filter_room_3">
+                                    <span class="multi-select__list-item-text">3</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="4" id="main_filter_room_4"/>
+                                <label class="multi-select__list-item-label" for="main_filter_room_4">
+                                    <span class="multi-select__list-item-text">4</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="5" id="main_filter_room_5"/>
+                                <label class="multi-select__list-item-label" for="main_filter_room_5">
+                                    <span class="multi-select__list-item-text">5</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="6+" id="main_filter_room_6"/>
+                                <label class="multi-select__list-item-label" for="main_filter_room_6">
+                                    <span class="multi-select__list-item-text">6+</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="placeholder__item">Комнаты</div>
+                    </div>
+                </div>
+
+                <div class="catalog-filter__inputs-item">
+                    <div class="multi-select placeholder">
+                        <div class="multi-select__button">
+                            <div class="multi-select__button-value"></div>
+                            <div class="multi-select__button-clear"></div>
+                            <div class="multi-select__button-icon"></div>
+                        </div>
+                        <div class="multi-select__list">
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="До 50 m²" id="main_filter_area_1"/>
+                                <label class="multi-select__list-item-label" for="main_filter_area_1">
+                                    <span class="multi-select__list-item-text">До 50 m²</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От 50 m² до 100 m²" id="main_filter_area_2"/>
+                                <label class="multi-select__list-item-label" for="main_filter_area_2">
+                                    <span class="multi-select__list-item-text">От 50 m² до 100 m²</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От 100 m² до 150 m²" id="main_filter_area_3"/>
+                                <label class="multi-select__list-item-label" for="main_filter_area_3">
+                                    <span class="multi-select__list-item-text">От 100 m² до 150 m²</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От 150 m² до 200 m²" id="main_filter_area_4"/>
+                                <label class="multi-select__list-item-label" for="main_filter_area_4">
+                                    <span class="multi-select__list-item-text">От 150 m² до 200 m²</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От 200 m² до 250 m²" id="main_filter_area_5"/>
+                                <label class="multi-select__list-item-label" for="main_filter_area_5">
+                                    <span class="multi-select__list-item-text">От 200 m² до 250 m²</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                            <div class="multi-select__list-item">
+                                <input class="multi-select__list-item-input" type="checkbox" value="От 250 m²" id="main_filter_area_6"/>
+                                <label class="multi-select__list-item-label" for="main_filter_area_6">
+                                    <span class="multi-select__list-item-text">От 250 m²</span>
+                                    <span class="multi-select__list-item-icon"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="placeholder__item">m²</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-filter__buttons">
+                <div class="catalog-filter__button catalog-filter__button-add">
+                    <div class="catalog-filter__button-icon">
+                        <div class="catalog-filter__button-icon-setting-lines"></div>
+                        <div class="catalog-filter__button-icon-setting-circles"></div>
+                    </div>
+                    <div class="catalog-filter__button-text">Дополнительно</div>
+                </div>
+                <div class="catalog-filter__button">
+                    <div class="catalog-filter__button-icon">
+                        <div class="catalog-filter__button-icon-bookmark-top"></div>
+                        <div class="catalog-filter__button-icon-bookmark-icon"></div>
+                    </div>
+                    <div class="catalog-filter__button-text">Сохранить поиск</div>
+                </div>
+                <div class="catalog-filter__button">
+                    <div class="catalog-filter__button-icon">
+                        <div class="catalog-filter__button-icon-broom"></div>
+                    </div>
+                    <div class="catalog-filter__button-text">Очистить поиск</div>
+                </div>
+                <div class="catalog-filter__button catalog-filter__button--main">
+                    Показать 352 объекта
+                </div>
+            </div>
+            <div class="catalog-filter__additional active">
+                <div class="catalog-filter__additional-item">
+                    <div class="catalog-filter__additional-item-input catalog-filter__additional-item-input--two">
+                        <div class="select select--mini placeholder" data-class-modify="--mini">
+                            <select>
+                                <option value="option-placeholder">Год от</option>
+                                <option value="1">1910</option>
+                                <option value="2">1920</option>
+                                <option value="3">1930</option>
+                                <option value="4">1940</option>
+                                <option value="5">1950</option>
+                                <option value="6">1960</option>
+                                <option value="7">1970</option>
+                                <option value="8">1980</option>
+                                <option value="9">1990</option>
+                                <option value="10">2000</option>
+                                <option value="11">2010</option>
+                                <option value="12">2020</option>
+                            </select>
+                            <div class="placeholder__item">От</div>
+                        </div>
+                        <div class="select select--mini placeholder" data-class-modify="--mini">
+                            <select>
+                                <option value="option-placeholder">до</option>
+                                <option value="1">1910</option>
+                                <option value="2">1920</option>
+                                <option value="3">1930</option>
+                                <option value="4">1940</option>
+                                <option value="5">1950</option>
+                                <option value="6">1960</option>
+                                <option value="7">1970</option>
+                                <option value="8">1980</option>
+                                <option value="9">1990</option>
+                                <option value="10">2000</option>
+                                <option value="11">2010</option>
+                                <option value="12">2020</option>
+                            </select>
+                            <div class="placeholder__item">До</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-filter__additional-item">
+                    <div class="catalog-filter__additional-item-input">
+                        <div class="multi-select multi-select--mini placeholder">
+                            <div class="multi-select__button">
+                                <div class="multi-select__button-value"></div>
+                                <div class="multi-select__button-clear"></div>
+                                <div class="multi-select__button-icon"></div>
+                            </div>
+                            <div class="multi-select__list">
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="Кирпичный" id="add_filter_prop_type_1"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_prop_type_1">
+                                        <span class="multi-select__list-item-text">Кирпичный</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="Деревянный" id="add_filter_prop_type_2"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_prop_type_2">
+                                        <span class="multi-select__list-item-text">Деревянный</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="Монолит" id="add_filter_prop_type_3"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_prop_type_3">
+                                        <span class="multi-select__list-item-text">Монолит</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="Каркасный" id="add_filter_prop_type_4"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_prop_type_4">
+                                        <span class="multi-select__list-item-text">Каркасный</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="placeholder__item">Тип дома или квартиры</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-filter__additional-item">
+                    <div class="catalog-filter__additional-item-title">Число этажей</div>
+                    <div class="catalog-filter__additional-item-input catalog-filter__additional-item-input--two">
+                        <div class="catalog-filter__additional-item-input-clear"></div>
+                        <div class="select select--mini placeholder" data-class-modify="--mini">
+                            <select>
+                                <option value="option-placeholder">Этаж от</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">20</option>
+                                <option value="12">30</option>
+                                <option value="12">30+</option>
+                            </select>
+                            <div class="placeholder__item">От</div>
+                        </div>
+                        <div class="select select--mini placeholder" data-class-modify="--mini">
+                            <select>
+                                <option value="option-placeholder">До</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">20</option>
+                                <option value="12">30</option>
+                                <option value="12">30+</option>
+                            </select>
+                            <div class="placeholder__item">До</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-filter__additional-item">
+                    <div class="catalog-filter__additional-item-title">Санузел</div>
+                    <div class="catalog-filter__additional-item-input">
+                        <div class="multi-select multi-select--mini placeholder">
+                            <div class="multi-select__button">
+                                <div class="multi-select__button-value"></div>
+                                <div class="multi-select__button-clear"></div>
+                                <div class="multi-select__button-icon"></div>
+                            </div>
+                            <div class="multi-select__list">
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="1" id="add_filter_bathroom_1"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_bathroom_1">
+                                        <span class="multi-select__list-item-text">1</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="2" id="add_filter_bathroom_2"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_bathroom_2">
+                                        <span class="multi-select__list-item-text">2</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="3" id="add_filter_bathroom_3"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_bathroom_3">
+                                        <span class="multi-select__list-item-text">3</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="4" id="add_filter_bathroom_4"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_bathroom_4">
+                                        <span class="multi-select__list-item-text">4</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="placeholder__item">Санузел</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-filter__additional-item">
+                    <div class="catalog-filter__additional-item-title">Состояние</div>
+                    <div class="catalog-filter__additional-item-input">
+                        <div class="multi-select multi-select--mini placeholder">
+                            <div class="multi-select__button">
+                                <div class="multi-select__button-value"></div>
+                                <div class="multi-select__button-clear"></div>
+                                <div class="multi-select__button-icon"></div>
+                            </div>
+                            <div class="multi-select__list">
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="Не требует ремонта" id="add_filter_state_1"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_state_1">
+                                        <span class="multi-select__list-item-text">Не требует ремонта</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="Требует ремонта" id="add_filter_state_2"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_state_2">
+                                        <span class="multi-select__list-item-text">Требует ремонта</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="Идеальное" id="add_filter_state_3"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_state_3">
+                                        <span class="multi-select__list-item-text">Идеальное</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="placeholder__item">Состояние</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-filter__additional-item">
+                    <div class="catalog-filter__additional-item-title">Расположение</div>
+                    <div class="catalog-filter__additional-item-input">
+                        <div class="multi-select multi-select--mini placeholder">
+                            <div class="multi-select__button">
+                                <div class="multi-select__button-value"></div>
+                                <div class="multi-select__button-clear"></div>
+                                <div class="multi-select__button-icon"></div>
+                            </div>
+                            <div class="multi-select__list">
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="В пригороде" id="add_filter_location_1"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_location_1">
+                                        <span class="multi-select__list-item-text">В пригороде</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="В городе" id="add_filter_location_2"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_location_2">
+                                        <span class="multi-select__list-item-text">В городе</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                                <div class="multi-select__list-item">
+                                    <input class="multi-select__list-item-input" type="checkbox" value="В деревне" id="add_filter_location_3"/>
+                                    <label class="multi-select__list-item-label" for="add_filter_location_3">
+                                        <span class="multi-select__list-item-text">В деревне</span>
+                                        <span class="multi-select__list-item-icon"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="placeholder__item">Расположение</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-filter__additional-item catalog-filter__additional-item--fill">
+                    <div class="catalog-filter__additional-item-title">Особенности</div>
+                    <div class="object-prop">
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--furniture"></div>
+                            <div class="object-prop__item-text">Мебель</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--conditioning"></div>
+                            <div class="object-prop__item-text">Кондиционер</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--pantry"></div>
+                            <div class="object-prop__item-text">Кладовая</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--heating"></div>
+                            <div class="object-prop__item-text">Отопление</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--garage"></div>
+                            <div class="object-prop__item-text">Гараж</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--terrace"></div>
+                            <div class="object-prop__item-text">Терасса</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--balcony"></div>
+                            <div class="object-prop__item-text">Балкон</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--swimming-pool"></div>
+                            <div class="object-prop__item-text">Бассейн</div>
+                        </div>
+                        <div class="object-prop__item">
+                            <div class="object-prop__item-icon object-prop__item-icon--garden"></div>
+                            <div class="object-prop__item-text">Сад</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog">
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+        </div>
+    </div>
+    <div style="width: 100%;height: 2000px"></div>
+
+    <footer class="footer">
+        <div class="footer__block layout">
+            <div class="footer__top">
+                <div class="footer__menu">
+                    <a href="#" class="footer__menu-item">Фотографам</a>
+                    <a href="#" class="footer__menu-item">Инженерам</a>
+                    <a href="#" class="footer__menu-item">Нотариусам</a>
+                    <a href="#" class="footer__menu-item">Переезды</a>
+                </div>
+                <div class="footer__buttons">
+                    <div class="footer__buttons-contact">
+                        <!--                        <div class="footer__buttons-contact-item footer__buttons-contact-item&#45;&#45;chat">Онлайн чат</div>-->
+                        <div class="footer__buttons-contact-item footer__buttons-contact-item--mail">Отправить письмо</div>
+                    </div>
+                    <div class="footer__app">
+                        <div class="footer__app-title">
+                            Для мобильного устройства:
+                        </div>
+                        <div class="footer__app-buttons">
+                            <div class="footer__app-button footer__app-button--apple"></div>
+                            <div class="footer__app-button footer__app-button--android"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__logo">
+                    <div class="logo"></div>
+                </div>
+                <div class="footer__copyright">©2020 Roomy.case</div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    <a href="#" class="footer__link">Условия</a>
+                </div>
+                <div class="footer__interface-settings">
+                    <div class="footer__interface-settings-item">
+                        <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                            <div class="dropdown-circle__button">€</div>
+                            <div class="dropdown-circle__list">
+                                <div class="dropdown-circle__list-item active">
+                                    <div class="dropdown-circle__list-item-icon">€</div>
+                                    <div class="dropdown-circle__list-item-text">Евро</div>
+                                </div>
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">$</div>
+                                    <div class="dropdown-circle__list-item-text">Доллар</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__interface-settings-item">
+                        <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                            <div class="dropdown-circle__button">ES</div>
+                            <div class="dropdown-circle__list">
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">EN</div>
+                                    <div class="dropdown-circle__list-item-text">Английский</div>
+                                </div>
+                                <div class="dropdown-circle__list-item active">
+                                    <div class="dropdown-circle__list-item-icon">ES</div>
+                                    <div class="dropdown-circle__list-item-text">Испанский</div>
+                                </div>
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">RU</div>
+                                    <div class="dropdown-circle__list-item-text">Русский</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="plugins/errors_handler.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+</html>

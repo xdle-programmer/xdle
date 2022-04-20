@@ -1,0 +1,154 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.cases {
+  width: 100%;
+  margin-top: -200px;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 100px;
+
+  &--no-main {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 30px;
+
+    @media #{$tablet-small-screen} {
+      padding-top: 0!important;
+    }
+  }
+
+  @media #{$tablet-small-screen} {
+    padding-top: 200px;
+  }
+
+  @media #{$mobile-big-screen} {
+    padding-bottom: 30px;
+  }
+
+  &__background {
+    position: absolute;
+    @include absolute-fill;
+    background: url(../../img/cases__background.png);
+    background-size: 100% 100%;
+    z-index: -6;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-family: Montserrat-regular, sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+
+    @media #{$mobile-big-screen} {
+      font-family: Montserrat-bold, sans-serif;
+      font-size: 24px;
+    }
+  }
+
+  &__items {
+    @include flex-row-center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 50%;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__item-img-block {
+    width: 100%;
+    padding-bottom: 52.75%;
+    position: relative;
+  }
+
+  &__item-img {
+    position: absolute;
+    @include absolute-fill;
+    @include background-cover-center;
+  }
+
+  &__item-desc {
+    background: $white;
+    padding: 10px;
+    @include flex-column-center;
+  }
+  &__item-title {
+    font-size: 14px;
+    color: $black;
+  }
+  &__item-subtitle {
+    font-size: 12px;
+    font-family: Montserrat-regular, sans-serif;
+    color: $black;
+  }
+
+  &__tag {
+    @include flex-row-center;
+    position: absolute;
+    z-index: 1;
+    left: 2%;
+    top: 4%;
+    color: #fff;
+    height: 50px;
+    font-size: 21px;
+    padding: 0 20px;
+    border-radius: 25px;
+
+    &--brown {
+      background: #93674e;
+    }
+
+    &--red {
+      background: #c73d57;
+    }
+
+    &:before {
+      content: '//';
+      margin-right: 10px;
+    }
+
+    @media #{$tablet-big-screen} {
+      height: 40px;
+      font-size: 20px;
+    }
+
+    @media #{$tablet-small-screen} {
+      height: 30px;
+      font-size: 16px;
+    }
+
+  }
+
+  &__item:hover &__tag--brown {
+    background: #5d3f2e;
+  }
+
+  &__item:hover &__tag--red {
+    background: #821f31;
+  }
+
+  &__button-wrapper {
+    @include flex-row-center;
+    margin-top: 30px;
+  }
+
+  &__button {
+    border: 2px solid #000;
+    padding: 5px 10px;
+    display: inline-block;
+    @include margin-auto;
+
+    &:hover {
+      background: #000;
+      color: $white;
+    }
+
+  }
+
+}

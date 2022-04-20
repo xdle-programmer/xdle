@@ -1,0 +1,94 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@font-face {
+  font-family: 'din';
+  src: url(../../../../fonts/DINPro.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'din';
+  src: url(../../../../fonts/DINPro-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'din';
+  src: url(../../../../fonts/DINPro-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+html {
+  //overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #343853;
+  //overflow-x: hidden;
+}
+
+* {
+  @include font-default;
+  box-sizing: border-box;
+}
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: $main-transition;
+}
+
+.wrapper *::-webkit-input-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *::-moz-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *:-moz-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *:-ms-input-placeholder {
+  transition: $main-transition;
+}
+
+.touch-device * {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+button, input, textarea {
+  border: none;
+  background: none;
+}
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
+
+.lb-number {
+  display: none!important;
+}
+
+.lightboxOverlay {
+  background: rgba(52, 56, 83, 0.9)!important;
+  opacity: 1!important;
+}

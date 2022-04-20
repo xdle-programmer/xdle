@@ -1,0 +1,117 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-banner {
+  //background-color: $blue;
+  //background-image: url(../../../img/snow_pattern.svg);
+  background: url(../../../img/asset-snow.svg);
+  @include background-cover-center;
+  width: 100%;
+  padding: 25px 0;
+  @include font-proza;
+  color: $white;
+  overflow: hidden;
+
+  &__wrapper {
+    @include flex-row-center;
+    justify-content: space-between;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__desc {
+    background: $blue;
+    padding: 20px 30px;
+    box-shadow: 0 0 12px 7px rgba(0, 0, 0, .2);
+    width: 550px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__desc-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__desc-text {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__cart {
+    width: 350px;
+    background: $white;
+    box-shadow: 0 0 12px 7px rgba(0, 0, 0, .2);
+    color: $black;
+    @include flex-column-center;
+    text-align: center;
+    transform: rotate(5deg);
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      order: -1;
+      width: 300px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__cart-tape {
+    position: absolute;
+    width: 300px;
+    height: 166px;
+    left: -228px;
+    top: -60px;
+
+    &--top {
+      background: url(../../../img/tape_top.png);
+      @include background-contain-center;
+      z-index: 3;
+    }
+
+    &--bottom {
+      background: url(../../../img/tape_bottom.png);
+      @include background-contain-center;
+      z-index: 1;
+    }
+  }
+
+  &__cart-inner {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 30px;
+    background: $white;
+
+    @media #{$mobile-big-screen} {
+      padding: 15px;
+    }
+  }
+
+  &__cart-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__cart-text {
+    font-size: 70px;
+    font-weight: 700;
+  }
+
+  &__cart-desc {
+    font-size: 13px;
+    font-weight: 300;
+
+    & a {
+      color: $blue;
+      text-decoration: underline;
+      display: inline;
+
+    }
+  }
+}

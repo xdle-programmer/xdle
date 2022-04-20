@@ -1,0 +1,80 @@
+.works {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  @media (max-width: 767px) {
+    .works {
+      flex-wrap: wrap; } }
+  .works__item {
+    width: calc(33% - 15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px; }
+    .works__item:nth-of-type(1) {
+      margin-left: 0; }
+    @media (max-width: 767px) {
+      .works__item {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px; } }
+  .works__item-photo {
+    width: 100%;
+    height: 500px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    box-shadow: 0 0 15px 5px #ededed; }
+    .works__item-photo:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+      z-index: 0; }
+    @media (max-width: 1023px) {
+      .works__item-photo {
+        height: 300px; } }
+  .works__item-desc {
+    padding: 60px 30px;
+    position: relative;
+    z-index: 1; }
+  .works__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px; }
+  .works__item-author {
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration: underline; }
+  .works__item-name {
+    font-size: 18px;
+    font-weight: 500; }
+  .works__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: #ffffff;
+    height: 45px;
+    padding: 0 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: url(../../img/pattern.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .works__button:hover {
+      box-shadow: 0 0 15px 5px #3db837; }

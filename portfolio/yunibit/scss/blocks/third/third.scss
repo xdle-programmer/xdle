@@ -1,0 +1,88 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.third {
+
+  &__header {
+
+  }
+
+  &__header-title {
+
+  }
+
+  &__header-text {
+    width: 430px;
+    margin: 50px auto;
+    text-align: center;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin: 30px auto;
+    }
+  }
+
+  &__buttons {
+    @include flex-row-center;
+    justify-content: space-between;
+    margin-top: 35px;
+
+    @media #{$tablet-small-screen} {
+      @include flex-column-center;
+    }
+  }
+  &__button-more {
+    @include flex-row-center;
+    color: $blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:after {
+      display: block;
+      content: '';
+      width: 11px;
+      height: 10px;
+      margin-left: 10px;
+      background: url(../../../img/arrow-down.png);
+      @include background-contain-center;
+    }
+
+    & .hide {
+      display: inline
+    }
+    & .show {
+      display: none
+    }
+
+    &.active .hide {
+      display: none
+    }
+    &.active .show {
+      display: inline
+    }
+
+    &.active:after {
+      transform: scaleY(-1);
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    @include flex-row-center;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 20px;
+      height: 23px;
+      margin-right: 10px;
+      background: url(../../../img/pdf.png);
+      @include background-contain-center;
+    }
+  }
+
+}

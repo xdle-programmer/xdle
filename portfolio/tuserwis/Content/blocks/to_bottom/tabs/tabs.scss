@@ -1,0 +1,67 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.tabs {
+
+  &__header {
+    display: grid;
+    //border: 1px solid $gray-light;
+    width: 100%;
+
+    &--2-buttons {
+      grid-template-columns: 1fr 1fr;
+    }
+    &--3-buttons {
+      grid-template-columns: 1fr 1fr;
+    }
+    &--4-buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &--5-buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    &--6-buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    &--7-buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    &--8-buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    &--9-buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    &--10-buttons {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__header-button {
+    height: 50px;
+    cursor: pointer;
+    background: $blue-light;
+    @include flex-row-center;
+    font-size: 18px;
+
+    &:hover,
+    &.active {
+      background: $blue;
+      color: $white;
+    }
+
+    &.active {
+      cursor: default;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

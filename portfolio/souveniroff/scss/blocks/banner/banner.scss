@@ -1,0 +1,54 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.banner {
+  @include flex-row-center;
+  height: 450px;
+  background-size: cover !important;
+
+  @media #{$tablet-big-screen} {
+    height: 300px;
+  }
+
+  &__block {
+    @include margin-auto;
+    width: 66.666%;
+    color: $white;
+    font-weight: 600;
+
+    @media #{$tablet-small-screen} {
+      width: 90%;
+      @include flex-column-center;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 20px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    width: 50%;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 22px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+  &__button {
+
+  }
+
+}

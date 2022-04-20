@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Поиск с подсказками</title>
+</head>
+<body>
+<link rel="stylesheet" href="../dist/style.css">
+<link rel="stylesheet" href="demo.css">
+
+
+<div class="demo">
+
+    <h1 class="demo__title">Поиск с подсказками</h1>
+    <div class="demo__text-article">
+        <a href="https://www.npmjs.com/package/search-row-hints" class="demo__subtitle-h3">https://www.npmjs.com/package/search-row-hints</a>
+        <h3 class="demo__subtitle-h3">npm i search-row-hints</h3>
+    </div>
+
+    <h2 class="demo__subtitle-h2">Пример использования поисковой строки</h2>
+
+    <div class="demo__search-box"></div>
+
+    <h2 class="demo__subtitle-h2">Использование</h2>
+    <div class="demo__text">
+        <p class="demo__text-article">Для подключения нужно создать инстанс класса SearchBox и передать в параметры ноду-враппер, куда будет монтироваться бокс</p>
+        <p class="demo__text-article">Сабмит формы нужно слушать по событию 'search' на ноде-враппере</p>
+        <p class="demo__text-article">Инпут формы для обработки подсказок нужно слушать по событию 'completeHint' на ноде-враппере. В event.detail.value приходит поисковая
+            строка.</p>
+        <p class="demo__text-article">Для вывода подсказок нужно вернуть html в метод .showHints(html)</p>
+        <p class="demo__text-article">Для скрытия и очистки бокса подсказок нужно вызвать методы .hideHints() и .clearHints();</p>
+
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+let $searchBox = document.getElementsByClassName('demo__search-box')[0];
+
+window.searchBox = new SearchBox({
+    $wrapper: $searchBox,
+    mainClass: 'search-box'
+});
+
+// Обработчик поиска
+$searchBox.addEventListener('search', (event) =&gt; {
+    console.log('Нужно выполнить поиск по запросу: ' + event.target.value);
+});
+
+// Обработчик ввода и вывода подсказок
+$searchBox.addEventListener('completeHint', (event) =&gt; {
+    let text = event.detail.value;
+
+    let length = event.detail.value.length;
+    let resultRow = '';
+
+    if (length &lt; 10) {
+        for (let index = 10 - length; index &gt; 0; index--) {
+            resultRow += &#x60;&lt;div class=&quot;demo__search-result&quot; onclick=&quot;console.log('Клиент кликнул на: ${text}')&quot;&gt;${text}&lt;/div&gt;&#x60;;
+        }
+
+        let result = &#x60;&lt;div class=&quot;demo__search-result-wrapper&quot;&gt;${resultRow}&lt;/div&gt;&#x60;;
+
+        window.searchBox.showHints(result);
+    } else {
+        window.searchBox.hideHints();
+        window.searchBox.clearHints();
+    }
+});
+            </code>
+        </pre>
+        </div>
+        <p class="demo__text-article">Scss структура для классов по умолчанию</p>
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+.search-box {
+  position: relative;
+  height: 50px;
+
+  & * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(225, 225, 225, .35);
+  }
+
+  $open: '.search-box--open';
+  $not-empty: '.search-box--not-empty';
+  $on-focus: '.search-box--on-focus';
+
+  $desktop-button-width: 200px;
+  $desktop-border-radius: 5px;
+  $desktop-border-color: #c1c1c1;
+
+  @mixin mobile-breakpoint {
+    @media (max-width: 1023px) {
+      @content
+    }
+  }
+
+  &__input-wrapper {
+    height: 100%;
+    width: 100%;
+    border: 1px solid;
+    border-color: #{$desktop-border-color};
+    border-radius: #{$desktop-border-radius};
+    position: relative;
+
+    #{$open} & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include mobile-breakpoint() {
+      #{$on-focus} & {
+        margin: 0 -30px;
+        width: calc(100% + 60px);
+        border-radius: 0;
+        border-right-color: transparent;
+        border-left-color: transparent;
+      }
+    }
+  }
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 300;
+    padding-right: #{$desktop-button-width};
+    border-radius: #{$desktop-border-radius};
+    position: relative;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+
+
+    #{$open} & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include mobile-breakpoint() {
+      padding-right: 15px;
+
+      #{$open} & {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      #{$on-focus} & {
+        padding-left: 30px;
+      }
+
+    }
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    width: 200px;
+    top: 1px;
+    height: calc(100% - 2px);
+    position: absolute;
+    right: 1px;
+    background: #ececec;
+    border-radius: #{$desktop-border-radius};
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    &:hover {
+      background: #e2e2e2;
+    }
+
+    #{$open} & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include mobile-breakpoint() {
+      display: none;
+    }
+  }
+
+  &__clear-button {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    right: #{$desktop-button-width};
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: #ff7e7e;
+      mask: url(../src/assets/img/close.svg);
+      -webkit-mask: url(../src/assets/img/close.svg);
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-position: 50%;
+      -webkit-mask-position: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #{$not-empty} & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include mobile-breakpoint() {
+      right: 2px;
+
+      #{$on-focus} & {
+        right: 5px;
+      }
+    }
+  }
+
+  &__back-button {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: -30px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    width: 50px;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 18px;
+      background: #5d5b5b;
+      mask: url(../src/assets/img/arrow-back.svg);
+      -webkit-mask: url(../src/assets/img/arrow-back.svg);
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-position: 50%;
+      -webkit-mask-position: 50%;
+    }
+
+    @include mobile-breakpoint() {
+      #{$on-focus} & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+  }
+
+  &__hints {
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    width: calc(100% + 2px);
+    background: #fff;
+    border: 1px solid;
+    border-color: #{$desktop-border-color};
+    border-top: none;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+
+    #{$open} & {
+      transform: scaleY(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include mobile-breakpoint() {
+      left: -30px;
+      width: calc(100% + 60px);
+      border-right-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+}
+            </code>
+        </pre>
+        </div>
+    </div>
+</div>
+
+
+<script src="../dist/script.js"></script>
+<script src="bundle/demo.js"></script>
+</body>
+</html>

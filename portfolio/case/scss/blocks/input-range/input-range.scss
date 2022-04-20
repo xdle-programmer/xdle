@@ -1,0 +1,32 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.input-range {
+  width: 100%;
+
+  &,
+  & * {
+    transition: none;
+  }
+
+  &__track {
+    height: 20px !important;
+    border: 1px solid #3b3b3b !important;
+    background: #282b2e !important;
+    border-radius: 4px !important;
+  }
+
+  &__handle {
+    width: 22px !important;
+    height: 26px !important;
+    background-image: url(../../img/input-range__handle.png) !important;
+    @include background-contain-center;
+
+    &:focus,
+    &:active {
+      outline: none !important;
+    }
+  }
+
+}

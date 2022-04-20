@@ -1,0 +1,49 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+* {
+  @include font-default;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: all .2s ease-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+textarea,
+input,
+button {
+  border: none;
+  background: none;
+  display: block;
+  color: #cddaec;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.wrapper {
+
+}
+

@@ -1,0 +1,118 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.third {
+  padding-top: 137px;
+  padding-bottom: 126px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__items {
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 58px;
+
+    @media #{$tablet-big-screen} {
+      padding-top: 25px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 646px;
+    margin-bottom: 20px;
+    background: $white;
+    @include flex-column;
+    justify-content: flex-end;
+    height: 317px;
+    @include background-cover-center;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+
+    &--small {
+      width: 455px;
+      background: $yellow;
+
+      @media #{$tablet-big-screen} {
+        width: 100%;
+      }
+    }
+  }
+
+  $small: '.third__item--small';
+
+  &__item-number {
+    @include font-intro-bold;
+    position: absolute;
+    color: $yellow;
+    right: 0px;
+    top: 0;
+    font-size: 111px;
+    line-height: 93px;
+
+    #{$small} & {
+      color: $white;
+    }
+  }
+
+  &__item-age {
+    @include font-intro-reg;
+    font-size: 26px;
+    background: $yellow;
+    padding: 5px 15px;
+
+    #{$small} & {
+      background: $white;
+    }
+  }
+  &__item-title {
+    @include font-intro-reg;
+    font-size: 48px;
+    text-transform: uppercase;
+    background: $yellow;
+    padding: 5px 15px;
+    margin-top: -10px;
+
+    #{$small} & {
+      background: $white;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 36px;
+    }
+  }
+  &__item-text {
+    @include font-intro-reg;
+    font-size: 24px;
+    line-height: 32px;
+    background: $yellow;
+    padding: 5px 15px;
+    margin-top: -15px;
+
+    #{$small} & {
+      background: $white;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+  }
+
+  &__button {
+    margin: 0 auto;
+    margin-top: 34px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 10px;
+    }
+  }
+}

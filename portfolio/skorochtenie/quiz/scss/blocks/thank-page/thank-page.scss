@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.thank-page {
+  position: fixed;
+  @include absolute-fill;
+  @include flex-row-center;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+
+  &__container {
+
+    width: 100vw;
+    max-width: 1024px;
+    height: 63vh;
+    border: 5px solid #e6e6e6;
+    background: $white;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+
+
+    @media #{$tablet-small-screen} {
+      padding-top: 20vh;
+      @include flex-column;
+      border: none;
+      height: 100vh;
+    }
+  }
+
+  &__desc {
+    @include flex-column-center;
+    padding: 30px;
+    color: $gray-light;
+  }
+
+  &__desc-text-main {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: $magenta;
+  }
+
+  &__desc-text-natural {
+    padding: 4px 0;
+    padding-left: 15px;
+    font-style: italic;
+    font-size: 16px;
+    border-left: 2px solid $magenta;
+    color: $magenta;
+
+  }
+
+
+}

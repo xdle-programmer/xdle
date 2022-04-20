@@ -1,0 +1,78 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.about-process {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__block {
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 50px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+  }
+
+  &__item-icon {
+    width: 96px;
+    height: 96px;
+    background-color: #f3f6fa;
+    border-radius: 50%;
+    @include flex-row-center;
+    margin-bottom: 25px;
+
+    //@media #{$tablet-big-screen} {
+    //  @include margin-auto;
+    //}
+  }
+
+  &__item-icon-img {
+  }
+
+  &__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #1d1e29;
+    margin-bottom: 27px;
+  }
+
+  &__item-text {
+    width: 352px;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #1d1e29;
+  }
+
+  &__button {
+
+  }
+
+}

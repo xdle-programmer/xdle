@@ -1,0 +1,68 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.footer {
+  padding: 10px 0;
+  background: #1a1a1a;
+  color: $white;
+  font-weight: 300;
+  font-size: 24px;
+
+  @media #{$mobile-big-screen} {
+    font-size: 16px;
+  }
+
+  &__block {
+    @include flex-row-center;
+    justify-content: space-between;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__text {
+    color: #656565;
+  }
+  &__name {
+    & span {
+      color: #656565;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin: 15px 0;
+    }
+
+  }
+  &__icons {
+    @include flex-row;
+    align-items: center;
+  }
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 30px;
+    cursor: pointer;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    &--vk {
+      background: url(../../img/vk-icon-white.png);
+      @include background-contain-center;
+    }
+
+    &--insta {
+      background: url(../../img/insta-icon-white.png);
+      @include background-contain-center;
+    }
+
+    &--facebook {
+      background: url(../../img/fb-icon-white.png);
+      @include background-contain-center;
+    }
+  }
+
+}

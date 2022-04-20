@@ -1,0 +1,102 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.about-first {
+  padding-top: 200px;
+  padding-bottom: 80px;
+  width: 100%;
+
+  @media #{$mobile-big-screen} {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+
+  &__sign {
+    width: 270px;
+    height: 270px;
+    @include margin-auto;
+    border-radius: 50%;
+    background: #f7f7f7;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      width: 130px;
+      height: 130px;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 580px;
+      height: 140px;
+      background: url(../../../img/sign.png);
+      @include background-contain-center;
+
+      @media #{$mobile-big-screen} {
+        width: 200px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__title-block {
+    position: relative;
+    width: 100%;
+    @include flex-column-center;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      border-radius: 50%;
+      background: #f7f7f7;
+      width: 270px;
+      height: 270px;
+      z-index: -1;
+
+      @media #{$mobile-big-screen} {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 100px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media #{$tablet-small-screen} {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+    @media #{$tablet-small-screen} {
+      font-size: 18px;
+      margin-top: 40px;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 56px;
+      height: 3px;
+      background: $black;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -41px;
+
+      @media #{$tablet-small-screen} {
+        top: -21px;
+      }
+    }
+  }
+
+}

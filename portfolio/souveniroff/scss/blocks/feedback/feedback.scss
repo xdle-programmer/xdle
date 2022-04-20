@@ -1,0 +1,51 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.feedback {
+  &__row {
+    @include flex-row;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+  &__half {
+    width: 48%;
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+  }
+  &__fill {
+    width: 100%;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  &__input {
+    height: #{$control-big-height}px;
+    border: 1px solid $gray;
+    padding: 0;
+    padding-left: 15px;
+    width: 100%;
+    font-size: 17px;
+    @include flex-row;
+    align-items: center;
+  }
+  &__input--textarea {
+    height: 150px;
+    padding-top: 15px;
+  }
+
+  &__button {
+    margin-top: 15px;
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+}

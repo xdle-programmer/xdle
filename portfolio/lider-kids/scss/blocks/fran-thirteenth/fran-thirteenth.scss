@@ -1,0 +1,40 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fran-thirteenth {
+  padding-top: 100px;
+  padding-bottom: 25px;
+
+  &__list {
+    padding-top: 50px;
+    padding-right: 600px;
+
+    @media #{$tablet-big-screen} {
+      padding-top: 20px;
+      padding-right: 0;
+    }
+  }
+
+  &__list-item {
+    margin-bottom: 30px;
+    font-size: 24px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    width: 962px;
+    height: 642px;
+    position: absolute;
+    @include background-contain-center;
+    right: 0;
+    bottom: 0;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.fourth__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  @media (max-width: 1023px) {
+    .fourth__block {
+      grid-template-columns: 1fr; } }
+
+.fourth__block-images {
+  position: relative; }
+  @media (max-width: 1023px) {
+    .fourth__block-images {
+      order: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px; } }
+
+.fourth__block-image {
+  position: absolute; }
+  @media (max-width: 1023px) {
+    .fourth__block-image {
+      position: relative; } }
+  .fourth__block-image:nth-of-type(1) {
+    width: 261px;
+    height: 343px;
+    left: 0;
+    top: 100px; }
+    @media (max-width: 1023px) {
+      .fourth__block-image:nth-of-type(1) {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        top: auto; } }
+  .fourth__block-image:nth-of-type(2) {
+    width: 261px;
+    height: 343px;
+    left: 291px;
+    top: 0; }
+    @media (max-width: 1023px) {
+      .fourth__block-image:nth-of-type(2) {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        top: auto; } }
+  .fourth__block-image:nth-of-type(3) {
+    width: 164px;
+    height: 158px;
+    top: 373px;
+    left: 291px; }
+    @media (max-width: 1023px) {
+      .fourth__block-image:nth-of-type(3) {
+        display: none; } }
+
+.fourth__block-desc {
+  padding-left: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  @media (max-width: 1023px) {
+    .fourth__block-desc {
+      order: 1;
+      padding-left: 0;
+      margin-bottom: 20px; } }
+
+.fourth__block-text {
+  margin-top: 45px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 86%; }
+
+.fourth__list {
+  margin: 32px 0; }
+
+.fourth__list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center;
+  margin: 20px 0; }
+
+.fourth__list-item-icon {
+  width: 43px;
+  height: 43px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  margin-right: 15px; }
+
+.fourth__button {
+  margin-top: auto; }

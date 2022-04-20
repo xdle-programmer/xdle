@@ -1,0 +1,21 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  @include flex-row-center;
+  height: #{$control-big-height}px;
+  padding: 0 60px;
+  border-radius: 3px;
+  background: $orange;
+  width: 210px;
+  cursor: pointer;
+  color: $white;
+  transform: scale(1);
+  transition: scale .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+    transition: scale .3s ease-in-out;
+  }
+}

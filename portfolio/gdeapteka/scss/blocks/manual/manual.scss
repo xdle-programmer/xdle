@@ -1,0 +1,38 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.manual {
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__tags {
+    @include flex-row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  &__tag {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  &__subtitle {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+
+}

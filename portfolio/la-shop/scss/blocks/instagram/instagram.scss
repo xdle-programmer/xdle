@@ -1,0 +1,148 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.instagram {
+  position: relative;
+
+  &__title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  &__title-block {
+
+  }
+  &__title-item {
+    font-size: 30px;
+    @include natural-background;
+    text-align: center;
+    padding: 20px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 26px;
+    }
+
+  }
+
+  &__items {
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item-wrapper {
+    position: relative;
+    width: calc(14.25% - 8px);
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    &:nth-of-type(1n + 22) {
+      display: none;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: calc(20% - 8px);
+
+      &:nth-of-type(1n + 21) {
+        display: none;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      width: calc(33% - 4px);
+
+      &:nth-of-type(1n + 13) {
+        display: none;
+      }
+    }
+
+
+  }
+  &__item-block {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+  }
+  &__item {
+    @include absolute-fill;
+    position: absolute;
+    background: url(/img/insta-sprite.jpg);
+    background-size: 2200% 100%;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__item-wrapper:nth-of-type(1) &__item {
+    background-position-x: 100%;
+  }
+  &__item-wrapper:nth-of-type(2) &__item {
+    background-position-x: 200%;
+  }
+  &__item-wrapper:nth-of-type(3) &__item {
+    background-position-x: 300%;
+  }
+  &__item-wrapper:nth-of-type(4) &__item {
+    background-position-x: 400%;
+  }
+  &__item-wrapper:nth-of-type(5) &__item {
+    background-position-x: 500%;
+  }
+  &__item-wrapper:nth-of-type(6) &__item {
+    background-position-x: 600%;
+  }
+  &__item-wrapper:nth-of-type(7) &__item {
+    background-position-x: 700%;
+  }
+  &__item-wrapper:nth-of-type(8) &__item {
+    background-position-x: 800%;
+  }
+  &__item-wrapper:nth-of-type(9) &__item {
+    background-position-x: 900%;
+  }
+  &__item-wrapper:nth-of-type(10) &__item {
+    background-position-x: 1000%;
+  }
+  &__item-wrapper:nth-of-type(11) &__item {
+    background-position-x: 1100%;
+  }
+  &__item-wrapper:nth-of-type(12) &__item {
+    background-position-x: 1200%;
+  }
+  &__item-wrapper:nth-of-type(13) &__item {
+    background-position-x: 1400%;
+  }
+  &__item-wrapper:nth-of-type(14) &__item {
+    background-position-x: 1300%;
+  }
+  &__item-wrapper:nth-of-type(15) &__item {
+    background-position-x: 1500%;
+  }
+  &__item-wrapper:nth-of-type(16) &__item {
+    background-position-x: 1600%;
+  }
+  &__item-wrapper:nth-of-type(17) &__item {
+    background-position-x: 1700%;
+  }
+  &__item-wrapper:nth-of-type(18) &__item {
+    background-position-x: 1800%;
+  }
+  &__item-wrapper:nth-of-type(19) &__item {
+    background-position-x: 1900%;
+  }
+  &__item-wrapper:nth-of-type(20) &__item {
+    background-position-x: 2000%;
+  }
+  &__item-wrapper:nth-of-type(21) &__item {
+    background-position-x: 2100%;
+  }
+  &__item-wrapper:nth-of-type(22) &__item {
+    background-position-x: 2200%;
+  }
+
+}

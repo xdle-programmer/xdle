@@ -1,0 +1,85 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.article-preview {
+  @include flex-column;
+  text-decoration: none;
+
+  $slider: '.article-preview--slider';
+  $hover: '.article-preview:hover';
+
+  &__img {
+    @include background-cover-center;
+    height: 155px;
+    width: 100%;
+    position: relative;
+
+    #{$slider} & {
+      height: 185px;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: linear-gradient(-45deg, rgba(0, 0, 0, .7), rgba(28, 73, 134, .7));
+      opacity: 0;
+
+      #{$hover} & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__desc {
+    width: 100%;
+    flex-grow: 1;
+    padding: 11px 15px;
+    border: 1px solid #e9e9e9;
+    @include flex-column;
+    background: $white;
+
+    #{$slider} & {
+      height: 100px;
+    }
+
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 25px;
+
+    #{$slider} & {
+      overflow: hidden;
+      max-height: 75px;
+      margin-bottom: 0;
+    }
+
+    #{$hover} & {
+      color: $blue;
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: $blue;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 21px;
+      height: 12px;
+      background: $blue;
+      mask: url(../../../img/icons/category-arrow.png);
+      -webkit-mask: url(../../../img/icons/category-arrow.png);
+      @include mask-contain-center;
+      right: 6px;
+      top: 4px;
+    }
+  }
+}

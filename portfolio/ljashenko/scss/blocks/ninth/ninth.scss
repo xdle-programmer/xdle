@@ -1,0 +1,53 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.ninth {
+  background: url(../../../img/ninth.jpg);
+  @include background-cover-center;
+  background-position: top center !important;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 120px;
+    color: $white;
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+  }
+
+  &__list-col {
+
+  }
+
+  &__list-item {
+    margin-bottom: 30px;
+    padding-left: 65px;
+    position: relative;
+    font-size: 16px;
+
+    &:after {
+      @include after-absolute;
+      width: 51px;
+      height: 51px;
+      background: url(../../../img/check-star.png);
+      @include background-contain-center;
+      left: 0;
+      top: -4px;
+    }
+  }
+  &__list-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    width: 36%;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+}

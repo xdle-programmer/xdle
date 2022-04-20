@@ -1,0 +1,115 @@
+.object-prop {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 27px 0;
+  padding-top: 11px; }
+  .object-prop__item {
+    cursor: pointer; }
+  .object-prop__item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    border: solid 1px rgba(29, 81, 157, 0.17);
+    position: relative; }
+    .object-prop__item.active .object-prop__item-icon {
+      background-color: rgba(29, 81, 157, 0.08);
+      border: solid 1px rgba(29, 81, 157, 0.08); }
+    .object-prop__item-icon:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 24px;
+      left: 7px;
+      top: 7px;
+      background: #1d1e29; }
+      .object-prop__item.active .object-prop__item-icon:after {
+        background: #1d519d; }
+    .object-prop__item-icon--furniture:after {
+      mask: url(../../../img/object-prop/furniture.svg);
+      -webkit-mask: url(../../../img/object-prop/furniture.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--conditioning:after {
+      mask: url(../../../img/object-prop/conditioning.svg);
+      -webkit-mask: url(../../../img/object-prop/conditioning.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--pantry:after {
+      mask: url(../../../img/object-prop/pantry.svg);
+      -webkit-mask: url(../../../img/object-prop/pantry.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--heating:after {
+      mask: url(../../../img/object-prop/heating.svg);
+      -webkit-mask: url(../../../img/object-prop/heating.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--garage:after {
+      mask: url(../../../img/object-prop/garage.svg);
+      -webkit-mask: url(../../../img/object-prop/garage.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--terrace:after {
+      mask: url(../../../img/object-prop/terrace.svg);
+      -webkit-mask: url(../../../img/object-prop/terrace.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--swimming-pool:after {
+      mask: url(../../../img/object-prop/swimming-pool.svg);
+      -webkit-mask: url(../../../img/object-prop/swimming-pool.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--balcony:after {
+      mask: url(../../../img/object-prop/balcony.svg);
+      -webkit-mask: url(../../../img/object-prop/balcony.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .object-prop__item-icon--garden:after {
+      mask: url(../../../img/object-prop/garden.svg);
+      -webkit-mask: url(../../../img/object-prop/garden.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+  .object-prop__item-text {
+    padding-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1e29; }
+    .object-prop__item.active .object-prop__item-text {
+      color: #1d519d; }

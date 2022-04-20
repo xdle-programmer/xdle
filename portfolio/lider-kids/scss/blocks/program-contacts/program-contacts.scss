@@ -1,0 +1,67 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.program-contacts {
+  padding-top: 100px;
+  padding-bottom: 30px;
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+    }
+  }
+  &__block-desc {
+
+  }
+  &__block-desc-title {
+    @include font-intro-bold;
+    font-size: 42px;
+    color: $blue;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  &__block-desc-contact {
+    margin-bottom: 35px;
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    align-items: center;
+  }
+  &__block-desc-contact-icon {
+  }
+  &__block-desc-contact-icon-inner {
+  }
+  &__block-desc-contact-name {
+    padding-top: 4px;
+    color: #1b1b1b;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &__block-desc-social {
+    @include flex-row-center;
+    justify-content: flex-start;
+  }
+  &__block-desc-social-img {
+    margin-left: 35px;
+
+  }
+  &__block-desc-social-img-inner {
+  }
+
+  &__block-map {
+    height: 410px;
+    position: relative;
+
+    & iframe {
+      position: absolute;
+      @include absolute-fill;
+    }
+  }
+}

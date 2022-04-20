@@ -1,0 +1,140 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section-23 {
+  width: 1157px;
+  height: 100%;
+  position: relative;
+  padding-top: 90px;
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    order: 19;
+    @include flex-column;
+    padding-top: 0;
+    height: auto;
+  }
+
+  &__map {
+    position: absolute;
+    z-index: -1;
+    @include absolute-fill;
+
+    & iframe {
+      width: 100% !important;
+      height: 100% !important;
+      @include absolute-fill;
+
+      @media #{$tablet-big-screen} {
+        pointer-events: none;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      left: auto;
+      top: auto;
+      width: 100%;
+      height: 500px;
+      order: 2;
+      pointer-events: none;
+      overflow: hidden;
+    }
+  }
+
+  &__address {
+    background: $black;
+    margin-left: auto;
+    width: 635px;
+    color: $white;
+    position: relative;
+    padding-left: 80px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+
+    @media #{$tablet-big-screen} {
+      order: 1;
+      width: 100%;
+      padding: 40px 20px;
+    }
+  }
+
+  &__address-title {
+    font-weight: bold;
+    font-size: 36px;
+    @include font-noto('');
+    color: #FFFFFF;
+    margin-bottom: 30px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 24px;
+    }
+  }
+
+  &__address-item {
+    font-size: 22px;
+    margin-bottom: 30px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__address-phone {
+    font-size: 22px;
+    margin-bottom: 35px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__address-text {
+    font-weight: bold;
+    font-size: 22px;
+    @include font-noto('');
+
+    @media #{$tablet-big-screen} {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__address-button {
+    left: 80px;
+    bottom: 0;
+    position: absolute;
+    width: 300px;
+    transform: translateY(50%);
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      position: static;
+      transform: none;
+    }
+  }
+
+  &__copyright {
+    background: $black;
+    @include flex-column-center;
+    height: 90px;
+    color: $white;
+    padding: 0 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 22px;
+    line-height: 26px;
+
+    @media #{$tablet-big-screen} {
+      bottom: 40px;
+      font-size: 16px;
+      line-height: 20px;
+      height: 70px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.banner {
+  width: 100%;
+  height: 170px;
+  @include background-cover-center;
+
+  @media #{$desktop-small-screen} {
+    height: 100px;
+  }
+
+  @media #{$mobile-big-screen} {
+    display: none;
+  }
+}

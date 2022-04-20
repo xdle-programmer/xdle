@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.counter {
+  width: 90px;
+  height: 30px;
+  border-radius: 0;
+  display: grid;
+  grid-template-columns: 26px 1fr 26px;
+  grid-gap: 5px;
+
+  &__button {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    background: $white;
+    border: 1px solid $gray-light;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      background: $gray-dark;
+    }
+
+    &:hover:before,
+    &:hover:after {
+      background: $blue;
+    }
+
+    &--minus:after {
+      width: 10px;
+      height: 2px;
+    }
+
+    &--plus:before {
+      width: 10px;
+      height: 2px;
+    }
+
+    &--plus:after {
+      height: 10px;
+      width: 2px;
+    }
+  }
+
+  &__number {
+    color: $gray-dark;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100%;
+    @include flex-row-center;
+    background: $white;
+    border: 1px solid $gray-light;
+  }
+}

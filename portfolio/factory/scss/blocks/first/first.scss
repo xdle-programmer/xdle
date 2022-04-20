@@ -1,0 +1,45 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.first {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 100px;
+  justify-content: center;
+  margin-bottom: 110px;
+  padding: 0 50px;
+
+  @media #{$tablet-small-screen} {
+    grid-gap: 10px;
+    margin-bottom: 45px;
+    padding: 0;
+  }
+
+  &__item {
+    @include flex-column-center;
+  }
+
+  &__item-icon {
+    width: 150px;
+    height: 150px;
+    @include background-contain-center;
+    margin-bottom: 30px;
+
+    @media #{$tablet-small-screen} {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-text {
+    @include font-rubik;
+    color: $magenta;
+    font-size: 24px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 14px;
+    }
+  }
+}

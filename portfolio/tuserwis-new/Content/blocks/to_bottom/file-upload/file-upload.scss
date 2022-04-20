@@ -1,0 +1,133 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.file-upload {
+    width: 100%;
+
+    & > div {
+        width: 100%;
+    }
+
+    & .qq-gallery .qq-upload-button {
+        background: none;
+        position: relative;
+        color: $black;
+        @include flex-row;
+        align-items: center;
+        font-size: 15px;
+        border: none;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 18px;
+            background: url("../../../img/file-icon-blue.svg");
+            @include background-contain-center;
+            margin-right: 8px;
+        }
+    }
+
+    & .qq-gallery .qq-total-progress-bar-container {
+        display: none !important;
+    }
+
+    & .qq-gallery.qq-uploader {
+        background: none;
+        min-height: 130px;
+        max-height: none;
+        padding: 10px 15px;
+        border: 1px dashed $blue;
+        border-radius: 0;
+
+        &:before {
+            font-size: 15px;
+            color: $blue;
+            opacity: .5;
+        }
+    }
+
+    & .qq-gallery.qq-uploader--no-drop-zone {
+        min-height: 0;
+        padding: 0;
+        border: none;
+    }
+
+    & .qq-gallery .qq-upload-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+        @media #{$tablet-small-screen} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    & .qq-gallery .qq-upload-list li {
+        display: block;
+        position: relative;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        line-height: 16px;
+        font-size: 13px;
+        border-radius: 0;
+        box-shadow: none;
+        height: auto;
+    }
+
+    & .qq-gallery .qq-thumbnail-wrapper {
+        width: 100%;
+        height: 85px;
+        border: 1px solid $blue;
+    }
+
+    & .qq-gallery .qq-upload-cancel {
+        top: 3px;
+        right: 3px;
+        background: $blue;
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+
+        &:hover {
+            background: $magenta;
+        }
+
+        &:after {
+            @include after-absolute;
+            @include absolute-center;
+            width: 10px;
+            height: 10px;
+            background: url("../../../img/menu_close.svg");
+            @include background-contain-center;
+        }
+    }
+
+    & .qq-gallery .qq-upload-list li:hover .qq-upload-cancel {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    & .qq-gallery .qq-thumbnail-selector {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        -webkit-transform: translate(-50%, -50%) !important;
+        bottom: auto;
+        right: auto;
+    }
+
+    & .qq-gallery .qq-upload-status-text {
+        display: none;
+    }
+
+    & .qq-gallery .qq-upload-list li .qq-file-info {
+        display: none;
+    }
+}

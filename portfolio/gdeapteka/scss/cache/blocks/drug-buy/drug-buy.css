@@ -1,0 +1,140 @@
+.drug-buy {
+  margin-bottom: 20px; }
+  .drug-buy__title {
+    color: #2b97df;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #f2f2f2;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 20px; }
+    @media (max-width: 1279px) {
+      .drug-buy__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center; } }
+  .drug-buy__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 25px; }
+    .drug-buy__item:nth-of-type(1) {
+      border-top: 1px solid #f2f2f2; }
+    .drug-buy__item:nth-of-type(odd) {
+      background: #e5f5ff; }
+    @media (max-width: 1900px) {
+      .drug-buy__item {
+        flex-wrap: wrap; } }
+    @media (max-width: 1279px) {
+      .drug-buy__item {
+        padding: 10px; } }
+  .drug-buy__item-photo {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #f2f2f2;
+    margin-right: 20px; }
+    @media (max-width: 1900px) {
+      .drug-buy__item-photo {
+        margin-bottom: 10px; } }
+  .drug-buy__item-photo-inner {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; }
+  .drug-buy__item-desc {
+    flex-grow: 1;
+    margin-right: 20px; }
+    @media (max-width: 1900px) {
+      .drug-buy__item-desc {
+        margin-right: 0;
+        width: calc(100% - 120px); } }
+  .drug-buy__item-desc-name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px; }
+    @media (max-width: 1900px) {
+      .drug-buy__item-desc-name {
+        font-size: 18px; } }
+  .drug-buy__item-desc-item {
+    font-size: 15px; }
+    @media (max-width: 1900px) {
+      .drug-buy__item-desc-item {
+        font-size: 13px; } }
+    @media (max-width: 767px) {
+      .drug-buy__item-desc-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; } }
+  .drug-buy__item-desc-item-name {
+    display: inline; }
+  .drug-buy__item-desc-item-value {
+    display: inline;
+    margin-left: 5px;
+    color: #808080; }
+    @media (max-width: 767px) {
+      .drug-buy__item-desc-item-value {
+        margin-left: 0px; } }
+  .drug-buy__item-instock {
+    margin-right: 20px;
+    color: #808080;
+    padding-left: 30px;
+    position: relative; }
+    .drug-buy__item-instock:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 18px;
+      height: 21px;
+      background: #2b97df;
+      mask: url(../../../img/icon-check.svg);
+      -webkit-mask: url(../../../img/icon-check.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    @media (max-width: 767px) {
+      .drug-buy__item-instock {
+        width: 100%;
+        margin-bottom: 5px; } }
+  .drug-buy__item-price {
+    margin-right: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b97df; }
+  .drug-buy__item-counter {
+    margin-right: 20px; }
+  .drug-buy__item-button {
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #2b97df;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px 15px; }
+  .drug-buy__button {
+    width: fit-content;
+    padding: 0 20px;
+    cursor: pointer;
+    height: 45px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #2b97df;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin: 20px auto; }

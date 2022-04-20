@@ -1,0 +1,37 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.calendar-first {
+  height: 770px;
+
+  @media #{$mobile-big-screen} {
+    height: 450px;
+  }
+
+  &__block {
+    height: 100%;
+    @include flex-column;
+    justify-content: center;
+  }
+
+  &__breadcrumbs {
+    @include flex-row;
+  }
+
+  &__breadcrumbs-item {
+
+    &:after {
+      content: '/';
+    }
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+
+    @media #{$mobile-big-screen} {
+      font-size: 30px;
+    }
+  }
+}

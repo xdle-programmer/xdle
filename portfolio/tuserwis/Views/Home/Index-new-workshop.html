@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>Motocar</title>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles_to_head.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles.css">
+    <script src="../../Scripts/modernizr-2.8.3.js"></script>
+</head>
+
+<script>
+    let loaded_state = [];
+</script>
+
+
+<body class="body-new-index">
+
+<header class="header">
+    <div class="layout layout--main">
+        <div class="header__block">
+            <div class="header__logo">
+                <a href="/" title="Home Page" class="header__logo__link">
+                    <img src="../../Content/img/TuSerwis_logo.svg">
+                </a>
+            </div>
+
+            <div class="header__menu-button"></div>
+            <div class="header__menu">
+                <a class="header__submenu header__menu-item link link--black link--invert" href="#">Workshops</a>
+                <a class="header__submenu header__menu-item link link--black link--invert" href="#">Zaloguj się</a>
+                <a class="header__submenu header__menu-item link link--black link--invert" href="#">Jesteś
+                    warsztatem?</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="wrapper wrapper--new-main">
+
+    <div class="main-workshop layout layout--main">
+
+        <div class="main-workshop__block">
+            <div class="main-workshop__list">
+                <div class="main-workshop__list-item">
+                    <div class="main-workshop__list-item-img" style="background: url(../../Content/img/new-main/main-workshop-1.svg)"></div>
+                    <div class="main-workshop__list-item-desc">
+                        <div class="main-workshop__list-item-desc-title">Zarabiaj wiecęj</div>
+                        <div class="main-workshop__list-item-desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl, hac nunc scelerisque semper velit eget
+                            faucibus amet.
+                        </div>
+                    </div>
+                </div>
+                <div class="main-workshop__list-item">
+                    <div class="main-workshop__list-item-img" style="background: url(../../Content/img/new-main/main-workshop-2.svg)"></div>
+                    <div class="main-workshop__list-item-desc">
+                        <div class="main-workshop__list-item-desc-title">Oszczędzaj czas</div>
+                        <div class="main-workshop__list-item-desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl, hac nunc scelerisque semper velit eget
+                            faucibus amet.
+                        </div>
+                    </div>
+                </div>
+                <div class="main-workshop__list-item">
+                    <div class="main-workshop__list-item-img" style="background: url(../../Content/img/new-main/main-workshop-3.svg)"></div>
+                    <div class="main-workshop__list-item-desc">
+                        <div class="main-workshop__list-item-desc-title">Łatwy w użyciu</div>
+                        <div class="main-workshop__list-item-desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl, hac nunc scelerisque semper velit eget
+                            faucibus amet.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modern-form main-workshop__form">
+                <form class="modern-form__inner form-check failed" id="login" role="form">
+                    <div class="modern-form__header">
+                        <div class="modern-form__button">Zaloguj się</div>
+                        <div class="modern-form__button modern-form__button--not-active" onclick="showForm('#signup')">Zarejestruj się</div>
+                    </div>
+                    <div class="modern-form__block">
+                        <div class="modern-form__input-block input--phone form-check__field" data-check-type="input" data-check="input-required">
+                            <input class="modern-form__input placeholder" id="workshopPhoneNumber" placeholder="+48 " data-placeholder="Numer telefonu" type="tel"
+                                   autocomplete="off">
+                            <div class="warning"></div>
+                        </div>
+                        <div class="modern-form__input-block modern-form__input-block--pass form-check__field" data-check-type="input" data-check="input-required">
+                            <div class="modern-form__input-pass-toggle"></div>
+                            <input class="modern-form__input" id="workshopPassword" type="password" placeholder="Hasło" autocomplete="off">
+                            <div class="warning"></div>
+                        </div>
+                    </div>
+                    <div class="modern-form__footer">
+                        <div class="modern-form__main-button form-check__button" id="btnLogin">Zaloguj się</div>
+                        <div class="modern-form__natural-button" id="lnkResetPassword">Zapomniałeś hasła?</div>
+                    </div>
+                </form>
+
+                <style>
+                    #btnSbmt {
+                        display: none;
+                    }
+
+                    .hide {
+                        display: none;
+                    }
+                </style>
+
+                <form class="modern-form__inner active form-check failed" id="signup" role="form">
+                    <div class="modern-form__header">
+                        <div class="modern-form__button modern-form__button--not-active" onclick="showForm('#login')">Zaloguj się</div>
+                        <div class="modern-form__button">Zarejestruj się</div>
+                    </div>
+                    <div class="modern-form__block">
+                        <div class="modern-form__input-block form-check__field" data-check-type="input" data-check="input-required">
+                            <input class="modern-form__input" data-val="true" data-val-required="The WorkshopName field is required." id="regWorkshopName" name="WorkshopName"
+                                   placeholder="Nazwa warsztatu" type="text" value="">
+                            <div class="warning"></div>
+                        </div>
+                        <div class="modern-form__input-block input--phone form-check__field" data-check-type="input" data-check="input-required">
+                            <input class="modern-form__input" data-val="true" data-val-required="The WorkshopPhoneNumber field is required." id="regWorkshopPhoneNumber"
+                                   name="WorkshopPhoneNumber" placeholder="+48 " type="tel" value="">
+                            <div class="warning"></div>
+                        </div>
+                        <div class="modern-form__input-block form-check__field" data-check-type="input" data-check="checkbox-required">
+                            <input class="modern-form__input-check-input" data-val="true" data-val-required="The AcceptTerms field is required." id="AcceptTerms" name="AcceptTerms"
+                                   type="checkbox" value="">
+                            <label for="AcceptTerms" class="modern-form__input-check-label">Zapoznałem się i akceptuję <a href="/privacypolicy" class="link link--small">politykę
+                                prywatności</a> i <a href="/termsofservice" class="link link--small">regulamin</a></label>
+                            <div class="warning"></div>
+                        </div>
+                        <div id="code" class="hide">
+                            <div class="modern-form__small-title">Wpisz 4-cyfrowy kod z SMS</div>
+                            <div class="modern-form__input-block">
+                                <div class="modern-form__input-code-block" data-check-type=".modern-form__input-result" data-check="sms-code" id="txtCode">
+                                    <div class="modern-form__input-code-block-row">
+                                        <div class="modern-form__input-code"></div>
+                                        <div class="modern-form__input-code"></div>
+                                        <div class="modern-form__input-code"></div>
+                                        <div class="modern-form__input-code"></div>
+                                        <input class="modern-form__input-result" autocomplete="one-time-code" id="verCode">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modern-form__footer">
+                        <div class="modern-form__main-button form-check__button" id="btnConf">Załóz konto</div>
+                        <div class="modern-form__main-button form-check__button" id="btnSbmt">Załóz konto</div>
+                        <div class="modern-form__small-desc hide" id="time-count-down"></div>
+                        <div class="modern-form__small-desc modern-form__natural-button hide" id="send-code-again">Wyślij kod ponownie</div>
+                    </div>
+                </form>
+
+                <div class="modern-form__inner" id="error">
+
+                    <div class="modern-form__info">
+                        <div class="modern-form__info-icon modern-form__info-icon--error-red"></div>
+                        <div class="modern-form__info-text"></div>
+
+                        <div class="modern-form__main-button">KONTAKT@TUSERWIS.PL</div>
+                        <div class="modern-form__natural-button">Repeat</div>
+                    </div>
+
+
+                </div>
+
+                <div class="modern-form__inner" id="warning">
+
+                    <div class="modern-form__info">
+                        <div class="modern-form__info-icon modern-form__info-icon--error-orange"></div>
+                        <div class="modern-form__info-text"></div>
+
+                        <div class="modern-form__main-button">KONTAKT@TUSERWIS.PL</div>
+                        <div class="modern-form__natural-button">Repeat</div>
+                    </div>
+
+
+                </div>
+
+                <div class="modern-form__inner" id="success">
+                    <div class="modern-form__info">
+                        <div class="modern-form__info-icon modern-form__info-icon--success"></div>
+                        <div class="modern-form__info-title"></div>
+                        <div class="modern-form__info-text"></div>
+
+                        <div class="modern-form__natural-button">Repeat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="new-process">
+        <div class="new-process__wrapper layout layout--main">
+            <div class="new-process__title">
+                Jak to działa
+            </div>
+            <div class="new-process__items">
+                <div class="new-process__item">
+                    <div class="new-process__item-img new-process__item-img--1">
+                        <div class="new-process__item-img-back"></div>
+                        <div class="new-process__item-img-elem"></div>
+                    </div>
+                    <div class="new-process__item-desc">
+                        <div class="new-process__item-desc-title">
+                            <div class="new-process__item-desc-title-number">1.</div>
+                            <div class="new-process__item-desc-title-inner">Utwórz zgłoszenie</div>
+                        </div>
+                        <div class="new-process__item-desc-text">Opisz swoją usterkę lub zlecenie serwisowe za pomocą specjalnego formularza</div>
+                    </div>
+                </div>
+                <div class="new-process__item">
+                    <div class="new-process__item-img new-process__item-img--2">
+                        <div class="new-process__item-img-back"></div>
+                        <div class="new-process__item-img-elem"></div>
+                    </div>
+                    <div class="new-process__item-desc">
+                        <div class="new-process__item-desc-title">
+                            <div class="new-process__item-desc-title-number">2.</div>
+                            <div class="new-process__item-desc-title-inner">Otrzymaj oferty</div>
+                        </div>
+                        <div class="new-process__item-desc-text">Otrzymujesz spersonalizowaną wycenę naprawy od warsztatów z okolicy</div>
+                    </div>
+                </div>
+                <div class="new-process__item">
+                    <div class="new-process__item-img new-process__item-img--3">
+                        <div class="new-process__item-img-back"></div>
+                        <div class="new-process__item-img-elem new-process__item-img-elem--1"></div>
+                        <div class="new-process__item-img-elem new-process__item-img-elem--2"></div>
+                        <div class="new-process__item-img-elem new-process__item-img-elem--3"></div>
+                        <div class="new-process__item-img-elem new-process__item-img-elem--4"></div>
+                        <div class="new-process__item-img-elem new-process__item-img-elem--5"></div>
+                    </div>
+                    <div class="new-process__item-desc">
+                        <div class="new-process__item-desc-title">
+                            <div class="new-process__item-desc-title-number">3.</div>
+                            <div class="new-process__item-desc-title-inner">Wybierz najlepszą ofertę</div>
+                        </div>
+                        <div class="new-process__item-desc-text">Porównujesz ceny, odległość, opinie, terminy podstawienia auta i wybierasz najlepszą</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-main-price">
+        <div class="new-main-price__wrapper layout layout--main">
+            <div class="new-main-price__title">Cennik</div>
+            <div class="new-main-price__block">
+                <div class="new-main-price__img"></div>
+                <div class="new-main-price__desc">
+                    <div class="new-main-price__desc-item new-main-price__desc-item--1">
+                        <div class="new-main-price__desc-item-title">Jaki koszt?</div>
+                        <div class="new-main-price__desc-item-text">
+                            <div class="new-main-price__desc-item-text-bold">3 zł.</div>
+                            brutto za
+                            <div class="new-main-price__desc-item-text-bold">jedną</div>
+                            odpowiedź na zlecenie z okolicy
+                        </div>
+                    </div>
+                    <div class="new-main-price__desc-item new-main-price__desc-item--2">
+                        <div class="new-main-price__desc-item-title">Czy są ukryte opłaty?</div>
+                        <div class="new-main-price__desc-item-text">
+                            Nie ma żadnych dodatkowych, ukrytych kosztów
+                        </div>
+                    </div>
+                    <div class="new-main-price__desc-item-small">
+                        Dostaniesz darmowych
+                        <div class="new-main-price__desc-item-small-bold">60</div>
+                        pkt na start
+
+                    </div>
+                </div>
+            </div>
+            <div class="new-main-price__link">Dolącz sie do nas</div>
+        </div>
+    </div>
+
+    <div class="new-main-footer">
+        <div class="new-main-footer__logo"></div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link href="../../Scripts/timedropper/timedropper.min.css" rel="stylesheet">
+<script src="../../Scripts/timedropper/timedropper.min.js"></script>
+<script src="../../Scripts/jquery.spincrement.min.js"></script>
+<script src="../../Scripts/jquery.maskedinput.min.js"></script>
+<script src="../../Scripts/lightbox2/js/lightbox.min.js"></script>
+<script src="../../Scripts/owlcarousel2/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Scripts/lightbox2/css/lightbox.min.css">
+<link rel="stylesheet" type="text/css" href="../../Scripts/owlcarousel2/assets/owl.carousel.min.css">
+<script src="../../Content/js/main.js"></script>
+<script src="../../Content/js/new-index.js"></script>
+<script src="../../Content/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwl91tizjVH8SJLr3XnJWckLCog_TTHgQ&callback=initMap&libraries=places"
+        type="text/javascript"></script>
+
+</body>

@@ -1,0 +1,241 @@
+{% include "partials/header.html" with {
+	auth: true
+} %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Личный кабинет</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		
+		<div class="container">
+			<section class="cabinet-page order-wrap">
+				<div class="half-wrap half-wrap_space half-wrap_mobile-full">
+					<div class="frame-block mobile-stretch">
+						<div class="frame-block__head">
+							<i class="icon icon-data frame-block__head-icon"></i>
+							<b>Личные данные</b>
+						</div>
+						<div class="frame-block__inner frame-block__inner_small">
+							<div class="frame-block__section user-info">
+
+								<div class="user-icon user-info__icon">В</div>
+								<div class="user-info__main">
+									<b>Владислав Баранов</b>
+									<div class="user-info__type">Физическое лицо</div>
+								</div>
+								<ul class="user-info__contacts">
+									<li>
+										<span class="font-reg">Телефон: </span>8 (801) 222-12-12
+										<div class="number-confirm">
+											<div class="number-confirm__status">
+												<div class="number-confirm__not-confirmed">
+													Номер телефона не подтвержден. <span>Подтвердить</span>
+												</div>
+												<!-- <div class="number-confirm__sended">
+													Ввм был отправлен код подтверждения №12 в СМС
+												</div>
+												<div class="number-confirm__confirmed">
+													Номер телефона успешно подтвержден
+												</div> -->
+											</div>
+											<form>
+												<input type="text" class="code-input" placeholder="–––––" maxlength="5" data-validation="code" onblur="console.log(this.value)">
+												<!-- кастомный евент не хорошо работает и не получается вынести его в атрибут,
+												поэтому заполнение инпута лучше контралировать на onblur -->
+											</form>
+										</div>
+									</li>
+									<li>
+										<span class="font-reg">E-mail: </span>office@gazprom.ru
+									</li>
+								</ul>
+							</div>
+							<div class="frame-block__section">
+								<a href="#" class="button button_grey button_auto-width button_space">
+									Изменить личные данные
+								</a>
+								<a href="#" class="button button_grey button_auto-width button_space">
+									Изменить пароль
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="frame-block mobile-stretch">
+						<div class="frame-block__head">
+							<i class="icon icon-bonus frame-block__head-icon"></i>
+							<b>Бонусная карта</b>
+						</div>
+						<div class="frame-block__inner frame-block__inner_small">
+							<div class="frame-block__section">
+								<div class="bonus-table__row">
+									<div class="bonus-table__cell">
+										<span class="font-reg">GM-2344-1209-2341-123489</span>
+									</div>
+									<div class="bonus-table__cell">
+										<span class="font-reg">487 &#8381;</span>
+										<div class="small-text">Активна <span class="card-status card-active"></span></div>
+									</div>
+								</div>
+							</div>
+							<div class="frame-block__section">
+								<div class="bonus-table">
+									<p class="small-text">
+										Для оплаты  бонусами в интернет-магазине необходимо минимально 300 бонусных рублей. Обновление бонусного счета происходит после каждой покупки через 15 дней.
+									</p>
+								</div>
+							</div>
+                            <div class="frame-block__title">История операций</div>
+						</div>
+                        <div class="history-table">
+                            <a href="#" class="history-table__row history-table__transactions">
+                                <div class="history-table__cell">
+                                    <div class="history-table__title">Заказ: GM-74</div>
+									<span class="history-table__date">от 15.10.2019 19:40</span>
+                                    <span class="history-table__desc">отмена заказа</span>
+                                </div>
+                                <div class="history-table__cell">
+                                    <div class="history-table__amount">- 100 ₽</div>
+                                </div>
+                            </a>
+                            <a href="#" class="history-table__row history-table__transactions">
+                                <div class="history-table__cell">
+                                    <div class="history-table__title">Заказ: GM-74</div>
+									<span class="history-table__date">от 15.10.2019 19:40</span>
+                                </div>
+                                <div class="history-table__cell">
+                                    <div class="history-table__amount history-table__add">+ 478 ₽</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="frame-block__inner frame-block__inner_small">
+                            <div class="frame-block__section">
+                                <a href="#" class="button button_grey button_auto-width button_space">
+                                    История операций
+                                </a>
+                                <a href="#" class="button button_grey button_auto-width button_space">
+                                    Бонусная программа
+                                </a>
+                            </div>
+                        </div>
+					</div>
+				</div>
+				<div class="half-wrap half-wrap_space half-wrap_mobile-full">
+					<div class="frame-block mobile-stretch">
+						<div class="frame-block__head">
+							<i class="icon icon-history frame-block__head-icon"></i>
+							<b>История заказов</b>
+						</div>
+						<!-- <div class="empty-state">
+							У вас пока нет заказов
+						</div> -->
+						<div class="history-table">
+							<a href="#" class="history-table__row">
+								<i class="history-table__icon history-table__icon_accepted"></i>
+								<div class="history-table__cell">
+									<div class="history-table__title">Заказ:</div>
+									№GM-288 
+									<span class="history-table__date">от 12.08.2018</span>
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Статус:</div>
+									Передан в СПСР
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Сумма:</div>
+									300 140 руб.
+								</div>
+							</a>
+							<a href="#" class="history-table__row">
+								<i class="history-table__icon history-table__icon_accepted"></i>
+								<div class="history-table__cell">
+									<div class="history-table__title">Заказ:</div>
+									№GM-288 
+									<span class="history-table__date">от 12.08.2018</span>
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Статус:</div>
+									Передан в СПСР
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Сумма:</div>
+									3 140 руб.
+								</div>
+							</a>
+							<a href="#" class="history-table__row">
+								<i class="history-table__icon history-table__icon_clock"></i>
+								<div class="history-table__cell">
+									<div class="history-table__title">Заказ:</div>
+									№GM-288 
+									<span class="history-table__date">от 12.08.2018</span>
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Статус:</div>
+									Передан в СПСР
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Сумма:</div>
+									300 140 руб.
+								</div>
+							</a>
+							<a href="#" class="history-table__row">
+								<i class="history-table__icon history-table__icon_check"></i>
+								<div class="history-table__cell">
+									<div class="history-table__title">Заказ:</div>
+									№GM-288 
+									<span class="history-table__date">от 12.08.2018</span>
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Статус:</div>
+									Передан в СПСР
+								</div>
+								<div class="history-table__cell">
+									<div class="history-table__title">Сумма:</div>
+									300 140 руб.
+								</div>
+							</a>
+						</div>
+						<div class="frame-block__section frame-block__section_padding">
+							<a href="#" class="button button_grey button_auto-width button_space">
+								Смотреть все заказы
+							</a>
+						</div>
+					</div>
+					<div class="frame-block mobile-stretch">
+						<div class="frame-block__head">
+							<i class="icon icon-mail frame-block__head-icon"></i>
+							<b>Подписка</b>
+						</div>
+						<div class="frame-block__inner frame-block__inner_small">
+							<div class="frame-block__section">
+								<ul class="check-list">
+									<li>Новости магазина GmarketPro </li>
+									<li>Акции</li>
+									<li>Персональные предложения</li>
+								</ul>
+								<div class="notify-info">
+									<div class="font-reg">Уведомления по SMS:</div>
+									только связанные с моими заказами
+								</div>
+							</div>
+							<div class="frame-block__section">
+								<a href="#" class="button button_grey button_auto-width button_space">
+									Редактировать подписку
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			
+		</div>
+		
+		
+	</main>
+{% include "partials/footer.html" %}

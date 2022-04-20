@@ -1,0 +1,67 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.slider {
+  position: relative;
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    width: 40px !important;
+    height: 70px !important;
+    border-radius: 15px !important;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%) scaleX(-1);
+    background: rgba(72, 72, 72, .2) !important;
+
+    &:focus,
+    &:active {
+      outline: none!important;
+    }
+
+    &:hover {
+      background: rgba(72, 72, 72, .4) !important;
+    }
+
+    &:before {
+      @include after-absolute;
+      @include absolute-center;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      width: 10px;
+      height: 10px;
+      background: url(../../img/down-arrow.svg) !important;
+      @include background-contain-center;
+
+      @media #{$tablet-small-screen} {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 10px !important;
+      border-radius: 15px !important;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%) scaleX(-1);
+      background: rgba(255, 255, 255, .2) !important;
+    }
+  }
+
+  .owl-next {
+    left: auto;
+    right: -60px;
+    transform: translateY(-50%);
+
+    @media #{$tablet-small-screen} {
+      right: -15px;
+    }
+  }
+
+  .owl-prev span,
+  .owl-next span {
+    display: none;
+  }
+}

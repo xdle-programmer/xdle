@@ -1,0 +1,59 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.city-choice {
+  font-size: 12px;
+
+  @media #{$desktop-small-screen} {
+    font-size: 9px;
+  }
+
+  @media #{$mobile-big-screen} {
+    font-size: 13px;
+  }
+
+
+  &__current {
+    @include flex-row-center;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      margin-left: 10px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #000000 transparent transparent transparent;
+    }
+
+  }
+
+  &__inner {
+    transform-origin: top;
+    transform: scaleY(0);
+    position: absolute;
+    top: 18px;
+    left: -10px;
+    padding: 10px;
+    z-index: 10;
+    background: $white;
+    box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, .3);
+  }
+
+  &__current.active &__inner {
+    transform: scaleY(1);
+  }
+
+  &__inner-item {
+    padding: 4px 0;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

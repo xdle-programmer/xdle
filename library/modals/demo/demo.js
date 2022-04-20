@@ -1,0 +1,1 @@
+window.modals = new Modals();

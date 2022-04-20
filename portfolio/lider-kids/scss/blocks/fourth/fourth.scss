@@ -1,0 +1,112 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fourth {
+  padding-top: 97px;
+  padding-bottom: 312px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 25px;
+    padding-bottom: 140px;
+  }
+
+  &__block {
+  }
+  &__title {
+    line-height: 30px;
+    padding-top: 55px;
+    @include flex-column-center;
+
+    @media #{$tablet-big-screen} {
+      padding: 10px;
+      background: $orange;
+    }
+  }
+
+  &__title-line {
+    text-align: center;
+    color: $white;
+    background: $orange;
+    font-size: 36px;
+    @include font-intro-reg;
+    line-height: 20px;
+    padding: 23px 25px;
+
+    &:nth-of-type(2) {
+      margin-top: 12px;
+
+      @media #{$tablet-big-screen} {
+        margin: 0;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      display: inline;
+      background: none;
+      font-size: 24px;
+      padding: 0;
+    }
+  }
+
+  &__desc {
+    margin-top: 212px;
+    margin-left: 384px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+  &__desc-text {
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 100px;
+
+    @media #{$tablet-big-screen} {
+      padding-right: 0;
+    }
+  }
+  &__desc-title {
+    margin-top: 52px;
+    font-size: 48px;
+    @include font-intro-reg;
+
+    @media #{$tablet-big-screen} {
+      font-size: 41px;
+    }
+  }
+  &__desc-list {
+    padding-top: 17px;
+  }
+  &__desc-list-item {
+    position: relative;
+    padding-left: 15px;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 12px;
+
+    &:after {
+      @include after-absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: $gray-dark;
+      left: 0;
+      top: 18px;
+    }
+  }
+  &__img {
+    width: 1339px;
+    height: 963px;
+    position: absolute;
+    left: -700px;
+    top: 256px;
+    background: url(../../../img/fourth-img.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+}

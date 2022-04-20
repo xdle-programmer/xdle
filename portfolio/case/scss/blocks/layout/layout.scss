@@ -1,0 +1,83 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.layout {
+
+  &-main {
+    width: calc(100% - 250px);
+    @include flex-column;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+
+  }
+
+  &-content {
+    border: 10px solid #1c1e20;
+    padding: 0 80px;
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 30px;
+
+    @media #{$desktop-small-screen} {
+      padding: 0 60px;
+      padding-bottom: 30px;
+    }
+
+    @media #{$tablet-small-screen} {
+      order: 100;
+      padding: 0 10px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &-half {
+    width: 48%;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &-header {
+    height: 230px;
+    width: 100%;
+    @include background-cover-center;
+  }
+
+  &-upgrade-settings {
+    width: 40%;
+
+    @media #{$desktop-small-screen} {
+      width: 100%;
+    }
+
+  }
+
+  &-upgrade-separator {
+    width: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    @media #{$desktop-small-screen} {
+      display: none;
+    }
+  }
+
+  &-upgrade-goods {
+    width: 53%;
+
+    @media #{$desktop-small-screen} {
+      width: 100%;
+    }
+  }
+}

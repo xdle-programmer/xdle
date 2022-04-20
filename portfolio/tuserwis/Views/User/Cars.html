@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ticket</title>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles_to_head.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles.css">
+    <script src="../../Scripts/modernizr-2.8.3.js"></script>
+
+</head>
+<body>
+<header class="header">
+    <div class="layout">
+        <form class="header__block" id="logoutForm" method="post">
+            <div class="header__logo">
+                <a href="/" title="Home Page" class="header__logo__link">
+                    <img src="../..../../../img/TuSerwis_logo.svg">
+                </a>
+            </div>
+
+            <div class="header__profile">
+                <div class="header__profile-close"></div>
+                <div class="header__balance">
+                    <div class="header__balance-number">862</div>
+                    <div class="header__balance-icon">zł</div>
+                    <div class="button-circle"></div>
+                </div>
+                <div class="header__notifications header__notifications--has-unread">
+                    <div class="header__notifications-icon"></div>
+                    <div class="header__notifications-text">Notifications</div>
+                </div>
+
+                <div class="header__profile-menu">
+                    <a class="header__profile-menu-link" href="#">Account</a>
+                    <a class="header__profile-menu-link" href="#">Wyloguj</a>
+                </div>
+            </div>
+
+            <div class="header__profile-button" style="background: url(../..../../../img/workshop_logo.png)"></div>
+        </form>
+    </div>
+</header>
+
+<div class="wrapper wrapper--background">
+    <div class="layout">
+        <div class="cars-edit">
+            <div class="cars-edit__items">
+                <div class="cars-edit__item editable-block not-edit form-check cars-edit__item--car" id="car_item_1">
+                    <div class="editable-block__view">
+                        <div class="cars-edit__item-view">
+                            <div class="cars-edit__item-header">
+                                <div class="cars-edit__item-header-menu">
+                                    <div class="cars-edit__item-header-menu-button cars-edit__item-header-menu-button--blue"></div>
+                                    <div class="cars-edit__item-header-menu-items">
+                                        <div class="cars-edit__item-header-menu-item cars-edit__item-header-menu-item--edit editable-block__switch">
+                                            Edit
+                                        </div>
+                                        <div class="cars-edit__item-header-menu-item cars-edit__item-header-menu-item--remove open-modal" data-modal="modal_remove">
+                                            Remove
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cars-edit__item-logo">
+                                <img class="cars-edit__item-logo-img" src="../..../../../img/examples/renault.png">
+                            </div>
+                            <div class="cars-edit__item-desc">
+                                <div class="cars-edit__item-desc-inner">Renault</div>
+                                <div class="cars-edit__item-desc-inner">Duster</div>
+                                <div class="cars-edit__item-desc-inner">2018</div>
+                            </div>
+                            <div class="cars-edit__item-desc-vin">VIN124543AD334F</div>
+                            <div class="cars-edit__item-desc-button">Nowa oferta</div>
+                        </div>
+                    </div>
+                    <div class="editable-block__edit">
+                        <div class="cars-edit__item-edit">
+                                <div class="form__field-title form__field-title--left">Marka</div>
+                                <div class="form__field">
+                                    <div class="select-autocomplete form-check__field"
+                                         data-check-type="input"
+                                         data-check="input-required" data-placeholder="Brand">
+                                        <select>
+                                            <option value="option-placeholder">Brand</option>
+                                            <option value="toyota">Toyota</option>
+                                            <option selected="selected" value="renault">Renault</option>
+                                            <option value="audi">Audi</option>
+                                            <option value="vw">VW</option>
+                                            <option value="alfa-romeo">Alfa-Romeo</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="jeep">Jeep</option>
+                                            <option value="skoda">Skoda</option>
+                                            <option value="opel">Opel</option>
+                                            <option value="seat">Seat</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form__field-title form__field-title--left">Model</div>
+                                <div class="form__field">
+                                    <div class="select-autocomplete form-check__field"
+                                         data-check-type="input" data-placeholder="Model"
+                                         data-check="input-required">
+                                        <select>
+                                            <option value="option-placeholder">Model</option>
+                                            <option value="vw">VW</option>
+                                            <option selected="selected" value="duster">Duster</option>
+                                            <option value="alfa-romeo">Alfa-Romeo</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="jeep">Jeep</option>
+                                            <option value="skoda">Skoda</option>
+                                            <option value="opel">Opel</option>
+                                            <option value="seat">Seat</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form__field-title form__field-title--left">Rok produkcji</div>
+                                <div class="form__field">
+                                    <div class="select-autocomplete form-check__field"
+                                         data-check-type="input" data-placeholder="Rok produkcji"
+                                         data-check="input-required">
+                                        <select>
+                                            <option value="option-placeholder">Year</option>
+                                            <option value="2019">2019</option>
+                                            <option selected="selected" value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form__field-title form__field-title--left">kod Vin</div>
+                                <div class="input form-check__field"
+                                     data-check-type="input"
+                                     data-check="input-required">
+                                    <div class="input__button">
+                                        <input type="text" class="input__text"
+                                               placeholder="VIN-code" value="VIN124543AD334F">
+                                    </div>
+                                </div>
+
+                                <div class="cars-edit__item-desc-button form-check__button editable-block__switch">Dodaj samochód</div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="cars-edit__item editable-block not-edit form-check cars-edit__item--car" id="car_item_2">
+                    <div class="editable-block__view">
+                        <div class="cars-edit__item-view">
+                            <div class="cars-edit__item-header">
+                                <div class="cars-edit__item-header-menu">
+                                    <div class="cars-edit__item-header-menu-button cars-edit__item-header-menu-button--blue"></div>
+                                    <div class="cars-edit__item-header-menu-items">
+                                        <div class="cars-edit__item-header-menu-item cars-edit__item-header-menu-item--edit editable-block__switch">
+                                            Edit
+                                        </div>
+                                        <div class="cars-edit__item-header-menu-item cars-edit__item-header-menu-item--remove open-modal" data-modal="modal_remove">
+                                            Remove
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cars-edit__item-logo">
+                            <img class="cars-edit__item-logo-img" src="../..../../../img/examples/renault.png">
+                        </div>
+                            <div class="cars-edit__item-desc">
+                                <div class="cars-edit__item-desc-inner">Renault</div>
+                                <div class="cars-edit__item-desc-inner">Duster</div>
+                                <div class="cars-edit__item-desc-inner">2018</div>
+                            </div>
+                            <div class="cars-edit__item-desc-vin">VIN124543AD334F</div>
+                            <div class="cars-edit__item-desc-button">Nowa oferta</div>
+                        </div>
+                    </div>
+                    <div class="editable-block__edit">
+                        <div class="cars-edit__item-edit">
+                            <div class="form__field-title form__field-title--left">Marka</div>
+                            <div class="form__field">
+                                <div class="select-autocomplete form-check__field"
+                                     data-check-type="input"
+                                     data-check="input-required" data-placeholder="Brand">
+                                    <select>
+                                        <option value="option-placeholder">Brand</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option selected="selected" value="renault">Renault</option>
+                                        <option value="audi">Audi</option>
+                                        <option value="vw">VW</option>
+                                        <option value="alfa-romeo">Alfa-Romeo</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="jeep">Jeep</option>
+                                        <option value="skoda">Skoda</option>
+                                        <option value="opel">Opel</option>
+                                        <option value="seat">Seat</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__field-title form__field-title--left">Model</div>
+                            <div class="form__field">
+                                <div class="select-autocomplete form-check__field"
+                                     data-check-type="input" data-placeholder="Model"
+                                     data-check="input-required">
+                                    <select>
+                                        <option value="option-placeholder">Model</option>
+                                        <option value="vw">VW</option>
+                                        <option selected="selected" value="duster">Duster</option>
+                                        <option value="alfa-romeo">Alfa-Romeo</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="jeep">Jeep</option>
+                                        <option value="skoda">Skoda</option>
+                                        <option value="opel">Opel</option>
+                                        <option value="seat">Seat</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__field-title form__field-title--left">Rok produkcji</div>
+                            <div class="form__field">
+                                <div class="select-autocomplete form-check__field"
+                                     data-check-type="input" data-placeholder="Rok produkcji"
+                                     data-check="input-required">
+                                    <select>
+                                        <option value="option-placeholder">Year</option>
+                                        <option value="2019">2019</option>
+                                        <option selected="selected" value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__field-title form__field-title--left">kod Vin</div>
+                            <div class="input form-check__field"
+                                 data-check-type="input"
+                                 data-check="input-required">
+                                <div class="input__button">
+                                    <input type="text" class="input__text"
+                                           placeholder="VIN-code" value="VIN124543AD334F">
+                                </div>
+                            </div>
+
+                            <div class="cars-edit__item-desc-button form-check__button editable-block__switch">Dodaj samochód</div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="cars-edit__item cars-edit__item--template editable-block not-edit edit">
+                    <div class="editable-block__view">
+                        <div class="cars-edit__item-view">
+                            <div class="cars-edit__item-header">
+                                <div class="cars-edit__item-header-menu">
+                                    <div class="cars-edit__item-header-menu-button cars-edit__item-header-menu-button--blue"></div>
+                                    <div class="cars-edit__item-header-menu-items">
+                                        <div class="cars-edit__item-header-menu-item cars-edit__item-header-menu-item--edit editable-block__switch">
+                                            Edit
+                                        </div>
+                                        <div class="cars-edit__item-header-menu-item cars-edit__item-header-menu-item--remove open-modal" data-modal="modal_remove">
+                                            Remove
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cars-edit__item-logo">
+                                <img class="cars-edit__item-logo-img" src="../..../../../img/examples/renault.png">
+                            </div>
+                            <div class="cars-edit__item-desc">
+                                <div class="cars-edit__item-desc-inner">Marka</div>
+                                <div class="cars-edit__item-desc-inner">Model</div>
+                                <div class="cars-edit__item-desc-inner">Year</div>
+                            </div>
+                            <div class="cars-edit__item-desc-vin">XXXXXXXXXXXXXXXXX</div>
+                            <div class="cars-edit__item-desc-button">Nowa oferta</div>
+                        </div>
+                    </div>
+                    <div class="editable-block__edit">
+                        <div class="cars-edit__item-edit">
+                            <div class="form__field-title form__field-title--left">Marka</div>
+                            <div class="form__field">
+                                <div class="select-autocomplete-sample form-check__field"
+                                     data-check-type="input"
+                                     data-check="input-required" data-placeholder="Brand">
+                                    <select>
+                                        <option value="option-placeholder">Brand</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="renault">Renault</option>
+                                        <option value="audi">Audi</option>
+                                        <option value="vw">VW</option>
+                                        <option value="alfa-romeo">Alfa-Romeo</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="jeep">Jeep</option>
+                                        <option value="skoda">Skoda</option>
+                                        <option value="opel">Opel</option>
+                                        <option value="seat">Seat</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__field-title form__field-title--left">Model</div>
+                            <div class="form__field">
+                                <div class="select-autocomplete-sample form-check__field"
+                                     data-check-type="input" data-placeholder="Model"
+                                     data-check="input-required">
+                                    <select>
+                                        <option value="option-placeholder">Model</option>
+                                        <option value="vw">VW</option>
+                                        <option value="duster">Duster</option>
+                                        <option value="alfa-romeo">Alfa-Romeo</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="jeep">Jeep</option>
+                                        <option value="skoda">Skoda</option>
+                                        <option value="opel">Opel</option>
+                                        <option value="seat">Seat</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__field-title form__field-title--left">Rok produkcji</div>
+                            <div class="form__field">
+                                <div class="select-autocomplete-sample form-check__field"
+                                     data-check-type="input" data-placeholder="Rok produkcji"
+                                     data-check="input-required">
+                                    <select>
+                                        <option value="option-placeholder">Year</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__field-title form__field-title--left">kod Vin</div>
+                            <div class="input form-check__field"
+                                 data-check-type="input"
+                                 data-check="input-required">
+                                <div class="input__button">
+                                    <input type="text" class="input__text"
+                                           placeholder="VIN-code" value="">
+                                </div>
+                            </div>
+
+                            <div class="cars-edit__item-desc-button form-check__button editable-block__switch">Dodaj samochód</div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="cars-edit__item cars-edit__item--copy"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal__background close-modal"></div>
+
+<div class="modal__block layout" data-modal-name="modal_map">
+    <div class="modal__content shadow-box">
+        <div class="modal__map" id="map"></div>
+    </div>
+</div>
+
+<div class="modal__block modal__block--transparent" data-modal-name="modal_remove">
+    <div class="ticket__item ticket__item--wide">
+        <div class="ticket__item-mobile-name">
+            Are you sure?
+        </div>
+        <div class="ticket__item-header ticket__item-header--main ticket__item-header--mobile-blue">
+            <div class="ticket__item-name">Are you sure?</div>
+            <div class="ticket__item-controls ticket__item-controls--center-mobile">
+                <div class="ticket__item-button ticket__item-button--mobile-footer ticket__item-button--invert-red">
+                    Remove
+                </div>
+                <div class="ticket__item-button ticket__item-button--mobile-footer ticket__item-button--invert">
+                    Cancel
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="animation-scroll scroll-top"></div>
+
+<footer class="footer">
+    <div class="layout">
+        <div class="footer__top">
+            <div class="footer__links">
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Privacy Policy</a>
+                    <div class="footer__links-item">© 2019 TuSerwis Inc.</div>
+                </div>
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Contact Us</a>
+                    <a href="#" class="footer__links-item">Ordering & Payment</a>
+                    <a href="#" class="footer__links-item">FAQ</a>
+                </div>
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Pracyj z nami</a>
+                    <a href="#" class="footer__links-item">Regulamin</a>
+                </div>
+            </div>
+
+
+            <div class="footer__form">
+                <div class="footer__form-contacts">
+                    <a href="mailto:kontakt@tuserwis.pl" class="footer__links-item footer__form-contacts-item">info@tuserwis.com</a>
+                    <a href="mailto:kontakt@tuserwis.pl" class="footer__links-item footer__form-contacts-item">+1 800
+                        123-1001</a>
+                </div>
+
+                <div class="footer__bottom-social">
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/instagram.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/twitter.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/facebook.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-logo">TuSerwis</div>
+
+        </div>
+    </div>
+</footer>
+
+<link href="../../Scripts/timedropper/timedropper.min.css" rel="stylesheet" defer>
+<script src="../../Scripts/timedropper/timedropper.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="../../Scripts/jquery.maskedinput.min.js" defer></script>
+<script src="../../Scripts/lightbox2/js/lightbox.min.js"></script>
+<script src="../../Scripts/owlcarousel2/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Scripts/lightbox2/css/lightbox.min.css">
+<link rel="stylesheet" type="text/css" href="../../Scripts/owlcarousel2/assets/owl.carousel.min.css">
+<script src="../../Content/js/main.js"></script>
+<script src="../../Content/js/errors_handler.js"></script>
+<script src="../../Content/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwl91tizjVH8SJLr3XnJWckLCog_TTHgQ&callback=initMap&libraries=places"
+        type="text/javascript"></script>
+</body>
+</html>

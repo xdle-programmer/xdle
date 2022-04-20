@@ -1,0 +1,53 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.authors-list {
+  @include flex-row;
+  flex-wrap: wrap;
+
+  &__item {
+    width: calc(16.66% - 17px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    @include flex-column;
+    overflow: hidden;
+
+    &:nth-of-type(6n) {
+      margin-right: 0;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: calc(25% - 8px);
+      margin-right: 10px;
+
+      &:nth-of-type(6n) {
+        margin-right: 10px;
+      }
+
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-right: 0;
+      height: auto;
+
+      &:nth-of-type(6n) {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__item-inner {
+    width: 100%;
+    padding-bottom: 100%;
+    @include background-cover-center;
+    border-radius: 50%;
+  }
+
+}

@@ -1,0 +1,82 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  background: $gray-dark;
+  color: $white;
+  padding: 30px 0;
+
+  &__top {
+    @include flex-row-center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__logo {
+    width: 154px;
+    height: 50px;
+    background: url(../../../img/logo-white.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__social {
+  }
+
+  &__social-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__social-items {
+    @include flex-row-center;
+  }
+
+  &__social-item {
+    width: 34px;
+    height: 34px;
+    background: $white;
+    margin-left: 30px;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    &--tw {
+      mask: url(../../../img/tw.png);
+      -webkit-mask: url(../../../img/tw.png);
+      @include mask-contain-center;
+    }
+
+    &--fb {
+      mask: url(../../../img/fb.png);
+      -webkit-mask: url(../../../img/fb.png);
+      @include mask-contain-center;
+    }
+
+    &--yt {
+      mask: url(../../../img/yt.png);
+      -webkit-mask: url(../../../img/yt.png);
+      @include mask-contain-center;
+    }
+  }
+
+
+  &__bottom {
+    @include flex-row-center;
+  }
+
+  &__copyright {
+  }
+}

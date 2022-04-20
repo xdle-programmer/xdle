@@ -1,0 +1,404 @@
+{% include "partials/header.html" with { mini : true } %}
+<main>
+  <section class="order-head">
+    <div class="container flex-line">
+      <a href="#" class="order-head__link-back"></a>
+      <div class="order-head__title-block">
+        <a href="./">
+          <i class="icon icon-logo-mini"></i>
+        </a>
+        <h1 class="order-head__title">Оформление заказа</h1>
+      </div>
+      <a href="tel:8 800 100-14-38" class="order-head__tel">8 800 100-14-38</a>
+    </div>
+  </section>
+  <section class="order-page container order-wrap">
+    <form class="left-wrap">
+      <div class="order-page__step">
+        <div class="order-page__step-title md-title md-title_bold">
+          <span class="red">1.</span>
+          Выберите способ доставки
+        </div>
+        <div class="search-line search-line_backwards">
+          <div class="search-line__submit"></div>
+          <div class="input-clear"></div>
+          <input
+            type="text"
+            name=""
+            class="search-line__input"
+            placeholder="Москва"
+          />
+          <div class="suggest-list">
+            <div class="suggest-list__suggest">
+              Московская область
+            </div>
+            <div class="suggest-list__suggest">
+              Москва
+            </div>
+          </div>
+        </div>
+        <div class="delivery-type order-wrap">
+          <div class="third-wrap third-wrap_space20">
+            <label class="check-block">
+              <input
+                type="radio"
+                name="sub1"
+                class="checkbox__hidden-input"
+                checked="true"
+              />
+              <div class="checkbox__visual"></div>
+              <div class="checkbox__visual-border"></div>
+              <div class="check-block__title">
+                Доставка курьером
+              </div>
+              <div class="check-block__description">
+                Срок доставки 3-4 дня<br />
+                Стоимость: 890 руб.
+              </div>
+            </label>
+          </div>
+          <div class="third-wrap third-wrap_space20">
+            <label class="check-block">
+              <input type="radio" name="sub1" class="checkbox__hidden-input" />
+              <div class="checkbox__visual"></div>
+              <div class="checkbox__visual-border"></div>
+              <div class="check-block__title">
+                Доставка почтой России
+              </div>
+              <div class="check-block__description">
+                Срок доставки до 10 дней
+              </div>
+            </label>
+          </div>
+          <div class="third-wrap third-wrap_space20">
+            <label class="check-block">
+              <input type="radio" name="sub1" class="checkbox__hidden-input" />
+              <div class="checkbox__visual"></div>
+              <div class="checkbox__visual-border"></div>
+              <div class="check-block__title">
+                Самовывоз
+              </div>
+              <div class="check-block__description">
+                ПВЗ - PickPoint
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="map-module">
+          <div class="map-module__title sm-title">Выберите на карте пункт выдачи заказа</div>
+          <div class="button button_full-width map-module__pop-trigger js-map-unwrap">
+              Выбрать пункт выдачи
+          </div>
+          <div class="map-module__map-wrap">
+              <div class="map-module__close-button js-close-map"></div>
+              <div class="map-module__map" id="delivery-map"></div>
+              <div class="map-module__overlay">
+                <div class="button button_white map-module__pick-desktop js-map-unwrap">Выбрать другой</div>
+              </div>
+          </div>
+          <div class="map-module__info">
+            <div class="map-module__info-title">
+              Ваш пункт выдачи заказа:
+            </div>
+            <div class="map-module__info-place" id="pvz-info">
+              <!-- текст будет тут, если не нужно выводить убери айди -->
+            </div>
+            <div class="underline-button map-module__mobile-underline js-map-unwrap">Выбрать другой</div>
+          </div>
+          
+        </div>
+        <div class="input-row">
+          <label class="input-row__name required-mark">Адрес доставки</label>
+          <div class="regular-input">
+            <input
+              type="text"
+              name=""
+              class="regular-input__input"
+              data-validation="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="order-page__step">
+        <div class="order-page__step-title md-title md-title_bold">
+          <span class="red">2.</span>
+          Укажите контактные данные
+        </div>
+        <div class="order-wrap input-row-wrap input-row-wrap_space">
+          <label class="checkbox input-row input-row_inline">
+            <input
+              type="radio"
+              name="frm-type"
+              class="checkbox__hidden-input "
+              checked="true"
+            />
+            <div class="checkbox__visual"></div>
+            <span class="checkbox__text">
+              Физическое лицо
+            </span>
+          </label>
+          <label class="checkbox input-row input-row_inline">
+            <input
+              type="radio"
+              name="frm-type"
+              class="checkbox__hidden-input"
+            />
+            <div class="checkbox__visual"></div>
+            <span class="checkbox__text">
+              Юридическое лицо
+            </span>
+          </label>
+        </div>
+        <div class="input-row">
+          <label class="input-row__name required-mark">Имя</label>
+          <div class="regular-input">
+            <input
+              type="text"
+              name=""
+              class="regular-input__input"
+              data-validation="text"
+            />
+          </div>
+        </div>
+        <div class="input-row">
+          <label class="input-row__name required-mark">E-mail</label>
+          <div class="regular-input">
+            <input
+              type="text"
+              name=""
+              class="regular-input__input"
+              data-validation="email"
+            />
+          </div>
+        </div>
+        <div class="input-row">
+          <label class="input-row__name required-mark">Телефон</label>
+          <div class="regular-input">
+            <input
+              type="text"
+              name=""
+              class="regular-input__input"
+              data-validation="phone"
+            />
+          </div>
+        </div>
+        <div class="input-row">
+          <label class="input-row__name required-mark"
+            >Комментарий к заказу</label
+          >
+          <div class="regular-input">
+            <textarea class="regular-input__input"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="order-page__step">
+        <div class="order-page__step-title md-title md-title_bold">
+          <span class="red">3.</span>
+          Выберите способ оплаты
+        </div>
+        <div class="delivery-type order-wrap">
+          <div class="third-wrap third-wrap_space20">
+            <label class="check-block">
+              <input
+                type="radio"
+                name="payment"
+                class="checkbox__hidden-input"
+                checked="true"
+              />
+              <div class="checkbox__visual"></div>
+              <div class="checkbox__visual-border"></div>
+              <div class="check-block__title">
+                Оплата банковской картой на сайте
+              </div>
+              <div class="check-block__description">
+                Visa, MasterCard
+              </div>
+            </label>
+          </div>
+          <div class="third-wrap third-wrap_space20">
+            <label class="check-block">
+              <input
+                type="radio"
+                name="payment"
+                class="checkbox__hidden-input"
+              />
+              <div class="checkbox__visual"></div>
+              <div class="checkbox__visual-border"></div>
+              <div class="check-block__title">
+                Оплата Яндекс Деньги на сайте
+              </div>
+              <div class="check-block__description"></div>
+            </label>
+          </div>
+          <div class="third-wrap third-wrap_space20">
+            <label class="check-block">
+              <input
+                type="radio"
+                name="payment"
+                class="checkbox__hidden-input"
+              />
+              <div class="checkbox__visual"></div>
+              <div class="checkbox__visual-border"></div>
+              <div class="check-block__title">
+                Оплата наличными или картой
+              </div>
+              <div class="check-block__description">
+                Курьеру или ПВЗ
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="order-page__step">
+        <div class="order-page__step-title md-title md-title_bold">
+          <span class="red">4.</span>
+          Подтверждение заказа
+        </div>
+        <table class="results-table">
+          <tr>
+            <td>
+              3 товара на сумму
+            </td>
+            <td class="font-reg">
+              619 000 руб.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Экономия
+            </td>
+            <td class="font-reg">
+              12 000 руб.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Доставка
+            </td>
+            <td class="font-reg">
+              890 руб.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Итого к оплате
+            </td>
+            <td class="results-table__result">
+              619 890 руб.
+            </td>
+          </tr>
+        </table>
+
+        <label class="checkbox  checkbox_multi-row">
+          <input type="checkbox" name="" class="checkbox__hidden-input" />
+          <div class="checkbox__visual"></div>
+          <span class="checkbox__text"
+            >Настоящим подтверждаю, что я ознакомлен и согласен с условиями
+            политики конфиденциальности, оплаты и доставки.
+            <span class="toggle-text">
+              <span class="toggle-text__hidden">
+                Настоящим я даю разрешение ООО «М.видео Менеджмент» (далее –
+                «М.видео») в целях заключения и исполнения договора
+                купли-продажи обрабатывать - собирать, записывать,
+                систематизировать, накапливать, хранить, уточнять (обновлять,
+                изменять), извлекать, использовать, передавать (в том числе
+                поручать обработку другим лицам), обезличивать, блокировать,
+                удалять, уничтожать - мои персональные данные: фамилию, имя,
+                номера домашнего и мобильного телефонов, адрес электронной
+                почты. Также я разрешаю М.видео в целях информирования о
+                товарах, работах, услугах осуществлять обработку
+                вышеперечисленных персональных данных и направлять на указанный
+                мною адрес электронной почты и/или на номер мобильного телефона
+                рекламу и информацию о товарах, работах, услугах М.видео и его
+                партнеров. Согласие может быть отозвано мною в любой момент
+                путем направления письменного уведомления по адресу М.видео.
+              </span>
+              <span class="toggle-text__handle">
+                <span class="toggle-text__state">Узнать больше</span>
+                <span class="toggle-text__state">Скрыть</span>
+              </span>
+            </span>
+          </span>
+        </label>
+        <div class="button-row">
+          <button class="button button_mobile-center">
+            Оформить заказ
+          </button>
+        </div>
+      </div>
+    </form>
+    <aside class="aside-colmn aside-colmn_right aside-colmn_expand">
+      <div class="order-info grey-back">
+        <div class="order-info__result">
+          В заказе 3 товара <br />
+          Сумма заказа 619 000 руб.
+        </div>
+        <div class="order-info__products">
+          <div class="order-info__product">
+            <a href="#" class="order-info__product-title text-link">
+              Ноутбук Apple MacBook Pro 15 Touch Bar i7 2.8/16/256 MPTR2RU
+            </a>
+            <div class="order-info__product-counts">
+              1 х 204 990 руб.
+            </div>
+          </div>
+          <div class="order-info__product">
+            <a href="#" class="order-info__product-title text-link">
+              Смарт-часы Apple Watch S3 Sport 42mm Silver Al/Fog Band MQL02R
+            </a>
+            <div class="order-info__product-counts">
+              1 х 35 990 руб.
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="order-info__back text-link underline-button"
+          >Вернуться в корзину</a
+        >
+      </div>
+      <div class="order-advantages">
+        <div class="order-advantages__item">
+          <i class="icon icon-lock"></i>
+          Мы гарантируем конфиденциальность Ваших персональных данных и не
+          передаем их третьим лицам, кроме служб доставки.
+        </div>
+        <div class="order-advantages__item">
+          <i class="icon icon-card"></i>
+          Оплата картой абсолютно безопасно, благодаря использованю SSL
+          протокола. Данные вашей карты надежно защищены при онлайн оплате.
+        </div>
+        <div class="order-advantages__item">
+          <i class="icon icon-kassa"></i>
+          После оплаты на указанный Вами E-mail придет электронный чек согласно
+          ФЗ-54
+        </div>
+        <div class="order-advantages__item">
+          <i class="icon icon-delivery"></i>
+          Доставка товара транспортной компанией DPD по всей России, время
+          доставки 2-5 рабочих дней
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+<footer class="footer footer_mini">
+  <div class="container flex-line">
+    <div class="footer__copyright">
+      2017 © GmarketPro. Бытовая техника и электроника. Все права защищены.
+    </div>
+    <nav class="footer__links">
+      <a href="#" class="footer__link text-link">Политика конфиденциальности</a>
+      <a href="#" class="footer__link text-link">Свяжитесь с нами</a>
+    </nav>
+  </div>
+</footer>
+<script
+  src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+  type="text/javascript"
+></script>
+<script>
+window.onload = function(){
+  pvzMap.init(test)
+}
+</script>
+{% include "partials/footer.html" with { mini : true } %}

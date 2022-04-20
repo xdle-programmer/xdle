@@ -1,0 +1,190 @@
+
+<form class="catalog-filter js-float-button-show">
+	<!-- data-timer - время задержки перед автоматическим закрытием окна если его не указывать
+	окно можно будет закрыть только по кнопке
+
+	float-button_smooth - класс который контролирует есть ли плавная анимация,
+	его можно убрать и все будет как на технопоинте, без transition
+
+	методы кнопки 
+		sideFilter.showButton() - показать кнопку на последнем месте страбатывания
+		sideFilter.hideButton() - скрыть кнопку
+		sideFilter.init() - инициализация -->
+
+	<div class="float-button float-button_smooth" data-timer="2000">
+		<div class="float-button__text">
+			Найдено товаров: 18
+		</div>
+		<div class="red-line">
+			Показать
+		</div>
+		<div class="float-button__close"></div>
+	</div>
+	<div class="filter-section">
+		<div class="filter-section__title">Цена</div>
+		<div class="filter-section__content">
+			<!-- На изменение селекта после сета вызывается функция rangeCallback,
+			то есть аякс на изменения каталога может быть заключен в нее. -->
+			<div class="range-select" data-min="0" data-max="3000000">
+				<div class="range-select__inputs">
+					<div class="range-select__input-wrap">
+						<input type="text" name="" class="value-hold" placeholder="0">
+					</div>
+					<div class="range-select__input-wrap">	
+						<input type="text" name="" class="value-hold" placeholder="3000000">
+					</div>
+				</div>
+				<div class="range-select__drag-zone"></div>
+			</div>
+		</div>
+	</div>
+	<div class="filter-section">
+		<div class="filter-section__title">Бренд</div>
+		<div class="filter-section__content">
+			<label class="checkbox filter-section__check-line checkbox_disabled">
+				<input type="checkbox" name="" class="checkbox__hidden-input" disabled>
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">Samsung (18)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">Lenovo (8)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">Sony (3)</span>
+			</label>
+		</div>
+	</div>
+	<div class="filter-section">
+		<div class="filter-section__title">Разрешение экрана</div>
+		<div class="filter-section__content">
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">4k (UHD) (3)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">Full HD (8)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">HD (2)</span>
+			</label>
+		</div>
+	</div>
+	<div class="filter-section">
+		<div class="filter-section__title">Встроенная память</div>
+		<div class="filter-section__content">
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">до 8 Гб (73)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">16 Гб (82)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">32 Гб (56)</span>
+			</label>
+			<div class="filter-section__hidden">
+				<label class="checkbox filter-section__check-line">
+					<input type="checkbox" name="" class="checkbox__hidden-input">
+					<div class="checkbox__visual"></div>
+					<span class="checkbox__text">64 Гб (23)</span>
+				</label>
+				<label class="checkbox filter-section__check-line">
+					<input type="checkbox" name="" class="checkbox__hidden-input">
+					<div class="checkbox__visual"></div>
+					<span class="checkbox__text">16 Гб (82)</span>
+				</label>
+				<label class="checkbox filter-section__check-line">
+					<input type="checkbox" name="" class="checkbox__hidden-input">
+					<div class="checkbox__visual"></div>
+					<span class="checkbox__text">128 Гб (28)</span>
+				</label>
+			</div>
+			<div class="filter-section__toggle js-hidden-filter">
+				<span class="state-text">
+					Показать все (12)
+				</span>
+				<span class="state-text">
+					Скрыть
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="filter-section">
+		<div class="filter-section__title">Количество ядер процессора</div>
+		<div class="filter-section__content">
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">1 (1)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">2 (4)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">4 (99)</span>
+			</label>
+		</div>
+	</div>
+	<div class="filter-section">
+		<div class="filter-section__title">Основная фотокамера</div>
+		<div class="filter-section__content">
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">до 2 МПикс (68)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">от 3 до 5 МПикс (29)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">2 (64)</span>
+			</label>
+		</div>
+	</div>
+	<div class="filter-section">
+		<div class="filter-section__title">Цвет</div>
+		<div class="filter-section__content">
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">Черный (4)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">Белый (10)</span>
+			</label>
+			<label class="checkbox filter-section__check-line">
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<div class="checkbox__visual"></div>
+				<span class="checkbox__text">Серебристый (7)</span>
+			</label>
+		</div>
+	</div>
+	<div class="catalog-filter__bottom">
+		<button class="button catalog-filter__button" type="submit">Показать</button>
+		<button class="button button_grey catalog-filter__button" type="reset">Сбросить</button>
+	</div>
+</form>

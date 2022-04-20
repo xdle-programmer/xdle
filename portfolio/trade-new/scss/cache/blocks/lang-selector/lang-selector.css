@@ -1,0 +1,98 @@
+.lang-selector {
+  width: 102px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  position: relative;
+  z-index: 100; }
+  .lang-selector.active {
+    background: #242930; }
+  @media (max-width: 767px) {
+    .lang-selector {
+      width: 50px; } }
+  .lang-selector__button {
+    position: relative; }
+    .lang-selector__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 9px;
+      height: 6px;
+      background: url(../../img/down-arrow.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%); }
+      @media (max-width: 767px) {
+        .lang-selector__button:after {
+          right: 6px; } }
+  .lang-selector__list {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    transform: scaleY(0);
+    visibility: hidden;
+    transform-origin: top; }
+    .lang-selector.active .lang-selector__list {
+      transform: scaleY(1);
+      visibility: visible;
+      background: #242930; }
+    @media (max-width: 767px) {
+      .lang-selector__list {
+        top: 28px; } }
+  .lang-selector__item {
+    background: transparent;
+    text-transform: uppercase;
+    height: 30px;
+    font-size: 11px;
+    font-weight: 300;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    padding-left: 46px;
+    color: #cddaec;
+    position: relative;
+    border-radius: 2px; }
+    .lang-selector__item:hover {
+      color: #616f83; }
+      @media (max-width: 767px) {
+        .lang-selector__item:hover {
+          color: transparent; } }
+    .lang-selector__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 16px;
+      width: 18px;
+      height: 12px;
+      border-radius: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../../img/flag-sprite.png);
+      background-size: 700% 100%; }
+      @media (max-width: 767px) {
+        .lang-selector__item:after {
+          left: 6px; } }
+    .lang-selector__item--ru:after {
+      background-position-x: 0; }
+    .lang-selector__item--en:after {
+      background-position-x: -100%; }
+    .lang-selector__item--fr:after {
+      background-position-x: -200%; }
+    .lang-selector__item--de:after {
+      background-position-x: -300%; }
+    .lang-selector__item--es:after {
+      background-position-x: -400%; }
+    .lang-selector__item--jp:after {
+      background-position-x: -500%; }
+    .lang-selector__item--pl:after {
+      background-position-x: -600%; }
+    @media (max-width: 767px) {
+      .lang-selector__item {
+        padding-left: 0;
+        color: transparent; } }

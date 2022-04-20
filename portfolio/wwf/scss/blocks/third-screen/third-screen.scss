@@ -1,0 +1,63 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.third-screen {
+  position: absolute;
+  top: 100vh;
+  height: 100vh;
+  width: 100vw;
+  @include flex-row;
+  align-items: center;
+  padding-bottom: 2.5vw;
+  left: 127vw;
+
+
+  &__block {
+  }
+
+  &__title {
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    margin-bottom: 5vw;
+    text-align: center;
+  }
+
+  &__block-inner {
+    @include flex-row;
+    align-items: flex-end;
+  }
+
+  &__video {
+    width: 37vw;
+    height: 20.81vw;
+    position: relative;
+
+    & iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%!important;
+      height: 100%!important;
+    }
+  }
+
+  &__signs {
+    @include flex-row;
+    margin-left: 2.6vw;
+    align-items: flex-end;
+    padding-bottom: 3.5vw;
+  }
+
+  &__sign-1 {
+    width: 8vw;
+    display: block;
+  }
+
+  &__sign-2 {
+    width: 5.2vw;
+    display: block;
+    margin-left: .7vw;
+  }
+}

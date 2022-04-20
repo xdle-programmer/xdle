@@ -1,0 +1,265 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.calculator {
+  @include flex-row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 28px;
+    }
+  }
+
+  &__inputs {
+    width: 550px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+  &__input {
+  }
+  &__input-header {
+    @include flex-row;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 300;
+  }
+  &__input-title {
+  }
+  &__input-value {
+  }
+
+  &__input-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 57px;
+    position: relative;
+    background: 0 0
+  }
+
+  &__input-range:focus {
+    outline: 0
+  }
+
+  @mixin thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 22px;
+    width: 22px;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .3);
+    margin-top: -10px;
+    cursor: pointer;
+  }
+
+  @mixin track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ebebeb;
+    border: none
+  }
+
+  &__input-range::-moz-range-thumb {
+    @include thumb;
+  }
+  &__input-range::-ms-thumb {
+    @include thumb;
+  }
+  &__input-range::-webkit-slider-thumb {
+    @include thumb;
+
+  }
+
+  &__input-range::-ms-tooltip {
+    display: none
+  }
+
+  &__input-range::-webkit-slider-runnable-track {
+    @include track;
+  }
+
+  &__input-range::-moz-range-track {
+    @include track;
+  }
+
+  &__input-range::-ms-track {
+    @include track;
+  }
+
+  &__input-range::-ms-fill-lower {
+    border: none;
+    box-shadow: none
+  }
+
+  &__input-range::-ms-fill-upper {
+    border: none;
+    box-shadow: none
+  }
+
+  &__input-range:focus::-ms-fill-lower {
+    background: 0 0
+  }
+
+  &__input-range:focus::-ms-fill-upper {
+    background: 0 0
+  }
+
+  &__checkbox-wrapper {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  &__checkbox {
+    width: 45%;
+    margin-bottom: 15px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-size: 12px;
+    color: #919191;
+  }
+
+  &__result {
+    width: 315px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &__result-top {
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media #{$tablet-small-screen} {
+      margin: 15px 0;
+    }
+  }
+
+  &__result-numbers {
+
+  }
+  &__result-numbers-item {
+    color: #363636;
+    margin-bottom: 25px;
+  }
+  &__result-numbers-amount {
+    font-size: 40px;
+    font-weight: 300;
+    color: #363636;
+
+    @media #{$tablet-small-screen} {
+      font-size: 28px;
+    }
+  }
+  &__result-numbers-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: #363636;
+    margin-top: -8px;
+    padding-left: 2px;
+  }
+
+  &__result-rate {
+    @include flex-column-center;
+    background: $green;
+    color: $white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
+  &__result-rate-amount {
+    font-size: 23px;
+    font-weight: 300;
+    color: $white;
+    margin-bottom: -7px;
+  }
+  &__result-rate-desc {
+    font-size: 17px;
+    font-weight: 300;
+    color: $white;
+  }
+
+  &__result-button {
+    margin-top: 10px;
+  }
+  &__result-link {
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 14px;
+    color: #363636;
+
+    &:hover {
+      color: $green;
+    }
+  }
+  &__result-now {
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .3);
+    background: #fff;
+
+    @media #{$tablet-small-screen} {
+      padding: 15px;
+      margin-top: 15px;
+    }
+  }
+
+  &__result-now-title {
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  &__result-now-amount {
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  &__now-title {
+    font-size: 40px;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 10px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 28px;
+    }
+  }
+  &__now-subtitle {
+    padding-left: 120px;
+    font-size: 27px;
+    font-weight: 300;
+
+    @media #{$tablet-small-screen} {
+      padding-left: 0;
+      font-size: 20px;
+    }
+  }
+
+}
+

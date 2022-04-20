@@ -1,0 +1,114 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.roulette {
+  width: 100%;
+  overflow: hidden;
+  padding: 35px 0;
+
+  &__wrapper {
+    width: 100000px;
+    @include flex-row;
+
+  }
+  &__items {
+    @include flex-row;
+
+    &--animation {
+      animation: roulette;
+    }
+
+  }
+  &__item {
+    @include flex-row-center;
+    height: 100px;
+
+    &.active {
+      @keyframes roulette_item {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(1.3);
+        }
+      }
+      transform: scale(1.3);
+      animation-delay: .3s;
+      animation: roulette_item .3s ease-in;
+      animation-fill-mode: forwards;
+
+      @media #{$mobile-big-screen} {
+        animation: none;
+      }
+    }
+
+
+
+  }
+
+  &__item-inner {
+    width: 100px;
+
+    @media #{$desktop-extra-big-screen} {
+      width: 110px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 95px;
+    }
+  }
+
+  @keyframes roulette {
+    0% {
+      transform: translateX(0);
+      animation-timing-function: ease-in;
+    }
+    29.9999% {
+      transform: translateX(-100%);
+      animation-timing-function: ease-in;
+    }
+    30% {
+      transform: translateX(0);
+      animation-timing-function: linear;
+    }
+    39.9999% {
+      transform: translateX(-100%);
+      animation-timing-function: linear;
+    }
+    40% {
+      transform: translateX(0);
+      animation-timing-function: linear;
+    }
+    49.9999% {
+      transform: translateX(-100%);
+      animation-timing-function: linear;
+    }
+    50% {
+      transform: translateX(0);
+      animation-timing-function: linear;
+    }
+    59.9999% {
+      transform: translateX(-100%);
+      animation-timing-function: linear;
+    }
+    60% {
+      transform: translateX(0);
+      animation-timing-function: linear;
+    }
+    69.9999% {
+      transform: translateX(-100%);
+      animation-timing-function: linear;
+    }
+    70% {
+      transform: translateX(0);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: translateX(-100%);
+      animation-timing-function: ease-out;
+    }
+  }
+
+}

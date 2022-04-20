@@ -1,0 +1,453 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.list {
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+
+  &--numbers {
+  }
+
+  &--arrows {
+  }
+
+  $numbers: '.list--numbers';
+  $arrows: '.list--arrows';
+
+  &__item {
+    padding-left: 40px;
+    margin-bottom: 12px;
+    position: relative;
+
+    &:before {
+      @include after-absolute;
+      width: 20px;
+      height: 20px;
+      background: $blue;
+      color: $white;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      font-weight: 700;
+      font-size: 13px;
+      @include flex-row-center;
+    }
+
+    #{$numbers} &:before {
+
+    }
+    #{$arrows} &:before {
+      width: 20px;
+      height: 20px;
+      mask: url(../../../img/icons/category-arrow.png);
+      -webkit-mask: url(../../../img/icons/category-arrow.png);
+      @include mask-contain-center;
+    }
+
+  }
+
+  &__item {
+    #{$numbers} &:nth-of-type(0):before {
+      content: '0';
+    }
+
+    #{$numbers} &:nth-of-type(1):before {
+      content: '1';
+    }
+
+    #{$numbers} &:nth-of-type(2):before {
+      content: '2';
+    }
+
+    #{$numbers} &:nth-of-type(3):before {
+      content: '3';
+    }
+
+    #{$numbers} &:nth-of-type(4):before {
+      content: '4';
+    }
+
+    #{$numbers} &:nth-of-type(5):before {
+      content: '5';
+    }
+
+    #{$numbers} &:nth-of-type(6):before {
+      content: '6';
+    }
+
+    #{$numbers} &:nth-of-type(7):before {
+      content: '7';
+    }
+
+    #{$numbers} &:nth-of-type(8):before {
+      content: '8';
+    }
+
+    #{$numbers} &:nth-of-type(9):before {
+      content: '9';
+    }
+
+    #{$numbers} &:nth-of-type(10):before {
+      content: '10';
+    }
+
+    #{$numbers} &:nth-of-type(11):before {
+      content: '11';
+    }
+
+    #{$numbers} &:nth-of-type(12):before {
+      content: '12';
+    }
+
+    #{$numbers} &:nth-of-type(13):before {
+      content: '13';
+    }
+
+    #{$numbers} &:nth-of-type(14):before {
+      content: '14';
+    }
+
+    #{$numbers} &:nth-of-type(15):before {
+      content: '15';
+    }
+
+    #{$numbers} &:nth-of-type(16):before {
+      content: '16';
+    }
+
+    #{$numbers} &:nth-of-type(17):before {
+      content: '17';
+    }
+
+    #{$numbers} &:nth-of-type(18):before {
+      content: '18';
+    }
+
+    #{$numbers} &:nth-of-type(19):before {
+      content: '19';
+    }
+
+    #{$numbers} &:nth-of-type(20):before {
+      content: '20';
+    }
+
+    #{$numbers} &:nth-of-type(21):before {
+      content: '21';
+    }
+
+    #{$numbers} &:nth-of-type(22):before {
+      content: '22';
+    }
+
+    #{$numbers} &:nth-of-type(23):before {
+      content: '23';
+    }
+
+    #{$numbers} &:nth-of-type(24):before {
+      content: '24';
+    }
+
+    #{$numbers} &:nth-of-type(25):before {
+      content: '25';
+    }
+
+    #{$numbers} &:nth-of-type(26):before {
+      content: '26';
+    }
+
+    #{$numbers} &:nth-of-type(27):before {
+      content: '27';
+    }
+
+    #{$numbers} &:nth-of-type(28):before {
+      content: '28';
+    }
+
+    #{$numbers} &:nth-of-type(29):before {
+      content: '29';
+    }
+
+    #{$numbers} &:nth-of-type(30):before {
+      content: '30';
+    }
+
+    #{$numbers} &:nth-of-type(31):before {
+      content: '31';
+    }
+
+    #{$numbers} &:nth-of-type(32):before {
+      content: '32';
+    }
+
+    #{$numbers} &:nth-of-type(33):before {
+      content: '33';
+    }
+
+    #{$numbers} &:nth-of-type(34):before {
+      content: '34';
+    }
+
+    #{$numbers} &:nth-of-type(35):before {
+      content: '35';
+    }
+
+    #{$numbers} &:nth-of-type(36):before {
+      content: '36';
+    }
+
+    #{$numbers} &:nth-of-type(37):before {
+      content: '37';
+    }
+
+    #{$numbers} &:nth-of-type(38):before {
+      content: '38';
+    }
+
+    #{$numbers} &:nth-of-type(39):before {
+      content: '39';
+    }
+
+    #{$numbers} &:nth-of-type(40):before {
+      content: '40';
+    }
+
+    #{$numbers} &:nth-of-type(41):before {
+      content: '41';
+    }
+
+    #{$numbers} &:nth-of-type(42):before {
+      content: '42';
+    }
+
+    #{$numbers} &:nth-of-type(43):before {
+      content: '43';
+    }
+
+    #{$numbers} &:nth-of-type(44):before {
+      content: '44';
+    }
+
+    #{$numbers} &:nth-of-type(45):before {
+      content: '45';
+    }
+
+    #{$numbers} &:nth-of-type(46):before {
+      content: '46';
+    }
+
+    #{$numbers} &:nth-of-type(47):before {
+      content: '47';
+    }
+
+    #{$numbers} &:nth-of-type(48):before {
+      content: '48';
+    }
+
+    #{$numbers} &:nth-of-type(49):before {
+      content: '49';
+    }
+
+    #{$numbers} &:nth-of-type(50):before {
+      content: '50';
+    }
+
+    #{$numbers} &:nth-of-type(51):before {
+      content: '51';
+    }
+
+    #{$numbers} &:nth-of-type(52):before {
+      content: '52';
+    }
+
+    #{$numbers} &:nth-of-type(53):before {
+      content: '53';
+    }
+
+    #{$numbers} &:nth-of-type(54):before {
+      content: '54';
+    }
+
+    #{$numbers} &:nth-of-type(55):before {
+      content: '55';
+    }
+
+    #{$numbers} &:nth-of-type(56):before {
+      content: '56';
+    }
+
+    #{$numbers} &:nth-of-type(57):before {
+      content: '57';
+    }
+
+    #{$numbers} &:nth-of-type(58):before {
+      content: '58';
+    }
+
+    #{$numbers} &:nth-of-type(59):before {
+      content: '59';
+    }
+
+    #{$numbers} &:nth-of-type(60):before {
+      content: '60';
+    }
+
+    #{$numbers} &:nth-of-type(61):before {
+      content: '61';
+    }
+
+    #{$numbers} &:nth-of-type(62):before {
+      content: '62';
+    }
+
+    #{$numbers} &:nth-of-type(63):before {
+      content: '63';
+    }
+
+    #{$numbers} &:nth-of-type(64):before {
+      content: '64';
+    }
+
+    #{$numbers} &:nth-of-type(65):before {
+      content: '65';
+    }
+
+    #{$numbers} &:nth-of-type(66):before {
+      content: '66';
+    }
+
+    #{$numbers} &:nth-of-type(67):before {
+      content: '67';
+    }
+
+    #{$numbers} &:nth-of-type(68):before {
+      content: '68';
+    }
+
+    #{$numbers} &:nth-of-type(69):before {
+      content: '69';
+    }
+
+    #{$numbers} &:nth-of-type(70):before {
+      content: '70';
+    }
+
+    #{$numbers} &:nth-of-type(71):before {
+      content: '71';
+    }
+
+    #{$numbers} &:nth-of-type(72):before {
+      content: '72';
+    }
+
+    #{$numbers} &:nth-of-type(73):before {
+      content: '73';
+    }
+
+    #{$numbers} &:nth-of-type(74):before {
+      content: '74';
+    }
+
+    #{$numbers} &:nth-of-type(75):before {
+      content: '75';
+    }
+
+    #{$numbers} &:nth-of-type(76):before {
+      content: '76';
+    }
+
+    #{$numbers} &:nth-of-type(77):before {
+      content: '77';
+    }
+
+    #{$numbers} &:nth-of-type(78):before {
+      content: '78';
+    }
+
+    #{$numbers} &:nth-of-type(79):before {
+      content: '79';
+    }
+
+    #{$numbers} &:nth-of-type(80):before {
+      content: '80';
+    }
+
+    #{$numbers} &:nth-of-type(81):before {
+      content: '81';
+    }
+
+    #{$numbers} &:nth-of-type(82):before {
+      content: '82';
+    }
+
+    #{$numbers} &:nth-of-type(83):before {
+      content: '83';
+    }
+
+    #{$numbers} &:nth-of-type(84):before {
+      content: '84';
+    }
+
+    #{$numbers} &:nth-of-type(85):before {
+      content: '85';
+    }
+
+    #{$numbers} &:nth-of-type(86):before {
+      content: '86';
+    }
+
+    #{$numbers} &:nth-of-type(87):before {
+      content: '87';
+    }
+
+    #{$numbers} &:nth-of-type(88):before {
+      content: '88';
+    }
+
+    #{$numbers} &:nth-of-type(89):before {
+      content: '89';
+    }
+
+    #{$numbers} &:nth-of-type(90):before {
+      content: '90';
+    }
+
+    #{$numbers} &:nth-of-type(91):before {
+      content: '91';
+    }
+
+    #{$numbers} &:nth-of-type(92):before {
+      content: '92';
+    }
+
+    #{$numbers} &:nth-of-type(93):before {
+      content: '93';
+    }
+
+    #{$numbers} &:nth-of-type(94):before {
+      content: '94';
+    }
+
+    #{$numbers} &:nth-of-type(95):before {
+      content: '95';
+    }
+
+    #{$numbers} &:nth-of-type(96):before {
+      content: '96';
+    }
+
+    #{$numbers} &:nth-of-type(97):before {
+      content: '97';
+    }
+
+    #{$numbers} &:nth-of-type(98):before {
+      content: '98';
+    }
+
+    #{$numbers} &:nth-of-type(99):before {
+      content: '99';
+    }
+  }
+
+}

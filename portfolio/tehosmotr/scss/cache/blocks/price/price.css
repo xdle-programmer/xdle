@@ -1,0 +1,156 @@
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 115px; }
+  .price__left {
+    width: 60%;
+    height: 800px;
+    position: relative;
+    padding-right: 140px; }
+    .price__left:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background: url(../../../img/panel_dark.jpg);
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      height: 100%;
+      left: 0;
+      width: calc(100% + 85px);
+      top: 0;
+      border-top-right-radius: 500px;
+      border-bottom-right-radius: 500px;
+      z-index: -2; }
+      @media (max-width: 1023px) {
+        .price__left:before {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0; } }
+    @media (max-width: 1365px) {
+      .price__left {
+        width: 70%; } }
+    @media (max-width: 1023px) {
+      .price__left {
+        width: 100%;
+        height: auto;
+        padding: 20px; } }
+  .price__right {
+    width: 40%;
+    height: 800px;
+    position: relative;
+    padding-left: 140px; }
+    .price__right:before, .price__right:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: url(../../../img/panel_light.jpg);
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      height: 100%;
+      right: 0;
+      width: calc(100% + 85px);
+      top: 0;
+      border-top-left-radius: 500px;
+      border-bottom-left-radius: 500px; }
+    .price__right:before {
+      z-index: -1;
+      opacity: .1; }
+    .price__right:after {
+      z-index: -3; }
+    @media (max-width: 1365px) {
+      .price__right {
+        width: 30%; } }
+    @media (max-width: 1023px) {
+      .price__right {
+        display: none; } }
+  .price__inner {
+    width: 470px;
+    margin-left: auto;
+    margin-right: 160px;
+    padding-top: 103px; }
+    @media (max-width: 1365px) {
+      .price__inner {
+        width: 420px;
+        margin-left: auto;
+        margin-right: 0; } }
+    @media (max-width: 1023px) {
+      .price__inner {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0; } }
+  .price__inner-title {
+    color: #ffffff;
+    font-size: 59px;
+    font-weight: 700;
+    text-transform: uppercase; }
+    @media (max-width: 1023px) {
+      .price__inner-title {
+        font-size: 33px; } }
+  .price__inner-subtitle {
+    font-size: 20px;
+    color: #f7c520;
+    text-transform: uppercase;
+    margin-top: 10px; }
+  .price__inner-table {
+    margin-top: 65px; }
+    @media (max-width: 1023px) {
+      .price__inner-table {
+        margin-top: 35px; } }
+  .price__inner-table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 17px;
+    margin-bottom: 10px; }
+  .price__inner-table-name {
+    color: #fff;
+    width: 55%; }
+  .price__inner-table-value {
+    color: #808080;
+    width: 45%; }
+  .price__official {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 26px;
+    color: #f7c520; }
+    @media (max-width: 1023px) {
+      .price__official {
+        font-size: 18px; } }
+  .price__sale {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 21px;
+    letter-spacing: 7px;
+    color: #ffffff; }
+    @media (max-width: 1023px) {
+      .price__sale {
+        font-size: 18px;
+        letter-spacing: 1px; } }
+  .price__button {
+    margin-top: 42px;
+    width: 470px !important; }
+    @media (max-width: 1023px) {
+      .price__button {
+        width: 100% !important; } }
+  .price__right-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 801px;
+    height: 831px;
+    background: url(../../../img/car_half.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 1610px) {
+      .price__right-img {
+        right: -200px; } }
+    @media (max-width: 1365px) {
+      .price__right-img {
+        right: -360px; } }

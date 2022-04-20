@@ -1,0 +1,210 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.about-mobile-app {
+  padding-top: 50px;
+
+  @media #{$tablet-big-screen} {
+    padding-bottom: 120px;
+  }
+
+  &__block {
+    min-height: 744px;
+  }
+
+  &__title {
+    margin-bottom: 68px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__desc {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 48px 400px;
+    padding-top: 37px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__desc-item {
+    padding-left: 47px;
+    margin-bottom: 48px;
+  }
+
+  &__desc-item-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222332;
+    line-height: 32px;
+    margin-bottom: 11px;
+    @include flex-row;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 32px;
+      height: 32px;
+      background: $blue;
+      left: -49px;
+      top: 0;
+      mask: url(../../../img/about-mobile-app/check.svg);
+      -webkit-mask: url(../../../img/about-mobile-app/check.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__desc-item-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__slider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 245px;
+    height: 489px;
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      @include margin-auto;
+      transform: none;
+      left: auto;
+      top: auto;
+    }
+
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(../../../img/about-mobile-app/phone-mask.png);
+      @include background-contain-center;
+    }
+
+    & .slick-dots {
+      position: absolute;
+      right: -35px;
+      top: 45%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: block;
+        width: 12px;
+        height: 12px;
+        @include flex-row-center;
+        margin-bottom: 10px;
+      }
+
+      li button {
+        display: block;
+        color: transparent;
+        width: 8px;
+        height: 8px;
+        background: #d6e1ea;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        &:hover {
+          background: #5dbafd;
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      li.slick-active button {
+        width: 12px;
+        height: 12px;
+        background: #5dbafd;
+      }
+    }
+
+
+
+  }
+
+  &__slider-block {
+    width: 220px;
+    @include margin-auto;
+    padding-top: 8px;
+  }
+
+  &__slider-item {
+    width: 220px;
+  }
+
+  &__slider-item-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__slider-buttons {
+    position: absolute;
+    bottom: -95px;
+    @include flex-row-center;
+    left: 53%;
+    transform: translateX(-50%);
+
+    @media #{$tablet-big-screen} {
+      position: static;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      transform: none;
+      margin-top: 30px;
+      grid-gap: 10px;
+    }
+  }
+
+  &__slider-button {
+    @include flex-row-center;
+    background: $black;
+    color: $white;
+    position: relative;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 20px;
+    white-space: nowrap;
+    padding-left: 60px;
+    margin: 0 7px;
+    border-radius: 4px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin: 0;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 32px;
+      height: 32px;
+      background: $white;
+      left: 20px;
+    }
+
+    &--apple:after {
+      mask: url(../../../img/icons/apple.svg);
+      -webkit-mask: url(../../../img/icons/apple.svg);
+      @include mask-contain-center;
+    }
+
+    &--android:after {
+      mask: url(../../../img/icons/googlepay.svg);
+      -webkit-mask: url(../../../img/icons/googlepay.svg);
+      @include mask-contain-center;
+    }
+  }
+}

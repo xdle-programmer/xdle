@@ -1,0 +1,24 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  padding: 10px 25px;
+  color: $white;
+  font-size: 19px;
+  @include flex-row-center;
+  width: fit-content;
+  width: -moz-fit-content;
+  background: $gold;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  @media #{$tablet-big-screen} {
+   width: 100%;
+  }
+
+
+  &--gray {
+    background: #98999b;
+  }
+}

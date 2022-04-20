@@ -1,0 +1,225 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.recommend-slider {
+  padding-left: 100px;
+  padding-right: 100px;
+  overflow: hidden;
+
+  @media #{$tablet-small-screen} {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  &__item-wrapper {
+    padding-left: 50px;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      padding-left: 24px;
+    }
+
+  }
+
+  &__item-wrapper--border {
+    padding-left: 25px;
+
+    @media #{$mobile-big-screen} {
+      padding-left: 12px;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: calc(100% - 50px);
+      height: calc(100% - 4px);
+      top: 0;
+      left: 25px;
+      border: 2px solid $orange;
+    }
+  }
+
+  &__item {
+    height: 560px;
+    background-size: cover !important;
+
+    @media #{$desktop-small-screen} {
+      height: 400px;
+    }
+
+    @media #{$tablet-big-screen} {
+      height: 300px;
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 200px;
+    }
+
+  }
+
+  &__desc {
+    @include flex-row;
+    align-items: flex-end;
+    color: $white;
+    margin-left: -50px;
+    padding-top: 230px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$desktop-small-screen} {
+      padding-top: 140px;
+    }
+
+    @media #{$tablet-big-screen} {
+      padding-top: 150px;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-left: -24px;
+      padding-top: 100px;
+    }
+
+  }
+
+  &__item-wrapper--border &__desc {
+    margin-left: -25px;
+
+    @media #{$mobile-big-screen} {
+      margin-left: -12px;
+    }
+
+  }
+
+  &__sale {
+    @include flex-column-center;
+    text-align: center;
+    width: 240px;
+    height: 240px;
+    background: $orange;
+    font-weight: 700;
+
+    @media #{$tablet-big-screen} {
+      width: 130px;
+      height: 130px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 85px;
+      height: 85px;
+    }
+
+  }
+  &__sale-value {
+    font-size: 96px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 52px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 27px;
+    }
+
+  }
+  &__sale-name {
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media #{$tablet-big-screen} {
+      font-size: 23px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 12px;
+    }
+
+  }
+  &__product-name {
+    @include flex-row-center;
+    height: 70px;
+    background: #D65527;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 30px;
+    text-align: center;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 130px);
+      height: 60px;
+      padding: 0 10px;
+      font-size: 17px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: calc(100% - 85px);
+      height: auto;
+      font-size: 13px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+      padding: 6px 13px;
+      display: block;
+    }
+
+  }
+
+  &__item-wrapper:hover &__product-name {
+    text-decoration: underline;
+  }
+
+  & .owl-next, & .owl-prev {
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    width: 32px;
+    height: 54px;
+    transform: translateY(-50%) scaleX(-1);
+    background: url(/img/arrow-gray.svg) no-repeat center center !important;
+    background-size: contain !important;
+    cursor: pointer;
+
+    @media #{$tablet-small-screen} {
+      top: 28%;
+      left: -36px;
+      background: $orange !important;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+  }
+
+  & .owl-next:before, & .owl-prev:before {
+    @media #{$tablet-small-screen} {
+      @include after-absolute;
+      width: 25px;
+      height: 50px;
+      background: url(/img/arrow-white.svg) no-repeat center center !important;
+      background-size: 50% 50% !important;
+      top: 0;
+      left: 4px;
+    }
+  }
+
+  & .owl-next {
+    left: auto;
+    right: -65px;
+    transform: translateY(-50%) scaleX(1);
+
+    @media #{$tablet-small-screen} {
+      right: -36px;
+    }
+
+  }
+
+  & .owl-next span, & .owl-prev span {
+    display: none;
+  }
+
+  & .owl-next:focus, & .owl-prev:focus {
+    outline: none;
+  }
+
+}

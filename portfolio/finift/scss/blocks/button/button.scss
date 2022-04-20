@@ -1,0 +1,31 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  @include flex-row-center;
+  color: #ffffff;
+  font-size: 26px;
+  width: 328px;
+  height: 54px;
+  background-color: #93b7d1;
+  cursor: pointer;
+
+  @media #{$tablet-big-screen} {
+    font-size: 18px;
+    width: fit-content;
+    padding: 0 15px;
+  }
+
+  &--fill {
+    width: 100%;
+  }
+
+  &--dark {
+    background-color: $blue;
+  }
+
+  &:hover {
+    background-color: $blue;
+  }
+}

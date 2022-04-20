@@ -1,0 +1,83 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fran-tenth {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media #{$tablet-big-screen} {
+    padding-bottom: 50px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 50px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+  &__numbers {
+  }
+  &__numbers-item {
+    @include flex-row;
+    margin-bottom: 60px;
+    align-items: center;
+    font-size: 38px;
+    line-height: 40px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+  &__numbers-item-number {
+    width: 67px;
+    height: 67px;
+    background-color: #f8f7f7;
+    border-radius: 50%;
+    @include font-intro-mid;
+    margin-right: 24px;
+    @include flex-row-center;
+  }
+  &__numbers-item-text {
+    @include font-intro-mid;
+    width: 0;
+    flex-grow: 1;
+  }
+
+  &__list {
+    padding-left: 20px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 50px;
+      padding-left: 0;
+    }
+  }
+
+  &__list-item {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+    font-size: 18px;
+
+    &:after {
+      @include after-absolute;
+      background: $black;
+      top: 13px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      left: 0;
+    }
+  }
+}

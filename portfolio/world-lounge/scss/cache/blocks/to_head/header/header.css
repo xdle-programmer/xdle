@@ -1,0 +1,86 @@
+.header {
+  height: 70px;
+  width: 100%;
+  background: #c3c3c3;
+  -webkit-transform: translate3d(0, 0, 0);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .header__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    color: #ffffff; }
+  .header__logo {
+    width: 212px;
+    height: 30px;
+    background: url(../../../../img/logo.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .header__menu-button {
+    display: none; }
+    @media (max-width: 1279px) {
+      .header__menu-button {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url(../../../../img/menu-button.svg);
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important; } }
+  .header__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; }
+    @media (max-width: 1279px) {
+      .header__menu {
+        position: absolute;
+        top: 70px;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%) scaleY(0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: #c3c3c3;
+        transform-origin: top;
+        opacity: 0;
+        visibility: hidden; }
+        .header__menu.active {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) scaleY(1); } }
+  .header__menu-item {
+    margin-left: 36px;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: lowercase; }
+    @media (max-width: 1279px) {
+      .header__menu-item {
+        margin-left: 0;
+        margin-bottom: 20px; } }
+  .header__menu-insta {
+    margin-left: 68px;
+    width: 24px;
+    height: 24px;
+    background: url(../../../../img/instagram.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 1279px) {
+      .header__menu-insta {
+        margin-left: 0; } }

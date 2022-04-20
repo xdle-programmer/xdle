@@ -1,0 +1,67 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+    color: $white;
+    background: $blue;
+    cursor: pointer;
+    height: 50px;
+    position: relative;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
+    @include flex-row-center;
+    min-width: 140px;
+    padding: 0 30px;
+    width: fit-content;
+    text-align: center;
+
+    &--small {
+        padding: 5px 20px;
+        font-size: 15px;
+        height: 30px;
+    }
+
+    &--rounded {
+        border-radius: 999px;
+    }
+
+    &--red {
+        background: #e80d00;
+    }
+
+    &.disabled {
+        background: #848484;
+        cursor: not-allowed;
+    }
+
+    &--fill {
+        width: 100%;
+    }
+
+    &--send {
+        position: relative;
+        padding-right: 50px;
+
+        &:after {
+            @include after-absolute;
+            background: $white;
+            mask: url(../../../img/send-button.svg);
+            -webkit-mask: url(../../../img/send-button.svg);
+            @include mask-contain-center;
+            width: 20px;
+            height: 20px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &-circle {
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        background: url("../../../img/button-rounded.svg");
+        @include background-cover-center;
+    }
+}

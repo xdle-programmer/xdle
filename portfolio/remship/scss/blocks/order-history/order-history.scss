@@ -1,0 +1,73 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.order-history {
+  color: #333;
+  width: 570px;
+
+  @media #{$mobile-big-screen} {
+    width: 100%;
+  }
+
+  &__header {
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #e7e7e7;
+    @include flex-row;
+  }
+  &__col-1 {
+    width: 120px;
+    padding: 10px 15px;
+
+    @media #{$mobile-big-screen} {
+      width: 24%;
+    }
+  }
+  &__col-2 {
+    width: 200px;
+    padding: 10px 15px;
+
+    @media #{$mobile-big-screen} {
+      width: 38%;
+    }
+  }
+  &__col-3 {
+    width: 250px;
+    padding: 10px 15px;
+
+    @media #{$mobile-big-screen} {
+      width: 38%;
+    }
+  }
+  &__row {
+    @include flex-row;
+    font-size: 14px;
+    font-weight: 300;
+    border-bottom: 1px solid #e7e7e7;
+
+    @media #{$mobile-big-screen} {
+      font-size: 12px;
+    }
+
+    &:hover {
+      background: #e7e7e7;
+    }
+  }
+
+  &__row:hover &__col-2 {
+    color: #339295;
+  }
+
+  &__row--in-processing &__col-3 {
+  }
+  &__row--completed &__col-3 {
+    color: #339295;
+  }
+  &__row--not-completed &__col-3 {
+    color: #990033;
+  }
+  &__row--waiting-payment &__col-3 {
+  }
+
+}

@@ -1,0 +1,198 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.reviews-list {
+  padding: 25px;
+  margin-bottom: 50px;
+
+  &__item-inner {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+
+    &--natural {
+      padding-left: 80px;
+      position: relative;
+
+      &:after {
+        @include after-absolute;
+        width: 16px;
+        height: 19px;
+        //background-color: #e8e8e8;
+        background: url(../../../img/reply_icon.png);
+        @include background-contain-center;
+        left: 20px;
+        top: 20px;
+      }
+
+      @media #{$tablet-small-screen} {
+        padding-left: 0;
+      }
+
+    }
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    @include background-cover-center;
+
+    @media #{$tablet-small-screen} {
+      width: 60px;
+      height: 60px;
+      @include margin-auto;
+    }
+  }
+
+  &__item-desc {
+    color: $gray;
+    font-size: 14px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  &__item-desc-header {
+    margin-bottom: 20px;
+    @include flex-row;
+    align-items: baseline;
+    font-size: 16px;
+  }
+
+  &__item-desc-header-name {
+
+    &--workshop {
+      color: $blue;
+    }
+  }
+
+  &__item-desc-header-date {
+    color: #e7e7e7;
+    margin-left: 40px;
+  }
+
+  &__item-desc-header-car {
+    color: $blue;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 30px;
+
+    @media #{$tablet-small-screen} {
+      text-align: right;
+    }
+  }
+
+  &__item-desc-text {
+    margin-bottom: 20px;
+  }
+
+  &__item-desc-footer {
+    @include flex-row;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__item-desc-rating {
+    position: relative;
+    padding-left: 26px;
+
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ffdc64;
+      width: 18px;
+      height: 17px;
+      mask: url(../../../img/star.svg);
+      -webkit-mask: url(../../../img/star.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__item-desc-car {
+    margin-left: 40px;
+  }
+
+  &__item-desc-date {
+    color: #e7e7e7;
+    margin-left: 40px;
+    font-weight: 300;
+  }
+
+  &__more-button {
+    color: $blue;
+    font-size: 12px;
+    width: fit-content;
+    @include margin-auto;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  &__item-form {
+    display: grid;
+    grid-template-columns: 40px 1fr min-content;
+    margin-left: auto;
+    width: calc(100% - 80px);
+    align-items: center;
+    border: 1px solid #e7e7e7;
+    padding: 0 10px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__item-form-icon {
+    width: 22px;
+    height: 22px;
+    @include background-contain-center;
+  }
+
+  &__item-form-input {
+    height: 38px;
+
+    @media #{$tablet-small-screen} {
+      min-width: 0;
+    }
+  }
+
+  &__item-form-button {
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    color: $blue;
+    white-space: nowrap;
+
+    @media #{$tablet-small-screen} {
+      width: 38px;
+      color: transparent;
+      background: $blue;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+
+      &:after {
+        @include after-absolute;
+        @include absolute-center;
+        width: 20px;
+        height: 20px;
+        background: $white;
+        mask: url(../../../img/send-button.svg);
+        -webkit-mask: url(../../../img/send-button.svg);
+        @include mask-contain-center;
+      }
+    }
+  }
+}

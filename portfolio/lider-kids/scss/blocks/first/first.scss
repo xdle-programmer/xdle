@@ -1,0 +1,106 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.first {
+  margin-top: 196px;
+  padding-top: 106px;
+  padding-bottom: 320px;
+
+  @media #{$tablet-big-screen} {
+    margin-top: 60px;
+    padding-bottom: 90px;
+  }
+
+  &__desc {
+    background: $white;
+    position: relative;
+    padding-top: 82px;
+    padding-bottom: 70px;
+
+    &:after {
+      @include after-absolute;
+      width: 118px;
+      left: -118px;
+      top: 0;
+      height: 100%;
+      background: $white;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      padding: 15px;
+    }
+  }
+
+  &__desc-title {
+    color: $orange;
+    font-size: 48px;
+    @include font-intro-bold;
+    line-height: 68px;
+    padding-right: 100px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 24px;
+      line-height: 28px;
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__desc-text {
+    padding-top: 11px;
+    padding-left: 9px;
+    padding-right: 432px;
+    line-height: 31px;
+    font-size: 20px;
+
+    @media #{$tablet-big-screen} {
+      padding: 10px 0;
+    }
+  }
+
+  &__button {
+    margin-top: 31px;
+  }
+
+  &__subtext {
+    position: absolute;
+    @include flex-row-center;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+    background: $yellow;
+    border-radius: 50%;
+    width: 246px;
+    height: 246px;
+    z-index: 1;
+    left: 567px;
+    top: 414px;
+    text-align: center;
+    @include font-intro-reg;
+  }
+
+  &__img {
+    width: 674px;
+    height: 934px;
+    position: absolute;
+    background: url(../../../img/first-girl.png);
+    @include background-contain-center;
+    top: 24px;
+    right: -282px;
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 100%;
+      height: 400px;
+      margin-top: 30px;
+      background-position: center bottom!important;
+    }
+  }
+}

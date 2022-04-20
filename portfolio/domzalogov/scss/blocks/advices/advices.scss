@@ -1,0 +1,78 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.advices {
+  @include flex-row;
+  justify-content: space-between;
+
+  @media #{$tablet-small-screen} {
+    @include flex-column;
+  }
+
+  &__item {
+    width: calc(33% - 20px);
+    background: #b8eedc;
+    border-radius: 5px;
+    padding: 25px 35px;
+    @include flex-column;
+    height: 400px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      background: #d3e8e8;
+    }
+
+    &:nth-of-type(odd) {
+      background: #d3e8e8;
+
+      &:hover {
+        background: #b8eedc;
+      }
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__icon {
+    font-size: 30px;
+    margin-bottom: 25px;
+
+    & i {
+      font-size: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__link {
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+
+    &:hover {
+      color: $green;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-top: 30px;
+    }
+  }
+}

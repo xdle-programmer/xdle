@@ -1,0 +1,36 @@
+.feedback-form {
+  background: #ededf1;
+  padding-top: 47px;
+  padding-bottom: 52px; }
+  .feedback-form__title {
+    padding: 0 45px;
+    margin-bottom: 5px; }
+  .feedback-form__desc {
+    font-size: 18px;
+    padding: 0 45px;
+    margin-bottom: 35px; }
+  .feedback-form__items {
+    padding: 0 45px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 7px;
+    grid-template-areas: 'name message' 'number message' 'mail check' 'city button'; }
+  .feedback-form__item--name {
+    grid-area: name; }
+  .feedback-form__item--number {
+    grid-area: number; }
+  .feedback-form__item--mail {
+    grid-area: mail; }
+  .feedback-form__item--city {
+    grid-area: city; }
+  .feedback-form__item--message {
+    grid-area: message; }
+  .feedback-form__item--check {
+    grid-area: check;
+    padding-top: 4px; }
+  .feedback-form__item--button {
+    grid-area: button; }
+  .feedback-form__item-check {
+    margin-bottom: 10px; }
+    .feedback-form__item-check:nth-last-of-type(1) {
+      margin-bottom: 0; }

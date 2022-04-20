@@ -1,0 +1,187 @@
+.step {
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden; }
+  @media (max-width: 767px) {
+    .step {
+      padding: 30px 0; } }
+  .step:after {
+    content: '';
+    position: absolute;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../../img/step-background.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    z-index: -2; }
+    @media (max-width: 767px) {
+      .step:after {
+        display: none; } }
+  .step__logos {
+    position: absolute;
+    height: 1100px;
+    width: 1100px;
+    right: 0;
+    top: 50%;
+    transition: .5s all ease-out;
+    transform: translate(50%, -30%) rotate(20deg);
+    background: url(../../img/logo-circle.svg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .step--analytics .step__logos {
+      transform: translate(50%, -30%) rotate(20deg); }
+    .step--design .step__logos {
+      transform: translate(50%, -30%) rotate(60deg); }
+    .step--coding .step__logos {
+      transform: translate(50%, -30%) rotate(120deg); }
+    .step--programming .step__logos {
+      transform: translate(50%, -30%) rotate(212deg); }
+    .step--advertising .step__logos {
+      transform: translate(50%, -30%) rotate(277deg); }
+    .step--a-b-testing .step__logos {
+      transform: translate(50%, -30%) rotate(20deg); }
+    @media (max-width: 1599px) {
+      .step__logos {
+        height: 700px;
+        width: 700px; } }
+    @media (max-width: 1365px) {
+      .step__logos {
+        display: none; } }
+  .step__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 1599px) {
+      .step__block {
+        width: 1000px !important; } }
+    @media (max-width: 1023px) {
+      .step__block {
+        width: calc(100% - 20px) !important; } }
+  .step__title {
+    font-size: 41px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%; }
+    @media (max-width: 1023px) {
+      .step__title {
+        font-size: 29px; } }
+    @media (max-width: 767px) {
+      .step__title {
+        font-size: 22px;
+        margin-bottom: 10px; } }
+  .step__item {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    transition: none; }
+    .step__item * {
+      transition: none; }
+    @media (max-width: 1023px) {
+      .step__item {
+        width: 48%; } }
+    @media (max-width: 767px) {
+      .step__item {
+        width: 100%;
+        margin-top: 30px; } }
+  .step__item-waves {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ff4903;
+    border-radius: 50%;
+    opacity: 0; }
+    .step__item:hover .step__item-waves {
+      animation: waves-zoom 1.7s infinite linear; }
+    .step__item-waves:before, .step__item-waves:after {
+      content: '';
+      position: absolute;
+      display: block;
+      border: 1px solid #ff4903;
+      border-radius: 50%;
+      width: 130%;
+      height: 130%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: inherit; }
+    .step__item-waves:after {
+      width: 160%;
+      height: 160%; }
+
+@keyframes waves-zoom {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0; }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: .5; }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0; } }
+    @media (max-width: 767px) {
+      .step__item-waves {
+        display: none; } }
+  .step__item-icon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border: 1px solid #ff4903;
+    border-radius: 50%;
+    margin-bottom: 20px; }
+    .step__item-icon:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60%;
+      height: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../../img/step-sprite.svg);
+      background-size: 600% 100%; }
+    .step__item--design .step__item-icon:after {
+      background-position-x: -100%; }
+    .step__item--coding .step__item-icon:after {
+      background-position-x: -200%; }
+    .step__item--programming .step__item-icon:after {
+      background-position-x: -300%; }
+    .step__item--advertising .step__item-icon:after {
+      background-position-x: -400%; }
+    .step__item--a-b-testing .step__item-icon:after {
+      background-position-x: -500%; }
+  .step__item-title {
+    font-weight: 700;
+    line-height: 20px;
+    height: 40px;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 767px) {
+      .step__item-title {
+        height: auto; } }
+  .step__item-text {
+    line-height: 20px;
+    height: 100px;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 767px) {
+      .step__item-text {
+        height: auto; } }

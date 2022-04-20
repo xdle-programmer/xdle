@@ -1,0 +1,146 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+html {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-Regular.woff);
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-RegularItalic.woff);
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-Medium.woff);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-MediumItalic.woff);
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-SemiBold.woff);
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-SemiBoldItalic.woff);
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-Bold.woff);
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-BoldItalic.woff);
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-Black.woff);
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  font-display: swap;
+  src: url(../../../fonts/Gilroy-BlackItalic.woff);
+  font-style: italic;
+  font-weight: 900;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @include font-default('');
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  background: #f5f5f5;
+  //
+  //&.new-font {
+  //  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+  //}
+}
+
+select {
+  display: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 15px;
+
+  @media #{$mobile-big-screen} {
+    font-size: 30px;
+  }
+}
+
+
+button, input, textarea {
+  border: none;
+  background: none;
+}
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}

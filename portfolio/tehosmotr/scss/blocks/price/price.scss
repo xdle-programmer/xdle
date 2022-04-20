@@ -1,0 +1,183 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.price {
+
+  @include flex-row;
+  margin-top: 115px;
+
+  &__left {
+    width: 60%;
+    height: 800px;
+    position: relative;
+    padding-right: 140px;
+
+    &:before {
+      @include after-absolute;
+      background: url(../../../img/panel_dark.jpg);
+      @include background-cover-center;
+      height: 100%;
+      left: 0;
+      width: calc(100% + 85px);
+      top: 0;
+      border-top-right-radius: 500px;
+      border-bottom-right-radius: 500px;
+      z-index: -2;
+
+      @media #{$tablet-small-screen} {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 70%;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+  }
+
+  &__right {
+    width: 40%;
+    height: 800px;
+    position: relative;
+    padding-left: 140px;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      background: url(../../../img/panel_light.jpg);
+      @include background-cover-center;
+      height: 100%;
+      right: 0;
+      width: calc(100% + 85px);
+      top: 0;
+      border-top-left-radius: 500px;
+      border-bottom-left-radius: 500px;
+    }
+
+    &:before {
+      z-index: -1;
+      opacity: .1;
+    }
+    &:after {
+      z-index: -3;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 30%;
+    }
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+
+  &__inner {
+    width: 470px;
+    margin-left: auto;
+    margin-right: 160px;
+    padding-top: 103px;
+
+    @media #{$tablet-big-screen} {
+      width: 420px;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      @include margin-auto;
+      padding-top: 0;
+    }
+  }
+  &__inner-title {
+    color: $white;
+    font-size: 59px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media #{$tablet-small-screen} {
+      font-size: 33px;
+    }
+  }
+  &__inner-subtitle {
+    font-size: 20px;
+    color: $yellow;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  &__inner-table {
+    margin-top: 65px;
+
+    @media #{$tablet-small-screen} {
+      margin-top: 35px;
+    }
+  }
+  &__inner-table-row {
+    @include flex-row;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  &__inner-table-name {
+    color: #fff;
+    width: 55%;
+  }
+  &__inner-table-value {
+    color: #808080;
+    width: 45%;
+  }
+  &__official {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 26px;
+    color: $yellow;
+
+    @media #{$tablet-small-screen} {
+      font-size: 18px;
+    }
+  }
+  &__sale {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 21px;
+    letter-spacing: 7px;
+    color: $white;
+
+    @media #{$tablet-small-screen} {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+  &__button {
+    margin-top: 42px;
+    width: 470px !important;
+
+    @media #{$tablet-small-screen} {
+      width: 100% !important;
+    }
+  }
+  &__right-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 801px;
+    height: 831px;
+    background: url(../../../img/car_half.png);
+    @include background-contain-center;
+
+    @media #{$desktop-middle-screen} {
+      right: -200px;
+    }
+
+    @media #{$tablet-big-screen} {
+      right: -360px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.search {
+  @include flex-row;
+  justify-content: space-between;
+  padding: 20px 30px;
+
+  &__panel {
+    position: relative;
+    width: calc(50% - 20px);
+  }
+
+  &__input-block {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid $gray;
+    border-radius: 3px;
+    height: 30px;
+  }
+
+  &__button {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 0;
+    top: 0;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 16px;
+      height: 16px;
+      background: url(../../../img/search.png);
+      @include background-contain-center;
+    }
+  }
+
+  &__tags {
+    @include flex-row;
+    margin-top: 10px;
+  }
+
+  &__tag {
+    height: 28px;
+    border-radius: 3px;
+    background-color: #edf4fa;
+    @include flex-row-center;
+    white-space: nowrap;
+    padding: 0 7px;
+    margin-right: 6px;
+    color: #9a9a9a;
+    font-size: 13px;
+    font-weight: 300;
+  }
+}

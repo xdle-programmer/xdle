@@ -1,0 +1,115 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1c1c;
+  border-radius: 25px;
+  min-height: 54px;
+  white-space: nowrap;
+
+  &--blue-border {
+    border: 2px solid #193464;
+    padding: 0 36px;
+    color: #193464;
+    font-weight: 700;
+
+    &:hover {
+      background: #193464;
+      color: #ffffff;
+    }
+  }
+
+  &--yellow {
+    border: 2px solid #ffed01;
+    background-color: #ffed01;
+    color: #1c1c1c;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .08);
+    }
+  }
+
+
+  &--opacity {
+    border: 1px solid rgba(255, 255, 255, .09);
+    background-color: rgba(255, 255, 255, .09);
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &--gray {
+    background: #4f4c66;
+    border: 1px solid #4f4c66;
+
+    &:hover {
+      background-color: transparent;
+      color: #4f4c66;
+    }
+  }
+
+  &--grey-light {
+    background: #d0d0d0;
+    color: #455aa1;
+    border: 1px solid #d0d0d0;
+
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, .09);
+      color: #ffffff;
+      background-color: transparent;
+    }
+  }
+
+  &--login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    //box-shadow: 2px 0 0px 1px #fff;
+    box-shadow: 2px 0 2px 0px #fff;
+    transition: all .2s ease-out;
+
+    &:hover {
+      box-shadow: 0px 0 0px 1px rgba(255, 255, 255, .09);
+    }
+  }
+
+  &__hover-white {
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, .09);
+      background-color: transparent;
+      color: #ffffff;
+    }
+  }
+
+  &--arrow-left {
+
+    &:before {
+      content: "";
+      width: 9px;
+      height: 15px;
+      background-image: url('assets/img/arrow-right.png');
+      background-repeat: no-repeat;
+      transform: rotateZ(180deg);
+      margin-right: 15px;
+    }
+  }
+
+  &--arrow-right {
+
+    &:after {
+      content: "";
+      width: 9px;
+      height: 15px;
+      background-image: url('assets/img/arrow-right.png');
+      background-repeat: no-repeat;
+      margin-left: 15px;
+    }
+  }
+
+}

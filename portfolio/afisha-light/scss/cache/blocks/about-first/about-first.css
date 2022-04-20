@@ -1,0 +1,91 @@
+.about-first {
+  padding-top: 200px;
+  padding-bottom: 80px;
+  width: 100%; }
+  @media (max-width: 767px) {
+    .about-first {
+      padding-top: 120px;
+      padding-bottom: 40px; } }
+  .about-first__sign {
+    width: 270px;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background: #f7f7f7;
+    position: relative; }
+    @media (max-width: 767px) {
+      .about-first__sign {
+        width: 130px;
+        height: 130px; } }
+    .about-first__sign:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px;
+      height: 140px;
+      background: url(../../../img/sign.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+      @media (max-width: 767px) {
+        .about-first__sign:after {
+          width: 200px;
+          height: 60px; } }
+  .about-first__title-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .about-first__title-block:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: #f7f7f7;
+      width: 270px;
+      height: 270px;
+      z-index: -1; }
+      @media (max-width: 767px) {
+        .about-first__title-block:after {
+          width: 130px;
+          height: 130px; } }
+  .about-first__title {
+    font-size: 100px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase; }
+    @media (max-width: 1023px) {
+      .about-first__title {
+        font-size: 30px; } }
+  .about-first__subtitle {
+    font-size: 36px;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    width: 100%; }
+    @media (max-width: 1023px) {
+      .about-first__subtitle {
+        font-size: 18px;
+        margin-top: 40px; } }
+    .about-first__subtitle:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 56px;
+      height: 3px;
+      background: #000000;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -41px; }
+      @media (max-width: 1023px) {
+        .about-first__subtitle:after {
+          top: -21px; } }

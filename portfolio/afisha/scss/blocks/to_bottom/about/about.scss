@@ -1,0 +1,109 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.about {
+  padding: 70px 0;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+  &__items {
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: calc(50% - 40px);
+    @include flex-row;
+    justify-content: space-between;
+    margin-top: 70px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-top: 45px;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+    }
+
+  }
+  &__item-icon {
+    width: 70px;
+    height: 70px;
+
+    &--best {
+      background: url(../../img/about_best.svg);
+      @include background-contain-center;
+    }
+
+    &--bulb {
+      background: url(../../img/about_bulb.svg);
+      @include background-contain-center;
+    }
+
+    &--idea {
+      background: url(../../img/about_idea.svg);
+      @include background-contain-center;
+    }
+
+    &--solution {
+      background: url(../../img/about_solution.svg);
+      @include background-contain-center;
+    }
+  }
+
+  &__item-desc {
+    width: calc(100% - 150px);
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__item-title {
+    color: #2d2d2e;
+    font-size: 30px;
+    font-weight: 700;
+
+    @media #{$mobile-big-screen} {
+      text-align: center;
+    }
+  }
+
+  &__item-text {
+    color: #656565;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    margin-top: 40px;
+
+    @media #{$mobile-big-screen} {
+      text-align: center;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 30px;
+      height: 1px;
+      background: #656565;
+      left: 0;
+      top: -20px;
+
+      @media #{$mobile-big-screen} {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,117 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-search {
+  height: 100vh;
+  position: relative;
+  background: $blue;
+  padding: 80px;
+
+  @media #{$tablet-big-screen} {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 0;
+  }
+
+  &__background {
+    position: absolute;
+    @include background-cover-center;
+    @include absolute-fill;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background-image: linear-gradient(to bottom, rgba(29, 65, 120, 0.56), rgba(20, 66, 136, 0.64));
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__inner-title {
+    color: #ffffff;
+    width: 660px;
+    padding: 58px 0;
+    font-size: 34px;
+    font-weight: 500;
+    text-align: center;
+    @include margin-auto;
+    line-height: 46px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      padding: 39px 0;
+      font-size: 27px;
+      line-height: 31px;
+    }
+  }
+
+  &__inner-desc {
+    padding-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__inner-desc-item {
+  }
+
+  &__inner-desc-icon {
+    width: 80px;
+    height: 80px;
+    border: solid 1px #ffffff;
+    @include flex-row-center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__inner-desc-icon-img {
+  }
+
+  &__inner-desc-text {
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+
+  &__inner-form {
+    padding-top: 93px;
+
+    @media #{$tablet-big-screen} {
+      padding-top: 65px;
+    }
+  }
+
+  &__inner-form-title {
+    color: $white;
+    opacity: .8;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  &__inner-form-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 40px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__inner-form-inputs-item {
+  }
+
+  &__inner-form-button {
+  }
+}

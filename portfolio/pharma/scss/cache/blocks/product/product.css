@@ -1,0 +1,92 @@
+.product {
+  padding: 85px 0;
+  position: relative; }
+  .product:before {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: -1; }
+  @media (max-width: 1279px) {
+    .product {
+      padding: 30px 0;
+      padding-top: 50px; } }
+  .product:before {
+    width: 598px;
+    height: 434px;
+    background: url(../../../img/product-elem.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 580px;
+    top: 370px; }
+  .product__title {
+    margin-bottom: 65px; }
+    @media (max-width: 1279px) {
+      .product__title {
+        margin-bottom: 30px; } }
+  .product__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 35px 0;
+    padding-bottom: 50px;
+    position: relative; }
+    .product__items:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../../../img/product-background.jpg);
+      z-index: -2;
+      width: 100vw;
+      height: 100%;
+      background-repeat: repeat-x; }
+      @media (max-width: 1279px) {
+        .product__items:after {
+          background-repeat: repeat; } }
+    @media (max-width: 1279px) {
+      .product__items {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        padding: 35px 20px; } }
+  .product__item {
+    background: #ffffff;
+    box-shadow: 0 0 20px 2px rgba(240, 247, 253, 0.76);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    padding: 20px;
+    position: relative; }
+  .product__item-number {
+    position: absolute;
+    font-size: 36px;
+    font-weight: bold;
+    color: #589cdd;
+    left: 5px;
+    top: 7px; }
+    .product__item-number:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 52px;
+      height: 72px;
+      background: url(../../../img/icons/square.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      left: -15px;
+      top: -19px; }
+  .product__item-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 35px; }
+  .product__item-text {
+    text-align: center;
+    font-size: 15px; }

@@ -1,0 +1,48 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section {
+  padding: 250px 0;
+  position: relative;
+
+  @media #{$mobile-big-screen} {
+    padding: 100px 0;
+  }
+
+  &--white {
+    padding: 0;
+    background: url(../../../img/background.jpg);
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      z-index: 1;
+      height: 250px;
+      left: 0;
+      width: 100%;
+      background: url(../../../img/background.jpg);
+      mask: url(../../../img/side_mask.png);
+      -webkit-mask: url(../../../img/side_mask.png);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: cover !important;
+      -webkit-mask-size: cover !important;
+
+      @media #{$mobile-big-screen} {
+        height: 100px;
+      }
+    }
+
+    &:before {
+      top: 0;
+      transform: translateY(-100%) scaleY(-1);
+    }
+    &:after {
+      bottom: 0;
+      transform: translateY(100%);
+    }
+  }
+}

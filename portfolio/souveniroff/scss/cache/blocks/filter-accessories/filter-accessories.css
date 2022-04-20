@@ -1,0 +1,21 @@
+.filter-accessories {
+  display: flex;
+  flex-direction: column; }
+  .filter-accessories__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    @media (max-width: 767px) {
+      .filter-accessories__item {
+        margin-bottom: 20px; } }
+  .filter-accessories__count {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px; }
+  .filter-accessories__count:before {
+    content: '(';
+    display: inline; }
+  .filter-accessories__count:after {
+    content: ')';
+    display: inline; }

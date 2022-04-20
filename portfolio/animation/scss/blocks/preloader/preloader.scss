@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.preloader {
+  position: fixed;
+  @include flex-row-center;
+  background: #fff;
+  @include absolute-fill;
+  z-index: 10000;
+  transition: all .2s ease-in;
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: rgba(255, 255, 255, .5);
+      transform-origin: right;
+      animation: ease-in preloader 3s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes preloader {
+      0% {
+        transform: scaleX(1);
+      }
+      20% {
+        transform: scaleX(.9);
+      }
+      40% {
+        transform: scaleX(.7);
+      }
+      60% {
+        transform: scaleX(.6);
+      }
+      80% {
+        transform: scaleX(.4);
+      }
+      100% {
+        transform: scaleX(0);
+      }
+    }
+
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+}

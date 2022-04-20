@@ -1,0 +1,91 @@
+.sales {
+  margin-bottom: 15px; }
+  .sales__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    width: 100%;
+    height: 43px;
+    border-bottom: 1px solid #e3e3e3;
+    background: linear-gradient(to bottom, #fff, #f1f1f1);
+    margin-bottom: 5px; }
+    @media (max-width: 767px) {
+      .sales__header {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        margin-right: -10px;
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 0 10px; } }
+  .sales__title {
+    font-size: 15px;
+    color: #333333; }
+  .sales__link {
+    font-size: 13px;
+    color: #999999; }
+  .sales__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between; }
+    @media (max-width: 767px) {
+      .sales__items {
+        flex-wrap: wrap; } }
+  .sales__item {
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    width: calc(25% - 5px); }
+    @media (max-width: 767px) {
+      .sales__item {
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        align-items: flex-end; } }
+  .sales__item-date {
+    height: 24px;
+    width: 100%;
+    color: #fc673f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500; }
+    @media (max-width: 767px) {
+      .sales__item-date {
+        position: absolute;
+        padding-left: 105px;
+        text-align: left;
+        top: 0;
+        left: 0;
+        justify-content: flex-start; } }
+  .sales__item-img {
+    height: 120px;
+    width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 767px) {
+      .sales__item-img {
+        width: 90px;
+        height: 65px; } }
+  .sales__item-name {
+    margin: 13px;
+    line-height: 21px;
+    height: 42px;
+    overflow: hidden; }
+    @media (max-width: 767px) {
+      .sales__item-name {
+        margin: 0;
+        width: calc(100% - 105px); } }

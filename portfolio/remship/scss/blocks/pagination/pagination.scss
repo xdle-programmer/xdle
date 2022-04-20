@@ -1,0 +1,28 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.pagination {
+  width: 100%;
+  margin: 30px 0;
+  @include flex-row;
+  border: 2px solid #f1f1f1;
+  background: #f1f1f1;
+  border-radius: 3px;
+
+  &__link {
+    height: 36px;
+    width: 36px;
+    font-size: 16px;
+    font-weight: 700;
+    @include flex-row-center;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      color: $white;
+      background: #3aaed2;
+      border-radius: 3px;
+    }
+  }
+}

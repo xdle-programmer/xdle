@@ -1,0 +1,180 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.select {
+  width: 100%;
+  position: relative;
+
+  $small: '.select--small';
+
+  &.focus .warning.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.focus .placeholder {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  //Шрифт
+  @mixin font {
+    @include font-default;
+  }
+
+  @mixin button-active {
+    @include select-button-active;
+  }
+
+  //Параметры кнопки
+  $button-height: $select-button-height;
+  $button-width: $select-button-width;
+  $button-min-width: $select-button-min-width;
+  $button-border-radius: $select-button-border-radius;
+  $button-padding-left: $select-button-padding-left;
+  $button-padding-right: $select-button-padding-right;
+  $button-border-width: $select-button-border-width;
+  $button-border-color: $select-button-border-color;
+  $button-background: $select-button-background;
+
+  //Параметры текста
+  $font-size: $select-font-size;
+  $font-weight: $select-font-weight;
+  $font-color: $select-font-color;
+  $font-placeholder-color: $select-font-placeholder-color;
+
+  //Параметры иконки
+  $icon-image-url: $select-icon-image-url;
+  $icon-image-width: $select-icon-image-width;
+  $icon-image-height: $select-icon-image-height;
+  $icon-right: $select-icon-right;
+
+  //Параметры враппера меню
+  $menu-shadow: $select-menu-shadow;
+  $menu-max-height: $select-menu-max-height;
+
+  //Параметры пунктов меню
+  $inner-button-background: $select-inner-button-background;
+  $inner-button-color: $select-inner-button-color;
+
+  &__button {
+    width: #{$button-width} !important;
+    min-width: #{$button-min-width}px !important;
+    height: #{$button-height}px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: #{$button-border-width}px solid #{$button-border-color} !important;
+    border-radius: #{$button-border-radius}px !important;
+    background: #{$button-background} !important;
+    position: relative !important;
+    @include flex-row-center;
+    display: flex !important;
+    justify-content: space-between;
+
+    #{$small} & {
+      height: 40px !important;
+    }
+
+    &:focus,
+    &:active {
+      outline: none !important;
+    }
+
+    &--open {
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+    }
+  }
+
+  $open: '.select__button--open';
+  $placeholder: '.select__button--placeholder';
+  $focus: '.select__button:focus';
+
+  &__text {
+    @include font;
+    float: none !important;
+    border-radius: #{$button-border-radius}px !important;
+    font-size: #{$font-size}px !important;
+    font-weight: #{$font-weight} !important;
+    color: #{$font-color} !important;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 100%!important;
+    flex-grow: 1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: #{$button-padding-left}px !important;
+    padding-right: #{$button-padding-right}px !important;
+    @include flex-row-center;
+    display: flex !important;
+    justify-content: flex-start;
+
+    #{$focus} & {
+      outline: none !important;
+      @include button-active;
+    }
+
+    #{$placeholder} & {
+      color: #{$font-placeholder-color}!important;
+    }
+  }
+
+  &__icon {
+    width: #{$icon-image-width}px !important;
+    height: #{$icon-image-height}px !important;
+    background: url#{$icon-image-url} !important;
+    @include background-contain-center;
+    position: absolute !important;
+    top: 50% !important;
+    right: #{$icon-right}px !important;
+    transform: translateY(-50%) !important;
+
+    #{$open} & {
+      transform: translateY(-50%) rotate(180deg) !important;
+    }
+  }
+
+  &__menu {
+    transition: all 0s;
+    border: none !important;
+    background: none !important;
+
+    .ui-menu {
+      border: #{$button-border-width}px solid #{$button-border-color} !important;
+      background: #{$button-background} !important;
+      box-shadow: #{$menu-shadow};
+      max-height: #{$menu-max-height}px;
+      @include scroll;
+    }
+
+    .ui-menu-item-wrapper {
+      //height: #{$button-height}px !important;
+      height: 30px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: #{$button-padding-left}px !important;
+      padding-right: #{$button-padding-right}px !important;
+      @include font;
+      float: none !important;
+      font-size: #{$font-size}px !important;
+      font-weight: #{$font-weight} !important;
+      color: #{$font-color} !important;
+      position: relative !important;
+      @include flex-row-center;
+      justify-content: flex-start;
+      display: flex !important;
+      margin: 0 !important;
+      border: none !important;
+
+      &:hover,
+      &.ui-state-active,
+      &.active {
+        color: #{$inner-button-color}!important;
+        background: #{$inner-button-background}!important;
+      }
+    }
+  }
+}

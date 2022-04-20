@@ -1,0 +1,243 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.goods {
+  width: 100%;
+  padding: 19px 16px;
+  margin-bottom: 50px;
+  background: #24292e;
+  position: relative;
+
+  &:after {
+    @include after-absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(36, 41, 46, 0) 0%, rgba(36, 41, 46, 1) 100%);
+    width: 100%;
+    height: 70px;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  @media #{$mobile-big-screen} {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 155px);
+    grid-gap: 12px;
+    height: 310px;
+    overflow-y: auto;
+    padding-right: 10px;
+    position: relative;
+
+    &--big {
+      height: 578px;
+    }
+
+    @media #{$desktop-big-screen} {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media #{$desktop-small-screen} {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      height: auto;
+      grid-gap: 8px;
+      padding-right: 0;
+    }
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 5px;
+      grid-template-rows: repeat(auto-fill, 115px);
+    }
+  }
+
+  &__item {
+    padding: 12px;
+    height: 155px;
+    cursor: pointer;
+    box-shadow: 0px 3px 12px 0 rgba(0, 0, 0, 0.35);
+    background: #303741;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    @include flex-column-center;
+    justify-content: space-between;
+
+    &--blue {
+      background: linear-gradient(45deg, #2c4182, #1e7e8d);
+    }
+
+    &:hover {
+      background: linear-gradient(45deg, #2c4182, #1e7e8d);
+    }
+
+    &--sale,
+    &--sale:hover {
+      background: url(../../img/goods__item-sale.png);
+      @include background-cover-center;
+    }
+
+    &.active {
+      z-index: 2;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 5px;
+      height: 115px;
+    }
+
+  }
+
+  $sale: '.goods__item--sale';
+  $blue: '.goods__item--blue';
+  $active: '.goods__item.active';
+
+  &__item-sale {
+    @include flex-row-center;
+    margin-top: -4px;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 16px;
+      height: 24px;
+      margin-right: 5px;
+      background: url(../../img/sale-icon.png);
+      @include background-contain-center;
+
+      @media #{$mobile-big-screen} {
+        width: 10px;
+        height: 16px;
+        margin-right: 3px;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-top: 0px;
+    }
+  }
+
+  &__item-sale-item {
+    color: #fbca05;
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 5px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 8px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__item-img-wrapper {
+    width: 100%;
+    top: 20px;
+    left: 0;
+    padding-bottom: 62.5%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__item-img-block {
+    position: absolute;
+    @include absolute-fill;
+    @include flex-row-center;
+  }
+
+  &__item-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__item-buttons {
+    @include flex-row;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    color: #cddaec;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      font-size: 8px;
+    }
+  }
+
+  &__item-exterior {
+
+  }
+
+  &__item-count {
+
+  }
+
+  &__item-info {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+
+  &__item-name {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+    height: 24px;
+    overflow: hidden;
+    color: #cddaec;
+    @include flex-row-center;
+    align-items: flex-end;
+
+    @media #{$mobile-big-screen} {
+      font-size: 10px;
+    }
+  }
+
+  &__item-price {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    @include flex-row-center;
+
+    @media #{$mobile-big-screen} {
+      font-size: 10px;
+    }
+  }
+
+  &__item-price-currency {
+    color: #cddaec;
+    margin-right: 3px;
+
+    #{$sale} & {
+      color: #fbca05;
+    }
+  }
+
+  &__item-price-value {
+    color: #05dafb;
+
+    #{$sale} & {
+      color: #fbca05;
+    }
+  }
+
+}

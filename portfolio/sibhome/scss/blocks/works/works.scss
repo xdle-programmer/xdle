@@ -1,0 +1,91 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.works {
+  @include flex-row;
+
+  @media #{$mobile-big-screen} {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(33% - 15px);
+    @include flex-column;
+    margin-left: 20px;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__item-photo {
+    width: 100%;
+    height: 500px;
+    @include background-cover-center;
+    @include flex-column;
+    justify-content: flex-end;
+    position: relative;
+    box-shadow: 0 0 15px 5px $gray-light;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      z-index: 0;
+    }
+
+    @media #{$tablet-small-screen} {
+      height: 300px;
+    }
+  }
+
+  &__item-desc {
+    padding: 60px 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__item-author {
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration: underline;
+  }
+
+  &__item-name {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__button {
+    @include flex-row-center;
+    margin: 20px 0;
+    color: $white;
+    height: 45px;
+    padding: 0 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: url(../../img/pattern.jpg);
+    @include background-cover-center;
+
+    &:hover {
+      box-shadow: 0 0 15px 5px #3db837;
+    }
+
+  }
+
+  &__text {
+  }
+
+}

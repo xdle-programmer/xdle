@@ -1,0 +1,385 @@
+.upgrade {
+  padding-top: 30px; }
+  .upgrade__preview-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between; }
+    @media (max-width: 1365px) {
+      .upgrade__preview-block {
+        padding: 0 100px; } }
+    @media (max-width: 767px) {
+      .upgrade__preview-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0; } }
+  .upgrade__preview-change-icon {
+    width: 53px;
+    height: 34px;
+    margin-top: 80px;
+    background: url(../../img/change-icon.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 767px) {
+      .upgrade__preview-change-icon {
+        width: 25px;
+        height: 15px;
+        margin: 15px 0;
+        transform: rotate(90deg); } }
+  .upgrade__preview-item {
+    width: 33%; }
+    @media (max-width: 767px) {
+      .upgrade__preview-item {
+        width: 50%; } }
+  .upgrade__preview-item-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background: linear-gradient(to bottom, rgba(127, 127, 127, 0.1), rgba(127, 127, 127, 0.6)); }
+  .upgrade__preview-item-corners {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .upgrade__preview-item-corners-item {
+    position: absolute; }
+    .upgrade__preview-item-corners-item:before, .upgrade__preview-item-corners-item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 9px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.4); }
+      .upgrade__preview-item:hover .upgrade__preview-item-corners-item:before, .upgrade__preview-item:hover .upgrade__preview-item-corners-item:after {
+        background: white; }
+    .upgrade__preview-item-corners-item:after {
+      transform: rotate(90deg); }
+    .upgrade__preview-item-corners-item:nth-of-type(1) {
+      left: -4px;
+      top: 0px; }
+    .upgrade__preview-item-corners-item:nth-of-type(2) {
+      right: 5px;
+      top: 0px; }
+    .upgrade__preview-item-corners-item:nth-of-type(3) {
+      left: -4px;
+      bottom: 1px; }
+    .upgrade__preview-item-corners-item:nth-of-type(4) {
+      right: 5px;
+      bottom: 1px; }
+  .upgrade__preview-item-img-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .upgrade__preview-item-img {
+    width: 90%;
+    height: auto; }
+  .upgrade__preview-item-desc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px 20px;
+    justify-content: flex-end; }
+  .upgrade__preview-item-desc-name {
+    color: #aaaaac;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: auto;
+    text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.7); }
+  .upgrade__preview-item-desc-category {
+    color: #aaaaac;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 3px;
+    text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.7); }
+  .upgrade__preview-price {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.7); }
+  .upgrade__preview-subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    background: #dd9c0a;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin: 15px 0;
+    margin-top: 20px; }
+    @media (max-width: 767px) {
+      .upgrade__preview-subtitle {
+        margin: 8px 0; } }
+  .upgrade__select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto; }
+  .upgrade__bet {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    @media (max-width: 767px) {
+      .upgrade__bet {
+        margin-top: 15px; } }
+  .upgrade__bet-success {
+    font-size: 15px;
+    color: #aad624;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; }
+    .upgrade__bet-success:before {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url(../../img/check.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      margin-right: 15px; }
+  .upgrade__bet-improve {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 1599px) {
+      .upgrade__bet-improve {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    @media (max-width: 1365px) {
+      .upgrade__bet-improve {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px; } }
+    @media (max-width: 767px) {
+      .upgrade__bet-improve {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 10px; } }
+  .upgrade__bet-improve-item {
+    width: calc(50% - 162px); }
+    .upgrade__bet-improve-item--right {
+      text-align: right; }
+    @media (max-width: 1900px) {
+      .upgrade__bet-improve-item {
+        width: auto; } }
+    @media (max-width: 1599px) {
+      .upgrade__bet-improve-item {
+        text-align: center;
+        margin-bottom: 15px; } }
+    @media (max-width: 1365px) {
+      .upgrade__bet-improve-item {
+        width: calc(50% - 162px); } }
+    @media (max-width: 767px) {
+      .upgrade__bet-improve-item {
+        width: auto; } }
+  .upgrade__bet-improve-item-title {
+    background: #afafb0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text; }
+  .upgrade__bet-improve-item-text {
+    background: #dd9c0a;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text; }
+  .upgrade__bet-improve-button {
+    background: #c2952e;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    font-size: 16px;
+    width: 224px;
+    margin: 0 50px;
+    font-weight: 700;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; }
+    .upgrade__bet-improve-button:before {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url(../../img/upgrade.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      margin-right: 25px; }
+    @media (max-width: 1900px) {
+      .upgrade__bet-improve-button {
+        width: auto;
+        margin: 0; } }
+    @media (max-width: 1599px) {
+      .upgrade__bet-improve-button {
+        margin-bottom: 15px; } }
+    @media (max-width: 1365px) {
+      .upgrade__bet-improve-button {
+        width: 224px;
+        margin: 0 50px; } }
+    @media (max-width: 767px) {
+      .upgrade__bet-improve-button {
+        width: auto;
+        margin: 0;
+        margin-bottom: 15px; } }
+  .upgrade__bet-slider {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 70px; }
+    @media (max-width: 1599px) {
+      .upgrade__bet-slider {
+        padding: 0; } }
+    @media (max-width: 767px) {
+      .upgrade__bet-slider {
+        margin-top: 15px; } }
+  .upgrade__bet-slider-title {
+    background: #afafb0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin-bottom: 15px;
+    text-align: center; }
+  .upgrade__bet-slider-button {
+    margin-bottom: 15px;
+    background: #c2952e;
+    text-transform: uppercase;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .upgrade__bet-slider-input {
+    width: 100%; }
+  .upgrade__bet-input {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px; }
+    @media (max-width: 1599px) {
+      .upgrade__bet-input {
+        padding: 0; } }
+    @media (max-width: 767px) {
+      .upgrade__bet-input {
+        margin-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 10px; } }
+  .upgrade__bet-input-title {
+    background: #dd9c0a;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin-bottom: 15px; }
+  .upgrade__bet-input-item {
+    background: rgba(26, 28, 30, 0.7);
+    border: 1px solid #3c3c3d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    text-align: center; }
+  .upgrade__bet-checkbox {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .upgrade__bet-checkbox {
+        margin-top: 15px; } }
+  .upgrade__how-it-work-button {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #b3b8b4, #f0f4ef);
+    margin-top: 25px;
+    cursor: pointer; }
+    .upgrade__how-it-work-button:hover {
+      opacity: .6; }

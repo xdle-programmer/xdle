@@ -1,0 +1,55 @@
+.sale-drugs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 40px 0; }
+  @media (max-width: 1279px) {
+    .sale-drugs {
+      grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 767px) {
+    .sale-drugs {
+      grid-template-columns: 1fr; } }
+  .sale-drugs__item {
+    padding: 10px 20px;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px; }
+  .sale-drugs__item-img {
+    width: 100%;
+    padding-bottom: 70%;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .sale-drugs__item-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+    line-height: 15px; }
+  .sale-drugs__item-border {
+    width: 100%;
+    position: relative; }
+    .sale-drugs__item-border:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, #000000 0px, #000000 2px, #ffffff 2px, #ffffff 7px); }
+  .sale-drugs__item-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 12px 0;
+    color: #2b97df;
+    margin-top: 23px; }
+  .sale-drugs__item-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 4px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #2b97df;
+    color: #ffffff; }

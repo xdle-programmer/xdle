@@ -1,0 +1,58 @@
+.button {
+  color: #ffffff;
+  background: #0092E8;
+  cursor: pointer;
+  height: 50px;
+  position: relative;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+  padding: 0 30px;
+  width: fit-content;
+  text-align: center; }
+  .button--small {
+    padding: 5px 20px;
+    font-size: 15px;
+    height: 30px; }
+  .button--rounded {
+    border-radius: 999px; }
+  .button--red {
+    background: #e80d00; }
+  .button.disabled {
+    background: #848484;
+    cursor: not-allowed; }
+  .button--fill {
+    width: 100%; }
+  .button--send {
+    position: relative;
+    padding-right: 50px; }
+    .button--send:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #ffffff;
+      mask: url(../../../img/send-button.svg);
+      -webkit-mask: url(../../../img/send-button.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+      width: 20px;
+      height: 20px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%); }
+  .button-circle {
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    background: url("../../../img/button-rounded.svg");
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }

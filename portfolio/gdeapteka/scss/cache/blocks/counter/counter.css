@@ -1,0 +1,44 @@
+.counter {
+  width: 90px;
+  height: 30px;
+  border-radius: 0;
+  display: grid;
+  grid-template-columns: 26px 1fr 26px;
+  grid-gap: 5px; }
+  .counter__button {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #f2f2f2; }
+    .counter__button:before, .counter__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #292c31; }
+    .counter__button:hover:before, .counter__button:hover:after {
+      background: #2b97df; }
+    .counter__button--minus:after {
+      width: 10px;
+      height: 2px; }
+    .counter__button--plus:before {
+      width: 10px;
+      height: 2px; }
+    .counter__button--plus:after {
+      height: 10px;
+      width: 2px; }
+  .counter__number {
+    color: #292c31;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #f2f2f2; }

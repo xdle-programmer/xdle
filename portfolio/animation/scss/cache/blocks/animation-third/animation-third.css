@@ -1,0 +1,46 @@
+.animation-third {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  @media (max-width: 1279px) {
+    .animation-third {
+      position: static;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 20px 3%;
+      grid-gap: 3%; } }
+  @media (max-width: 767px) {
+    .animation-third {
+      grid-template-columns: 1fr 1fr; } }
+  .animation-third * img {
+    width: 100%;
+    height: auto; }
+  .animation-third__line-1, .animation-third__line-2 {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background: transparent; }
+    @media (max-width: 1279px) {
+      .animation-third__line-1, .animation-third__line-2 {
+        display: none; } }
+  .animation-third__el {
+    position: absolute;
+    bottom: 3%;
+    width: 13%;
+    z-index: 1; }
+    @media (max-width: 1279px) {
+      .animation-third__el {
+        position: static;
+        width: 100%; } }
+    .animation-third__el--1 {
+      left: 19%; }
+    .animation-third__el--2 {
+      left: 35.5%; }
+    .animation-third__el--3 {
+      right: 35.5%; }
+    .animation-third__el--4 {
+      right: 19%; }

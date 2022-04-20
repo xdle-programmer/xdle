@@ -1,0 +1,40 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.faq {
+
+  &__item {
+    font-size: 24px;
+    margin-top: 50px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 16px;
+    }
+  }
+  &__item-title {
+    padding-left: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      @include after-absolute;
+      top: 6px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background: url(../../img/plus.png);
+      @include background-contain-center;
+    }
+  }
+  &__item-text {
+    font-weight: 300;
+    display: none;
+  }
+
+  &__item-title.active + &__item-text {
+    display: block;
+  }
+}

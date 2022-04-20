@@ -1,0 +1,30 @@
+.site-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px; }
+  .site-error__number {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 120px;
+    position: relative;
+    z-index: 1; }
+    .site-error__number:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 100px;
+      top: -30px;
+      right: -30px;
+      opacity: .3;
+      z-index: -1;
+      background: url(../../../img/gear-blue.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+  .site-error__text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center; }

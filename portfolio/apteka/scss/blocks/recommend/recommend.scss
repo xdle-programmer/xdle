@@ -1,0 +1,24 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.recommend {
+  margin-right: 1px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    //margin-right: -1px;
+  }
+
+  &__cell {
+    padding: 5px;
+    border: 1px solid #e4e4e4;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    color: #252525;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+  }
+}

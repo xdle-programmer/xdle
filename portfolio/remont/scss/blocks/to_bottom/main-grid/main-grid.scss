@@ -1,0 +1,167 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.main-grid {
+  @include flex-row;
+  flex-wrap: wrap;
+
+  $item: '.main-grid__item';
+
+  &__item {
+    width: calc(100% / 3);
+    height: 270px;
+    position: relative;
+    padding: 40px 60px;
+    @include flex-column;
+    justify-content: space-between;
+
+    &--main {
+
+      @media #{$mobile-big-screen} {
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media #{$desktop-big-screen} {
+      width: 50%;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 20px;
+    }
+  }
+
+  &__item-main-title {
+    font-size: 24px;
+    color: $black;
+    margin-top: 25px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 20px;
+    }
+  }
+
+  &__item-main-text {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+
+  &__item-main-button {
+  }
+
+  &__item-background {
+    position: absolute;
+    @include absolute-fill;
+    @include background-cover-center;
+    z-index: -1;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+
+
+
+      #{$item}:nth-of-type(even) & {
+        background: $gray-light;
+      }
+
+      #{$item}:nth-of-type(odd) & {
+        background: $gray;
+      }
+
+      #{$item}:nth-of-type(0) & {
+        background: $white;
+      }
+
+      @media #{$desktop-big-screen} {
+
+        #{$item}:nth-of-type(4n + 1) & {
+          background: $gray-light;
+        }
+
+        #{$item}:nth-of-type(4n + 2) & {
+          background: $gray-light;
+        }
+
+        #{$item}:nth-of-type(4n + 3) & {
+          background: $gray;
+        }
+
+        #{$item}:nth-of-type(4n + 4) & {
+          background: $gray;
+        }
+
+      }
+
+      @media #{$tablet-big-screen} {
+
+        #{$item}:nth-of-type(even) & {
+          background: $gray-light;
+        }
+
+        #{$item}:nth-of-type(odd) & {
+          background: $gray;
+        }
+
+      }
+
+      #{$item}:hover & {
+        opacity: 0;
+      }
+    }
+
+    &:before {
+      @include after-absolute;
+      @include absolute-fill;
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.5));
+      opacity: 0;
+
+      #{$item}:hover & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item-price {
+    width: 185px;
+    height: 50px;
+    background: $white;
+    @include flex-row-center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #797979;
+
+    #{$item}:hover & {
+      color: $white;
+      background: $blue;
+    }
+  }
+
+  &__item-title {
+    font-size: 24px;
+    color: $black;
+    margin-top: 25px;
+
+    #{$item}:hover & {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  &__item-text {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.5;
+
+    #{$item}:hover & {
+      color: $white;
+    }
+  }
+}

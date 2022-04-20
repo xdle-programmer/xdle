@@ -1,0 +1,217 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.side-menu {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  max-height: 100vh;
+  top: 0;
+  z-index: 200;
+
+  $hide-menu: '.side-menu--hide';
+
+  $width-menu: 176px;
+
+  &:after {
+    @include after-absolute;
+    width: calc(#{$width-menu} + 56px);
+    left: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 2px 0 10px 1px rgba(150, 154, 161, 0.22);
+    background-color: $white;
+  }
+
+  &--hide:after {
+    transform: translateX(-#{$width-menu});
+  }
+
+  &__logo {
+    height: 120px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__logo-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../../../img/logo-icon.svg);
+    @include background-contain-center;
+    top: 52px;
+    left: 100px;
+
+    #{$hide-menu} & {
+      top: 25px;
+      left: 15px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__logo-text-block {
+    position: absolute;
+    color: #1d1e29;
+    font-family: 'Gilroy', sans-serif;
+    top: 44px;
+    left: 75px;
+    display: flex;
+
+    #{$hide-menu} & {
+      top: 47px;
+      left: 8px;
+    }
+
+
+  }
+
+  &__logo-text {
+    display: inline;
+    font-size: 22px;
+    font-weight: 500;
+
+    #{$hide-menu} & {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    &--1 {
+    }
+
+    &--2 {
+      opacity: 0;
+      margin-left: 6px;
+
+      #{$hide-menu} & {
+        opacity: 1;
+        margin-left: 0;
+      }
+
+    }
+
+    &--3 {
+    }
+  }
+
+
+  &__items {
+  }
+
+  &__item {
+    height: 56px;
+    position: relative;
+    background-color: rgba(29, 81, 157, 0);
+    cursor: pointer;
+  }
+
+  $item-active: '.side-menu__item.active';
+  $item-hover: '.side-menu__item:hover';
+
+  &__item-icon {
+    width: 56px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: $white;
+
+    #{$item-active} &,
+    #{$item-hover} & {
+      background-color: #f2f5f9;
+    }
+
+    &:before {
+      @include after-absolute;
+      left: -4px;
+      width: 8px;
+      height: 100%;
+      border-radius: 16px;
+      box-shadow: 0 5px 11px 0 rgba(120, 198, 255, 0.41);
+      background-color: #5dbafd;
+      opacity: 0;
+    }
+
+    #{$item-active} &:before,
+    #{$item-hover} &:before {
+      opacity: 1;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 24px;
+      height: 24px;
+      background: #1D1E29;
+    }
+
+    &--dashboard:after {
+      mask: url(../../../img/side-menu/dashboard.svg);
+      -webkit-mask: url(../../../img/side-menu/dashboard.svg);
+      @include mask-contain-center;
+    }
+
+    &--catalog:after {
+      mask: url(../../../img/side-menu/catalog.svg);
+      -webkit-mask: url(../../../img/side-menu/catalog.svg);
+      @include mask-contain-center;
+    }
+
+    &--applications:after {
+      mask: url(../../../img/side-menu/applications.svg);
+      -webkit-mask: url(../../../img/side-menu/applications.svg);
+      @include mask-contain-center;
+    }
+
+    &--deal:after {
+      mask: url(../../../img/side-menu/deal.svg);
+      -webkit-mask: url(../../../img/side-menu/deal.svg);
+      @include mask-contain-center;
+    }
+
+    &--favorites:after {
+      mask: url(../../../img/side-menu/favorites.svg);
+      -webkit-mask: url(../../../img/side-menu/favorites.svg);
+      @include mask-contain-center;
+    }
+
+    &--saved:after {
+      mask: url(../../../img/side-menu/saved.svg);
+      -webkit-mask: url(../../../img/side-menu/saved.svg);
+      @include mask-contain-center;
+    }
+
+    &--settings:after {
+      mask: url(../../../img/side-menu/settings.svg);
+      -webkit-mask: url(../../../img/side-menu/settings.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__item-text {
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1e29;
+    width: #{$width-menu};
+    height: 100%;
+    top: 0;
+    @include flex-row;
+    align-items: center;
+
+    #{$hide-menu} & {
+      transform: translateX(-#{$width-menu});
+    }
+
+    background-color: rgba(29, 81, 157, 0);
+
+    #{$item-active} &,
+    #{$item-hover} & {
+      background-color: #f2f5f9;
+    }
+  }
+
+}

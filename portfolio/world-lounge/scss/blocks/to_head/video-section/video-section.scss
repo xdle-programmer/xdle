@@ -1,0 +1,77 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.video-section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+
+  &__background-video-img {
+    background-color: #343853;
+    @include background-cover-center;
+    background-position: left center !important;
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+
+    @media #{$tablet-big-screen} {
+      background-position: center center !important;
+    }
+  }
+
+  &__background-video {
+    position: absolute;
+    height: auto;
+    z-index: 2;
+  }
+
+  &__desc {
+    width: 387px;
+    height: 100vh;
+    @include flex-column;
+    justify-content: center;
+    color: $white;
+    z-index: 3;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    height: 54px;
+    background: url(../../../../img/logo.png);
+    @include background-contain-center;
+    margin-bottom: 20px;
+
+    @media #{$tablet-big-screen} {
+      height: 35px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 300;
+    padding-left: 12px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 27px;
+      padding: 0 15px;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+
+    @media #{$tablet-big-screen} {
+      @include margin-auto;
+    }
+  }
+}

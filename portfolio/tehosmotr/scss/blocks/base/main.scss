@@ -1,0 +1,140 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-weight: 400;
+  color: $gray-dark;
+}
+
+@font-face {
+  font-family: 'panton';
+  font-display: swap;
+  src: url(../../../fonts/Panton-Light.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'panton';
+  font-display: swap;
+  src: url(../../../fonts/Panton.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'panton';
+  font-display: swap;
+  src: url(../../../fonts/Panton-SemiBold.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'panton';
+  font-display: swap;
+  src: url(../../../fonts/Panton-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'panton';
+  src: url(../../../fonts/Panton-Black.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  @include font-default;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100vh;
+  font-weight: 500;
+}
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: $main-transition;
+}
+
+.wrapper *::-webkit-input-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *::-moz-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *:-moz-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *:-ms-input-placeholder {
+  transition: $main-transition;
+}
+
+.touch-device * {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+button, input, textarea {
+  border: none;
+  background: none;
+}
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
+
+.scroll-top {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+  background: $white;
+  cursor: pointer;
+  bottom: 40px;
+  right: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(-1);
+
+  &:after {
+    @include after-absolute;
+    @include absolute-center;
+    width: 8px;
+    height: 5px;
+    background: url(../../../img/arrow.png);
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.orange {
+  color: $orange;
+}

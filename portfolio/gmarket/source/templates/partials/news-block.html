@@ -1,0 +1,37 @@
+
+{%
+	set descritpions = [
+		"Почувствуй всю мощь Acer Aspire T3-715 прямо сейчас!",
+		"Эффективно расширяем возможности Samsung Galaxy S8",
+		"Почувствуй всю мощь Acer Aspire T3-715 прямо сейчас!",
+		"Наш детальный обзор док-станции Samsung Dex  Gear VR с джойстиком"
+	]
+%}
+
+{% 
+	set titles = [
+		"Обзор нового Apple macbook 2017",
+		"Умные часы",
+		"Новый смартфон от китайцев",
+		"Гарнитура Huawei"
+	]
+%}
+
+ <section class="cont-section {{modifier}}"> 
+	<div class="container">
+		<h2 class="md-title">Обзоры техники</h2>
+		<div class="order-wrap">
+			{% for i in 0..3 %}
+				<div class="quater-wrap">
+					{% 
+						include "news-card.html" with {
+							img: "img/samples/news/news" ~ i ~ ".jpg",
+							title: titles[i],
+							description: descritpions[i]
+						}
+					 %}
+				</div> 
+			{% endfor %}
+		</div>
+	</div>
+</section>

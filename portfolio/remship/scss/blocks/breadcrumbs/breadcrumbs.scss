@@ -1,0 +1,38 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.breadcrumbs {
+  @include flex-row;
+  font-size: 12px;
+  font-weight: 300;
+  color: #999999;
+  padding: 15px 0;
+
+  &__link {
+    margin-right: 15px;
+    @include flex-row;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      height: 12px;
+      width: 1px;
+      top:0;
+      right: -9px;
+      background: #999999;
+      margin-left: 3px;
+      transform: rotate(23deg);
+    }
+
+    &:hover {
+      color: #333;
+      text-decoration: underline;
+    }
+
+  }
+
+  &__text {
+  }
+
+}

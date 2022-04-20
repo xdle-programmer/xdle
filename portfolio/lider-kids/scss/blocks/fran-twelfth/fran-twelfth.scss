@@ -1,0 +1,72 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fran-twelfth {
+  padding-top: 100px;
+  padding-bottom: 200px;
+
+  &__calc {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 4px dashed #000000;
+    padding: 30px 50px;
+    grid-gap: 120px;
+    background: $yellow;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      border: 4px dashed #000000;
+      padding: 10px;
+      grid-gap: 20px;
+    }
+  }
+
+  &__calc-inputs {
+  }
+
+  &__calc-input-field {
+    margin-bottom: 20px;
+    @include flex-row;
+    justify-content: space-between;
+  }
+
+  &__calc-input-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 15px;
+    }
+  }
+
+  &__calc-input-field-fill {
+    width: 100%;
+  }
+
+  &__calc-input-field-half {
+    width: 47%;
+
+
+  }
+
+  &__calc-result {
+
+    @media #{$tablet-big-screen} {
+      text-align: center;
+    }
+  }
+
+  &__calc-result-val {
+    font-size: 68px;
+    color: $orange;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  &__calc-result-val-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,133 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.main-screen {
+  padding-right: 15vw;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @media #{$tablet-big-screen} {
+    padding-right: 0;
+  }
+
+  &__labels {
+    position: absolute;
+    width: fit-content;
+    top: calc(50% - 12vw);
+    left: calc(50% - 6vw);
+    transform: translateX(-50%);
+
+    @media #{$tablet-big-screen} {
+      top: 14vh;
+      left: 50%;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    width: fit-content;
+    bottom: 13vh;
+    @include flex-row-center;
+    left: calc(50% - 16vw);
+    transform: translateX(-50%);
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 6.8vw;
+    height: 6.8vw;
+    margin-right: 1vw;
+    position: relative;
+    filter: drop-shadow(8px 15px 14px rgba(0, 0, 0, .3));
+
+    &:after {
+      @include after-absolute;
+      width: 2vw;
+      height: 2vw;
+      background: url(../../../images/svg-sprite/badges-plus.svg);
+      @include background-contain-center;
+      top: 50%;
+      transform: translateY(-50%) translateX(70%);
+      right: 0;
+    }
+
+    &:nth-last-of-type(1):after {
+      display: none;
+    }
+
+    &--1 {
+      background: url(../../../images/svg-sprite/badges-1.svg);
+      @include background-contain-center;
+    }
+
+    &--2 {
+      background: url(../../../images/svg-sprite/badges-2.svg);
+      @include background-contain-center;
+    }
+
+    &--3 {
+      background: url(../../../images/svg-sprite/badges-3.svg);
+      @include background-contain-center;
+    }
+
+    &--4 {
+      background: url(../../../images/svg-sprite/badges-4.svg);
+      @include background-contain-center;
+    }
+
+    &--5 {
+      background: url(../../../images/svg-sprite/badges-5.svg);
+      @include background-contain-center;
+    }
+  }
+
+  &__logo-mobile {
+    display: none;
+    position: absolute;
+    left: 2vw;
+    top: 41vh;
+    width: 50vw;
+
+    @media #{$tablet-big-screen} {
+      display: block;
+    }
+  }
+
+  &__logo-mobile-img {
+    width: 100%;
+    height: 30vw;
+    background: url(../../../images/svg-sprite/logo-label.svg);
+    @include background-contain-center;
+    filter: drop-shadow(8px 15px 14px rgba(0, 0, 0, .7));
+    @include margin-auto;
+  }
+
+  &__logo-mobile-text {
+    //font-family: 'Marck Script', sans-serif;
+    font-family: 'Philosopher', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Neucha', cursive;
+    font-family: 'Bad Script', cursive;
+    font-family: 'nefelibata', cursive;
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 8vw;
+    width: 100%;
+    font-size: 6vw;
+  }
+
+  &__logo-mobile-sign {
+    width: 100%;
+    height: 15vw;
+    background: url(../../../images/sign.png);
+    @include background-contain-center;
+    margin-top: 1vw;
+    margin-left: auto;
+  }
+}

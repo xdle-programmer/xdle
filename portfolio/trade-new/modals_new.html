@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.theme.default.min.css">
+    <script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/download.js"></script>
+    <script src="js/slider.js"></script>
+    <!--<script src="https://vuejs.org/js/vue.js"></script>-->
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <!--<script src="js/app.js"></script>-->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles/styles.css">
+    <title>trade-vgo</title>
+</head>
+
+<body>
+<noscript>
+    <strong>We're sorry but trade-vgo doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app" class="wrapper">
+    <div class="header">
+        <div class="header__left">
+
+            <div class="header__mobile-menu"></div>
+
+            <div class="header__logo">
+                <img src="img/logo.png" class="logo">
+            </div>
+
+            <div class="header__menu">
+                <a href="#" class="header__menu-item active">Partnership</a>
+                <a href="#" class="header__menu-item">FAQ</a>
+
+                <div class="header__social social">
+                    <a href="#" class="social__item social__item--vk"></a>
+                    <a href="#" class="social__item social__item--twitter"></a>
+                    <!--<a href="#" class="social__item social__item&#45;&#45;facebook"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;youtube"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;instagram"></a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="header__right">
+
+
+            <div class="header__language lang-selector">
+                <div class="lang-selector__button">
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+                <div class="lang-selector__list">
+                    <div class="lang-selector__item lang-selector__item--en">eng</div>
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+            </div>
+
+            <div class="header__bell"></div>
+
+            <a href="/authenticate" class="header__steam" style="display: none">
+                <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"
+                     class="header__steam-img" alt="">
+            </a>
+
+            <div class="header__login">
+                <div class="header__login-img" style="background: url(img/avatar.png);"></div>
+                <div class="header__login-nickname">Alexander Gudik</div>
+                <div class="header__login-arrow"></div>
+
+                <div class="header__login-menu">
+                    <div class="header__login-menu-item header__login-menu-item--trade-link">Trade link</div>
+                    <div class="header__login-menu-item header__login-menu-item--trade-history">Trade history</div>
+                    <div class="header__login-menu-item header__login-menu-item--partnership">Partnership</div>
+                    <div class="header__login-menu-item header__login-menu-item--logout">Logout</div>
+                    <div class="header__login-menu-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------------------->
+    <!--Временный код для тестов-->
+
+    <div class="open-modal" data-modal="#modal_download" style="font-size: 20px">Download</div>
+    <div class="open-modal" data-modal="#modal_history" style="font-size: 20px">History</div>
+    <div class="open-modal" data-modal="#modal_tweet" style="font-size: 20px">Tweet</div>
+    <div class="open-modal" data-modal="#modal_partnership" style="font-size: 20px">Partnership</div>
+    <div class="open-modal" data-modal="#modal_deposit" style="font-size: 20px">Deposit</div>
+    <div class="open-modal" data-modal="#modal_trade" style="font-size: 20px">Trade</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var test_progress = 45;
+            download_progress('download-1', test_progress);
+            $('.modal__table-goods-img-block').on('click', function () {
+                test_progress = test_progress + 5;
+                download_progress('download-1', test_progress);
+            });
+
+        });
+    </script>
+
+    <!--Временный код для тестов-->
+    <!---------------------------->
+
+
+    <div class="modal__background"></div>
+
+    <div class="modal__block" id="modal_download">
+        <div class="modal__close"></div>
+        <div class="modal__content modal__content--download">
+            <div class="modal__header">
+                <div class="modal__title">
+                    WITHDRAW STATUS
+                </div>
+            </div>
+
+            <div class="modal__table">
+                <div class="modal__table-row modal__table-row--header">
+                    <div class="modal__table-col modal__table-col--20">NAME</div>
+                    <div class="modal__table-col modal__table-col--13">#</div>
+                    <div class="modal__table-col modal__table-col--17">STATUS</div>
+                    <div class="modal__table-col modal__table-col--fill">
+                        STATUS BAR
+                    </div>
+                    <div class="modal__table-col modal__table-col--14">EXPIRATION TIME</div>
+                    <div class="modal__table-col modal__table-col--14">SHARE</div>
+                     
+                </div>
+
+                <div class="modal__table-scroll-item">
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--fill">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-title">Desert Eagle</div>
+                                    <div class="modal__table-goods-subtitle">Blaze</div>
+                                    <div class="modal__table-goods-price">
+                                        <div class="modal__table-goods-price-name">Price:</div>
+                                        <div class="modal__table-goods-price-value">
+                                            $
+                                            <div class="modal__table-goods-price-value-inner">87.43</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--13">522592989</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="modal__table-status">PROCESSING...</div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--fill">
+                            <div class="download" id="download-1">
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">
+                            <div class="button-color button-color--small button-color--cancel">DECLINE</div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">
+                            <div class="button-color button-color--small button-color--tweet button-color--disable">
+                                TWEET
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--fill">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-title">Desert Eagle</div>
+                                    <div class="modal__table-goods-subtitle">Blaze</div>
+                                    <div class="modal__table-goods-price">
+                                        <div class="modal__table-goods-price-name">Price:</div>
+                                        <div class="modal__table-goods-price-value">
+                                            $
+                                            <div class="modal__table-goods-price-value-inner">87.43</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--13">522592989</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="modal__table-status modal__table-status--complete">TRADE WAS SENT</div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--fill">
+                            <div class="download download--full" id="download-2">
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">
+                            <div class="button-color button-color--small">ACCEPT</div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">
+                            <div class="button-color button-color--small button-color--tweet">TWEET</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-desc">
+                    If you don’t recieve skin with in <span>5-7 minutes</span> we will send you refund!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_history">
+        <div class="modal__close"></div>
+        <div class="modal__content modal__content--history">
+            <div class="modal__header">
+                <div class="modal__header-left">
+                    <div class="button-color button-color--small modal__header-button">CSGO</div>
+                    <div class="button-color button-color--small button-color--gray">VGO</div>
+                </div>
+                <div class="modal__header-center">
+                    <div class="modal__title">
+                        HISTORY
+                    </div>
+                </div>
+                <div class="modal__header-right"></div>
+
+            </div>
+
+            <div class="modal__table">
+                <div class="modal__table-row modal__table-row--header">
+                    <div class="modal__table-col modal__table-col--fill">NAME</div>
+                    <div class="modal__table-col modal__table-col--14">#</div>
+                    <div class="modal__table-col modal__table-col--14">DATE</div>
+                    <div class="modal__table-col modal__table-col--26">COST</div>
+                    <div class="modal__table-col modal__table-col--fill">STATUS</div>
+                </div>
+
+                <div class="modal__table-scroll-item">
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--fill">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-title">Desert Eagle</div>
+                                    <div class="modal__table-goods-subtitle">Blaze</div>
+                                    <div class="modal__table-goods-price">
+                                        <div class="modal__table-goods-price-name">Price:</div>
+                                        <div class="modal__table-goods-price-value">
+                                            $
+                                            <div class="modal__table-goods-price-value-inner">87.43</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">522592989</div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">
+                            05.12.2018
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="price">$ <span>87.43</span></div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--fill">
+                            Declined and Refunded
+                        </div>
+                    </div>
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--fill">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-title">Desert Eagle</div>
+                                    <div class="modal__table-goods-subtitle">Blaze</div>
+                                    <div class="modal__table-goods-price">
+                                        <div class="modal__table-goods-price-name">Price:</div>
+                                        <div class="modal__table-goods-price-value">
+                                            $
+                                            <div class="modal__table-goods-price-value-inner">87.43</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">522592989</div>
+                        <div class="modal__table-col modal__table-col--14 modal__table-col--mobile-half">
+                            05.12.2018
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="price">$ <span>87.43</span></div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--fill">
+                            Declined and Refunded
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="modal__footer">
+                <div class="button-color button-color--big">
+                    LOAD MORE
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_tweet">
+        <div class="modal__close"></div>
+        <div class="modal__content modal__content--tweet">
+            <div class="modal__tweet-logo">
+                <img src="img/logo.png" class="logo">
+            </div>
+            <div class="modal__tweet-title">
+                You recieved your item!
+            </div>
+            <div class="modal__tweet-img" style="background: url(img/tweet_img.jpg);">
+                <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                     class="modal__tweet-img-inner">
+            </div>
+            <div class="modal__tweet-change">
+                <div class="modal__tweet-change-button">
+                    <img src="img/VGO.png" class="modal__tweet-change-img modal__tweet-change-img--vgo">
+                </div>
+                <div class="modal__tweet-change-icon"></div>
+                <div class="modal__tweet-change-button">
+                    <img src="img/CSGO.png" class="modal__tweet-change-img modal__tweet-change-img--csgo">
+                </div>
+            </div>
+            <div class="modal__tweet-name">AK-47 | Bloodsport</div>
+            <div class="modal__tweet-state">Factory new</div>
+            <div class="modal__tweet-button-block">
+                <div class="button-color button-color--big button-color--tweet modal__tweet-button">
+                    TWEET
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_partnership">
+        <div class="modal__close"></div>
+        <div class="modal__content modal__content--partnership">
+            <div class="partnership">
+                <div class="partnership__img" style="background: url(img/avatar_2.png);"></div>
+                <div class="partnership__info">
+                    <div class="partnership__buttons">
+                        <div class="partnership__button">
+                            <div class="partnership__button-icon" style="background: url(img/partnership_1.png);"></div>
+                            <div class="partnership__button-text"><span>100%</span> COMISSION</div>
+                        </div>
+                        <div class="partnership__button">
+                            <div class="partnership__button-icon" style="background: url(img/partnership_2.png);"></div>
+                            <div class="partnership__button-text"><span>5</span> REFERRALS</div>
+                        </div>
+                        <div class="partnership__button">
+                            <div class="partnership__button-icon" style="background: url(img/partnership_3.png);"></div>
+                            <div class="partnership__button-text"><span>3</span> CLICKED</div>
+                        </div>
+                    </div>
+
+                    <div class="partnership__header">
+                        <div class="partnership__header-name">Verner2k</div>
+                        <div class="partnership__header-price">
+                            <div class="price"><span>0.00</span> USD</div>
+                            <div class="partnership__header-price-desc">Earned</div>
+                        </div>
+                    </div>
+
+                    <div class="partnership__desc">
+                        <div class="partnership__desc-title">HOW DOES IT WORK?</div>
+                        <div class="partnership__desc-text">Make profit like administrators, we are giving 100% of our profit to
+                            you. Affilate. Just copy and share the link that simple!</div>
+                    </div>
+
+                    <div class="partnership__inputs">
+                        <input class="partnership__input" placeholder="https://myvgo.com/r/qpd6p">
+                        <div class="button-color button-color--big partnership__inputs-button">COPY</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_deposit">
+        <div class="modal__close"></div>
+        <div class="modal__content modal__content--deposit">
+            <div class="deposit">
+                <div class="deposit__title">DEPOSIT</div>
+                <div class="deposit__subtitle">Select payment method:</div>
+                <div class="deposit__buttons">
+                    <div class="deposit__button active">
+                        <img src="img/deposit_qiwi.png" class="deposit__button-img deposit__button-img--qiwi">
+                    </div>
+                    <div class="deposit__button">
+                        <img src="img/deposit_csgo.png" class="deposit__button-img deposit__button-img--csgo">
+                    </div>
+                    <div class="deposit__button">
+                        <img src="img/deposit_bitcoin.png" class="deposit__button-img deposit__button-img--bitcoin">
+                    </div>
+                </div>
+                <div class="deposit__inputs">
+                    <input class="deposit__input" placeholder="Enter your wallet">
+                    <input class="deposit__input" placeholder="Enter amount">
+                    <div class="button-color button-color--big deposit__inputs-button">deposit</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_trade">
+        <div class="modal__close"></div>
+        <div class="modal__content modal__content--trade">
+            <div class="trade">
+                <div class="trade__title">Trade link</div>
+                <div class="trade__subtitle">
+                    Please make sure to change tradelink when you generate a new Token!
+                </div>
+
+                <div class="trade__inputs">
+                    <div class="trade__inputs-title">Where can i get this link?</div>
+                    <input class="trade__input" type="text" placeholder="https://steamcommunity.cpm/tradeoffer...">
+                    <div class="button-color button-color--big trade__inputs-button">SAVE</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+</html>

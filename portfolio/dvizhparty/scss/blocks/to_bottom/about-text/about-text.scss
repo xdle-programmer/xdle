@@ -1,0 +1,31 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.about-text {
+  padding-bottom: 20%;
+  padding-top: 50px;
+  background: #061335;
+
+  &__title {
+    color: #778fc3;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    color: $white;
+    font-size: 17px;
+    line-height: 20px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}

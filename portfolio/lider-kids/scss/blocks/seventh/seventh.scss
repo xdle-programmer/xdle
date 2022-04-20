@@ -1,0 +1,233 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.seventh {
+  padding-top: 90px;
+  position: relative;
+
+  @media #{$tablet-big-screen} {
+    padding-bottom: 20px;
+  }
+
+  &:after {
+    @include after-absolute;
+    width: 100vw;
+    height: 221px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background: $white;
+    mask: url(../../../img/mask.svg);
+    -webkit-mask: url(../../../img/mask.svg);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: top center;
+    -webkit-mask-position: top center;
+    mask-size: 2000px 5000px;
+    -webkit-mask-size: 2000px 5000px;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__title {
+    background: $white;
+    @include margin-auto;
+    padding: 12px 30px;
+    width: 640px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    margin-top: 44px;
+    margin-bottom: 20px;
+    width: 684px;
+    @include margin-auto;
+
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__slider-items {
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      width: 71px !important;
+      height: 71px !important;
+      background: url(../../../img/seventh-arrow.png) !important;
+      @include background-contain-center;
+      cursor: pointer;
+      top: 50%;
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+
+    }
+
+    & .owl-next {
+      left: -95px;
+      transform: translateY(-50%) scaleX(-1);
+    }
+
+    & .owl-prev {
+      right: -95px;
+      transform: translateY(-50%) scaleX(1);
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+    & .owl-prev.disabled,
+    & .owl-next.disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__slider-item {
+    background: $yellow;
+    width: 100%;
+  }
+
+  &__reviews {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__review {
+    position: relative;
+    background: $yellow;
+    display: grid;
+    grid-gap: 47px;
+    grid-template-columns: 200px 670px;
+    padding: 20px 35px;
+    height: 300px;
+    margin-bottom: 50px;
+    padding-top: 80px;
+    align-items: center;
+
+    &--white {
+      background: $white;
+    }
+
+    @media #{$tablet-big-screen} {
+      grid-gap: 15px;
+      padding: 25px 35px;
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+  }
+
+  $white_item: '.seventh__review--white';
+
+  &__review-title {
+    position: absolute;
+    @include font-intro-reg;
+    font-size: 48px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      font-size: 36px;
+      top: auto;
+      left: auto;
+      transform: translateX(0);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+
+  &__review-img {
+    width: 200px;
+    height: 200px;
+    @include background-cover-center;
+
+    @media #{$tablet-big-screen} {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__review-desc {
+    @include flex-row;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__review-desc-name {
+    @include font-intro-reg;
+    font-size: 30px;
+    width: 200px;
+    margin-right: 60px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__review-desc-quote {
+    position: relative;
+    font-size: 24px;
+    width: 0;
+    flex-grow: 1;
+    text-align: center;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      text-align: center;
+    }
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include font-intro-bold;
+      font-size: 50px;
+      color: $white;
+    }
+
+    #{$white_item} &:before,
+    #{$white_item} &:after {
+      color: $yellow;
+    }
+
+    &:before {
+      content: '“';
+      top: -37px;
+      left: -39px;
+
+      @media #{$tablet-big-screen} {
+        top: -27px;
+        left: -19px;
+      }
+    }
+
+    &:after {
+      content: '”';
+      bottom: -65px;
+      right: -25px;
+
+      @media #{$tablet-big-screen} {
+        bottom: -45px;
+        right: -25px;
+      }
+    }
+  }
+}

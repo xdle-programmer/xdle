@@ -1,0 +1,54 @@
+.circle-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px; }
+  @media (max-width: 767px) {
+    .circle-numbers {
+      flex-wrap: wrap; } }
+  .circle-numbers__item {
+    margin: 5px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #303337;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 1599px) {
+      .circle-numbers__item {
+        width: 70px;
+        height: 70px; } }
+  .circle-numbers__item-number {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    right: -5px;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #f19e00, #dba500); }
+    @media (max-width: 1599px) {
+      .circle-numbers__item-number {
+        width: 20px;
+        height: 20px; } }
+  .circle-numbers__item-text {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    background: #fff;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    z-index: 1; }

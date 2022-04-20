@@ -1,0 +1,24 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  @include flex-row-center;
+  border: 1px solid $gray-light;
+  padding: 15px 30px;
+  font-size: 20px;
+  background: $white;
+  cursor: pointer;
+
+  @media #{$desktop-small-screen} {
+    padding: 5px 15px;
+  }
+
+  &:hover {
+    border-color: $black;
+  }
+
+  &--antiqua {
+    font-family: 'Antiqua', sans-serif;
+  }
+}

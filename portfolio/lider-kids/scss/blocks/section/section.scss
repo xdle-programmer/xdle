@@ -1,0 +1,37 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section {
+  position: relative;
+  width: 100%;
+  @include background-cover-center;
+
+  &--circle-top {
+    margin-top: -115px;
+    mask: url(../../../img/mask.svg);
+    -webkit-mask: url(../../../img/mask.svg);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: top center;
+    -webkit-mask-position: top center;
+    mask-size: 2000px 5000px;
+    -webkit-mask-size: 2000px 5000px;
+  }
+
+  &__first-small-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 200px);
+    @include background-cover-center;
+    background-position: top center!important;
+
+    @media #{$tablet-big-screen} {
+      height: 100%;
+      background-position: center right!important;
+    }
+  }
+
+}

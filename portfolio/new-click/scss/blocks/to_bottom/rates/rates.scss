@@ -1,0 +1,228 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.rates {
+  position: relative;
+  padding-top: 110px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 50px;
+  }
+
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+    background: url(../../img/rates-background.jpg);
+    background-size: cover;
+    z-index: -5;
+    filter: blur(5px);
+  }
+
+  &__block {
+    @include margin-auto;
+    width: 1100px;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 20px);
+    }
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 29px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    width: 680px;
+    margin-bottom: 60px;
+    @include margin-auto;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__items {
+    @include flex-row;
+    padding-bottom: 30px;
+
+    @media #{$mobile-big-screen} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: calc(100% / 3);
+
+    &:nth-of-type(2) {
+      z-index: 1;
+
+      @media #{$mobile-big-screen} {
+        z-index: auto;
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: $white;
+      box-shadow: 0 13px 25px 7px rgba(0, 0, 0, .1);
+      z-index: -3;
+    }
+
+    &:hover:after {
+      transform: scaleX(1.05);
+
+      @media #{$mobile-big-screen} {
+        transform: none;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  $item: '.rates__item';
+
+  &__item-title {
+    font-size: 19px;
+    font-weight: 700;
+    height: 80px;
+    position: relative;
+    @include flex-row-center;
+
+    #{$item}:hover & {
+      color: $white;
+
+      @media #{$mobile-big-screen} {
+        color: $black;
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: $white;
+      z-index: -2;
+    }
+
+    #{$item}:hover &:after {
+      background: $orange;
+      color: $white;
+      transform: scaleX(1.05) scaleY(1.15);
+
+      @media #{$mobile-big-screen} {
+        background: $white;
+        color: $black;
+        transform: none;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 40px;
+      align-items: flex-end;
+    }
+
+  }
+
+  &__item-stars {
+    @include flex-row-center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-star {
+    width: 50px;
+    height: 46px;
+    margin: 0 7px;
+    @include gradient;
+    -webkit-mask-image: url(../../img/star-mask.svg);
+    mask-image: url(../../img/star-mask.svg);
+
+    @media #{$tablet-big-screen} {
+      width: 25px;
+      height: 23px;
+    }
+  }
+
+  &__item-list {
+    padding-left: 70px;
+    padding-right: 30px;
+
+    @media #{$tablet-big-screen} {
+      padding-left: 40px;
+      padding-right: 5px;
+    }
+  }
+
+  &__item-list-item {
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 30px;
+
+    &:after {
+      @include after-absolute;
+      width: 14px;
+      height: 14px;
+      background: $orange;
+      border-radius: 50%;
+      top: 0;
+      left: -30px;
+    }
+
+    &--natural:after {
+      box-shadow: 0 0 3px 3px rgba(255, 73, 3, .5);
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-bottom {
+    width: calc(100% - 50px);
+    border-top: 1px solid #d3d3d3;
+    padding-top: 30px;
+    @include margin-auto;
+    @include flex-column-center;
+  }
+
+  &__item-price {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__item-button {
+    padding: 0 80px !important;
+    margin-bottom: 35px;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  width: 620px;
+  height: 70px;
+  color: $white;
+  font-size: 19px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(26, 30, 29, 0.32);
+  box-shadow: 0px 3px 0px 0px #216d57;
+  background: $green;
+  cursor: pointer;
+  @include flex-row-center;
+  @include margin-auto;
+  border-radius: 5px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #216d57;
+  }
+
+  &--download {
+    width: 270px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url(../../../img/download.svg);
+      @include background-contain-center;
+      margin-right: 20px;
+    }
+  }
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    text-align: center;
+  }
+}

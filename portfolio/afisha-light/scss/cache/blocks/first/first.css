@@ -1,0 +1,89 @@
+.first {
+  width: 100%;
+  height: calc(100vh + 100px);
+  position: relative;
+  z-index: -1;
+  overflow: hidden; }
+  .first__background {
+    background: url(../../../img/first-background.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    z-index: 1;
+    height: calc(100% - 100px); }
+  .first__text {
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    font-size: 9.8vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: .9;
+    padding-bottom: 40vh; }
+    @media (max-width: 767px) {
+      .first__text {
+        font-size: 16vw; } }
+  .first__text-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .first__text-inner,
+    .first__text-inner * {
+      transition: all 75ms ease-in; }
+  .first__text-inner-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out; }
+    .first__text-inner-block.natural {
+      transform: translateY(-100%); }
+  .first__text-inner-line {
+    background: linear-gradient(to right, #554ae8, #de92c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #554ae8;
+    margin-bottom: -2vw; }
+  .first__front {
+    z-index: 3;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: url(../../../img/first-front.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-position: center bottom !important; }
+    .first__front,
+    .first__front * {
+      transition: all 75ms ease-in; }
+  .first__cloud {
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../../../img/cloud.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-position: center bottom !important; }

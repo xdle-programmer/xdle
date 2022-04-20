@@ -1,0 +1,56 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.link {
+    color: $blue;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+
+    &--small {
+        font-size: 15px;
+    }
+
+    &--black {
+        color: $black;
+    }
+
+    &--white {
+        color: $white;
+    }
+
+    &:after {
+        @include after-absolute;
+        background: $blue;
+        width: 100%;
+        height: 1px;
+        bottom: -1px;
+        left: 0;
+    }
+
+    &--white:after {
+        background: $white;
+    }
+
+    &:hover:after {
+        transform: scaleX(0);
+    }
+
+    &--black:after {
+        background: $black;
+    }
+
+    &--black:hover:after {
+        background: $black;
+    }
+
+    &--invert:after {
+        transform: scaleX(0);
+    }
+
+    &--invert:hover:after {
+        transform: scaleX(1);
+    }
+}

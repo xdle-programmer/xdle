@@ -1,0 +1,132 @@
+.sort {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 20px;
+  margin-bottom: 30px; }
+  @media (max-width: 1023px) {
+    .sort {
+      padding: 10px;
+      position: relative; } }
+  .sort__button {
+    display: none !important; }
+    @media (max-width: 767px) {
+      .sort__button {
+        display: flex !important;
+        width: 100%; } }
+  .sort__items {
+    display: grid; }
+    @media (max-width: 767px) {
+      .sort__items {
+        grid-gap: 15px;
+        padding: 10px;
+        padding-top: 15px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: #ffffff;
+        width: 100%;
+        overflow: hidden;
+        visibility: hidden; }
+        .sort__items.active {
+          position: static;
+          height: 0;
+          overflow: hidden;
+          visibility: visible; } }
+    .sort--offers .sort__items {
+      grid-template-columns: 1fr 150px 150px; }
+      @media (max-width: 1023px) {
+        .sort--offers .sort__items {
+          grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 767px) {
+        .sort--offers .sort__items {
+          grid-template-columns: 1fr; } }
+    .sort--tickets .sort__items {
+      grid-template-columns: 680px 1fr; }
+      @media (max-width: 1023px) {
+        .sort--tickets .sort__items {
+          grid-template-columns: 1fr; } }
+      @media (max-width: 767px) {
+        .sort--tickets .sort__items {
+          grid-template-columns: 1fr; } }
+    .sort--tickets-with-offers .sort__items {
+      grid-template-columns: 610px 2fr 1fr 145px;
+      grid-gap: 20px; }
+      @media (max-width: 1023px) {
+        .sort--tickets-with-offers .sort__items {
+          grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 767px) {
+        .sort--tickets-with-offers .sort__items {
+          grid-template-columns: 1fr; } }
+    .sort--tickets-not-change .sort__items {
+      grid-template-columns: 610px 1fr 1fr;
+      grid-gap: 20px; }
+      @media (max-width: 1023px) {
+        .sort--tickets-not-change .sort__items {
+          grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 767px) {
+        .sort--tickets-not-change .sort__items {
+          grid-template-columns: 1fr; } }
+  .sort__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .sort__item {
+        justify-content: flex-start; } }
+    .sort__item--left {
+      justify-content: flex-start; }
+      @media (max-width: 1023px) {
+        .sort__item--left {
+          justify-content: center; } }
+      @media (max-width: 767px) {
+        .sort__item--left {
+          justify-content: flex-start; } }
+    @media (max-width: 1023px) {
+      .sort__item--no-sort {
+        display: none; } }
+  .sort__item-name {
+    font-size: 15px; }
+    @media (max-width: 767px) {
+      .sort__item-name {
+        font-size: 18px; } }
+  .sort__item-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-top: 2px; }
+  .sort__item-button {
+    width: 16px;
+    height: 25px;
+    position: relative;
+    cursor: pointer; }
+    @media (max-width: 767px) {
+      .sort__item-button {
+        width: 30px; } }
+    .sort__item-button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 6px;
+      background: url(../../../img/arrow.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+      @media (max-width: 767px) {
+        .sort__item-button:after {
+          width: 20px;
+          height: 12px; } }
+    .sort__item-button.active:after, .sort__item-button:hover:after {
+      transform: translate(-50%, -50%) scale(1.6); }
+    .sort__item-button--up:after {
+      transform: translate(-50%, -50%) rotate(180deg); }
+    .sort__item-button--up.active:after, .sort__item-button--up:hover:after {
+      transform: translate(-50%, -50%) scale(1.6) rotate(180deg); }

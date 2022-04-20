@@ -1,0 +1,58 @@
+
+	<a href="#" class="product-card {% if extended %}product-card_extended{% endif %}  {% if compare %}product-card_compare{% endif %}">
+		{% if deletable %}
+			<div class="product-card__delete"></div>
+		{% endif %}
+		<div class="product-card__inner">
+			{% if bages %}
+				<div class="product-card__badges">
+				    {% if bages == "red" %}
+				   		<div class="badge" style="background-color:#FFC125">Рассрочка 0-0-12</div>
+					{% endif %}
+				</div>
+			{% endif %}
+			{% if not compare %}
+			<label class="product-card_compare-control">
+				<input type="checkbox" data-entity="compare-checkbox">
+			</label>
+			{% endif %}
+			<div class="product-card__preview">
+				<img src="{{img}}">
+			</div>
+			<div class="product-card__title">
+				{{name}}
+			</div>
+			{% if not compare %}
+			<div class="product-card__rating">
+				<i class="rating-star"></i>
+				<i class="rating-star"></i>
+				<i class="rating-star"></i>
+				<i class="rating-star"></i>
+				<i class="rating-star rating-star_empty"></i>
+				<span class="rating__count">(2)</span>
+			</div>
+			{% endif %}
+			{% if not notSale %}
+				<div class="price-row price-row_in-card">
+					<span class="price-row__old-price">204 000 руб.</span>
+					<span class="price-row__current-price">190 990 руб.</span>
+					<span class="price-row__saving-diff">Экономия: 10 000 руб.</span>
+				</div>
+				{% else %}
+				<div class="price-row price-row_in-card">
+					<span class="price-row__current-price">190 990 руб.</span>
+				</div>
+			{% endif %}
+			<button class="buy-button buy-button_in-card">
+				<span class="buy-button__text">Купить</span>
+			</button>
+		</div>
+		{% if extended %}
+			<div class="product-card__bottom">
+				<div class="product-info">
+					<span>Доставка с 14.08.2017</span> 
+					<span>2500 бонусных балов</span> 
+				</div>
+			</div>
+		{% endif %}
+	</a>

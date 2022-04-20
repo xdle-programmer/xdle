@@ -1,0 +1,301 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.second {
+  margin-bottom: 130px;
+
+  @media #{$tablet-small-screen} {
+    margin-bottom: 80px;
+  }
+
+  &__title-block {
+    @include flex-row;
+  }
+
+  &__title {
+    font-size: 60px;
+    @include font-lucida;
+    font-weight: 700;
+    position: relative;
+    color: $magenta;
+    margin-bottom: 35px;
+    margin-right: auto;
+
+    &:after {
+      @include after-absolute;
+      bottom: -20px;
+      height: 3px;
+      width: 100%;
+      background: $gray;
+      left: 0;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 390px 1fr;
+    grid-gap: 30px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+    @include font-rubik;
+    font-size: 29px;
+    color: $gray;
+
+    @media #{$tablet-small-screen} {
+      font-size: 20px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+
+  }
+
+  &__video-inner {
+    width: 160px;
+    height: 90px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.29);
+    border-radius: 5px;
+    margin-left: auto;
+
+    & .video-js-custom-setting:not(.vjs-fullscreen) {
+      position: static !important;
+      background: none !important;
+
+      .vjs-tech {
+        width: 160px;
+        height: 90px;
+        left: auto;
+        right: 0;
+        border-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .vjs-poster {
+        width: 160px !important;
+        height: 90px !important;
+        left: auto !important;
+        right: 0 !important;
+        border-radius: 5px;
+        @include background-cover-center;
+      }
+
+      .vjs-control-bar {
+        display: block !important;
+        top: 0;
+        height: 0;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+
+      .vjs-play-control {
+        width: 46px;
+        height: 46px;
+        background: $magenta;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .vjs-big-play-button {
+        display: none;
+      }
+
+      .vjs-volume-panel {
+        display: none;
+      }
+
+      .vjs-progress-control {
+        min-width: 0;
+        width: calc(100% - 110px);
+        position: absolute;
+        left: 0;
+        top: 107px;
+      }
+
+      .vjs-progress-holder {
+        height: 5px;
+      }
+
+      .vjs-play-progress {
+        background: $magenta;
+        border-radius: 5px !important;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .vjs-load-progress {
+        background: #f3f3f7 !important;
+        border-radius: 5px !important;
+
+        div {
+          background: #f3f3f7 !important;
+          border-radius: 5px !important;
+        }
+      }
+
+      .vjs-time-control {
+        position: absolute;
+        top: 87px;
+        right: 50px;
+        color: #555567;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .vjs-fullscreen-control {
+        right: 0;
+        top: 101px;
+        background: url(../../../img/fullscreen.svg);
+        @include background-contain-center;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+      }
+
+      .vjs-play-control.vjs-control.vjs-button {
+        position: absolute;
+
+        span {
+          display: none;
+        }
+
+        &:before {
+          @include after-absolute;
+          width: 19px;
+          height: 25px;
+          background: url(../../../img/play-button.svg);
+          @include background-contain-center;
+          @include absolute-center;
+          left: 55%;
+          opacity: 1;
+        }
+
+        &:after {
+          @include after-absolute;
+          width: 17px;
+          height: 26px;
+          background: url(../../../img/pause-button.svg);
+          @include background-contain-center;
+          @include absolute-center;
+          opacity: 0;
+        }
+
+        &.vjs-paused:after {
+          opacity: 0;
+        }
+        &.vjs-paused:before {
+          opacity: 1;
+        }
+
+        &.vjs-playing:before {
+          opacity: 0;
+        }
+
+        &.vjs-playing:after {
+          opacity: 1;
+        }
+
+      }
+
+      .vjs-duration {
+        display: block;
+        position: absolute;
+        right: 10px;
+      }
+
+      .vjs-duration-display {
+        display: block;
+        color: #555567;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: normal;
+        position: absolute;
+        right: 12px;
+        top: 10px;
+      }
+
+      .vjs-remaining-time {
+        top: 97px;
+        line-height: normal;
+      }
+    }
+
+    & .video-js-custom-setting .vjs-play-control.vjs-playing .vjs-icon-placeholder:before, .vjs-icon-pause:before {
+      @include after-absolute;
+      content: '' !important;
+      width: 7px;
+      height: 7px;
+      @include absolute-center;
+      background: url(../../../img/play-button.svg);
+      @include background-contain-center;
+    }
+
+    & .video-js-custom-setting .vjs-big-play-button .vjs-icon-placeholder:before, .video-js .vjs-play-control .vjs-icon-placeholder:before, .vjs-icon-play:before {
+      @include after-absolute;
+      content: '' !important;
+      width: 7px;
+      height: 7px;
+      @include absolute-center;
+      background: url(../../../img/pause-button.svg);
+      @include background-contain-center;
+    }
+
+    & .video-js-custom-setting .vjs-volume-panel {
+      display: none;
+    }
+
+    & .video-js-custom-setting.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder:before, .vjs-icon-fullscreen-exit:before {
+      @include after-absolute;
+      content: '' !important;
+      @include absolute-center;
+      background: $white;
+      mask: url(../../../img/fullscreen.svg);
+      -webkit-mask: url(../../../img/fullscreen.svg);
+      @include mask-contain-center;
+      width: 12px;
+      height: 12px;
+    }
+
+  }
+
+  &__video-inner-author {
+    position: absolute;
+    left: 60px;
+    top: 7px;
+    font-size: 13px;
+
+    @media #{$tablet-small-screen} {
+      left: 0;
+      top: 55px;
+    }
+  }
+  &__video-inner-title {
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    font-weight: 500;
+    color: $magenta;
+
+    @media #{$tablet-small-screen} {
+      left: 0;
+      top: 74px;
+    }
+  }
+
+}

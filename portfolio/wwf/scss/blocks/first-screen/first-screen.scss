@@ -1,0 +1,210 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.first-screen {
+  height: 100vh;
+  @include flex-row-center;
+  background: linear-gradient(to bottom, #f7fbff, #bbd5ea);
+  position: relative;
+  overflow: hidden;
+
+  & * {
+    transition: opacity 1000ms ease-in, transform 150ms linear !important;
+  }
+
+  &:after {
+    @include after-absolute;
+    left: 0;
+    bottom: 0;
+    height: 20vw;
+    width: 100%;
+    background: url(../../../img/cloud.png);
+    background-size: 100% 100%;
+  }
+
+  &__block {
+    @include flex-column-center;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 24.3vw 24.3vw;
+    grid-gap: 5.5vw;
+    padding-right: 4vw;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+  }
+
+
+  &__img-block {
+    width: 100%;
+    height: 24.3vw;
+    position: relative;
+    opacity: 0;
+  }
+
+  &__img-block-planet {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mask: url(../../../img/circle.svg);
+    -webkit-mask: url(../../../img/circle.svg);
+    @include mask-contain-center;
+  }
+
+  &__img-start {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../../img/planet-start.jpg);
+    @include background-contain-center;
+    z-index: 1;
+  }
+
+  &__img-final {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../../img/planet-final.jpg);
+    @include background-contain-center;
+  }
+
+  &__img-sign {
+    top: 14vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../../img/first-sign.png);
+    @include background-contain-center;
+    z-index: 1;
+    opacity: 0;
+  }
+
+
+  &__img-cloud-start {
+    top: 14vh;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    left: -50%;
+    background: url(../../../img/cloud-start.png);
+    @include background-contain-center;
+  }
+
+  &__img-cloud-final {
+    top: 14vh;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    left: -50%;
+    background: url(../../../img/cloud-final.png);
+    @include background-contain-center;
+    opacity: 0;
+  }
+
+  &__desc {
+    max-width: 20vw;
+    transform: scale(1.1);
+  }
+
+  &__desc-title-1 {
+    font-size: 2.65vw;
+    line-height: 2.2vw;
+    opacity: 0;
+  }
+
+  &__desc-title-2 {
+    font-size: 3.6vw;
+    padding-bottom: 1vw;
+    @include flex-row;
+    opacity: 0;
+  }
+
+  &__desc-title-2-tag {
+    font-size: 5vw;
+    margin-top: -.6vw;
+  }
+
+  &__desc-title-2-text {
+    font-size: 3.6vw;
+  }
+
+  &__desc-title-3 {
+    font-size: 1.75vw;
+    padding-bottom: 1.7vw;
+    opacity: 0;
+  }
+
+  &__desc-title-4 {
+    @include font-open-sans('');
+    font-size: 1vw;
+    padding-bottom: 1vw;
+    opacity: 0;
+  }
+
+  &__footer {
+    padding-left: 1vw;
+    padding-top: .5vw;
+  }
+
+  &__footer-title {
+    font-size: 1.3vw;
+    padding-bottom: 2vw;
+  }
+
+  &__footer-button {
+    color: $white;
+    text-transform: uppercase;
+    background: #3086d4;
+    width: 11vw;
+    height: 2.4vw;
+    border-radius: 4px;
+    font-size: 1vw;
+    @include flex-row-center;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: .05vw;
+    padding-left: .5vw;
+    opacity: 0;
+
+    &:before {
+      @include after-absolute;
+      @include absolute-center;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      border: 1px solid $white;
+      border-radius: 2px;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      width: 1vw;
+      height: .9vw;
+      margin-top: .15vw;
+      margin-left: .3vw;
+      background: $white;
+      mask: url(../../../img/arrow.svg);
+      -webkit-mask: url(../../../img/arrow.svg);
+      @include mask-contain-center;
+    }
+
+    &:hover {
+      background: $white;
+      color: #3086d4;
+    }
+
+    &:hover:before {
+      border: 1px solid #3086d4;
+    }
+
+    &:hover:after {
+      background: #3086d4;
+    }
+  }
+
+}

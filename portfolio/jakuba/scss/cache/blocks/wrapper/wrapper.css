@@ -1,0 +1,34 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed; }
+  @media (max-width: 1279px) {
+    .wrapper,
+    .wrapper *,
+    .wrapper *:before,
+    .wrapper *:after {
+      transition: none !important; } }
+  @media (max-width: 1279px) {
+    .wrapper {
+      position: static;
+      overflow: visible; } }
+  .wrapper__inner {
+    width: 40000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 100vh; }
+    @media (max-width: 1279px) {
+      .wrapper__inner {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: visible; } }

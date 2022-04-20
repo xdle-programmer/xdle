@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Source+Code+Pro:wght@300&display=swap");
+body {
+  margin: 0;
+  background: #f5feff; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  transition: all .1s ease-out;
+  font-family: 'Montserrat', sans-serif; }
+
+.demo {
+  padding: 100px 20px 0; }
+  .demo__text-article {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 10px; }
+  .demo__form {
+    margin-bottom: 40px; }
+  .demo__subtitle-h2 {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 10px; }
+  .demo__subtitle-h3 {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 10px; }
+  .demo__input-wrapper {
+    height: 35px;
+    width: 250px;
+    margin-bottom: 20px;
+    position: relative; }
+  .demo__input {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #666666; }
+    .demo__input-wrapper--error .demo__input {
+      border: 1px solid #ff0000; }
+    .demo__input:focus {
+      outline: none; }
+  .demo__button {
+    height: 35px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #666666;
+    color: #fff; }
+    .demo__button:hover {
+      opacity: .7; }
+  .demo__error {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: fit-content;
+    height: 25px;
+    top: -31px;
+    left: 0;
+    border-radius: 2px;
+    padding: 0 15px;
+    font-size: 13px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ff0000; }
+    .demo__error:after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #ff0000 transparent transparent transparent; }
+    .demo__input-wrapper--error .demo__error {
+      opacity: 1;
+      visibility: visible; }
+  .demo__code-wrapper {
+    padding: 0 20px;
+    background: #2b2b2b;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 60px; }
+  .demo__code {
+    font-family: 'Source Code Pro', monospace;
+    color: #bababa; }
+
+
+/*# sourceMappingURL=/demo.b3443d18.css.map */

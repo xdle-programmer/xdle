@@ -1,0 +1,373 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.modern-form {
+  width: 580px;
+  @include margin-auto;
+  background: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+  border-radius: 3px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  &--application {
+    width: 400px;
+    box-shadow: none;
+    margin: 0;
+    background: #fafafa;
+  }
+
+  $application: '.modern-form--application';
+
+  &--wide {
+    width: 100% !important;
+  }
+
+  @media #{$mobile-big-screen} {
+    width: 100%;
+  }
+
+  &__inner {
+
+    display: none;
+    width: 100%;
+
+    &.active {
+      display: block;
+    }
+
+    #{$application} & {
+      @include flex-column-center;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: -20px;
+      display: none;
+
+      & .form__title {
+        text-align: center;
+      }
+
+      &.active {
+        display: flex;
+      }
+
+      @media #{$tablet-big-screen} {
+        padding: 20px 10px;
+      }
+    }
+
+  }
+
+  &__header {
+    padding: 10px 25px;
+    border-bottom: 1px solid #e7e7e7;
+    @include flex-row;
+    color: $blue;
+  }
+
+  &__button {
+    color: $blue;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .46px;
+    text-transform: uppercase;
+    margin-right: 30px;
+
+    &--not-active {
+      color: #9c9c9c;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 15px;
+    }
+  }
+
+
+  &__block {
+    padding: 30px 45px 0;
+
+    #{$application} & {
+      padding: 30px 0 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 20px 20px 0;
+
+      #{$application} & {
+        padding: 20px 0 0;
+      }
+    }
+  }
+
+  &__input-block {
+    width: 100%;
+    margin-bottom: 35px;
+    position: relative;
+
+    &--white {
+      background: $white;
+    }
+  }
+
+  &__input {
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    padding-left: 10px;
+  }
+
+  &__textarea {
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    height: 100px;
+    padding-left: 10px;
+  }
+
+  &__input-pass-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 15px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #7f7f7f;
+    cursor: pointer;
+    mask: url(../../../img/eye.svg);
+    -webkit-mask: url(../../../img/eye.svg);
+    @include mask-contain-center;
+  }
+
+  &__footer {
+    @include flex-column-center;
+    padding-bottom: 20px;
+  }
+
+  &__main-button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: $white;
+    background: $blue;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    min-height: 39px;
+    min-width: 140px;
+    position: relative;
+    overflow: hidden;
+
+    &.hide {
+      display: none;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      filter: grayscale(1);
+    }
+
+    &:active {
+      background: #0092e8;
+      filter: grayscale(.1);
+    }
+  }
+
+  &__natural-button {
+    font-size: 13px;
+    color: $blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__input-check-input {
+    display: none;
+  }
+
+
+  $checked: '.modern-form__input-check-input:checked';
+
+  &__input-check-label {
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+
+    #{$application} & {
+      text-align: left;
+    }
+
+    & a {
+      display: inline;
+    }
+
+    &:before {
+      @include after-absolute;
+      left: 0;
+      top: 0px;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid #e7e7e7;
+    }
+
+    &:after {
+      @include after-absolute;
+      left: 4px;
+      top: 3px;
+      width: 15px;
+      height: 13px;
+      background: #333333;
+      mask: url(../../../img/done_icon.svg);
+      -webkit-mask: url(../../../img/done_icon.svg);
+      @include mask-contain-center;
+      opacity: 0;
+    }
+
+
+    #{$checked} + &:after {
+      opacity: 1;
+    }
+  }
+
+  &__input-code-block {
+    width: 100%;
+    max-width: 250px;
+    @include margin-auto;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      max-width: 200px;
+    }
+  }
+
+  &__input-code-block-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    position: relative;
+    //overflow: hidden;
+
+    @media #{$tablet-big-screen} {
+      grid-gap: 10px;
+    }
+  }
+
+  &__input-code-block-row-hide-el {
+    position: absolute;
+    background: #fafafa;
+    width: 50px;
+    right: 0;
+    z-index: 5;
+    top: 0;
+    height: 100%;
+    transform: translateX(100%);
+
+  }
+
+  &__input-result {
+    //border: 1px solid green;
+    position: absolute;
+    @include absolute-fill;
+    width: calc(100% + 100px);
+    text-align: left !important;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 54px;
+    padding: 0 18px;
+
+    @media #{$tablet-big-screen} {
+      letter-spacing: 37px;
+      caret-color: transparent;
+    }
+  }
+
+
+  &__input-code {
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    color: #333;
+    font-size: 25px;
+    font-weight: 700;
+    height: 40px;
+    text-align: center;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+  }
+
+  &__small-title {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  &__small-desc {
+    text-align: center;
+    font-size: 12px;
+    color: #9c9c9c;
+  }
+
+  &__info {
+    padding: 25px 35px;
+    @include flex-column-center;
+  }
+
+  &__info-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+
+    &--error-red {
+      background: url(../../../img/modern-error-red.png);
+      @include background-contain-center;
+    }
+
+    &--error-orange {
+      background: url(../../../img/modern-error-orange.png);
+      @include background-contain-center;
+    }
+
+    &--success {
+      background: url(../../../img/modern-success.png);
+      @include background-contain-center;
+    }
+  }
+
+  &__main-title {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 5px;
+    color: $blue;
+    font-size: 20px;
+  }
+
+  &__info-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: $blue;
+    font-size: 20px;
+  }
+
+  &__info-text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,186 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.sort {
+  $offers: '.sort--offers';
+  $tickets: '.sort--tickets';
+  $tickets-with-offers: '.sort--tickets-with-offers';
+  $tickets-not-change: '.sort--tickets-not-change';
+
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+
+  @media #{$tablet-small-screen} {
+    padding: 10px;
+    position: relative;
+  }
+
+  &__button {
+    display: none !important;
+
+    @media #{$mobile-big-screen} {
+      display: flex !important;
+      width: 100%;
+    }
+  }
+
+  &__items {
+    display: grid;
+
+    @media #{$mobile-big-screen} {
+      grid-gap: 15px;
+      padding: 10px;
+      padding-top: 15px;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background: $white;
+      width: 100%;
+      overflow: hidden;
+      visibility: hidden;
+
+      &.active {
+        position: static;
+        height: 0;
+        overflow: hidden;
+        visibility: visible;
+      }
+    }
+
+    #{$offers} & {
+      grid-template-columns: 1fr 150px 150px;
+
+      @media #{$tablet-small-screen} {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media #{$mobile-big-screen} {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #{$tickets} & {
+      grid-template-columns: 680px 1fr;
+
+      @media #{$tablet-small-screen} {
+        grid-template-columns: 1fr;
+      }
+
+      @media #{$mobile-big-screen} {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #{$tickets-with-offers} & {
+      grid-template-columns: 610px 2fr 1fr 145px;
+      grid-gap: 20px;
+
+      @media #{$tablet-small-screen} {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media #{$mobile-big-screen} {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #{$tickets-not-change} & {
+      grid-template-columns: 610px 1fr 1fr;
+      grid-gap: 20px;
+
+      @media #{$tablet-small-screen} {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media #{$mobile-big-screen} {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__item {
+    @include flex-row-center;
+
+    @media #{$mobile-big-screen} {
+      justify-content: flex-start;
+    }
+
+    &--left {
+      justify-content: flex-start;
+
+      @media #{$tablet-small-screen} {
+        justify-content: center;
+      }
+
+      @media #{$mobile-big-screen} {
+        justify-content: flex-start;
+      }
+    }
+
+    &--no-sort {
+
+      @media #{$tablet-small-screen} {
+        display: none;
+      }
+    }
+  }
+
+  &__item-name {
+    font-size: 15px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 18px;
+    }
+  }
+
+  &__item-buttons {
+    @include flex-row;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+  &__item-button {
+    width: 16px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+
+    @media #{$mobile-big-screen} {
+      width: 30px;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 10px;
+      height: 6px;
+      background: url(../../../img/arrow.svg);
+      @include background-contain-center;
+
+      @media #{$mobile-big-screen} {
+        width: 20px;
+        height: 12px;
+      }
+    }
+
+    &.active:after,
+    &:hover:after {
+      transform: translate(-50%, -50%) scale(1.6);
+    }
+
+    &--up:after {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    &--up.active:after,
+    &--up:hover:after {
+      transform: translate(-50%, -50%) scale(1.6) rotate(180deg);
+    }
+  }
+
+}

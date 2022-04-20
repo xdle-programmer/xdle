@@ -1,0 +1,76 @@
+.sms-input__row {
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  position: relative;
+  margin-bottom: 20px; }
+  .sms-input__row:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 100%;
+    background: #ffffff;
+    right: -100px; }
+
+.sms-input__input-code {
+  border-radius: 3px;
+  border: 1px solid #e1e4e7;
+  width: 100%;
+  color: #333;
+  font-size: 25px;
+  font-weight: 700;
+  height: 40px;
+  text-align: center; }
+  .sms-input__input-code.focus {
+    border-color: #00adef; }
+  .sms-input__input-code::-webkit-outer-spin-button, .sms-input__input-code::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */ }
+
+.sms-input__input-result {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: calc(100% + 100px);
+  text-align: left;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 31px;
+  padding: 0 9px;
+  background: transparent; }
+
+.sms-input__counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 20px; }
+
+.sms-input__counter-button.active {
+  color: #00adef;
+  text-decoration: underline;
+  cursor: pointer; }
+
+.sms-input__counter-item {
+  margin-left: 5px; }
+
+.sms-input__submit {
+  width: 100%;
+  cursor: pointer; }
+  .sms-input__submit.hide {
+    display: none; }
+  .sms-input__submit .button {
+    width: 100%;
+    max-width: 100%; }
+
+.sms-input__wrapper.hide {
+  display: none; }

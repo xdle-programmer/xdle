@@ -1,0 +1,9 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Главная страница'
+
+block content
+    img(src='images/temp-header.jpg').temp-header-desc
+    img(src='images/temp-header-mob.jpg').temp-header-mob
+    include ../blocks/finder/finder

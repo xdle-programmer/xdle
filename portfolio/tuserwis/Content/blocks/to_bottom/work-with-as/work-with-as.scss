@@ -1,0 +1,47 @@
+﻿@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.work-with-as {
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    &__title
+
+{
+    width: 100%;
+    @include flex-row-center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+&__title-icon {
+    width: 50px;
+    height: 50px;
+    background: $blue;
+    &--workshop
+
+{
+    mask: url(../../../img/gear-blue.svg);
+    -webkit-mask: url(../../../img/gear-blue.svg);
+    @include mask-contain-center;
+}
+
+&--partner {
+    mask: url(../../../img/handshake.svg);
+    -webkit-mask: url(../../../img/handshake.svg);
+    @include mask-contain-center;
+}
+
+}
+
+&__title-text {
+    width: calc(100% - 70px);
+    font-size: 24px;
+}
+
+&__item {
+    font-size: 20px;
+    font-weight: 600;
+}
+}

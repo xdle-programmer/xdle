@@ -1,0 +1,62 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.city-list {
+  @include flex-row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &__item {
+    background: #f5f5f5;
+    width: calc(50% - 3px);
+    margin-bottom: 6px;
+    border-radius: 3px;
+    padding: 15px;
+    height: 130px;
+    @include flex-row;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+  &__item-photo {
+    width: 100px;
+    height: 100%;
+    @include background-cover-center;
+    border-radius: 3px;
+  }
+  &__item-desc {
+    width: calc(100% - 100px);
+    height: 100%;
+    @include flex-column;
+    padding-left: 20px;
+    justify-content: space-around;
+    color: #666;
+    font-weight: 300;
+    font-size: 13px;
+  }
+  &__item-name {
+    font-size: 17px;
+    color: #333;
+  }
+  &__item-address {
+    & span {
+      color: #333;
+      font-weight: 700;
+    }
+  }
+  &__item-phone {
+    & span {
+      color: #333;
+      font-weight: 700;
+    }
+  }
+  &__item-email {
+    & span {
+      color: #333;
+      font-weight: 700;
+    }
+  }
+}

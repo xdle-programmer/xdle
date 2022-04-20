@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    [[blocks/head.html*1]]
+    <title>Вакансия. Создание вакансии</title>
+</head>
+
+<body>
+
+<div class="wrapper wrapper--not-tools-menu">
+    [[blocks/header.html*1]]
+    [[blocks/tools-menu.html*1]]
+    [[blocks/tools-block.html*1]]
+
+    <div class="layout">
+        [[blocks/menu.html*1]]
+
+        <div class="layout__content">
+
+            <div class="layout__block layout__block--padding">
+                <div class="layout__block-header">
+                    <div class="layout__block-header-title layout__block-header-title--big layout__block-header-title--center">
+                        Создание вакансии
+                    </div>
+                </div>
+
+                <div class="layout__block-content">
+                    <div class="layout__block-content-title">
+                        Основные настройки
+                    </div>
+
+                    <div class="layout__block-content-inputs-wrapper">
+                        <div class="layout__block-content-inputs">
+                            <div class="layout__block-content-inputs-item">
+                                <input class="input" placeholder="Название должности">
+                            </div>
+                            <div class="layout__block-content-inputs-item">
+                                <textarea class="input input--big" placeholder="Описание вакансии"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout__block-content-inputs-wrapper switch">
+                        <div class="layout__block-content-inputs">
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                <div class="button-gradient button-gradient--small button-gradient--invert switch__button active"
+                                     data-switch-goal="person-creator">
+                                    От моего имени
+                                </div>
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                <div class="button-gradient button-gradient--small button-gradient--invert switch__button"
+                                     data-switch-goal="company-creator">
+                                    От имени компания
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="switch__items">
+
+                        <div class="switch__item" data-switch-desktop="company-creator"
+                             data-switch-mobile="company-creator">
+                            <div class="layout__block-content-inputs-wrapper">
+                                <div class="layout__block-content-inputs">
+                                    <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                        <select class="select">
+                                            <option>Выберите компанию</option>
+                                            <option>Вариант 1</option>
+                                            <option>Вариант 2</option>
+                                            <option>Вариант 3</option>
+                                            <option>Вариант 4</option>
+                                            <option>Вариант 5</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                        <select class="select">
+                                            <option>Выберите сотрудника</option>
+                                            <option>Вариант 1</option>
+                                            <option>Вариант 2</option>
+                                            <option>Вариант 3</option>
+                                            <option>Вариант 4</option>
+                                            <option>Вариант 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="switch__item hide" data-switch-desktop="person-creator"
+                             data-switch-mobile="person-creator">
+                            <div class="layout__block-content-inputs-wrapper">
+                                <div class="layout__block-content-inputs">
+                                    <div class="layout__block-content-inputs-item">
+                                        <input class="input" placeholder="ФИО">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="layout__block-content-title">
+                        Географическое расположение
+                    </div>
+
+                    <div class="layout__block-content-inputs-wrapper">
+                        <div class="layout__block-content-inputs">
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                <select class="select">
+                                    <option>Выберите страну</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                <select class="select">
+                                    <option>Выберите город</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <input class="input" placeholder="Телефон">
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <input class="input" placeholder="E-mail">
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <input class="input" placeholder="Skype">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout__block-content-title">
+                        Профессиональная область
+                    </div>
+
+                    <div class="layout__block-content-inputs-wrapper">
+                        <div class="layout__block-content-inputs">
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                <select class="select">
+                                    <option>Выберите отрасль</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-2">
+                                <select class="select">
+                                    <option>Образование</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout__block-content-title">
+                        Заработная плата
+                    </div>
+
+                    <div class="layout__block-content-inputs-wrapper">
+                        <div class="layout__block-content-inputs">
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <input class="input" placeholder="От">
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <input class="input" placeholder="До">
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <select class="select">
+                                    <option>Валюта</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout__block-content-title">
+                        Ключевые навыки
+                    </div>
+
+                    <div class="layout__block-content-inputs-wrapper">
+                        <div class="layout__block-content-inputs">
+                            <div class="layout__block-content-inputs-item">
+                                <input class="input" placeholder="Перечислите через запятую">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout__block-content-title">
+                        Дополонительно
+                    </div>
+
+                    <div class="layout__block-content-inputs-wrapper">
+                        <div class="layout__block-content-inputs">
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <select class="select">
+                                    <option>Опыт работы</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <select class="select">
+                                    <option>Занятость</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+
+                            <div class="layout__block-content-inputs-item layout__block-content-inputs-item--1-3">
+                                <select class="select">
+                                    <option>График работы</option>
+                                    <option>Вариант 1</option>
+                                    <option>Вариант 2</option>
+                                    <option>Вариант 3</option>
+                                    <option>Вариант 4</option>
+                                    <option>Вариант 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="layout__block-content-buttons">
+                        <div class="button-gradient">Создать вакансию</div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+[[blocks/footer.html*1]]
+</body>
+</html>

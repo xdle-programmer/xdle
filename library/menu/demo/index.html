@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Меню</title>
+</head>
+<body>
+<link rel="stylesheet" href="../dist/style.css">
+<link rel="stylesheet" href="demo.css">
+
+
+<div class="demo">
+
+    <h1 class="demo__title">Меню</h1>
+    <div class="demo__text-article">
+        <a href="https://www.npmjs.com/package/single-menu" class="demo__subtitle-h3">https://www.npmjs.com/package/single-menu</a>
+        <h3 class="demo__subtitle-h3">npm i single-menu</h3>
+    </div>
+
+    <h2 class="demo__subtitle-h2">Пример меню</h2>
+
+    <div class="demo__menu">
+        <div class="menu">
+            <div
+                    data-menu-target="menu"
+                    data-button-active-class="menu__button--open"
+                    class="menu__button">
+                Открыть меню с фоном
+            </div>
+            <div
+                    data-menu-id="menu"
+                    data-menu-active-class="menu__list--open"
+                    data-background-selector=".menu__background"
+                    data-background-active-class="menu__background--open"
+                    class="menu__list">
+                Содержимое меню
+            </div>
+            <div class="menu__background"></div>
+        </div>
+    </div>
+
+    <h2 class="demo__subtitle-h2">Использование</h2>
+    <div class="demo__text">
+        <p class="demo__text-article">Для подключения нужно создать инстанс класса Menu и задать атрибуты кнопкам и меню</p>
+        <p class="demo__text-article">Атрибуты кнопок data-menu-target="###" и data-button-active-class="###"</p>
+        <p class="demo__text-article">Атрибуты меню data-menu-id="###", и data-menu-active-class="###"</p>
+        <p class="demo__text-article">Необязательные атрибуты меню, для переключения фона под меню data-background-selector="###", и data-background-active-class="###"</p>
+
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+window.menu = new Menu();
+            </code>
+        </pre>
+        </div>
+        <p class="demo__text-article">Scss структура для классов по умолчанию</p>
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+.menu {
+  position: relative;
+  width: fit-content;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 0 15px;
+    height: 40px;
+    position: relative;
+    background: #fff;
+    z-index: 100;
+    border-radius: 5px;
+    border: 1px solid;
+    text-align: center;
+    border-color: #c1c1c1;
+    width: 300px;
+    cursor: pointer;
+
+    &--open {
+      background: #c1c1c1;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 0 15px;
+    height: 100px;
+    background: #fff;
+    z-index: 100;
+    border-radius: 5px;
+    border: 1px solid;
+    text-align: center;
+    border-color: #c1c1c1;
+    width: 300px;
+    left: calc(100% + 20px);
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
+    }
+  }
+
+  &__background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .2);
+    opacity: 0;
+    visibility: hidden;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+}
+
+
+            </code>
+        </pre>
+        </div>
+        <p class="demo__text-article">Html структура</p>
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+&lt;div
+                    data-menu-target=&quot;menu&quot;
+                    data-button-active-class=&quot;menu__button--open&quot;
+                    class=&quot;menu__button&quot;&gt;
+                Открыть меню с фоном
+            &lt;/div&gt;
+            &lt;div
+                    data-menu-id=&quot;menu&quot;
+                    data-menu-active-class=&quot;menu__list--open&quot;
+                    data-background-selector=&quot;.menu__background&quot;
+                    data-background-active-class=&quot;menu__background--open&quot;
+                    class=&quot;menu__list&quot;&gt;
+                Содержимое меню
+            &lt;/div&gt;
+            &lt;div class=&quot;menu__background&quot;&gt;&lt;/div&gt;
+            </code>
+        </pre>
+        </div>
+    </div>
+</div>
+
+
+<script src="../dist/script.js"></script>
+<script src="bundle/demo.js"></script>
+</body>
+</html>

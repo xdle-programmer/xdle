@@ -1,0 +1,32 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  border: 1px solid #000;
+  background: #000;
+  display: inline-block;
+  padding: 15px 55px;
+  border-radius: 1px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+
+  &:hover {
+    border: 1px solid $green;
+    background: $green;
+  }
+
+  &--green {
+    border: 1px solid $green;
+    background: $green;
+
+    &:hover {
+      background: #262626;
+    }
+  }
+
+
+}

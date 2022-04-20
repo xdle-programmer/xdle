@@ -1,0 +1,81 @@
+.checkbox {
+  position: relative;
+  flex-grow: 1;
+  margin-right: 15px; }
+  @media (max-width: 1279px) {
+    .checkbox {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%; } }
+  .checkbox:nth-last-of-type(1) {
+    margin-right: 0; }
+  .checkbox.focus .warning.active {
+    opacity: 0;
+    visibility: hidden; }
+  .checkbox.focus .placeholder {
+    opacity: 1;
+    visibility: visible; }
+  .checkbox__item {
+    position: relative;
+    margin-bottom: 10px; }
+  .checkbox__item-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1; }
+  .checkbox__item-label {
+    height: 48px;
+    display: inline-block;
+    padding-left: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222332;
+    width: 100%;
+    line-height: 20px; }
+    .checkbox__item-label a {
+      color: #1d519d;
+      display: inline;
+      text-decoration: underline; }
+    @media (max-width: 1279px) {
+      .checkbox__item-label {
+        width: 100%; } }
+    .checkbox__item-label:hover,
+    .checkbox__item-input:checked + .checkbox__item-label {
+      background: #ffffff;
+      color: #000000; }
+    .checkbox__item-label:before, .checkbox__item-label:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 0;
+      border: 1px solid transparent;
+      border-radius: 2px; }
+    .checkbox__item-label:before {
+      border-color: #222332; }
+    .error .checkbox__item-label:before {
+      border-color: #ef728a; }
+    .checkbox__item-label:after {
+      left: 3px;
+      top: 3px;
+      width: 14px;
+      height: 14px;
+      background: url(../../../img/icons/check.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      opacity: 0; }
+    .checkbox__item-input:checked + .checkbox__item-label:before {
+      border-color: #5dbafd;
+      background: #5dbafd; }
+    .checkbox__item-input:checked + .checkbox__item-label:after {
+      opacity: 1; }
+  .checkbox .warning {
+    display: none; }

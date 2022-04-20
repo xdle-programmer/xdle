@@ -1,0 +1,39 @@
+<script>
+    var device;
+    var touch;
+    var apple;
+    if (navigator.userAgent.toUpperCase().indexOf('android'.toUpperCase()) + 1) {
+        device = 'android'
+    } else if (navigator.userAgent.toUpperCase().indexOf('iphone'.toUpperCase()) + 1) {
+        device = 'iphone';
+    } else if (navigator.userAgent.toUpperCase().indexOf('ipad'.toUpperCase()) + 1) {
+        device = 'ipad';
+    } else if (navigator.userAgent.toUpperCase().indexOf('macintosh'.toUpperCase()) + 1) {
+        device = 'macintosh';
+    } else if (navigator.userAgent.toUpperCase().indexOf('windows'.toUpperCase()) + 1) {
+        device = 'windows';
+    } else {
+        device = 'windows';
+    }
+
+
+    if (device === 'iphone' || device === 'ipad' || device === 'android') {
+        document.getElementsByTagName('body')[0].setAttribute('class', 'touch-device');
+        touch = true;
+        apple = true;
+    }
+</script>
+
+
+
+<footer class="footer">
+    ДВИЖPARTY - Будь в теме Мы делаем Движ © 2018
+</footer>
+
+<!--<link rel="preload" href="/scss/styles/styles.css" as="style" onload="this.rel='stylesheet'">-->
+<!--<link rel="preload" href="/scss/styles/styles_to_head.css" as="style" onload="this.rel='stylesheet'">-->
+<!--<link rel="preload" href="/plugins/owlcarousel2/assets/owl.carousel.min.css" as="style" onload="this.rel='stylesheet'">-->
+<!--<link rel="preload" href="/plugins/owlcarousel2/assets/owl.theme.default.min.css" as="style" onload="this.rel='stylesheet'">-->
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src="/plugins/owlcarousel2/owl.carousel.min.js"></script>
+<script defer src="/js/script.js"></script>

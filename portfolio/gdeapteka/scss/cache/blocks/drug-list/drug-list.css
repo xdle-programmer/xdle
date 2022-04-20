@@ -1,0 +1,82 @@
+.drug-list__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 15px 25px; }
+  .drug-list__item:nth-of-type(1) {
+    border-top: 1px solid #f2f2f2; }
+  .drug-list__item:nth-of-type(odd) {
+    background: #e5f5ff; }
+  @media (max-width: 1900px) {
+    .drug-list__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; } }
+
+.drug-list__item-name {
+  width: 30%;
+  font-size: 20px;
+  font-weight: 500; }
+  @media (max-width: 1900px) {
+    .drug-list__item-name {
+      margin-bottom: 10px;
+      width: 100%; } }
+
+.drug-list__item-offers {
+  width: 70%; }
+  @media (max-width: 1900px) {
+    .drug-list__item-offers {
+      width: 100%; } }
+
+.drug-list__item-offers-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px; }
+  .drug-list__item-offers-item:nth-last-of-type(1) {
+    margin-bottom: 0; }
+  @media (max-width: 767px) {
+    .drug-list__item-offers-item {
+      grid-template-columns: 1fr;
+      grid-gap: 5px;
+      padding-top: 7px;
+      margin-top: 7px;
+      border-top: 1px solid #afe0ff; } }
+
+.drug-list__item-offers-item-link {
+  text-decoration: underline;
+  cursor: pointer; }
+  @media (max-width: 767px) {
+    .drug-list__item-offers-item-link {
+      font-size: 14px; } }
+
+.drug-list__item-offers-item-favorite {
+  color: #2b97df;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer; }
+  .drug-list__item-offers-item-favorite:before {
+    width: 18px;
+    height: 17px;
+    display: block;
+    content: '';
+    background: #2b97df;
+    margin-right: 10px;
+    mask: url(../../../img/icon-favorite.svg);
+    -webkit-mask: url(../../../img/icon-favorite.svg);
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center center !important;
+    -webkit-mask-position: center center !important;
+    mask-size: contain !important;
+    -webkit-mask-size: contain !important; }

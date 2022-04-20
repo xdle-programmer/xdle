@@ -1,0 +1,131 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-offers {
+  background-color: rgba(29, 81, 157, 0.05);
+  padding-top: 50px;
+  padding-bottom: 45px;
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__column {
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    background: $white;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    grid-gap: 25px;
+    border-radius: 4px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  &__item-img-block {
+    width: 128px;
+    height: 128px;
+    @include flex-row-center;
+
+    @media #{$tablet-big-screen} {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    object-fit: contain;
+  }
+
+  &__item-list {
+  }
+
+  &__item-list-title {
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.78;
+    letter-spacing: normal;
+    color: #222332;
+    margin-bottom: 10px;
+  }
+
+  &__item-list-items {
+    margin-bottom: 26px;
+  }
+
+  &__item-list-item {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #5dbafd;
+    margin-bottom: 8px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item-list-item-count {
+    color: rgba(34, 35, 50, 0.3);
+    margin-left: 10px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  &__item-list-link {
+    height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5dbafd;
+    border: 1px solid #5dbafd;
+    @include flex-row-center;
+    width: fit-content;
+    padding: 0 26px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background: #5dbafd;
+      color: $white;
+    }
+
+  }
+
+
+
+
+}

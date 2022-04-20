@@ -1,0 +1,25 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.bill {
+  font-size: 14px;
+  font-weight: 400;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+
+    &--result {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__name {
+  }
+
+  &__price {
+    white-space: nowrap;
+  }
+}

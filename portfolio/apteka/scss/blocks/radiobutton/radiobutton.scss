@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.radiobutton {
+  position: relative;
+  margin-bottom: 10px;
+
+  &__input {
+    position: absolute;
+    @include absolute-fill;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  $checked: '.radiobutton__input:checked';
+  $focus: '.radiobutton__input:focus';
+
+  &__label {
+    cursor: pointer;
+    padding-left: 25px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid transparent;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    &:before {
+      border-color: #cccccc;
+      background: $white;
+    }
+
+    &:after {
+      opacity: 0;
+      width: 13px;
+      height: 13px;
+      left: 0px;
+      //border: 3px solid $red;
+    }
+
+    #{$checked} + &:after {
+      opacity: 1;
+    }
+  }
+
+}

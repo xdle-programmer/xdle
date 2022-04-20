@@ -1,0 +1,56 @@
+{% include "partials/header.html" %}
+<div class="land-gallery">
+    <div class="container land-gallery__container">
+        {% for i in 0..13 %}
+            <div class="land-gallery__item"
+                data-desktop-src="img/landing/desktop/slide{{ i }}.jpg"
+                data-mobile-src="img/landing/mobile/slide{{ i }}.jpg"
+            >
+                <img src="img/stub.gif" alt="" class="">
+            </div>
+        {% endfor %}
+    </div>
+    <div class="land-gallery__form-wrap container land-gallery__container land-gallery__desktop-view">
+        <div class="preorder-form">
+            <div class="preorder-form__title">
+                Скидка 10% за предзаказ
+            </div>
+            <input type="text" name="" class="regular-input valid-email" placeholder="Имя" required>
+            <input type="text" name="" class="regular-input valid-email" placeholder="Email" required>
+            <input type="text" name="" class="regular-input valid-email" placeholder="Телефон" required>
+            <div class="button button_height button_dark">Оставить предзакз</div>
+            <a href="#" class="preorder-form__link">Перейти в карточку товара</a>
+        </div>
+    </div>
+    <div class="land-gallery__plate land-gallery__mobile-view">
+        <div class="container land-gallery__container">
+            <div class="button land-gallery__button" data-popup="popup_preorder">
+                Оставить предзаказ
+            </div>
+            <a href="#" class="button land-gallery__button">
+                Карточка товара
+            </a>
+        </div>
+    </div>
+</div>
+<div class="popup popup_preorder" >
+    <div class="popup__block preorder-form">
+        <div class="close-popup close-popup_white">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="preorder-form__title">
+            Скидка 10% за предзаказ
+        </div>
+        <input type="text" name="" class="regular-input valid-email" placeholder="Имя" required>
+        <input type="text" name="" class="regular-input valid-email" placeholder="Email" required>
+        <input type="text" name="" class="regular-input valid-email" placeholder="Телефон" required>
+        <div class="button button_height button_dark">Оставить предзакз</div>
+        <a href="#" class="preorder-form__link">Перейти в карточку товара</a>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/plugins-min.js"></script>
+<script src="js/main-min.js"></script>
+</div> <!-- закрытие div.page из header -->
+</body>
+</html>

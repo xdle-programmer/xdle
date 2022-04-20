@@ -1,0 +1,177 @@
+.phone {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .phone--contacts {
+    justify-content: flex-start;
+    width: fit-content;
+    width: -moz-fit-content; }
+  @media (max-width: 1279px) {
+    .phone--header {
+      width: 100%; } }
+  .phone__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 1279px) {
+      .phone--header .phone__button {
+        flex-wrap: wrap;
+        width: 100%; }
+        .phone--header .phone__button:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 15px;
+          height: 15px;
+          top: 26px;
+          right: 15px;
+          background: #333333;
+          mask: url(../../../img/arrow-left.svg);
+          -webkit-mask: url(../../../img/arrow-left.svg);
+          mask-repeat: no-repeat !important;
+          -webkit-mask-repeat: no-repeat !important;
+          mask-position: center center !important;
+          -webkit-mask-position: center center !important;
+          mask-size: contain !important;
+          -webkit-mask-size: contain !important;
+          margin-right: 0;
+          transform: translateY(-50%) rotate(-180deg); }
+        .phone--header .phone__button.active:after {
+          transform: translateY(-50%) rotate(-90deg); } }
+  .phone__icon {
+    width: 23px;
+    height: 20px;
+    padding-left: 9px;
+    position: relative; }
+    .phone__icon:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #ca1626;
+      width: 14px;
+      height: 8px;
+      left: 9px;
+      top: 6px;
+      mask: url(../../../img/arrow-down.svg);
+      -webkit-mask: url(../../../img/arrow-down.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    @media (max-width: 1279px) {
+      .phone--header .phone__icon {
+        display: none; } }
+  .phone__link {
+    font-size: 23px;
+    font-weight: 900;
+    color: #333333; }
+    .phone__link:hover {
+      color: #ca1626; }
+    @media (max-width: 1279px) {
+      .phone--header .phone__link {
+        background: #fafafa;
+        margin: 0;
+        height: 51px;
+        color: #333333;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-items: center;
+        width: 100%; } }
+  .phone__submenu {
+    position: absolute;
+    top: 100%;
+    right: -19px;
+    width: calc(100% + 55px);
+    z-index: 4;
+    padding-top: 25px;
+    opacity: 0;
+    visibility: hidden; }
+    .phone:hover .phone__submenu {
+      opacity: 1;
+      visibility: visible; }
+    .phone--bottom .phone__submenu {
+      top: auto;
+      bottom: 100%;
+      padding-bottom: 25px; }
+    .phone--contacts .phone__submenu {
+      padding-top: 15px; }
+    @media (max-width: 1279px) {
+      .phone--header .phone__submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        width: 100%;
+        padding: 0; }
+        .phone--header .phone__submenu.active {
+          display: block; } }
+  .phone__submenu-block {
+    background: #ffffff;
+    padding: 15px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-right: 0;
+    position: relative; }
+    .phone__submenu-block:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 18px;
+      transform: translateY(-100%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 10px 8px;
+      border-color: transparent transparent #ffffff transparent; }
+      .phone--bottom .phone__submenu-block:after {
+        top: auto;
+        bottom: 0;
+        transform: translateY(100%);
+        border-width: 10px 8px 0 8px;
+        border-color: #ffffff transparent transparent transparent; }
+    @media (max-width: 1279px) {
+      .phone--header .phone__submenu-block {
+        background: none;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0; } }
+  .phone__submenu-link {
+    color: #333333;
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0.23px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start; }
+    .phone__submenu-link:hover {
+      color: #ca1626; }
+    @media (max-width: 1279px) {
+      .phone--header .phone__submenu-link {
+        min-height: 51px;
+        border-top: 1px solid #e6e6e6;
+        justify-content: flex-start;
+        background: #fafafa;
+        padding: 0 15px; } }
+  .phone__submenu-link-item {
+    width: fit-content;
+    width: -moz-fit-content; }
+  .phone__submenu-link-icon {
+    width: 45px; }
+    .phone__submenu-link-icon--whathsap {
+      background: url(../../../img/whatsapp.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      height: 18px; }

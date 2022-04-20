@@ -1,0 +1,87 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.second {
+  padding-top: 138px;
+  padding-bottom: 184px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 30px;
+    padding-bottom: 120px;
+  }
+
+  &__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 21px;
+    padding-top: 103px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      padding-top: 70px;
+
+    }
+  }
+
+  &__item {
+  }
+
+  &__item-header {
+    background: $yellow;
+    position: relative;
+    @include flex-row;
+    width: 100%;
+    align-items: center;
+    height: 157px;
+    padding-left: 17px;
+    padding-right: 100px;
+  }
+
+  &__item-title {
+    @include font-intro-reg;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 44px;
+  }
+
+  &__item-icon {
+    position: absolute;
+
+    &--1 {
+      width: 142px;
+      height: 226px;
+      background: url(../../../img/second-icon-1.png);
+      @include background-contain-center;
+      right: -5px;
+      top: -53px;
+    }
+
+    &--2 {
+      width: 195px;
+      height: 131px;
+      background: url(../../../img/second-icon-2.png);
+      @include background-contain-center;
+      right: -14px;
+      top: 40px;
+    }
+
+    &--3 {
+      width: 237px;
+      height: 226px;
+      background: url(../../../img/second-icon-3.png);
+      @include background-contain-center;
+      right: -53px;
+      top: -66px;
+    }
+
+  }
+
+  &__item-text {
+    font-size: 20px;
+    line-height: 32px;
+    padding: 27px 15px;
+  }
+
+}

@@ -1,0 +1,357 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.left-menu {
+  width: 230px;
+
+  @media #{$tablet-small-screen} {
+
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+
+    &--mobile-bottom {
+      order: 2;
+    }
+
+  }
+
+  @media #{$mobile-big-screen} {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background: #f1f1f1;
+    border-radius: 3px;
+    overflow: hidden;
+    color: #333333;
+    border: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+
+    @media #{$tablet-small-screen} {
+      width: 32%;
+
+      &--catalog {
+        position: absolute;
+        top: -23px;
+        left: -30px;
+        width: calc(100% + 60px);
+        height: 38px;
+        padding: 0 30px;
+        background: #e7e7e7;
+        @include flex-row;
+        overflow: visible;
+        border-radius: 0;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+
+      &--catalog {
+        left: -10px;
+        width: calc(100% + 20px);
+        padding: 0 10px;
+      }
+    }
+
+  }
+
+  $catalog: '.left-menu__item--catalog';
+
+  &__natural-link {
+    display: none;
+
+    @media #{$tablet-small-screen} {
+      #{$catalog} & {
+        width: 25%;
+        height: 36px;
+        @include flex-row-center;
+        background: #e7e7e7;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      #{$catalog} & {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    height: 36px;
+    width: 100%;
+    @include flex-row-center;
+    justify-content: left;
+    padding: 0 14px;
+    background: #e7e7e7;
+    font-weight: 300;
+    font-size: 14px;
+
+    @media #{$tablet-small-screen} {
+      #{$catalog} & {
+        width: 25%;
+        justify-content: center;
+        padding: 0;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      #{$catalog} & {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    @media #{$tablet-small-screen} {
+      #{$catalog} & {
+        width: 29%;
+        position: absolute;
+        top: 100%;
+        background: #e7e7e7;
+        left: 18px;
+        display: none;
+        z-index: 10;
+      }
+
+      #{$catalog} .left-menu__title.active + & {
+        display: block;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      #{$catalog} & {
+        width: calc(100% + 2px);
+        left: -1px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 8px 14px;
+    font-size: 13px;
+    position: relative;
+    z-index: 1;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      z-index: -1;
+    }
+
+    &:after {
+      background: #37a7cc;
+      opacity: 0;
+    }
+    &:hover:before {
+      opacity: 0;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+
+    &--faq {
+      border-bottom: 1px solid #e9e9e9;
+    }
+
+    &--faq:before {
+      background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    @media #{$tablet-small-screen} {
+      #{$catalog} & {
+        padding-left: 37px;
+      }
+    }
+  }
+
+  &__sert {
+    @include flex-row;
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+
+  &__sert-img {
+    cursor: pointer;
+    display: block;
+  }
+
+  &__more-link {
+    @include button-angle-left;
+  }
+
+  $order: '.left-menu__order';
+
+  &__order {
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+    background: #f1f1f1;
+    font-weight: 300;
+    margin-bottom: 30px;
+
+    @media #{$tablet-small-screen} {
+      width: 50%;
+      position: relative;
+    }
+
+    @media #{$mobile-big-screen} {
+      position: static;
+    }
+
+  }
+
+  &__order-header {
+    background: #e7e7e7;
+    @include flex-row-center;
+    justify-content: space-between;
+    padding: 12px;
+
+    @media #{$tablet-small-screen} {
+      #{$order}.active & {
+        background: #3aaed2;
+        color: #fff;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      padding: 6px 12px;
+      height: 45px;
+    }
+
+  }
+
+  &__order-title {
+    font-size: 15px;
+    font-weight: 300;
+    color: #333;
+    @include flex-row;
+
+    span {
+      display: none;
+    }
+
+    @media #{$tablet-small-screen} {
+
+      span {
+        display: block;
+
+        #{$order}.active & {
+          color: #fff;
+        }
+      }
+
+      #{$order}.active & {
+        color: #fff;
+      }
+    }
+  }
+
+  &__order-change {
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+
+    @media #{$tablet-small-screen} {
+
+      #{$order}.active & {
+        color: #fff;
+      }
+    }
+  }
+
+  &__order-block {
+    @media #{$tablet-small-screen} {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 285px;
+      background: #e7e7e7;
+      z-index: 10;
+
+      #{$order} & {
+        display: none;
+      }
+
+      #{$order}.active & {
+        display: block;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      top: 45px;
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__content-row {
+    font-size: 14px;
+    @include flex-row;
+    width: 100%;
+    padding: 6px 12px;
+  }
+
+  &__content-row-half {
+    width: 50%;
+  }
+
+  &__footer {
+    border-top: 1px solid #e7e7e7;
+    font-weight: 700;
+    padding: 8px 0;
+  }
+
+  &__content-order {
+    padding: 0 12px;
+    margin-bottom: 15px;
+  }
+
+  &__order-item {
+  }
+
+  &__order-item-header {
+    @include flex-row;
+    line-height: 1.6;
+  }
+
+  &__order-item-header-name {
+    width: calc(100% - 60px);
+    font-size: 14px;
+    color: #333;
+    padding-right: 10px;
+  }
+
+  &__order-item-header-photo {
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    border: 1px solid #cecece;
+    @include background-contain-center;
+  }
+
+  &__order-item-text {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+
+  &__order-item-price {
+    font-size: 14px;
+    color: #333;
+  }
+
+}

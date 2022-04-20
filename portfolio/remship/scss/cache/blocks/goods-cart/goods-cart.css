@@ -1,0 +1,190 @@
+.goods-cart__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+  background: linear-gradient(to bottom, #ffffff, #e8e8e8);
+  padding: 7px; }
+
+.goods-cart__preview {
+  width: 270px;
+  height: 100%;
+  border: 2px solid #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #ffffff; }
+
+.goods-cart__preview-big {
+  width: 100%;
+  height: 180px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important; }
+
+.goods-cart__preview-slider {
+  width: 100%;
+  border-top: 1px solid #dfdfdf; }
+
+.goods-cart__preview-slider-item {
+  height: 80px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  position: relative; }
+  .goods-cart__preview-slider-item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: -2px;
+    background: #dfdfdf; }
+
+.goods-cart__desc {
+  width: calc(100% - 270px);
+  padding: 20px;
+  padding-right: 50px; }
+
+.goods-cart__desc-code {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6c6c6c;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.goods-cart__desc-name {
+  color: #333333;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 15px; }
+
+.goods-cart__desc-natural {
+  color: #999999;
+  font-size: 10px;
+  font-weight: 300;
+  margin-bottom: 15px; }
+
+.goods-cart__desc-price-block {
+  margin-bottom: 15px; }
+
+.goods-cart__desc-price-name {
+  font-size: 12px;
+  color: #6c6c6c;
+  font-weight: 300; }
+
+.goods-cart__desc-price-value {
+  font-size: 17px;
+  color: #333333; }
+
+.goods-cart__desc-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.goods-cart__desc-counter-block {
+  height: 30px;
+  background: #d5d5d5;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 95px; }
+
+.goods-cart__desc-counter {
+  margin: 0; }
+
+.goods-cart__desc-button {
+  margin-left: 10px;
+  height: 30px;
+  background: linear-gradient(to bottom, #3aaed2, #2f98b9);
+  border: 1px solid #2e97b8;
+  border-radius: 3px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  cursor: pointer; }
+
+.goods-cart__tabs {
+  margin: 30px 0; }
+
+.goods-cart__tabs-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  background: #f4f4f4; }
+
+.goods-cart__tabs-name {
+  height: 30px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #5d5d5d;
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 10px;
+  border: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  cursor: pointer; }
+  .goods-cart__tabs-name.active {
+    border: 1px solid #bababa;
+    background: linear-gradient(to bottom, #f0f0f0, #dadada);
+    color: #000; }
+
+.goods-cart__tabs-item {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 15px;
+  width: 100%;
+  background: linear-gradient(to bottom, #f3f3f3, #fff);
+  display: none; }
+  .goods-cart__tabs-item.active {
+    display: block; }
+
+.goods-cart__related-name {
+  position: relative;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  cursor: default;
+  z-index: 1;
+  padding-right: 20px;
+  padding-left: 10px;
+  color: #5d5d5d;
+  font-size: 13px;
+  font-weight: 700; }
+  .goods-cart__related-name:before, .goods-cart__related-name:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleX(-1);
+    z-index: -1; }
+  .goods-cart__related-name:before {
+    background: url(../../img/angle-gray.png);
+    background-size: 294px 30px;
+    opacity: 1; }

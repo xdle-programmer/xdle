@@ -1,0 +1,291 @@
+.modern-form {
+  width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+  border-radius: 3px;
+  margin-top: 50px;
+  margin-bottom: 30px; }
+  .modern-form--application {
+    width: 400px;
+    box-shadow: none;
+    margin: 0;
+    background: #fafafa; }
+  .modern-form--wide {
+    width: 100% !important; }
+  @media (max-width: 767px) {
+    .modern-form {
+      width: 100%; } }
+  .modern-form__inner {
+    display: none;
+    width: 100%; }
+    .modern-form__inner.active {
+      display: block; }
+    .modern-form--application .modern-form__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: -20px;
+      display: none; }
+      .modern-form--application .modern-form__inner .form__title {
+        text-align: center; }
+      .modern-form--application .modern-form__inner.active {
+        display: flex; }
+      @media (max-width: 1279px) {
+        .modern-form--application .modern-form__inner {
+          padding: 20px 10px; } }
+  .modern-form__header {
+    padding: 10px 25px;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #0092E8; }
+  .modern-form__button {
+    color: #0092E8;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .46px;
+    text-transform: uppercase;
+    margin-right: 30px; }
+    .modern-form__button--not-active {
+      color: #9c9c9c; }
+    @media (max-width: 767px) {
+      .modern-form__button {
+        font-size: 15px; } }
+  .modern-form__block {
+    padding: 30px 45px 0; }
+    .modern-form--application .modern-form__block {
+      padding: 30px 0 0; }
+    @media (max-width: 767px) {
+      .modern-form__block {
+        padding: 20px 20px 0; }
+        .modern-form--application .modern-form__block {
+          padding: 20px 0 0; } }
+  .modern-form__input-block {
+    width: 100%;
+    margin-bottom: 35px;
+    position: relative; }
+    .modern-form__input-block--white {
+      background: #ffffff; }
+  .modern-form__input {
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    padding-left: 10px; }
+  .modern-form__textarea {
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    height: 100px;
+    padding-left: 10px; }
+  .modern-form__input-pass-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 15px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #7f7f7f;
+    cursor: pointer;
+    mask: url(../../../img/eye.svg);
+    -webkit-mask: url(../../../img/eye.svg);
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center center !important;
+    -webkit-mask-position: center center !important;
+    mask-size: contain !important;
+    -webkit-mask-size: contain !important; }
+  .modern-form__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px; }
+  .modern-form__main-button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #ffffff;
+    background: #0092E8;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    min-height: 39px;
+    min-width: 140px;
+    position: relative;
+    overflow: hidden; }
+    .modern-form__main-button.hide {
+      display: none; }
+    .modern-form__main-button.disabled {
+      cursor: not-allowed;
+      filter: grayscale(1); }
+    .modern-form__main-button:active {
+      background: #0092e8;
+      filter: grayscale(0.1); }
+  .modern-form__natural-button {
+    font-size: 13px;
+    color: #0092E8;
+    text-decoration: underline;
+    cursor: pointer; }
+  .modern-form__input-check-input {
+    display: none; }
+  .modern-form__input-check-label {
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    display: block; }
+    .modern-form--application .modern-form__input-check-label {
+      text-align: left; }
+    .modern-form__input-check-label a {
+      display: inline; }
+    .modern-form__input-check-label:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0px;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid #e7e7e7; }
+    .modern-form__input-check-label:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 4px;
+      top: 3px;
+      width: 15px;
+      height: 13px;
+      background: #333333;
+      mask: url(../../../img/done_icon.svg);
+      -webkit-mask: url(../../../img/done_icon.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+      opacity: 0; }
+    .modern-form__input-check-input:checked + .modern-form__input-check-label:after {
+      opacity: 1; }
+  .modern-form__input-code-block {
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; }
+    @media (max-width: 1279px) {
+      .modern-form__input-code-block {
+        max-width: 200px; } }
+  .modern-form__input-code-block-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    position: relative; }
+    @media (max-width: 1279px) {
+      .modern-form__input-code-block-row {
+        grid-gap: 10px; } }
+  .modern-form__input-code-block-row-hide-el {
+    position: absolute;
+    background: #fafafa;
+    width: 50px;
+    right: 0;
+    z-index: 5;
+    top: 0;
+    height: 100%;
+    transform: translateX(100%); }
+  .modern-form__input-result {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: calc(100% + 100px);
+    text-align: left !important;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 54px;
+    padding: 0 18px; }
+    @media (max-width: 1279px) {
+      .modern-form__input-result {
+        letter-spacing: 37px;
+        caret-color: transparent; } }
+  .modern-form__input-code {
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    color: #333;
+    font-size: 25px;
+    font-weight: 700;
+    height: 40px;
+    text-align: center; }
+    .modern-form__input-code::-webkit-outer-spin-button, .modern-form__input-code::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0;
+      /* <-- Apparently some margin are still there even though it's hidden */ }
+  .modern-form__small-title {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px; }
+  .modern-form__small-desc {
+    text-align: center;
+    font-size: 12px;
+    color: #9c9c9c; }
+  .modern-form__info {
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .modern-form__info-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px; }
+    .modern-form__info-icon--error-red {
+      background: url(../../../img/modern-error-red.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .modern-form__info-icon--error-orange {
+      background: url(../../../img/modern-error-orange.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .modern-form__info-icon--success {
+      background: url(../../../img/modern-success.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+  .modern-form__main-title {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 5px;
+    color: #0092E8;
+    font-size: 20px; }
+  .modern-form__info-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0092E8;
+    font-size: 20px; }
+  .modern-form__info-text {
+    text-align: center;
+    margin-bottom: 30px; }

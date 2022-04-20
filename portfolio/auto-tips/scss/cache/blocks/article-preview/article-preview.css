@@ -1,0 +1,74 @@
+.article-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none; }
+  .article-preview__img {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    height: 155px;
+    width: 100%;
+    position: relative; }
+    .article-preview--slider .article-preview__img {
+      height: 185px; }
+    .article-preview__img:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(-45deg, rgba(0, 0, 0, 0.7), rgba(28, 73, 134, 0.7));
+      opacity: 0; }
+      .article-preview:hover .article-preview__img:after {
+        opacity: 1; }
+  .article-preview__desc {
+    width: 100%;
+    flex-grow: 1;
+    padding: 11px 15px;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #ffffff; }
+    .article-preview--slider .article-preview__desc {
+      height: 100px; }
+  .article-preview__title {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 25px; }
+    .article-preview--slider .article-preview__title {
+      overflow: hidden;
+      max-height: 75px;
+      margin-bottom: 0; }
+    .article-preview:hover .article-preview__title {
+      color: #2e6e9d; }
+  .article-preview__button {
+    margin-top: auto;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #2e6e9d;
+    position: relative; }
+    .article-preview__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 21px;
+      height: 12px;
+      background: #2e6e9d;
+      mask: url(../../../img/icons/category-arrow.png);
+      -webkit-mask: url(../../../img/icons/category-arrow.png);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+      right: 6px;
+      top: 4px; }

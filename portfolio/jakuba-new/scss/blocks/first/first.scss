@@ -1,0 +1,79 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.first {
+  color: $white;
+  min-height: 100vh;
+  @include flex-column;
+  padding-top: 100px;
+
+  &__payment {
+    h4 {
+      display: flex;
+      width: 100%;
+
+      @media #{$tablet-big-screen} {
+        flex-direction: column;
+      }
+    }
+  }
+  &:before {
+    @include after-absolute;
+    @include absolute-fill;
+    background: #0c0c0c;
+    z-index: -1;
+  }
+
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+    background: url(../../img/background_1.jpg);
+    @include background-cover-center;
+    z-index: -1;
+
+    @media #{$tablet-big-screen} {
+      top: auto;
+      bottom: 0;
+      background-size: 280% auto !important;
+      background-position: -600px top !important;
+      height: 51vh;
+    }
+  }
+
+  &--payment {
+    min-height: 380px;
+  }
+
+  &--payment:after {
+    background: url(../../img/background_payment.jpg);
+    @include background-cover-center;
+
+    @media #{$tablet-big-screen} {
+      height: 258px;
+      background-size: 250% auto !important;
+      background-position: -570px top !important;
+    }
+  }
+
+  @media #{$tablet-big-screen} {
+    padding-top: 5vh;
+  }
+
+  &__input {
+    margin-top: 50px;
+    text-align: center;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 1vh;
+    }
+  }
+}

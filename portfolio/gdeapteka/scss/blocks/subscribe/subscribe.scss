@@ -1,0 +1,76 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.subscribe {
+  width: 580px;
+  @include margin-auto;
+  padding: 50px 0;
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input {
+    border-bottom: 2px solid $blue;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 20px;
+    height: 35px;
+
+    &::-webkit-input-placeholder {
+      color: $blue;
+    }
+
+    &::-moz-placeholder {
+      color: $blue;
+    }
+
+    &:-moz-placeholder {
+      color: $blue;
+    }
+
+    &:-ms-input-placeholder {
+      color: $blue;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    border: 2px solid $blue;
+    background: $blue;
+    font-size: 18px;
+    border-radius: 5px;
+    width: fit-content;
+    font-weight: 300;
+    color: $white;
+    padding: 10px 30px;
+    @include flex-row-center;
+    @include margin-auto;
+  }
+}

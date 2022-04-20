@@ -1,0 +1,62 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.mouse-animation {
+  padding-left: 240px;
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+
+  @media #{$tablet-small-screen} {
+    display: none;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  &__path {
+    width: 172px;
+    height: 233px;
+    background: url(../../../img/new-main/mouse-path.svg);
+    @include background-contain-center;
+  }
+
+  &__mouse {
+    width: 30px;
+    height: 40px;
+    background: url(../../../img/new-main/mouse.svg);
+    @include background-contain-center;
+    transform: rotate(-10deg);
+    --duration: 3000ms;
+    --anchorX: 50%;
+    --anchorY: 50%;
+    position: absolute;
+    offset-path: path("M51 0.5C36.5 5.5 30.0226 11.6097 21.9705 21.0764C3.85183 42.3781 -5.87701 77.3536 6.01767 103.927C17.5338 129.654 48.4125 140.806 74.8279 139.397C90.8989 138.54 105.315 128.903 115.818 117.141C122.032 110.183 127.861 101.84 128.294 92.2339C129.342 68.9732 99.276 55.3612 79.5659 57.242C47.2005 60.3303 31.8114 94.2772 29.8383 123.053C28.0075 149.751 39.6542 178.051 60.7007 195.21C82.4926 212.977 138.5 228.5 173.5 234");
+    offset-rotate: auto 90deg;
+    offset-anchor: var(--anchorX) var(--anchorY);
+
+    .mouse-animation.active & {
+      animation: move-along var(--duration) 0ms infinite alternate ease-in-out;
+      animation-delay: 3.5s;
+    }
+    .mouse-animation.stop & {
+      animation-play-state: paused;
+    }
+
+
+    @keyframes move-along {
+      100% {
+        offset-distance: 100%;
+      }
+    }
+  }
+
+  &__hidden {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+

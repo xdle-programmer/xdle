@@ -1,0 +1,197 @@
+.chance {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 70px;
+  align-items: center;
+  background: #1f2123;
+  border: 1px solid #2e3033;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+  @media (max-width: 1023px) {
+    .chance {
+      flex-wrap: wrap;
+      height: 140px; } }
+  @media (max-width: 767px) {
+    .chance {
+      height: auto; } }
+  .chance__icon {
+    width: 110px;
+    position: relative;
+    height: 100%;
+    background: #2e3033; }
+    .chance__icon:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 38%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+      height: 50%;
+      background: url(../../img/chance-icon.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+      @media (max-width: 767px) {
+        .chance__icon:after {
+          left: 10px; } }
+    @media (max-width: 1023px) {
+      .chance__icon {
+        height: 70px; } }
+    @media (max-width: 767px) {
+      .chance__icon {
+        width: calc(100% - 75px); } }
+  .chance__icon-radio-button {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #aaaaac;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px; }
+    .chance__icon-radio-button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%; }
+    .chance:hover .chance__icon-radio-button:after,
+    .chance.active .chance__icon-radio-button:after {
+      background: #cd9c28;
+      border-radius: 50%; }
+  .chance__img {
+    width: 75px;
+    padding: 3px; }
+    @media (max-width: 1023px) {
+      .chance__img {
+        height: 70px;
+        padding: 0;
+        overflow: hidden; } }
+  .chance__desc {
+    width: calc(100% - 785px);
+    color: #aaaaac;
+    border-right: 1px solid #2e3033;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 15px;
+    justify-content: center; }
+    @media (max-width: 1599px) {
+      .chance__desc {
+        width: calc(100% - 685px); } }
+    @media (max-width: 1023px) {
+      .chance__desc {
+        width: calc(100% - 385px);
+        height: 70px; } }
+    @media (max-width: 767px) {
+      .chance__desc {
+        width: 100%;
+        border-bottom: 1px solid #2e3033; } }
+  .chance__desc-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block; }
+    .chance--magenta .chance__desc-title span {
+      color: #6c3e79; }
+    .chance--red .chance__desc-title span {
+      color: #9d3d37; }
+    .chance--blue .chance__desc-title span {
+      color: #1c92c5; }
+  .chance__desc-name {
+    display: inline; }
+  .chance__desc-subname {
+    display: inline;
+    margin-left: 20px;
+    position: relative; }
+    @media (max-width: 1599px) {
+      .chance__desc-subname {
+        margin-left: 0; } }
+    .chance__desc-subname:before {
+      content: '/';
+      margin-right: 20px;
+      display: inline; }
+      @media (max-width: 1599px) {
+        .chance__desc-subname:before {
+          content: '';
+          margin-right: 0; } }
+  .chance__desc-text {
+    font-size: 11px; }
+  .chance__price {
+    width: 150px;
+    border-right: 1px solid #2e3033;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #aaaaac;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 1599px) {
+      .chance__price {
+        width: 100px;
+        font-size: 15px; } }
+    @media (max-width: 1023px) {
+      .chance__price {
+        height: 70px; } }
+    @media (max-width: 767px) {
+      .chance__price {
+        width: 50%; } }
+  .chance__trash {
+    width: 300px;
+    border-right: 1px solid #2e3033;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative; }
+    @media (max-width: 1023px) {
+      .chance__trash {
+        width: 100%;
+        height: 70px;
+        border-top: 1px solid #2e3033; } }
+  .chance__trash-input {
+    background: #1a1c1e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    color: #cd9c28;
+    border-radius: 3px; }
+  .chance__trash-button {
+    cursor: pointer;
+    background: #cd9c28;
+    height: 40px;
+    width: 50px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative; }
+    .chance__trash-button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 45%;
+      height: 45%;
+      background: url(../../img/trash.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }

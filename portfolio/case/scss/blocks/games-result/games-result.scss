@@ -1,0 +1,109 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.games-result {
+
+  transform: scale(0);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: -80px;
+
+  @media #{$desktop-small-screen} {
+    right: -60px;
+  }
+
+  @media #{$tablet-small-screen} {
+    right: -10px;
+  }
+
+  @media #{$mobile-big-screen} {
+    right: -10px;
+    left: -10px;
+  }
+
+  &.active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__block {
+    width: 430px;
+    height: 200px;
+    @include flex-row;
+    background: rgba(0, 0, 0, .3);
+    border: 1px solid #252729;
+    box-shadow: 0 0 19px 7px rgba(0, 0, 0, 0.42);
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__img-block {
+    width: 170px;
+    height: 100%;
+    background: #1c1d1f;
+    @include flex-row-center;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      background: #F44336;
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      filter: blur(20px);
+      opacity: .3;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 140px;
+    }
+
+  }
+
+  &__img {
+    width: 40%;
+    height: auto;
+  }
+
+  &__desc {
+    height: 100%;
+    padding: 0 30px;
+    @include flex-column;
+    justify-content: center;
+  }
+
+  &__title {
+    background: #fff;
+    @include text-shadow;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-size: 13px;
+    color: #515356;
+    margin-bottom: 15px;
+  }
+
+  &__button {
+    padding: 0 17px;
+    background: linear-gradient(to bottom, #73b119, #5b891a);
+    border-radius: 5px;
+    @include flex-row-center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 54px;
+    text-transform: uppercase;
+  }
+
+}

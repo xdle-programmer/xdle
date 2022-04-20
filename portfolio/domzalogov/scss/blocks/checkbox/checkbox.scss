@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.checkbox {
+
+  &__input {
+    display: none;
+  }
+
+  $radio-side: 23;
+  $radio-different: 12;
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    padding-left: #{$radio-side + 10}px;
+    font-size: 17px;
+    font-weight: 300;
+    color: $black;
+    display: block;
+
+    &:before {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: #{$radio-side - 1}px;
+      height: #{$radio-side}px;
+      border: 1px solid #cdcdcd;
+      border-radius: 2px;
+    }
+
+    &:after {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: #{(($radio-side - ($radio-side - $radio-different))/2)}px;
+      width: #{$radio-side - $radio-different}px;
+      height: #{$radio-side - $radio-different}px;
+      border: 1px solid $green;
+      background: $green;
+      opacity: 0;
+    }
+
+  }
+
+  &__input:checked + &__label:after {
+    opacity: 1;
+  }
+
+  &__input:checked + &__label:after {
+    box-shadow: none;
+  }
+
+}
+

@@ -1,0 +1,69 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.landing {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url(../../img/main-bacground-inner.png) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+
+  @media #{$mobile-big-screen} {
+    display: none;
+  }
+
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding-bottom: 49.44%;
+    top: -6px;
+    background: url(../../img/main-bacground.jpg);
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    background-position: center top!important;
+    z-index: -1;
+  }
+
+  &__text {
+    font-size: 44px;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    position: relative;
+    text-shadow: -3px 3px 10px rgba(0,0,0,.55);
+    @include flex-row-center;
+    z-index: 1;
+
+    &:after {
+      @include after-absolute;
+      background: url(../../img/arrow_light.png);
+      @include background-contain-center;
+      @include absolute-center;
+      width: calc(100% + 40px);
+      height: calc(100% + 100px);
+      opacity: .7;
+
+      @media #{$mobile-big-screen} {
+        display: none;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 31px;
+    }
+  }
+  &__text-separator {
+    background: url(../../img/landing-text.png);
+    @include background-contain-center;
+    width: 60px;
+    height: 20px;
+  }
+}

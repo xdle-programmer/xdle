@@ -1,0 +1,214 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.about-desc {
+  @include flex-row;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+
+  &__half {
+    width: calc(50% - 80px);
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background: $white;
+
+    & span {
+      color: #959595;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__subtitle {
+    position: absolute;
+    transform: rotate(-90deg);
+    color: #959595;
+    font-size: 48px;
+    font-weight: 700;
+    left: -220px;
+    top: 140px;
+  }
+
+  &__faq {
+
+  }
+
+  &__faq-item {
+    position: relative;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  $active: '.about-desc__faq-item.active';
+
+  &__faq-item-title {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1;
+    cursor: pointer;
+    background: $white;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__faq-item-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    color: #8a8a8a;
+    font-size: 14px;
+    //transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    //transform-origin: bottom;
+
+    #{$active} & {
+      //transform: scaleY(1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__faq-item-list {
+    margin-bottom: 15px;
+  }
+
+  &__faq-item-list-inner {
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 5px;
+
+    &:after {
+      @include after-absolute;
+      background: #8a8a8a;
+      width: 10px;
+      height: 1px;
+      left: 0;
+      top: 5px;
+    }
+  }
+
+  &__faq-item-link {
+    color: $black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__presentation {
+    @include flex-row-center;
+    justify-content: flex-start;
+
+    @media #{$mobile-big-screen} {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__sign {
+    margin-left: 70px;
+    width: 130px;
+    height: 37px;
+    background: url(../../../img/sign.png);
+    @include background-contain-center;
+
+    @media #{$mobile-big-screen} {
+      margin-left: 0;
+      width: 100px;
+      height: 30px;
+    }
+  }
+
+  &__partner-title {
+    @include flex-row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    align-items: center;
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__partner-title-inner {
+    width: 45%;
+    font-size: 48px;
+    font-weight: 700;
+    background: $white;
+
+    & span {
+      color: #959595;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 24px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__partner-text {
+    width: 55%;
+    color: #959595;
+    line-height: 20px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      line-height: 20px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px 4%;
+    width: 100%;
+    padding-top: 40px;
+    grid-template-areas: 'name type' 'phone message' 'email message';
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      grid-template-areas: 'name' 'phone' 'email' 'type' 'message';
+    }
+  }
+  &__input-item {
+
+    &--name {
+      grid-area: name;
+    }
+    &--phone {
+      grid-area: phone;
+    }
+    &--email {
+      grid-area: email;
+    }
+    &--type {
+      grid-area: type;
+    }
+    &--message {
+      grid-area: message;
+    }
+
+  }
+
+}

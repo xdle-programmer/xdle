@@ -1,0 +1,46 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.counter {
+  @include flex-column-center;
+  font-size: 14px;
+  font-weight: 200;
+
+  $white-counter: '.counter--white';
+
+  &__number {
+    font-size: 48px;
+    color: $orange;
+
+    #{$white-counter} & {
+      color: $white;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 30px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 48px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 10px;
+
+    #{$white-counter} & {
+      color: $white;
+      opacity: .5;
+    }
+  }
+
+  &__bottom {
+    margin-top: 10px;
+
+    #{$white-counter} & {
+      color: $white;
+      opacity: .5;
+    }
+  }
+}

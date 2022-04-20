@@ -1,0 +1,126 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@font-face {
+  font-family: 'proxima';
+  font-display: fallback;
+  src: url(../../../../fonts/ProximaNova-Regular.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima';
+  font-display: fallback;
+  src: url(../../../../fonts/ProximaNova-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima';
+  font-display: fallback;
+  src: url(../../../../fonts/ProximaNova-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'druk';
+  font-display: fallback;
+  src: url(../../../../fonts/DrukText-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+* {
+  @include font-default;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: $main-transition;
+}
+
+.wrapper *::-webkit-input-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *::-moz-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *:-moz-placeholder {
+  transition: $main-transition;
+}
+
+.wrapper *:-ms-input-placeholder {
+  transition: $main-transition;
+}
+
+.touch-device * {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+button, input, textarea {
+  border: none;
+  background: none;
+}
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.scroll-top {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  background: url(../../../img/scroll-top.webp);
+  @include background-contain-center;
+  cursor: pointer;
+  bottom: 50px;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(550px);
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.green {
+  color: $green;
+}

@@ -1,0 +1,32 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.breadcrumbs {
+  @include flex-row;
+  margin-top: 20px;
+
+  &__link {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    margin-right: 5px;
+
+    &:after {
+      content: '>';
+      margin: 0 10px;
+      color: #32b58b;
+    }
+
+    &:hover {
+      color: $green;
+    }
+
+  }
+
+  &__current {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+

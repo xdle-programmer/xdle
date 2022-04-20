@@ -1,0 +1,128 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.sponsors {
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    @include flex-row;
+    width: 100%;
+
+    @media #{$desktop-big-screen} {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    width: calc(12.5% - 20px);
+    margin-left: 20px;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    @media #{$desktop-big-screen} {
+      width: calc(20% - 15px);
+      margin-left: 0;
+      margin-right: 15px;
+      margin-bottom: 15px;
+
+      &:nth-of-type(1) {
+        margin-left: 0;
+      }
+
+      &:nth-of-type(5n) {
+        margin-right: 0;
+      }
+    }
+
+    @media #{$tablet-small-screen} {
+      @include flex-row;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  &__item-photo {
+    width: 100%;
+    height: 136px;
+    border: 2px solid $gray-light;
+    @include background-cover-center;
+
+    @media #{$tablet-small-screen} {
+      width: 150px;
+      height: 150px;
+      background-color: $white;
+      @include background-contain-center;
+    }
+  }
+
+  &__item-desc {
+    width: 100%;
+    border: 2px solid $gray-light;
+    background: $gray-light;
+    height: 150px;
+    padding: 10px 5px;
+
+    @media #{$tablet-small-screen} {
+      width: calc(100% - 150px);
+      //height: 150px;
+    }
+  }
+  &__bottom {
+    margin-top: 20px;
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media #{$tablet-small-screen} {
+      flex-wrap: wrap;
+    }
+  }
+  &__bottom-left {
+    width: 33%;
+    @include flex-row;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  &__bottom-center {
+    width: 33%;
+    @include flex-row;
+    justify-content: center;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-bottom: 10px;
+      justify-content: flex-start;
+    }
+  }
+  &__bottom-right {
+    width: 33%;
+    @include flex-row;
+    justify-content: flex-end;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-bottom: 10px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__button {
+    @include flex-row-center;
+    background: #3db837;
+    height: 65px;
+    padding: 0 100px;
+    color: $white;
+
+    @media #{$tablet-small-screen} {
+      height: 40px;
+      padding: 0 30px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.news-preview {
+
+  &__img {
+    height: 258px;
+    @include background-cover-center;
+  }
+
+  &__desc {
+  }
+
+  &__desc-date {
+    font-size: 15px;
+    margin: 20px 0;
+  }
+
+  &__desc-name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}

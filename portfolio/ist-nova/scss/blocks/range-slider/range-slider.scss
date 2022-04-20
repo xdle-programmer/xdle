@@ -1,0 +1,95 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.range-slider {
+
+  &, & * {
+    transition: none !important;
+    text-decoration: none !important;
+  }
+
+  &:hover, & *:hover, *:hover & {
+    text-decoration: none !important;
+  }
+
+  &__inputs {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  &__input {
+    @include flex-row;
+    width: 100px;
+    height: #{$control-small-height}px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding-left: 15px;
+
+    @media #{$desktop-small-screen} {
+      width: 80px;
+    }
+  }
+
+  &__item {
+    width: calc(100% - 15px);
+    margin-bottom: 17px;
+    margin-left: 11px;
+    margin-right: 4px;
+  }
+
+  &__item-line {
+    height: 3px !important;
+    border: none !important;
+    background: $gray !important;
+  }
+  &__item-progress {
+    height: 3px !important;
+    border: none !important;
+    background: $orange !important;
+  }
+
+  &__item-handle {
+    width: 15px !important;
+    height: 15px !important;
+    background: $orange !important;
+    border-radius: 4px !important;
+    border: none !important;
+    top: -5px !important;
+    z-index: 1 !important;
+  }
+
+  &__item-handle:focus {
+    outline: none !important;
+  }
+
+  &__item-handle:after {
+    @include after-absolute;
+    top: 5px;
+    left: 5px;
+    background: $white;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+  }
+
+  &__values {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  &__value {
+    @include flex-row;
+    align-items: baseline;
+  }
+
+  &__value-item {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  &__value-currency {
+    font-size: 10px;
+    margin-left: 3px;
+  }
+
+}

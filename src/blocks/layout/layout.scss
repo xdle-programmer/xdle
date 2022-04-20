@@ -1,0 +1,31 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.layout {
+  max-width: 1630px;
+  width: 100%;
+  @include margin-auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  //@media #{$notebook-big-screen}{
+  //  padding-left: 15px;
+  //  padding-right: 15px;
+  //}
+
+  //@media #{$tablet-big-screen}{
+  //
+  //}
+  //
+  //@media #{$mobile-big-screen}{
+  //
+  //}
+}
+
+.layout-small {
+  max-width: 1230px;
+  @include margin-auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

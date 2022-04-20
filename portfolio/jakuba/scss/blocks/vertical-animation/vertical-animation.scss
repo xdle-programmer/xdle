@@ -1,0 +1,34 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.vertical-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+
+
+  &,
+  & *,
+  & *:before,
+  & *:after {
+    transition: all .3s linear !important;
+  }
+
+
+  &__item {
+    position: absolute;
+    top: 0;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+}

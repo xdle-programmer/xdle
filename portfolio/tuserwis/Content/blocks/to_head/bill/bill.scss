@@ -1,0 +1,111 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.bill {
+  padding-bottom: 50px;
+
+  &__block {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  &__title {
+    padding: 20px 25px;
+    color: $blue;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.61px;
+  }
+
+  &__table {
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    border-bottom: 1px solid #e7e7e7;
+
+    &--header {
+      border-top: 1px solid #e7e7e7;
+
+      @media #{$tablet-small-screen} {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(odd) {
+      background: #f9f9f9;
+    }
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      padding: 10px 0;
+
+      &:nth-of-type(odd) {
+        background: $white;
+      }
+
+      &:nth-of-type(2) {
+        border-top: 1px solid #e7e7e7;
+      }
+
+      &:nth-of-type(even) {
+        background: #f9f9f9;
+      }
+    }
+  }
+
+  $bill-header: '.bill__row--header';
+
+  &__cell {
+    padding: 10px 25px;
+    font-size: 12px;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    text-align: center;
+
+    #{$bill-header} & {
+      font-weight: 700;
+      color: #b9b9b9;
+      font-size: 14px;
+    }
+
+    @media #{$tablet-small-screen} {
+      padding: 5px 10px;
+      @include flex-row-center;
+      justify-content: space-between;
+      border-bottom: 1px solid #fff;
+
+      &:nth-last-of-type(1) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__cell-mobile-name {
+    display: none;
+
+    @media #{$tablet-small-screen} {
+      display: block;
+    }
+  }
+
+  &__cell-item {
+  }
+
+  &__cell-download {
+    width: 23px;
+    height: 20px;
+    cursor: pointer;
+    background: url(../../../img/bill-download.svg);
+    @include background-contain-center;
+    @include margin-auto;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

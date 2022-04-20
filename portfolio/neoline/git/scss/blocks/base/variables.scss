@@ -1,0 +1,58 @@
+//-------------------
+//Цвета
+$black: #000000 !default;
+$white: #ffffff;
+$gray-light: #f2f2f2;
+$gray: #666666;
+$gray-dark: #333333;
+$green: #00615b;
+
+$red-light: #e22d3d;
+$red: #ca1626;
+$red-dark: #b71d2b;
+
+
+$blue: #6e94bc;
+$orange: #e36c32;
+$yellow: #f7c520;
+
+$main-transition: all .2s ease-in;
+
+//-------------------
+//Переменные селекта
+//Параметры кнопки
+$select-button-height: 31;
+$select-button-width: 100%;
+$select-button-min-width: 58;
+$select-button-border-radius: 10;
+$select-button-padding-left: 12;
+$select-button-padding-right: 12;
+$select-button-border-width: 1;
+$select-button-border-color: #f2f2f2;
+$select-button-background: #f2f2f2;
+
+//Параметры текста
+$select-font-size: 13;
+$select-font-weight: 400;
+$select-font-color: $gray;
+$select-font-placeholder-color: $gray;
+$select-font-placeholder-active-color: $gray;
+
+//Параметры иконки
+$select-icon-image-url: '(../../../img/small-arrow.svg)';
+$select-icon-image-width: 10;
+$select-icon-image-height: 6;
+$select-icon-right: 10;
+
+//Параметры враппера меню
+$select-menu-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+$select-menu-max-height: 200;
+
+//Параметры пунктов меню
+$select-inner-button-background: #eaeaea;
+$select-inner-button-color: #000000;
+
+@mixin select-button-active {
+  background: #f2f2f2 !important;
+  color: $gray !important;
+}

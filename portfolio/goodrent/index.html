@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+
+    <title>Goodrent</title>
+</head>
+<style>
+
+</style>
+<link rel="stylesheet" type="text/css" href="plugins/wow/animate.min.css">
+<link rel="stylesheet" type="text/css" href="scss/styles/styles_to_head.css">
+
+<body>
+
+
+<div class="wrapper">
+    <header class="header">
+        <div class="layout header__block">
+
+
+            <div class="header__logo animation-scroll" data-scroll-goal="#first">
+                <img src="img/logo.svg" class="header__logo-img">
+            </div>
+
+            <div class="header__menu-button header__menu-switch"></div>
+
+            <div class="header__menu">
+                <div class="header__menu-close header__menu-switch"></div>
+                <div class="header__menu-items">
+                    <div data-scroll-goal="#catalog" class="header__menu-item animation-scroll">Объекты</div>
+                    <div data-scroll-goal="#lead-section" class="header__menu-item animation-scroll">Подбор объекта</div>
+                    <div data-scroll-goal="#map-section" class="header__menu-item animation-scroll">Найти на карте</div>
+                    <div data-scroll-goal="#advantages" class="header__menu-item animation-scroll">Преимущества</div>
+                    <div data-scroll-goal="#contacts" class="header__menu-item animation-scroll">Контакты</div>
+                </div>
+            </div>
+
+            <a href="tel:+74952946000" class="header__phone">+7 (495) 294-60-00</a>
+        </div>
+
+    </header>
+
+    <div id="first" class="first layout">
+        <div class="first__letter-gray"></div>
+        <div class="first__letter-color"></div>
+        <div class="first__title">
+            <span class="green">ОФИСЫ В ЦАО</span> ПО ЛУЧШИМ ЦЕНАМ ОТ 10 М<sup>2</sup>
+        </div>
+        <div class="first__subtitle">
+            Запишитесь на просмотр прямо сейчас и получите 2 недели арендных каникул В ПОДАРОК!
+        </div>
+        <div data-scroll-goal="#catalog" class="first__button button animation-scroll">Выбрать объект</div>
+        <div class="first__desc">
+            <div class="first__desc-item wow slideInUp" data-wow-duration=".6s" data-wow-delay=".3s"
+                 data-wow-offset="120">
+                <div class="first__desc-item-icon" style="background: url(img/first-icon_1.svg)"></div>
+                <div class="first__desc-item-text">
+                    Заключение договора на&nbsp;физ. и юр. лица
+                </div>
+            </div>
+
+            <div class="first__desc-item wow slideInUp" data-wow-duration=".6s" data-wow-delay=".4s"
+                 data-wow-offset="120">
+                <div class="first__desc-item-icon" style="background: url(img/first-icon_2.svg)"></div>
+                <div class="first__desc-item-text">
+                    Скидка при предоплате от 6 мес
+                </div>
+            </div>
+
+            <div class="first__desc-item wow slideInUp" data-wow-duration=".6s" data-wow-delay=".5s"
+                 data-wow-offset="120">
+                <div class="first__desc-item-icon" style="background: url(img/first-icon_3.svg)"></div>
+                <div class="first__desc-item-text">
+                    Нужна мебель? Предоставим!
+                </div>
+            </div>
+
+            <div class="first__desc-item wow slideInUp" data-wow-duration=".6s" data-wow-delay=".6s"
+                 data-wow-offset="120">
+                <div class="first__desc-item-icon" style="background: url(img/first-icon_4.svg)"></div>
+                <div class="first__desc-item-text">
+                    Возможна аренда без депозита
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="catalog" class="catalog layout">
+        <div class="catalog__title">Наши помещения для Вашего офиса</div>
+        <div class="catalog__filter">
+            <div class="catalog__filter-item">
+                <div id="area_range" class="range-slider">
+
+                    <div class="catalog__filter-header">
+                        <div class="catalog__filter-header-title">Площадь:</div>
+                        <div class="range-slider__inputs">
+                            <input type="number" class="filter-input range-slider__input range-slider__input--min"
+                                   name="filter_min_area">
+                            <input type="number" class="filter-input range-slider__input range-slider__input--max"
+                                   name="filter_max_area">
+                        </div>
+                    </div>
+
+
+                    <div class="range-slider__item"></div>
+                    <div class="range-slider__values">
+                        <div class="range-slider__value range-slider__value--min">
+                            <div class="range-slider__value-item"></div>
+                            <div class="range-slider__value-currency">м<sup>2</sup></div>
+                        </div>
+                        <div class="range-slider__value range-slider__value--max">
+                            <div class="range-slider__value-item"></div>
+                            <div class="range-slider__value-currency">м<sup>2</sup></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog__filter-item">
+                <div id="price_range" class="range-slider">
+                    <div class="catalog__filter-header">
+                        <div class="catalog__filter-header-title">Аренда (мес.)</div>
+                        <div class="range-slider__inputs">
+                            <input type="number" class="filter-input range-slider__input range-slider__input--min"
+                                   name="filter_min_price">
+                            <input type="number" class="filter-input range-slider__input range-slider__input--max"
+                                   name="filter_max_price">
+                        </div>
+                    </div>
+                    <div class="range-slider__item"></div>
+                    <div class="range-slider__values">
+                        <div class="range-slider__value range-slider__value--min">
+                            <div class="range-slider__value-item"></div>
+                            <div class="range-slider__value-currency">₽</div>
+                        </div>
+                        <div class="range-slider__value range-slider__value--max">
+                            <div class="range-slider__value-item"></div>
+                            <div class="range-slider__value-currency">₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog__filter-item">
+                <div class="catalog__filter-header catalog__filter-header--no-bottom">
+                    <div class="catalog__filter-header-title">Округ:</div>
+                </div>
+                <div class="select select--small">
+                    <select name="filter_region" class="filter-input">
+                        <option value="option-placeholder">Не указан</option>
+                        <option value="Центральный">Центральный</option>
+                        <option value="Северный">Северный</option>
+                        <option value="Северо-Восточный">Северо-Восточный</option>
+                        <option value="Восточный">Восточный</option>
+                        <option value="Юго-Восточный">Юго-Восточный</option>
+                        <option value="Южный">Южный</option>
+                        <option value="Юго-Западный">Юго-Западный</option>
+                        <option value="Западный">Западный</option>
+                        <option value="Северо-Западный">Северо-Западный</option>
+                        <option value="Зеленоградский">Зеленоградский</option>
+                        <option value="Троицкий">Троицкий</option>
+                        <option value="Новомосковский">Новомосковский</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="catalog__items">
+            <div class="catalog__items-wrapper">
+                <div class="catalog__item-empty">
+                    Объектов не найдено
+                </div>
+
+                <div class="catalog__item" data-filter-floor="3" data-filter-coord="55.75805162187419,37.61390801034541"
+                     data-filter-address="Москва, Тверская ул, 4" data-filter-subway="Курская"
+                     data-filter-area="60" data-filter-price="40000" data-filter-region="Центральный">
+                    <div class="office" data-modal="modal_lead">
+                        <div class="office__slider owl-carousel">
+                            <div class="office__slider-item" style="background: url(img/example_1_mini.jpg)"></div>
+                            <div class="office__slider-item" style="background: url(img/example_2_mini.jpg)"></div>
+                            <div class="office__slider-item" style="background: url(img/example_3_mini.jpg)"></div>
+                        </div>
+                        <div class="office__desc">
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-house.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">до 60 м<sup>2</sup></div>
+                            </div>
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-map.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">Тверская ул, 4</div>
+                            </div>
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-metro.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">Курская</div>
+                            </div>
+
+                        </div>
+                        <div class="office__price">
+                            <div class="office__price-value">40 000<span>₽</span></div>
+                            <div class="office__price-icon"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__item" data-filter-floor="3"
+                     data-filter-coord="55.74872606895861,37.705454499999924"
+                     data-filter-address="Москва, шоссе Энтузиастов, 12" data-filter-subway="Курская"
+                     data-filter-area="100" data-filter-price="80000" data-filter-region="Восточный">
+                    <div class="office" data-modal="modal_lead">
+                        <div class="office__slider owl-carousel">
+                            <div class="office__slider-item" style="background: url(img/example_1_mini.jpg)"></div>
+                            <div class="office__slider-item" style="background: url(img/example_2_mini.jpg)"></div>
+                            <div class="office__slider-item" style="background: url(img/example_3_mini.jpg)"></div>
+                        </div>
+                        <div class="office__desc">
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-house.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">до 100 м<sup>2</sup></div>
+                            </div>
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-map.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">шоссе Энтузиастов 12</div>
+                            </div>
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-metro.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">Курская</div>
+                            </div>
+
+                        </div>
+                        <div class="office__price">
+                            <div class="office__price-value">80 000<span>₽</span></div>
+                            <div class="office__price-icon"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__item" data-filter-floor="3" data-filter-coord="55.6827470690274,37.51818249999991"
+                     data-filter-address="Москва, Пр. Вернадского, 25" data-filter-subway="Курская"
+                     data-filter-area="140" data-filter-price="100000" data-filter-region="Юго-Западный">
+                    <div class="office" data-modal="modal_lead">
+                        <div class="office__slider owl-carousel">
+                            <div class="office__slider-item" style="background: url(img/example_1_mini.jpg)"></div>
+                            <div class="office__slider-item" style="background: url(img/example_2_mini.jpg)"></div>
+                            <div class="office__slider-item" style="background: url(img/example_3_mini.jpg)"></div>
+                        </div>
+                        <div class="office__desc">
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-house.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">до 140 м<sup>2</sup></div>
+                            </div>
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-map.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">Пр. Вернадского 25</div>
+                            </div>
+                            <div class="office__desc-item">
+                                <div class="office__desc-item-icon">
+                                    <img src="img/icon-metro.svg" class="office__desc-item-icon-img">
+                                </div>
+                                <div class="office__desc-item-value">Курская</div>
+                            </div>
+
+                        </div>
+                        <div class="office__price">
+                            <div class="office__price-value">100 000<span>₽</span></div>
+                            <div class="office__price-icon"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="catalog__pagination">
+
+        </div>
+    </div>
+
+    <div id="lead-section" class="lead" style="background: url(img/lead_background_1.jpg);">
+        <div class="lead__block layout">
+            <div class="lead__letter"></div>
+            <div class="lead__title">Устали выбирать подходящий вариант?</div>
+            <div class="lead__subtitle">Мы подберём за Вас в течение 15&nbsp;минут</div>
+            <div class="lead__desc">Укажите желаемые параметры и мы свяжемся с Вами для презентации нескольких
+                вариантов
+            </div>
+            <form class="lead__form form-check" id="lead_1">
+                <input type="hidden" name="answers">
+                <div class="lead__form-item">
+                    <div class="select" data-check-type="select" data-check="select-required">
+                        <select name="area">
+                            <option value="option-placeholder">Площадь</option>
+                            <option value="< 50">< 50</option>
+                            <option value="50-100">50-100</option>
+                            <option value="100-150">100-150</option>
+                            <option value="150-200">150-200</option>
+                            <option value="250-300">250-300</option>
+                            <option value="> 300">> 300</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="lead__form-item">
+                    <div class="input" data-check-type="input" data-check="input-required"
+                         data-placeholder="Ваше имя">
+                        <div class="input__button">
+                            <input type="text" class="input__text" placeholder="Ваше имя" name="name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead__form-item">
+                    <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                         data-placeholder="Телефон">
+                        <div class="input__button">
+                            <input type="text" class="input__text" placeholder="Телефон" name="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead__form-item">
+                    <button class="lead__form-button button form-check__button first-lead-button"
+                            data-form-name="Первая форма заявки">Подобрать
+                    </button>
+                </div>
+
+                <div class="lead__form-agree">
+                    <div class="checkbox form-check__field" data-check-type="input" data-check="checkbox-required">
+                        <div class="checkbox__item">
+                            <input class="checkbox__item-input" checked id="checkbox_1" name="test_11"
+                                   value="checkbox_1" type="checkbox"/>
+                            <label class="checkbox__item-label" for="checkbox_1">Я даю согласие на обработку
+                                персональных данных.</label>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="map-section" class="map">
+        <div class="map__block layout">
+            <div class="map__title">Все объекты на карте Москвы</div>
+            <div class="map__item">
+                <div id="map" class="map__item-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="advantages" class="advantages">
+        <div class="advantages__block layout">
+            <div class="advantages__title">Идём навстречу НАШИМ клиентам</div>
+            <div class="advantages__subtitle">и предлагаем самые гибкие условия аренды</div>
+            <div class="advantages__items">
+                <div class="advantages__item">
+                    <div class="advantages__item-title">Обратившись к нам Вы уменьшите расходы на аренду:</div>
+                    <div class="advantages__item-list">
+                        <div class="advantages__item-list-item wow slideInLeft" data-wow-duration="1s">
+                            <strong>Цены до 30% ниже</strong> аналогичных объектов. За счет оптимального
+                            деления помещений и собственного строительного отдела.
+                        </div>
+                        <div class="advantages__item-list-item wow slideInLeft" data-wow-duration="1s">
+                            Хотите сократить ежемесячные расходы на аренду?<br>
+                            Скидка при депозите <strong>от 3 месяцев.</strong>
+                        </div>
+                        <div class="advantages__item-list-item wow slideInLeft" data-wow-duration="1s">
+                            Минимизируете расходы на старте? Возможна аренда <strong>без депозита.</strong>
+                        </div>
+                    </div>
+                    <div class="advantages__item-img advantages__item-img--1"></div>
+                    <div class="advantages__item-img advantages__item-img--2"></div>
+                </div>
+
+                <div class="advantages__item">
+                    <div class="advantages__item-title">У нас есть, что Вам предложить, кроме экономии:</div>
+                    <div class="advantages__item-list">
+                        <div class="advantages__item-list-item wow slideInRight" data-wow-duration="1s">
+                            Мы полностью открыты и предоставим
+                            все необходимые документы.
+                        </div>
+                        <div class="advantages__item-list-item wow slideInRight" data-wow-duration="1s">
+                            Всегда в наличии площади от 10 до 50 м²
+                        </div>
+                        <div class="advantages__item-list-item wow slideInRight" data-wow-duration="1s">
+                            Для Вашего удобства возможно заключение договора
+                            как на Юр. лицо, так и на Физ. лицо.
+                        </div>
+                        <div class="advantages__item-list-item wow slideInRight" data-wow-duration="1s">
+                            Экономим Ваше время, подписать договор и заехать
+                            в помещение можно в день просмотра.
+                        </div>
+                    </div>
+                    <div class="advantages__item-img advantages__item-img--1"></div>
+                    <div class="advantages__item-img advantages__item-img--2"></div>
+                </div>
+
+                <div class="advantages__item">
+                    <div class="advantages__item-title">Если Вам понравится помещение без ремонта - предоставим:</div>
+                    <div class="advantages__item-list">
+                        <div class="advantages__item-list-item wow slideInLeft" data-wow-duration="1s">
+                            «Арендные каникулы» на время ремонта.
+                        </div>
+                        <div class="advantages__item-list-item wow slideInLeft" data-wow-duration="1s">
+                            Нашу собственную бригаду, с самыми низкими ценами в Москве!
+                        </div>
+                        <div class="advantages__item-list-item wow slideInLeft" data-wow-duration="1s">
+                            При необходимости заведем коммуникации за наш счет
+                        </div>
+                    </div>
+                    <div class="advantages__item-img advantages__item-img--1"></div>
+                    <div class="advantages__item-img advantages__item-img--2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="about__block layout">
+            <div class="about__title">О компании GoodRent</div>
+            <div class="about__logo">
+                <img src="img/logo.svg" class="about__logo-img">
+            </div>
+            <div class="about__text">
+                Мы специализируемся на аренде коммерческой недвижимости для малого бизнеса. За время работы
+                мы наладили доверительные отношения с десятками наших Арендаторов, что позволило разобраться
+                в специфике их бизнесов и помогло нам максимально удовлетворять пожелания новых Арендаторов создавая им
+                комфортные условия для ведения бизнеса.
+                <br>
+                <br>
+                Принцип нашей работы – небольшие площади за небольшие деньги.
+                <br>
+                <br>
+                Когда крупные компании арендуют большие помещения они получают самые выгодные условия аренды,
+                чем больше арендованная площадь, тем ниже ставка. Мы же делим эти большие площади на маленькие блоки и
+                даем возможность малому бизнесу получать такие же цены, что экономит нашим клиентам
+                до 30% арендного бюджета.
+            </div>
+
+            <div class="about__list wow fadeIn" data-wow-duration="2s">
+                <div class="about__list-item">
+                    <div class="about__list-item-top">
+                        10
+                    </div>
+                    <div class="about__list-item-bottom">
+                        объектов недвижимости
+                    </div>
+                </div>
+                <div class="about__list-separator"></div>
+                <div class="about__list-item">
+                    <div class="about__list-item-top">
+                        2 500 м<sup>2</sup>
+                    </div>
+                    <div class="about__list-item-bottom">
+                        общая площадь объектов
+                    </div>
+                </div>
+                <div class="about__list-separator"></div>
+                <div class="about__list-item">
+                    <div class="about__list-item-top">
+                        60
+                    </div>
+                    <div class="about__list-item-bottom">
+                        арендаторов
+                    </div>
+                </div>
+                <div class="about__list-separator"></div>
+                <div class="about__list-item">
+                    <div class="about__list-item-top">
+                        до 30%
+                    </div>
+                    <div class="about__list-item-bottom">
+                        экономят наши арендаторы
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lead" style="background: url(img/lead_background_2.jpg);">
+        <div class="lead__block layout">
+            <div class="lead__title">Получи 2 недели аренды в ПОДАРОК</div>
+            <div class="lead__subtitle">Оставьте заявку на подбор помещения. Мы предложим
+                несколько вариантов и пригласим на просмотр
+            </div>
+            <form class="lead__form form-check" id="lead_2">
+                <input type="hidden" name="answers">
+                <div class="lead__form-item">
+                    <div class="input" data-check-type="input" data-check="input-required"
+                         data-placeholder="Ваше имя">
+                        <div class="input__button">
+                            <input type="text" class="input__text" placeholder="Ваше имя" name="name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead__form-item">
+                    <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                         data-placeholder="Телефон">
+                        <div class="input__button">
+                            <input type="text" class="input__text" placeholder="Телефон" name="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead__form-item">
+                    <button class="lead__form-button button form-check__button second-lead-button"
+                            data-form-name="Вторая форма заявки">Подобрать
+                    </button>
+                </div>
+
+                <div class="lead__form-agree">
+                    <div class="checkbox form-check__field" data-check-type="input" data-check="checkbox-required">
+                        <div class="checkbox__item">
+                            <input class="checkbox__item-input" checked id="checkbox_2" name="test_11"
+                                   value="checkbox_1" type="checkbox"/>
+                            <label class="checkbox__item-label" for="checkbox_2">Я даю согласие на обработку
+                                персональных данных.</label>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="contacts" class="contacts">
+        <div class="contacts__block layout">
+            <div class="contacts__info">
+                <div class="contacts__title">Наши контакты</div>
+                <div class="contacts__list">
+                    <div class="contacts__list-item">
+                        <div class="contacts__list-item-name">
+                            <img class="contacts__list-item-name-icon" src="img/contacts-icon-phone.svg">
+                            <div class="contacts__list-item-name-text">Телефон:</div>
+                        </div>
+                        <a href="tel:+74952946000" class="contacts__list-item-value">+7 (495) 294-60-00</a>
+                    </div>
+                    <div class="contacts__list-item">
+                        <div class="contacts__list-item-name">
+                            <img class="contacts__list-item-name-icon" src="img/contacts-icon-mail.svg">
+                            <div class="contacts__list-item-name-text">E-mail:</div>
+                        </div>
+                        <a href="mailto:office@goodrent.pro" class="contacts__list-item-value">office@goodrent.pro</a>
+                    </div>
+                    <div class="contacts__list-item">
+                        <div class="contacts__list-item-name">
+                            <img class="contacts__list-item-name-icon" src="img/contacts-icon-address.svg">
+                            <div class="contacts__list-item-name-text">Офис:</div>
+                        </div>
+                        <div class="contacts__list-item-value">г.Москва, ул. Тихвинская дом 20</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts__map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aad5d6673bc1083a1ca0ede092e5a6b7cd40a1188f1c632f0fc0ea7140c6ebba9&amp;source=constructor"
+                        width="100%" height="340" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer__block layout">
+            <div class="footer__logo">
+                <img src="img/logo.svg" class="footer__logo-img">
+            </div>
+            <div class="footer__copyright">
+                © 2019 GoodRent
+            </div>
+            <a href="https://xdle.ru" target="_blank"
+               class="footer__link">Разработка сайта: <strong class="green">XDLE</strong></a>
+        </div>
+    </div>
+
+    <div class="modal__background close-modal"></div>
+
+    <div class="modal__block" data-modal-name="modal_thank">
+        <div class="modal__close close-modal"></div>
+
+        <div class="modal__thank layout">
+            Спасибо!<br>
+            <span>Ваша заявка принята, наши специалисты свяжутся с вами в ближайшее время.</span>
+        </div>
+    </div>
+
+
+    <div class="modal__block" data-modal-name="modal_lead">
+        <div class="modal__close close-modal"></div>
+
+        <div class="modal__office layout">
+            <div class="modal__office-top">
+                <div class="modal__office-slider">
+                    <div class="modal__office-slider-big owl-carousel">
+                        <a href="img/example_1.jpg" data-lightbox="modal" class="modal__office-slider-big-item"
+                           style="background: url(img/example_1_midi.jpg)"></a>
+                        <a href="img/example_2.jpg" data-lightbox="modal" class="modal__office-slider-big-item"
+                           style="background: url(img/example_2_midi.jpg)"></a>
+                        <a href="img/example_3.jpg" data-lightbox="modal" class="modal__office-slider-big-item"
+                           style="background: url(img/example_3_midi.jpg)"></a>
+                        <a href="img/example_4.jpg" data-lightbox="modal" class="modal__office-slider-big-item"
+                           style="background: url(img/example_4_midi.jpg)"></a>
+                        <a href="img/example_5.jpg" data-lightbox="modal" class="modal__office-slider-big-item"
+                           style="background: url(img/example_5_midi.jpg)"></a>
+                    </div>
+                    <div class="modal__office-slider-small owl-carousel">
+                        <div class="modal__office-slider-small-item"
+                             style="background: url(img/example_1_mini.jpg)"></div>
+                        <div class="modal__office-slider-small-item"
+                             style="background: url(img/example_2_mini.jpg)"></div>
+                        <div class="modal__office-slider-small-item"
+                             style="background: url(img/example_3_mini.jpg)"></div>
+                        <div class="modal__office-slider-small-item"
+                             style="background: url(img/example_4_mini.jpg)"></div>
+                        <div class="modal__office-slider-small-item"
+                             style="background: url(img/example_5_mini.jpg)"></div>
+                    </div>
+                </div>
+                <div class="modal__office-info">
+                    <div class="modal__office-info-title">Костомаровский пер 124</div>
+                    <div class="modal__office-info-list">
+                        <div class="modal__office-info-list-item">
+                            <div class="modal__office-info-list-name">
+                                <div class="modal__office-info-list-name-item">Метро:</div>
+                            </div>
+                            <div class="modal__office-info-list-value">Курская / Станция 2 / Станция 3</div>
+                        </div>
+
+                        <div class="modal__office-info-list-item">
+                            <div class="modal__office-info-list-name">
+                                <div class="modal__office-info-list-name-item">Площадь:</div>
+                            </div>
+                            <div class="modal__office-info-list-value">50 м²</div>
+                        </div>
+
+                        <div class="modal__office-info-list-item">
+                            <div class="modal__office-info-list-name">
+                                <div class="modal__office-info-list-name-item">Цена:</div>
+                            </div>
+                            <div class="modal__office-info-list-value">26 000 000 ₽</div>
+                        </div>
+
+                        <div class="modal__office-info-list-item">
+                            <div class="modal__office-info-list-name">
+                                <div class="modal__office-info-list-name-item">Этаж:</div>
+                            </div>
+                            <div class="modal__office-info-list-value">3</div>
+                        </div>
+
+                        <div class="modal__office-info-list-item">
+                            <div class="modal__office-info-list-name">
+                                <div class="modal__office-info-list-name-item">Округ:</div>
+                            </div>
+                            <div class="modal__office-info-list-value">ЦАО</div>
+                        </div>
+                    </div>
+
+                    <div class="modal__office-info-desc">
+                        <div class="modal__office-info-desc-title">
+                            Описание:
+                        </div>
+                        <div class="modal__office-info-desc-item">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                            Proin
+                            gravida dolor sit amet lacus accumsan et viverra justo commodoLorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal__lead">
+                <div class="modal__lead-title">
+                    Запишитесь на просмотр и получите ДВЕ НЕДЕЛИ БЕСПЛАТНОЙ АРЕНДЫ
+                </div>
+
+                <div class="modal__lead-subtitle">
+                    Выберите удобное для Вас время
+                </div>
+
+                <form class="modal__lead-form form-check" id="modal_lead">
+                    <input type="hidden" name="answers">
+                    <div class="modal__lead-form-items">
+
+                        <div class="modal__lead-form-item">
+                            <div class="input" data-check-type="input" data-check="input-required"
+                                 data-placeholder="Ваше имя">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Ваше имя" name="name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__lead-form-item">
+                            <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                                 data-placeholder="Телефон">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Телефон" name="phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__lead-form-item">
+                            <div class="input form-check__field" data-check-type="input" data-check=""
+                                 data-placeholder="Время">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Время 12:00" name="time">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__lead-form-item">
+                            <div class="input form-check__field" data-check-type="input" data-check=""
+                                 data-placeholder="Дата">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Дата 12.08" name="date">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal__lead-form-buttons">
+                        <div class="modal__lead-form-agree">
+                            <div class="checkbox form-check__field" data-check-type="input"
+                                 data-check="checkbox-required">
+                                <div class="checkbox__item">
+                                    <input class="checkbox__item-input" checked id="checkbox_3" name="test_11"
+                                           value="checkbox_1" type="checkbox"/>
+                                    <label class="checkbox__item-label" for="checkbox_3">Я даю согласие на обработку
+                                        персональных данных.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="modal__lead-form-button button form-check__button">Записаться</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
+<script src="plugins/owlcarousel2/owl.carousel.min.js" defer></script>
+<script src="plugins/lightbox2/js/lightbox.min.js" defer></script>
+<script src="plugins/jquery.maskedinput.min.js" defer></script>
+<link rel="stylesheet" type="text/css" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="plugins/lightbox2/css/lightbox.min.css">
+<script src="https://api-maps.yandex.ru/2.1/?apikey=a92927fd-3ed7-4f3e-8b71-6b7d7f4d2a90&lang=ru_RU"
+        type="text/javascript"></script>
+<script src="js/main.js" defer></script>
+<script src="plugins/wow/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+</body>

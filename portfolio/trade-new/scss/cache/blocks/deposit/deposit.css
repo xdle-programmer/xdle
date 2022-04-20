@@ -1,0 +1,103 @@
+.deposit {
+  padding: 35px;
+  width: 1050px;
+  background: #24292d;
+  border-radius: 10px;
+  position: relative; }
+  @media (max-width: 1023px) {
+    .deposit {
+      width: 95vw;
+      padding: 10px;
+      padding-bottom: 20px;
+      padding-top: 40px; } }
+  .deposit:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #264de4, #02ecff);
+    left: 0;
+    top: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .deposit__title {
+    text-align: center;
+    color: #cddaec;
+    font-weight: 700;
+    font-size: 29px; }
+    @media (max-width: 1023px) {
+      .deposit__title {
+        font-size: 23px; } }
+  .deposit__subtitle {
+    text-align: center;
+    color: #616f82;
+    font-size: 25px;
+    font-weight: 300; }
+    @media (max-width: 1023px) {
+      .deposit__subtitle {
+        font-size: 20px; } }
+  .deposit__buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 80px;
+    margin-top: 40px; }
+    @media (max-width: 1023px) {
+      .deposit__buttons {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        margin-top: 20px; } }
+  .deposit__button {
+    height: 105px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #303741;
+    cursor: pointer; }
+    .deposit__button.active, .deposit__button:hover {
+      background: linear-gradient(to right, #264de4, #02ecff); }
+    @media (max-width: 1023px) {
+      .deposit__button {
+        height: 45px; } }
+  .deposit__button-img {
+    display: block;
+    height: auto; }
+    .deposit__button-img--qiwi {
+      width: 140px;
+      margin-top: 13px; }
+      @media (max-width: 1023px) {
+        .deposit__button-img--qiwi {
+          width: 75px;
+          margin-top: 9px; } }
+    .deposit__button-img--csgo {
+      width: 140px;
+      margin-top: 13px; }
+      @media (max-width: 1023px) {
+        .deposit__button-img--csgo {
+          width: 75px;
+          margin-top: 6px; } }
+    .deposit__button-img--bitcoin {
+      width: 190px;
+      margin-top: 11px; }
+      @media (max-width: 1023px) {
+        .deposit__button-img--bitcoin {
+          width: 90px;
+          margin-top: 7px; } }
+  .deposit__inputs {
+    display: grid;
+    grid-template-columns: 4fr 3fr auto;
+    grid-gap: 40px;
+    margin-top: 40px; }
+    @media (max-width: 1023px) {
+      .deposit__inputs {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        margin-top: 20px; } }
+  .deposit__input {
+    height: 45px;
+    padding-left: 15px;
+    border-radius: 5px;
+    background: #303741; }

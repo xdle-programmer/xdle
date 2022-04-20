@@ -1,0 +1,215 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.main-slider {
+  @include background-cover-center;
+  transition: none;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+    z-index: -1;
+    background: linear-gradient(135deg, #f92a24 0, #01228b 100%);
+  }
+
+  &__wrapper {
+    width: 100%;
+    padding-top: 20vh;
+    @include margin-auto;
+  }
+
+  &__block {
+
+  }
+
+  &__item {
+    @include flex-column-center;
+    justify-content: space-between;
+    height: 400px;
+    color: $white;
+    text-align: center;
+    opacity: 0;
+    transform: scale(1.2);
+    width: 100%;
+    padding: 0 15%;
+
+    .active & {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    & * {
+      transition: .2s ease-in;
+    }
+
+    @media #{$desktop-big-screen} {
+      height: 300px;
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 200px;
+    }
+
+  }
+
+  &__item-first {
+    font-weight: 200;
+    font-size: 52px;
+
+    @media #{$desktop-big-screen} {
+      font-size: 35px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 30px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 19px;
+    }
+
+  }
+
+  &__item-second {
+    font-weight: 900;
+    font-size: 148px;
+    line-height: 144px;
+
+    @media #{$desktop-big-screen} {
+      font-size: 112px;
+      line-height: 107px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 100px;
+      line-height: 90px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+  }
+
+  &__item-third {
+    font-weight: 200;
+    font-size: 32px;
+
+    @media #{$desktop-big-screen} {
+      font-size: 25px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 22px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+    }
+  }
+
+  & .owl-nav {
+    @include flex-row;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  & .owl-next, & .owl-prev {
+    opacity: .2 !important;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%) scaleX(-1) rotate(-90deg) !important;
+    background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQ0IDQ0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NCA0NCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CiAgPHBhdGggZD0iTTIyLDBDOS44LDAsMCw5LjgsMCwyMnM5LjgsMjIsMjIsMjJzMjItOS44LDIyLTIyUzM0LjIsMCwyMiwweiBNMzEuNywyNS43bC05LDlDMjIuNSwzNC45LDIyLjIsMzUsMjIsMzUgIGMtMC4zLDAtMC41LTAuMS0wLjctMC4zbC05LTlDMTIuMSwyNS41LDEyLDI1LjMsMTIsMjVzMC4xLTAuNSwwLjMtMC43bDEuNC0xLjRjMC40LTAuNCwxLTAuNCwxLjQsMGw0LDRjMC4zLDAuMywwLjksMC4xLDAuOS0wLjRWMTAgIGMwLTAuNiwwLjQtMSwxLTFoMmMwLjYsMCwxLDAuNCwxLDF2MTYuNmMwLDAuNCwwLjUsMC43LDAuOSwwLjRsNC00YzAuNC0wLjQsMS0wLjQsMS40LDBsMS40LDEuNGMwLjIsMC4yLDAuMywwLjQsMC4zLDAuNyAgQzMyLDI1LjMsMzEuOSwyNS41LDMxLjcsMjUuN3oiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+Cg==) !important;
+    @include background-contain-center;
+    cursor: pointer !important;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+
+    @media #{$mobile-big-screen} {
+      display: none;
+    }
+
+  }
+
+  & .owl-next {
+    transform: translateY(-50%) scaleX(-1) rotate(90deg) !important;
+    left: auto;
+    right: 7%;
+  }
+
+  & .owl-next span, & .owl-prev span {
+    display: none;
+  }
+
+  & .owl-next:focus, & .owl-prev:focus {
+    outline: none;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 150px;
+    color: $white;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 40px;
+    font-size: 19px;
+    padding: 10px 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    @media #{$desktop-big-screen} {
+      bottom: 130px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 280px;
+      font-size: 13px;
+    }
+
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 60px;
+    border-radius: 10px;
+    width: 22px;
+    height: 32px;
+    border: 5px solid $white;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+
+    &:after {
+      @include after-absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 7px;
+      border-radius: 3px;
+      background: $white;
+    }
+    &:before {
+      @include after-absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 50px;
+      background: $white;
+    }
+
+  }
+
+}

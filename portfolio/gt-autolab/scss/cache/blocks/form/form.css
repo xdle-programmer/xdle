@@ -1,0 +1,98 @@
+.form {
+  overflow: hidden; }
+  .form__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: calc(100% + 25px);
+    padding-top: 7px; }
+  .form__item {
+    margin-right: 25px;
+    margin-bottom: 7px; }
+    .form__item--no-title {
+      padding-top: 18px; }
+    .form__item--17 {
+      width: calc((50% - (100% / 3)) - 25px); }
+    .form__item--22 {
+      width: calc(((100% - (100% / 3)) / 3) - 25px); }
+    .form__item--33 {
+      width: calc(100% / 3 - 25px); }
+    .form__item--50 {
+      width: calc(50% - 25px); }
+    .form__item--66 {
+      width: calc((100% - (100% / 3)) - 25px); }
+    @media (max-width: 1023px) {
+      .form__item {
+        width: calc(100% - 25px); } }
+  .form__item-title {
+    font-weight: 600;
+    color: #8c8c8c;
+    font-size: 13px;
+    margin-bottom: 3px; }
+  .form__button {
+    margin-top: 15px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #ec4840;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto; }
+    .form__button:hover {
+      background: #ca1e16; }
+    .form__button.disabled {
+      background: #8c8c8c;
+      cursor: default; }
+    .form__button.disabled:hover {
+      background: #8c8c8c; }
+  .form__main.disabled {
+    display: none; }
+  .form__natural.hide {
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    height: 0; }
+  .form__natural-title {
+    font-weight: 600;
+    color: #ec4840;
+    padding: 15px 0;
+    font-size: 15px; }
+  .form__rules {
+    height: 200px;
+    overflow-y: auto;
+    padding-right: 6px;
+    margin: 20px 0; }
+    .form__rules::-webkit-scrollbar-button {
+      background-image: none;
+      background-repeat: no-repeat;
+      width: 4px;
+      height: 0; }
+    .form__rules::-webkit-scrollbar-track {
+      background: linear-gradient(to bottom, #878888 0%, #777777 55%, #878888); }
+    .form__rules::-webkit-scrollbar-thumb {
+      background-color: #000;
+      cursor: pointer; }
+    .form__rules::-webkit-scrollbar-thumb:hover {
+      background-color: black; }
+    .form__rules::-webkit-resizer {
+      background-image: none;
+      background-repeat: no-repeat;
+      width: 4px;
+      height: 0; }
+    .form__rules::-webkit-scrollbar {
+      width: 4px; }
+    .form__rules H5 {
+      margin-top: 0; }
+    .form__rules p {
+      line-height: 19px;
+      font-size: 13px; }

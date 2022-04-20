@@ -1,0 +1,29 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.wrapper {
+  position: relative;
+
+  & *,
+  & *:before,
+  & *:after {
+    transition: $main-transition;
+  }
+
+  & *::-webkit-input-placeholder {
+    transition: $main-transition;
+  }
+
+  & *::-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-ms-input-placeholder {
+    transition: $main-transition;
+  }
+}

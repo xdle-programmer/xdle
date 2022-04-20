@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--=====  Meta Data  ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Training VR</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!--=====  Vendors Styles  ======-->
+    <link rel="stylesheet" href="vendor/loaders.css/loaders.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor/swiper/css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor/animate.css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor/formstone/css/lightbox.css" type="text/css">
+    <link rel="stylesheet" href="vendor/formstone/css/background.css" type="text/css">
+    <link rel="stylesheet" href="vendor/mediaelement/mediaelementplayer.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor/text-animation-css/css/index.css" type="text/css">
+
+    <!--=====  App Styles  ======-->
+    <link rel="stylesheet" href="assets/css/app2.css" type="text/css">
+    <link rel="stylesheet" id="kingma-colors" href="assets/css/colors/green.css" type="text/css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+    <!--=====  Google Web Fonts  ======-->
+    <link href='https://fonts.googleapis.com/css?Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+          rel='stylesheet' type='text/css'>
+
+    <style>
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #0f161e;
+            z-index: 9999;
+        }
+
+        #loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+    <script src="vendor/modernizr/js/index.js"></script>
+</head>
+<body class="menu-open-always" data-spy="scroll" data-target="#top-menu">
+
+<div id="preloader">
+    <div id="loader">
+        <div class="loader-inner line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div><!-- /#loader -->
+</div><!-- /#preloader -->
+<div id="page-outer">
+
+
+    <header id="header" class="site-header">
+        <div class="container-fluid">
+
+            <div id="logo">
+
+                <img src="assets/img/logo-new.svg" class="logo-icon">
+
+            </div><!-- /#logo -->
+
+
+        </div><!-- /.container-fluid -->
+    </header>
+
+    <div id="side-menu" class="side-menu">
+        <ul class="nav" role="tablist">
+            <li class="active"><a data-type="section-switch" href="#banner"><i class="dti-home"></i></a></li>
+            <li><a data-type="section-switch" href="#about-us"><i class="dti-heart"></i></a></li>
+            <li><a data-type="section-switch" href="#portfolio"><i class="dti-picture"></i></a></li>
+            <li><a data-type="section-switch" href="#services"><i class="dti-circle-doller"></i></a></li>
+            <li><a data-type="section-switch" href="#process-flow"><i class="dti-paper-plane"></i></a></li>
+        </ul>
+    </div>
+
+    <section id="banner" class="main-slider" data-carousel="swiper">
+        <div id="banner-container" class="swiper-container full-screen" data-swiper="container" data-effect="fade"
+             data-loop="true" data-autoplay="7000">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide-item background-video-section" data-parallax="video">
+                    <div class="overlay full-screen" data-bg-color="rgba(12, 12, 23, 0.7)">
+                        <div class="slide-caption">
+
+                            <h4 class="slide-mini-title text-center text-uppercase" data-animate="fadeInUp"
+                                data-delay="0.2s" data-duration="0.5s">Платформа Training VR</h4>
+                            <h2 class="slider-huge-title text-center text-uppercase" data-animate="fadeInUp"
+                                data-delay="0.6s" data-duration="0.5s"><span>Безграничные</span> возможности
+                                дистанционных занятий </h2>
+
+                            <div class="slide-description text-center" data-animate="fadeInUp" data-delay="1.0s"
+                                 data-duration="0.5s">
+                                <em>Разработаем универсальное платформенное решение для виртуального обучения в Ваших
+                                    учреждениях <br>с возможностью дополнительной монетизации проекта</em>
+                            </div><!-- /.slide-description -->
+
+                        </div><!-- /.slide-caption -->
+                    </div><!-- /.overlay -->
+                    <div class="background-video"
+                         data-background-options='{"source":{"webm":"videos/raining.webm","mp4":"videos/raining.mp4","ogg":"videos/raining.ogv","poster":"videos/raining.jpg"}}'></div>
+
+                </div><!-- /.swiper-slide -->
+            </div>
+        </div>
+
+
+        <a data-type="section-switch" href="#about-us">
+            <div class="triangle">
+                <span>Далее</span>
+            </div><!-- /.triangle -->
+        </a>
+    </section>
+
+    <section id="about-us">
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="heading-effect outside"></span>
+
+                <h3 class="sub-heading wow fadeInUp" data-wow-delay="0.3s">Платформа <i>Training VR</i> рассчитана на
+                    одновременное обучение:
+                </h3>
+
+
+            </div><!-- /.section-header -->
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about-us-content">
+                        <h3 class="title wow fadeInUp" data-wow-delay="0.3s"><span>Какие задачи решает Платформа</span>
+                            Training VR
+                        </h3>
+
+                        <div class="info-content wow fadeInUp" data-wow-delay="0.5s">
+                            Платформа <span class="alt-color">Training VR</span>
+                            – это система дистанционного обучения, разработанная под Ваши задачи.
+                            Здесь можно организовать отдельные образовательные процессы по каждому направлению:
+                            это могут быть уроки, тренинги, повышение квалификации, семинары и другие
+                            онлайн-мероприятия.
+                            Каждое направление – работает независимо от других Ваших курсов
+                            и может быть использовано параллельно с остальными.
+
+                        </div><!-- /.info-content -->
+                    </div><!-- /.about-us-content -->
+                </div><!-- /.col-md-3 -->
+
+                <div class="col-md-7 col-md-offset-1">
+                    <div class="row">
+
+                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="iconic-box">
+                                <div class="glass-icon icon">
+                                    <i class="fa fa-code-fork"></i>
+                                </div><!-- /.glass-icon icon -->
+
+                                <div class="content-area">
+
+                                    <h3 class="title title--small-margin">в 2D комнате</h3>
+
+                                    <div class="back-icon">
+                                        <!--                                        <i class="fa fa-code-fork"></i>-->
+                                    </div><!-- /.back-icon -->
+
+                                    <div class="content">
+                                        На сайте,<br> до 7 000 000 человек
+                                    </div><!-- /.content -->
+                                </div><!-- /.content -->
+                            </div><!-- /.iconic-box -->
+                        </div><!-- /.col-sm-6 -->
+
+                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="iconic-box">
+                                <div class="glass-icon icon">
+                                    <i class="fa fa-code"></i>
+                                </div><!-- /.glass-icon icon -->
+
+                                <div class="content-area">
+
+                                    <h3 class="title">в VR комнате</h3>
+
+                                    <div class="back-icon">
+                                        <!--                                        <i class="fa fa-code"></i>-->
+                                    </div><!-- /.back-icon -->
+
+                                    <div class="content">
+                                        C очками виртуальной реальности,<br> до 100 человек
+
+                                    </div><!-- /.content -->
+                                </div><!-- /.content -->
+                            </div><!-- /.iconic-box -->
+                        </div><!-- /.col-sm-6 -->
+
+                        <!--                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="1.1s">-->
+                        <div class="content content--text">
+                            Для занятий на платформе зарегистрированным пользователям нужен только планшет, ноутбук или
+                            ПК
+                            с сетевым подключением (в зависимости от программы – интернет или локальным).
+                            При обучении в VR-классах потребуются очки виртуальной реальности.
+                        </div><!-- /.content -->
+
+
+                    </div><!-- /.row -->
+                </div><!-- /.col-md-8 -->
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section>
+
+    <section id="portfolio" data-bg-color="#f2f4f6">
+        <div class="section-header">
+
+            <span class="heading-effect outside"></span>
+
+            <h3 class="sub-heading wow fadeInUp" data-wow-delay="0.3s">Для кого разработана эта система</h3>
+            <h2 class="heading wow fadeInUp"
+                data-wow-delay="0.5s"> <span>В универсальной системе <strong>Training VR </strong>можно учесть любые особенности дистанционного учебного процесса.
+                На платформе удобно проводить индивидуальные или групповые занятия для детей и взрослых.</span>
+            </h2>
+
+        </div><!-- /.section-header -->
+
+        <div class="portfolio-container wow fadeIn" data-wow-delay="0.3s" data-area="isotope">
+
+            <div id="filters" class="button-group filter-btns" data-isotope="filters">
+                <div class="button is-checked" data-filter="*">Виртуальную площадку могут использовать любые
+                    учреждения:
+                </div>
+
+            </div>
+
+            <div id="suoer" class="masonry-grid" data-isotope="container">
+
+                <div class="grid-sizer"></div>
+
+                <div class="grid-item width2 cat-1">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-1.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Онлайн-школы для организации курсов, вебинаров, мастер-классов,
+                                    тренингов.</h3>
+
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item width1 height2 cat-3">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-2.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Судебные медицинские эксперты для моделирования происшествия или
+                                    построения баллистической экспертизы.</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item width4 cat-2">
+                    <div class="content">
+
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-3.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Персональные преподаватели, тренеры и коучи для проведения
+                                    онлайн-сессий</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item cat-4 cat-1">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-4.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Event-организации для проведения массовых мероприятий – конференций,
+                                    семинаров, форумов.</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item cat-3">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-5.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Коммерческие компании для обучения сотрудников новым или
+                                    дополнительным специальностям.</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item width4 cat-4 cat-2">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-6.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Медицинские университеты для обучения студентов хирургов и проведения
+                                    виртуальных трепанаций и вскрытий.
+                                </h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item width4 cat-3 cat-1">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-7.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Социальные организации для создания социальных исследований, опросов
+                                    фокус-групп.</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item width2 cat-2">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-8.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Детские сады, общеобразовательные и частные школы для обучения и
+                                    тестирования.</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item cat-3">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-9.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Исследовательские институты для создания виртуальных лабораторий, а
+                                    также совместной работы с коллегами.
+                                </h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div>
+
+                <div class="grid-item width5 cat-1">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-10.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Государственные и правительственные предприятия для проведения
+                                    инструктажа и повышения квалификации.</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+
+                <div class="grid-item width5 cat-1">
+                    <div class="content">
+                        <div class="item-img" data-bg-image="images/portfolio/portfolio-item-11.jpg"></div>
+
+                        <div class="overlay-content">
+
+                            <div class="info">
+                                <h3 class="title">Высшие учебные заведения для проведения лекций, дополнительных
+                                    занятий, различных мероприятий.</h3>
+                                <!--                                <div class="categories">Photography</div>-->
+                            </div><!-- /.info -->
+
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.content -->
+                </div><!-- /.item -->
+            </div>
+
+            <div class="section-header">
+                <span class="heading-effect outside"></span>
+                <h3 class="sub-heading wow fadeInUp" data-wow-delay="0.3s">Учебные платформы на базе EdX признаны лидерами в сфере образования:</h3>
+                <div class="school-logos">
+                    <div class="school-logos-item">
+                        <img class="school-logos-item-img" src="images/logo-harvard.png">
+                    </div>
+
+                    <div class="school-logos-item">
+                        <img class="school-logos-item-img" src="images/logo-oxford.png">
+                    </div>
+
+                    <div class="school-logos-item">
+                        <img class="school-logos-item-img" src="images/logo-mit.png">
+                    </div>
+                </div>
+                <div class="button is-checked">
+                    Мировые ВУЗы с идентичными системами обучения <a href="#">https://www.edx.org/schools-partners</a>
+                </div>
+            </div>
+
+        </div><!-- /.portfolio-container -->
+
+        <div data-padding-top="185px"></div>
+
+        <div class="triangle-area wow bounceIn" data-wow-delay="0.3s">
+            <a data-type="section-switch" href="#services">
+                <div class="triangle">
+                    <span>Далее</span>
+                </div><!-- /.triangle -->
+            </a>
+        </div><!-- /.triangle-area -->
+    </section>
+
+    <section id="services" class="services-section" data-padding-bottom="20px">
+
+        <div class="section-header">
+            <span class="heading-effect outside"></span>
+
+            <h3 class="sub-heading wow fadeInUp" data-wow-delay="0.3s">Что мы предлагаем?</h3>
+            <h2 class="heading wow fadeInUp" data-wow-delay="0.5s">Наша компания предлагает разработать автономную
+                платформу
+                для дистанционных занятий в Ваших образовательных учреждениях.
+            </h2>
+
+
+        </div><!-- /.section-header -->
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.3s">
+                    <div class="service-box text-center">
+
+
+                        <div class="details">
+                            <i class="dti-display"></i>
+                            <h3 class="title">Вы получите в собственность полностью настроенную независимую
+                                систему.</h3>
+
+                            <div class="content">
+                                В ней будут учтены задачи, корпоративный стиль, Tone of Voice и другие стандарты
+                                компании.
+
+                            </div><!-- /.content -->
+
+
+                        </div><!-- /.details -->
+
+                    </div><!-- /.service-box -->
+                </div><!-- /.col-md-4 col-sm-6 -->
+
+                <div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.5s">
+                    <div class="service-box text-center">
+
+
+                        <div class="details">
+                            <i class="dti-lightbulb"></i>
+                            <h3 class="title">Вам будет доступно копирование и публикация новых подпорталов, созданных
+                                на основе готового.
+                            </h3>
+
+                            <div class="content">
+                                Это удобно для работы разных брендов или групп клиентов в рамках одной установки и
+                                направления.
+                            </div><!-- /.content -->
+
+
+                        </div><!-- /.details -->
+
+                    </div><!-- /.service-box -->
+                </div><!-- /.col-md-4 col-sm-6 -->
+
+                <div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.7s">
+                    <div class="service-box text-center">
+
+
+                        <div class="details">
+                            <i class="dti-world"></i>
+                            <h3 class="title">Вы сможете лицензировать платформу и продать <span>неограниченное</span> количество
+                                копий</h3>
+
+                            <div class="content">
+                                Готовую площадку можно как конструктор настраивать под новые требования.
+                            </div><!-- /.content -->
+
+                        </div><!-- /.details -->
+
+                    </div><!-- /.service-box -->
+                </div><!-- /.col-md-4 col-sm-6 -->
+
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+
+    </section>
+
+    <section id="prices">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="section-header">
+                    <span class="heading-effect outside"></span>
+
+                    <h3 class="sub-heading wow fadeInUp" data-wow-delay="0.3s">Техническая реализация проекта</h3>
+                    <div class="prices-subtitle wow fadeInUp" data-wow-delay="0.5s">
+                        Для построения платформы мы используем открытый исходный код EdX.<br>
+                        EdX – это система управления обучением с возможностью настройки всех элементов.<br>
+                        Команда разработчиков MIE пересоберёт и перепрограммирует конструктор под конкретные задачи.<br>
+                    </div>
+                    <div class="prices-desc wow fadeInUp" data-wow-delay="0.5s">
+                        Пример одного из самых известных реализованных решений на базе этого исходного кода – проект OpenEdX open.edx.org (основан в 2012 году Массачусетским
+                        технологическим институтом и Гарвардским университетом). Платформа бесплатного обучения быстро получила взрывной успех у студентов. В данный момент на этой
+                        площадке размещено уже более 20 000 онлайн-программ со всего мира.
+                    </div>
+                    <span class="heading-effect outside"></span>
+                    <h3 class="sub-heading wow fadeInUp" data-wow-delay="0.3s">Существенная экономия</h3>
+                    <div class="prices-desc wow fadeInUp" data-wow-delay="0.5s">
+                        Большинство вендоров используют при внедрении модель с существенной ежемесячной оплатой, в то время как мы работаем с единоразовой фиксированной оплатой.
+                        <br>
+                        <br>
+                        Вам не придётся ежегодно оплачивать лицензию за использование EdX – это открытая платформа.<br>
+                        Все обновления будут всегда бесплатными.
+                    </div>
+
+                </div><!-- /.section-header -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 wow zoomIn" data-wow-delay="0.5s">
+                <div class="row">
+                    <div class="pricing-table active">
+                        <div class="pricing-header">
+                            <div class="price"><small>$</small>50 000</div>
+                            <div class="cycle">
+                                <span>Единоразово</span>
+                                <span>Разработка типовых программ обучения под каждое учреждение</span>
+                                <span>Тестирование, поддержка платформы, обучение Ваших сотрудников</span>
+                            </div>
+                        </div><!-- /.pricing-header -->
+
+                        <ul class="pricing-features">
+                            <li>Проектирование с учётом задач и особенностей учреждения</li>
+                            <li>Разработка Ui/UX интерфейса 2D или 3D формата</li>
+                            <li>Вёрстка Ui/UX интерфейсов с адаптацией под все устройства<br>
+                                (мобильные версии под Android, Windows и MacIOs), VR очки
+                            </li>
+                            <li>Программирование и настройка платформы, последовательный запуск каждого раздела системы</li>
+                            <li>Создание конструктора обучающих программ</li>
+
+
+                        </ul>
+
+                        <a href="#compare-vendors" class="buy-link">
+                            Сравнить
+                        </a>
+                    </div><!-- /.pricing-table -->
+                </div><!-- /.row -->
+            </div><!-- /.col-md-4 -->
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="compare-vendors" id="compare-vendors">
+                    <div class="compare-vendors__header">
+                        <div class="compare-vendors__header-title">
+                            Сравнить вендоров
+                        </div>
+                        <div class="compare-vendors__buttons">
+                            <div class="compare-vendors__button active" data-price="5000">
+                                <div class="compare-vendors__button-title">Американский интегратор</div>
+                                <div class="compare-vendors__button-price">от $ 5 000 в месяц</div>
+                            </div>
+                            <div class="compare-vendors__button" data-price="3800">
+                                <div class="compare-vendors__button-title">Немецкий интегратор</div>
+                                <div class="compare-vendors__button-price">от $ 3 800 в месяц</div>
+                            </div>
+                            <div class="compare-vendors__button" data-price="2000">
+                                <div class="compare-vendors__button-title">Турецкий интегратор</div>
+                                <div class="compare-vendors__button-price">от $ 2 000 в месяц</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compare-vendors__chart">
+                        <div class="ct-chart"></div>
+                        <div id="price_range" class="range-slider">
+                            <div class="range-slider__item"></div>
+                            <div class="range-slider__desc">
+                                <div class="range-slider__desc-item range-slider__desc-item--month">
+                                    <div class="range-slider__desc-name">Месяцев использования</div>
+                                    <div class="range-slider__desc-val"></div>
+                                </div>
+                                <div class="range-slider__desc-item range-slider__desc-item--economy">
+                                    <div class="range-slider__desc-name">Экономия</div>
+                                    <div class="range-slider__desc-val"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" data-type="overlay-section">
+        <div class="overlay overlay--no-mobile-bottom" data-bg-color="rgba(255,255,255,0.9)" data-padding-bottom="150px">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="heading-effect"></span>
+
+                    <div class="features-switch-header">
+                        <div class="features-switch-header-item active" data-id-goal="benefits">Ваши выгоды</div>
+                        <div class="features-switch-header-item" data-id-goal="opportunities">Ваши возможности</div>
+                    </div>
+
+                </div><!-- /.section-header -->
+
+
+                <div class="features-switch active" data-id="benefits">
+                    <div class="features-circle" data-padding-top="50px">
+                        <div class="row">
+
+                            <div class="col-sm-3">
+                                <div class="circle-iconic-box left-side">
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-support"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Создание мощной виртуальной платформы по низкой стоимости.</h4>
+                                        <div class="content">
+                                            У нас действительно лучшее предложение по цене на рынке компаний-интеграторов
+                                            образовательных платформ.
+                                            Мы сохраняем конкурентный прайс за счёт большого количества наработок и объёмов
+                                            реализуемых проектов.
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-code"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Получение нужного результата без нервов.</h4>
+                                        <div class="content">
+                                            Благодаря опыту работы с подобными интеграциями – мы точно знаем, что делать для
+                                            быстрого и правильного решения
+                                            определённой учебной ситуации. При этом от Вас нужна только задача и план
+                                            обучения. Остальное – наша работа.
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+                                </div><!-- /.left-side -->
+                            </div><!-- /.col-sm-3 -->
+
+                            <div class="col-sm-6">
+                                <div class="middle-circle">
+                                    <div class="middle-circle-title">Training VR</div>
+
+                                    <div class="icon icon--1 size-m  bounceIn" data-wow-delay="0.3s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-support"></i>-->
+                                        <div class="middle-circle__icon-1"></div>
+
+                                    </div><!-- /.icon -->
+
+                                    <div class="icon icon--2 size-m  bounceIn" data-wow-delay="0.5s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-html5"></i>-->
+                                        <div class="middle-circle__icon-2"></div>
+                                    </div><!-- /.icon -->
+
+                                    <div class="icon icon--3 size-m bounceIn" data-wow-delay="0.7s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-code"></i>-->
+                                        <div class="middle-circle__icon-3"></div>
+                                    </div><!-- /.icon -->
+
+                                    <!--                                <div class="logo-text&#45;&#45;center">Training VR</div>-->
+                                    <!--                                <img src="assets/img/logo-v2.png" alt="KingMa">-->
+
+                                    <div class="icon icon--4 size-m bounceIn" data-wow-delay="0.3s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-th"></i>-->
+                                        <div class="middle-circle__icon-4"></div>
+                                    </div><!-- /.icon -->
+
+
+                                    <div class="icon icon--5 size-m bounceIn" data-wow-delay="0.7s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-pencil"></i>-->
+                                        <div class="middle-circle__icon-5"></div>
+                                    </div><!-- /.icon -->
+
+
+                                </div><!-- /.middle-circle -->
+                            </div><!-- /.col-sm-6 -->
+
+                            <div class="col-sm-3">
+                                <div class="circle-iconic-box right-side">
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-th"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Возможность дополнительной прибыли с помощью платформы.</h4>
+                                        <div class="content">
+                                            Вы будете собственником конечного продукта. Это значит, что сможете
+                                            распространять неограниченного количество копий
+                                            и внедрять свою систему в любые образовательные учреждения. За пользование
+                                            платформой субпокупатель вносит
+                                            ежемесячную фиксированную оплата по тарифу – 2000 евро в месяц на Ваш счёт.
+
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-pencil"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Заказ уникальных технологических решений по доступной цене.</h4>
+                                        <div class="content">
+                                            Наши программисты смогут разработать и интегрировать в образовательную систему
+                                            необходимые Вам возможности.
+                                            Например, построить виртуальное пространство для испытаний какого либо
+                                            устройства (с предварительным созданием модели,
+                                            а также написанием сценариев его поведения на основе математических расчетов).
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-desktop"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Экономия на обслуживании системы.</h4>
+                                        <div class="content">
+                                            Вы сможете выбрать любой вид обслуживания платформы: с помощью наших
+                                            специалистов
+                                            или назначить ответственными за технические вопросы собственных сотрудников.
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+                                </div><!-- /.right-side -->
+                            </div><!-- /.col-sm-3 -->
+
+                        </div><!-- /.row -->
+                    </div><!-- /.features-circle -->
+                </div>
+                <div class="features-switch" data-id="opportunities">
+                    <div class="features-circle" data-padding-top="50px">
+                        <div class="row">
+
+                            <div class="col-sm-3">
+                                <div class="circle-iconic-box left-side">
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-support"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Открытие виртуальной школы из любой точки мира.
+                                        </h4>
+                                        <div class="content">
+                                            Каждый желающий сможет запустить свою онлайн-школу из любой точки мира: заказать
+                                            индивидуальную разработку или использовать
+                                            готовое решение по фиксированному тарифу. Покупателем и Субпокупателем может
+                                            стать юридическое или частное лицо.
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-code"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Организация онлайн и оффлайн обучения.</h4>
+                                        <div class="content">
+                                            Есть возможность запускать платформу через интернет или по локальной сети на
+                                            серверах учреждения.
+                                            Это бывает актуально для предприятий с повышенной секретностью данных, а также
+                                            для некоторых учебных заведений.
+
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+                                </div><!-- /.left-side -->
+                            </div><!-- /.col-sm-3 -->
+
+                            <div class="col-sm-6">
+                                <div class="middle-circle">
+                                    <div class="middle-circle-title">Training VR</div>
+
+                                    <div class="icon icon--1 size-m  bounceIn" data-wow-delay="0.3s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-support"></i>-->
+                                        <div class="middle-circle__icon-6"></div>
+
+                                    </div><!-- /.icon -->
+
+                                    <div class="icon icon--2 size-m  bounceIn" data-wow-delay="0.5s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-html5"></i>-->
+                                        <div class="middle-circle__icon-7"></div>
+                                    </div><!-- /.icon -->
+
+                                    <div class="icon icon--3 size-m bounceIn" data-wow-delay="0.7s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-code"></i>-->
+                                        <div class="middle-circle__icon-8"></div>
+                                    </div><!-- /.icon -->
+
+
+                                    <div class="icon icon--4 size-m bounceIn" data-wow-delay="0.3s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-th"></i>-->
+                                        <div class="middle-circle__icon-9"></div>
+                                    </div><!-- /.icon -->
+
+
+                                    <div class="icon icon--5 size-m bounceIn" data-wow-delay="0.7s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-pencil"></i>-->
+                                        <div class="middle-circle__icon-10"></div>
+                                    </div><!-- /.icon -->
+                                    <div class="icon icon--6 size-m bounceIn" data-wow-delay="0.7s">
+                                        <span class="direction"></span>
+                                        <!--                                    <i class="fa fa-pencil"></i>-->
+                                        <div class="middle-circle__icon-11"></div>
+                                    </div><!-- /.icon -->
+
+
+                                </div><!-- /.middle-circle -->
+                            </div><!-- /.col-sm-6 -->
+
+                            <div class="col-sm-3">
+                                <div class="circle-iconic-box right-side">
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-th"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Выбор любого типа занятий.</h4>
+                                        <div class="content">
+                                            В зависимости от задач можно открывать интерактивные учебные классы, детские
+                                            игровые комнаты, виртуальные лаборатории,
+                                            залы для выступлений онлайн-спикеров на огромные аудитории и так далее. А также
+                                            запускать всё это одновременно!
+
+
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-pencil"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Использование разных форматов.</h4>
+                                        <div class="content">
+                                            Площадка даёт возможность организовать классические 2D занятия на сайте или
+                                            создать захватывающее
+                                            виртуальное 3D пространство с погружением в учебный процесс при помощи VR очков.
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+                                    <div class="box-item">
+                                        <div class="icon">
+                                            <i class="fa fa-desktop"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Решение всех образовательных задач.</h4>
+                                        <div class="content">
+                                            По универсальности и количеству возможностей продукт не имеет аналогов. Вы
+                                            получите собранную платформу-конструктор для обучения по
+                                            любым специальностям и направлениям (как гуманитарных, так и точных). Также нет
+                                            ограничений на сценарии и количество занятий.
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+                                    <div class="box-item box-item--select wow bounceInRight" data-wow-delay="0.9s">
+                                        <div class="icon">
+                                            <i class="fa fa-desktop"></i>
+                                        </div><!-- /.icon -->
+                                        <h4 class="title">Строгий контроль учеников.</h4>
+                                        <div class="content">
+                                            В платформу Traning VR встроена умная система удалённого контроля обучающихся.
+                                            Студент не может заниматься на
+                                            уроке другими делами на компьютере, так как платформа на время сессии блокирует
+                                            другие программы на устройстве
+                                            ученика. Возможность частично контролировать ситуацию на экране студента будет у
+                                            лектора. Также система позволяет
+                                            настроить родительский контроль.
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box-item -->
+
+                                </div><!-- /.right-side -->
+                            </div><!-- /.col-sm-3 -->
+
+                        </div><!-- /.row -->
+                    </div><!-- /.features-circle -->
+                </div>
+
+
+            </div><!-- /.container -->
+
+            <div class="clearfix"></div>
+
+        </div><!-- /.overlay -->
+    </section>
+
+    <div data-padding-top="150px"></div>
+
+    <div class="triangle-area wow bounceIn" data-wow-delay="0.5s">
+        <a data-type="section-switch" href="#portfolio">
+            <div class="triangle">
+                <span>Далее</span>
+            </div><!-- /.triangle -->
+        </a>
+    </div><!-- /.triangle-area -->
+
+    <section id="process-flow" class="transparent-section" data-parallax="image">
+        <div class="overlay" data-bg-color="rgba(0,0,0,0.85)">
+
+            <div class="section-header">
+                <span class="heading-effect"></span>
+
+                <h3 class="sub-heading wow fadeInUp" data-wow-delay="0.3s">Свяжитесь с нами для обсуждения деталей</h3>
+                <h2 class="heading wow fadeInUp" data-wow-delay="0.5s"><span>После обсуждения всех нюансов Ваших задач и составления Технического задания
+мы готовы сразу назвать итоговую стоимость и сроки работ, а также прописать эти данные в Договоре.
+</span></h2>
+                <h2 class="heading wow fadeInUp heading-margin " data-wow-delay="0.5s">Финансирование проекта может быть единовременным или производиться в три этапа:</h2>
+            </div><!-- /.section-header -->
+
+            <div class="container">
+                <div class="process-flow">
+
+                    <!-- Proccess Items -->
+                    <ul class="process-flow-nav" role="tablist">
+                        <li role="presentation" class="active wow fadeInRight" data-wow-delay="0.3s">
+                            <a href="#dt-discussion" aria-controls="dt-discussion" role="tab" data-toggle="tab">
+                                <i class="fa fa-comments-o"></i>
+                                <span>Этап 1</span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="wow fadeInRight" data-wow-delay="0.5s">
+                            <a href="#dt-analyze" aria-controls="dt-analyze" role="tab" data-toggle="tab">
+                                <i class="fa fa-binoculars"></i>
+                                <span>Этап 2</span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="wow fadeInRight" data-wow-delay="0.7s">
+                            <a href="#dt-design" aria-controls="dt-design" role="tab" data-toggle="tab">
+                                <i class="fa fa-paint-brush"></i>
+                                <span>Этап 3</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content process-flow-content wow fadeInUp" data-wow-delay="1.1s">
+                        <div role="tabpanel" class="tab-pane fade in active" id="dt-discussion">
+                            <h3 class="flow-title">Проектирование платформы, согласование, разработка и вёрстка интерфейса.
+                            </h3>
+                            <div class="flow-content">
+                                Этот комплекс работ занимает около 4 месяцев.
+
+                            </div><!-- /.flow-content -->
+                        </div><!-- /.tabpanel -->
+
+                        <div role="tabpanel" class="tab-pane fade in" id="dt-analyze">
+                            <h3 class="flow-title">Программирование и запуск платформы, создание конструктора обучающих
+                                программ.</h3>
+                            <div class="flow-content">
+                                Работы идут около 1 месяца.
+
+                            </div><!-- /.flow-content -->
+                        </div><!-- /.tabpanel -->
+
+                        <div role="tabpanel" class="tab-pane fade in" id="dt-design">
+                            <h3 class="flow-title">Разработка типовых программ обучения под каждое учреждение, тесты и сдача
+                                проекта.</h3>
+                            <div class="flow-content">
+                                На завершающий этап также отводится 1 месяц.
+
+                            </div><!-- /.flow-content -->
+                        </div><!-- /.tabpanel -->
+
+                        <div role="tabpanel" class="tab-pane fade in" id="dt-deliver">
+                            <h3 class="flow-title">Deliver</h3>
+                            <div class="flow-content">
+                                We are a fairly small, flexible design studio that designs for print and web. We work
+                                flexibly with clients to fulfil their design needs. Whether you need to create a brand
+                                from scratch, including marketing materials and a beautiful and functional website or
+                                whether you are looking for a design refresh we are confident you will be pleased with
+                                the results.
+                            </div><!-- /.flow-content -->
+                        </div><!-- /.tabpanel -->
+                    </div>
+
+                    <div class="special-text text-uppercase text-center wow fadeInUp" data-wow-delay="1.3s">
+                        Ответственное лицо: руководитель проекта <span>David Goldman</span>
+                        Задавайте любые уточняющие вопросы по номеру <span>+34 822 621 080</span>, <span>+7 800 200 89 41 (для звонков из России)</span>
+                        или письмом на <span>info@madeinearth.online</span>
+
+                    </div><!-- /.special-text -->
+
+
+                    <div class="footer-logo wow fadeInUp" data-wow-delay="1.3s">
+                        <div class="footer-logo-text">
+                            Разработка компании <a href="www.madeinearth.online">www.madeinearth.online</a>
+                        </div>
+                        <div class="footer-logo-img">
+
+                        </div>
+                    </div>
+                </div><!-- /.process-flow -->
+
+                <!--                <div data-padding-bottom="150px"></div>-->
+            </div><!-- /.container -->
+        </div><!-- /.overlay -->
+    </section><!-- /#process-flow -->
+
+
+</div>
+
+<div id="back-to-top">
+    <span>Top</span>
+</div><!-- /#back-to-top -->
+
+
+<!--=====  Vendors Scripts  ======-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+<script src="vendor/gmap3/gmap3.min.js"></script>
+<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<script src="vendor/swiper/js/swiper.min.js"></script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/formstone/js/core.js"></script>
+<script src="vendor/formstone/js/touch.js"></script>
+<script src="vendor/formstone/js/transition.js"></script>
+<script src="vendor/formstone/js/lightbox.js"></script>
+<script src="vendor/formstone/js/background.js"></script>
+<script src="vendor/jquery.appear/jquery.appear.js"></script>
+<script src="vendor/countUp.js/js/countUp.min.js"></script>
+<script src="vendor/mediaelement/mediaelement-and-player.min.js"></script>
+<script src="vendor/smoothscroll/SmoothScroll.js"></script>
+<script src="vendor/text-animation/js/index.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!--=====  App Scripts  ======-->
+<script src="assets/js/app.js"></script>
+<script src="assets/js/color-switcher.js"></script>
+
+
+</body>
+</html>

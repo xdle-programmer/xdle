@@ -1,0 +1,230 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.grid-menu {
+  @include flex-row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__item {
+    width: 25%;
+    height: 275px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+
+    @media #{$desktop-small-screen} {
+      height: 230px;
+      padding: 30px 10px;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 50%;
+      height: 200px;
+      padding-bottom: 10px;
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 160px;
+    }
+
+    &--main {
+      @media #{$mobile-big-screen} {
+        display: none;
+      }
+
+    }
+
+  }
+
+  &__item-background {
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: -10px;
+    left: -10px;
+
+    &--smm {
+      background: url(../../img/smm--small.jpg);
+      @include background-cover-center;
+
+      &:after {
+        background: linear-gradient(to top, rgba(59, 89, 152, .5), rgba(59, 89, 152, 0));
+      }
+
+    }
+    &--context {
+      background: url(../../img/context--small.jpg);
+      @include background-cover-center;
+
+      &:after {
+        background: linear-gradient(to top, rgba(157, 113, 0, .5), rgba(157, 113, 0, 0));
+      }
+
+    }
+    &--seo {
+      background: url(../../img/seo--small.jpg);
+      @include background-cover-center;
+
+      &:after {
+        background: linear-gradient(to top, rgba(88, 26, 77, .5), rgba(88, 26, 77, 0));
+      }
+
+    }
+    &--web {
+      background: url(../../img/web__small.jpg);
+      @include background-cover-center;
+
+      &:after {
+        background: linear-gradient(to top, rgba(57, 57, 57, .5), rgba(57, 57, 57, 0));
+      }
+    }
+    &--tilda {
+      background: url(../../img/tilda--small.jpg);
+      @include background-cover-center;
+
+      &:after {
+        background: linear-gradient(to top, rgba(105, 105, 105, .5), rgba(105, 105, 105, 0));
+      }
+    }
+    &--design {
+      background: url(../../img/design--small.jpg);
+      @include background-cover-center;
+
+      &:after {
+        background: linear-gradient(to top, rgba(60, 25, 33, .5), rgba(60, 25, 33, 0));
+      }
+    }
+    &--branding {
+      background: url(../../img/branding--small.jpg);
+      @include background-cover-center;
+
+      &:after {
+        background: linear-gradient(to top, rgba(38, 29, 23, .5), rgba(38, 29, 23, 0));
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: inherit;
+    }
+
+  }
+
+  &__item:hover &__item-background {
+    filter: blur(2px);
+    transition: all 0.15s ease-out;
+  }
+
+  &__item:hover &__item-background:after {
+    transform: scaleY(.5);
+  }
+
+  &__item-content {
+    @include flex-column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      padding: 10px;
+    }
+
+  }
+
+  &__item-contact-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+    padding: 5px 20px;
+
+    @media #{$desktop-small-screen} {
+      padding: 5px 10px;
+    }
+
+  }
+
+  &__item-title {
+    color: $white;
+    font-family: Montserrat-bold, sans-serif;
+    font-size: 24px;
+
+    @media #{$desktop-small-screen} {
+      font-size: 21px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 18px;
+      text-align: center;
+    }
+
+  }
+
+  &__logo {
+  }
+
+  &__list {
+    margin-top: 10px;
+    color: $white;
+    font-size: 12px;
+    font-family: Montserrat-regular, sans-serif;
+
+    &--main {
+      color: $black;
+      font-size: 14px;
+      font-weight: 500;
+
+      @media #{$desktop-small-screen} {
+        font-size: 12px;
+      }
+
+    }
+
+    @media #{$mobile-big-screen} {
+      display: none;
+    }
+
+  }
+
+  &__list-item {
+    transform: scaleY(0);
+    opacity: 0;
+
+    &--main {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  &__item:hover &__list-item {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  &__desc {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__item-button {
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+
+    &--main {
+      margin-top: 10px;
+    }
+
+  }
+
+}

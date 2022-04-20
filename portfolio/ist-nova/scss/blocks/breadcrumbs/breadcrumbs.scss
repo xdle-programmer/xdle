@@ -1,0 +1,41 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.breadcrumbs {
+  @include flex-row;
+  padding: 20px 0;
+
+  @media #{$mobile-big-screen} {
+    padding: 10px 0;
+  }
+
+  &__link {
+    @include flex-row;
+    color: $black;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 300;
+
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__link:after {
+    content: '';
+    display: block;
+    margin-left: 10px;
+    width: 1px;
+    height: 15px;
+    background: $black;
+    font-size: 14px;
+    transform: rotate(26deg);
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

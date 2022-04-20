@@ -1,0 +1,83 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/fonts/MONTSERRAT-LIGHT_1.TTF);
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/fonts/MONTSERRAT.TTF);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/fonts/MONTSERRAT-SEMIBOLD_1.TTF);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/fonts/MONTSERRAT-BOLD_1.TTF);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/fonts/MONTSERRAT-BLACK_1.TTF);
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  transition: all .2s ease-in;
+  margin: 0;
+}
+
+*:before,
+*:after {
+  transition: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+button, input {
+  border: none;
+}
+
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+.owl-carousel {
+  display: block !important;
+}

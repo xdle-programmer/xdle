@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.pharmacy-card {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-gap: 30px;
+  margin-bottom: 40px;
+
+  @media #{$mobile-big-screen} {
+    grid-template-columns: 1fr;
+  }
+
+  &__desc {
+  }
+
+  &__desc-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__desc-item {
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__desc-item-name {
+    color: #808080;
+  }
+
+  &__desc-item-value {
+  }
+
+  &__worktime {
+    margin: 20px 0;
+  }
+
+  &__desc-button {
+    border-radius: 5px;
+    background-color: #2b97df;
+    color: $white;
+    @include flex-column-center;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__map {
+
+    @media #{$mobile-big-screen} {
+      height: 350px;
+    }
+  }
+}

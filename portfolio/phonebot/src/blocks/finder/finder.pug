@@ -1,0 +1,249 @@
+.finder
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    link(rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js')
+    script(src="https://cdn.jsdelivr.net/npm/@mladenilic/threesixty.js/dist/threesixty.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+    script
+        include duration.js
+
+
+    .finder__load-video-test
+        video(autoplay, muted).finder__load-video-test-item
+            source(src='src/blocks/finder/assets/video/0-in.mp4', type='video/mp4')
+        video(autoplay, muted).finder__load-video-test-item
+            source(src='src/blocks/finder/assets/video/0-out.mp4', type='video/mp4')
+
+    .finder__loader
+        svg.finder__loader-circular(viewBox='25 25 50 50')
+            circle.finder__path(cx='50' cy='50' r='20' fill='none' stroke-width='2' stroke-miterlimit='10')
+
+    .finder__wrapper
+        .finder__default-back.finder__default-back--hide
+        .finder__item(data-slide='0')
+            .finder__item-video-wrapper
+                video(autoplay, muted).finder__item-video.finder__item-video--in
+                    source(src='src/blocks/finder/assets/video/0-in.mp4', type='video/mp4')
+                video(autoplay, muted).finder__item-video.finder__item-video--out.finder__item-video--hide
+                    source(src='src/blocks/finder/assets/video/0-out.mp4', type='video/mp4')
+            .finder__item-content.finder__item-content--1
+                .finder__item-content-inner
+                    .finder__item-content-elem.finder__item-animation-elem
+                    .finder__item-content-subtitle.finder__item-animation-elem
+                    .finder__item-content-title.finder__item-animation-elem Phonebot Phone Finder
+                    .finder__item-content-mobile-elem.finder__item-animation-elem
+                    .finder__item-content-desc.finder__item-animation-elem In 3 minutes or less, Phonebot Phone Finder will help you select the right phone for yourself or your loved ones. Whether you are looking for the latest model with all new features or something more budget friendly, we will match you with our top picks that you’re sure to love.
+                    .finder__item-content-button.finder__item-animation-elem.finder__item-content-button--first-slide Let’s Begin
+        .finder__item(data-slide='1')
+            .finder__item-video-wrapper
+                video(autoplay, muted).finder__item-video.finder__item-video--in
+                    source(src='src/blocks/finder/assets/video/1-in.mp4', type='video/mp4')
+                video(autoplay, muted).finder__item-video.finder__item-video--out.finder__item-video--hide
+                    source(src='src/blocks/finder/assets/video/1-out.mp4', type='video/mp4')
+            .finder__item-content.finder__item-content--2
+                .finder__item-content-inner
+                    .finder__item-content-inner-wrapper
+                        .finder__item-content-title.finder__item-animation-elem Price selection
+                        .finder__item-content-subtitle.finder__item-animation-elem What is your budget for this phone?
+                        .finder__selection.finder__price-selection
+                            .finder__selection-item.finder__price-selection-item.finder__item-animation-elem(data-price-min='80', data-price-max='250')
+                                .finder__price-selection-item-icon
+                                .finder__price-selection-item-title 80 - 250
+                            .finder__selection-item.finder__price-selection-item.finder__item-animation-elem(data-price-min='250', data-price-max='500')
+                                .finder__price-selection-item-icon
+                                .finder__price-selection-item-title 250 - 500
+                            .finder__selection-item.finder__price-selection-item.finder__item-animation-elem(data-price-min='500', data-price-max='750')
+                                .finder__price-selection-item-icon
+                                .finder__price-selection-item-title 500 - 750
+                            .finder__selection-item.finder__price-selection-item.finder__item-animation-elem(data-price-min='750', data-price-max='1000')
+                                .finder__price-selection-item-icon
+                                .finder__price-selection-item-title 750 - 1000+
+
+                            #price-range.range-slider.finder__item-animation-elem.finder__item-animation-elem--opacity
+                                .range-slider__item
+                                .range-slider__hints
+                                    .range-slider__hint.range-slider__hint--1
+                                        .range-slider__hint-item $ 80
+                                    .range-slider__hint.range-slider__hint--2
+                                        .range-slider__hint-item $ 250
+                                    .range-slider__hint.range-slider__hint--3
+                                        .range-slider__hint-item $ 500
+                                    .range-slider__hint.range-slider__hint--4
+                                        .range-slider__hint-item $ 750
+                                    .range-slider__hint.range-slider__hint--5
+                                        .range-slider__hint-item $ 1000+
+
+
+
+                        .finder__item-price-to-img.finder__item-animation-elem
+                            .finder__item-price-to-img-wrapper
+                                .finder__item-price-to-img-icon
+                                .finder__item-price-to-img-value 250 - 500
+        .finder__item(data-slide='2')
+            .finder__item-content.finder__item-content--3
+                .finder__item-content-inner.finder__item-animation-elem.finder__item-animation-elem--opacity
+                    .finder__item-content-inner-wrapper
+
+                        .finder__item-content-title Grade Selection
+                        .finder__item-content-subtitle Please select the cosmetic condition of your phone
+
+                        .finder__item-condition-gallery
+                            .finder__item-condition-gallery-buttons
+                                .finder__item-condition-gallery-button.finder__item-condition-gallery-button--left#threesixty-prev
+                                .finder__item-condition-gallery-button.finder__item-condition-gallery-button--right#threesixty-next
+                                .finder__item-condition-gallery-button.finder__item-condition-gallery-button--zoom-in
+                                .finder__item-condition-gallery-button.finder__item-condition-gallery-button--zoom-out
+
+                            .finder__item-condition-gallery-wrapper
+                                .finder__item-condition-gallery-item#threesixty
+
+                        .finder__selection.finder__condition-selection
+                            .finder__selection-item.finder__condition-selection-item
+                                img(src='images/condition-icons/condition_1.png').finder__condition-selection-item-img
+                                .finder__condition-selection-item-desc
+                                    .finder__condition-selection-item-title Brand New
+                                    .finder__condition-selection-item-desc I want a brand new phone
+                            .finder__selection-item.finder__condition-selection-item
+                                img(src='images/condition-icons/condition_1.png').finder__condition-selection-item-img
+                                .finder__condition-selection-item-desc
+                                    .finder__condition-selection-item-title Open Box
+                                    .finder__condition-selection-item-desc I want a phone with no signs of use
+                            .finder__selection-item.finder__condition-selection-item
+                                img(src='images/condition-icons/condition_1.png').finder__condition-selection-item-img
+                                .finder__condition-selection-item-desc
+                                    .finder__condition-selection-item-title Like New
+                                    .finder__condition-selection-item-desc My phone should have very minimal signs of previous usage
+                            .finder__selection-item.finder__condition-selection-item
+                                img(src='images/condition-icons/condition_1.png').finder__condition-selection-item-img
+                                .finder__condition-selection-item-desc
+                                    .finder__condition-selection-item-title Grade A
+                                    .finder__condition-selection-item-desc Its okay if my phone has some signs of use
+                            .finder__selection-item.finder__condition-selection-item
+                                img(src='images/condition-icons/condition_1.png').finder__condition-selection-item-img
+                                .finder__condition-selection-item-desc
+                                    .finder__condition-selection-item-title Grade B
+                                    .finder__condition-selection-item-desc Its okay if my phone has significant signs of use as long as it works 100%
+
+
+
+        .finder__item(data-slide='3')
+            .finder__item-video-wrapper
+
+            .finder__item-content.finder__item-content--4
+                .finder__item-content-inner
+                    .finder__item-content-title.finder__item-animation-elem Operating System
+                    .finder__item-content-subtitle.finder__item-animation-elem which operating system do you prefer?
+
+                    .finder__item-os-selection-img
+                        .finder__item-os-selection-img-inner
+                            .finder__item-os-selection-img-inner-back.finder__item-animation-elem
+                            .finder__item-os-selection-img-inner-phone.finder__item-animation-elem
+                                .finder__item-os-selection-img-inner-phone-apple
+                                .finder__item-os-selection-img-inner-phone-android
+                            .finder__item-os-selection-img-inner-cable.finder__item-animation-elem.finder__item-animation-elem--from-bottom
+
+                    .finder__item-os-selection.finder__selection
+                        .finder__selection-item.finder__item-os-selection-item.finder__item-os-selection-item--apple.finder__item-animation-elem
+                        .finder__selection-item.finder__item-os-selection-item.finder__item-os-selection-item--android.finder__item-animation-elem
+
+
+        .finder__item(data-slide='4')
+            .finder__item-video-wrapper
+            .finder__item-content.finder__item-content--5
+                .finder__item-content-inner
+
+                    .finder__item-content-header.finder__item-animation-elem
+                        .finder__item-content-title Lifestyle and Usage
+                        //.finder__item-content-header-button Skip
+
+                    .finder__item-content-inner-block.finder__item-animation-elem
+                        .finder__item-content-subsection-title Your Profile
+                        .finder__selection.finder__profile-selection
+                            .finder__selection-item.finder__profile-selection-item.finder__sex-selection-item(data-profile='woman')
+                                .finder__profile-selection-item-icon.finder__profile-selection-item-icon--female
+                            .finder__selection-item.finder__profile-selection-item.finder__sex-selection-item(data-profile='man')
+                                .finder__profile-selection-item-icon.finder__profile-selection-item-icon--male
+
+
+                    .finder__item-content-inner-block.finder__item-animation-elem
+                        .finder__item-content-subsection-title Age
+                        .finder__selection.finder__profile-selection.finder__profile-selection--age
+                            .finder__selection-item.finder__profile-selection-item.finder__age-selection-item(data-profile='30') 8 - 19
+                            .finder__selection-item.finder__profile-selection-item.finder__age-selection-item(data-profile='30') 20 - 30
+                            .finder__selection-item.finder__profile-selection-item.finder__age-selection-item(data-profile='40') 31 - 40
+                            .finder__selection-item.finder__profile-selection-item.finder__age-selection-item(data-profile='50') 41 - 60+
+
+
+                    .finder__item-content-inner-block.finder__item-animation-elem
+                        .finder__item-content-subsection-title Lifestyle
+                        .finder__selection.finder__profile-selection.finder__profile-selection--lifestyle
+                            .finder__selection-item.finder__profile-selection-item.finder__lifestyle-selection-item(data-profile='student') Student
+                            .finder__selection-item.finder__profile-selection-item.finder__lifestyle-selection-item(data-profile='professional') Professional
+                            .finder__selection-item.finder__profile-selection-item.finder__lifestyle-selection-item(data-profile='outdoor_worker') Outdoor worker
+
+
+
+
+
+                    .finder__item-content-inner-block.finder__item-animation-elem
+                        .finder__item-content-subsection-title Usage
+                        .finder__selection.finder__selection--multiselect.finder__profile-selection.finder__profile-selection--usage
+                            .finder__selection-item.finder__profile-selection-item.finder__usage-selection-item.finder__usage-selection-item--photography(data-profile='photography')
+                                .finder__usage-selection-item-icon
+                                .finder__usage-selection-item-title Photography
+                            .finder__selection-item.finder__profile-selection-item.finder__usage-selection-item.finder__usage-selection-item--calling(data-profile='calling')
+                                .finder__usage-selection-item-icon
+                                .finder__usage-selection-item-title Calling
+                            .finder__selection-item.finder__profile-selection-item.finder__usage-selection-item.finder__usage-selection-item--gaming(data-profile='gaming')
+                                .finder__usage-selection-item-icon
+                                .finder__usage-selection-item-title Gaming
+                            .finder__selection-item.finder__profile-selection-item.finder__usage-selection-item.finder__usage-selection-item--apps(data-profile='apps')
+                                .finder__usage-selection-item-icon
+                                .finder__usage-selection-item-title Apps
+                            .finder__selection-item.finder__profile-selection-item.finder__usage-selection-item.finder__usage-selection-item--office-work(data-profile='office-work')
+                                .finder__usage-selection-item-icon
+                                .finder__usage-selection-item-title Office-work
+
+
+
+
+
+                    .finder__item-content-title.finder__item-content-title--mobile Your avatar
+                    .finder__item-content-mobile-hint click on next to continue
+                    .finder__item-content-usage-profile-avatar
+                        .finder__item-content-inner-block.finder__item-animation-elem
+                            .finder__item-content-usage-profile-avatar-icon
+
+        .finder__item(data-slide='5')
+            .finder__item-video-wrapper.finder__item-video-wrapper--mobile
+                video(autoplay muted playsinline type='video/mp4' src='').finder__item-video.finder__item-video--full-height.finder__item-video--in
+            .finder__item-content.finder__item-content--6
+                .finder__item-content-inner
+                    .finder__item-content-title.finder__item-content-title--center.finder__item-animation-elem Looks like these are the devices you’re looking for
+                    .finder__item-content-usage-profile-avatar.finder__item-content-usage-profile-avatar--left.finder__item-animation-elem
+                        .finder__item-content-inner-block
+                            .finder__item-content-usage-profile-avatar-icon.finder__item-content-usage-profile-avatar-icon--final
+
+                    .finder__item-recomendation.finder__item-animation-elem
+                        .finder__item-recomendation-inner
+                            .finder__item-recomendation-item
+                                include product-item
+                            .finder__item-recomendation-item
+                                include product-item
+                            .finder__item-recomendation-item
+                                include product-item
+
+
+    .finder__footer.finder__footer--show
+
+        .finder__footer-block
+            .finder__footer-left
+                .finder__footer-back Back
+                .finder__footer-dots
+                    .finder__footer-dot.finder__footer-dot--active
+                    .finder__footer-dot.finder__footer-dot--not-avaliable
+                    .finder__footer-dot.finder__footer-dot--not-avaliable
+                    .finder__footer-dot.finder__footer-dot--not-avaliable
+                    .finder__footer-dot.finder__footer-dot--not-avaliable
+            .finder__footer-right
+                .finder__footer-next Next

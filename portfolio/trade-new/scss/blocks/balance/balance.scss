@@ -1,0 +1,42 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.balance {
+  width: 100%;
+
+  @media #{$mobile-big-screen} {
+    @include flex-row;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: #6b7582;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 4px;
+    text-align: center;
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    color: #cddaec;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+      font-weight: 900;
+    }
+  }
+
+  &__text-inner {
+    display: inline;
+    color: #05dafb;
+  }
+
+}

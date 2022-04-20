@@ -1,0 +1,33 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+
+  @media #{$mobile-big-screen} {
+    padding: 10px 0;
+  }
+
+  &__block {
+    @include flex-row-center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 169px;
+    height: 42px;
+    background: url(../../../img/logo.png);
+    @include background-contain-center;
+
+    @media #{$mobile-big-screen} {
+      width: 105px;
+    }
+  }
+
+  &__buttons {
+  }
+
+}

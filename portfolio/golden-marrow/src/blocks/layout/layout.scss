@@ -1,0 +1,17 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.layout {
+  max-width: 1200px;
+  @include margin-auto;
+  width: 100%;
+
+  @media #{$tablet-big-screen}{
+    padding: 0 20px;
+  }
+
+  @media #{$mobile-big-screen}{
+    padding: 0 10px;
+  }
+}

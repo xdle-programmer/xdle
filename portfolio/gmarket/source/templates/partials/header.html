@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gmarket</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1">
+</head>
+<body>
+	<!-- div.page - open -->
+	<div class="page"> 
+		{% if not mini %}
+		<div class="city-choose">
+			<div class="container city-choose__container">
+				<div class="city-choose__close"></div>
+				<div class="md-title">Выберите свой город</div>
+				<div class="city-choose__popular-cities">
+					<div class="city-choose__city-text text-link"><b>Москва</b></div>
+					<div class="city-choose__city-text text-link">Краснодар</div>
+					<div class="city-choose__city-text text-link">Санкт-Петербург</div>
+					<div class="city-choose__city-text text-link">Ростов-на-Дону</div>
+					<div class="city-choose__city-text text-link">Тольяти</div>
+					<div class="city-choose__city-text text-link">Перьм</div>
+					<div class="city-choose__city-text text-link">Казань</div>
+					<div class="city-choose__city-text text-link">Воронеж</div>
+					<div class="city-choose__city-text text-link">Волгоград</div>
+					<div class="city-choose__city-text text-link">Нижний Новгород</div>
+					<div class="city-choose__city-text text-link">Уфа</div>
+					<div class="city-choose__city-text text-link">Екатеринбург</div>
+				</div>
+				<form class="search-line">
+					<input type="text" name="" class="search-line__input" placeholder="Другой город">
+					<div class="suggest-list">
+						<div class="suggest-list__suggest">
+							Московская область
+						</div>
+						<div class="suggest-list__suggest">
+							Москва
+						</div>
+					</div>
+					<button class="search-line__submit"></button>
+				</form>
+			</div>
+		</div>
+		<header class="header">
+			<div class="container header__desktop-view">
+				<div class="header__top-row">
+					<div class="cell-fix cell-fix_small">
+						<a href="./" class="logo"></a>
+					</div>
+					<div class="cell-fix">
+						<div class="flex-between">
+							<div class="header__button-wrapper">
+								<div class="icon-location js-choose-city">
+									<span class="underline-button">г.Москва</span>
+								</div>
+								<a href="#" class="regular-text">8 800 100-14-38</a>
+							</div>
+							<div class="header__button-wrapper">
+								<a href="#" class="underline-button">Бонусы</a>
+								<a href="#" class="underline-button">Доставка и оплата</a>
+							</div>
+						</div>
+					</div>
+					<div class="cell-fix cell-fix_small cell-fix_right">
+						<div class="auth-module">
+							{% if auth %}
+								<div class="user-menu">
+									<a href="#" class="user-menu__handle">
+										<div class="user-icon user-icon_mid">В</div>
+										<span class="font-reg">
+											Владислав
+										</span>
+									</a>
+									<div class="user-menu__drop-down">
+										<a href="#" class="user-menu__link">
+											Личный кабинет
+										</a>
+										<a href="#" class="user-menu__link">
+											Выход
+										</a>
+									</div>
+								</div>
+								{% else %}
+							<div class="auth-module__links">
+								<a href="#" class="underline-button">Регистрация</a>
+								<a href="#" class="underline-button">Войти</a>
+							</div>
+								
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom-row">
+					<div class="cell-fix cell-fix_small">
+						{% include "catalog-menu.html" with catalog %}
+					</div>
+					<div class="cell-fix">
+						<div class="input-module">
+							<form class="search-line">
+								<input type="text" name="" class="search-line__input" placeholder="Поиск товаров">
+								<div class="suggest-list">
+
+								</div>
+								<button class="search-line__submit"></button>
+							</form>
+						</div>
+					</div>
+					<div class="cell-fix cell-fix_small cell-fix_right">
+						<div class="service-buttons">
+							<div class="service-buttons__button-item">
+								<a href="#" class="button-item__inner-align">
+									<div class="button-item__handle icon-compare">
+										<div class="button-item__counter">3</div>
+									</div>
+								</a>
+								<div class="modal-block">
+									<a href="#" class="modal-block__row-elm">
+										<div class="row-elm__img">
+											<img src="img/samples/modal/img1.png">
+										</div>
+										<div class="row-elm__title">
+											Планшет Apple iPad Pro 12.9 128GB Wi-Fi+Cell.Space Gray
+											Refubrished 
+										</div>
+										<div class="row-elm__delete"></div>
+									</a>
+									<a href="#" class="modal-block__row-elm">
+										<div class="row-elm__img">
+											<img src="img/samples/modal/img.png">
+										</div>
+										<div class="row-elm__title">
+											Наушники Bluetooth Beats Beats Solo3 Wireless Gold
+										</div>
+										<div class="row-elm__delete"></div>
+									</a>
+									<a href="#" class="button button_full-width button_grey modal-block__button">Сравнить товары</a>
+								</div>
+							</div>
+							<div class="service-buttons__button-item">
+								<a href="#" class="button-item__inner-align">
+									<div class="button-item__handle icon-heart">
+										<div class="button-item__counter">3</div>
+									</div>
+								</a>
+							</div>
+							<div class="service-buttons__button-item">
+								<a href="#" class="button-item__inner-align">
+									<div class="button-item__handle icon-basket">
+										<div class="button-item__counter button-item__counter_highlighted">3</div>
+									</div>
+								</a>
+								<div class="modal-block">
+									<a href="#" class="modal-block__row-elm">
+										<div class="row-elm__img">
+											<img src="img/samples/modal/img1.png">
+										</div>
+										<div class="row-elm__title">
+											Планшет Apple iPad Pro 12.9 128GB Wi-Fi+Cell.Space Gray
+											Refubrished 
+										</div>
+										<div class="row-elm__nums">1 x 19 990 руб.</div>
+										<div class="row-elm__delete"></div>
+									</a>
+									<a href="#" class="modal-block__row-elm">
+										<div class="row-elm__img">
+											<img src="img/samples/modal/img.png">
+										</div>
+										<div class="row-elm__title">
+											Наушники Bluetooth Beats Beats Solo3 Wireless Gold
+										</div>
+										<div class="row-elm__nums">1 x 19 990 руб.</div>
+										<div class="row-elm__delete"></div>
+									</a>
+									<a href="#" class="button button_full-width modal-block__button">Оформить заказ</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container header__mobile-view">
+				<div class="menu-button js-open-side-menu" data-menu="menu-mobile"></div>
+				<a href="./" class="logo logo_mobile"></a>
+				<div class="service-buttons service-buttons_mobile">
+					<div class="call-search js-mob-search"></div>
+					<div class="service-buttons__button-item">
+						<a href="#" class="button-item__inner-align">
+							<div class="button-item__handle icon-basket">
+								<div class="button-item__counter button-item__counter_highlighted">3</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="head-pannel">
+					<div class="head-pannel__button-item">
+						<a href="#" class="button-item__inner-align">
+							<div class="button-item__handle icon-compare">
+								<div class="button-item__counter">3</div>
+							</div>
+						</a>
+					</div>
+					<div class="head-pannel__button-item">
+						<a href="#" class="button-item__inner-align">
+							<div class="button-item__handle icon-heart">
+								<div class="button-item__counter">3</div>
+							</div>
+						</a>
+					</div>
+					<div class="head-pannel__button-item">
+						<div class="call-search js-mob-search"></div>
+					</div>
+					<div class="head-pannel__button-item">
+						<a href="#" class="button-item__inner-align">
+							<div class="button-item__handle icon-basket">
+								<div class="button-item__counter button-item__counter_highlighted">3</div>
+							</div>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		{% endif %}

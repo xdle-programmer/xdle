@@ -1,0 +1,124 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.newsletter {
+  background: $black;
+  padding: 25px 80px;
+  margin: 50px 100px;
+
+  @media #{$tablet-small-screen} {
+    padding: 40px;
+    margin: 50px 0;
+  }
+
+  @media #{$mobile-big-screen} {
+    padding: 20px;
+    margin: 50px 0;
+  }
+
+  &__title {
+    padding: 0 80px;
+    margin-bottom: 20px;
+    color: $white;
+    font-family: 'Antiqua', sans-serif;
+    text-align: center;
+    font-size: 28px;
+
+    @media #{$desktop-small-screen} {
+      padding: 0 30px;
+    }
+
+    @media #{$tablet-small-screen} {
+      padding: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+    }
+
+  }
+
+  &__input-block {
+    @include flex-row;
+    height: 60px;
+
+    @media #{$mobile-big-screen} {
+      height: auto;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__input {
+    width: 80%;
+    height: 100%;
+    padding-left: 20px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    @media #{$desktop-small-screen} {
+      width: 70%;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 15px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+  }
+
+  &:hover &__input {
+    border-color: $orange;
+    font-size: 18px;
+  }
+
+  &__button {
+    width: 20%;
+    height: 100%;
+    background: $orange;
+    font-size: 22px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    @media #{$desktop-small-screen} {
+      width: 30%;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      height: 40px;
+      font-size: 18px;
+    }
+
+  }
+
+  &__checkbox {
+    margin-top: 10px;
+  }
+
+  &__checkbox .checkbox__label:hover {
+    color: #666 !important;
+    text-decoration: none !important;
+  }
+
+  &__checkbox .checkbox__input:checked + .checkbox__label {
+    color: #666 !important;
+  }
+
+  &__checkbox .checkbox__label:after {
+    background: $orange !important;
+  }
+
+}

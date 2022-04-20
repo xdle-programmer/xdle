@@ -1,0 +1,118 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-slider {
+  margin-bottom: 15px;
+  position: relative;
+
+  &__block {
+
+  }
+
+  &__item {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    background: linear-gradient(-50deg, #42c3e0, #3093b7);
+    border-radius: 3px;
+    color: $white;
+    padding: 25px;
+
+    @media #{$mobile-big-screen} {
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+  }
+  &__item-desc {
+    height: 100%;
+    width: 400px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+  &__item-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  &__item-text {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+  &__item-button {
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid $white;
+    border-radius: 3px;
+    padding: 5px 10px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #2b92b2;
+    }
+  }
+  &__item-img-block {
+    background: linear-gradient(to bottom, #42c4e1, #2f91b6);
+    border: 1px solid #3093b7;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      order: -1;
+      margin-bottom: 15px;
+    }
+  }
+  &__item-img-items {
+    //@include flex-row;
+    padding: 10px;
+    //@include background-contain-center;
+  }
+  &__item-img-item {
+    @include flex-column;
+    align-items: center;
+  }
+  &__item-img-text {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  &__item-img-price {
+    @include flex-row-center;
+    padding-left: 14px;
+    width: 101px;
+    height: 28px;
+    margin-left: auto;
+    font-size: 12px;
+    background: url(../../img/main-slider__item-img_button.png);
+    background-size: 101px 29px;
+  }
+
+  & .owl-dots {
+    position: absolute;
+    left: 25px;
+    bottom: 22px;
+
+    @media #{$mobile-big-screen} {
+      left: auto;
+      right: 15px;
+      bottom: 29px;
+    }
+  }
+
+  & .owl-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background: #97c8da !important;
+
+    &:hover,
+    &.active {
+      background: #fead32 !important;
+    }
+  }
+}

@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='125148814-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+	<link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png" />
+    <meta charset="UTF-8">
+    <title>Skorochtenie</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta name='yandex-verification' content='481351fdf25d0bc6' />
+	
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/jquery.formstyler.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="js/jquery.bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css">
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TGFD7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5TGFD7');</script>
+<!-- End Google Tag Manager -->
+		
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+jQuery(document).ready(function(){
+        
+        $("#filial").on('change', function(){
+            switch($(this).val()){
+                case '1': 
+                $('#val4').css('display','none');
+                $('#val2').css('display','none');
+                $('#val3').css('display','block');
+                $('#val1').css('display','block');
+                break;
+                case '2': 
+                $('#val1').css('display','none');
+                $('#val3').css('display','none');
+                $('#val2').css('display','block');
+                $('#val4').css('display','block');
+                break;
+            };
+        });
+    
+    });
+</script>
+<header>
+    <div class="cont">
+        <div class="top">
+            <div class="logo">
+                <a href="/">
+                    <img src="img/logo.png" alt="">
+                    <div class="text">
+                        <p>Школа СКОРОЧТЕНИЯ</p>
+                        <p>и развития памяти</p>
+                    </div>
+                </a>
+            </div>
+             <div class="right">
+			<!--
+			Выбор филиала: <br /><select id="filial">    
+				<option value="1">Таирова</option>    
+				<option value="2">Поселок Котовского</option>  
+			</select>-->
+               
+                <div class="tel">				
+                    <div id="val3">
+						<a href="tel:+38-(094)-94-12-518">(094) 94-12-518</a><br />
+						<a href="tel:+38-(048)-78-38-518">(048) 78-38-518</a>
+					</div>
+					<div id="val4">
+						<a href="tel:+38-(094)-99-78-834">(094) 99-78-834</a><br />
+						<a href="tel:+38-(048)-77-24-834">(048) 77-24-834</a>
+					</div>                   
+                </div>
+				<div id="val1"><p class="adress">г. Одесса, Люстдорфская дорога 140А</p></div>
+			<div id="val2"><p class="adress">г. Одесса, ул. Высоцкого 15</p></div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/" >Главная</a></li>
+                <li><a href="/courses/" >Наши курсы</a></li>
+               
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="first">
+    <div class="cont">
+        <div class="title">
+            <h1>Школа скорочтения <br>
+                и развития памяти для детей
+            </h1>
+        </div>
+        <div class="text">
+            <p>по методике Шамиля Ахмадуллина</p>
+        </div>
+        <div class="text2">
+            <p>Мы обучаем вашего ребенка самым важным <br>
+                навыкам необходимым в 21 веке.</p>
+        </div>
+        <div class="courses">
+            <a href="courses/">Наши курсы</a>
+        </div>
+        <div class="play">
+            <a class="fancybox-media" href="https://www.youtube.com/watch?v=hNTS79ovdGQ">
+                <img src="img/play.png" alt="">
+            </a>
+        </div>
+        <div class="absolute">
+            <p>Посмотрите видео <br>
+                о нашей школе
+            </p>
+            <img src="img/slaq.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="second">
+    <div class="contS">
+        <div class="left">
+            <img src="img/boy.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="title">
+                <h2>Концепция</h2>
+                <p>Основные принципы.</p>
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="left">
+                        <img src="img/ico1.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Мы развиваем навыки ребенка, которыми он будет пользоваться всю жизнь.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="img/ico2.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Занятия построены в игровой форме, ребенок обучается играя и получал удовольствия.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="img/ico3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Мы учим ребенка учиться самостоятельно, убирая его страх перед учебой и давая уверенность в себе.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="advantages">
+    <div class="cont">
+        <div class="title">
+            <h2>Наши преимущества</h2>
+            <p>Наши книги по скорочтению и развитию памяти детей - бестселлеры.<br>Входят в топ самых продаваемых книг по развитию детей в России.
+            </p>
+        </div>
+        <div class="boxes">
+            <div class="box orange">
+                <div class="image">
+                    <img src="img/adimg1.png" alt=""/>
+                </div>
+                <div class="tit">
+                    <p><a href="http://www.labirint.ru/authors/157108/" target="_blank">Книги<br>бестселлеры</a></p>
+                </div>
+                <div class="desc">
+                    <p>Наши книги по скорочтению<br>и развитию памяти детей - бестселлеры. Входят в топ <br>самых продаваемых книг по развитию детей в России. (Поможем купить в Украине)</p>
+                </div>
+            </div>
+            <div class="box blue">
+                <div class="image">
+                    <img src="img/adimg2.png" alt="">
+                </div>
+                <div class="tit">
+                    <p>Сертифицированные
+                        методики</p>
+                </div>
+                <div class="desc">
+                    <p>Методики прошли множество проверок  и ее эффективность признана ведущими экспертами страны в области образования.</p>
+                </div>
+            </div>
+            <div class="box red">
+                <div class="image">
+                    <img src="img/adimg3.png" alt="">
+                </div>
+                <div class="tit">
+                    <p>Гарантия результата</p>
+                </div>
+                <div class="desc">
+                    <p>Мы даем ПОЛНУЮ ГАРАНТИЮ результата и возвращаем деньги, если ребенок НЕ получил результат.</p>
+                </div>
+            </div>
+            <div class="box green Big">
+                <div class="image">
+                    <img src="img/adimg4.png" alt="">
+                </div>
+                <div class="tit">
+                    <p>Измеримый
+                        результат</p>
+                </div>
+                <div class="desc">
+                    <p>Мы даем ИЗМЕРИМЫЙ результат. Вы сможете сравнить результаты ребенка ДО и ПОСЛЕ тренинга</p>
+                </div>
+            </div>
+            <div class="box red Big">
+                <div class="image">
+                    <img src="img/adimg5.png" alt="">
+                </div>
+                <div class="tit">
+                    <p>Результатза 10-12 занятий</p>
+                </div>
+                <div class="desc">
+                    <p>Наши тренинги идут 10 или 12 занятий, в зависимости от курса  Вам НЕ придется водить ребенка на занятия ГОДАМИ слушая оправдания педагогов, что результаты вот вот придут.</p>
+                </div>
+            </div>
+            <div class="box grey Big">
+                <div class="image">
+                    <img src="img/adimg6.png" alt="">
+                </div>
+                <div class="tit">
+                    <p>Развитие<br>способностей</p>
+                </div>
+                <div class="desc">
+                    <p>Мы НЕ даем знания, мы развиваем у ребенка или подростка (память, мышление, внимание итд)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="lessons">
+    <div class="cont">
+        <div class="group">
+            <div class="title">
+                <h2>КАК ПРОХОДЯТ ЗАНЯТИЯ ?</h2>
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="left">
+                        <img src="img/icon1.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Длительность курсов — 5-7 недель (2 занятия в неделю)</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="img/icon2.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Курсы состоят  из 10-12 занятий, в зависимости от курса</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="img/icon3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Продолжительность занятия — 60-70 минут</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="img/icon4.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Занятия проходят в игровой форме, что позволяет внедрить детям мыслеформу “Обучение — это удовольствие”</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="img/icon5.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Чтобы попасть на обучение, необходимо пройти собеседование</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="slidBox">
+    <div class="cont">
+        <div class="title">
+            <h2>Результаты учеников.</h2>
+        </div>
+        <div class="slider">
+            <div class="slide">
+                <div class="left">
+                    <img src="img/slide1.jpg" alt=""/>
+                </div>
+                <div class="right">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Скорость чтения</th>
+                        </tr>
+                        <tr>
+                            <th>Имя</th>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>Арсен</td>
+                            <td>175 зн/мин</td>
+                            <td>334 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Клим</td>
+                            <td>133 зн/мин</td>
+                            <td>379 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Дарья</td>
+                            <td>132 зн/мин</td>
+                            <td>334 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Дарья</td>
+                            <td>159 зн/мин</td>
+                            <td>334 зн/мин</td>
+                        </tr>
+                       
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="2">Понимание прочитанного</th>
+                        </tr>
+                        <tr>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>80%</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>100%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>90%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>90%</td>
+                            <td>100%</td>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="left">
+                    <img src="img/slide2.jpg" alt=""/>
+                </div>
+                <div class="right">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Скорость чтения</th>
+                        </tr>
+                        <tr>
+                            <th>Имя</th>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>Иван</td>
+                            <td>93 зн/мин</td>
+                            <td>147 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Камиля</td>
+                            <td>38 зн/мин</td>
+                            <td>74 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Валерия</td>
+                            <td>43 зн/мин</td>
+                            <td>86 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Кирилл</td>
+                            <td>35 зн/мин</td>
+                            <td>74 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Диана</td>
+                            <td>72 зн/мин</td>
+                            <td>220 зн/мин</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="2">Понимание прочитанного</th>
+                        </tr>
+                        <tr>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>80%</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>90%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>90%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>90%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>95%</td>
+                            <td>95%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="left">
+                    <img src="img/slide3.jpg" alt=""/>
+                </div>
+                <div class="right">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Скорость чтения</th>
+                        </tr>
+                        <tr>
+                            <th>Имя</th>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>Амина</td>
+                            <td>110 зн/мин</td>
+                            <td>187 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Артур</td>
+                            <td>63 зн/мин</td>
+                            <td>134 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Зарина</td>
+                            <td>63 зн/мин</td>
+                            <td>81 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Тимофей</td>
+                            <td>138 зн/мин</td>
+                            <td>185 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Анастасия</td>
+                            <td>84 зн/мин</td>
+                            <td>171 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Дарина</td>
+                            <td>93 зн/мин</td>
+                            <td>187 зн/мин</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="2">Понимание прочитанного</th>
+                        </tr>
+                        <tr>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>60%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>50%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>80%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>70%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>60%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>50%</td>
+                            <td>100%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="left">
+                    <img src="img/slide4.jpg" alt=""/>
+                </div>
+                <div class="right">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Скорость чтения</th>
+                        </tr>
+                        <tr>
+                            <th>Имя</th>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>Тимур</td>
+                            <td>58 зн/мин</td>
+                            <td>89 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Егор</td>
+                            <td>73 зн/мин</td>
+                            <td>135 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Руфат</td>
+                            <td>54 зн/мин</td>
+                            <td>182 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Ксения</td>
+                            <td>49 зн/мин</td>
+                            <td>87 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Тимур</td>
+                            <td>85 зн/мин</td>
+                            <td>174 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Диана</td>
+                            <td>195 зн/мин</td>
+                            <td>311 зн/мин</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="2">Понимание прочитанного</th>
+                        </tr>
+                        <tr>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>30%</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>60%</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>30%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>40%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>70%</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>50%</td>
+                            <td>100%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="left">
+                    <img src="img/slide5.jpg" alt=""/>
+                </div>
+                <div class="right">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Скорость чтения</th>
+                        </tr>
+                        <tr>
+                            <th>Имя</th>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>Глеб</td>
+                            <td>200 зн/мин</td>
+                            <td>382 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Карим</td>
+                            <td>156 зн/мин</td>
+                            <td>287 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Даниил</td>
+                            <td>100 зн/мин</td>
+                            <td>131 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Диана</td>
+                            <td>106 зн/мин</td>
+                            <td>168 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Камиля</td>
+                            <td>95 зн/мин</td>
+                            <td>159 зн/мин</td>
+                        </tr>
+                        <tr>
+                            <td>Диана</td>
+                            <td>195 зн/мин</td>
+                            <td>311 зн/мин</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="2">Понимание прочитанного</th>
+                        </tr>
+                        <tr>
+                            <th>До</th>
+                            <th>ПОСЛЕ</th>
+                        </tr>
+                        <tr>
+                            <td>83%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>83%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>0%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>50%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>100%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>50%</td>
+                            <td>100%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="map">
+    <div id="map"></div>
+    
+    <div class="box">
+        <div class="contS">
+            
+            <div class="count">
+                <p><span>2 открытых школы в Одессе. 55 открытых школ в СНГ, 8 в процессе открытия </span></p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="first">
+    <div class="cont">
+	<br><br>
+	
+	<div class="title">
+            <h2>Школа скорочтения <br>
+                и развития памяти для детей
+            </h2>
+        </div>
+        <div class="text">
+            <p>по методике Шамиля Ахмадуллина</p>
+        </div>
+        <div class="text2">
+            <p>Мы обучаем вашего ребенка самым важным <br>
+                навыкам необходимым в 21 веке.</p>
+        </div>
+		
+        <div class="courses">
+            <a href="courses/">Выбрать курс</a>
+        </div>
+    </div>
+</div>
+ <!--<div class="formPart">
+	    <div class="title">
+            <h2>Что можно сделать?</h2>
+            <p>Вы можете скачать бесплатное видео для родителей 5 причин, которые мешают Вашему<br>ребенку читать быстрее или задать любой вопрос нашему эксперту по поддержке родителей.</p>
+        </div>
+        <div class="boxes">
+            <div class="left">
+                <div class="tit">
+                    <h3>Заполните форму</h3>
+                    <p>и получите 6 видео как развить
+                        скорочтение у ребенка.</p>
+                </div>
+                <form id="est-form" class="est-form" action="http://mailer.estismail.com/subscribeme" method="POST"><div id="est-name" class="est-form"><input type="text" placeholder="Имя" class="est-form" id="est-name" name="est-name" required></div><div class="est-form" id="est-email"><input type="email" placeholder="Email" class="est-form" id="est-email" name="est-email" required="required"></div><div class="est-form" id="est-phone"><input type="text" placeholder="Телефон" class="est-form" id="est-phone" name="est-phone" required></div><input type="hidden" name="est-user" value="11920"><input type="hidden" name="est-form-hash" value="6ce1606bdb6c8331a3801accd1b8556b3f3fae1adae6095d896928ffb064faaf"><input type="hidden" name="est-groups" value="18259;"><input class="est-form" type="submit" value="Получить доступ"></form>
+            </div>
+            <div class="right">
+                <img src="img/formRight.png" alt=""/>
+            </div>
+        </div>
+    </div>
+</div> 
+-->
+<footer>
+    <div class="cont">
+        <div class="top">
+            <div class="left">
+                <div class="logo">
+                    <a href="/">
+                        <img src="img/footLogo.png" alt="">
+                        <div class="text">
+                            <p>Школа СКОРОЧТЕНИЯ</p>
+                            <p>и развития памяти</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="courses/">Наши курсы</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="callback">
+                    <a href="#" style="visibility:hidden;">Подписаться на рассылку</a>
+                </div>
+                <div class="social">
+                <p>
+                    <a href="https://plus.google.com/u/0/communities/118410824239640143202" target="_blank">
+                        <img src="img/google-plus-logo-button.png" alt="">
+                    </a>
+                    <a href="https://ok.ru/group/52833900888266" target="_blank">
+                        <img src="img/odnoklassniki-logo.png" alt="">
+                    </a>
+                    <a href="https://new.vk.com/skorochtenieodesa" target="_blank">
+                        <img src="img/vk.png" alt="">
+                    </a>
+                    <a href="https://www.facebook.com/SKR4E/" target="_blank">
+                        <img src="img/fb.png" alt="">
+                    </a>
+					 <a href="https://www.instagram.com/skorochtenieodessa/" target="_blank">
+                        <img src="img/instagram-logo.png" alt="">
+                    </a>
+					
+               </p></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <p>г. Одесса, Люстдорфская дорога 140А<br></p>
+                <p>Использование материалов сайта разрешено только с согласия правообладателей.<br/>
+                    Мотов Андрей Юрьевич © 2014 - 2020</br>
+                    <a href="http://forumodua.com/showthread.php?t=2727491"
+                       target="_blank">Мы на Одесском форуме</a></br>
+                    <a href="#policy" class="fancybox">Политика конфиденциальности</a>
+                </p>
+                
+            </div>
+            <div class="right">
+                <div class="text">
+                    <p>ИНН 2599022497</p>
+                    <p>odessa@turboread.ru</p>
+                    <p>Все права защищены.</p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div id="policy" style="max-width:550px; width: 98%; padding:20px;display:none;">
+    <h2 style="font-size:20px;text-align:center;font-weight:600">Политика конфиденциальности</h2>
+    <p style="color:#000; font-size:14px; text-align:justify;font-family:'Open Sans'; font-weight:400;">Ваша
+        конфиденциальность очень важна для нас. Мы хотим, чтобы Ваша работа в Интернет по возможности была максимально
+        приятной и полезной, и Вы совершенно спокойно использовали широчайший спектр информации, инструментов и
+        возможностей, которые предлагает Интернет.<br> Личная информация Членов, собранная при регистрации (или в любое
+        другое время) преимущественно используется для подготовки Продуктов или Услуг в соответствии с Вашими
+        потребностями. Ваша информация не будет передана или продана третьим сторонам. Однако мы можем частично
+        раскрывать личную информацию в особых случаях, описанных в «Согласии с рассылкой»</p>
+    <h3 style="color:#000; font-size:18px;margin-top:10px;margin-bottom:10px; text-align:center; font-weight:800;">Какие
+        данные собираются на сайте</h3>
+    <p style="color:#000; font-size:14px; text-align:justify;font-family:'Open Sans'; font-weight:400;">При добровольной
+        регистрации на получение рассылки Вы отправляете свое Имя и E-mail через форму регистрации.</p>
+    <h3 style="color:#000; font-size:18px; text-align:center; font-weight:800;">С какой целью собираются эти данные</h3>
+    <p style="color:#000; font-size:14px; text-align:justify;font-family:'Open Sans'; font-weight:400;">Имя используется
+        для обращения лично к вам, а ваш e-mail для отправки вам писем рассылок, новостей тренинга, полезных материалов,
+        коммерческих предложений. Ваши имя и e-mail не передаются третьим лицам, ни при каких условиях кроме случаев,
+        связанных с исполнением требований законодательства. Ваше имя и e-mail на защищенных серверах сервиса
+        getresponse.com и используются в соответствии с его политикой конфиденциальности.<br>Вы можете отказаться от
+        получения писем рассылки и удалить из базы данных свои контактные данные в любой момент, кликнув на ссылку для
+        отписки, присутствующую в каждом письме.</p>
+    <h3 style="color:#000; font-size:18px; text-align:center; font-weight:800;">Как эти данные используются</h3>
+    <p style="color:#000; font-size:14px; text-align:justify;font-family:'Open Sans'; font-weight:400;">На сайте
+        turboread.ru используются куки (Cookies) и данные о посетителях сервиса Яндекс.Метрика.<br>При помощи этих
+        данных собирается информация о действиях посетителей на сайте с целью улучшения его содержания, улучшения
+        функциональных возможностей сайта и, как следствие, создания качественного контента и сервисов для
+        посетителей.<br>Вы можете в любой момент изменить настройки своего браузера так, чтобы браузер блокировал все
+        файлы cookie или оповещал об отправке этих файлов. Учтите при этом, что некоторые функции и сервисы не смогут
+        работать должным образом</p>
+    <h3 style="color:#000; font-size:18px; text-align:center; font-weight:800;">Как эти данные защищаются</h3>
+    <p style="color:#000; font-size:14px; text-align:justify;font-family:'Open Sans'; font-weight:400;">Для защиты Вашей
+        личной информации мы используем разнообразные административные, управленческие и технические меры безопасности.
+        Наша Компания придерживается различных международных стандартов контроля, направленных на операции с личной
+        информацией, которые включают определенные меры контроля по защите информации, собранной в Интернет.<br>Наших
+        сотрудников обучают понимать и выполнять эти меры контроля, они ознакомлены с нашим Уведомлением о
+        конфиденциальности, нормами и инструкциями.<br>Тем не менее, несмотря на то, что мы стремимся обезопасить Вашу
+        личную информацию, Вы тоже должны принимать меры, чтобы защитить ее.<br>Мы настоятельно рекомендуем Вам
+        принимать все возможные меры предосторожности во время пребывания в Интернете. Организованные нами услуги и
+        веб-сайты предусматривают меры по защите от утечки, несанкционированного использования и изменения информации,
+        которую мы контролируем. Несмотря на то, что мы делаем все возможное, чтобы обеспечить целостность и
+        безопасность своей сети и систем, мы не можем гарантировать, что наши меры безопасности предотвратят незаконный
+        доступ к этой информации хакеров сторонних организаций.<br>В случае изменения данной политики конфиденциальности
+        вы сможете прочитать об этих изменениях на этой странице или, в особых случаях, получить уведомление на свой
+        e-mail.<br>Для связи с администратором сайта по любым вопросам вы можете написать письмо на e-mail:
+        info@speed-read2.ru</p>
+</div>
+
+<script src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src ="js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<script src="js/jquery.formstyler.js"></script>
+<script src="js/location.js"></script>
+<script>
+		(function($) {
+		$(function() {
+			$('input, select').styler({
+				selectSearch: true
+			});
+		});
+		})(jQuery);
+	</script>
+<script src="js/script.js"></script>
+<script src="/js/utm_cookie.min.js"></script>
+</body>
+
+</html>

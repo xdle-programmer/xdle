@@ -1,0 +1,163 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.catalog {
+  margin-bottom: 110px;
+
+  @media #{$tablet-big-screen} {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    padding-top: 118px;
+    padding-bottom: 52px;
+    @include font-druk;
+    font-size: 42px;
+    letter-spacing: 1px;
+    line-height: 60px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      font-size: 34px;
+      line-height: 30px;
+      margin-top: 15px;
+      letter-spacing: 1px;
+      padding-top: 40px;
+      text-align: center;
+    }
+  }
+  &__filter {
+    display: grid;
+    grid-template-columns: 340px 340px 288px;
+    grid-gap: 74px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+      padding: 0 15px;
+    }
+  }
+  &__filter-item {
+  }
+
+  &__filter-header {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 32px;
+    height: 40px;
+
+    &--no-bottom {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__filter-header-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -7px;
+  }
+
+  &__filter-header-subtitle {
+    color: $gray;
+    margin-left: 5px;
+  }
+
+  &__items {
+    overflow: hidden;
+    margin-top: 53px;
+  }
+
+  &__items-wrapper {
+    width: calc(100% + 32px);
+    @include flex-row;
+    flex-wrap: wrap;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__item-empty {
+    display: none;
+
+    &.show {
+      @include font-druk;
+      @include flex-row-center;
+      width: 100%;
+      height: 200px;
+      font-size: 34px;
+      line-height: 30px;
+      text-align: center;
+      color: #a5a5a5;
+    }
+  }
+
+  &__item {
+    width: calc(25% - 32px);
+    margin-right: 32px;
+    margin-bottom: 40px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &.filtered.show {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__pagination {
+    @include flex-row-center;
+    margin-top: 29px;
+
+    &.hide {
+      display: none;
+    }
+  }
+  &__pagination-button {
+    cursor: pointer;
+    @include flex-row-center;
+    width: 36px;
+    height: 36px;
+    background-color: #f3f3f3;
+    margin: 0 3px;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+
+    &.active,
+    &:hover {
+      background-color: #000;
+      color: $white;
+    }
+
+    &--next:after,
+    &--prev:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 8px;
+      height: 12px;
+      background: url(../../../../img/pagination_arrow.svg);
+      @include background-contain-center;
+    }
+
+    &--prev:after {
+      transform: translate(-50%, -50%) scaleX(-1);
+    }
+
+  }
+
+  &__pagination-button-item {
+  }
+
+}

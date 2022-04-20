@@ -1,0 +1,18 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  @media #{$tablet-big-screen} {
+    font-size: 20px;
+  }
+
+  @media #{$mobile-big-screen} {
+    margin-bottom: 20px;
+  }
+
+}

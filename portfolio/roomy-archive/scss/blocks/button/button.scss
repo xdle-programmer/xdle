@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  width: 365px;
+  height: 56px;
+  @include flex-row-center;
+  color: $white;
+  background: $black;
+  @include margin-auto;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+  }
+
+  &:hover {
+    background: $blue;
+  }
+
+  &.disabled {
+    background: rgba(29, 30, 41, 0.4);
+    cursor: default;
+
+    &:hover {
+      background: rgba(29, 30, 41, 0.4);
+    }
+  }
+  &--blue{
+    display: inline-flex;
+    background: #5dbafd;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    width: initial;
+    height: initial;
+    margin: initial;
+    padding: 12px 48px;
+    text-align: center;
+    &:hover{
+      background: #56acea;
+    }
+  }
+  &__icon{
+    width: 17px;
+    height: 17px;
+    background: $white;
+    @include mask-contain-center;
+    margin-right: 16px;
+    &--contact{
+      mask: url(../../../img/object/contact.svg);
+      -webkit-mask: url(../../../img/object/contact.svg);
+    }
+  }
+
+}

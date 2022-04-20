@@ -1,0 +1,93 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.pagination {
+  display: inline-block;
+
+  &__item {
+    font-size: 20px;
+    margin-right: 34px;
+    position: relative;
+    display: inline;
+    cursor: pointer;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $blue-light;
+    }
+
+    &:after {
+      @include after-absolute;
+      right: -21px;
+      bottom: 6px;
+      width: 7px;
+      height: 7px;
+      border: 1px solid $blue-light;
+      border-radius: 50%;
+    }
+
+    &:nth-last-of-type(1):after {
+      display: none;
+    }
+
+    &--first {
+      color: $blue-light;
+    }
+
+    &--active {
+      color: $gray;
+    }
+  }
+
+  &__block {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  &__item-number {
+    margin-right: 10px;
+    color: $white;
+    @include flex-row-center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: $blue;
+    position: relative;
+
+    &.active,
+    &:hover {
+      background: $blue-light;
+    }
+
+    &.active {
+      cursor: default;
+    }
+
+    &--back:after,
+    &--forward:after {
+      @include after-absolute;
+      background: $white;
+      width: 15px;
+      height: 15px;
+      @include absolute-center;
+      mask: url(../../../img/arrow-down-blue.svg);
+      -webkit-mask: url(../../../img/arrow-down-blue.svg);
+      @include mask-contain-center;
+    }
+
+    &--back:after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &--forward:after {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+  }
+
+}
+

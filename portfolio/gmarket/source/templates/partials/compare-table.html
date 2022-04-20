@@ -1,0 +1,114 @@
+<div class="js-compare-module">
+    <div class="compare-products">
+        <div class="compare-products__fix-menu">
+            <div class="container">
+                <div class="compare-products__inner">
+                    <div class="compare-products__title">Сравнение товаров</div>
+                    <div class="compare-slider">
+                        {% for i in 0..3 %}
+                            <div class="compare-slider__slide">
+                                {% 
+                                    include "product-card.html" with {
+                                        name: "Ноутбук Apple MacBook Pro 13 Touch Bar i5 2.9/512GB Space Grey",
+                                        img: "img/samples/catalog/c" ~ i ~ ".jpg",
+                                        deletable: true,
+                                        compare: true
+                                    }
+                                 %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="compare__compare-info">
+        <div class="compare-info__title">Информация</div>
+        <div class="compare-table">
+            <div class="compare-table__row">
+                <div class="compare-table__row-title">Дата доставки</div>
+                <div class="compare-table__data">
+                    <div class="compare-table__cell">07.11.2017</div>
+                    <div class="compare-table__cell">06.11.2017</div>
+                    <div class="compare-table__cell">23.11.2017</div>
+                    <div class="compare-table__cell">23.11.2017</div>
+                </div>
+            </div>
+            <div class="compare-table__row">
+                <div class="compare-table__row-title">Бонусные рубли</div>
+                <div class="compare-table__data">
+                    <div class="compare-table__cell">4000</div>
+                    <div class="compare-table__cell">4200</div>
+                    <div class="compare-table__cell">4800</div>
+                    <div class="compare-table__cell">4800</div>
+                </div>
+            </div>
+        </div>
+        <div class="compare-info__title">Видеокарта</div>
+        <div class="compare-table">
+            <div class="compare-table__row">
+                <div class="compare-table__row-title">Графический контроллер</div>
+                <div class="compare-table__data">
+                    <div class="compare-table__cell">Intel Iris Graphics 550</div>
+                    <div class="compare-table__cell">Intel Iris Graphics 550</div>
+                    <div class="compare-table__cell">Intel Iris Graphics 550</div>
+                    <div class="compare-table__cell">Intel Iris Graphics 550</div>
+                </div>
+            </div>
+        </div>
+        <div class="compare-info__title">Процессор</div>
+        <div class="compare-table">
+            <div class="compare-table__row">
+                <div class="compare-table__row-title">Макс. такт. частота</div>
+                <div class="compare-table__data">
+                    <div class="compare-table__cell">3.5 ГГц</div>
+                    <div class="compare-table__cell">3.5 ГГц</div>
+                    <div class="compare-table__cell">3.5 ГГц</div> 
+                    <div class="compare-table__cell">3.5 ГГц</div>
+                </div>
+            </div>
+            <div class="compare-table__row">
+                <div class="compare-table__row-title">
+                    Тип процессора
+                    <div class="hint-mark">
+                        <div class="hint-mark__icon"></div>
+                        <div class="hint-mark__modal">
+                            <div class="hint-mark__close"></div>
+                            <p class="hint-mark__text">
+                                Лёгкий и в то же время прочный материал. Алюминиевый корпус сложно помять или поцарапать, за ним легко ухаживать, а кухонный комбайн с таким корпусом выглядит особенно солидно.
+                            </p>
+                            <div class="hint-mark__tail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-table__data">
+                    <div class="compare-table__cell">Core i5 3.1ГГц</div>
+                    <div class="compare-table__cell">Core i5 2.91ГГц</div>
+                    <div class="compare-table__cell">Core i5 2.91ГГц</div>
+                    <div class="compare-table__cell">Core i5 2.91ГГц</div>
+                </div>
+            </div>
+            <div class="compare-table__row">
+                <div class="compare-table__row-title">
+                    Кэш-память
+                    <div class="hint-mark">
+                        <div class="hint-mark__icon"></div>
+                        <div class="hint-mark__modal">
+                            <div class="hint-mark__close"></div>
+                            <p class="hint-mark__text">
+                                Лёгкий и в то же время прочный материал. Алюминиевый корпус сложно помять или поцарапать, за ним легко ухаживать, а кухонный комбайн с таким корпусом выглядит особенно солидно.
+                            </p>
+                            <div class="hint-mark__tail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-table__data">
+                    <div class="compare-table__cell">4 МБ</div>
+                    <div class="compare-table__cell">4 МБ</div>
+                    <div class="compare-table__cell">4 МБ</div>
+                    <div class="compare-table__cell">4 МБ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

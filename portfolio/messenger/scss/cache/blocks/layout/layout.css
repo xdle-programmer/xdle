@@ -1,0 +1,74 @@
+.layout {
+  display: grid;
+  grid-template-columns: 390px 1fr; }
+  .layout__preloader {
+    position: relative; }
+    .layout__preloader:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      animation: 1s rotate linear infinite;
+      mask: url(../../img/loading.svg);
+      -webkit-mask: url(../../img/loading.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+      background-color: #ffdf39; }
+    .layout__preloader.show:after {
+      display: none; }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0); }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+  .layout__preloader-inner {
+    opacity: 0;
+    visibility: hidden;
+    height: 100%; }
+    .layout__preloader.show .layout__preloader-inner {
+      opacity: 1 !important;
+      visibility: visible; }
+  .layout__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    max-height: 100vh; }
+  .layout__list-content {
+    flex-grow: 1;
+    padding-right: 13px;
+    overflow-y: auto;
+    padding-right: 0; }
+    .layout__list-content::-webkit-scrollbar-button {
+      background-image: none;
+      background-repeat: no-repeat;
+      width: 2px;
+      height: 0; }
+    .layout__list-content::-webkit-scrollbar-track {
+      background-color: #e6e6e6; }
+    .layout__list-content::-webkit-scrollbar-thumb {
+      background-color: #4050f5;
+      cursor: pointer; }
+    .layout__list-content::-webkit-scrollbar-thumb:hover {
+      background-color: #000; }
+    .layout__list-content::-webkit-resizer {
+      background-image: none;
+      background-repeat: no-repeat;
+      width: 2px;
+      height: 0; }
+    .layout__list-content::-webkit-scrollbar {
+      width: 2px; }
+  .layout__content {
+    height: 100vh; }

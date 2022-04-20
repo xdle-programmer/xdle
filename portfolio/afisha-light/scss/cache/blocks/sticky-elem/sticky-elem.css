@@ -1,0 +1,34 @@
+.sticky-elem {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+  transform: scaleY(0);
+  visibility: hidden;
+  transform-origin: bottom; }
+  .sticky-elem.static {
+    position: absolute; }
+  @media (max-width: 1023px) {
+    .sticky-elem {
+      height: 50px; } }
+  .sticky-elem--left {
+    display: none;
+    left: 0;
+    width: 75%;
+    background: #f2f2f2; }
+    @media (max-width: 1023px) {
+      .sticky-elem--left {
+        display: none; } }
+  .sticky-elem--right {
+    right: 0;
+    width: 25%;
+    background: #e8e8e8; }
+    @media (max-width: 1023px) {
+      .sticky-elem--right {
+        width: 100%; } }
+  .sticky-elem.show {
+    transform: scaleY(1);
+    visibility: visible; }
+  .sticky-elem.hide {
+    transform: scaleY(0);
+    visibility: hidden; }

@@ -1,0 +1,30 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.order-inner {
+  font-weight: 300;
+  font-size: 15px;
+  color: #333;
+
+  &__row {
+    @include flex-row;
+    width: 400px;
+  }
+
+  &__cell {
+    width: 50%;
+    padding: 8px 0;
+  }
+
+  &__button {
+    font-weight: 300;
+    font-size: 13px;
+    color: #666;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+    margin-top: 30px;
+    padding: 7px 15px;
+    display: inline-block;
+  }
+}

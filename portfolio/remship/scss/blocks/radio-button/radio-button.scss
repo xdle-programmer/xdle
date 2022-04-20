@@ -1,0 +1,61 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.radio-button {
+  @include flex-column;
+
+  &__input {
+    display: none
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 24px;
+    color: #333;
+    margin-right: 20px;
+    margin-bottom: 15px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background: #f4f4f4;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%
+  }
+
+  &__label:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #007e7f;
+    border-radius: 50%;
+    background: #007e7f;
+    opacity: 0
+  }
+
+  &__input:checked + &__label:after {
+    opacity: 1
+  }
+
+  &__input:checked + &__label:after {
+    box-shadow: none
+  }
+}

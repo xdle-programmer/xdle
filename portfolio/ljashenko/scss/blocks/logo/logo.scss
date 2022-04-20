@@ -1,0 +1,39 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.logo {
+  @include flex-row;
+  color: $white;
+  align-items: center;
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    background: url(../../../img/logo.png);
+    @include background-contain-center;
+    margin-right: 30px;
+  }
+
+  &__text {
+  }
+  &__name {
+    font-size: 41px;
+    text-transform: uppercase;
+    font-weight: 100;
+
+    @media #{$mobile-big-screen} {
+      font-size: 22px;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 3px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 9px;
+    }
+  }
+}

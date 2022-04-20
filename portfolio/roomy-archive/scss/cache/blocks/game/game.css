@@ -1,0 +1,266 @@
+.game {
+  width: 100%;
+  height: calc(100vh - 123px);
+  position: relative; }
+  .game__background {
+    position: absolute;
+    background: url(../../../img/game/back/background.svg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .game__counter {
+    right: 100px;
+    top: 100px;
+    width: 400px;
+    font-size: 50px;
+    position: absolute;
+    text-align: left;
+    transition: none; }
+  .game__person-wrapper {
+    width: 194px;
+    height: 243px;
+    left: 463px;
+    bottom: 100px;
+    position: absolute; }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-140px); }
+  100% {
+    transform: translateY(0); } }
+    .game__person-wrapper--jump {
+      animation: jump 500ms ease-in-out; }
+  .game__person {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: top;
+    z-index: 3; }
+
+@keyframes person {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-40px); }
+  100% {
+    transform: translateY(0); } }
+    .game__person--active {
+      animation: person 300ms linear;
+      animation-iteration-count: infinite; }
+  .game__person-body {
+    position: absolute;
+    width: 77px;
+    height: 100px;
+    background: url(../../../img/game/body/body.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 59px;
+    top: 99px;
+    z-index: 1; }
+  .game__person-head {
+    position: absolute;
+    width: 100px;
+    height: 118px;
+    background: url(../../../img/game/body/head.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 53px;
+    top: 0; }
+  .game__person-left-leg {
+    position: absolute;
+    background: url(../../../img/game/body/leg-left.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 0;
+    top: 161px;
+    width: 92px;
+    height: 55px;
+    transform-origin: right top; }
+
+@keyframes left-leg {
+  0% {
+    transform: rotate(0); }
+  50% {
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(0); } }
+    .game__person--active .game__person-left-leg {
+      animation: left-leg 300ms linear;
+      animation-iteration-count: infinite; }
+  .game__person-right-leg {
+    position: absolute;
+    background: url(../../../img/game/body/leg-right.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 101px;
+    top: 160px;
+    width: 112px;
+    height: 88px;
+    transform-origin: left top; }
+
+@keyframes right-leg {
+  0% {
+    transform: rotate(0); }
+  50% {
+    transform: rotate(80deg); }
+  100% {
+    transform: rotate(0); } }
+    .game__person--active .game__person-right-leg {
+      animation: right-leg 300ms linear;
+      animation-iteration-count: infinite; }
+  .game__person-left-hand {
+    position: absolute;
+    background: url(../../../img/game/body/hand-left.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 0;
+    top: 99px;
+    width: 78px;
+    height: 54px;
+    transform-origin: right center; }
+
+@keyframes left-hand {
+  0% {
+    transform: rotate(0); }
+  50% {
+    transform: rotate(-55deg); }
+  100% {
+    transform: rotate(0); } }
+    .game__person--active .game__person-left-hand {
+      animation: left-hand 300ms linear;
+      animation-iteration-count: infinite; }
+  .game__person-right-hand {
+    position: absolute;
+    background: url(../../../img/game/body/hand-right.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 108px;
+    top: 95px;
+    width: 86px;
+    height: 54px;
+    transform-origin: left center;
+    transform: rotate(30deg); }
+
+@keyframes right-hand {
+  0% {
+    transform: rotate(30deg); }
+  50% {
+    transform: rotate(-10deg); }
+  100% {
+    transform: rotate(30deg); } }
+    .game__person--active .game__person-right-hand {
+      animation: right-hand 300ms linear;
+      animation-iteration-count: infinite; }
+  .game__ground {
+    height: 100px;
+    background: url(../../../img/game/ground.svg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
+    .game__ground:before, .game__ground:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url(../../../img/game/ground.svg);
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .game__ground:before {
+      transform: translateX(100%); }
+    .game__ground:after {
+      transform: translateX(-100%); }
+
+@keyframes ground {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }
+    .game__ground--active {
+      animation: ground 1500ms linear;
+      animation-iteration-count: infinite; }
+  .game__mouse {
+    width: 147px;
+    height: 56px;
+    background: url(../../../img/game/mouse.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 100%;
+    bottom: 100px;
+    position: absolute;
+    transition: none !important; }
+  .game__donut {
+    width: 147px;
+    height: 56px;
+    background: url(../../../img/game/donut.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 100%;
+    bottom: 100px;
+    position: absolute;
+    transition: none !important; }
+  .game__doh {
+    font-size: 150px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    opacity: 0; }
+
+@keyframes doh {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0; }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1; }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0; } }
+    .game__doh--active {
+      animation: doh 500ms linear; }
+  .game__success {
+    font-size: 150px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    opacity: 0; }
+
+@keyframes doh {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0; }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1; }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0; } }
+    .game__success--active {
+      animation: doh 500ms linear; }

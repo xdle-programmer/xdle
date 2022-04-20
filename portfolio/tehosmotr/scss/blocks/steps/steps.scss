@@ -1,0 +1,94 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.steps {
+  margin-top: 65px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    color: $white;
+    @include flex-row-center;
+    padding: 40px 0;
+    padding-left: 50px;
+
+    @media #{$tablet-big-screen} {
+      padding-left: 20px;
+    }
+
+    @media #{$tablet-small-screen} {
+      padding: 20px;
+    }
+
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 0;
+      width: 360px;
+      height: 200px;
+      mask: url(../../../img/steps_mask.svg);
+      -webkit-mask: url(../../../img/steps_mask.svg);
+      @include mask-contain-center;
+
+      @media #{$tablet-small-screen} {
+        @include after-absolute;
+        @include absolute-fill;
+        mask: none;
+        -webkit-mask: none;
+      }
+    }
+
+    &:nth-of-type(1):after {
+      background: linear-gradient(to bottom, #0c47d6, #0a21d8);
+      z-index: -1;
+    }
+    &:nth-of-type(2):after {
+      background: linear-gradient(to bottom, #0f6bd8, #0c3fda);
+      z-index: -2;
+    }
+    &:nth-of-type(3):after {
+      background: linear-gradient(to bottom, #118adc, #0f6dd8);
+      z-index: -3;
+    }
+    &:nth-of-type(4):after {
+      background: linear-gradient(to bottom, #0f87c8, #118bdb);
+      z-index: -4;
+    }
+  }
+
+  &__item-number {
+    font-size: 105px;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
+  &__item-text {
+    font-size: 24px;
+    margin-right: -50px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 18px;
+      margin-right: 0px;
+    }
+  }
+
+  &__button {
+    @include margin-auto;
+    margin-top: 134px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 50px;
+    }
+  }
+}

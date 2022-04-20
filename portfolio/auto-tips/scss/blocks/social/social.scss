@@ -1,0 +1,18 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.social {
+  @include flex-row-center;
+
+  &__item {
+    @include flex-row-center;
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+  }
+
+  &__item:hover &__item-icon {
+    transform: scale(1.1);
+  }
+}

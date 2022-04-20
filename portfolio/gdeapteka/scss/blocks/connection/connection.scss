@@ -1,0 +1,99 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.connection {
+  background: $blue;
+  padding: 50px 0;
+
+  &__block {
+    color: $white;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 25px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__item-img {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__item-img-icon {
+    width: 60px;
+    height: 60px;
+    @include background-contain-center;
+    @include margin-auto;
+  }
+
+  &__item-img-number {
+    position: absolute;
+    opacity: 0.2;
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 40px;
+    bottom: -10px;
+    right: calc(50% - 100px);
+  }
+
+  &__item-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__item-text {
+  }
+
+  &__button {
+    cursor: pointer;
+    border: 2px solid $white;
+    background: transparent;
+    font-size: 18px;
+    border-radius: 5px;
+    width: fit-content;
+    font-weight: 300;
+    color: $white;
+    padding: 10px 30px;
+    @include flex-row-center;
+    @include margin-auto;
+  }
+}

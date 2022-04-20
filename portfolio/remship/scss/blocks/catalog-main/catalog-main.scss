@@ -1,0 +1,51 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.catalog-main {
+  width: 100%;
+  @include flex-row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    width: calc(50% - 5px);
+    height: 120px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e2e2;
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    @include flex-row;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+  &__photo {
+    width: 130px;
+    height: 100%;
+    @include background-contain-center;
+    background-size: 60% !important;
+
+    @media #{$mobile-big-screen} {
+      width: 100px;
+    }
+  }
+  &__desc {
+    height: 100%;
+    width: calc(100% - 130px);
+    @include flex-column-center;
+    align-items: flex-start;
+
+    @media #{$mobile-big-screen} {
+      width: calc(100% - 100px);
+    }
+  }
+  &__desc-name {
+    font-size: 16px;
+    color: #333333;
+  }
+  &__desc-count {
+    font-size: 12px;
+    color: #666666;
+  }
+}

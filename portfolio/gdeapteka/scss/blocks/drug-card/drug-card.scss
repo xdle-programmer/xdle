@@ -1,0 +1,291 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.drug-card {
+  margin-bottom: 30px;
+
+  &__title-block {
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    display: inline;
+    font-size: 30px;
+  }
+
+  &__subtitle {
+    display: inline;
+    font-size: 20px;
+  }
+
+  &__subtitle-black {
+    display: inline;
+  }
+
+  &__subtitle-blue {
+    display: inline;
+    color: $blue;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    @media #{$desktop-extra-big-screen} {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info-img {
+    width: 100%;
+    height: 420px;
+    border: 1px solid $gray-light;
+    @include background-contain-center;
+
+    @media #{$desktop-extra-big-screen} {
+      height: 300px;
+    }
+  }
+
+  &__info-desc {
+  }
+
+  &__info-desc-main {
+    @include flex-row-center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &--short {
+      margin-bottom: 0;
+      margin-top: 12px;
+    }
+  }
+
+  &__info-desc-main-item {
+    font-size: 13px;
+    display: inline;
+
+    @media #{$desktop-extra-big-screen} {
+      @include flex-column;
+    }
+  }
+
+  &__info-desc-main-item-title {
+    display: inline;
+    color: #808080;
+  }
+
+  &__info-desc-main-item-value {
+    display: inline;
+    margin-left: 5px;
+
+    @media #{$desktop-extra-big-screen} {
+      margin-left: 0;
+    }
+  }
+
+  &__info-desc-natural {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+    @media #{$desktop-extra-big-screen} {
+      grid-gap: 20px;
+    }
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info-desc-natural-item {
+  }
+
+  &__info-desc-in-stock {
+    color: #808080;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 18px;
+      height: 21px;
+      background: $blue;
+      mask: url(../../../img/icon-check.svg);
+      -webkit-mask: url(../../../img/icon-check.svg);
+      @include mask-contain-center;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__info-desc-price {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: $blue;
+    font-weight: 700;
+  }
+
+  &__info-desc-counter {
+    margin-bottom: 20px;
+  }
+
+  &__info-desc-button {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    color: $white;
+    background-color: $blue;
+    @include flex-row-center;
+    font-size: 18px;
+  }
+
+  &__info-desc-natural-item {
+  }
+
+  &__info-desc-manual {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    text-decoration: underline;
+    position: relative;
+    color: $blue;
+
+    &:after {
+      @include after-absolute;
+      width: 21px;
+      height: 24px;
+      background: $blue;
+      mask: url(../../../img/icon-manual.svg);
+      -webkit-mask: url(../../../img/icon-manual.svg);
+      @include mask-contain-center;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__info-desc-delivery {
+    font-size: 16px;
+    margin-bottom: 30px;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 14px;
+    }
+  }
+
+  &__info-desc-delivery-title {
+    color: #808080;
+    margin-bottom: 5px;
+  }
+
+  &__info-desc-delivery-desc {
+  }
+
+  &__info-desc-payment {
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 14px;
+    }
+  }
+
+  &__info-desc-payment-title {
+    color: #808080;
+    margin-bottom: 5px;
+  }
+
+  &__info-desc-delivery-items {
+    @include flex-row-center;
+    justify-content: space-between;
+  }
+
+  &__info-desc-payment-item {
+    @include flex-row-center;
+  }
+
+  &__info-desc-payment-item-img {
+
+    &--cash {
+      width: 26px;
+      height: 25px;
+      background: url(../../../img/icon-cash.svg);
+      @include background-contain-center;
+    }
+
+    &--card {
+      width: 28px;
+      height: 25px;
+      background: url(../../../img/icon-card.svg);
+      @include background-contain-center;
+    }
+  }
+
+  &__info-desc-payment-item-text {
+    color: #808080;
+    margin-left: 7px;
+
+  }
+
+  &__short {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 20px;
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  &__short-block {
+  }
+
+  &__info-desc-help {
+    color: $blue;
+  }
+
+  &__filter {
+    @include flex-row;
+
+    @media #{$mobile-big-screen} {
+      justify-content: flex-end;
+    }
+  }
+
+  &__filter-name {
+    margin-right: 10px;
+  }
+
+  &__filter-items {
+    @include flex-row;
+  }
+
+  &__filter-item {
+    margin-right: 10px;
+    position: relative;
+    color: $blue;
+    cursor: pointer;
+
+    &:after {
+      @include after-absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, $blue 0px, $blue 2px, $white 2px, $white 7px);
+
+      @media #{$tablet-big-screen} {
+        //display: none;
+      }
+    }
+  }
+}

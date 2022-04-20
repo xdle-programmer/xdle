@@ -1,0 +1,78 @@
+.button {
+  height: 57px;
+  min-height: 57px;
+  border-radius: 5px;
+  padding: 0 60px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  width: -moz-fit-content;
+  background: #b61325;
+  cursor: pointer;
+  padding-bottom: 2px; }
+  .button--small {
+    height: 47px;
+    min-height: 47px;
+    padding: 0 50px;
+    padding-bottom: 4px; }
+  .button:hover {
+    background: #b61325; }
+  @media (max-width: 767px) {
+    .button {
+      font-size: 14px;
+      padding: 0 20px;
+      height: 44px;
+      min-height: 44px;
+      padding-bottom: 2px; } }
+  .button--link {
+    width: 100%;
+    position: relative;
+    padding: 0 25px;
+    padding-bottom: 2px;
+    padding-right: 58px;
+    justify-content: flex-start; }
+    .button--link:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 33px;
+      height: 16px;
+      right: 25px;
+      background: #ffffff;
+      mask: url(../../../img/arrow-right.svg);
+      -webkit-mask: url(../../../img/arrow-right.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .button--link:hover:after {
+      background: #ffffff; }
+  .button--gray {
+    background: #f2f2f2;
+    color: #292c31; }
+    .button--gray:hover {
+      background: #b61325;
+      color: #ffffff; }
+    .button--gray:after {
+      background: #292c31; }
+    .button--gray:hover:after {
+      background: #ffffff; }
+  .button--white {
+    background: #ffffff;
+    color: #292c31; }
+    .button--white:hover {
+      background: #b61325;
+      color: #ffffff; }
+    .button--white:after {
+      background: #292c31; }
+    .button--white:hover:after {
+      background: #ffffff; }

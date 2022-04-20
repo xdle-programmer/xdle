@@ -1,0 +1,116 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.works {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+  @media #{$tablet-small-screen} {
+    grid-template-columns: 1fr;
+  }
+
+  @media #{$mobile-big-screen} {
+    width: 100%!important;
+  }
+
+  &__item {
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.12);
+
+    @media #{$mobile-big-screen} {
+      box-shadow: none;
+    }
+  }
+  &__item-img {
+    height: 205px;
+    @include background-cover-center;
+  }
+
+  &__item-desc {
+    padding: 40px 25px;
+    @include flex-column;
+
+    @media #{$mobile-big-screen} {
+      padding: 20px 8px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+  }
+
+  &__item-text {
+    width: 100%;
+    color: #9d9d9d;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 21px;
+  }
+
+  &__item-tags {
+    margin-top: auto;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    display: inline-block;
+
+    &:after {
+      @include after-absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 0;
+      background: #9d9d9d;
+    }
+  }
+  &__item-tags-item {
+    color: #9d9d9d;
+    display: inline;
+    cursor: pointer;
+
+    &:after {
+      content: ', ';
+    }
+
+    &:nth-last-of-type(1):after {
+      display: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item-footer {
+    margin-top: 20px;
+    @include flex-row-center;
+    justify-content: space-between;
+    width: 100%;
+
+  }
+  &__item-footer-more {
+  }
+  &__item-footer-like {
+    @include flex-row-center;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  &__item-footer-like-icon {
+    width: 20px;
+    height: 20px;
+    background: url(../../../img/heart.svg);
+    @include background-contain-center;
+    margin-right: 5px;
+  }
+
+  &__item-footer-like-count {
+    margin-top: 2px;
+  }
+}

@@ -1,0 +1,183 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.how-to-work {
+  padding: 78px 0;
+  position: relative;
+
+  @media #{$tablet-big-screen} {
+    padding: 30px 0;
+  }
+
+  &:after {
+    @include after-absolute;
+    width: 606px;
+    height: 419px;
+    background: url(../../../img/how-to-work-elem-2.jpg);
+    @include background-contain-center;
+    z-index: -1;
+    right: 200px;
+    top: 220px;
+    transform: translateX(100%);
+  }
+
+  &__title {
+    margin-bottom: 75px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__block {
+    @include flex-row;
+    justify-content: space-between;
+
+    @media #{$tablet-big-screen} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__slider {
+    width: 370px;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__slider-number {
+    font-size: 76px;
+    position: absolute;
+    left: -110px;
+    top: 345px;
+    color: $magenta-light;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 654px;
+      height: 412px;
+      background: url(../../../img/how-to-work-elem-1.jpg);
+      @include background-contain-center;
+      z-index: -1;
+      right: -170px;
+      top: -180px;
+    }
+  }
+
+  &__slider-number-current {
+    display: inline;
+  }
+
+  &__slider-number-all {
+    display: inline;
+  }
+
+  &__slider-title {
+    font-size: 25px;
+    color: $magenta;
+    margin-bottom: 70px;
+  }
+
+  &__slider-items {
+
+    &:after {
+      @include after-absolute;
+      z-index: -1;
+      width: 100%;
+      height: calc(100% - 20px);
+      background: linear-gradient(to bottom, #baeffc, #c9a5fd);
+      left: 50px;
+      top: -25px;
+      border-radius: 30px;
+      opacity: .3;
+    }
+
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35px;
+      height: 40px;
+      background: url(../../../img/slider-arrow.png) !important;
+      @include background-contain-center;
+      filter: drop-shadow(3px 3px 3px rgba(240, 247, 253, 0.76));
+
+      & span {
+        display: none;
+      }
+
+      &.disabled {
+        display: none;
+      }
+
+      @media #{$tablet-big-screen} {
+        right: -15px;
+      }
+    }
+
+    & .owl-prev {
+      right: auto;
+      left: -15px;
+      transform: translateY(-50%) scaleX(-1);
+
+      @media #{$tablet-big-screen} {
+        left: -15px;
+      }
+    }
+  }
+
+  &__slider-item {
+    background: linear-gradient(to bottom, #baeffc, #c9a5fd);
+    border-radius: 30px;
+    height: 470px;
+    padding: 25px;
+    font-size: 18px;
+  }
+
+  &__slider-item-title {
+    text-align: center;
+    color: $magenta;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__slider-item-text {
+    margin-bottom: 23px;
+  }
+
+  &__slider-item-list {
+
+  }
+
+  &__slider-item-list-item {
+    margin-bottom: 25px;
+
+    &:before {
+      content: '— ';
+    }
+  }
+
+  &__img-block {
+    width: calc(100% - 440px);
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}

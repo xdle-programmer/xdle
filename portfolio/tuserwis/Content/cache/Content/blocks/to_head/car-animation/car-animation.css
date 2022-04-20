@@ -1,0 +1,317 @@
+.car-animation {
+  padding-top: 85px; }
+  @media (max-width: 1023px) {
+    .car-animation {
+      padding-bottom: 00px;
+      padding-top: 00px; } }
+  @media (max-width: 767px) {
+    .car-animation {
+      padding-bottom: 50px; } }
+  .car-animation__block {
+    height: 423px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 490px;
+    position: relative;
+    opacity: 0; }
+    @media (max-width: 1279px) {
+      .car-animation__block {
+        transform: scale(0.9); } }
+    @media (max-width: 1023px) {
+      .car-animation__block {
+        transform: scale(0.65); } }
+    @media (max-width: 1023px) {
+      .car-animation__block {
+        transform: scale(1);
+        width: 100%; } }
+    .car-animation__block.active {
+      opacity: 1; }
+    .car-animation__block *,
+    .car-animation__block *:before,
+    .car-animation__block *:after {
+      transition: none; }
+  .car-animation__buildings {
+    width: 100%;
+    position: absolute;
+    height: 81%;
+    top: 0;
+    left: 0; }
+  .car-animation__build {
+    position: absolute;
+    bottom: 0; }
+    .car-animation__build:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      background: #ffffff;
+      opacity: .4; }
+    .car-animation__build--1 {
+      width: 20%;
+      height: 65%;
+      left: 0;
+      z-index: 1; }
+    .car-animation__build--2 {
+      width: 32%;
+      height: 74%;
+      left: 15%;
+      z-index: 2; }
+    .car-animation__build--3 {
+      width: 32%;
+      height: 100%;
+      left: 35%;
+      z-index: 3; }
+    .car-animation__build--4 {
+      width: 32%;
+      height: 68%;
+      left: 55%;
+      z-index: 2; }
+    .car-animation__build--5 {
+      width: 25%;
+      height: 55%;
+      right: 0;
+      z-index: 1; }
+  .car-animation__car {
+    position: absolute;
+    width: 62%;
+    height: 47%;
+    top: 43%;
+    left: 20%;
+    z-index: 4; }
+  .car-animation__man {
+    position: absolute;
+    width: 33%;
+    height: 76%;
+    bottom: 0;
+    left: 37%;
+    z-index: 5; }
+  .car-animation__inner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    object-position: center bottom !important; }
+  .car-animation__message {
+    position: absolute;
+    color: #ffffff;
+    background: #0092E8;
+    left: 600px;
+    top: 500px;
+    z-index: 8;
+    white-space: nowrap;
+    border-radius: 5px;
+    opacity: 0;
+    cursor: default; }
+    .car-animation__message:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 9px 0 0 7px;
+      border-color: transparent transparent transparent #0093e8;
+      right: 0;
+      transform: translateX(100%);
+      bottom: 10px; }
+    .car-animation__message--1 {
+      padding: 10px 15px;
+      left: -6%;
+      top: 20px;
+      font-size: 13px; }
+      .car-animation__block.active .car-animation__message--1 {
+        animation: message-animation-1 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .3s; }
+
+@keyframes message-animation-1 {
+  0% {
+    opacity: 0;
+    transform: translate(95px, 160px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+    .car-animation__message--2 {
+      padding: 15px 30px;
+      left: -65%;
+      top: 120px;
+      font-size: 19px; }
+      .car-animation__block.active .car-animation__message--2 {
+        animation: message-animation-2 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .6s; }
+
+@keyframes message-animation-2 {
+  0% {
+    opacity: 0;
+    transform: translate(168px, 46px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+    .car-animation__message--3 {
+      padding: 15px 20px;
+      left: -46%;
+      bottom: 60px;
+      top: auto;
+      font-size: 15px; }
+      .car-animation__block.active .car-animation__message--3 {
+        animation: message-animation-3 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .9s; }
+
+@keyframes message-animation-3 {
+  0% {
+    opacity: 0;
+    transform: translate(255px, -121px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+    .car-animation__message--4 {
+      padding: 10px 20px;
+      left: 67%;
+      top: 0;
+      font-size: 18px; }
+      .car-animation__block.active .car-animation__message--4 {
+        animation: message-animation-4 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .9s; }
+
+@keyframes message-animation-4 {
+  0% {
+    opacity: 0;
+    transform: translate(-30px, 171px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+      .car-animation__message--4:after {
+        content: '';
+        position: absolute;
+        display: block;
+        border-width: 0 0 9px 7px;
+        border-color: transparent transparent #0093e8 transparent;
+        left: 0;
+        transform: translateX(-100%);
+        bottom: 10px; }
+    .car-animation__message--5 {
+      padding: 10px 20px;
+      left: 79%;
+      top: 130px;
+      font-size: 16px; }
+      .car-animation__block.active .car-animation__message--5 {
+        animation: message-animation-5 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .3s; }
+
+@keyframes message-animation-5 {
+  0% {
+    opacity: 0;
+    transform: translate(-85px, 43px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+      .car-animation__message--5:after {
+        content: '';
+        position: absolute;
+        display: block;
+        border-width: 0 0 9px 7px;
+        border-color: transparent transparent #0093e8 transparent;
+        left: 0;
+        transform: translateX(-100%);
+        bottom: 10px; }
+    .car-animation__message--6 {
+      padding: 20px 30px;
+      left: 76%;
+      top: auto;
+      bottom: 70px;
+      font-size: 22px; }
+      .car-animation__block.active .car-animation__message--6 {
+        animation: message-animation-6 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .6s; }
+
+@keyframes message-animation-6 {
+  0% {
+    opacity: 0;
+    transform: translate(-71px, -99px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+      .car-animation__message--6:after {
+        content: '';
+        position: absolute;
+        display: block;
+        border-width: 0 0 9px 7px;
+        border-color: transparent transparent #0093e8 transparent;
+        left: 0;
+        transform: translateX(-100%);
+        bottom: 10px; }
+    @media (max-width: 767px) {
+      .car-animation__message {
+        animation: none !important;
+        right: 0;
+        left: 0;
+        width: 100%;
+        font-size: 16px;
+        padding: 7px 10px;
+        top: 42px;
+        bottom: auto;
+        white-space: normal;
+        height: auto;
+        opacity: 0;
+        transform: translateY(100px); }
+        .car-animation__message:after {
+          content: '';
+          position: absolute;
+          display: block;
+          border-width: 9px 4.5px 0 4.5px;
+          border-color: #0093e8 transparent transparent transparent;
+          right: 74px;
+          left: auto;
+          transform: translateY(100%);
+          bottom: 0; }
+        .car-animation__block.active .car-animation__message {
+          animation: message-animation-mobile 2000ms ease-in-out !important; }
+        .car-animation__block.active .car-animation__message--2 {
+          animation-delay: 2000ms !important; }
+        .car-animation__block.active .car-animation__message--3 {
+          animation-delay: 4000ms !important; }
+        .car-animation__block.active .car-animation__message--4 {
+          animation-delay: 6000ms !important; }
+        .car-animation__block.active .car-animation__message--5 {
+          animation-delay: 8000ms !important; }
+        .car-animation__block.active .car-animation__message--6 {
+          animation: message-animation-mobile-last 2000ms ease-in-out !important;
+          animation-fill-mode: forwards !important;
+          animation-delay: 10000ms !important; }
+      @keyframes message-animation-mobile {
+        0% {
+          opacity: 0;
+          transform: translateY(100px); }
+        10% {
+          opacity: 1;
+          transform: translateY(0); }
+        90% {
+          opacity: 1;
+          transform: translateY(0); }
+        100% {
+          opacity: 0;
+          transform: translateY(100px); } }
+      @keyframes message-animation-mobile-last {
+        0% {
+          opacity: 0;
+          transform: translateY(100px); }
+        10% {
+          opacity: 1;
+          transform: translateY(0); }
+        90% {
+          opacity: 1;
+          transform: translateY(0); }
+        100% {
+          opacity: 1;
+          transform: translateY(0); } } }

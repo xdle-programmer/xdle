@@ -1,0 +1,146 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.feedback {
+  padding: 50px 0;
+
+  #{$night} & {
+    background: #11132d;
+  }
+
+  &__block {
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+  }
+
+  &__switch {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 30px;
+
+    @media #{$mobile-big-screen}{
+      display: none;
+    }
+  }
+
+  &__switch-item {
+    height: 70px;
+    width: 100%;
+    @include flex-row-center;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--blue-color);
+    border-bottom: 1px solid var(--beige-color);
+    text-transform: uppercase;
+    font-weight: 700;
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+
+    &--active {
+      color: var(--beige-color);
+      border-bottom: 1px solid rgba(187, 139, 80, .3);
+
+      #{$night} & {
+        color: var(--beige-color);
+      }
+    }
+  }
+
+  &__form {
+  }
+
+  &__form-item {
+    &--active {
+    }
+  }
+
+  &__form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media #{$mobile-big-screen}{
+      grid-template-columns: 1fr;
+    }
+
+    &--callback {
+      grid-template-areas: 'name phone time' 'desc desc desc' 'button . sign';
+
+      @media #{$mobile-big-screen}{
+        grid-template-areas: 'name' 'phone' 'time' 'desc' 'button' 'sign';
+      }
+    }
+
+  }
+
+  &__form-field {
+
+
+    &--name {
+      grid-area: name;
+    }
+
+    &--phone {
+      grid-area: phone;
+    }
+
+    &--time {
+      grid-area: time;
+    }
+
+    &--desc {
+      grid-area: desc;
+    }
+
+    &--sign {
+      grid-area: sign;
+      text-align: right;
+    }
+
+    &--button {
+      grid-area: button;
+      background: var(--beige-color);
+      height: 65px;
+      @include flex-row-center;
+      color: var(--white-color);
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
+
+  &__form-field-input {
+    border: 1px solid #eaf2f4;
+    height: 65px;
+    padding-left: 15px;
+    font-size: 16px;
+    width: 100%;
+    background: var(--white-color);
+
+    &--big {
+      height: 200px;
+      padding-top: 15px;
+      font-size: 16px;
+      font-family: squad, sans-serif;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid #fff;
+      box-shadow: 0 0 5px 0 #eaf2f4;
+      outline: none;
+    }
+  }
+}

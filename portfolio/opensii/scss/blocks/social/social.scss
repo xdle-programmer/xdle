@@ -1,0 +1,136 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.social {
+  @include flex-row;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: $white;
+  cursor: pointer;
+  flex-wrap: wrap;
+
+  &__button {
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    @include flex-row;
+
+    &--vk {
+      background: #4c75a3;
+    }
+    &--fb {
+      background: #3b5998;
+    }
+    &--ok {
+      background: #ee8208;
+    }
+    &--twitter {
+      background: #5ea9dd;
+    }
+    &--telegram {
+      background: #2ca4d7;
+    }
+  }
+  &__button-icon {
+    position: relative;
+
+    &:after {
+      background: $white;
+    }
+
+    &--vk {
+      width: 49px;
+      height: 100%;
+
+      &:after {
+        @include after-absolute;
+        width: 36px;
+        height: 36px;
+        top: 2px;
+        left: 11px;
+        -webkit-mask-image: url(../../img/icon-vk.svg);
+        mask-image: url(../../img/icon-vk.svg);
+        @include mask-contain-center;
+      }
+    }
+    &--fb {
+      width: 30px;
+      height: 100%;
+
+      &:after {
+        @include after-absolute;
+        width: 33px;
+        height: 41px;
+        bottom: -6px;
+        left: 3px;
+        -webkit-mask-image: url(../../img/icon-facebook.svg);
+        mask-image: url(../../img/icon-facebook.svg);
+        @include mask-contain-center;
+      }
+    }
+    &--ok {
+      width: 30px;
+      height: 100%;
+
+      &:after {
+        @include after-absolute;
+        width: 30px;
+        height: 28px;
+        top: 6px;
+        left: 5px;
+        -webkit-mask-image: url(../../img/icon-odnoklassniki-bold.svg);
+        mask-image: url(../../img/icon-odnoklassniki-bold.svg);
+        @include mask-contain-center;
+      }
+    }
+    &--twitter {
+      width: 45px;
+      height: 100%;
+
+      &:after {
+        @include after-absolute;
+        width: 25px;
+        height: 25px;
+        top: 6px;
+        left: 10px;
+        -webkit-mask-image: url(../../img/icon-twitter.svg);
+        mask-image: url(../../img/icon-twitter.svg);
+        @include mask-contain-center;
+      }
+    }
+    &--telegram {
+      width: 45px;
+      height: 100%;
+
+      &:after {
+        @include after-absolute;
+        width: 26px;
+        height: 21px;
+        top: 8px;
+        left: 8px;
+        background: url(../../img/icon-telegram.png);
+        @include background-contain-center;
+      }
+    }
+
+  }
+
+  &__button-title {
+    padding: 0 9px;
+    font-size: 12px;
+    font-weight: 300;
+
+    height: 100%;
+    @include flex-row-center;
+  }
+  &__button-count {
+    padding: 0 10px;
+    font-size: 23px;
+    font-weight: 300;
+    height: 100%;
+    @include flex-row-center;
+    border-left: 1px solid rgba(255, 255, 255, .5);
+  }
+}

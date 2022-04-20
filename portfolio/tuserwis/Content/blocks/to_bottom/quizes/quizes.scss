@@ -1,0 +1,206 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.quizes {
+  width: 1170px;
+  @include margin-auto;
+  padding-top: 32px;
+  padding-bottom: 50px;
+  font-family: 'graphik';
+
+  @media #{$tablet-big-screen} {
+    width: 95vw;
+  }
+
+  @media #{$mobile-big-screen} {
+    padding-top: 0px;
+    width: 374px;
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+  }
+
+  @media #{$mobile-small-screen} {
+    padding-top: 0px;
+    width: 100vw;
+    margin: 0;
+  }
+
+  &__header {
+    width: 420px;
+    @include margin-auto;
+    height: auto;
+    border-top: 3px solid $blue;
+    position: relative;
+    margin-bottom: 30px;
+
+    @media #{$tablet-big-screen} {
+      width: calc(95% - 100px);
+      @include margin-auto;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__header-back-block {
+    position: absolute;
+    left: calc(50% - 550px);
+    top: -10px;
+
+    @media #{$tablet-big-screen} {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 30px;
+      z-index: 10;
+    }
+  }
+
+  &__header-back {
+    font-size: 15px;
+    color: #0F4C81;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    padding-left: 30px;
+
+    &:after {
+      @include after-absolute;
+      width: 22px;
+      height: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0F4C81;
+      mask: url(../../../img/quizes__header-back.png);
+      -webkit-mask: url(../../../img/quizes__header-back.png);
+      @include mask-contain-center;
+      left: 0;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__header-pointer {
+    width: 1px;
+    height: 1px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      top: -15px;
+      transform: translate(-50%, -50%) scaleX(-1);
+      width: 24px;
+      height: 12px;
+      background: url(../../../img/cars.svg);
+    }
+  }
+
+  &__header-steps {
+    @include flex-row-center;
+    justify-content: space-between;
+  }
+
+  &__header-step {
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #fafafa;
+      background-color: $blue;
+      border-radius: 50%;
+      top: -3px;
+    }
+  }
+
+  &__header-step-item {
+    position: absolute;
+    @include absolute-center;
+    top: 10px;
+    color: $blue;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.31px;
+    text-transform: uppercase;
+  }
+
+
+  $item-width: 1100;
+
+  &__wrapper {
+    width: calc(#{$item-width}px + 70px);
+    height: auto;
+    overflow: hidden;
+    @include margin-auto;
+
+    @media #{$tablet-big-screen} {
+      width: 95vw;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 375px;
+    }
+
+    @media #{$mobile-small-screen} {
+      width: 100vw;
+    }
+  }
+
+  &__items {
+    width: #{$item-width * 100}px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(100, #{$item-width}px);
+    padding: 0 35px;
+    grid-gap: 70px;
+
+    @media #{$tablet-big-screen} {
+      width: 9500vw;
+      grid-template-columns: repeat(100, calc(95vw - 70px));
+    }
+
+    @media #{$mobile-big-screen} {
+      grid-gap: 30px;
+      grid-template-columns: repeat(100, 345px);
+      padding: 0 15px;
+    }
+
+    @media #{$mobile-small-screen} {
+      grid-template-columns: repeat(100, calc(100vw - 20px));
+      grid-gap: 20px;
+      padding: 0 10px;
+    }
+  }
+
+  &__item {
+    width: #{$item-width}px;
+    flex-shrink: 0;
+    height: fit-content;
+
+    @media #{$tablet-big-screen} {
+      width: calc(95vw - 70px);
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 345px;
+    }
+
+    @media #{$mobile-small-screen} {
+      width: calc(100vw - 20px)
+    }
+  }
+
+  &__item .form__wrapper-inner {
+    //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+
+    @media #{$mobile-big-screen} {
+      //box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

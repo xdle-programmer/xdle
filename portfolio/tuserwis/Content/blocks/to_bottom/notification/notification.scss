@@ -1,0 +1,61 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.notification {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #8e9fa9;
+    z-index: 100;
+    width: 100%;
+    padding: 20px 0;
+
+    @media #{$mobile-big-screen} {
+        padding-bottom: 60px;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+
+    &.hide {
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 17px;
+        color: $white;
+
+        @media #{$mobile-big-screen} {
+            font-size: 15px;
+        }
+    }
+
+    &__button {
+        margin-top: 5px;
+    }
+
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background: $white;
+        mask: url(../../../img/close.svg);
+        -webkit-mask: url(../../../img/close.svg);
+        cursor: pointer;
+
+        @media #{$mobile-big-screen} {
+            right: 15px;
+            top: 17px;
+            transform: translateY(0);
+        }
+    }
+}

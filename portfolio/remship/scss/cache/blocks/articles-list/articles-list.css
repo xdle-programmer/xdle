@@ -1,0 +1,95 @@
+.articles-list__item {
+  margin-bottom: 20px;
+  border: 8px solid #f1f1f1;
+  background: #f1f1f1;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 120px; }
+  @media (max-width: 767px) {
+    .articles-list__item {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; } }
+
+.articles-list__item-img {
+  height: 100%;
+  width: 175px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important; }
+  @media (max-width: 767px) {
+    .articles-list__item-img {
+      width: 100%;
+      height: 130px; } }
+
+.articles-list__item-desc {
+  height: auto;
+  width: calc(100% - 175px);
+  position: relative;
+  padding: 0 15px; }
+  @media (max-width: 767px) {
+    .articles-list__item-desc {
+      width: 100%;
+      padding: 15px;
+      padding-bottom: 30px; } }
+
+.articles-list__item-date {
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fc673f; }
+
+.articles-list__item-name {
+  font-size: 17px;
+  font-weight: 300; }
+  @media (max-width: 767px) {
+    .articles-list__item-name {
+      font-size: 15px; } }
+
+.articles-list__item-text {
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 15px;
+  color: #666; }
+
+.articles-list__item-link-block {
+  position: absolute;
+  right: -8px;
+  bottom: -8px; }
+
+.articles-list__item-link {
+  position: relative;
+  height: 27px;
+  display: inline-block;
+  line-height: 27px;
+  cursor: pointer;
+  z-index: 1;
+  padding-right: 10px;
+  padding-left: 20px;
+  font-size: 12px; }
+  .articles-list__item-link:before, .articles-list__item-link:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .articles-list__item-link:before {
+    background: url(../../img/angle-gray.png);
+    background-size: 294px 27px;
+    opacity: 1; }
+  .articles-list__item-link:hover:before {
+    opacity: 0; }
+  .articles-list__item-link:after {
+    background: url(../../img/angle-blue.png);
+    background-size: 294px 27px;
+    opacity: 0; }
+  .articles-list__item-link:hover:after {
+    opacity: 1; }

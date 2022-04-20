@@ -1,0 +1,56 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.radio {
+  width: 100%;
+  @include flex-row;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: solid 1px rgba(217, 216, 230, .55);
+  -webkit-box-align: center;
+  height: 50px;
+  font-weight: 300;
+
+  &:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+  }
+
+  .selected & {
+    border: solid 1px $magenta;
+  }
+
+  input {
+    display: none;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+
+    .selected & {
+      position: relative;
+      background: $white;
+      border: 1px solid $magenta;
+
+      &:after {
+        @include after-absolute;
+        @include absolute-center;
+        width: 10px;
+        height: 10px;
+        background: $magenta;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__text {
+    margin-left: 10px;
+  }
+
+}

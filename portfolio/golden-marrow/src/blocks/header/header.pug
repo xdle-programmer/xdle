@@ -1,0 +1,39 @@
+header.header
+    .layout.header__block
+        .header__top
+
+            a(href='/').header__mobile-logo
+                include ../logo/logo
+
+            .header__language
+                .header__language-item.header__language-item--active ru
+                .header__language-item en
+            .header__social
+                include ../social/social
+                a.header__mobile-phone(href='#') +7 (495) 0123 - 45 - 56
+
+            .header__mobile-button
+
+        .header__bottom-wrapper
+            .header__bottom
+
+                .header__bottom-mobile-header
+                    .header__bottom-mobile-header-logo
+                        include ../logo/logo
+                    .header__bottom-mobile-header-button
+
+                a(href='/').header__logo
+                    include ../logo/logo
+                .header__menu
+                    a.header__menu-item(href='#') о нас
+                    a.header__menu-item(href='#') наши направления
+                    a.header__menu-item(href='#') новости
+                    a.header__menu-item(href='#') клиенты
+                    a.header__menu-item(href='#') HR
+                    a.header__menu-item(href='#') контакты
+                .header__bottom-social
+                    include ../social/social
+                a.header__phone(href='#') +7 (495) 0123 - 45 - 56
+
+
+

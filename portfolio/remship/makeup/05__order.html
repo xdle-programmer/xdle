@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    [[blocks/head.html*1]]
+    <title>Страница заказа</title>
+</head>
+
+<body>
+<div class="wrapper">
+    [[blocks/header.html*1]]
+
+    <div class="layout-top">
+        <div class="layout-main layout-flex">
+            <div class="layout-top__item">
+                <h1>Оформление заказа</h1>
+                <div class="breadcrumbs">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <div class="breadcrumbs__text">Оформление заказа</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-main layout-flex layout-relative">
+        [[blocks/left-menu-order.html*1]]
+
+        <div class="layout-content">
+            <div class="order">
+                <div class="order__section active">
+                    <div class="order__section-header">
+                        Регион доставки
+                    </div>
+                    <div class="order__section-content">
+
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Город доставки</div>
+                            <select class="order__input-select">
+                                <option>Физическое лицо</option>
+                                <option>Юридическое лицо</option>
+                            </select>
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Город доставки</div>
+                            <input type="text" id="order__city-autocomplete" class="order__input"
+                                   placeholder="Укажите город">
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Почтовый индекс</div>
+                            <input type="text" class="order__input" placeholder="Укажите индекс">
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required error">
+                            <div class="order__input-title">Временное поле с примером ошибки</div>
+                            <input type="text" class="order__input" placeholder="Укажите индекс">
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                    </div>
+
+                    <div class="order__section-footer">
+                        <div class="order__section-button order-button-next">Продолжить</div>
+                    </div>
+                </div>
+
+                <div class="order__section ">
+                    <div class="order__section-header">
+                        Доставка
+                    </div>
+                    <div class="order__section-content">
+
+                        <div class="order__input-block">
+                            <div class="radio-button">
+                                <input type="radio" name="radio" class="radio-button__input" id="delivery-1">
+                                <label class="radio-button__label" for="delivery-1">Доставка курьером по
+                                    Санкт-Петербургу (300 руб.)</label>
+                                <input type="radio" name="radio" class="radio-button__input" id="delivery-2">
+                                <label class="radio-button__label" for="delivery-2">Самовывоз со склада
+                                    (бесплатно)</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="order__section-footer">
+                        <div class="order__section-button order-button-next">Продолжить</div>
+                        <div class="order__section-button order__section-button--gray  order-button-prev">Вернуться
+                            назад
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="order__section ">
+                    <div class="order__section-header">
+                        Оплата
+                    </div>
+                    <div class="order__section-content">
+
+
+                        <div class="order__input-block">
+                            <div class="radio-button">
+                                <input type="radio" name="radio" class="radio-button__input" id="payment-card">
+                                <label class="radio-button__label" for="payment-card">Банковская карта</label>
+                                <input type="radio" name="radio" class="radio-button__input" id="payment-bank">
+                                <label class="radio-button__label" for="payment-bank">Банковский перевод</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="order__section-footer">
+                        <div class="order__section-button order-button-next">Продолжить</div>
+                        <div class="order__section-button order__section-button--gray  order-button-prev">Вернуться
+                            назад
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="order__section ">
+                    <div class="order__section-header">
+                        Покупатель
+                    </div>
+
+
+                    <div class="order__section-content">
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Ф.И.О.</div>
+                            <input type="text" class="order__input" placeholder="Укажите полностью ФИО">
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Серия и номер паспорт</div>
+                            <div class="order__input-passport-block">
+                                <input type="text" class="order__input" placeholder="Серия">
+                                <span>—</span>
+                                <input type="text" class="order__input" placeholder="Номер">
+                            </div>
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Электронная почта</div>
+                            <input type="text" class="order__input" placeholder="Укажите адрес эл.почты">
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Телефон</div>
+                            <input type="text" class="order__input" placeholder="Укажите телефон для связи">
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required">
+                            <div class="order__input-title">Ваш комментарий</div>
+                            <textarea class="order__input order__input--textarea" placeholder="Укажите комментарий к заказу"></textarea>
+                            <div class="order__input-error">Поле обязательно для заполнения</div>
+                        </div>
+
+                        <div class="order__input-block required">
+                        <div class="modal__input-checkbox">
+                            <input type="checkbox" id="agree"/>
+                            <label for="agree">Я согласен (-на) на обработку персональных данных</label>
+                        </div>
+                        </div>
+                    </div>
+
+
+                    <div class="order__section-footer">
+                        <div class="order__section-button">Отправить заказ</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+[[blocks/footer.html*1]]
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.contacts {
+
+  &__title {
+    color: $gray-dark;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    margin-top: -24px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 25px;
+      line-height: 31px;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 35px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+
+    @media #{$tablet-small-screen} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-title {
+    color: $gray-dark;
+    @include font-roboto;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 24px;
+    margin-bottom: 18px;
+
+    @media #{$tablet-small-screen} {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__item-text {
+    color: $gray-dark;
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 24px;
+
+    &--link {
+      cursor: pointer;
+    }
+
+    &--address {
+      color: $gray-dark;
+      @include font-roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+
+  &__map {
+    margin-top: 50px;
+    position: relative;
+    height: 460px;
+
+    iframe {
+      position: absolute;
+      @include absolute-fill;
+      height: 100% !important;
+    }
+  }
+
+}

@@ -1,0 +1,85 @@
+.place-slider {
+  padding-top: 48px; }
+  @media (max-width: 1279px) {
+    .place-slider {
+      padding-top: 0;
+      width: calc(100% - 40px);
+      margin-left: auto;
+      margin-right: auto; } }
+  .place-slider__items .owl-prev,
+  .place-slider__items .owl-next {
+    position: absolute;
+    width: 25px !important;
+    height: 45px !important;
+    background: url(../../../../img/slider_arrow.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1); }
+    .place-slider__items .owl-prev:focus, .place-slider__items .owl-prev:active,
+    .place-slider__items .owl-next:focus,
+    .place-slider__items .owl-next:active {
+      outline: none !important; }
+  .place-slider__items .owl-next {
+    left: auto;
+    right: 0;
+    transform: translateY(-50%) scaleX(-1); }
+    @media (max-width: 1279px) {
+      .place-slider__items .owl-next {
+        right: -33px; } }
+  .place-slider__items .owl-prev {
+    left: 0px;
+    right: auto;
+    transform: translateY(-50%); }
+    @media (max-width: 1279px) {
+      .place-slider__items .owl-prev {
+        left: -33px; } }
+  .place-slider__items .owl-prev span,
+  .place-slider__items .owl-next span {
+    display: none; }
+  .place-slider__item {
+    width: 100%;
+    position: relative;
+    transform: scale(0.7);
+    transition: all .4s ease-in; }
+    @media (max-width: 1279px) {
+      .place-slider__item {
+        transform: scale(1); } }
+    .place-slider__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background: #c3c3c3;
+      opacity: 1;
+      transition: all .4s ease-in;
+      z-index: -1; }
+    .place-slider__item.active {
+      transform: scale(1); }
+  .place-slider__item-inner {
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    position: relative;
+    z-index: 1;
+    opacity: .7;
+    transition: all .4s ease-in; }
+  .place-slider__item-inner-bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    background: #c3c3c3; }
+  .place-slider__item.active .place-slider__item-inner {
+    opacity: 1; }

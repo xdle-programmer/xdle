@@ -1,0 +1,130 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.two-banners {
+  width: 100%;
+  position: relative;
+
+  &:before {
+    @include after-absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: calc(50% - 8px);
+    background: #efb495;
+    z-index: -2;
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+  &:after {
+    @include after-absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: calc(50% - 8px);
+    background: #c9dddd;
+    z-index: -2;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    @include flex-row;
+    justify-content: space-between;
+
+    @media #{$tablet-big-screen} {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: calc(50% - 8px);
+    height: 300px;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      background: #efb495;
+      margin-bottom: 20px;
+
+      &:nth-of-type(2) {
+        background: #c9dddd;
+      }
+    }
+
+    @media #{$tablet-small-screen} {
+      height: auto;
+    }
+  }
+  &__desc {
+    height: 100%;
+    padding: 40px;
+    @include flex-column;
+    justify-content: space-between;
+
+    @media #{$tablet-small-screen} {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+
+    &:hover {
+      color: $green;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-top: 15px;
+    }
+  }
+  &__img {
+    position: absolute;
+    @include absolute-fill;
+    width: calc(100% - 40px);
+
+    background-repeat: no-repeat !important;
+    background-position: right bottom !important;
+    z-index: -1;
+
+    @media #{$tablet-big-screen} {
+      z-index: 0;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 98%;
+      height: 95%;
+      bottom: 0;
+      top: auto;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      height: 100%;
+      opacity: .3;
+
+    }
+
+    &--right {
+      left: 100px;
+
+      @media #{$tablet-big-screen} {
+        left: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.icons {
+  @include flex-row;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  @media #{$tablet-big-screen} {
+    @include flex-column;
+    margin-top: 20px;
+  }
+
+  &__item {
+    padding: 0 40px;
+    width: 25%;
+
+    @media #{$tablet-big-screen} {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      grid-gap: 15px;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    @include flex-row-center;
+    align-items: flex-end;
+
+    @media #{$tablet-big-screen} {
+      align-self: flex-start;
+    }
+  }
+
+  &__item-text {
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+}

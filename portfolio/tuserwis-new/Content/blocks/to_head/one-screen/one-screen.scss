@@ -1,0 +1,78 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.one-screen {
+    min-height: calc(100vh - 121px);
+    width: 100%;
+    position: relative;
+    //overflow: hidden;
+    padding-bottom: 50px;
+    flex-grow: 1;
+
+    &__el-top {
+        top: 457px;
+        right: -21px;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        position: absolute;
+
+        @media #{$tablet-small-screen} {
+            display: none;
+        }
+    }
+
+    &__el-top-inner-1 {
+        position: absolute;
+        width: 1018px;
+        height: 1018px;
+        transform: translate(-50%, -50%) rotate(61deg);
+        background: url("../../../img/gear-gray.svg");
+        z-index: 1;
+        @include background-contain-center;
+    }
+
+    &__el-top-inner-2 {
+        position: absolute;
+        width: 827px;
+        height: 827px;
+        transform: translate(-50%, -50%) rotate(61deg);
+        background: url("../../../img/gear-blue.svg");
+        z-index: 2;
+        @include background-contain-center;
+    }
+
+    &__el-bottom {
+        top: 632px;
+        left: 36px;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        position: absolute;
+
+        @media #{$tablet-small-screen} {
+            display: none;
+        }
+    }
+
+    &__el-bottom-inner-1 {
+        position: absolute;
+        width: 586px;
+        height: 586px;
+        transform: translate(-50%, -50%) rotate(61deg);
+        background: url("../../../img/gear-gray.svg");
+        z-index: 1;
+        @include background-contain-center;
+    }
+
+    &__el-bottom-inner-2 {
+        position: absolute;
+        width: 452px;
+        height: 452px;
+        transform: translate(-50%, -50%) rotate(61deg);
+        background: url("../../../img/gear-blue.svg");
+        z-index: 1;
+        @include background-contain-center;
+    }
+}

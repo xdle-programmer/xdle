@@ -1,0 +1,276 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.sixth {
+  padding-top: 110px;
+  padding-bottom: 219px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 25px;
+    padding-bottom: 140px;
+  }
+
+  &__icon-block {
+    position: relative;
+    height: 590px;
+    width: 100%;
+    margin-top: 50px;
+
+    @media #{$tablet-big-screen} {
+      padding-top: 25px;
+      height: auto;
+    }
+  }
+
+  &__icon {
+    width: 188px;
+    height: 365px;
+    position: absolute;
+    left: 460px;
+    top: 0;
+    z-index: 1;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(../../../img/sixth-icon-center.png);
+      @include background-contain-center;
+      z-index: 1;
+    }
+
+    &:before {
+      @include after-absolute;
+      width: 221px;
+      height: 221px;
+      border: 90px solid $yellow;
+      background-color: $white;
+      border-radius: 50%;
+      z-index: -5;
+      left: -99px;
+      top: 78px;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__item {
+    width: 345px;
+    position: absolute;
+
+    &:before {
+      @include after-absolute;
+      width: 345px;
+      height: 8px;
+      background: $yellow;
+      top: 62px;
+      left: 0;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 160px;
+      height: 8px;
+      background: $yellow;
+      top: 62px;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      left: auto!important;
+      top: auto!important;
+      right: auto!important;
+      bottom: auto!important;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+
+    &--1 {
+      top: 15px;
+      left: 0;
+    }
+
+    &--1:after {
+      left: 345px;
+      transform-origin: left top;
+      transform: rotate(30deg);
+    }
+
+    &--2 {
+      top: 15px;
+      right: 0;
+    }
+
+
+    &--2:after {
+      right: 345px;
+      transform-origin: right top;
+      transform: rotate(-30deg);
+    }
+
+    &--3 {
+      top: 408px;
+      left: 0;
+    }
+
+    &--3:after {
+      left: 340px;
+      top: 63px;
+      transform-origin: left top;
+      transform: rotate(-30deg);
+    }
+
+    &--4 {
+      top: 408px;
+      right: 0;
+    }
+
+    &--4:after {
+      right: 340px;
+      top: 63px;
+      transform-origin: right top;
+      transform: rotate(30deg);
+    }
+  }
+
+  $item-1: '.sixth__item--1';
+  $item-2: '.sixth__item--2';
+  $item-3: '.sixth__item--3';
+  $item-4: '.sixth__item--4';
+
+  &__item-title {
+    @include font-intro-reg;
+    font-size: 48px;
+    text-transform: uppercase;
+
+    #{$item-2} & {text-align: right;}
+    #{$item-4} & {text-align: right;}
+
+    @media #{$tablet-big-screen} {
+      text-align: left!important;
+    }
+
+  }
+  &__item-text {
+    font-size: 20px;
+    padding-top: 24px;
+    line-height: 32px;
+    width: 380px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    #{$item-2} & {left: auto;right: -27px}
+    #{$item-4} & {left: auto;right: -27px}
+
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      left: auto!important;
+      top: auto!important;
+      right: auto!important;
+      bottom: auto!important;
+      width: 100%;
+      padding-top: 0;
+      margin-bottom: 20px;
+    }
+
+  }
+  &__list-block {
+    margin-top: 170px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 50px;
+    }
+  }
+  &__list-block-items {
+    padding-top: 50px;
+    width: 700px;
+    margin-left: 38px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__list-block-item {
+    position: relative;
+    height: 101px;
+    margin-bottom: 35px;
+    padding-left: 155px;
+    font-size: 20px;
+    @include flex-row;
+    align-items: center;
+
+    @media #{$tablet-big-screen} {
+      height: auto;
+      margin-bottom: 20px;
+      padding-left: 80px;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 101px;
+      height: 101px;
+      left: 0;
+      top: 0;
+
+      @media #{$tablet-big-screen} {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &--1:after {
+      background: url(../../../img/sixth-icon-1.png);
+      @include background-contain-center;
+    }
+    &--2:after {
+      background: url(../../../img/sixth-icon-2.png);
+      @include background-contain-center;
+    }
+    &--3:after {
+      background: url(../../../img/sixth-icon-3.png);
+      @include background-contain-center;
+    }
+    &--4:after {
+      background: url(../../../img/sixth-icon-4.png);
+      @include background-contain-center;
+    }
+    &--5:after {
+      background: url(../../../img/sixth-icon-5.png);
+      @include background-contain-center;
+    }
+
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 43px;
+    left: 758px;
+    width: 610px;
+    height: 946px;
+    background: url(../../../img/sixth-img.png);
+    @include background-contain-center;
+  }
+}

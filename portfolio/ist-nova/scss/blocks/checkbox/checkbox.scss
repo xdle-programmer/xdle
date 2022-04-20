@@ -1,0 +1,110 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.checkbox {
+
+  &__input {
+    display: none;
+  }
+
+  $radio-side: 12;
+  $radio-different: 8;
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    padding-left: #{$radio-side + 10}px;
+    font-size: 14px;
+    color: $gray;
+    display: block;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    &--small {
+      font-size: 11px;
+    }
+
+    &:before {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: #{$radio-side}px;
+      height: #{$radio-side}px;
+      border: 2px solid $gray;
+    }
+
+    &--green:before {
+      border-color: #098909;
+    }
+    &--brown:before {
+      border-color: #9a461b;
+    }
+    &--red:before {
+      border-color: #ff0000;
+    }
+    &--metall:before {
+      border-color: #817677;
+    }
+    &--lactic:before {
+      border-color: #eff1e3;
+    }
+    &--multi:before {
+
+      border-image: url(/img/checkbox-multi.png) 1;
+
+    }
+    &--orange:before {
+      border-color: #ff9a00;
+    }
+    &--pink:before {
+      border-color: #ffb9c6;
+    }
+    &--fox:before {
+      border-color: #d26a13;
+    }
+    &--gray:before {
+      border-color: #6b6b6b;
+    }
+    &--blue:before {
+      border-color: #7c00ff;
+    }
+    &--purple:before {
+      border-color: #7c00ff;
+    }
+    &--black:before {
+      border-color: #000;
+    }
+
+    &:after {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: #{(($radio-side - ($radio-side - $radio-different))/2)}px;
+      width: #{$radio-side - $radio-different}px;
+      height: #{$radio-side - $radio-different}px;
+      border: 2px solid $black;
+      background: $black;
+      opacity: 0;
+    }
+
+  }
+
+  &__input:checked + &__label:after {
+    opacity: 1;
+  }
+
+  &__input:checked + &__label {
+    color: $black;
+  }
+
+  &__input:checked + &__label:after {
+    box-shadow: none;
+  }
+
+}
+

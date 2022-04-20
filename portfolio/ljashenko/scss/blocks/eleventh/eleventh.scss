@@ -1,0 +1,55 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.eleventh {
+  padding-bottom: 30px !important;
+  padding-top: 300px !important;
+  background: url(../../../img/eleventh.jpg);
+  @include background-cover-center;
+  background-position: bottom center !important;
+
+  @media #{$mobile-big-screen} {
+    background: url(../../../img/eleventh_mobile.jpg);
+    @include background-cover-center;
+    background-position: bottom center !important;
+    padding-top: 100px !important;
+    padding-bottom: 80px !important;
+  }
+
+  &__block {
+    width: 58%;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__text {
+    font-size: 16px !important;
+  }
+
+  &__button {
+    margin: 50px 0;
+  }
+
+  &__subtext {
+    line-height: 30px !important;
+  }
+
+  &__link {
+    margin-top: 100px;
+    color: $white;
+    text-transform: lowercase;
+    font-size: 12px;
+
+    @media #{$mobile-big-screen} {
+      margin-top: 450px;
+      text-align: center;
+    }
+  }
+}

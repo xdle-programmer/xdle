@@ -1,0 +1,101 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  @include flex-row-center;
+  background: $blue;
+  border: 1px solid $blue;
+  color: $white;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0 7px;
+  height: 32px;
+  width: 100%;
+  min-width: 120px;
+  cursor: pointer;
+
+  &--small {
+    height: 20px;
+  }
+
+  &--pink {
+    background: $pink;
+    border: 1px solid $pink;
+  }
+
+  &--invert {
+    background: $white;
+    color: $gray;
+    border: 1px solid $gray;
+  }
+
+  &--del {
+    justify-content: flex-start;
+
+    &:before {
+      display: block;
+      content: '';
+      margin-right: 6px;
+      width: 19px;
+      height: 17px;
+      background: url(../../../img/del.png);
+      @include background-contain-center;
+    }
+  }
+
+  &--box {
+    justify-content: flex-start;
+
+    &:before {
+      display: block;
+      content: '';
+      margin-right: 9px;
+      width: 16px;
+      height: 14px;
+      background: url(../../../img/box.png);
+      @include background-contain-center;
+    }
+  }
+
+  &--payment {
+    justify-content: flex-start;
+
+    &:before {
+      display: block;
+      content: '';
+      margin-right: 7px;
+      width: 18px;
+      height: 18px;
+      background: url(../../../img/payment.png);
+      @include background-contain-center;
+    }
+  }
+
+  &--print {
+    justify-content: flex-start;
+
+    &:before {
+      display: block;
+      content: '';
+      margin-right: 7px;
+      width: 18px;
+      height: 18px;
+      background: url(../../../img/print.png);
+      @include background-contain-center;
+    }
+  }
+
+  &--support {
+
+    &:before {
+      display: block;
+      content: '';
+      margin-right: 5px;
+      width: 25px;
+      height: 25px;
+      background: url(../../../img/support.png);
+      @include background-contain-center;
+    }
+  }
+}

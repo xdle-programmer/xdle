@@ -1,0 +1,400 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+$chat-item-active: '.chat__item--active';
+.chat-box{
+  display: flex;
+}
+.chat {
+  display: inline-flex;
+  border-radius: 4px;
+  border: solid 1px rgba(29, 81, 157, 0.17);
+  height: 510px;
+  &--mr{
+    margin-right: 16px;
+  }
+  &__item{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    position: relative;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &--small-padding{
+      padding: 8px 16px;
+    }
+    &--active{
+      background-color: #9eb4d5;
+    }
+  }
+  &__panel{
+    padding: 5px 5px 5px 0;
+    width: 358px;
+    background-color: rgba(#1d519d, 0.05);
+    border-radius: 4px;
+    border-right: 1px solid rgba(29, 81, 157, 0.17);
+  }
+  &__panel-inner{
+    height: 502px;
+    padding: 23px 15px 0 16px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+      position: relative;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(29, 81, 157, 0.3);
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+  &__panel-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1e29;
+    margin-bottom: 16px;
+  }
+  &__support-icon{
+    width: 32px;
+    height: 32px;
+    background-color: rgba(29, 81, 157, 0.08);
+    border-radius: 100%;
+    @include flex-row-center;
+    margin-right: 16px;
+  }
+  &__name{
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1e29;
+    margin-bottom: 7px;
+    line-height: 1.71;
+    #{$chat-item-active} & {
+      color: #fff;
+    }
+  }
+  &__status{
+	font-size: 14px;
+	font-weight: 500;
+    line-height: 1.71;
+    color: rgba(29, 30, 41, 0.5);
+  }
+  &__item-icon{
+    width: 48px;
+    height: 48px;
+	border-radius: 100%;
+    margin-right: 16px;
+  }
+  &__about-item{
+    display: flex;
+  }
+  &__about-item-text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1e29;
+    margin-right: 16px;
+    line-height: 1.71;
+    &:last-child{
+      margin-right: 0;
+    }
+    #{$chat-item-active} & {
+      color: #fff;
+    }
+  }
+  &__menu{
+    background: rgba(29, 30, 41, 0.2);
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 8px;
+    top: 9px;
+    right: 9px;
+    @include mask-contain-center;
+    mask: url(../../../img/chat/menuchats.svg);
+    -webkit-mask: url(../../../img/chat/menuchats.svg);
+    #{$chat-item-active} & {
+      background: #fff;
+    }
+  }
+  &__area-box{
+    padding: 16px 7px 16px 16px;
+    position: relative;
+  }
+  &__area{
+    background: #fff;
+    overflow-y: auto;
+    width: 446px;
+    height: 470px;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(29, 81, 157, 0.3);
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+  &__area-search{
+    padding: 8px 17px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 4px 0 rgba(159, 165, 174, 0.29);
+    border: solid 1px #d9e2ef;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+    width: 280px;
+	height: 40px;
+  }
+  &__area-day{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(34, 35, 50, 0.75);
+    margin-bottom: 16px;
+  }
+  &__message{
+    width: 256px;
+    border-radius: 12px;
+    background-color: #f3f6fa;
+    padding: 16px 48px 16px 16px;
+    margin-bottom: 24px;
+    position: relative;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &--active{
+      background-color: #9eb4d5;
+      margin-left: 10px;
+      &:after{
+        content: '';
+        position: absolute;
+        border: 5px solid transparent;
+        border-top: 5px solid #9eb4d5;
+        border-right: 5px solid #9eb4d5;
+        left: -9px;
+        bottom: 10px;
+      }
+      .chat__message-text{
+        color: #fff;
+      }
+      .chat__message-time{
+        color: #fff;
+      }
+    }
+    &--right{
+      margin-left: auto;
+    }
+  }
+  &__message-text{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(34, 35, 50, 0.7);
+    line-height: 1.71;
+  }
+  &__message-time{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(34, 35, 50, 0.4);
+    position: absolute;
+	bottom: 4px;
+    right: 8px;
+  }
+  &__choice{
+    position: absolute;
+    bottom: 16px;
+	left: 16px;
+    width: 95%;
+  }
+  &__select-box{
+    display: flex;
+    padding: 10px 0;
+    background: #fff;
+  }
+  &__select-item{
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 16px;
+    box-shadow: 0 0 6px 0 rgba(93, 186, 253, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    font-weight: 500;
+    color: #5dbafd;
+    margin-right: 16px;
+    &:hover{
+      color: #56acea;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__choice-message{
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #f3f6fa;
+    display: flex;
+    width: 100%;
+  }
+  &__choice-file{
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: #5dbafd;
+    @include flex-row-center;
+    margin-right: 16px;
+    margin-top: auto;
+    flex-shrink: 0;
+    cursor: pointer;
+    &:hover{
+      background: #56acea;
+    }
+  }
+  &__choice-text{
+	font-size: 14px;
+	font-weight: 500;
+    line-height: 1.71;
+	color: #222332;
+    width: 75%;
+    margin-right: 20px;
+    outline: none;
+  }
+  &__choice-button{
+    cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background-color: #5dbafd;
+    @include flex-row-center;
+    border-radius: 100%;
+    margin-top: auto;
+    &:hover{
+      background: #56acea;
+    }
+  }
+  &__place{
+    width: 328px;
+	border-radius: 4px;
+	border: solid 1px rgba(29, 81, 157, 0.17);
+	background-color: #ffffff;
+  }
+  &__place-image{
+    width: 100%;
+    height: 127px;
+    border-radius: 4px 4px 0 0;
+    background-color: #d8d8d8;
+  }
+  &__place-inner{
+    padding: 24px 16px 16px 16px;
+  }
+  &__place-title{
+	font-size: 16px;
+	font-weight: 600;
+    line-height: 1.5;
+    color: #1d1e29;
+    margin-bottom: 8px;
+  }
+  &__place-position{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+	color: rgba(29, 30, 41, 0.7);
+    margin-bottom: 24px;
+  }
+  &__place-cost-status{
+    margin-right: 8px;
+  }
+  &__place-cost{
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+	color: #1d1e29;
+    line-height: 1.33;
+    margin-right: 16px;
+  }
+  &__place-cost-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  &__place-discount{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+	color: rgba(29, 30, 41, 0.6);
+    position: relative;
+    &:after{
+      content: '';
+      height: 1px;
+      width: calc(100% + 5px);
+      background: #77787f;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -2px;
+    }
+  }
+  &__title-small{
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1e29;
+    line-height: 1.71;
+    margin-bottom: 16px;
+  }
+  &__place-characteristics{
+    display: flex;
+    &--mb{
+      margin-bottom: 24px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__place-characteristics-text{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    color: #1d1e29;
+    margin-right: 5px;
+  }
+  &__place-characteristics-item{
+    display: flex;
+    align-items: center;
+    margin-right: 28px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__place-characteristics-icon{
+    @include flex-row-center;
+  }
+  &__place-link{
+    font-size: 14px;
+    font-weight: 500;
+    color: #5dbafd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 12px;
+    &:hover{
+      color: #56acea;
+      .chat__place-link-icon{
+        background: #56acea;
+      }
+    }
+  }
+  &__place-link-icon{
+    margin-left: 8px;
+    @include mask-contain-center;
+    width: 16px;
+    height: 16px;
+    background: #5dbafd;
+    mask: url(../../../img/chat/nextarrow.svg);
+    -webkit-mask: url(../../../img/chat/nextarrow.svg);
+  }
+}

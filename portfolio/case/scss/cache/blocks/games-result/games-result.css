@@ -1,0 +1,98 @@
+.games-result {
+  transform: scale(0);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: -80px; }
+  @media (max-width: 1365px) {
+    .games-result {
+      right: -60px; } }
+  @media (max-width: 1023px) {
+    .games-result {
+      right: -10px; } }
+  @media (max-width: 767px) {
+    .games-result {
+      right: -10px;
+      left: -10px; } }
+  .games-result.active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1; }
+  .games-result__block {
+    width: 430px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #252729;
+    box-shadow: 0 0 19px 7px rgba(0, 0, 0, 0.42); }
+    @media (max-width: 767px) {
+      .games-result__block {
+        width: 100%; } }
+  .games-result__img-block {
+    width: 170px;
+    height: 100%;
+    background: #1c1d1f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .games-result__img-block:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #F44336;
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      filter: blur(20px);
+      opacity: .3; }
+    @media (max-width: 767px) {
+      .games-result__img-block {
+        width: 140px; } }
+  .games-result__img {
+    width: 40%;
+    height: auto; }
+  .games-result__desc {
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center; }
+  .games-result__title {
+    background: #fff;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px; }
+  .games-result__text {
+    font-size: 13px;
+    color: #515356;
+    margin-bottom: 15px; }
+  .games-result__button {
+    padding: 0 17px;
+    background: linear-gradient(to bottom, #73b119, #5b891a);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 54px;
+    text-transform: uppercase; }

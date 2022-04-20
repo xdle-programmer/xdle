@@ -1,0 +1,69 @@
+.button {
+  height: 45px;
+  border-radius: 2px;
+  border: 1px solid #f9b401;
+  background: #f9b401;
+  color: #000011;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 43px;
+  padding: 0 35px;
+  min-width: 200px;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  position: relative; }
+  .button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: calc(100% + 2px);
+    height: 3px;
+    background: #c79001;
+    bottom: -1px;
+    left: -1px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  .button:hover:after {
+    opacity: 0; }
+  .button:active {
+    background: #c79001;
+    color: #ffffff; }
+  .button--non-shadow:after {
+    display: none; }
+  .button--non-shadow:hover {
+    background: #c79001;
+    color: #ffffff; }
+  .button--non-shadow:active {
+    background: #ffd567;
+    color: #000011; }
+  .button--non-shadow:hover:before {
+    background-position-x: 0; }
+  .button--non-shadow:active:before {
+    background-position-x: 100%; }
+  .button--arrow:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 27px;
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iNmRiNWI0NjAtYTAxNS00YjA5LTg4NTMtM2RhMGNiMjNiMTA1IiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAyMCAxMCI+ICA8ZGVmcz4gICAgPHN0eWxlPiAgICAgIC5cMzggYTQ3ZmNkNy05NWFjLTRmOGUtYTg0Yi00YWY0NzI5MmFmMTYgeyAgICAgICAgZmlsbDogI2ZmZjsgICAgICB9ICAgIDwvc3R5bGU+ICA8L2RlZnM+ICA8dGl0bGU+cXFxPC90aXRsZT4gIDxnIGlkPSI2NmIxNWQ0Yi0yNmI2LTQ3OTktODgyZS0xMGIwOTVmNjNkMjIiIGRhdGEtbmFtZT0iYXJyb3ctYmFjayI+ICAgIDxwYXRoIGNsYXNzPSI4YTQ3ZmNkNy05NWFjLTRmOGUtYTg0Yi00YWY0NzI5MmFmMTYiIGQ9Ik0wLDUuNjNINy42Mkw0LjEzLDkuMTIsNSwxMGw1LTVMNSwwLDQuMTMuODhsMy40OSwzLjVIMFoiLz4gIDwvZz4gIDxnIGlkPSI3OTNlYjZhNi05YzFmLTQ3MGUtYmM4OC03ZjQzNWUxMDRlM2QiIGRhdGEtbmFtZT0iYXJyb3ctYmFjayI+ICAgIDxwYXRoIGQ9Ik0xMCw1LjYzaDcuNjJMMTQuMTMsOS4xMiwxNSwxMGw1LTVMMTUsMGwtLjg3Ljg4LDMuNDksMy41SDEwWiIvPiAgPC9nPjwvc3ZnPg==);
+    background-size: 200% 100%;
+    background-position-x: 100%; }
+    @media (max-width: 1279px) {
+      .button--arrow:before {
+        display: none; } }
+    @media (max-width: 767px) {
+      .button--arrow:before {
+        display: inline-block; } }
+  .button--invert {
+    background: none; }
+    .button--invert:hover {
+      background: #f9b401; }
+    .button--invert:active {
+      background: #c79001;
+      color: #ffffff; }
+    .button--invert:after {
+      display: none; }

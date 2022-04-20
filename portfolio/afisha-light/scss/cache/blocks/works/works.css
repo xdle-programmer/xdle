@@ -1,0 +1,92 @@
+.works {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px; }
+  @media (max-width: 1023px) {
+    .works {
+      grid-template-columns: 1fr; } }
+  @media (max-width: 767px) {
+    .works {
+      width: 100% !important; } }
+  .works__item {
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.12); }
+    @media (max-width: 767px) {
+      .works__item {
+        box-shadow: none; } }
+  .works__item-img {
+    height: 205px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .works__item-desc {
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    @media (max-width: 767px) {
+      .works__item-desc {
+        padding: 20px 8px; } }
+  .works__item-title {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000; }
+  .works__item-text {
+    width: 100%;
+    color: #9d9d9d;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 21px; }
+  .works__item-tags {
+    margin-top: auto;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    display: inline-block; }
+    .works__item-tags:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 0;
+      background: #9d9d9d; }
+  .works__item-tags-item {
+    color: #9d9d9d;
+    display: inline;
+    cursor: pointer; }
+    .works__item-tags-item:after {
+      content: ', '; }
+    .works__item-tags-item:nth-last-of-type(1):after {
+      display: none; }
+    .works__item-tags-item:hover {
+      text-decoration: underline; }
+  .works__item-footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+  .works__item-footer-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 30px; }
+  .works__item-footer-like-icon {
+    width: 20px;
+    height: 20px;
+    background: url(../../../img/heart.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-right: 5px; }
+  .works__item-footer-like-count {
+    margin-top: 2px; }

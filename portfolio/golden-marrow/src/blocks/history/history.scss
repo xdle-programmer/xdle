@@ -1,0 +1,223 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.history {
+  position: relative;
+  z-index: 9;
+  margin: 0 auto;
+
+  @media #{$mobile-big-screen}{
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  & .slick-dots {
+    display: none !important;
+  }
+
+  & .slick-track {
+    transition: none;
+  }
+
+  & .slick-arrow {
+    width: 18px;
+    height: 17px;
+    background: url(assets/img/arrow.png);
+    @include background-contain-center;
+    color: transparent;
+    overflow: hidden;
+    font-size: 0;
+    border: none;
+    margin: 10px auto;
+    display: block;
+    margin-left: 105px;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: var(--beige-color);
+    font-size: 47px;
+    line-height: 53px;
+    font-weight: 300;
+    position: relative;
+    cursor: default;
+    margin-bottom: 30px;
+
+    @media #{$mobile-big-screen}{
+      margin-top: 30px;
+    }
+  }
+
+  &__rocket {
+    width: 50px;
+    height: 117px;
+    background: url(assets/img/rocket.png);
+    @include background-contain-center;
+    margin-left: 88px;
+  }
+
+  &__background {
+    width: 13px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 107px;
+    overflow: hidden;
+  }
+
+  &__background-line {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(assets/img/line.png);
+    @include background-cover-center;
+    background-position: center top !important;
+
+    &--2 {
+      top: 100%;
+    }
+
+    @keyframes history-line {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    animation: history-line 9s linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__wrapper {
+    width: 305px;
+    //height: calc(100vh - 250px);
+    position: relative;
+
+
+    @media #{$mobile-big-screen}{
+      margin-right: auto;
+      margin-left: 0;
+    }
+
+  }
+
+  &__block {
+
+  }
+
+  &__item {
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  $hover: '.history__item:hover';
+
+  &__item-wrapper {
+    position: relative;
+    width: 305px;
+    height: 200px;
+    margin: auto;
+  }
+
+  &__item-year {
+    color: var(--blue-color);
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    width: 60px;
+    text-align: right;
+    transform-origin: right center;
+    top: 18px;
+    left: 0;
+
+    #{$hover} & {
+      color: var(--beige-color);
+      transform: scale(1.2);
+    }
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+  }
+
+  &__item-planet {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    top: 0;
+    left: 80px;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+    }
+
+    &:before {
+      background: url(assets/img/history-planet.png);
+      @include background-contain-center;
+
+      #{$night} & {
+        background: url(assets/img/history-planet-dark.png);
+        @include background-contain-center;
+      }
+
+      #{$hover} & {
+        opacity: 0;
+      }
+    }
+
+    &:after {
+      background: url(assets/img/history-planet-hover.png);
+      @include background-contain-center;
+      opacity: 0;
+
+      #{$night} & {
+        background: url(assets/img/history-planet-hover-dark.png);
+        @include background-contain-center;
+      }
+
+      #{$hover} & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item-text {
+    font-size: 12px;
+    position: absolute;
+    width: 174px;
+    left: 130px;
+    top: 30px;
+    height: 58px;
+    overflow: hidden;
+    line-height: 16px;
+    padding: 5px 10px;
+
+    #{$hover} & {
+      background: #fff;
+      height: 170px;
+
+
+      #{$night} & {
+        background: linear-gradient(27deg,#1b1747,#6b1732 40%,#482032);
+      }
+    }
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+  }
+}

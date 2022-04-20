@@ -1,0 +1,66 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.profile-balance {
+  @include flex-row-center;
+
+  &__state {
+  }
+
+  &__state-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(29, 30, 41, 0.5);
+    margin-bottom: 2px;
+  }
+
+  &__state-number {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1d1e29;
+  }
+
+  &__state-number-small {
+    font-size: 14px;
+  }
+
+  &__button {
+    width: 152px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 5px 11px 0 rgba(120, 198, 255, 0.41);
+    background-color: #5dbafd;
+    color: $white;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    @include flex-row-center;
+    margin-left: 35px;
+    padding-left: 20px;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 16px;
+      height: 16px;
+      background: url(../../../img/profile-balance/wallet.svg);
+      @include background-contain-center;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      box-shadow: 0 5px 20px 0 rgba(120, 198, 255, 0.41);
+    }
+  }
+
+  &__button-icon {
+  }
+
+  &__button-text {
+  }
+}

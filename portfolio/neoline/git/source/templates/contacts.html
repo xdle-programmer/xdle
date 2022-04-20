@@ -1,0 +1,60 @@
+{% include "partials/header.html" %}
+	<nav class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__elm">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__elm">
+				Вопросы и ответы
+			</span>
+		</div>
+	</nav>
+	<main>
+		<section class="contacts">
+			<div class="container">
+				<div class="half-wrap contacts__text-side">
+					<h1 class="section-title">Контакты</h1>
+					<address class="office-info">
+						<div class="office-info__title">Центральный офис</div>
+						<div class="big-phone">+7 (495) 617-01-91</div>
+						<div class="office-info__email">
+							e-mail: <a href="mailto:info@neoline.ru" class="text-button">info@neoline.ru</a>
+						</div>
+						<div class="office-info__text-block">
+							ООО «Неолайн РУС»<br>
+							ИНН: 7734652700, ОГРН: 1117746173918<br>
+							127015, Россия, г.Москва, <br>
+							ул. Большая Новодмитровская, д. 23, стр. 5, 3-й этаж
+						</div>
+						<div class="post-adress">Адрес для корреспонденции: 127055, г.Москва, а/я 88</div>
+					</address>
+					<!-- <div class="button button_white js-call-popup" data-popup="popup_feedback">Задать вопрос</div> -->
+				</div>
+				<div class="half-wrap">
+					<div class="popup__title">Форма обратной связи</div>
+					<p class="popup__text">Обращаем Ваше внимание, что мы обрабатывают запросы в рабочее время с понедельника по пятницу
+					с 09.00 до 18.00. Суббота и воскресенье - выходные дни. </p>
+					<input type="text" name="" class="regular-input" placeholder="Ваше имя *">
+					<input type="text" name="" class="regular-input" placeholder="Ваш email *">
+					<input type="text" name="" class="regular-input phone-mask" placeholder="Ваш телефон">
+					<input type="text" name="" class="regular-input" placeholder="Номер телефона или email">
+					<textarea type="text" name="" class="regular-input" placeholder="Ваш вопрос"></textarea>
+					<button class="button button_height">Отправить</button>
+				</div>
+			</div>
+			<!-- <div class="map-container">
+				<div id="contacts-map" class="contacts-map" data-geo-marker="55.80351956895045,37.5843525"></div>
+			</div> -->
+		</section>
+		<div class="contianer">
+			<section class="payment-systems">
+				<div class="payment-systems__title">
+					Оплата банковскими картами осуществляется через АО «АЛЬФА-БАНК».
+				</div>
+				<img src="img/payment1.jpg" alt="">
+				<img src="img/payment2.jpg" alt="">
+			</section>
+		</div>
+		
+	</main>
+{% include "partials/footer.html" %}

@@ -1,0 +1,106 @@
+<script>
+    var device;
+    var touch;
+    var apple;
+    if (navigator.userAgent.toUpperCase().indexOf('android'.toUpperCase()) + 1) {
+        device = 'android'
+    } else if (navigator.userAgent.toUpperCase().indexOf('iphone'.toUpperCase()) + 1) {
+        device = 'iphone';
+    } else if (navigator.userAgent.toUpperCase().indexOf('ipad'.toUpperCase()) + 1) {
+        device = 'ipad';
+    } else if (navigator.userAgent.toUpperCase().indexOf('macintosh'.toUpperCase()) + 1) {
+        device = 'macintosh';
+    } else if (navigator.userAgent.toUpperCase().indexOf('windows'.toUpperCase()) + 1) {
+        device = 'windows';
+    } else {
+        device = 'windows';
+    }
+
+
+    if (device === 'iphone' || device === 'ipad' || device === 'android') {
+        document.getElementsByTagName('body')[0].setAttribute('class', 'touch-device');
+        touch = true;
+        apple = true;
+    }
+</script>
+
+<div class="mobile-hidden" style="position: fixed;bottom: 0;
+    right: 30px;width: 300px;height: 38px;
+    z-index: 10;">
+    <img src="/img/temp-jivosite.png">
+</div>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="footer__top-item footer__top-item--has-inner mobile-hidden">Информация
+            <div class="footer__top-item-inner">
+                <a class="footer__top-item-inner-item" href="#">Карта сайта</a>
+                <a class="footer__top-item-inner-item" href="#">ПРАВИЛА ПРОДАЖИ</a>
+                <a class="footer__top-item-inner-item" href="#">УСЛОВИЯ ВОЗВРАТА</a>
+                <a class="footer__top-item-inner-item" href="#">Рассрочка</a>
+                <a class="footer__top-item-inner-item" href="#">Политика конфиденциальности</a>
+                <a class="footer__top-item-inner-item" href="#">Бонусная программа</a>
+            </div>
+
+        </div>
+        <a href="tel:+73832922700" class="footer__top-item">+7 (383) 292-27-00</a>
+        <div class="footer__top-item">info@istnova.com</div>
+        <a href="#" class="footer__top-item">Акции</a>
+
+
+    </div>
+    <div class="footer__main layout-main">
+        <div class="footer__links">
+            <div class="footer__col">
+                <div class="footer__col-title">ДЛЯ ЖЕНЩИН</div>
+                <a href="#" class="footer__col-link">ШУБЫ И МЕХА</a>
+                <a href="#" class="footer__col-link">КУРТКИ</a>
+                <a href="#" class="footer__col-link">ДУБЛЕНКИ</a>
+                <a href="#" class="footer__col-link">ПУХОВИКИ</a>
+                <a href="#" class="footer__col-link">ПАРКИ</a>
+                <a href="#" class="footer__col-link">ЖИЛЕТЫ</a>
+                <a href="#" class="footer__col-link">ПАЛЬТО</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__col-title">ДЛЯ МУЖЧИН</div>
+                <a href="#" class="footer__col-link">КУРТКИ</a>
+                <a href="#" class="footer__col-link">ДУБЛЕНКИ</a>
+                <a href="#" class="footer__col-link">ПУХОВИКИ</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__col-title">ИНФОРМАЦИЯ</div>
+                <a href="#" class="footer__col-link">КАРТА САЙТА</a>
+                <a href="#" class="footer__col-link">ПРАВИЛА ПРОДАЖИ</a>
+                <a href="#" class="footer__col-link">УСЛОВИЯ ВОЗВРАТА</a>
+                <a href="#" class="footer__col-link">РАССРОЧКА</a>
+                <a href="#" class="footer__col-link">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                <a href="#" class="footer__col-link">БОНУСНАЯ ПРОГРАММА</a>
+                <a href="#" class="footer__col-link">ПОДБОРКИ ТОВАРОВ</a>
+
+            </div>
+        </div>
+        <div class="footer__social">
+            <div class="footer__social-block">
+                <a href="https://vk.com/istnovaofficial" class="footer__social-icon footer__social-icon--vk"></a>
+                <a href="https://ok.ru/group/52097695285354" class="footer__social-icon footer__social-icon--ok"></a>
+                <a href="https://www.facebook.com/istnovaofficial/" class="footer__social-icon footer__social-icon--fb"></a>
+                <a href="https://www.instagram.com/istnova_official/" class="footer__social-icon footer__social-icon--inst"></a>
+                <a href="https://www.youtube.com/channel/UCAOqYbnVm8z34nQcpldUw1g" class="footer__social-icon footer__social-icon--youtube"></a>
+            </div>
+            <p>E-MAIL: INFO@IST-NOVA.RU</p>
+        </div>
+    </div>
+    <div class="footer__about layout-main">
+        <div class="footer__about-copyright">
+            © 2016-2018 «ИСТ-НОВА»
+            <br>
+            <br>
+            ВСЕ ЦЕНЫ НА САЙТЕ УКАЗАНЫ СО СКИДКОЙ. ВСЯ ПРЕДСТАВЛЕННАЯ НА САЙТЕ ИНФОРМАЦИЯ, КАСАЮЩАЯСЯ СТОИМОСТИ ТОВАРОВ, НОСИТ ИНФОРМАЦИОННЫЙ ХАРАКТЕР И НИ ПРИ КАКИХ УСЛОВИЯХ НЕ ЯВЛЯЕТСЯ ПУБЛИЧНОЙ ОФЕРТОЙ.
+
+        </div>
+        <div class="footer__about-create">
+            <a href="http://www.siteseo.ru/" class="footer__about-create-text">СОЗДАНИЕ САЙТА И ПРОДВИЖЕНИЕ САЙТА</a>
+            <a href="http://abaris.ru/" class="footer__about-create-logo">ABARIS.RU</a>
+        </div>
+    </div>
+</footer>

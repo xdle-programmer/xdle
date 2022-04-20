@@ -1,0 +1,96 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.economical-construction {
+  padding-top: 92px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas: 'title desc desc item-1 item-2' 'title text text text item-3' 'item-4 item-5 item-6 item-7 item-8';
+  position: relative;
+
+  &:after {
+    @include after-absolute;
+    width: 100vw;
+    right: calc(20% + 1px);
+    top: 40px;
+    height: calc(100% - 40px);
+    background: #ededf1;
+    z-index: -1;
+  }
+
+
+  &__title {
+    grid-area: title;
+    padding-left: 25px;
+    padding-top: 5px;
+  }
+
+  &__desc {
+    grid-area: desc;
+    padding: 10px 30px;
+    line-height: 27px;
+  }
+
+  &__text {
+    grid-area: text;
+    @include flex-row;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 35px;
+    padding: 0 30px;
+  }
+
+  &__item {
+    position: relative;
+    color: $white;
+    @include flex-column;
+    padding: 20px 40px;
+    font-size: 17px;
+    font-weight: 700;
+    padding-right: 55px;
+
+    &--1 {grid-area: item-1;background: #002f76}
+    &--2 {grid-area: item-2;background: #135cc9}
+    &--3 {grid-area: item-3;background: #14305a}
+    &--4 {grid-area: item-4;background: #00205b}
+    &--5 {grid-area: item-5;background: #004abb}
+    &--6 {grid-area: item-6;background: #00245a}
+    &--7 {grid-area: item-7;background: #1868df}
+    &--8 {grid-area: item-8;background: #003c97}
+  }
+
+  &__item-icon {
+    height: 80px;
+    width: 100%;
+    @include flex-column;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+  }
+
+  &__item-icon-img {
+    width: auto;
+    height: auto;
+    //object-fit: contain;
+    //object-position: left top;
+  }
+
+  &__item-title {
+  }
+
+  &__item-hover {
+    position: absolute;
+    @include absolute-fill;
+    background: $red;
+    opacity: 0;
+  }
+
+  &__item-hover-text {
+  }
+
+  &__item-hover-button {
+  }
+}

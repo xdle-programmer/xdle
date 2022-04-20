@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.number-grid {
+  border: 1px solid #2d3032;
+  @include flex-row;
+  flex-wrap: wrap;
+  width: calc(100% + 160px);
+  margin: 0 -80px;
+
+
+
+
+  @media #{$desktop-small-screen} {
+    width: calc(100% + 120px);
+    margin: 0 -60px;
+  }
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__wrapper {
+    width: calc(100% / 8);
+
+    @media #{$tablet-small-screen} {
+      width: calc(100% / 3);
+    }
+  }
+  &__item-block {
+    position: relative;
+    background: rgba(30, 32, 34, .5);
+    padding-bottom: 100%;
+    width: 100%;
+    border: 1px solid #2d3032;
+    cursor: pointer;
+  }
+
+  $hover: '.number-grid__item-block:hover';
+
+  &__item {
+    position: absolute;
+    background: url(../../img/number-grid.png);
+    @include background-contain-center;
+    width: 40px;
+    height: 40px;
+    @include flex-row-center;
+    color: #fff;
+    @include absolute-center;
+    font-size: 15px;
+
+    #{$hover} & {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+}

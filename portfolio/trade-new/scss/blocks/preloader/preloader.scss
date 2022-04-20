@@ -1,0 +1,546 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.preloader {
+  @include flex-column-center;
+  position: relative;
+
+  @media #{$desktop-extra-big-screen} {
+    margin-top: -100px;
+  }
+
+  &__title {
+    color: #cddaed;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 150px;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 31px;
+      margin-bottom: 100px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 23px;
+    }
+  }
+
+  &__circle-block {
+    width: 414px;
+    height: 414px;
+    box-shadow: 0 0 43px rgba(30, 33, 38, 0.1);
+    background-image: linear-gradient(to top, #e1eaee 0%, #fafafa 100%);
+    padding: 26px;
+    position: relative;
+    border-radius: 50%;
+
+    @media #{$desktop-extra-big-screen} {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  &__circle-handler {
+    position: absolute;
+    width: calc(100% - 52px);
+    left: 25px;
+    top: calc(50% - 20px);
+    height: 40px;
+    z-index: 3;
+    background: transparent;
+    transform: rotate(-90deg);
+    opacity: 0;
+    transition: none;
+    //transition: all .1s linear;
+
+    &:after {
+      @include after-absolute;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4), inset 0 0 6px #4c3ca2;
+      border: 4px solid #f3f9fb;
+      background-color: #6154a4;
+      top: -4px;
+      right: -14px;
+      border-radius: 50%;
+      transition: none;
+
+      @media #{$mobile-big-screen} {
+        width: 20px;
+        height: 20px;
+        top: 8px;
+        right: -8px;
+      }
+    }
+  }
+
+  &__circle-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: calc(100% - 52px);
+    height: calc(100% - 52px);
+    transform: translate(-50%, -50%) rotate(90deg) scaleX(-1);
+    border-radius: 50%;
+    transition: none;
+    //transition: all .1s linear;
+  }
+
+  &__circle-line-sector {
+    fill: none;
+    stroke: $white;
+    stroke-width: 50;
+    transition: none;
+    //transition: all .1s linear;
+  }
+
+  &__circle-line-background {
+    position: absolute;
+    @include absolute-center;
+    width: calc(100% - 52px);
+    height: calc(100% - 52px);
+    background: url(../../img/preloader_ring.png);
+    @include background-contain-center;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &__circle-info {
+    position: absolute;
+    width: calc(100% - 192px);
+    height: calc(100% - 192px);
+    @include absolute-center;
+    transform: translate(-50%, -50%) scale(1.41);
+    background-image: linear-gradient(to top, #e1eaee 0%, #fafafa 100%);
+    z-index: 2;
+    border-radius: 50%;
+    @include flex-column-center;
+
+    @media #{$desktop-extra-big-screen} {
+      width: calc(100% - 170px);
+      height: calc(100% - 170px);
+    }
+
+    @media #{$mobile-big-screen} {
+      width: calc(100% - 78px);
+      height: calc(100% - 78px);
+      transform: translate(-50%, -50%);
+    }
+
+  }
+
+  &__circle-info-title {
+    color: #dcdae3;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 15px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__circle-info-percent {
+    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    color: #6154a4;
+    font-size: 57px;
+    font-weight: 900;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 40px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 44px;
+    }
+  }
+
+  &__circle-side {
+    position: absolute;
+    width: 218px;
+    height: 272px;
+    top: 50%;
+    z-index: -1;
+
+    &:after {
+      @include after-absolute;
+      width: 37px;
+      height: 59px;
+      background: url(../../img/preloader_arrow.svg);
+      @include background-contain-center;
+
+      @media #{$mobile-big-screen} {
+        width: 21px;
+      }
+    }
+
+    &--left {
+      left: 0;
+      background: url(../../img/preloader_left_side.png);
+      @include background-contain-center;
+      transform: translate(-75%, -50%);
+
+      &:after {
+        left: 69px;
+        top: 40%;
+
+        @media #{$mobile-big-screen} {
+          left: 29px;
+        }
+      }
+
+      @media #{$desktop-extra-big-screen} {
+        left: 16px;
+      }
+    }
+
+    &--right {
+      right: 0;
+      background: url(../../img/preloader_right_side.png);
+      @include background-contain-center;
+      transform: translate(75%, -50%);
+
+      &:after {
+        right: 69px;
+        transform: scaleY(-1);
+        top: 38%;
+
+        @media #{$mobile-big-screen} {
+          right: 29px;
+          top: 39%;
+        }
+      }
+
+      @media #{$desktop-extra-big-screen} {
+        right: 16px;
+      }
+
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100px;
+    }
+
+  }
+
+  $animation-delay: 30;
+
+  &__circle-block-goods {
+    position: absolute;
+    width: calc(100% + 130px);
+    height: calc(100% + 130px);
+    @include absolute-center;
+    border-radius: 50%;
+    z-index: -2;
+
+    &:before {
+      @include after-absolute;
+      width: calc(100% + 95px);
+      height: calc(100% + 95px);
+      @include absolute-center;
+      background: radial-gradient(ellipse at center, #314772 0%, #172337 100%);
+      border-radius: 50%;
+      z-index: -2;
+
+      @media #{$mobile-big-screen} {
+        width: calc(100% + 45px);
+        height: calc(100% + 45px);
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+      width: calc(100% - 75px);
+      height: calc(100% - 75px);
+      @include absolute-center;
+      background: #1e2126;
+      border-radius: 50%;
+      z-index: -1;
+
+      @media #{$mobile-big-screen} {
+        width: calc(100% - 45px);
+        height: calc(100% - 45px);
+      }
+    }
+
+    animation: circle-block-goods #{$animation-delay}s linear infinite;
+
+    @keyframes circle-block-goods {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg)
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(-180deg)
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(-360deg)
+      }
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      width: calc(100% + 90px);
+      height: calc(100% + 90px);
+    }
+
+    @media #{$mobile-big-screen} {
+      width: calc(100% + 65px);
+      height: calc(100% + 65px);
+    }
+  }
+
+  &__circle-block-goods-line {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    &:nth-of-type(1) {
+      transform: translateY(-50%) rotate(-90deg)
+    }
+    &:nth-of-type(2) {
+      transform: translateY(-50%) rotate(-60deg)
+    }
+    &:nth-of-type(3) {
+      transform: translateY(-50%) rotate(-30deg)
+    }
+    &:nth-of-type(4) {
+      transform: translateY(-50%) rotate(0deg)
+    }
+    &:nth-of-type(5) {
+      transform: translateY(-50%) rotate(30deg)
+    }
+    &:nth-of-type(6) {
+      transform: translateY(-50%) rotate(60deg)
+    }
+  }
+
+  $line-1: '.preloader__circle-block-goods-line:nth-of-type(1)';
+  $line-2: '.preloader__circle-block-goods-line:nth-of-type(2)';
+  $line-3: '.preloader__circle-block-goods-line:nth-of-type(3)';
+  $line-4: '.preloader__circle-block-goods-line:nth-of-type(4)';
+  $line-5: '.preloader__circle-block-goods-line:nth-of-type(5)';
+  $line-6: '.preloader__circle-block-goods-line:nth-of-type(6)';
+
+  &__circle-block-goods-line-img {
+    position: absolute;
+    top: 0;
+
+    &:nth-of-type(1) {
+      left: 0;
+    }
+    &:nth-of-type(2) {
+      right: 0
+    }
+
+    #{$line-1} & {
+      transform: rotate(90deg);
+
+      animation: circle-block-goods-1 #{$animation-delay}s linear infinite;
+
+      $rotate: 90;
+
+      @keyframes circle-block-goods-1 {
+        0% {
+          transform: rotate(#{$rotate}deg)
+        }
+        50% {
+          transform: rotate(#{$rotate + 180}deg)
+        }
+        100% {
+          transform: rotate(#{$rotate + 360}deg)
+        }
+      }
+    }
+
+    #{$line-2} & {
+      transform: rotate(60deg);
+
+      animation: circle-block-goods-2 #{$animation-delay}s linear infinite;
+
+      $rotate: 60;
+
+      @keyframes circle-block-goods-2 {
+        0% {
+          transform: rotate(#{$rotate}deg)
+        }
+        50% {
+          transform: rotate(#{$rotate + 180}deg)
+        }
+        100% {
+          transform: rotate(#{$rotate + 360}deg)
+        }
+      }
+    }
+    #{$line-3} & {
+      transform: rotate(30deg);
+
+      animation: circle-block-goods-3 #{$animation-delay}s linear infinite;
+
+      $rotate: 30;
+
+      @keyframes circle-block-goods-3 {
+        0% {
+          transform: rotate(#{$rotate}deg)
+        }
+        50% {
+          transform: rotate(#{$rotate + 180}deg)
+        }
+        100% {
+          transform: rotate(#{$rotate + 360}deg)
+        }
+      }
+    }
+    #{$line-4} & {
+      transform: rotate(0deg);
+
+      animation: circle-block-goods-4 #{$animation-delay}s linear infinite;
+
+      $rotate: 0;
+
+      @keyframes circle-block-goods-4 {
+        0% {
+          transform: rotate(#{$rotate}deg)
+        }
+        50% {
+          transform: rotate(#{$rotate + 180}deg)
+        }
+        100% {
+          transform: rotate(#{$rotate + 360}deg)
+        }
+      }
+    }
+    #{$line-5} & {
+      transform: rotate(-30deg);
+
+      animation: circle-block-goods-5 #{$animation-delay}s linear infinite;
+
+      $rotate: -30;
+
+      @keyframes circle-block-goods-5 {
+        0% {
+          transform: rotate(#{$rotate}deg)
+        }
+        50% {
+          transform: rotate(#{$rotate + 180}deg)
+        }
+        100% {
+          transform: rotate(#{$rotate + 360}deg)
+        }
+      }
+    }
+    #{$line-6} & {
+      transform: rotate(-60deg);
+
+      animation: circle-block-goods-6 #{$animation-delay}s linear infinite;
+
+      $rotate: -60;
+
+      @keyframes circle-block-goods-6 {
+        0% {
+          transform: rotate(#{$rotate}deg)
+        }
+        50% {
+          transform: rotate(#{$rotate + 180}deg)
+        }
+        100% {
+          transform: rotate(#{$rotate + 360}deg)
+        }
+      }
+    }
+  }
+
+  &__circle-block-goods-line-img-inner {
+    position: absolute;
+    width: auto;
+    height: auto;
+    @include absolute-center;
+    transform: translate(-50%, -50%) scale(.85);
+    opacity: .3;
+
+    @media #{$mobile-big-screen} {
+      transform: translate(-50%, -50%) scale(.6);
+      opacity: .7;
+    }
+  }
+
+  &__el {
+    position: absolute;
+
+    &--1 {
+      background: url(../../img/preloader-el-1.png);
+      @include background-contain-center;
+      width: 76px;
+      height: 76px;
+      left: -400px;
+      top: 150px;
+    }
+
+    &--2 {
+      background: url(../../img/preloader-el-2.png);
+      @include background-contain-center;
+      width: 256px;
+      height: 243px;
+      left: -350px;
+      top: 500px;
+    }
+
+    &--3 {
+      background: url(../../img/preloader-el-3.png);
+      @include background-contain-center;
+      width: 47px;
+      height: 60px;
+      left: -130px;
+      top: 70px;
+    }
+
+    &--4 {
+      background: url(../../img/preloader-el-4.png);
+      @include background-contain-center;
+      width: 112px;
+      height: 103px;
+      right: -200px;
+      top: 70px;
+    }
+
+    &--5 {
+      background: url(../../img/preloader-el-5.png);
+      @include background-contain-center;
+      width: 95px;
+      height: 95px;
+      right: -300px;
+      top: 500px;
+    }
+
+    &--6 {
+      background: url(../../img/preloader-el-6.png);
+      @include background-contain-center;
+      width: 53px;
+      height: 53px;
+      right: -350px;
+      top: 0px;
+    }
+
+    &--7 {
+      background: url(../../img/preloader-el-7.png);
+      @include background-contain-center;
+      width: 122px;
+      height: 126px;
+      right: -430px;
+      top: 200px;
+    }
+
+  }
+}

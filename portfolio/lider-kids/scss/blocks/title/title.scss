@@ -1,0 +1,53 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  font-size: 42px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &--left {
+    text-align: left;
+  }
+
+  @media #{$tablet-big-screen} {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  &--big {
+    font-size: 48px;
+    line-height: 63px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+
+  & * {
+    @include font-intro-bold;
+  }
+
+  &__line {
+  }
+
+  &__big {
+    font-size: 62px;
+  }
+
+  &__white {
+    color: $white;
+  }
+
+  &__blue {
+    color: $blue;
+  }
+
+  &__orange {
+    color: $orange;
+  }
+}

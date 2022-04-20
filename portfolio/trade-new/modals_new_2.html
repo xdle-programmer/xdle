@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!--<script src="https://vuejs.org/js/vue.js"></script>-->
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <!--<script src="js/app.js"></script>-->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles/styles.css">
+    <title>trade-vgo</title>
+</head>
+
+<body>
+<noscript>
+    <strong>We're sorry but trade-vgo doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app" class="wrapper">
+
+
+    <div class="header">
+        <div class="header__left">
+
+            <div class="header__mobile-menu"></div>
+
+            <div class="header__logo">
+                <img src="img/logo.png" class="logo">
+            </div>
+
+            <div class="header__menu">
+                <a href="#" class="header__menu-item active">Partnership</a>
+                <a href="#" class="header__menu-item">FAQ</a>
+
+                <div class="header__social social">
+                    <a href="#" class="social__item social__item--vk"></a>
+                    <a href="#" class="social__item social__item--twitter"></a>
+                    <!--<a href="#" class="social__item social__item&#45;&#45;facebook"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;youtube"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;instagram"></a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="header__right">
+
+
+            <div class="header__language lang-selector">
+                <div class="lang-selector__button">
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+                <div class="lang-selector__list">
+                    <div class="lang-selector__item lang-selector__item--en">eng</div>
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+            </div>
+
+            <div class="header__bell"></div>
+
+            <a href="/authenticate" class="header__steam" style="display: none">
+                <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"
+                     class="header__steam-img" alt="">
+            </a>
+
+            <div class="header__login">
+                <div class="header__login-img" style="background: url(img/avatar.png);"></div>
+                <div class="header__login-nickname">Alexander Gudik</div>
+                <div class="header__login-arrow"></div>
+
+                <div class="header__login-menu">
+                    <div class="header__login-menu-item header__login-menu-item--trade-link">Trade link</div>
+                    <div class="header__login-menu-item header__login-menu-item--trade-history">Trade history</div>
+                    <div class="header__login-menu-item header__login-menu-item--partnership">Partnership</div>
+                    <div class="header__login-menu-item header__login-menu-item--logout">Logout</div>
+                    <div class="header__login-menu-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="start_preloader" class="open-modal" data-modal="#modal_preloader"
+         style="font-size: 20px;color: #fff;margin-top: 50px;margin-left: 50px">Модалка прелодер
+    </div>
+    <div class="open-modal" data-modal="#modal_good"
+         style="font-size: 20px;color: #fff;margin-top: 50px;margin-left: 50px">Модалка товара
+    </div>
+    <div class="open-modal" data-modal="#modal_about"
+         style="font-size: 20px;color: #fff;margin-top: 50px;margin-left: 50px">Третья модалка
+    </div>
+
+    <div class="modal__background"></div>
+
+    <div class="modal__block modal__block--no-shadow" id="modal_preloader">
+        <div class="preloader">
+            <div class="preloader__title">Finding your Mystery Shotgun...</div>
+
+            <div class="preloader__circle-block">
+                <div class="preloader__circle-side preloader__circle-side--left"></div>
+                <div class="preloader__circle-side preloader__circle-side--right"></div>
+                <div class="preloader__circle-handler"></div>
+                <div class="preloader__circle-line">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                        <circle id="test" class="preloader__circle-line-sector" r="25" cx="50" cy="50"/>
+                    </svg>
+
+                </div>
+                <div class="preloader__circle-line-background"></div>
+                <div class="preloader__circle-info">
+                    <div class="preloader__circle-info-title">searching...</div>
+                    <div class="preloader__circle-info-percent">0%</div>
+                </div>
+
+                <div class="preloader__circle-block-goods">
+                    <div class="preloader__circle-block-goods-line">
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-1.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-2.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                    </div>
+                    <div class="preloader__circle-block-goods-line">
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-3.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-4.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                    </div>
+                    <div class="preloader__circle-block-goods-line">
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-5.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-6.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                    </div>
+                    <div class="preloader__circle-block-goods-line">
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-7.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-8.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                    </div>
+                    <div class="preloader__circle-block-goods-line">
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-9.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-10.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                    </div>
+                    <div class="preloader__circle-block-goods-line">
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-1.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                        <div class="preloader__circle-block-goods-line-img">
+                            <img src="img/preloader__img-2.png" class="preloader__circle-block-goods-line-img-inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preloader__el preloader__el--1"></div>
+            <div class="preloader__el preloader__el--2"></div>
+            <div class="preloader__el preloader__el--3"></div>
+            <div class="preloader__el preloader__el--4"></div>
+            <div class="preloader__el preloader__el--5"></div>
+            <div class="preloader__el preloader__el--6"></div>
+            <div class="preloader__el preloader__el--7"></div>
+        </div>
+    </div>
+
+    <div class="modal__block modal__block--no-shadow" id="modal_good">
+        <div class="modal__close modal__close--goods"></div>
+        <div class="modal-goods">
+            <div class="modal-goods__top">
+                <div class="modal-goods__top-background">
+                    <img src="img/modal-goods__top-background-img.png" class="modal-goods__top-background-img">
+                </div>
+
+                <div class="modal-goods__top-img">
+                    <img src="img/mystery-cases__item-info-img-2.png" class="modal-goods__top-img-inner">
+                </div>
+                <div class="modal-goods__top-stickers">
+                    <div class="modal-goods__top-sticker">
+                        <img src="img/modal-goods__top-sticker-img-1.png" class="modal-goods__top-sticker-img">
+                    </div>
+                    <div class="modal-goods__top-sticker">
+                        <img src="img/modal-goods__top-sticker-img-2.png" class="modal-goods__top-sticker-img">
+                    </div>
+                    <div class="modal-goods__top-sticker">
+                        <img src="img/modal-goods__top-sticker-img-3.png" class="modal-goods__top-sticker-img">
+                    </div>
+                    <div class="modal-goods__top-sticker">
+                        <img src="img/modal-goods__top-sticker-img-4.png" class="modal-goods__top-sticker-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-goods__bottom">
+                <div class="modal-goods__bottom-help"></div>
+                <div class="modal-goods__bottom-title">Kerambit | Lore</div>
+                <div class="modal-goods__bottom-subtitle">Field-Tested</div>
+                <div class="modal-goods__bottom-line">
+                    <div class="modal-goods__bottom-line-handler" style="left: 30%"></div>
+                </div>
+                <div class="modal-goods__bottom-price">
+                    <div class="modal-goods__bottom-price-title">Item Value</div>
+                    <div class="modal-goods__bottom-price-value">
+                        <div class="modal-goods__bottom-price-value-currency">$</div>
+                        <div class="modal-goods__bottom-price-value-item">697.40</div>
+                    </div>
+                </div>
+
+                <div class="modal-goods__bottom-time">
+                    <div class="modal-goods__bottom-time-progress" style="width: 42%"></div>
+                </div>
+                <div class="modal-goods__bottom-subtitle">12 seconds to choose</div>
+
+                <div class="modal-goods__bottom-button">KEEP IT</div>
+                <div class="modal-goods__bottom-button modal-goods__bottom-button--red">SELLBACK FOR $658.00</div>
+
+                <div class="modal-goods__bottom-subtitle">Instant delivery to your Steam inventory</div>
+            </div>
+
+            <div class="modal-goods__background modal-goods__background--red">
+                <div class="modal-goods__background-img"
+                     style="background: url(img/modal-goods__background-img.png)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__block modal__block--no-shadow" id="modal_about">
+        <div class="modal__close modal__close--about"></div>
+        <div class="modal-about">
+            <div class="modal-about__desc">
+                <div class="modal-about__img">
+                    <img src="img/modal-about__img-inner.png" class="modal-about__img-inner">
+                </div>
+                <div class="modal-about__el-1"></div>
+                <div class="modal-about__el-2"></div>
+                <div class="modal-about__el-3"></div>
+            </div>
+            <div class="modal-about__info">
+                <div class="modal-about__title">Mystery Shotgun</div>
+                <div class="modal-about__text">
+                    Are you sure you wish to purchase this case for <span>$0.56</span> ?
+                </div>
+                <div class="modal-about__sep"></div>
+                <div class="modal-about__title">How Mystery Items works?</div>
+                <div class="modal-about__text">
+                    The price of Mystery Items are set based on the
+                    average price of the item’s category. When a user
+                    chooses to purchase a Mystery Item, an item is
+                    drawn from the Myvgo’s inventory.
+                    <br>
+                    <br>
+                    The item you recieve can be one of any item that
+                    resides on our bots, as long as it is of the matching
+                    category. The seller of the item is then paid, and
+                    the item is transfered to the buyer’s inventory.
+                </div>
+
+                <div class="modal-about__instant">Instant delivery to your Steam inventory</div>
+
+                <input type="checkbox" checked class="modal-about__checkbox-input" id="checkbox"/>
+                <label class="modal-about__checkbox-label" for="checkbox">Don’t show this window further</label>
+
+                <div class="modal-about__buttons">
+                    <div class="modal-about__button modal-about__button--open">OPEN</div>
+                    <div class="modal-about__button modal-about__button--close">CANCEL</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+<script src="js/preloader.js"></script>
+
+</html>

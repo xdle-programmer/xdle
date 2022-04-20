@@ -1,0 +1,45 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.program-include {
+  padding-top: 100px;
+  padding-bottom: 200px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin-top: 60px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+  }
+  &__item {
+
+
+    &--empty {
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+  }
+  &__item-img {
+    width: 100%;
+    @include flex-column-center;
+    margin-bottom: 15px;
+  }
+
+  &__item-img-inner {
+    width: auto;
+  }
+  &__item-text {
+    @include font-intro-mid;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+}

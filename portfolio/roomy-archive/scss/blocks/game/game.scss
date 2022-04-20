@@ -1,0 +1,343 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.game {
+  width: 100%;
+  height: calc(100vh - 123px);
+  position: relative;
+
+  &__background {
+    position: absolute;
+    background: url(../../../img/game/back/background.svg);
+    @include background-cover-center;
+    @include absolute-fill;
+  }
+
+  &__counter {
+    right: 100px;
+    top: 100px;
+    width: 400px;
+    font-size: 50px;
+    position: absolute;
+    text-align: left;
+    transition: none;
+  }
+
+  $person-active: '.game__person--active';
+  $person-jump: '.game__person-wrapper--jump';
+  $animation: 300;
+
+  &__person-wrapper {
+    width: 194px;
+    height: 243px;
+    left: 463px;
+    bottom: 100px;
+    position: absolute;
+
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-140px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+
+    &--jump {
+      animation: jump 500ms ease-in-out;
+    }
+  }
+
+  &__person {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: top;
+    z-index: 3;
+
+    @keyframes person {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-40px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+
+    &--active {
+      animation: person #{$animation}ms linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__person-body {
+    position: absolute;
+    width: 77px;
+    height: 100px;
+    background: url(../../../img/game/body/body.svg);
+    @include background-contain-center;
+    left: 59px;
+    top: 99px;
+    z-index: 1;
+  }
+
+  &__person-head {
+    position: absolute;
+    width: 100px;
+    height: 118px;
+    background: url(../../../img/game/body/head.svg);
+    @include background-contain-center;
+    left: 53px;
+    top: 0;
+  }
+
+  &__person-left-leg {
+    position: absolute;
+    background: url(../../../img/game/body/leg-left.svg);
+    @include background-contain-center;
+    left: 0;
+    top: 161px;
+    width: 92px;
+    height: 55px;
+    transform-origin: right top;
+
+    @keyframes left-leg {
+      0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(-90deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+
+    #{$person-active} & {
+      animation: left-leg #{$animation}ms linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__person-right-leg {
+    position: absolute;
+    background: url(../../../img/game/body/leg-right.svg);
+    @include background-contain-center;
+    left: 101px;
+    top: 160px;
+    width: 112px;
+    height: 88px;
+    transform-origin: left top;
+
+    @keyframes right-leg {
+      0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(80deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+
+    #{$person-active} & {
+      animation: right-leg #{$animation}ms linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__person-left-hand {
+    position: absolute;
+    background: url(../../../img/game/body/hand-left.svg);
+    @include background-contain-center;
+    left: 0;
+    top: 99px;
+    width: 78px;
+    height: 54px;
+
+    transform-origin: right center;
+
+    @keyframes left-hand {
+      0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(-55deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+
+    #{$person-active} & {
+      animation: left-hand #{$animation}ms linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__person-right-hand {
+    position: absolute;
+    background: url(../../../img/game/body/hand-right.svg);
+    @include background-contain-center;
+    left: 108px;
+    top: 95px;
+    width: 86px;
+    height: 54px;
+    transform-origin: left center;
+    transform: rotate(30deg);
+
+    @keyframes right-hand {
+      0% {
+        transform: rotate(30deg);
+      }
+      50% {
+        transform: rotate(-10deg);
+      }
+      100% {
+        transform: rotate(30deg);
+      }
+    }
+
+
+    #{$person-active} & {
+      animation: right-hand #{$animation}ms linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__ground {
+    height: 100px;
+    background: url(../../../img/game/ground.svg);
+    @include background-cover-center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(../../../img/game/ground.svg);
+      @include background-cover-center;
+    }
+
+    &:before {
+      transform: translateX(100%);
+    }
+
+    &:after {
+      transform: translateX(-100%);
+    }
+
+    @keyframes ground {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    &--active {
+      animation: ground 1500ms linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__mouse {
+    width: 147px;
+    height: 56px;
+    background: url(../../../img/game/mouse.svg);
+    @include background-contain-center;
+    left: 100%;
+    bottom: 100px;
+    position: absolute;
+    transition: none !important;
+  }
+
+
+  &__donut {
+    width: 147px;
+    height: 56px;
+    background: url(../../../img/game/donut.svg);
+    @include background-contain-center;
+    left: 100%;
+    bottom: 100px;
+    position: absolute;
+    transition: none !important;
+  }
+
+  &__doh {
+    font-size: 150px;
+    text-align: center;
+    position: absolute;
+    @include absolute-center;
+    top: 30%;
+    opacity: 0;
+
+    @keyframes doh {
+      0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+      }
+    }
+
+    &--active {
+      animation: doh 500ms linear;
+    }
+  }
+
+
+  &__success {
+    font-size: 150px;
+    text-align: center;
+    position: absolute;
+    @include absolute-center;
+    top: 30%;
+    opacity: 0;
+
+    @keyframes doh {
+      0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+      }
+    }
+
+    &--active {
+      animation: doh 500ms linear;
+    }
+  }
+}
+
+

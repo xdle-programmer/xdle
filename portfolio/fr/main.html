@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Fortune</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="./css/jquery-ui.structure.min.css"/>
+    <link rel="stylesheet" href="./css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css"/>
+    <!--[if lte IE 8]>
+    <link href="./css/ie.css" rel="stylesheet" media="all"/><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/jquery.placeholder.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+<div class="wrap bg-blue">
+    <header class="header">
+        <div class="inner-wrap header__block">
+            <a href="/" class="header__logo"></a>
+            <div class="header__address">
+                <div class="header__address-title">
+                    Натяжные потолки в Новосибирске
+                </div>
+                <div class="header__address-item">
+                    Новосибирск, ул. Демьяна Бедного, дом 55
+                </div>
+            </div>
+            <a class="header__phone" href="tel:83833755747">+7 (383) <span>375-57-47</span></a>
+            <a href="" class="header__callback">Заказать звонок менеджера</a>
+        </div>
+        <nav class="nav main-menu-wrap js-popup-wrap">
+            <a href="" class="btn-action-menu js-btn-toggle"></a>
+            <div class="inner-wrap menu-block js-popup-block">
+                <ul>
+                    <li><a href="">НОВОСТИ</a>
+                    </li>
+                    <li><a href="">О КОМПАНИИ</a>
+                    </li>
+                    <li>
+                        <a href="">АКЦИИ</a>
+                        <ul>
+                            <li><a href="">Подпункт 01</a>
+                            </li>
+                            <li><a href="">Подпункт 02</a>
+                            </li>
+                            <li><a href="">Подпункт 03</a>
+                            </li>
+                            <li><a href="">Подпункт 04</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">КАТАЛОГ</a>
+                        <ul>
+                            <li><a href="">Подпункт 01</a>
+                            </li>
+                            <li><a href="">Подпункт 02</a>
+                            </li>
+                            <li><a href="">Подпункт 03</a>
+                            </li>
+                            <li><a href="">Подпункт 04</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">ПОДБОР</a>
+                    </li>
+                    <li><a href="" class="active">КАЛЬКУЛЯТОР</a>
+                    </li>
+                    <li><a href="">ОТЗЫВЫ</a>
+                    </li>
+                    <li><a href="">ДИЛЕРАМ</a>
+                    </li>
+                    <li><a href="">ВОПРОС-ОТВЕТ</a>
+                    </li>
+                    <li><a href="">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-first">
+        <div class="main-first__block">
+            <div class="main-first__text">
+                Закажи натяжной потолок<br>второй получи<br>в ПОДАРОК!
+            </div>
+        </div>
+    </div>
+
+    <div class="main-actions">
+        <div class="main-actions__block">
+            <div class="main-actions__item">
+                <div class="main-actions__title">
+                    Гарантия!
+                </div>
+                <div class="main-actions__item-inner">
+                    <div class="main-actions__item-two-inner">
+                        <div class="main-actions__item-two-inner-item">
+                            <div class="main-actions__small-text-blue">гарантия на полотно</div>
+                            <div class="main-actions__small-text-white">20 лет</div>
+                        </div>
+                        <div class="main-actions__item-two-inner-item">
+                            <div class="main-actions__small-text-blue">на<br>монтаж</div>
+                            <div class="main-actions__small-text-white">5 лет!</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="main-actions__link">
+                    Узнать больше
+                </a>
+            </div>
+            <div class="main-actions__item">
+                <div class="main-actions__title">
+                    Скидка!
+                </div>
+                <div class="main-actions__item-inner">
+
+                    <div class="main-actions__small-text-blue">Успейте заказать</div>
+
+                    <div class="main-actions__price">
+                        <div class="main-actions__price-old">
+                            <span>499</span>
+                            руб./м2
+                        </div>
+                        <div class="main-actions__price-current">
+                            <span>350</span>
+                            руб./м2
+                        </div>
+                    </div>
+
+                </div>
+                <a class="main-actions__link">
+                    Подробнее
+                </a>
+            </div>
+            <div class="main-actions__item">
+                <div class="main-actions__title">
+                    Акция!
+                </div>
+                <div class="main-actions__item-inner">
+                    <div class="main-actions__small-text-blue">Оплачивайте</div>
+                    <div class="main-actions__small-text-white">после монтажа</div>
+                </div>
+                <a class="main-actions__link">
+                    Заказать
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="main-advantages">
+        <div class="inner-wrap">
+            <h2 class="small-page-title">
+                Преимущества натяжного потолка
+            </h2>
+            <div class="main-advantages__block item-wrap">
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/adv01.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">экономия денег</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/adv02.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">экономия пространства</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/adv03.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">эстетика</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/adv04.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">без запаха</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/adv05.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">множество вариантов</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-form-box cnt-section calc">
+        <div class="inner-wrap">
+            <div class="pic-wrap">
+                <img src="./img/main/calc02.png" alt="">
+            </div>
+            <form action="/" class="frm-wrap">
+                <div class="calc__block">
+                    <div class="calc__gift">
+                        <div class="calc__gift-title">Расчет стоимости</div>
+                        <div class="calc__gift-subtitle">
+                            Выберите свой ПОДАРОК!
+                        </div>
+                        <div class="calc__gift-checkboxes">
+                            <div class="calc__gift-checkbox">
+                                <input type="checkbox" checked name="checkbox" id="checkbox_1"
+                                       class="calc__gift-checkbox-input"/>
+                                <label for="checkbox_1" class="calc__gift-checkbox-label">СВЕТИЛЬНИКИ</label>
+                            </div>
+                            <div class="calc__gift-checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox_2"
+                                       class="calc__gift-checkbox-input"/>
+                                <label for="checkbox_2" class="calc__gift-checkbox-label">КАРНИЗЫ</label>
+                            </div>
+                            <div class="calc__gift-checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox_3"
+                                       class="calc__gift-checkbox-input"/>
+                                <label for="checkbox_3" class="calc__gift-checkbox-label">ПОТОЛОК В САНУЗЕЛ</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__item">
+                        <div class="calc__item-row">
+                            <div class="calc__item-row-text">
+                                Площадь потолка
+                            </div>
+                            <input type="text" class="calc__item-row-input calc__item-row-input--small">
+                            <div class="calc__item-row-desc">
+                                m2
+                            </div>
+                        </div>
+
+                        <div class="calc__item-row">
+                            <div class="calc__item-row-text">
+                                Точек освещения
+                            </div>
+                            <input type="text" class="calc__item-row-input calc__item-row-input--small">
+                            <div class="calc__item-row-desc">
+                                шт.
+                            </div>
+                        </div>
+
+                        <div class="calc__item-row">
+                            <div class="calc__item-row-text">
+                                Итог
+                            </div>
+                            <input type="text" class="calc__item-row-input calc__item-row-input--big">
+                            <div class="calc__item-row-desc">
+                                р.
+                            </div>
+                        </div>
+
+                        <div class="calc__item-final">
+                            <div class="calc__item-final-text">
+                                ваш номер
+                            </div>
+                            <input type="tel" class="calc__item-final-input">
+                            <button class="calc__item-final-button">
+                                отправить заявку
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-advantages">
+        <div class="inner-wrap">
+            <h2 class="small-page-title">
+                Преимущества работы с нами
+            </h2>
+            <div class="main-advantages__block item-wrap">
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/our_adv01.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">гарантия качества</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/our_adv02.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">решаем вопросы</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/our_adv03.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">опытные сотрудники</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/our_adv04.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">изготовим в срок</h3>
+                    </div>
+                </div>
+
+                <div class="main-advantages__item">
+                    <div class="main-advantages__item-img">
+                        <img src="./img/our_adv05.png" alt="">
+                    </div>
+                    <div class="main-advantages__item-text">
+                        <h3 class="vvsmall-title">бесплатные услуги</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-video-box cnt-section">
+        <div class="inner-wrap">
+            <h2 class="small-page-title">Как мы работаем</h2>
+            <div class="video-wrap">
+                <div class="item-video">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6v2L2UGZJAM" frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-examples-box cnt-section">
+        <div class="inner-wrap">
+            <h2 class="main-page-title">Примеры наших работ
+            </h2>
+            <div class="items-wrap">
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-example">
+                        <div class="text-wrap">
+                            <div class="date">29.10.2017</div>
+                            <div class="rate-wrap">
+                                <div class="frm-rate">
+                                    <span class="star full"></span>
+                                    <span class="star full"></span>
+                                    <span class="star full"></span>
+                                    <span class="star full"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <div class="rate-review"><a href="">Оценка заказчика</a>
+                                </div>
+                            </div>
+                            <div class="info-wrap">
+                                <h2 class="small-title">Потолок в ванную 5 м<sup>2</sup></h2>
+                                <h3 class="vvsmall-title">Включено:</h3>
+                                <p>Полотно Pinpai M5001 (2.18)
+                                    <br>Профиль стеновой невидимый ПВХ
+                                    <br>Лента маскировочная универсальная белая <a href="" class="link-second">Смотреть
+                                        все</a>
+                                </p>
+                            </div>
+                            <div class="elm-price">2 650 р.</div>
+                            <div class="address">Тургенева, 76</div>
+                        </div>
+                        <div class="photos-wrap">
+                            <div class="photos-box">
+                                <div class="main-block">
+                                    <a href="./img/ph01.jpg" class="item-photo" data-fancybox="gal01">
+                                        <img src="./img/ph01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="preview-block">
+                                    <ul>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p001.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p002.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p003.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p004.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p005.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p006.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p007.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./img/ph02.jpg" class="item-photo" data-fancybox="gal01">
+                                                <img src="./img/p008.jpg" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main-offers-box cnt-section">
+        <div class="inner-wrap">
+            <h2 class="small-page-title">НАШИ ВОЗМОЖНОСТИ:</h2>
+            <div class="items-wrap">
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-offer">
+                        <div class="offer-photo">
+                            <img src="./img/offer01.jpg" alt="">
+                        </div>
+                        <div class="offer-price">От 98 руб.</div>
+                        <p>Оптимальные цены на Новосибирском рынке КАЧЕСТВЕННЫХ потолков</p>
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-offer">
+                        <div class="offer-photo">
+                            <img src="./img/offer02.jpg" alt="">
+                        </div>
+                        <div class="offer-price">От 790 руб.</div>
+                        <p>Изготовление потолков любой сложности, в т.ч. двух-, трехуровневых потолков, потолков в виде
+                            волн и т.д.</p>
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-offer">
+                        <div class="offer-photo">
+                            <img src="./img/offer03.jpg" alt="">
+                        </div>
+                        <div class="offer-price">От 110 руб.</div>
+                        <p>Бесшовные потолки</p>
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-offer">
+                        <div class="offer-photo">
+                            <img src="./img/offer04.jpg" alt="">
+                        </div>
+                        <div class="offer-price">От 590 руб.</div>
+                        <p>Художественные потолки (потолки с нанесением изображений и фотографий)</p>
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-offer">
+                        <div class="offer-photo">
+                            <img src="./img/offer05.jpg" alt="">
+                        </div>
+                        <div class="offer-price">От 98 руб.</div>
+                        <p>Возможность выбора ценовой категории потолков (от недорогих до класса "Люкс")</p>
+                    </div>
+                </div>
+                <!-- /item -->
+            </div>
+        </div>
+    </div>
+
+    <div class="main-steps-box cnt-section">
+        <div class="inner-wrap">
+            <h3 class="small-page-title">НЕСКОЛЬКО ШАГОВ <span>ЧТОБЫ ПОЛУЧИТЬ ИДЕАЛЬНЫЙ ПОТОЛОК:</span></h3>
+            <div class="items-wrap">
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-step">
+                        <div class="step-ico" style="background: url(img/step_1.png)">
+                            <div class="elm-num">1</div>
+                        </div>
+                        <div class="step-title">Вызвать замерщика в компании
+                            <br>(услуга бесплатная) по телефону
+                            <br><b>+7 (383) 375-57-47</b>
+                        </div>
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-step">
+                        <div class="step-ico" style="background: url(img/step_2.png)">
+                            <div class="elm-num">2</div>
+                        </div>
+                        <div class="step-title">В течение 1-го дня Ваш
+                            <br>потолок будет установлен <b>профессиональной <br>бригадой</b> наших монтажников.
+                        </div>
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="item-wrap">
+                    <div class="item-step">
+                        <div class="step-ico" style="background: url(img/step_3.png)">
+                            <div class="elm-num">3</div>
+                        </div>
+                        <div class="step-title"><b>После выполнения всех работ</b>
+                            <br>вы оплачиваете ранее оговореную
+                            <br>стоимость
+                        </div>
+                    </div>
+                </div>
+                <!-- /item -->
+            </div>
+        </div>
+    </div>
+
+    <div class="main-reviews-box cnt-section">
+        <div class="inner-wrap">
+            <h2 class="page-title center">ОТЗЫВЫ</h2>
+            <div class="slider-wrap">
+                <div class="slider">
+                    <!-- item -->
+                    <div class="sl-item">
+                        <div class="item-review">
+                            <div class="review-photo">
+                                <img src="./img/review01.jpg" alt="">
+                            </div>
+                            <div class="review-text-wrap">
+                                <div class="review-name">Ольга П.</div>
+                                <div class="review-info">г. Новосибирск, Чехова, 111</div>
+                                <div class="review-text">
+                                    <p>"Фирма отличная! Договорились, что оплачу после монтажа, так и сделали! Качество
+                                        на высоте, убрали мусор даже за собой!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /item -->
+                    <!-- item -->
+                    <div class="sl-item">
+                        <div class="item-review">
+                            <div class="review-photo">
+                                <img src="./img/review02.jpg" alt="">
+                            </div>
+                            <div class="review-text-wrap">
+                                <div class="review-name">Сергей И.</div>
+                                <div class="review-info">г. Новосибирск, Чехова, 111</div>
+                                <div class="review-text">
+                                    <p>"Сделали шикарно, а главное не дорого и без шва! Молодцы, рекомендую своим
+                                        друзьям и коллегам!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /item -->
+                    <!-- item -->
+                    <div class="sl-item">
+                        <div class="item-review">
+                            <div class="review-photo">
+                                <img src="./img/review01.jpg" alt="">
+                            </div>
+                            <div class="review-text-wrap">
+                                <div class="review-name">Ольга П.</div>
+                                <div class="review-info">г. Новосибирск, Чехова, 111</div>
+                                <div class="review-text">
+                                    <p>"Фирма отличная! Договорились, что оплачу после монтажа, так и сделали! Качество
+                                        на высоте, убрали мусор даже за собой!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /item -->
+                    <!-- item -->
+                    <div class="sl-item">
+                        <div class="item-review">
+                            <div class="review-photo">
+                                <img src="./img/review02.jpg" alt="">
+                            </div>
+                            <div class="review-text-wrap">
+                                <div class="review-name">Сергей И.</div>
+                                <div class="review-info">г. Новосибирск, Чехова, 111</div>
+                                <div class="review-text">
+                                    <p>"Сделали шикарно, а главное не дорого и без шва! Молодцы, рекомендую своим
+                                        друзьям и коллегам!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /item -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-form-box cnt-section">
+        <div class="inner-wrap">
+            <div class="pic-wrap">
+                <img src="./img/main/form.png" alt="">
+            </div>
+            <form action="/" class="frm-wrap">
+                <div class="frm-text">
+                    <div class="main-title">БЕСПЛАТНЫЙ ВЫЗОВ ЗАМЕРЩИКА</div>
+                    <p>Пожалуйста, оставьте свои контактные данные, в ближайшее время с Вами свяжется специалист и
+                        ответит на Ваши вопросы.</p>
+                </div>
+                <div class="frm-block">
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="frm-field-ico user">
+                                <input type="text" placeholder="Ваше имя:">
+                            </div>
+                        </div>
+                        <div class="frm-field">
+                            <div class="frm-field-ico phone">
+                                <input type="tel" placeholder="Телефон:">
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field">
+                                <input type="submit" value="Отправить">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="main-article-box cnt-section">
+        <div class="inner-wrap">
+            <h2 class="vvsmall-title">НАТЯЖНЫЕ ПОТОЛКИ - ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ ВАШЕГО ДОМА</h2>
+            <p>Натяжные потолки имеют значительные преимущества. Разноуровневые конструкции, которые разделяют
+                пространство комнаты на функциональные зоны, скрывают неровности и прочие дефекты поверхности, в том
+                числе инженерные коммуникации. Классические
+                формы или различные дизайнерские решения, специальные серии дают волю фантазии и индивидуальности.
+                Полотна натяжных потолков в доме дают хорошую вентиляцию. Есть акустические серии и с антисептическим
+                покрытием для специализированных
+                помещений.</p>
+
+            <h3 class="vvsmall-title">КАК ВЫБРАТЬ КАЧЕСТВЕННЫЙ НАТЯЖНОЙ ПОТОЛОК</h3>
+            <p>Хотите, чтобы потолок прослужил Вам долго и создавал уют и приятную атмосферу в доме? Обращайте внимание
+                на качество полотен, комплектующих и гарантию. Все это, а также вариации и решения даже на самый
+                взыскательный вкус, профессиональную
+                установку и максимально низкие цены Вам предлагает компания «Арт-Декор». Компания «Арт-Декор» работает с
+                натяжными конструкциями и их монтажом с 2008 г. Большой опыт производства и установки, оборудование по
+                последнему слову техники
+                и слаженный профессиональный коллектив позволяют нам изготовить потолки абсолютно любой сложности в
+                короткие сроки.
+                <br>Кроме того, собственное производство обеспечивает наиболее выгодные условия реализации. У нас Вы
+                можете купить качественные натяжные потолки дешево.</p>
+
+            <h4 class="vvsmall-title">РАЗНООБРАЗИЕ И ВОЗМОЖНЫЕ РЕШЕНИЯ НАТЯЖНЫХ ПОТОЛКОВ</h4>
+            <p>Огромный ассортимент, предлагаемый "Арт-Декор”, всевозможные текстурные и цветовые вариации позволят
+                подобрать наиболее интересное решение для любой из комнат Вашей квартиры или загородного дома. Таким
+                образом, Вы сможете создать свой
+                неповторимый стиль и реализовать свои идеи. Убедитесь в этом, посмотрев наш каталог. Установить натяжные
+                потолки Вы можете абсолютно в любую комнату. Будь то спальня, гостиная, прихожая, кухня или ванная,
+                натяжной потолок станет превосходным
+                решением интерьера благодаря не только эстетичности, но и свойствам материала.
+                <br>Натяжные полотна позволяют добиться в интерьере идеальной гармонии и завершенности, делая атмосферу
+                в доме благоприятной, а отдых максимально комфортным.</p>
+
+            <h5>ПРЕИМУЩЕСТВА ПОКУПКИ И УСТАНОВКИ НАТЯЖНЫХ ПОТОЛКОВ ОТ ПРОИЗВОДИТЕЛЯ</h5>
+            <p>Все материалы всегда в наличии, точные замеры без излишков, короткие сроки изготовления, профессиональная
+                установка и гарантия. Мастера компании «Арт-Декор» досконально знают все нюансы установки натяжных
+                конструкций в таких помещениях
+                и ответственно выполнят все работы.
+                <br>С нами Вам просто не о чем беспокоиться. Всего один звонок и профессионалы "Арт-Декор” уже начнут
+                подготовку Вашего натяжного потолка. Работы выполняем быстро и качественно, а цена приятно удивит.</p>
+        </div>
+    </div>
+    <!-- /main article box -->
+    <div class="sep-page"></div>
+</div>
+<!-- /wrap -->
+<!-- footer -->
+<footer class="footer">
+    <div class="inner-wrap">
+        <div class="footer-panel">
+            <div class="left-wrap">
+                <div class="logo-wrap">
+                    <a href="" class="logo">
+
+                    </a>
+                </div>
+                <div class="menu-wrap">
+                    <ul>
+                        <li><a href="">Натяжные потолки </a>
+                        </li>
+                        <li><a href="">Акции на натяжные потолки </a>
+                        </li>
+                        <li><a href="">Натяжные потолки с фотопечатью </a>
+                        </li>
+                        <li><a href="">Глянцевые натяжные потолки </a>
+                        </li>
+                        <li><a href="">Двухуровневые натяжные потолки </a>
+                        </li>
+                        <li><a href="">Сатиновые натяжные потолки </a>
+                        </li>
+                        <li><a href="">Тканевые натяжные потолки </a>
+                        </li>
+                        <li><a href="">Комплектующие для натяжных потолков</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-wrap">
+                <div class="main-contacts-wrap">
+                    <div class="phone"><a href="tel:83833755747">+7 (383) <span>375-57-47</span></a>
+                    </div>
+                    <div class="address">Новосибирск, ул. Демьяна Бедного, дом 55</div>
+                    <div class="button"><a href="" class="btn btn-action-phone btn-popup-callback">Обратный звонок</a>
+                    </div>
+                </div>
+                <div class="studio-wrap">
+                    <a href="" class="studio">СОЗДАНИЕ САЙТА И <br>ПРОДВИЖЕНИЕ САЙТА</a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-panel">Copyright © Все права защищены</div>
+    </div>
+</footer>
+<!-- /footer -->
+<div id="popup-callback">
+    <form action="/" class="frm-popup">
+        <span class="ui-helper-hidden-accessible"><input type="text"/></span>
+        <div class="frm-field-ico user">
+            <input type="text" placeholder="Ваше имя:">
+        </div>
+        <div class="frm-field-ico phone">
+            <input type="tel" placeholder="Телефон:">
+        </div>
+        <input type="submit" value="Перезвоните мне">
+    </form>
+</div>
+<div id="popup-order">
+    <form action="/" class="frm-popup">
+        <span class="ui-helper-hidden-accessible"><input type="text"/></span>
+        <div class="frm-field-ico user">
+            <input type="text" placeholder="Ваше имя:">
+        </div>
+        <div class="frm-field-ico phone">
+            <input type="tel" placeholder="Телефон:">
+        </div>
+        <input type="submit" value="Перезвоните мне">
+    </form>
+</div>
+</body>
+
+</html>

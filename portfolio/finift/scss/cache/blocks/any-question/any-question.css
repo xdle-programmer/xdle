@@ -1,0 +1,84 @@
+.any-question {
+  margin-top: 120px;
+  background: url(../../../img/pattern.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  color: #ffffff; }
+  .any-question__block {
+    display: grid;
+    grid-template-columns: 1fr 410px 1fr;
+    align-items: center;
+    padding: 50px 0; }
+    @media (max-width: 1023px) {
+      .any-question__block {
+        grid-template-columns: 1fr;
+        grid-gap: 15px; } }
+  .any-question__desc {
+    z-index: 1; }
+    @media (max-width: 1023px) {
+      .any-question__desc {
+        text-align: center; } }
+  .any-question__desc-title {
+    font-size: 65px;
+    line-height: 68px;
+    margin-left: -7px; }
+    .any-question__desc-title:first-letter {
+      font-size: 86px; }
+  .any-question__desc-subtitle {
+    font-size: 44px; }
+  .any-question__img-block {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    @media (max-width: 1023px) {
+      .any-question__img-block {
+        display: none; } }
+  .any-question__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 180px);
+    height: calc(100% + 180px);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .any-question__form {
+    z-index: 1; }
+  .any-question__form-item-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff; }
+    @media (max-width: 1023px) {
+      .any-question__form-item-title {
+        text-align: center; } }
+  .any-question__form-item-input {
+    height: 55px;
+    border: 1px solid #93b7d1;
+    background: none;
+    width: 100%;
+    color: #ffffff;
+    padding-left: 15px;
+    font-size: 22px;
+    margin-bottom: 15px; }
+    .any-question__form-item-input::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.7); }
+    .any-question__form-item-input::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.7); }
+    .any-question__form-item-input:-moz-placeholder {
+      color: rgba(255, 255, 255, 0.7); }
+    .any-question__form-item-input:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.7); }
+  .any-question__form-button {
+    height: 55px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #ff7f50;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer; }

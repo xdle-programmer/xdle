@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!--<script src="https://vuejs.org/js/vue.js"></script>-->
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <!--<script src="js/app.js"></script>-->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles/styles.css">
+    <title>trade-vgo</title>
+</head>
+
+<body>
+<noscript>
+    <strong>We're sorry but trade-vgo doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app" class="wrapper">
+    <div class="header">
+        <div class="header__left">
+
+            <div class="header__mobile-menu"></div>
+
+            <div class="header__logo">
+                <img src="img/logo.png" class="logo">
+            </div>
+
+            <div class="header__menu">
+                <a href="#" class="header__menu-item active">Partnership</a>
+                <a href="#" class="header__menu-item">FAQ</a>
+
+                <div class="header__social social">
+                    <a href="#" class="social__item social__item--vk"></a>
+                    <a href="#" class="social__item social__item--twitter"></a>
+                    <!--<a href="#" class="social__item social__item&#45;&#45;facebook"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;youtube"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;instagram"></a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="header__right">
+
+
+            <div class="header__language lang-selector">
+                <div class="lang-selector__button">
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+                <div class="lang-selector__list">
+                    <div class="lang-selector__item lang-selector__item--en">eng</div>
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+            </div>
+
+            <div class="header__bell"></div>
+
+            <a href="/authenticate" class="header__steam" style="display: none">
+                <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"
+                     class="header__steam-img" alt="">
+            </a>
+
+            <div class="header__login">
+                <div class="header__login-img" style="background: url(img/avatar.png);"></div>
+                <div class="header__login-nickname">Alexander Gudik</div>
+                <div class="header__login-arrow"></div>
+
+                <div class="header__login-menu">
+                    <div class="header__login-menu-item header__login-menu-item--trade-link">Trade link</div>
+                    <div class="header__login-menu-item header__login-menu-item--trade-history">Trade history</div>
+                    <div class="header__login-menu-item header__login-menu-item--partnership">Partnership</div>
+                    <div class="header__login-menu-item header__login-menu-item--logout">Logout</div>
+                    <div class="header__login-menu-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-shadow"></div>
+
+    <div class="content">
+
+        <div class="mystery-cases">
+            <div class="mystery-cases__title">MYSTERY CASES</div>
+            <div class="mystery-cases__buttons">
+                <div class="mystery-cases__button active">
+                    <img src="img/mystery-cases__button-csgo.png" class="mystery-cases__button-img">
+                </div>
+                <div class="mystery-cases__button">
+                    <img src="img/mystery-cases__button-vgo.png" class="mystery-cases__button-img">
+                </div>
+                <div class="mystery-cases__button">
+                    <img src="img/mystery-cases__button-virl.png" class="mystery-cases__button-img">
+                </div>
+            </div>
+
+            <div class="mystery-cases__items">
+                <div class="mystery-cases__item mystery-cases__item--red">
+                    <div class="mystery-cases__item-title">MYSTERY KNIFE</div>
+                    <div class="mystery-cases__item-info">
+                        <div class="mystery-cases__item-background">
+                            <img src="img/mystery-cases__item-background.png"
+                                 class="mystery-cases__item-background-img">
+                        </div>
+                        <div class="mystery-cases__item-info-img">
+                            <img src="img/mystery-cases__item-info-img-1.png"
+                                 class="mystery-cases__item-info-img-inner">
+
+                        </div>
+                        <div class="mystery-cases__item-info-desc">Prices ranging from $0.02 to $658</div>
+                        <div class="mystery-cases__item-info-buttons">
+                            <div class="mystery-cases__item-info-buttons-item">OPEN</div>
+                            <div class="mystery-cases__item-info-buttons-price">$114.95</div>
+                        </div>
+                        <div class="mystery-cases__item-info-el-1"></div>
+                        <div class="mystery-cases__item-info-el-2"></div>
+                    </div>
+                </div>
+
+                <div class="mystery-cases__item">
+                    <div class="mystery-cases__item-title">MYSTERY KNIFE</div>
+                    <div class="mystery-cases__item-info">
+                        <div class="mystery-cases__item-background">
+                            <img src="img/mystery-cases__item-background.png"
+                                 class="mystery-cases__item-background-img">
+                        </div>
+                        <div class="mystery-cases__item-info-img">
+                            <img src="img/mystery-cases__item-info-img-2.png"
+                                 class="mystery-cases__item-info-img-inner">
+
+                        </div>
+                        <div class="mystery-cases__item-info-desc">Prices ranging from $0.02 to $658</div>
+                        <div class="mystery-cases__item-info-buttons">
+                            <div class="mystery-cases__item-info-buttons-item">OPEN</div>
+                            <div class="mystery-cases__item-info-buttons-price">$114.95</div>
+                        </div>
+                        <div class="mystery-cases__item-info-el-1"></div>
+                        <div class="mystery-cases__item-info-el-2"></div>
+                    </div>
+                </div>
+
+                <div class="mystery-cases__item">
+                    <div class="mystery-cases__item-title">MYSTERY KNIFE</div>
+                    <div class="mystery-cases__item-info">
+                        <div class="mystery-cases__item-background">
+                            <img src="img/mystery-cases__item-background.png"
+                                 class="mystery-cases__item-background-img">
+                        </div>
+                        <div class="mystery-cases__item-info-img">
+                            <img src="img/mystery-cases__item-info-img-3.png"
+                                 class="mystery-cases__item-info-img-inner">
+
+                        </div>
+                        <div class="mystery-cases__item-info-desc">Prices ranging from $0.02 to $658</div>
+                        <div class="mystery-cases__item-info-buttons">
+                            <div class="mystery-cases__item-info-buttons-item">OPEN</div>
+                            <div class="mystery-cases__item-info-buttons-price">$114.95</div>
+                        </div>
+                        <div class="mystery-cases__item-info-el-1"></div>
+                        <div class="mystery-cases__item-info-el-2"></div>
+                    </div>
+                </div>
+
+                <div class="mystery-cases__item">
+                    <div class="mystery-cases__item-title">MYSTERY KNIFE</div>
+                    <div class="mystery-cases__item-info">
+                        <div class="mystery-cases__item-background">
+                            <img src="img/mystery-cases__item-background.png"
+                                 class="mystery-cases__item-background-img">
+                        </div>
+                        <div class="mystery-cases__item-info-img">
+                            <img src="img/mystery-cases__item-info-img-4.png"
+                                 class="mystery-cases__item-info-img-inner">
+
+                        </div>
+                        <div class="mystery-cases__item-info-desc">Prices ranging from $0.02 to $658</div>
+                        <div class="mystery-cases__item-info-buttons">
+                            <div class="mystery-cases__item-info-buttons-item">OPEN</div>
+                            <div class="mystery-cases__item-info-buttons-price">$114.95</div>
+                        </div>
+                        <div class="mystery-cases__item-info-el-1"></div>
+                        <div class="mystery-cases__item-info-el-2"></div>
+                    </div>
+                </div>
+
+                <div class="mystery-cases__item">
+                    <div class="mystery-cases__item-title">MYSTERY KNIFE</div>
+                    <div class="mystery-cases__item-info">
+                        <div class="mystery-cases__item-background">
+                            <img src="img/mystery-cases__item-background.png"
+                                 class="mystery-cases__item-background-img">
+                        </div>
+                        <div class="mystery-cases__item-info-img">
+                            <img src="img/mystery-cases__item-info-img-5.png"
+                                 class="mystery-cases__item-info-img-inner">
+
+                        </div>
+                        <div class="mystery-cases__item-info-desc">Prices ranging from $0.02 to $658</div>
+                        <div class="mystery-cases__item-info-buttons">
+                            <div class="mystery-cases__item-info-buttons-item">OPEN</div>
+                            <div class="mystery-cases__item-info-buttons-price">$114.95</div>
+                        </div>
+                        <div class="mystery-cases__item-info-el-1"></div>
+                        <div class="mystery-cases__item-info-el-2"></div>
+                    </div>
+                </div>
+
+                <div class="mystery-cases__item">
+                    <div class="mystery-cases__item-title">MYSTERY KNIFE</div>
+                    <div class="mystery-cases__item-info">
+                        <div class="mystery-cases__item-background">
+                            <img src="img/mystery-cases__item-background.png"
+                                 class="mystery-cases__item-background-img">
+                        </div>
+                        <div class="mystery-cases__item-info-img">
+                            <img src="img/mystery-cases__item-info-img-6.png"
+                                 class="mystery-cases__item-info-img-inner">
+
+                        </div>
+                        <div class="mystery-cases__item-info-desc">Prices ranging from $0.02 to $658</div>
+                        <div class="mystery-cases__item-info-buttons">
+                            <div class="mystery-cases__item-info-buttons-item">OPEN</div>
+                            <div class="mystery-cases__item-info-buttons-price">$114.95</div>
+                        </div>
+                        <div class="mystery-cases__item-info-el-1"></div>
+                        <div class="mystery-cases__item-info-el-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--<div class="footer">-->
+        <!--<img class="footer__kassa" src="img/free-kassa.png">-->
+
+        <!--<div class="footer__copyright">-->
+            <!--(c) 2018 Powered by-->
+            <!--vgowiki.com-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+</div>
+
+
+</body>
+
+
+</html>

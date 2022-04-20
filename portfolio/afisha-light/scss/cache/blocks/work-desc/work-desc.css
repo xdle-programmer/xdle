@@ -1,0 +1,158 @@
+.work-desc {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 100px; }
+  .work-desc__half {
+    width: calc(50% - 35px); }
+    @media (max-width: 1023px) {
+      .work-desc__half {
+        width: 100%;
+        margin-bottom: 20px; } }
+  .work-desc__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px; }
+  .work-desc__text {
+    font-size: 14px;
+    color: #8a8a8a;
+    line-height: 20px; }
+  .work-desc__line {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 15px; }
+    @media (max-width: 1023px) {
+      .work-desc__line {
+        font-size: 16px; } }
+  .work-desc__line-title {
+    width: 130px;
+    color: #8a8a8a;
+    font-weight: 700; }
+    @media (max-width: 1023px) {
+      .work-desc__line-title {
+        width: 110px; } }
+  .work-desc__line-item {
+    width: calc(100% - 130px); }
+    @media (max-width: 1023px) {
+      .work-desc__line-item {
+        width: calc(100% - 110px); } }
+  .work-desc__line-tag {
+    cursor: pointer;
+    display: inline; }
+    .work-desc__line-tag:hover {
+      text-decoration: underline; }
+    .work-desc__line-tag:after {
+      content: ',';
+      margin-right: 7px; }
+    .work-desc__line-tag:nth-last-of-type(1):after {
+      display: none; }
+  .work-desc__line-sign {
+    width: 130px;
+    height: 35px;
+    background: url(../../../img/sign.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 1023px) {
+      .work-desc__line-sign {
+        width: 100px; } }
+  .work-desc__nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px; }
+    @media (max-width: 1023px) {
+      .work-desc__nav {
+        margin-top: 0; } }
+  .work-desc__nav-prev {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; }
+  .work-desc__nav-prev-icon {
+    width: 20px;
+    height: 20px;
+    background: url(../../../img/long-arrow.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    transform: scaleX(-1); }
+  .work-desc__nav-prev-text {
+    color: #8a8a8a;
+    margin-left: 15px; }
+  .work-desc__nav-grid {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    background: #444444; }
+    .work-desc__nav-grid:before, .work-desc__nav-grid:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #ffffff; }
+    .work-desc__nav-grid:before {
+      width: 2px;
+      top: 0;
+      height: 16px;
+      left: 7px; }
+    .work-desc__nav-grid:after {
+      width: 16px;
+      left: 0;
+      height: 2px;
+      top: 7px; }
+  .work-desc__nav-next {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; }
+  .work-desc__nav-next-text {
+    color: #8a8a8a;
+    margin-right: 15px; }
+  .work-desc__nav-next-icon {
+    width: 20px;
+    height: 20px;
+    background: url(../../../img/long-arrow.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .work-desc__line-item-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    justify-content: flex-end;
+    margin-top: 7px; }
+  .work-desc__line-item-like-text {
+    margin-right: 40px;
+    background: linear-gradient(to right, #554ae8, #de92c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #554ae8;
+    font-weight: 700; }
+    @media (max-width: 1023px) {
+      .work-desc__line-item-like-text {
+        margin-right: 10px; } }
+  .work-desc__line-item-like-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(../../../img/heart.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }

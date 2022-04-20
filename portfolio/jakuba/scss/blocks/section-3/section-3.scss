@@ -1,0 +1,44 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section-3 {
+  height: 100%;
+  width: 850px;
+  position: relative;
+
+  @media #{$tablet-big-screen} {
+    display: none;
+  }
+
+  &__background {
+    @include absolute-fill;
+    position: absolute;
+    z-index: 1;
+    background: url(../../../img/section-3/background.jpg);
+    @include background-cover-center;
+  }
+
+  &__img-big {
+    width: 1050px;
+    z-index: 2;
+    height: 95vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../../../img/section-3/jakuba.png);
+    @include background-contain-center;
+    background-position: right bottom!important;
+  }
+
+  &__img-small {
+    width: 470px;
+    z-index: 3;
+    height: 265px;
+    background: url(../../../img/section-3/people.jpg);
+    @include background-cover-center;
+    right: -270px;
+    bottom: 10vh;
+    position: absolute;
+  }
+}

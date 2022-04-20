@@ -1,0 +1,119 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.final-page {
+  position: fixed;
+  @include absolute-fill;
+  @include flex-row-center;
+  transform: translateX(100%);
+
+  &.active {
+    transform: translateX(0);
+  }
+
+
+  &__container {
+    width: 100vw;
+    max-width: 1024px;
+    height: 63vh;
+    border: 5px solid #e6e6e6;
+    background: $white;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+
+    @media #{$tablet-small-screen} {
+      @include flex-column;
+      border: none;
+      height: 100vh;
+    }
+  }
+
+  &__desc {
+    @include flex-column-center;
+    padding: 30px;
+    color: $gray-light;
+  }
+
+  &__desc-text-main {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  &__desc-text-natural {
+    padding: 4px 0;
+    padding-left: 15px;
+    font-style: italic;
+    font-size: 16px;
+    border-left: 2px solid $gray-light;
+
+  }
+
+  &__form {
+    box-shadow: 2.5px 8.7px 15px 0 rgba(0, 0, 0, .11);
+    @include flex-column-center;
+    padding: 30px;
+
+    @media #{$tablet-small-screen} {
+     box-shadow: none;
+      width: 100%;
+    }
+  }
+
+  &__form-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__form-item-title {
+    color: $gray-light;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  &__form-item-input-block {
+    position: relative;
+
+    &:after {
+      width: 20px;
+      height: 20px;
+      @include after-absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $gray-light;
+    }
+
+    &--person:after {
+      mask: url(../../../img/user.svg);
+      -webkit-mask: url(../../../img/user.svg);
+      @include mask-contain-center;
+    }
+
+    &--phone:after {
+      mask: url(../../../img/phone.svg);
+      -webkit-mask: url(../../../img/phone.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__form-item-input {
+    height: 60px;
+    border: 1px solid $gray-light;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 0 40px;
+    font-weight: 200;
+  }
+
+  &__button {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 50px;
+  }
+
+}

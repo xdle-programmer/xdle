@@ -1,0 +1,21 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.new-main-footer {
+  height: 500px;
+  width: 100%;
+  background: #0F4C81;
+  @include flex-row-center;
+
+  @media #{$tablet-small-screen} {
+    height: 300px;
+  }
+
+  &__logo {
+    width: 218px;
+    height: 56px;
+    background: url(../../../img/new-main/logo.svg);
+    @include background-contain-center;
+  }
+}

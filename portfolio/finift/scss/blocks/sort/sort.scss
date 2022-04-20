@@ -1,0 +1,171 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.sort {
+  width: 100%;
+  position: relative;
+
+  &.focus .warning.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.focus .placeholder {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  //Шрифт
+  @mixin font {
+    @include font-default;
+  }
+
+  @mixin button-active {
+    @include select-button-active;
+  }
+
+  //Параметры кнопки
+  $button-height: 30;
+  $button-width: 190px;
+  $button-min-width: 190;
+  $button-border-radius: $select-button-border-radius;
+  $button-padding-left: $select-button-padding-left;
+  $button-padding-right: $select-button-padding-right;
+  $button-border-width: $select-button-border-width;
+  $button-border-color: transparent;
+  $button-background: transparent;
+
+  //Параметры текста
+  $font-size: 18;
+  $font-weight: 300;
+  $font-color: $gray-dark;
+  $font-placeholder-color: $select-font-placeholder-color;
+
+  //Параметры иконки
+  $icon-image-url: $select-icon-image-url;
+  $icon-image-width: $select-icon-image-width;
+  $icon-image-height: $select-icon-image-height;
+  $icon-right: $select-icon-right;
+
+  //Параметры враппера меню
+  $menu-shadow: $select-menu-shadow;
+  $menu-max-height: auto;
+
+  //Параметры пунктов меню
+  $inner-button-background: $select-inner-button-background;
+  $inner-button-color: $select-inner-button-color;
+
+  &__button {
+    width: auto !important;
+    min-width: auto !important;
+    height: #{$button-height}px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: #{$button-border-width}px solid #{$button-border-color} !important;
+    border-radius: #{$button-border-radius}px !important;
+    background: #{$button-background} !important;
+    position: relative !important;
+    @include flex-row-center;
+    margin-right: 0!important;
+    display: flex !important;
+    justify-content: flex-start;
+
+    &:focus,
+    &:active {
+      outline: none !important;
+    }
+
+    &--open {
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+    }
+  }
+
+  $open: '.sort__button--open';
+  $placeholder: '.sort__button--placeholder';
+  $focus: '.sort__button:focus';
+
+  &__text {
+    @include font;
+    float: none !important;
+    border-radius: #{$button-border-radius}px !important;
+    font-size: 19px !important;
+    font-weight: #{$font-weight} !important;
+    color: $blue-light !important;
+    margin: 0 !important;
+    width: fit-content !important;
+    height: 100% !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: #{$button-padding-left}px !important;
+    padding-right: #{$button-padding-right}px !important;
+    @include flex-row-center;
+    display: flex !important;
+    justify-content: flex-start;
+
+    #{$focus} & {
+      outline: none !important;
+    }
+
+    #{$placeholder} & {
+      color: #{$font-placeholder-color} !important;
+    }
+  }
+
+  &__icon {
+    width: #{$icon-image-width}px !important;
+    height: #{$icon-image-height}px !important;
+    background: url(../../../img/arrow-down-blue.svg)!important;
+    @include background-contain-center;
+    position: static !important;
+    order: 2;
+
+    #{$open} & {
+      transform: rotate(180deg) !important;
+    }
+  }
+
+  &__menu {
+    transition: all 0s;
+    border: none !important;
+    background: none !important;
+
+    .ui-menu {
+      border: #{$button-border-width}px solid #{$button-border-color} !important;
+      //background: #{$button-background} !important;
+      background: $white !important;
+      //box-shadow: none;
+      //max-height: #{$menu-max-height}px;
+      //@include scroll;
+    }
+
+    .ui-menu-item-wrapper {
+      height: #{$button-height}px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: #{$button-padding-left}px !important;
+      padding-right: #{$button-padding-right}px !important;
+      @include font;
+      float: none !important;
+      font-size: #{$font-size}px !important;
+      font-weight: #{$font-weight} !important;
+      color: #{$font-color} !important;
+      position: relative !important;
+      @include flex-row-center;
+      justify-content: flex-start;
+      display: flex !important;
+      margin: 0 !important;
+      border: none !important;
+
+      &:hover,
+      &.ui-state-active,
+      &.active {
+        color: #{$inner-button-color} !important;
+        background: #{$inner-button-background} !important;
+      }
+    }
+  }
+}

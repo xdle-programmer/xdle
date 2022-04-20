@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Иола</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="header__top layout">
+            <div class="header__toggle-button"></div>
+            <div class="header__logo">
+                <img src="img/logo.svg" class="header__logo-img">
+            </div>
+            <div class="header__search-toggle"></div>
+            <div id="search" class="header__search js_search_form">
+                <input class="header__search-input" placeholder="Поиск товаров">
+                <div class="header__search-button"></div>
+            </div>
+            <div class="header__phone">
+                <div class="header__phone-item phone">
+                    <div class="phone__button">
+                        <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                        <div class="phone__submenu">
+                            <div class="phone__submenu-block">
+                                <a href="tel:+79047396823" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-23</div>
+                                    <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                </a>
+                                <a href="tel:+79047396824" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-24</div>
+                                </a>
+                                <a href="tel:+79509343767" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 950 934-37-67</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__icon"></div>
+                </div>
+                <div class="header__phone-worktime">
+                    Пн-Пт 09.00 — 18.00
+                </div>
+            </div>
+            <div id="show_cart" class="header__basket js_show_cart">
+                <div class="header__basket-icon"></div>
+                <div class="header__basket-count">
+                    <div class="header__basket-count-number">129</div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header__bottom-block layout">
+                <div class="header__catalog-button">
+                    <div class="header__catalog-button-icon"></div>
+                    <div class="header__catalog-button-text">Каталог товаров</div>
+                </div>
+                <div class="header__catalog-items">
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_1.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Запчасти Беламос, JeMIX, ALBA</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_2.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Водоснабжение, полив, отопление</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_3.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Системы очистки, фильтрации</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_4.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Сварочные расходники, аксессуары</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_5.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Мелко бытовая техника для дома</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_6.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Электроинструмент для строительства и ремонта</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_7.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Садовая техника</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_8.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Сезонный товар</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_9.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Снегоуборщики</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_10.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Оборудование для сварки и полипро- пиленовых труб</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_11.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Бетоносмесители и запчасти</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_12.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Тачки строительные, садовые и расходники</div>
+                    </a>
+
+                </div>
+                <div class="header__menu">
+                    <a href="#" class="header__menu-item">Распродажа</a>
+                    <a href="#" class="header__menu-item">О компании</a>
+                    <a href="#" class="header__menu-item">Доставка и оплата</a>
+                    <a href="#" class="header__menu-item">Новости</a>
+                    <a href="#" class="header__menu-item">Статьи</a>
+                    <a href="#" class="header__menu-item">Контакты</a>
+                </div>
+                <div class="header__account header__account--has-submenu">
+                    <div class="header__account-img"></div>
+                    <div class="header__account-text">kabinet_polzovatelya</div>
+                    <div class="header__account-arrow"></div>
+                    <div class="header__account-exit">Выйти</div>
+                    <div class="header__account-submenu">
+                        <div class="header__account-submenu-top">
+                            <a href="#" class="header__account-submenu-link">Личная страница</a>
+                            <a href="#" class="header__account-submenu-link">Настройки</a>
+                            <a href="#" class="header__account-submenu-link">Сообщения</a>
+                            <a href="#" class="header__account-submenu-link">Заказы</a>
+                        </div>
+                        <div class="header__account-submenu-bottom">
+                            <a href="#"
+                               class="header__account-submenu-link header__account-submenu-link--exit">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile-block">
+                    <div class="header__buttons-count">
+                        <div class="header__button-count">
+                            <div class="header__button-count-img-block">
+                                <img src="img/favorit.svg" class="header__button-count-img">
+                            </div>
+                            <div class="header__button-count-text">Избранное</div>
+                            <div class="header__button-count-number">19</div>
+                        </div>
+                        <div class="header__button-count">
+                            <div class="header__button-count-img-block">
+                                <img src="img/compare.svg" class="header__button-count-img">
+                            </div>
+                            <div class="header__button-count-text">Сравнить</div>
+                            <div class="header__button-count-number">2</div>
+                        </div>
+                    </div>
+                    <div class="header__mobile-email-block">
+                        <a href="mailto:iola_ufa@list.ru" class="header__mobile-email-link">iola_ufa@list.ru</a>
+                    </div>
+                    <div class="header__mobile-phone-block">
+                        <div class="phone phone--header">
+                            <div class="phone__button phone__button--header">
+                                <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                                <div class="phone__submenu phone__submenu--header">
+                                    <div class="phone__submenu-block">
+                                        <a href="tel:+79047396823" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 904 739-68-23</div>
+                                            <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                        </a>
+                                        <a href="tel:+79047396824" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 904 739-68-24</div>
+                                        </a>
+                                        <a href="tel:+79509343767" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 950 934-37-67</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone__icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__wrapper">
+                <div class="breadcrumbs__items">
+                    <a href="#" class="breadcrumbs__item">Главная</a>
+                    <a href="#" class="breadcrumbs__item">Водоснабжение, полив, отопление</a>
+                    <a href="#" class="breadcrumbs__item">Насосы</a>
+                    <a href="#" class="breadcrumbs__item">Поверхностные насосы (садовые)</a>
+                    <div class="breadcrumbs__item active">Поверхностный насос Беламос XА 13 (чугун)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart js_shop_id js_shop">
+            <div class="cart__title">
+                Поверхностный насос Беламос XА 13 (чугун)
+            </div>
+            <div class="cart__block">
+                <div class="cart__tags">
+                    <div class="cart__tag cart__tag--orange">АКЦИЯ</div>
+                    <div class="cart__tag cart__tag--red">НОВИНКА</div>
+                </div>
+
+                <div class="cart__preview">
+                    <div class="cart__preview-slider-block">
+                        <div class="cart__preview-slider-wrapper">
+                            <div class="cart__preview-slider owl-carousel">
+                                <div class="cart__preview-slider-item">
+                                    <img class="cart__preview-slider-item-img" src="img/cart_example.png">
+                                </div>
+                                <div class="cart__preview-slider-item"><img class="cart__preview-slider-item-img"
+                                                                            src="img/categories__2.jpg"></div>
+                                <div class="cart__preview-slider-item"><img class="cart__preview-slider-item-img"
+                                                                            src="img/categories__3.jpg"></div>
+                                <div class="cart__preview-slider-item"><img class="cart__preview-slider-item-img"
+                                                                            src="img/categories__4.jpg"></div>
+                                <div class="cart__preview-slider-item"><img class="cart__preview-slider-item-img"
+                                                                            src="img/categories__5.jpg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="img/cart_example.png" data-fancybox="gallery" class="cart__preview-img-block js_shop_all_img">
+                        <img class="cart__preview-img js_shop_img" src="img/cart_example.png">
+                    </a>
+                </div>
+                <div class="cart__desc js_shop_form">
+                    <div class="cart__desc-top">
+                        <div class="cart__desc-product">Производитель: Belamos</div>
+                        <div class="cart__desc-instock">В наличии</div>
+                        <div class="cart__desc-code">Арт: LR 0202</div>
+                        <div class="cart__desc-top-buttons">
+                            <div class="cart__desc-button-favorite js_shop_wishlist"></div>
+                            <div class="cart__desc-button-compare js_shop_add_compare"></div>
+                        </div>
+                    </div>
+                    <div class="cart__desc-price js_shop_param_price">
+                        <div class="cart__desc-price-current js_shop_price">12 219 р.</div>
+                        <div class="cart__desc-price-old">20 900 р.</div>
+                    </div>
+                    <div class="cart__desc-buttons">
+                        <div class="cart__desc-button js_shop_buy">В корзину</div>
+                        <div class="cart__desc-button cart__desc-button--gray js_cart_one_click">Купить в 1 клик</div>
+                    </div>
+
+                    <div class="cart__desc-properties cart__desc-properties--not-mobile">
+                        <div class="cart__desc-properties-title">Характеристики</div>
+                        <div class="cart__desc-properties-items">
+                            <div class="cart__desc-properties-item">
+                                <div class="cart__desc-properties-item-name">Мощность двигателя, вт</div>
+                                <div class="cart__desc-properties-item-value">850</div>
+                            </div>
+                            <div class="cart__desc-properties-item">
+                                <div class="cart__desc-properties-item-name">Производительность (макс), л/час</div>
+                                <div class="cart__desc-properties-item-value">3 200</div>
+                            </div>
+                            <div class="cart__desc-properties-item">
+                                <div class="cart__desc-properties-item-name">Высота подъема воды (макс), м</div>
+                                <div class="cart__desc-properties-item-value">45</div>
+                            </div>
+                            <div class="cart__desc-properties-item">
+                                <div class="cart__desc-properties-item-name">Мощность двигателя, вт</div>
+                                <div class="cart__desc-properties-item-value">850</div>
+                            </div>
+                            <div class="cart__desc-properties-item">
+                                <div class="cart__desc-properties-item-name">Производительность (макс), л/час</div>
+                                <div class="cart__desc-properties-item-value">3 200</div>
+                            </div>
+                            <div class="cart__desc-properties-item">
+                                <div class="cart__desc-properties-item-name">Высота подъема воды (макс), м</div>
+                                <div class="cart__desc-properties-item-value">45</div>
+                            </div>
+                        </div>
+                        <div class="cart__desc-properties-button">Все характеристики</div>
+                    </div>
+
+                    <div class="cart__desc-properties js_shop_form_param">
+                        <div class="cart__desc-properties-title">Цвет</div>
+                        <div class="cart__desc-properties-colors">
+                            <div class="cart__desc-properties-color active">
+                                <div class="cart__desc-properties-color-value"
+                                     style="background: #3355e3;border-color:#3355e3"></div>
+                                <div class="cart__desc-properties-color-name">Синий</div>
+                            </div>
+                            <div class="cart__desc-properties-color">
+                                <div class="cart__desc-properties-color-value"
+                                     style="background: #e82d2d;border-color:#e82d2d"></div>
+                                <div class="cart__desc-properties-color-name">Красный</div>
+                            </div>
+                            <div class="cart__desc-properties-color">
+                                <div class="cart__desc-properties-color-value"
+                                     style="background: #fff;border-color:#e7e7e7"></div>
+                                <div class="cart__desc-properties-color-name">Белый</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__desc-properties">
+                        <div class="cart__desc-properties-title">Дополнительно</div>
+                        <div class="checkbox cart__desc-properties-checkbox">
+                            <input class="checkbox__input" checked id="checkbox_1" name="test_11" value="checkbox_1"
+                                   type="checkbox"/>
+                            <label class="checkbox__label" for="checkbox_1">Запасной комплект</label>
+                        </div>
+                    </div>
+
+                    <div class="cart__desc-links">
+                        <div class="cart__desc-link cart__desc-link--delivery">
+                            <div class="cart__desc-link-img cart__desc-link-img--delivery"></div>
+                            <div class="cart__desc-link-text">Доставка и оплата</div>
+                            <div class="cart__desc-link-tooltip cart__desc-link-tooltip--delivery">
+                                <div class="cart__desc-link-tooltip-text">Текст в тултипе, текст в тултипе, текст в тултипе, текст в тултипе, текст в тултипе, текст в тултипе</div>
+                                <div class="cart__desc-link-tooltip-link">Подробнее</div>
+                            </div>
+                        </div>
+                        <div class="cart__desc-link cart__desc-link--return">
+                            <div class="cart__desc-link-img cart__desc-link-img--return"></div>
+                            <div class="cart__desc-link-text">Условия возврата</div>
+                            <div class="cart__desc-link-tooltip cart__desc-link-tooltip--return">
+                                <div class="cart__desc-link-tooltip-text">Текст в тултипе, текст в тултипе, текст в тултипе, текст в тултипе, текст в тултипе, текст в тултипе</div>
+                                <div class="cart__desc-link-tooltip-link">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tabs__header-items">
+            <div class="tabs__header">
+                <div class="tabs__header-item" data-tabs-goal="desc">Описание товара</div>
+                <div class="tabs__header-item active" data-tabs-goal="properties">Характеристики</div>
+                <div class="tabs__header-item" data-tabs-goal="reviews">Отзывы (12)</div>
+            </div>
+            </div>
+            <div class="tabs__items">
+                <div class="tabs__item" data-tabs="desc">
+                    <div class="tabs__item-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tabs__item active" data-tabs="properties">
+                    <div class="tabs__properties">
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Мощность двигателя, вт</div>
+                            <div class="tabs__properties-item-value">850</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Производительность (макс), л/час</div>
+                            <div class="tabs__properties-item-value">3 200</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Высота подъема воды (макс), м</div>
+                            <div class="tabs__properties-item-value">45</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Максимальная глубина всасывания</div>
+                            <div class="tabs__properties-item-value">8</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Температура жидкости, °С</div>
+                            <div class="tabs__properties-item-value">от +1 до + 35</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Присоединительные размеры</div>
+                            <div class="tabs__properties-item-value">1˝</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Степень защиты</div>
+                            <div class="tabs__properties-item-value">IP54</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Класс изоляции</div>
+                            <div class="tabs__properties-item-value">B</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Класс защиты</div>
+                            <div class="tabs__properties-item-value">I</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Напряжение,В/частота, Гц</div>
+                            <div class="tabs__properties-item-value">220/50</div>
+                        </div>
+                        <div class="tabs__properties-item">
+                            <div class="tabs__properties-item-name">Размеры, A/B/C мм</div>
+                            <div class="tabs__properties-item-value">380/290/235</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__item" data-tabs="reviews">
+                    <div class="tabs__reviews">
+                        <div class="tabs__reviews-item">
+                            <div class="tabs__reviews-item-header">
+                                <div class="tabs__reviews-item-name">Иван Иванов</div>
+                                <div class="tabs__reviews-item-date">1.10.2019</div>
+                            </div>
+                            <div class="tabs__reviews-item-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud exercitation
+                            </div>
+                        </div>
+                        <div class="tabs__reviews-item">
+                            <div class="tabs__reviews-item-header">
+                                <div class="tabs__reviews-item-name">Иван Иванов</div>
+                                <div class="tabs__reviews-item-date">1.10.2019</div>
+                            </div>
+                            <div class="tabs__reviews-item-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud exercitation
+                            </div>
+                        </div>
+                        <div class="tabs__reviews-item">
+                            <div class="tabs__reviews-item-header">
+                                <div class="tabs__reviews-item-name">Иван Иванов</div>
+                                <div class="tabs__reviews-item-date">1.10.2019</div>
+                            </div>
+                            <div class="tabs__reviews-item-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud exercitation
+                            </div>
+                        </div>
+                        <div class="tabs__reviews-item">
+                            <div class="tabs__reviews-item-header">
+                                <div class="tabs__reviews-item-name">Иван Иванов</div>
+                                <div class="tabs__reviews-item-date">1.10.2019</div>
+                            </div>
+                            <div class="tabs__reviews-item-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud exercitation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cart-previews">
+        <div class="layout">
+            <div class="title">Спецпредложения</div>
+
+            <div class="cart-previews__wrapper swiper-container custom-swiper">
+
+                <div class="cart-previews__items swiper-wrapper custom-swiper__wrapper">
+
+                    <div class="swiper-slide cart-previews__item custom-swiper__slide">
+                        <div class="cart-previews__item-tag cart-previews__item-tag--blue">Хит</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__1.jpg" class="cart-previews__item-img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Чайник LIRA LR 0113 RED (красный)</a>
+                        <div class="cart-previews__item-production">Производитель: Lira</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom">
+                            <div class="cart-previews__item-price">
+                                <div class="cart-previews__item-price-number">2 399 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide cart-previews__item custom-swiper__slide">
+                        <div class="cart-previews__item-tag cart-previews__item-tag--orange">АКЦИЯ</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__2.jpg" class="cart-previews__item-img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Копия Утюг LIRA LR 060</a>
+                        <div class="cart-previews__item-production">Производитель: Lira</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom">
+                            <div class="cart-previews__item-price cart-previews__item-price--sale">
+                                <div class="cart-previews__item-price-number-sale">6 500 р.</div>
+                                <div class="cart-previews__item-price-number">5 219 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide cart-previews__item custom-swiper__slide">
+                        <div class="cart-previews__item-tag">НОВИНКА</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__3.jpg" class="cart-previews__item-img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Циркуляционный насос Беламос BRS25/4G</a>
+                        <div class="cart-previews__item-production">Производитель: Belamos</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom">
+                            <div class="cart-previews__item-price">
+                                <div class="cart-previews__item-price-number">42 000 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide cart-previews__item custom-swiper__slide">
+                        <div class="cart-previews__item-tag">НОВИНКА</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__4.jpg" class="cart-previews__item-img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Насос дренажный Беламос Omega 55F</a>
+                        <div class="cart-previews__item-production">Производитель: Belamos</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom">
+                            <div class="cart-previews__item-price cart-previews__item-price--sale">
+                                <div class="cart-previews__item-price-number-sale">25 000 р.</div>
+                                <div class="cart-previews__item-price-number">16 800 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination custom-swiper__progressbar"></div>
+
+            </div>
+
+            <a href="#" class="button button--gray button--link">Рекомендуемый товар</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="layout footer__block">
+            <div class="footer__logo">
+                <img src="img/logo-short.svg" class="footer__logo-img">
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-item">
+                    <img src="img/whatsapp.svg" class="footer__social-item-img">
+                </a>
+                <a href="#" class="footer__social-item">
+                    <img src="img/vk.svg" class="footer__social-item-img">
+                </a>
+                <a href="#" class="footer__social-item">
+                    <img src="img/insta.svg" class="footer__social-item-img">
+                </a>
+            </div>
+            <div class="footer__phone">
+                <div class="phone phone--bottom">
+                    <div class="phone__button">
+                        <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                        <div class="phone__submenu">
+                            <div class="phone__submenu-block">
+                                <a href="tel:+79047396823" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-23</div>
+                                    <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                </a>
+                                <a href="tel:+79047396824" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-24</div>
+                                </a>
+                                <a href="tel:+79509343767" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 950 934-37-67</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__icon"></div>
+                </div>
+            </div>
+            <a href="mailto:iola_ufa@list.ru" class="footer__email">iola_ufa@list.ru</a>
+            <a target="_blank" href="rozart.ru" class="footer__dev-logo">
+                <div class="footer__dev-logo-text">cоздание<br>сайта</div>
+                <img src="img/dev-logo.svg" class="footer__dev-logo-img">
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="plugins/jquery.maskedinput.min.js"></script>
+    <script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+
+</div>
+
+</body>

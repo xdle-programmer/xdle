@@ -1,0 +1,97 @@
+{% include "partials/header.html" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Каталог товаров</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		<div class="container clear-fix">
+			<div class="md-title md-title_page-title">Обзоры техники Apple</div>
+			<aside class="aside-colmn">
+				<div class="aside-colmn__desktop-view">
+					<nav class="type-nav">
+						<a href="#" class="row-link">
+							Компьютеры
+						</a>
+						<a href="#" class="row-link">
+							Ноутбуки
+						</a>
+						<a href="#" class="row-link">
+							Планшеты
+						</a>
+						<a href="#" class="row-link">
+							Apple
+						</a>
+						<a href="#" class="row-link">
+							Телевизоры
+						</a>
+						<a href="#" class="row-link">
+							Мультимедиа
+						</a>
+						<a href="#" class="row-link">
+							Смартфоны
+						</a>
+						<a href="#" class="row-link">
+							Гаджеты
+						</a>
+						<a href="#" class="row-link">
+							Фото
+						</a>
+						<a href="#" class="row-link">
+							Видео
+						</a>
+						<a href="#" class="row-link">
+							Безопасность
+						</a>
+						<a href="#" class="row-link">
+							Бытовая техника
+						</a>
+						<a href="#" class="row-link">
+							Автомобильная техника
+						</a>
+						<a href="#" class="row-link">
+							Отдых и развлечение
+						</a>
+						<a href="#" class="row-link">
+							Строительство, ремонт
+						</a>
+						<a href="#" class="row-link">
+							Аксессуары
+						</a>
+					</nav>
+					{% include "partials/banner_small.html"%}
+				</div>
+				<div class="aside-colmn__mobile-view">
+					<button class="button button_grey cat-show" data-menu="category-menu">Выберите категорию</button>
+				</div>
+			</aside>
+			<section class="center-wrapper reviews-list">
+				<div class="order-wrap">
+					{% for i in 0..11 %}
+						<div class="third-wrap">
+							{% 
+								include "partials/news-card.html" with {
+									img: "img/samples/news/news" ~ 2 ~ ".jpg",
+									title: "Быстрее, выше, сильнее!",
+									description: "Какой ноутбук выбрать школьникам и студентам?"
+								}
+							 %}
+						</div> 
+					{% endfor %}
+				</div>
+				{% include "partials/pagination.html" %}
+			</section>
+		</div>
+		{% include "partials/banner_wide.html"%}
+		{% include "partials/seo-text.html" with {
+			modifier: "cont-section description-text_space-top"
+		} %}
+		
+		
+	</main>
+{% include "partials/footer.html" %}

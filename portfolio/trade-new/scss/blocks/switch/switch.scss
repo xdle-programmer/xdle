@@ -1,0 +1,38 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.switch {
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border-radius: 25px;
+  background: #24292d;
+  border: 2px solid #24292d;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+
+  @media #{$mobile-big-screen} {
+    background: #000;
+  }
+
+  &:after {
+    @include after-absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    @include gradient;
+    transition: all .2s ease-in;
+    border-radius: 50%;
+  }
+
+  &:checked:after {
+    transform: translateX(28px);
+  }
+}

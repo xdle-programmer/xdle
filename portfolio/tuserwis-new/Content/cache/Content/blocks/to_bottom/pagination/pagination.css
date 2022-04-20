@@ -1,0 +1,48 @@
+.pagination-container {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0; }
+
+ul.pagination {
+  height: 100%;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0; }
+  ul.pagination li {
+    height: 100%;
+    width: 40px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+    cursor: pointer; }
+    ul.pagination li.arrow-step-back {
+      background: url("../img/left-arrow-pagination.png") center no-repeat;
+      background-color: #fff;
+      margin-right: 10px; }
+    ul.pagination li.arrow-step-back:hover {
+      background: url("../img/left-arrow-white-pagination.png") center no-repeat;
+      background-color: #0092e8; }
+    ul.pagination li.arrow-step-forward {
+      background: url("../img/right-arrow-pagination.png") center no-repeat;
+      background-color: #fff;
+      margin-left: 10px; }
+    ul.pagination li.arrow-step-forward:hover {
+      background: url("../img/right-arrow-white-pagination.png") center no-repeat;
+      background-color: #0092e8; }
+    ul.pagination li:hover {
+      background-color: #0092e8;
+      color: #fff; }
+    ul.pagination li.active {
+      color: #fff;
+      background-color: #0092e8; }

@@ -1,0 +1,86 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.first {
+  background: url(../../../img/bl1_bg.jpg) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  @include absolute-fill;
+
+  @media #{$tablet-big-screen} {
+    position: relative;
+    height: 350px;
+    background-size: 1300px auto;
+    background-position: top right;
+  }
+
+  @media #{$mobile-big-screen} {
+    background-position: 55% 0%;
+  }
+
+  &--text {
+    background: none;
+    z-index: 10;
+
+    @media #{$tablet-big-screen} {
+      height: auto;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    width: 30%;
+    bottom: 76%;
+    left: 15%;
+    z-index: 1;
+
+    @media #{$tablet-big-screen} {
+      @include absolute-center;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 58%;
+      left: 33%;
+      top: 29%;
+    }
+  }
+
+  &__logo-inner {
+    width: 100%;
+    height: auto;
+  }
+
+  &__top {
+    background: url(../../../img/dust.png) center no-repeat;
+    width: 100%;
+    height: 47vh;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-size: 150% 150%;
+
+    @media #{$tablet-big-screen} {
+      height: 100%;
+    }
+  }
+
+  &__top-light {}
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    right: 7%;
+    margin-top: 15px;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 30px);
+      @include margin-auto;
+      position: static;
+    }
+  }
+
+}
+

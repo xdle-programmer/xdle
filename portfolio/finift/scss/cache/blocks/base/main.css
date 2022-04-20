@@ -1,0 +1,122 @@
+html {
+  overflow-x: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: #232324;
+  padding-top: 120px; }
+  body.scroll {
+    padding-top: 80px; }
+  @media (max-width: 1365px) {
+    body {
+      padding-top: 80px; }
+      body.scroll {
+        padding-top: 60px; } }
+  @media (max-width: 767px) {
+    body {
+      padding-top: 120px; }
+      body.scroll {
+        padding-top: 60px; } }
+
+@font-face {
+  font-family: 'cinzel';
+  font-display: swap;
+  src: url(../../../fonts/Cinzel-Regular.ttf);
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'cinzel';
+  font-display: swap;
+  src: url(../../../fonts/Cinzel-Bold.ttf);
+  font-weight: 700;
+  font-style: normal; }
+
+* {
+  font-display: auto;
+  font-family: 'cinzel', sans-serif;
+  box-sizing: border-box; }
+
+select {
+  display: none; }
+
+.wrapper {
+  min-height: 100vh;
+  font-weight: 500;
+  position: relative; }
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: all 0.2s ease-in; }
+
+.wrapper *::-webkit-input-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *::-moz-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *:-moz-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *:-ms-input-placeholder {
+  transition: all 0.2s ease-in; }
+
+.touch-device * {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; }
+
+@media (max-width: 1599px) {
+  .temp-small-hidden {
+    width: 100%;
+    overflow: hidden; } }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer; }
+
+button, input, textarea {
+  border: none;
+  background: none; }
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none; }
+
+.scroll-top {
+  position: fixed;
+  width: 81px;
+  height: 31px;
+  background: #ffffff;
+  cursor: pointer;
+  bottom: 0;
+  left: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  background: url(../../../img/scroll-arrow-blue.png);
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important; }
+  .scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1); }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: inherit;
+  font-size: inherit;
+  display: block;
+  font-weight: inherit; }
+
+ul {
+  padding-left: 0; }
+
+p {
+  font-size: 16px;
+  line-height: 30px; }

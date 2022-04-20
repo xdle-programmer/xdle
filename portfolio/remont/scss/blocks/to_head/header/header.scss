@@ -1,0 +1,42 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+  @include flex-row-center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  z-index: 80;
+  background: rgba(255,255,255,0);
+
+  &--scroll {
+    background: rgba(255,255,255,.8);
+  }
+
+  @media #{$tablet-big-screen} {
+    padding-right: 10px;
+    background: #e9e9e9;
+  }
+
+  @media #{$mobile-big-screen} {
+    background: $white;
+    top: 90px;
+    height: 127px;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin-left: 50px;
+
+    @media #{$tablet-big-screen} {
+      margin-left: 16px;
+    }
+  }
+}

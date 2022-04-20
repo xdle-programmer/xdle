@@ -1,0 +1,37 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  color: $white;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  width: 235px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: uppercase;
+  @include flex-row-center;
+  overflow: hidden;
+  letter-spacing: 1.3px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:before,
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+  }
+
+  &:before {
+    z-index: -2;
+    background: $brown;
+  }
+
+
+
+}

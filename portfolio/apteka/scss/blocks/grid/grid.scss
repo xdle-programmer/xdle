@@ -1,0 +1,166 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.grid {
+  margin-bottom: 30px;
+  width: 100%;
+  @include flex-column;
+
+  &--half {
+    width: calc(50% - 15px);
+  }
+
+  &--scroll {
+    height: 450px;
+  }
+
+  &__top {
+    border: 1px solid #e4e4e4;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    @include flex-row-center;
+    color: $blue;
+  }
+
+  &__item {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+
+    &--header {
+      border-right: 17px solid #e7e7e7;
+
+      & > .grid__row > div:nth-last-of-type(1) {
+        border-right: 1px solid #fff;
+      }
+    }
+
+    &--scroll {
+      flex-grow: 1;
+      @include scroll;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      padding-right: 0;
+    }
+
+    &:after {
+      @include after-absolute;
+      background: #e7e7e7;
+      //background: red;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+    }
+  }
+
+  &__row {
+    display: grid;
+    width: 100%;
+
+    &--5 {
+      grid-template-columns: 40px 14fr 5fr repeat(1, 4fr) 40px;
+    }
+
+    &--6 {
+      grid-template-columns: 40px 14fr 5fr repeat(2, 4fr) 40px;
+    }
+
+    &--7 {
+      grid-template-columns: 40px 14fr 5fr repeat(3, 4fr) 40px;
+    }
+
+    &--8 {
+      grid-template-columns: 40px 14fr 5fr repeat(4, 4fr) 40px;
+    }
+
+    &--9 {
+      grid-template-columns: 40px 14fr 5fr repeat(5, 4fr) 40px;
+    }
+
+    &--10 {
+      grid-template-columns: 40px 14fr 5fr repeat(6, 4fr) 40px;
+    }
+
+    &--11 {
+      grid-template-columns: 40px 14fr 5fr repeat(7, 5fr) 40px;
+    }
+
+    &--12 {
+      grid-template-columns: 40px 14fr 5fr repeat(8, 5fr) 40px;
+    }
+
+    &--13 {
+      grid-template-columns: 40px 14fr 5fr repeat(9, 5fr) 40px;
+    }
+
+    &--14 {
+      grid-template-columns: 40px 14fr 5fr repeat(10, 5fr) 40px;
+    }
+
+    &--15 {
+      grid-template-columns: 40px 14fr 5fr repeat(11, 4fr) 40px;
+    }
+
+    &--16 {
+      grid-template-columns: 40px 14fr 5fr repeat(12, 4fr) 40px;
+    }
+
+    &--17 {
+      grid-template-columns: 40px 14fr 5fr repeat(13, 4fr) 40px;
+    }
+
+    &--18 {
+      grid-template-columns: 40px 14fr 5fr repeat(14, 4fr) 40px;
+    }
+
+    &--19 {
+      grid-template-columns: 40px 14fr 5fr repeat(15, 4fr) 40px;
+    }
+
+    &--20 {
+      grid-template-columns: 40px 14fr 5fr repeat(16, 4fr) 40px;
+    }
+  }
+
+  &__cell {
+    @include flex-row-center;
+    text-align: center;
+    white-space: nowrap;
+    color: #252525;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 5px;
+    border: 1px solid #e4e4e4;
+    margin-right: -1px;
+    margin-bottom: -1px;
+
+    &--left {
+      white-space: normal;
+      text-align: left;
+      justify-content: flex-start;
+    }
+
+    &--number {
+      color: $blue;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  &__del {
+    width: 22px;
+    height: 22px;
+    background: url(../../../img/grid-del.png);
+    cursor: pointer;
+  }
+
+}

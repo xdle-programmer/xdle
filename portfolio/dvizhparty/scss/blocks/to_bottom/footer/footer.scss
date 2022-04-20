@@ -1,0 +1,15 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.footer {
+  @include flex-row-center;
+  padding: 25px 0;
+  font-size: 14px;
+
+  @media #{$mobile-big-screen} {
+    font-size: 17px;
+    padding: 25px 10px;
+    text-align: center;
+  }
+}

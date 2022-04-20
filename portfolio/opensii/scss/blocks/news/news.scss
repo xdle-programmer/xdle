@@ -1,0 +1,27 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.news {
+  &__item {
+    margin-bottom: 30px;
+  }
+  &__date {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, .3);
+    line-height: 1.5;
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}

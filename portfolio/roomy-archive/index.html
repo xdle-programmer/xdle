@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>Roomy</title>
+</head>
+<link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header header--not-authorized">
+        <div class="header__block layout layout--small">
+            <div class="header__logo">
+                <div class="logo"></div>
+            </div>
+            <div class="header__login open-modal" data-modal="#modal_login">
+                <div class="header__login-icon"></div>
+                <div class="header__login-text">Личный кабинет</div>
+            </div>
+            <div class="header__interface-settings">
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle">
+                        <div class="dropdown-circle__button">€</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">€</div>
+                                <div class="dropdown-circle__list-item-text">Евро</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">$</div>
+                                <div class="dropdown-circle__list-item-text">Доллар</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle">
+                        <div class="dropdown-circle__button">ES</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">EN</div>
+                                <div class="dropdown-circle__list-item-text">Английский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">ES</div>
+                                <div class="dropdown-circle__list-item-text">Испанский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">RU</div>
+                                <div class="dropdown-circle__list-item-text">Русский</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-search">
+        <div class="main-search__background" style="background: url(img/main-search/background.jpg)"></div>
+
+        <div class="main-search__inner layout layout--small">
+            <div class="main-search__inner-title">Покупка и продажа недвижимости
+                в самом удобном сервисе в мире!
+            </div>
+            <div class="main-search__inner-desc">
+                <div class="main-search__inner-desc-item">
+                    <div class="main-search__inner-desc-icon">
+                        <img class="main-search__inner-desc-icon-img" src="img/main-search/auto.svg">
+                    </div>
+                    <div class="main-search__inner-desc-text">Полностью автоматизированный сервис покупки и продажи недвижимости.</div>
+                </div>
+                <div class="main-search__inner-desc-item">
+                    <div class="main-search__inner-desc-icon">
+                        <img class="main-search__inner-desc-icon-img" src="img/main-search/system.svg">
+                    </div>
+                    <div class="main-search__inner-desc-text">Удобная система покупки и продажи объекта, пользователь двигается по простым шагам.</div>
+                </div>
+                <div class="main-search__inner-desc-item">
+                    <div class="main-search__inner-desc-icon">
+                        <img class="main-search__inner-desc-icon-img" src="img/main-search/procent.svg">
+                    </div>
+                    <div class="main-search__inner-desc-text">Вы не платите за пользование системой, а платит только продавец за выполненную сделку: 1%.</div>
+                </div>
+            </div>
+
+            <div class="main-search__inner-form">
+                <div class="main-search__inner-form-title">Введите данные для поиска</div>
+                <div class="main-search__inner-form-inputs">
+                    <div class="main-search__inner-form-inputs-item">
+                        <div class="select">
+                            <select>
+                                <option value="option-placeholder">Вид недвижимости</option>
+                                <option value="1">Дом</option>
+                                <option value="2">Квартира</option>
+                                <option value="3">Офис</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main-search__inner-form-inputs-item">
+                        <div class="select">
+                            <select>
+                                <option value="option-placeholder">Регион</option>
+                                <option value="1">Дом</option>
+                                <option value="2">Квартира</option>
+                                <option value="3">Офис</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main-search__inner-form-inputs-item">
+                        <div class="select">
+                            <select>
+                                <option value="option-placeholder">Город</option>
+                                <option value="1">Дом</option>
+                                <option value="2">Квартира</option>
+                                <option value="3">Офис</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-search__inner-form-button button">Начать поиск</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-mobile-app">
+        <div class="about-mobile-app__block layout layout--small">
+            <div class="title about-mobile-app__title">Roomy - система, которая работает за вас!</div>
+            <div class="about-mobile-app__desc">
+                <div class="about-mobile-app__desc-column">
+                    <div class="about-mobile-app__desc-item">
+                        <div class="about-mobile-app__desc-item-title">Гарантия безопасности и прозрачность цикла сделки</div>
+                        <div class="about-mobile-app__desc-item-text">Продавец и покупатель всегда на связи в системе, обмениваются информацией об объекте и их права защищены
+                            законом
+                            за которым следит система.
+                        </div>
+                    </div>
+                    <div class="about-mobile-app__desc-item">
+                        <div class="about-mobile-app__desc-item-title">Проверенные специалисты</div>
+                        <div class="about-mobile-app__desc-item-text">Техническое обследование объекта проводится сертифицированным специалистом и данная услуга бесплатна для
+                            продавца.
+                        </div>
+                    </div>
+                </div>
+                <div class="about-mobile-app__desc-column">
+                    <div class="about-mobile-app__desc-item">
+                        <div class="about-mobile-app__desc-item-title">Лучшие условия для ипотеки от банков партнёров</div>
+                        <div class="about-mobile-app__desc-item-text">Система интегрирована с десятками популярных Банков, как в Европе, так и в РФ. Весь процесс рассмотрения
+                            ипотеки
+                            проходит внутри системы.
+                        </div>
+                    </div>
+                    <div class="about-mobile-app__desc-item">
+                        <div class="about-mobile-app__desc-item-title">3D панорама объектов</div>
+                        <div class="about-mobile-app__desc-item-text">Все объекты недвижимости в системе имеют 3D панораму как самого объекта внутри, так и снаружи.</div>
+                    </div>
+
+                </div>
+                <div class="about-mobile-app__slider">
+                    <div class="about-mobile-app__slider-block">
+                        <div class="about-mobile-app__slider-item">
+                            <img class="about-mobile-app__slider-item-img" src="img/about-mobile-app/1.png">
+                        </div>
+                        <div class="about-mobile-app__slider-item">
+                            <img class="about-mobile-app__slider-item-img" src="img/about-mobile-app/2.png">
+                        </div>
+                        <div class="about-mobile-app__slider-item">
+                            <img class="about-mobile-app__slider-item-img" src="img/about-mobile-app/3.png">
+                        </div>
+
+                    </div>
+                    <div class="about-mobile-app__slider-buttons">
+                        <div class="about-mobile-app__slider-button about-mobile-app__slider-button--apple">App Store</div>
+                        <div class="about-mobile-app__slider-button about-mobile-app__slider-button--android">Google play</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-offers">
+        <div class="main-offers__title title">Более 139 493 актуальных предложений</div>
+        <div class="main-offers__block layout layout--small">
+            <div class="main-offers__column">
+                <div class="main-offers__item">
+                    <div class="main-offers__item-img-block">
+                        <img class="main-offers__item-img" src="img/main-offers/img-1.jpg">
+                    </div>
+                    <div class="main-offers__item-list">
+                        <div class="main-offers__item-list-title">Земельные участки</div>
+                        <div class="main-offers__item-list-items">
+                            <a href="#" class="main-offers__item-list-item">Под жилую постройку&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Под коммерческую постройку&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Под сельское хозяйство&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                        </div>
+                        <a href="#" class="main-offers__item-list-link">Каталог участков</a>
+                    </div>
+                </div>
+                <div class="main-offers__item">
+                    <div class="main-offers__item-img-block">
+                        <img class="main-offers__item-img" src="img/main-offers/img-2.jpg">
+                    </div>
+                    <div class="main-offers__item-list">
+                        <div class="main-offers__item-list-title">Квартиры</div>
+                        <div class="main-offers__item-list-items">
+                            <a href="#" class="main-offers__item-list-item">Строящийся дом&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Вторичная недвижимость&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Апартаменты&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Квартира-студия&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Свободная планировка&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Комната в квартире&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                        </div>
+                        <a href="#" class="main-offers__item-list-link">Каталог квартир</a>
+                    </div>
+                </div>
+                <div class="main-offers__item">
+                    <div class="main-offers__item-img-block">
+                        <img class="main-offers__item-img" src="img/main-offers/img-3.jpg">
+                    </div>
+                    <div class="main-offers__item-list">
+                        <div class="main-offers__item-list-title">Офисы</div>
+                        <div class="main-offers__item-list-items">
+                            <a href="#" class="main-offers__item-list-item">Офисные здания&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Бизнес центр&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Торговый центр&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Апартаменты&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                        </div>
+                        <a href="#" class="main-offers__item-list-link">Каталог офисов</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-offers__column">
+                <div class="main-offers__item">
+                    <div class="main-offers__item-img-block">
+                        <img class="main-offers__item-img" src="img/main-offers/img-4.jpg">
+                    </div>
+                    <div class="main-offers__item-list">
+                        <div class="main-offers__item-list-title">Дома</div>
+                        <div class="main-offers__item-list-items">
+                            <a href="#" class="main-offers__item-list-item">Строящийся дом&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Дом недавней постройки&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Вторичный объект&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Таунхаус&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Пентхаус&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Дуплекс&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Шале&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Усадьба&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">С сельскими свойствами&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                        </div>
+                        <a href="#" class="main-offers__item-list-link">Каталог домов</a>
+                    </div>
+                </div>
+                <div class="main-offers__item">
+                    <div class="main-offers__item-img-block">
+                        <img class="main-offers__item-img" src="img/main-offers/img-5.jpg">
+                    </div>
+                    <div class="main-offers__item-list">
+                        <div class="main-offers__item-list-title">Коммерческая недвижимость</div>
+                        <div class="main-offers__item-list-items">
+                            <a href="#" class="main-offers__item-list-item">Офис&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Складское помещение&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Торговая площадь&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Помещение свободного назначения&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Общепит&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Производство&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Бытовые услуги&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Автосервис&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                            <a href="#" class="main-offers__item-list-item">Гараж&nbsp;<span class="main-offers__item-list-item-count">123</span></a>
+                        </div>
+                        <a href="#" class="main-offers__item-list-link">Каталог ком. недвижимости</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about-process">
+        <div class="about-process__block layout layout--small">
+            <div class="about-process__title title">Уникальный подход и простота процесса сделок</div>
+            <div class="about-process__items">
+                <div class="about-process__item">
+                    <div class="about-process__item-icon">
+                        <img class="about-process__item-icon-img" src="img/about-process/actions.svg">
+                    </div>
+                    <div class="about-process__item-title">Минимум действий</div>
+                    <div class="about-process__item-text">Покупатель и продавец встречается один раз у локального нотариуса и подписывают договор. В случае если нужны ипотечные
+                        средства , покупатель делает второй визит в банк для подписания кредитного договора.
+                    </div>
+                </div>
+                <div class="about-process__item">
+                    <div class="about-process__item-icon">
+                        <img class="about-process__item-icon-img" src="img/about-process/law.svg">
+                    </div>
+                    <div class="about-process__item-title">Законная прозрачность</div>
+                    <div class="about-process__item-text">Система подключена напрямую через APi
+                        ко всем государственным регуляторам, которые задействованы в цепочке сделки.
+                    </div>
+                </div>
+                <div class="about-process__item">
+                    <div class="about-process__item-icon">
+                        <img class="about-process__item-icon-img" src="img/about-process/relocation.svg">
+                    </div>
+                    <div class="about-process__item-title">Переезд без забот</div>
+                    <div class="about-process__item-text">Система организует Ваш переезд из одного города в другой, а так же сделает полный расчет по конечной цене перевозки,
+                        упаковки, сборки и разборки мебели.
+                    </div>
+                </div>
+            </div>
+            <div class="about-process__button button">Зарегистрироваться</div>
+        </div>
+    </div>
+
+    <div class="process-list">
+        <div class="process-list__block layout layout--small">
+            <div class="process-list__title title">Процесс выполнения сделки:</div>
+
+
+            <div class="process-list__items">
+                <div class="process-list__column">
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">1</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Выбор объекта.</div>
+                            <div class="process-list__item-desc-text">Выбираем из каталога потенциальный объект для покупки.</div>
+                        </div>
+                    </div>
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">2</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Просмотр.</div>
+                            <div class="process-list__item-desc-text">Покупатель использует 3D просмотр или приезжает на объект недвижимости.</div>
+                        </div>
+                    </div>
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">3</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Проверка.</div>
+                            <div class="process-list__item-desc-text">Система проверяет юридическую чистоту и техническую часть объекта.</div>
+                        </div>
+                    </div>
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">4</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Договор резерва.</div>
+                            <div class="process-list__item-desc-text">Покупатель в системе Roomy подписывает предварительный договор.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-list__column">
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">5</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Внесение задатка.</div>
+                            <div class="process-list__item-desc-text">Покупатель вносит задаток в размере 1%, но не менее 1 500 Евро</div>
+                        </div>
+                    </div>
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">6</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Ипотека.</div>
+                            <div class="process-list__item-desc-text">Если покупка объекта идет за счет собственных средств, то проходит процедуру проверки происхождения
+                                денежных
+                                средств
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">7</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Сделка у нотариуса.</div>
+                            <div class="process-list__item-desc-text">Подписание договора ипотеки одновременно.</div>
+                        </div>
+                    </div>
+                    <div class="process-list__item">
+                        <div class="process-list__item-number">8</div>
+                        <div class="process-list__item-desc">
+                            <div class="process-list__item-desc-title">Регистрация и оплата налогов.</div>
+                            <div class="process-list__item-desc-text">Самостоятельно регистрируете и оплачиваете налоги.<br>
+                                Проведение регистрации делает банк.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-form">
+        <div class="main-form__block layout layout--small">
+            <div class="main-form__title title">Зарегистрируйся и совершай сделки</div>
+            <div class="main-form__items">
+                <div class="form form-check" id="main-form">
+                    <div class="form__inputs form__inputs--big-bottom">
+
+                        <div class="form__input-block">
+                            <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                <div class="input__button placeholder">
+                                    <input type="text" class="input__text" placeholder="Имя" autocomplete="photo">
+                                    <div class="placeholder__item">Имя</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__input-block">
+                            <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                <div class="input__button placeholder">
+                                    <input type="text" class="input__text" placeholder="Фамилия" autocomplete="photo">
+                                    <div class="placeholder__item">Фамилия</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__input-block">
+                            <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                <div class="input__button placeholder">
+                                    <input type="text" class="input__text" placeholder="E-mail" autocomplete="photo">
+                                    <div class="placeholder__item">E-mail</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__input-block">
+                            <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                <div class="input__button placeholder">
+                                    <input type="text" class="input__text" placeholder="Номер телефона" autocomplete="photo">
+                                    <div class="placeholder__item">Номер телефона</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__button button form-check__button">Регистрация</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__block layout layout--small">
+            <div class="footer__top">
+                <div class="footer__menu">
+                    <a href="#" class="footer__menu-item">Фотографам</a>
+                    <a href="#" class="footer__menu-item">Инженерам</a>
+                    <a href="#" class="footer__menu-item">Нотариусам</a>
+                    <a href="#" class="footer__menu-item">Переезды</a>
+                </div>
+                <div class="footer__buttons">
+                    <div class="footer__buttons-contact">
+<!--                        <div class="footer__buttons-contact-item footer__buttons-contact-item&#45;&#45;chat">Онлайн чат</div>-->
+                        <div class="footer__buttons-contact-item footer__buttons-contact-item--mail">Отправить письмо</div>
+                    </div>
+                    <div class="footer__app">
+                        <div class="footer__app-title">
+                            Для мобильного устройства:
+                        </div>
+                        <div class="footer__app-buttons">
+                            <div class="footer__app-button footer__app-button--apple"></div>
+                            <div class="footer__app-button footer__app-button--android"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__logo">
+                    <div class="logo"></div>
+                </div>
+                <div class="footer__copyright">©2020 Roomy.case</div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    <a href="#" class="footer__link">Условия</a>
+                </div>
+                <div class="footer__interface-settings">
+                    <div class="footer__interface-settings-item">
+                        <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                            <div class="dropdown-circle__button">€</div>
+                            <div class="dropdown-circle__list">
+                                <div class="dropdown-circle__list-item active">
+                                    <div class="dropdown-circle__list-item-icon">€</div>
+                                    <div class="dropdown-circle__list-item-text">Евро</div>
+                                </div>
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">$</div>
+                                    <div class="dropdown-circle__list-item-text">Доллар</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__interface-settings-item">
+                        <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                            <div class="dropdown-circle__button">ES</div>
+                            <div class="dropdown-circle__list">
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">EN</div>
+                                    <div class="dropdown-circle__list-item-text">Английский</div>
+                                </div>
+                                <div class="dropdown-circle__list-item active">
+                                    <div class="dropdown-circle__list-item-icon">ES</div>
+                                    <div class="dropdown-circle__list-item-text">Испанский</div>
+                                </div>
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">RU</div>
+                                    <div class="dropdown-circle__list-item-text">Русский</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal__background close-modal"></div>
+
+    <div class="modal__block" id="modal_login">
+        <div class="modal__close close-modal"></div>
+        <div class="modal__content">
+        <div class="modal__switch switch-tab">
+            <div class="modal__switch-buttons">
+                <div class="modal__switch-button active switch-tab__button" data-switch-tab-target="authorization">Вход</div>
+                <div class="modal__switch-button switch-tab__button" data-switch-tab-target="signup">Регистрация</div>
+            </div>
+            <div class="switch-tab__item active switch-layout" data-switch-tab-name="authorization">
+                <div class="switch-layout__item active" data-switch-layout-name="login">
+                    <div class="modal__title">
+                        Вход
+                    </div>
+                    <div class="form form-check" id="authorization-form">
+                        <div class="form__inputs">
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                    <div class="input__button placeholder">
+                                        <input type="text" class="input__text" placeholder="Мобильный телефон или почта" autocomplete="photo">
+                                        <div class="placeholder__item">Мобильный телефон или почта</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__input-block">
+                                <div class="input form-check__field password-toggle" data-check-type="input" data-check="input-required">
+                                    <div class="input__password-switch password-toggle__button"></div>
+                                    <div class="input__button placeholder">
+                                        <input type="password" class="input__text password-toggle__input" placeholder="Пароль" autocomplete="photo">
+                                        <div class="placeholder__item">Введите пароль</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__agree checkbox form-check__field" data-check-type="input" data-check="checkbox-required">
+                            <div class="checkbox__item">
+                                <input class="checkbox__item-input" id="checkbox_agree_1" name="test_11" value="checkbox_1"
+                                       type="checkbox" checked/>
+                                <label class="checkbox__item-label" for="checkbox_agree_1">
+                                    При входе в аккаунт вы принимаете условия изложенные в следующих документах: <a href="#">Условия предоставления услуг</a>, <a href="#">Условия
+                                    обработки платежей</a>, <a href="#">Политика конфиденциальности</a>.
+
+
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__button button form-check__button">Войти</div>
+
+                        <div class="modal__button-link switch-layout__button" data-switch-layout-target="recovery">Забыли пароль?</div>
+                    </div>
+                    <div class="modal__social">
+                        <div class="modal__social-title">Или войти с помощью</div>
+                        <div class="modal__social-buttons">
+                            <div class="modal__social-button">
+                                <img class="modal__social-button-img" src="img/social/google-hangouts.svg">
+                            </div>
+                            <div class="modal__social-button">
+                                <img class="modal__social-button-img" src="img/social/facebook.svg">
+                            </div>
+                            <div class="modal__social-button">
+                                <img class="modal__social-button-img" src="img/social/apple-2.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="switch-layout__item" data-switch-layout-name="recovery" data-sms-start="recovery">
+                    <div class="modal__title">
+                        Восстановление пароля
+                    </div>
+
+                    <div class="modal__subtitle">
+                        Укажите номер и мы пришлем SMS с кодом для подтверждения.
+                    </div>
+                    <div class="form form-check" id="recovery-form">
+                        <div class="form__inputs form__inputs--one-center">
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field" data-check-type="input" data-check="input-required, min-count-symbols" data-min-count-symbols="9">
+                                    <div class="input__button placeholder">
+                                        <input type="text" class="input__text" placeholder="Мобильный телефон" autocomplete="photo">
+                                        <div class="placeholder__item">Мобильный телефон</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__subtitle">
+                            Пожалуйста подтвердите, что вы не робот.
+                        </div>
+
+                        <div class="modal__captcha">
+                            <img src="img/captcha.jpg">
+                        </div>
+
+                        <div class="form__button button switch-layout__button sms-start form-check__button" data-sms-start-target="recovery-sms"
+                             data-switch-layout-target="recovery-sms">Получить код
+                        </div>
+                    </div>
+                </div>
+                <div class="switch-layout__item" data-switch-layout-name="recovery-sms" data-switch-sms-name="recovery-sms">
+                    <div class="modal__title">
+                        Восстановление пароля
+                    </div>
+
+                    <div class="modal__subtitle">
+                        Введите код из SMS, мы отправили его на номер +34 657 45 45.
+                    </div>
+                    <div class="form form-check" id="recovery-form-sms">
+
+                        <div class="form__input-block">
+                            <div class="sms-input form-check__field" data-check-type="input" data-check="input-required, min-count-symbols" data-min-count-symbols="5">
+                                <div class="sms-input__wrapper">
+                                    <div class="sms-input__block">
+                                        <div class="sms-input__row">
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <input class="sms-input__input-result" autocomplete="one-time-code">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="sms-input__counter modal__subtitle">
+                                <div class="sms-input__counter-button"></div>
+                                <div class="sms-input__counter-item"></div>
+                            </div>
+                            <div class="form__inputs form__inputs--one-center">
+                                <div class="sms-input__submit sms-input__submit--confirm hide">
+                                    <div class="button form-check__button switch-layout__button" data-switch-layout-target="recovery-pass">Продолжить</div>
+                                </div>
+                                <div class="sms-input__submit sms-input__submit--login">
+                                    <div class="button form-check__button switch-layout__button" data-switch-layout-target="recovery-pass">Продолжить</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="switch-layout__item" data-switch-layout-name="recovery-pass">
+                    <div class="modal__title">
+                        Восстановление пароля
+                    </div>
+                    <div class="form form-check" id="recovery-pass-form">
+                        <div class="form__inputs">
+                            <div class="form__input-block">
+                                <div class="input form-check__field password-toggle compare-password" data-check-type="input" data-check="input-required, min-count-symbols"
+                                     data-min-count-symbols="6">
+                                    <div class="input__password-switch password-toggle__button"></div>
+                                    <div class="input__button placeholder">
+                                        <input type="password" class="input__text password-toggle__input" placeholder="Пароль" autocomplete="photo">
+                                        <div class="placeholder__item">Введите пароль</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field password-toggle compare-password" data-check-type="input"
+                                     data-check="input-required, input-pass, min-count-symbols"
+                                     data-min-count-symbols="6">
+                                    <div class="input__password-switch password-toggle__button"></div>
+                                    <div class="input__button placeholder">
+                                        <input type="password" class="input__text password-toggle__input" placeholder="Повторите пароль" autocomplete="photo">
+                                        <div class="placeholder__item">Повторите пароль</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__button button form-check__button">Сохранить</div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="switch-tab__item" data-switch-tab-name="signup">
+                <div class="switch-layout__item active" data-switch-layout-name="signup-types">
+                    <div class="modal__title">
+                        Регистрация
+                    </div>
+                    <div class="modal__subtitle">
+                        Выберите статус пользователя:
+                    </div>
+                    <div class="modal__type-switch">
+                        <div class="modal__type-switch-button active">Продавец</div>
+                        <div class="modal__type-switch-button">Покупатель</div>
+                    </div>
+                    <div class="form__button button switch-layout__button" data-switch-layout-target="signup-main">Зарегистрироваться</div>
+                </div>
+
+                <div class="switch-layout__item" data-switch-layout-name="signup-main">
+                    <div class="modal__title">
+                        Регистрация
+                    </div>
+                    <div class="form form-check" id="signup-form">
+                        <div class="form__inputs">
+                            <div class="form__input-block">
+                                <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                    <div class="input__button placeholder">
+                                        <input type="text" class="input__text" placeholder="Имя" autocomplete="photo">
+                                        <div class="placeholder__item">Имя должно совпадать с паспортными данными</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                    <div class="input__button placeholder">
+                                        <input type="text" class="input__text" placeholder="Фамилия" autocomplete="photo">
+                                        <div class="placeholder__item">Фамилия должна совпадать с паспортными данными</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field" data-check-type="input" data-check="input-required">
+                                    <div class="input__button placeholder">
+                                        <input type="text" class="input__text" placeholder="Номер телефона" autocomplete="photo">
+                                        <div class="placeholder__item">Номер телефона</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field" data-check-type="input" data-check="input-required, email-check">
+                                    <div class="input__button placeholder">
+                                        <input type="text" class="input__text" placeholder="Электронный адрес" autocomplete="photo">
+                                        <div class="placeholder__item">Электронный адрес</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field password-toggle compare-password" data-check-type="input" data-check="input-required, min-count-symbols"
+                                     data-min-count-symbols="6">
+                                    <div class="input__password-switch password-toggle__button"></div>
+                                    <div class="input__button placeholder">
+                                        <input type="password" class="input__text password-toggle__input" placeholder="Пароль" autocomplete="photo">
+                                        <div class="placeholder__item">Введите пароль</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <div class="input form-check__field password-toggle compare-password" data-check-type="input"
+                                     data-check="input-required, input-pass, min-count-symbols"
+                                     data-min-count-symbols="6">
+                                    <div class="input__password-switch password-toggle__button"></div>
+                                    <div class="input__button placeholder">
+                                        <input type="password" class="input__text password-toggle__input" placeholder="Повторите пароль" autocomplete="photo">
+                                        <div class="placeholder__item">Повторите пароль</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__agree checkbox form-check__field" data-check-type="input" data-check="checkbox-required">
+                            <div class="checkbox__item">
+                                <input class="checkbox__item-input" id="checkbox_agree_2" name="test_11" value="checkbox_2"
+                                       type="checkbox" checked/>
+                                <label class="checkbox__item-label" for="checkbox_agree_2">
+                                    При входе в аккаунт вы принимаете условия изложенные в следующих документах: <a href="#">Условия предоставления услуг</a>, <a href="#">Условия
+                                    обработки платежей</a>, <a href="#">Политика конфиденциальности</a>.
+
+
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__button button form-check__button switch-layout__button sms-start" data-switch-layout-target="sign-up-sms"
+                             data-sms-start-target="sign-up-sms">Продолжить
+                        </div>
+                    </div>
+                </div>
+
+                <div class="switch-layout__item" data-switch-layout-name="sign-up-sms" data-switch-sms-name="sign-up-sms">
+                    <div class="modal__title">
+                        Регистрация
+                    </div>
+
+                    <div class="modal__subtitle">
+                        Подтверждение номера телефона.<br>
+                        Введите код из SMS, мы отправили его на номер +34 657 45 45.
+                    </div>
+                    <div class="form form-check" id="sign-up-form-sms">
+
+                        <div class="form__input-block">
+                            <div class="sms-input form-check__field" data-check-type="input" data-check="input-required, min-count-symbols" data-min-count-symbols="5">
+                                <div class="sms-input__wrapper">
+                                    <div class="sms-input__block">
+                                        <div class="sms-input__row">
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <div class="sms-input__input-code"></div>
+                                            <input class="sms-input__input-result" autocomplete="one-time-code">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="sms-input__counter modal__subtitle">
+                                <div class="sms-input__counter-button"></div>
+                                <div class="sms-input__counter-item"></div>
+                            </div>
+                            <div class="form__inputs form__inputs--one-center">
+                                <div class="sms-input__submit sms-input__submit--confirm hide">
+                                    <div class="button form-check__button success-signup-button">Продолжить</div>
+                                </div>
+                                <div class="sms-input__submit sms-input__submit--login">
+                                    <div class="button form-check__button success-signup-button">Продолжить</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal__block" id="modal_login_success">
+
+        <div class="modal__title">
+            Вы успешно зарегистрированы!
+        </div>
+        <div class="modal__subtitle">
+            Сейчас вы будете перенаправлены<br>
+            в личный кабинет покупателя.
+        </div>
+        <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+            <div id="fountainG_6" class="fountainG"></div>
+            <div id="fountainG_7" class="fountainG"></div>
+            <div id="fountainG_8" class="fountainG"></div>
+        </div>
+        <div class="modal__img-block">
+            <img src="img/modal-success.svg" class="modal__img">
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="plugins/errors_handler.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+</html>

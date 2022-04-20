@@ -1,0 +1,55 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.select-icon {
+
+  &--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    @include margin-auto;
+    margin-bottom: 70px;
+    position: relative;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      bottom: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 45px;
+      height: 45px;
+
+      @media #{$tablet-big-screen} {
+        bottom: -55px;
+      }
+    }
+
+    &:before {
+      background: url(../../img/select-icon.png);
+      @include background-contain-center;
+    }
+    &:after {
+      background: url(../../img/select-icon-check.png);
+      @include background-contain-center;
+      opacity: 0;
+    }
+
+    &.active:after {
+      opacity: 1;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-bottom: 80px;
+    }
+  }
+}

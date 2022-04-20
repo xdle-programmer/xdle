@@ -1,0 +1,58 @@
+.slider {
+  position: relative; }
+  .slider .owl-prev,
+  .slider .owl-next {
+    position: absolute;
+    width: 40px !important;
+    height: 70px !important;
+    border-radius: 15px !important;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%) scaleX(-1);
+    background: rgba(72, 72, 72, 0.2) !important; }
+    .slider .owl-prev:focus, .slider .owl-prev:active,
+    .slider .owl-next:focus,
+    .slider .owl-next:active {
+      outline: none !important; }
+    .slider .owl-prev:hover,
+    .slider .owl-next:hover {
+      background: rgba(72, 72, 72, 0.4) !important; }
+    .slider .owl-prev:before,
+    .slider .owl-next:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(-90deg);
+      width: 10px;
+      height: 10px;
+      background: url(../../img/down-arrow.svg) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+      @media (max-width: 1023px) {
+        .slider .owl-prev:before,
+        .slider .owl-next:before {
+          width: 8px;
+          height: 8px; } }
+    @media (max-width: 1023px) {
+      .slider .owl-prev,
+      .slider .owl-next {
+        width: 10px !important;
+        border-radius: 15px !important;
+        top: 50%;
+        left: -15px;
+        transform: translateY(-50%) scaleX(-1);
+        background: rgba(255, 255, 255, 0.2) !important; } }
+  .slider .owl-next {
+    left: auto;
+    right: -60px;
+    transform: translateY(-50%); }
+    @media (max-width: 1023px) {
+      .slider .owl-next {
+        right: -15px; } }
+  .slider .owl-prev span,
+  .slider .owl-next span {
+    display: none; }

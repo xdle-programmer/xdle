@@ -1,0 +1,130 @@
+.select {
+  width: 100%;
+  position: relative; }
+  @media (max-width: 1279px) {
+    .select {
+      display: none; } }
+  .select.focus .warning.active {
+    opacity: 0;
+    visibility: hidden; }
+  .select.focus .placeholder {
+    opacity: 1;
+    visibility: visible; }
+  .select__button {
+    width: 280px !important;
+    min-width: 58px !important;
+    height: 76px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: 1px solid #fff !important;
+    border-radius: 0px !important;
+    background: #fff !important;
+    position: relative !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: space-between; }
+    .select__button:focus, .select__button:active {
+      outline: none !important; }
+    .select__button--open {
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important; }
+  .select__text {
+    font-display: auto;
+    font-family: "Roboto", sans-serif!important;
+    float: none !important;
+    border-radius: 0px !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    color: #000 !important;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 100% !important;
+    flex-grow: 1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: flex-start; }
+    .select__button:focus .select__text {
+      outline: none !important;
+      background: #fff !important;
+      color: #000 !important; }
+    .select__button--placeholder .select__text {
+      color: #000 !important; }
+  .select__icon {
+    width: 10px !important;
+    height: 6px !important;
+    background: url(../../../img/select-arrow.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 10px !important;
+    transform: translateY(-50%) !important; }
+    .select__button--open .select__icon {
+      transform: translateY(-50%) rotate(180deg) !important; }
+  .select__menu {
+    transition: all 0s;
+    border: none !important;
+    background: none !important; }
+    .select__menu .ui-menu {
+      border: 1px solid #fff !important;
+      background: #fff !important;
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+      max-height: 200px;
+      overflow-y: auto;
+      padding-right: 6px; }
+      .select__menu .ui-menu::-webkit-scrollbar-button {
+        background-image: none;
+        background-repeat: no-repeat;
+        width: 4px;
+        height: 0; }
+      .select__menu .ui-menu::-webkit-scrollbar-track {
+        background: #ffffff; }
+      .select__menu .ui-menu::-webkit-scrollbar-thumb {
+        background-color: #004c80;
+        cursor: pointer; }
+      .select__menu .ui-menu::-webkit-scrollbar-thumb:hover {
+        background-color: #004c80; }
+      .select__menu .ui-menu::-webkit-resizer {
+        background-image: none;
+        background-repeat: no-repeat;
+        width: 4px;
+        height: 0; }
+      .select__menu .ui-menu::-webkit-scrollbar {
+        width: 4px; }
+    .select__menu .ui-menu-item-wrapper {
+      height: 76px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+      font-display: auto;
+      font-family: "Roboto", sans-serif!important;
+      float: none !important;
+      font-size: 18px !important;
+      font-weight: 400 !important;
+      color: #000 !important;
+      position: relative !important;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: flex-start;
+      display: flex !important;
+      margin: 0 !important;
+      border: none !important; }
+      .select__menu .ui-menu-item-wrapper:hover, .select__menu .ui-menu-item-wrapper.ui-state-active, .select__menu .ui-menu-item-wrapper.active {
+        color: #000000 !important;
+        background: #eaeaea !important; }

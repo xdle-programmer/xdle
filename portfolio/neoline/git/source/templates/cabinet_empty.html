@@ -1,0 +1,103 @@
+{% include "partials/header.html" %}
+	<nav class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__elm">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__elm">
+				Личный кабинет
+			</span>
+		</div>
+	</nav>
+	<main>
+		<div class="container">
+			<section class="cabinet">
+				<div class="title-block title-block_margin">
+					<h1 class="section-title">Личный кабинет</h1>
+				</div>
+				<div class="cabinet-cells">
+					<div class="half-wrap half-wrap_separate">
+						<div class="form-border form-border_padding">
+							<div class="form-border__title">История заказов</div>
+							<div class="history-table">
+								<div class="cabinet-empty">
+									Заказов не найдено
+								</div>
+							</div>
+							
+							<div class="button button_white button_full-width button_height">Смотреть все заказы</div>
+						</div>
+					</div>
+					<div class="half-wrap half-wrap_separate">
+						<div class="form-border form-border_padding" id="test">
+							<div class="container form-border__container">
+								<div class="form-border__title">Личные данные</div>
+								<div class="radio-row radio-row_margin">
+									<label class="checkbox-label checkbox-label_radio">
+										<input  type="radio" class="checkbox-label__checkbox-hidden switch-input" name="type-user" checked="true" value="1">
+										<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+										<span class="checkbox-label__text">Физическое лицо</span>
+									</label>
+									<label class="checkbox-label checkbox-label_radio">
+										<input  type="radio" class="checkbox-label__checkbox-hidden switch-input" name="type-user" value="2">
+										<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+										<span class="checkbox-label__text">Юридическое лицо</span>
+									</label>
+								</div>
+								<input type="text" name="" class="regular-input valid-text additional-field" placeholder="ИНН" required="true" id="test3">
+								<input type="text" name="" class="regular-input valid-text additional-field" placeholder="КПП" required="true">
+								<input type="text" name="" class="regular-input valid-text" placeholder="Имя" required="true">
+								<input type="text" name="" class="regular-input valid-email" placeholder="Email" required="true">
+								<input type="text" name="" class="regular-input phone-mask valid-phone" placeholder="Телефон" required="true">
+								<label class="checkbox-label form-check">
+									<input type="checkbox" class="checkbox-label__checkbox-hidden" name="" required="" id='test2'>
+									<div class="checkbox-label__checkbox-visual">
+										<i class="fa fa-check" aria-hidden="true"></i>
+									</div>
+									<span class="checkbox-label__text">Соглашаюсь на обработку персональных данных</span>
+								</label>
+								<button class="button button_height button_full-width">Сохранить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cabinet-cells">
+					<div class="half-wrap half-wrap_separate">
+						<div class="form-border form-border_padding">
+							<div class="container form-border__container">
+								<div class="form-border__title">Данные доставки</div>
+								<input type="text" name="" class="regular-input" placeholder="Улица">
+								<div class="third-inputs">
+									<div class="third-inputs__item">
+										<input type="text" name="" class="regular-input" placeholder="Дом">
+									</div>
+									<div class="third-inputs__item">
+										<input type="text" name="" class="regular-input" placeholder="Корпус">
+									</div>
+									<div class="third-inputs__item">
+										<input type="text" name="" class="regular-input" placeholder="Офис">
+									</div>
+								</div>
+								
+								<input type="text" name="" class="regular-input" placeholder="Дополнительно">
+								<button class="button button_height button_full-width">Сохранить</button>
+							</div>
+						</div>
+					</div>
+					<div class="half-wrap half-wrap_separate">
+						<div class="form-border form-border_padding">
+							<div class="container form-border__container">
+								<div class="form-border__title">Изменить пароль</div>
+								<input type="password" name="" class="regular-input" placeholder="Старый пароль">
+								<input type="password" name="" class="regular-input" placeholder="Новый пароль">
+								<input type="password" name="" class="regular-input" placeholder="Повторите новый пароль">
+								<button class="button button_height button_full-width">Сохранить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+		</div>
+	</main>
+{% include "partials/footer.html" %}

@@ -1,0 +1,164 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.tabs {
+  margin-top: 40px;
+
+  &__header-items {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 14px 29px;
+
+    @media #{$mobile-big-screen} {
+      padding: 14px 10px;
+      padding-bottom: 0;
+    }
+  }
+
+
+  &__header {
+    @include flex-row;
+
+    @media #{$mobile-big-screen} {
+      overflow-x: scroll;
+      padding-bottom: 14px;
+    }
+  }
+
+
+  &__header-item {
+    color: $gray-dark;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 24px;
+    margin-right: 54px;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      color: $red;
+    }
+
+    @media #{$mobile-big-screen} {
+      white-space: nowrap;
+      margin-right: 25px;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  &__items {
+
+    & p {
+      @include font-roboto;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+  }
+
+  &__item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item-desc {
+    background: #fafafa;
+    padding: 25px 29px;
+    padding-right: 250px;
+
+    @media #{$tablet-big-screen} {
+      padding-right: 10px;
+      padding: 14px 10px;
+    }
+  }
+
+  &__properties {
+    margin-top: 25px;
+  }
+
+  &__properties-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0.75;
+    color: $gray-dark;
+    @include font-roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 49px;
+    background: #fafafa;
+    padding: 0 29px;
+
+    &:nth-of-type(even) {
+      background: $white;
+    }
+
+    @media #{$mobile-big-screen} {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+  }
+
+  &__properties-item-name {
+    font-weight: 400;
+    @include font-roboto;
+  }
+
+  &__properties-item-value {
+    font-weight: 900;
+    @include font-roboto;
+  }
+
+  &__reviews {
+    margin-top: 25px;
+  }
+
+  &__reviews-item {
+    background: #fafafa;
+    padding: 0 29px;
+    padding-bottom: 15px;
+
+    &:nth-of-type(even) {
+      background: $white;
+    }
+  }
+
+  &__reviews-item-header {
+    @include flex-row;
+    justify-content: space-between;
+    opacity: 0.75;
+    color: $gray-dark;
+    @include font-roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 49px;
+    background: #fafafa;
+  }
+
+  &__reviews-item-name {
+    font-weight: 900;
+  }
+
+  &__reviews-item-date {
+    font-weight: 400;
+  }
+
+  &__reviews-item-text {
+    @include font-roboto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+  }
+}

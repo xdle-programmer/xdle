@@ -1,0 +1,32 @@
+.faq__item {
+  font-size: 24px;
+  margin-top: 50px; }
+  @media (max-width: 1279px) {
+    .faq__item {
+      font-size: 16px; } }
+
+.faq__item-title {
+  padding-left: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer; }
+  .faq__item-title:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/plus.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+
+.faq__item-text {
+  font-weight: 300;
+  display: none; }
+
+.faq__item-title.active + .faq__item-text {
+  display: block; }

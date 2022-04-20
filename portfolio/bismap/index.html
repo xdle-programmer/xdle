@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css" media="screen, projection, print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.theme.default.min.css">
+    <script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="plugins/select-picker-master/picker.min.css">
+    <script src="plugins/select-picker-master/picker.min.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="plugins/lightbox2/css/lightbox.min.css">
+    <script src="plugins/lightbox2/js/lightbox.min.js"></script>
+
+    <link rel="stylesheet" href="plugins/dropzone/basic.min.css">
+    <link rel="stylesheet" href="plugins/dropzone/dropzone.min.css">
+    <!--<script src="/plugins/dropzone/dropzone-amd-module.min.js"></script>-->
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+    <title>Bismap</title>
+</head>
+
+<body>
+
+<div class="wrapper wrapper--not-tools-menu">
+    <header class="header">
+
+        <div class="header__main layout">
+
+            <a href="#" class="header__main-logo"></a>
+
+            <div class="header__main-time">
+                <div class="header__main-time-item">
+                    <div class="header__main-time-item-inner">20:31</div>
+                    <div class="header__main-time-item-city">Минск</div>
+                </div>
+                <div class="header__main-time-item">
+                    <div class="header__main-time-item-inner">19:31</div>
+                    <div class="header__main-time-item-city">Москва</div>
+                </div>
+                <div class="header__main-time-item">
+                    <div class="header__main-time-item-inner">18:31</div>
+                    <div class="header__main-time-item-city">Калининград</div>
+                </div>
+
+                <div class="header__main-time-button open-modal" data-modal="#modal_time"></div>
+            </div>
+            <div class="header__mobile-news-button"></div>
+
+            <div class="header__mobile-search-button"></div>
+
+            <div class="header__main-button button-icon button-icon--plus"></div>
+
+            <div class="header__main-search">
+                <input class="header__main-search-input" placeholder="Поиск...">
+                <div class="header__main-search-button"></div>
+            </div>
+
+            <div class="header__mobile-messages-button mark"></div>
+
+            <div class="header__main-login mark">
+                <div class="header__main-login-photo" style="background: url(/img/profile.jpg)"></div>
+                <div class="header__main-login-name">Николай Саргсян</div>
+                <div class="header__main-login-submenu">
+                    <a href="#"
+                       class="header__main-login-submenu-link header__main-login-submenu-link--settings">Настройки</a>
+                    <a href="#" class="header__main-login-submenu-link header__main-login-submenu-link--exit">Выход</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__menu layout">
+            <div class="header__menu-block">
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Люди
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Компании
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Франчайзинг
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    инвесторы
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Бизнес планы
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Тендеры
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Резюме
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Вакансии
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Блоги
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-training.svg">
+                    </div>
+                    Тренинги
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="tools-menu layout">
+        <div class="tools-menu__block">
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-menu__item-text">Люди</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-menu__item-text">Блоги</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-menu__item-text">Компании</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-cv.svg">
+                </div>
+                <div class="tools-menu__item-text">Резюме</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-investments.svg">
+                </div>
+                <div class="tools-menu__item-text">Инвестиции</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-jobs.svg">
+                </div>
+                <div class="tools-menu__item-text">Вакансии</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-tender.svg">
+                </div>
+                <div class="tools-menu__item-text">Тендеры</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-franchising.svg">
+                </div>
+                <div class="tools-menu__item-text">Франчайзинг</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-business-plan.svg">
+                </div>
+                <div class="tools-menu__item-text">Бизнес планы</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-training.svg">
+                </div>
+                <div class="tools-menu__item-text">Тренинги</div>
+            </a>
+        </div>
+    </div>
+    <div class="tools-block">
+
+
+
+        <div class="tools-block__block">
+            <div class="tools-block__header-title">
+                Добавьте инструменты
+            </div>
+
+            <div class="tools-block__header-text">
+                Для успешной работы на нашей платформе создайте необходимые инструменты.
+            </div>
+
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-block__item-text">Компании</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-cv.svg">
+                </div>
+                <div class="tools-block__item-text">Резюме</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-investments.svg">
+                </div>
+                <div class="tools-block__item-text">Инвестиции</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-jobs.svg">
+                </div>
+                <div class="tools-block__item-text">Вакансии</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-tender.svg">
+                </div>
+                <div class="tools-block__item-text">Тендеры</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-franchising.svg">
+                </div>
+                <div class="tools-block__item-text">Франчайзинг</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-business-plan.svg">
+                </div>
+                <div class="tools-block__item-text">Бизнес планы</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-training.svg">
+                </div>
+                <div class="tools-block__item-text">Тренинги</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-training.svg">
+                </div>
+                <div class="tools-block__item-text">Блог</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="layout">
+        <div class="menu__head"></div>
+        <div class="menu">
+
+            <div class="menu__photo" style="background: url(/img/profile.jpg)"></div>
+
+            <a href="#" class="menu__item menu__item--account active">Николай</a>
+            <a href="#" class="menu__item menu__item--messages">Сообщения
+                <div class="menu__item-count">25</div>
+            </a>
+            <a href="#" class="menu__item menu__item--contacts">Контакты</a>
+            <a href="#" class="menu__item menu__item--notes">Заметки</a>
+            <a href="#" class="menu__item menu__item--news">Новости</a>
+            <a href="#" class="menu__item menu__item--notifications">Уведомления</a>
+            <a href="#" class="menu__item menu__item--bookmarks">Закладки</a>
+            <div class="menu__separator"></div>
+            <a href="#" class="menu__item menu__item--settings menu__item--mobile">Настройки</a>
+            <a href="#" class="menu__item menu__item--exit menu__item--mobile">Выход</a>
+        </div>
+
+
+        <div class="layout__content recommendation">
+
+            <div class="recommendation__item">
+                <div class="layout__block">
+                    <div class="recommendation__item-photo collapse">
+                        <div class="recommendation__item-photo-img"
+                             style="background: url(https://24smi.org/public/media/resize/800x-/app/public/media/uploads/0_AUdEmFA.jpg)"></div>
+                        <div class="recommendation__item-desc">
+                            <div class="recommendation__item-title">Лучший автосервис!</div>
+                            <div class="recommendation__item-subtitle">Отличные цены, без очередей и с гарантией</div>
+                            <div class="recommendation__item-text">Многие думают, что Lorem Ipsum - взятый с потолка
+                                псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент
+                                классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард
+                                МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из
+                                самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической
+                                латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в
+                                разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и
+                                зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень
+                                популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit
+                                amet..", происходит от одной из строк в разделе 1.10.32
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="recommendation__item">
+                <div class="layout__block">
+                    <div class="layout__block-header">
+                        <div class="layout__block-header-title">
+                            Мебельные фабрики
+                            <div class="layout__block-header-title-count">
+                                20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layout__block-content">
+
+                        <div id="test_1" class="short-block short-block--4 collapse">
+                            <div class="short-block__button"></div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/exode" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640346_1_750.png')"
+                                         class="layout__icon-row-img " data-first-letter="e">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">exode | 2019</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 3</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/exode">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/bismap" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557676721_2_705.png')"
+                                         class="layout__icon-row-img " data-first-letter="B">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Business map - bismap</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/bismap">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company3" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640519_1_442.png')"
+                                         class="layout__icon-row-img " data-first-letter="C">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Coca-Cola</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 2</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company3">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company20" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1556036675_5_984.png')"
+                                         class="layout__icon-row-img " data-first-letter="И">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Инертные материалы</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company20">
+                                    <div
+                                            class="button-gradient button-gradient--small">Смотреть
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/exode" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640346_1_750.png')"
+                                         class="layout__icon-row-img " data-first-letter="e">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">exode | 2019</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 3</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/exode">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/bismap" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557676721_2_705.png')"
+                                         class="layout__icon-row-img " data-first-letter="B">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Business map - bismap</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/bismap">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company3" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640519_1_442.png')"
+                                         class="layout__icon-row-img " data-first-letter="C">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Coca-Cola</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 2</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company3">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company20" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1556036675_5_984.png')"
+                                         class="layout__icon-row-img " data-first-letter="И">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Инертные материалы</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company20">
+                                    <div
+                                            class="button-gradient button-gradient--small">Смотреть
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/exode" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640346_1_750.png')"
+                                         class="layout__icon-row-img " data-first-letter="e">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">exode | 2019</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 3</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/exode">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/bismap" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557676721_2_705.png')"
+                                         class="layout__icon-row-img " data-first-letter="B">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Business map - bismap</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/bismap">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company3" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640519_1_442.png')"
+                                         class="layout__icon-row-img " data-first-letter="C">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Coca-Cola</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 2</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company3">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company20" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1556036675_5_984.png')"
+                                         class="layout__icon-row-img " data-first-letter="И">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Инертные материалы</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company20">
+                                    <div
+                                            class="button-gradient button-gradient--small">Смотреть
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/exode" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640346_1_750.png')"
+                                         class="layout__icon-row-img " data-first-letter="e">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">exode | 2019</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 3</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/exode">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/bismap" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557676721_2_705.png')"
+                                         class="layout__icon-row-img " data-first-letter="B">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Business map - bismap</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/bismap">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company3" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640519_1_442.png')"
+                                         class="layout__icon-row-img " data-first-letter="C">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Coca-Cola</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 2</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company3">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company20" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1556036675_5_984.png')"
+                                         class="layout__icon-row-img " data-first-letter="И">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Инертные материалы</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company20">
+                                    <div
+                                            class="button-gradient button-gradient--small">Смотреть
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/exode" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640346_1_750.png')"
+                                         class="layout__icon-row-img " data-first-letter="e">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">exode | 2019</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 3</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/exode">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/bismap" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557676721_2_705.png')"
+                                         class="layout__icon-row-img " data-first-letter="B">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Business map - bismap</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/bismap">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company3" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640519_1_442.png')"
+                                         class="layout__icon-row-img " data-first-letter="C">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Coca-Cola</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 2</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company3">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company20" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1556036675_5_984.png')"
+                                         class="layout__icon-row-img " data-first-letter="И">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Инертные материалы</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company20">
+                                    <div
+                                            class="button-gradient button-gradient--small">Смотреть
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation__item">
+                <div class="layout__block">
+                    <div class="layout__block-header">
+                        <div class="layout__block-header-title">
+                            Мебельные магазины
+                            <div class="layout__block-header-title-count">
+                                6
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layout__block-content">
+
+                        <div id="test_2" class="short-block short-block--4 collapse">
+                            <div class="short-block__button"></div>
+
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/exode" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640346_1_750.png')"
+                                         class="layout__icon-row-img " data-first-letter="e">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">exode | 2019</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 3</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/exode">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/bismap" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557676721_2_705.png')"
+                                         class="layout__icon-row-img " data-first-letter="B">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Business map - bismap</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/bismap">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company3" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640519_1_442.png')"
+                                         class="layout__icon-row-img " data-first-letter="C">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Coca-Cola</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 2</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company3">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/company20" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1556036675_5_984.png')"
+                                         class="layout__icon-row-img " data-first-letter="И">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Инертные материалы</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/company20">
+                                    <div
+                                            class="button-gradient button-gradient--small">Смотреть
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/exode" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557640346_1_750.png')"
+                                         class="layout__icon-row-img " data-first-letter="e">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">exode | 2019</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 3</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/exode">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                            <div class="layout__icon-row">
+                                <a href="https://bismap.net/bismap" class="layout__icon-row-info">
+                                    <div style="background-image:url('https://bismap.net/users_uploads/clogo_1557676721_2_705.png')"
+                                         class="layout__icon-row-img " data-first-letter="B">
+                                    </div>
+                                    <div class="layout__icon-row-name">
+                                        <div class="layout__icon-row-title">Business map - bismap</div>
+                                        <div class="layout__icon-row-subtitle">Вариант 1</div>
+                                    </div>
+                                </a>
+                                <a href="https://bismap.net/bismap">
+                                    <div class="button-gradient button-gradient--small">Смотреть</div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="recommendation__style"></div>
+            <div class="recommendation__button"></div>
+            <div class="recommendation__modal-background"></div>
+            <div class="recommendation__modal">
+                <div class="recommendation__modal-inner"></div>
+            </div>
+            <div class="recommendation__button"></div>
+        </div>
+
+    </div>
+</div>
+<script src="js/script.js"></script>
+
+<div class="modal__background close-modal"></div>
+
+<div class="modal__block modal__block--recommend" id="modal_recommend_1">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__recommend-img" style="background: url(/img/rec_1.png)"></div>
+    <div class="modal__recommend-text">
+        <p>
+            Хочешь произвести серьезное впечатление на будущих партнеров?
+        </p>
+        <p>
+            Заполни информацию вашей компании.
+        </p>
+        <div class="button-gradient">Перейти</div>
+    </div>
+</div>
+
+<div class="modal__block modal__block--recommend" id="modal_recommend_2">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__recommend-img" style="background: url(/img/rec_2.png)"></div>
+    <div class="modal__recommend-text">
+        <p>
+            Ты сотрудник созданной компании?
+        </p>
+        <p>
+            Найди ее и вступи в блок сотрудники.
+        </p>
+    </div>
+
+    <div class="button-gradient">Перейти</div>
+</div>
+
+<div class="modal__block modal__block--recommend" id="modal_recommend_3">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__recommend-img" style="background: url(/img/rec_3.png)"></div>
+    <div class="modal__recommend-text">
+        <p>
+            Хочешь произвести серьезное впечатление на будущих партнеров?
+        </p>
+        <p>
+            Заполни информацию вашей компании.
+        </p>
+        <div class="button-gradient">Перейти</div>
+    </div>
+</div>
+</body>
+</html>

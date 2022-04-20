@@ -1,0 +1,186 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.create-form {
+    margin-top: 150px;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+        margin-top: 40px;
+    }
+
+    &__title {
+        @include font-proza;
+        width: 750px;
+        font-weight: 500;
+
+        h1 {
+            font-size: 35px;
+            margin-bottom: 20px;
+
+            @media #{$tablet-small-screen} {
+                font-size: 30px;
+            }
+
+            @media #{$mobile-middle-screen} {
+                font-size: 25px;
+            }
+        }
+
+        p {
+            color: $gray;
+            font-size: 20px;
+
+            @media #{$tablet-small-screen} {
+                font-size: 18px;
+            }
+        }
+
+        p br {
+            @media #{$mobile-middle-screen} {
+                display: none;
+            }
+        }
+
+        @media #{$tablet-small-screen} {
+            width: 640px;
+        }
+
+        @media #{$mobile-middle-screen} {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        margin-top: 40px;
+        width: 650px;
+        display: flex;
+
+        @media #{$tablet-small-screen} {
+            margin-top: 35px;
+        }
+
+        @media #{$mobile-middle-screen} {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__how-it-work {
+        margin-top: 350px;
+
+        @media #{$tablet-small-screen} {
+            margin-top: 250px;
+        }
+
+        @media #{$mobile-big-screen} {
+            margin-top: 200px;
+        }
+
+        @media #{$mobile-big-screen} {
+            margin-top: 100px;
+        }
+    }
+
+    &__el-top {
+        top: -477px;
+        left: -210px;
+        z-index: -1;
+        width: 477px;
+        height: 477px;
+        position: absolute;
+        background: url("../../../img/gear-gray.svg");
+        @include background-contain-center;
+
+        @media #{$mobile-big-screen} {
+            width: 277px;
+            height: 277px;
+            top: -310px;
+            left: -150px;
+        }
+    }
+
+    &__el-right {
+        top: 282px;
+        right: -21px;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        position: absolute;
+
+        @media #{$tablet-small-screen} {
+            top: 232px;
+        }
+
+        @media #{$mobile-big-screen} {
+            top: 332px;
+        }
+    }
+
+    &__el-right-inner-1 {
+        position: absolute;
+        width: 1040px;
+        height: 1040px;
+        transform: translate(-50%, -54%) rotate(61deg);
+        background: url("../../../img/gear-gray.svg");
+        z-index: -1;
+        @include background-contain-center;
+
+        @media #{$tablet-small-screen} {
+            width: 925px;
+            height: 925px;
+        }
+
+        @media #{$mobile-big-screen} {
+            width: 825px;
+            height: 825px;
+        }
+
+        @media #{$mobile-middle-screen} {
+            width: 625px;
+            height: 625px;
+            top: 90px;
+        }
+    }
+
+    &__el-right-inner-2 {
+        position: absolute;
+        width: 825px;
+        height: 825px;
+        transform: translate(-50%, -54%) rotate(61deg);
+        background: url("../../../img/gear-blue.svg");
+        z-index: 1;
+        @include background-contain-center;
+        animation: el-right-rotate 300s linear infinite;
+
+        @media #{$tablet-big-screen} {
+            width: 670px;
+            height: 670px;
+        }
+
+        @media #{$tablet-small-screen} {
+            width: 420px;
+            height: 420px;
+        }
+
+        @media #{$mobile-big-screen} {
+            display: none;
+        }
+
+        @keyframes el-right-rotate {
+            0% {
+                transform: translate(-50%, -54%) rotate(61deg);
+            }
+
+            50% {
+                transform: translate(-50%, -54%) rotate(241deg);
+            }
+
+            100% {
+                transform: translate(-50%, -54%) rotate(421deg);
+            }
+        }
+    }
+}

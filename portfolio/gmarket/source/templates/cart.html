@@ -1,0 +1,140 @@
+{% include "partials/header.html" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Корзина</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		<div class="container clear-fix">
+			<div class="md-title md-title_page-title">Корзина</div>
+			<div class="center-wrapper">
+				<a href="#" class="button button_full-width mobile-order">
+					Оформить заказ
+				</a>
+				<section class="frame-block mobile-stretch cart-prods">
+					<div class="cart-item">
+						<a href="#" class="cart-item__row">
+							<div class="cart-item__pic">
+								<img src="img/samples/cart/cart1.jpg">
+							</div>
+							<div href="#" class="cart-item__name">
+								Планшет Apple iPad Pro 12.9 128GB Wi-Fi+Cell.Space Gray Refubrished 
+							</div>
+						</a>
+						<div class="cart-item__row">
+							<select class="cart-item__select style-select_small" id="test">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+							<div class="price-row cart-item__price">
+								<span class="price-row__old-price">48 400 руб.</span>
+								<span class="price-row__current-price">89 990 руб.</span>
+								<span class="price-row__saving-diff">Экономия: 500 руб.</span>
+							</div>
+						</div>
+						<div class="cart-item__delete"></div>
+					</div>
+					<div class="cart-item">
+						<a href="#" class="cart-item__row">
+							<div href="#" class="cart-item__pic">
+								<img src="img/samples/cart/cart2.jpg">
+							</div>
+							<div href="#" class="cart-item__name">
+								Ноутбук Apple MacBook Pro 15 Touch Bar i7 2.8/16/256 MPTR2RU
+							</div>
+						</a>
+						<div class="cart-item__row">
+							<select class="cart-item__select style-select_small">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+							<div class="price-row cart-item__price">
+								<span class="price-row__old-price">214 990 руб.</span>
+								<span class="price-row__current-price">204 990 руб.</span>
+								<span class="price-row__saving-diff">Экономия: 10 000 руб.</span>
+							</div>
+						</div>
+						<div class="cart-item__delete"></div>
+					</div>
+					<div class="cart-item">
+						<a href="#" class="cart-item__row">
+							<div href="#" class="cart-item__pic">
+								<img src="img/samples/cart/cart3.jpg">
+							</div>
+							<div href="#" class="cart-item__name">
+								Смарт-часы Apple Watch S3 Sport 42mm Silver Al/Fog Band MQL02R
+							</div>
+						</a>
+						<div class="cart-item__row">
+							<select class="cart-item__select style-select_small">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+							<div class="price-row cart-item__price">
+								<span class="price-row__current-price">35 990 руб.</span>
+							</div>
+						</div>
+						<div class="cart-item__delete"></div>
+					</div>
+				</section>
+				<section class="grey-back mobile-stretch">
+					<div class="coupon-block">
+						<div class="coupon-block__input-wrap">
+							<div class="regular-input">
+								<input type="text" name="" class="regular-input__input regular-input__input_white" placeholder="Введите код купона" data-validation="text">
+								<div class="regular-input__error-msg">
+									Не верный купон
+								</div>
+							</div>
+						</div>
+						<div class="coupon-block__button-wrap">
+							<button class="button button_grey button_full-width">Применить купон</button>
+						</div>
+					</div>
+				</section>
+			</div>
+			<aside class="aside-colmn aside-colmn_right">
+				<section class="grey-back cart-totals mobile-stretch">
+					<div class="cart-totals__title">Общая сумма</div>
+					<div class="cart-totals__summ">
+						<div class="price-row">
+							<span class="price-row__old-price">48 400 руб.</span>
+							<span class="price-row__current-price">347 900 руб.</span>
+							<span class="price-row__saving-diff">Экономия: 500 руб.</span>
+						</div>
+					</div>
+					<div class="cart-totals__bonus">Бонусных балов: 5400</div>
+					<a href="#" class="button cart-totals__button">
+						Оформить заказ
+					</a>
+				</section>
+			</aside>
+		</div>
+		<div class="container">
+			<section class="cont-section">
+				<h2 class="md-title">Вас может заинтересовать</h2>
+				<div class="related-slider">
+					{% for i in 1..8 %}
+						<div class="slider-slide slider-slide_multiple">
+							{% 
+								include "partials/related-card.html" with {
+									name: "Кейс для MacBook Acme Made Smart Laptop Sleeve, MB Pro",
+									img: "img/samples/related/r" ~ i ~ ".jpg"
+								}
+							%}
+						</div>
+						
+					{% endfor %}
+				</div>
+			</section>
+		</div>
+	</main>
+{% include "partials/footer.html" %}

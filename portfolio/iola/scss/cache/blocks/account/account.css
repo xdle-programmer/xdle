@@ -1,0 +1,264 @@
+.account__title {
+  color: #333333;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 50px;
+  margin-top: -24px; }
+  @media (max-width: 767px) {
+    .account__title {
+      font-size: 25px;
+      line-height: 31px; } }
+
+.account__info {
+  margin-top: 45px;
+  padding: 37px 50px;
+  display: grid;
+  grid-template-columns: 126px 1fr;
+  background: #fafafa;
+  align-items: center;
+  grid-gap: 26px;
+  border-radius: 5px; }
+  @media (max-width: 1023px) {
+    .account__info {
+      padding: 20px 15px;
+      grid-template-columns: 90px 1fr;
+      grid-gap: 15px; } }
+
+.account__info-img-block {
+  width: 126px;
+  height: 126px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 1023px) {
+    .account__info-img-block {
+      width: 90px;
+      height: 90px; } }
+
+.account__info-img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain; }
+
+.account__info-desc-text {
+  color: #333333;
+  font-display: auto;
+  font-family: "roboto", sans-serif !important;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px; }
+  @media (max-width: 1023px) {
+    .account__info-desc-text {
+      font-size: 13px; } }
+
+.account__info-desc-text-bold {
+  font-weight: 700;
+  font-display: auto;
+  font-family: "roboto", sans-serif !important; }
+
+.account__info-desc-button {
+  position: relative;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 24px;
+  cursor: pointer;
+  width: fit-content;
+  width: -moz-fit-content; }
+  .account__info-desc-button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    background-color: #333333;
+    opacity: 0.3;
+    width: 100%;
+    left: 0;
+    bottom: 0; }
+
+.account__list {
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  margin-top: 42px;
+  margin-bottom: 100px; }
+
+.account__list-row {
+  display: grid;
+  grid-template-columns: 66px 121px 1fr 124px 105px;
+  padding: 28px 32px;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative; }
+  @media (max-width: 1023px) {
+    .account__list-row {
+      grid-template-columns: 1fr;
+      padding: 28px 15px;
+      padding-top: 40px;
+      padding-bottom: 20px; } }
+  .account__list-row--header {
+    border-bottom: 1px solid #d7505c;
+    padding: 15px 32px;
+    padding-bottom: 20px; }
+    .account__list-row--header * {
+      font-display: auto;
+      font-family: "roboto", sans-serif !important;
+      font-size: 14px; }
+    @media (max-width: 1023px) {
+      .account__list-row--header {
+        display: none; } }
+  .account__list-row:nth-last-of-type(1) {
+    border-bottom: none; }
+
+.account__list-cell {
+  font-display: auto;
+  font-family: "roboto", sans-serif !important;
+  font-size: 14px;
+  font-weight: 300; }
+  @media (max-width: 1023px) {
+    .account__list-cell--number {
+      position: absolute;
+      top: 15px;
+      left: 15px; } }
+  @media (max-width: 1023px) {
+    .account__list-cell--date {
+      position: absolute;
+      top: 15px;
+      right: 15px; } }
+  @media (max-width: 1023px) {
+    .account__list-cell--products {
+      order: 1; } }
+  @media (max-width: 1023px) {
+    .account__list-cell--buttons {
+      order: 3;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      justify-content: space-between; } }
+  @media (max-width: 1023px) {
+    .account__list-cell--price {
+      order: 2;
+      text-align: right;
+      margin-top: 5px;
+      margin-bottom: 10px; } }
+
+.account__list-product-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  font-weight: 700; }
+  @media (max-width: 1023px) {
+    .account__list-product-row {
+      grid-template-columns: 1fr; } }
+
+@media (max-width: 1023px) {
+  .account__list-product-name {
+    font-size: 14px;
+    font-display: auto;
+    font-family: 'exo2', sans-serif; } }
+
+.account__list-product-price {
+  font-size: 16px; }
+  @media (max-width: 1023px) {
+    .account__list-product-price {
+      font-size: 14px;
+      font-display: auto;
+      font-family: 'exo2', sans-serif;
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 5px;
+      margin-bottom: 5px; } }
+
+.account__list-product-new {
+  color: #ca1626;
+  font-size: 16px;
+  font-weight: 700; }
+  @media (max-width: 1023px) {
+    .account__list-product-new {
+      font-size: 14px;
+      font-display: auto;
+      font-family: 'exo2', sans-serif; } }
+
+.account__list-product-done {
+  opacity: 0.75;
+  color: #333333;
+  font-display: auto;
+  font-family: 'exo2', sans-serif;
+  font-size: 16px;
+  font-weight: 700; }
+  @media (max-width: 1023px) {
+    .account__list-product-done {
+      font-size: 14px; } }
+
+.account__list-product-button {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  width: fit-content;
+  width: -moz-fit-content;
+  cursor: pointer;
+  position: relative; }
+  .account__list-product-button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    opacity: 0.1;
+    left: 0;
+    bottom: 1px; }
+
+.account__list-product-mobile-title {
+  display: none; }
+  @media (max-width: 1023px) {
+    .account__list-product-mobile-title {
+      display: block;
+      font-size: 12px;
+      font-weight: 300;
+      font-display: auto;
+      font-family: 'exo2', sans-serif; } }
+
+.account__list-price {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 700; }
+
+.account__footer {
+  background: #e6e6e6;
+  padding: 22px 32px;
+  padding-bottom: 30px; }
+  @media (max-width: 767px) {
+    .account__footer {
+      padding: 15px 15px;
+      padding-bottom: 15px; } }
+
+.account__footer-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: flex-end; }
+
+.account__footer-price-title {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 21px;
+  line-height: 10px; }
+  @media (max-width: 767px) {
+    .account__footer-price-title {
+      font-size: 14px;
+      margin-right: 15px;
+      line-height: 18px; } }
+
+.account__footer-price-item {
+  color: #333333;
+  font-size: 26px;
+  font-weight: 900;
+  white-space: nowrap; }
+  @media (max-width: 767px) {
+    .account__footer-price-item {
+      font-size: 18px; } }

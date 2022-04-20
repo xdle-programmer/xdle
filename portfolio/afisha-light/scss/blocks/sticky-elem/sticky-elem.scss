@@ -1,0 +1,51 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.sticky-elem {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+  transform: scaleY(0);
+  visibility: hidden;
+  transform-origin: bottom;
+
+  &.static {
+    position: absolute;
+  }
+
+  @media #{$tablet-small-screen} {
+    height: 50px;
+  }
+
+  &--left {
+    display: none;
+    left: 0;
+    width: 75%;
+    background: #f2f2f2;
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+  &--right {
+    right: 0;
+    width: 25%;
+    background: #e8e8e8;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &.show {
+    transform: scaleY(1);
+    visibility: visible;
+  }
+
+  &.hide {
+    transform: scaleY(0);
+    visibility: hidden;
+  }
+}

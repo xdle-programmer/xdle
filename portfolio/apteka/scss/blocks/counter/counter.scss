@@ -1,0 +1,36 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.counter {
+  @include flex-row-center;
+  width: 100%;
+
+  &__button {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+
+    &--minus {
+      margin-right: 5px;
+      background: url(../../../img/counter-minus.png);
+      @include background-contain-center;
+    }
+
+    &--plus {
+      margin-left: 5px;
+      background: url(../../../img/counter-plus.png);
+      @include background-contain-center;
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    border: 1px solid $gray;
+    height: 28px;
+    border-radius: 3px;
+    padding-left: 5px;
+    width: 0;
+    min-width: 20px;
+  }
+}

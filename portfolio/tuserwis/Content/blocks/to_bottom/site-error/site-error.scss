@@ -1,0 +1,38 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.site-error {
+  @include flex-column-center;
+  padding-top: 100px;
+
+  &__number {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 120px;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      @include after-absolute;
+      width: 100px;
+      height: 100px;
+      top: -30px;
+      right: -30px;
+      opacity: .3;
+      z-index: -1;
+      background: url(../../../img/gear-blue.svg);
+      @include background-contain-center;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__button {
+  }
+
+}

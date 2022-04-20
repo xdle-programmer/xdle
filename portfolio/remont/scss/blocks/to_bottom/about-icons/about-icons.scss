@@ -1,0 +1,77 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.about-icons {
+  @include flex-row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 0;
+
+  @media #{$desktop-big-screen} {
+    padding-bottom: 10px;
+  }
+
+  &__item {
+    width: 180px;
+    @include flex-column-center;
+
+    @media #{$desktop-big-screen} {
+      margin-bottom: 40px;
+      width: 19%;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 22%;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-icon {
+    width: 55px;
+    height: 54px;
+    background: url(../../img/main-icon-sprite.png);
+    background-size: 700% 100%;
+    margin-bottom: 20px;
+
+    &--collective {
+    }
+    &--materials {
+      background-position-x: -100%;
+    }
+    &--customers {
+      background-position-x: -200%;
+    }
+    &--recommendations {
+      background-position-x: -300%;
+    }
+    &--prices {
+      background-position-x: -400%;
+    }
+    &--demo {
+      background-position-x: -500%;
+    }
+    &--visit {
+      background-position-x: -600%;
+    }
+
+  }
+
+  &__item-text {
+    $line-height: 23;
+    line-height: #{$line-height}px;
+    height: #{$line-height * 3}px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+
+}

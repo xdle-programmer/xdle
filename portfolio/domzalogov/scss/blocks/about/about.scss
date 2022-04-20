@@ -1,0 +1,128 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.about {
+  @include flex-row;
+  justify-content: space-between;
+  width: 100%;
+
+  @media #{$tablet-small-screen} {
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    width: 190px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  &__menu-item {
+    width: 100%;
+  }
+
+  $about-item-active: '.about__menu-item.active';
+  $about-item-hover: '.about__menu-item:hover';
+
+  &__menu-item-link {
+    width: 100%;
+    height: 44px;
+    border-top: 1px solid #dadada;
+    @include flex-row;
+    align-items: center;
+    padding-left: 30px;
+
+    #{$about-item-active} & {
+      padding-left: 10px;
+      background: #f4f4f4;
+
+      &:after {
+        margin-right: 15px;
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #{$about-item-hover} & {
+      color: $green;
+    }
+
+    &:after {
+      content: '\e802';
+      font-family: 'fontello';
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1em;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      margin-left: auto;
+      margin-right: 14px;
+    }
+  }
+
+
+  &__item {
+    width: calc(100% - 250px);
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      order: -1;
+    }
+  }
+
+  &__counters {
+    border: 1px solid #dadada;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+  &__counters_items {
+    @include flex-row;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column;
+    }
+  }
+  &__counters_item {
+    text-align: center;
+    padding: 20px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      padding-bottom: 0;
+      padding-top: 10px;
+    }
+  }
+  &__counters_item-number {
+    font-size: 36px;
+    font-weight: 500;
+    color: #f4aa40;
+  }
+  &__counters_item-text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__counters_desc {
+    border-top: 1px solid #dadada;
+    padding: 20px;
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    @media #{$mobile-big-screen} {
+      margin-top: 15px;
+    }
+  }
+
+}

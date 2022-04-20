@@ -1,0 +1,142 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.last-screen {
+  position: absolute;
+  @include absolute-fill;
+
+
+  &__title {
+    width: 100vw;
+    height: 14vw;
+    background: url(../../../images/il_gusto.png);
+    @include background-contain-center;
+    position: absolute;
+    top: calc(50% - 18vw);
+    left: 0;
+
+    @media #{$tablet-big-screen} {
+      top: 19%;
+      height: 15vh;
+    }
+
+  }
+
+  &__labels {
+    position: absolute;
+    width: fit-content;
+    top: calc(50% - 5vw);
+    left: calc(50%);
+    transform: translateX(-50%);
+
+    @media #{$tablet-big-screen} {
+      top: 60%;
+      transform: translateY(-100%) translateX(-50%);
+    }
+  }
+
+  &__social {
+    position: absolute;
+    top: calc(50% + 16vw);
+    width: 40vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media #{$tablet-big-screen} {
+      top: 65%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__social-title {
+    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.4vw;
+    text-align: left;
+    margin-bottom: 2vw;
+
+
+    @media #{$tablet-big-screen} {
+      font-size: 8vw;
+      margin-bottom: 5vw;
+    }
+  }
+
+  &__social-items {
+    display: grid;
+    grid-template-columns: repeat(2,14vw);
+    grid-gap: 1vw;
+    position: relative;
+    width: fit-content;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 3vw;
+    }
+
+    &:after {
+      @include after-absolute;
+      left: calc(50%);
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background: #fff;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+  }
+
+  &__social-item {
+    color: #fff;
+    font-size: 1vw;
+    text-align: left;
+    padding-left: 1.8vw;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      font-size: 4vw;
+      padding-left: 7vw;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 1.5vw;
+      height: 1.5vw;
+      background: #fff;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      @media #{$tablet-big-screen} {
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+
+    &--site:after {
+      mask: url(../../../images/svg-sprite/icon-www.svg);
+      @include mask-contain-center;
+    }
+
+    &--inst:after {
+      mask: url(../../../images/svg-sprite/icon-insta.svg);
+      @include mask-contain-center;
+    }
+
+    &--mail:after {
+      mask: url(../../../images/svg-sprite/icon-email.svg);
+      @include mask-contain-center;
+    }
+
+    &--vk:after {
+      mask: url(../../../images/svg-sprite/icon-vk.svg);
+      @include mask-contain-center;
+    }
+  }
+}

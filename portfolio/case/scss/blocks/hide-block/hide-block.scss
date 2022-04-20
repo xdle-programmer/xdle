@@ -1,0 +1,24 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.hide-block {
+  &__button  {
+    background: url(../../img/title-arrow.png);
+    @include background-contain-center;
+    margin: 10px auto;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    &.active {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      filter: brightness(1.5) saturate(2);
+    }
+  }
+  &__item {
+  }
+}

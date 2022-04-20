@@ -1,0 +1,77 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.text {
+  position: relative;
+
+  &--without-button:after {
+    @include after-absolute;
+    @include absolute-fill;
+    background: transparent;
+    z-index: 4;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    @include font-ubuntu;
+    margin-bottom: 15px;
+  }
+  &__title-line {
+    background: url(../../../img/line.png) center repeat-x;
+    flex-grow: 1;
+    height: 8px;
+    width: 0;
+  }
+
+  &__title-inner {
+    font-size: 22px;
+    padding-left: 10px;
+    color: #9e040d73;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #53575a;
+    @include font-ubuntu;
+  }
+
+  &__item {
+    color: #53575a;
+    text-align: justify;
+    //font-size: 18px;
+    font-weight: 300;
+    @include scroll;
+    font-size: 23px;
+    line-height: 35px;
+
+    @media #{$tablet-big-screen} {
+      height: auto!important;
+      overflow: visible!important;
+      padding-right: 0!important;
+    }
+
+    &--1 {
+      height: 22vh;
+    }
+
+    &--2 {
+      height: 22vh;
+    }
+
+    &--3 {
+    }
+    &--4 {
+      height: 43vh;
+    }
+  }
+}

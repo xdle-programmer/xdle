@@ -1,0 +1,76 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.library {
+
+  &__block {
+    width: 80vw;
+    @include margin-auto;
+    padding-top: 50px;
+  }
+
+  &__flex {
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__half {
+    width: 48%;
+  }
+
+  &__button {
+    @include flex-row-center;
+    min-width: 100px;
+    padding: 0 15px;
+    display: inline-flex;
+    height: 50px;
+    color: white;
+    background: grey;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+
+      &:hover {
+        transform: none;
+      }
+    }
+
+  }
+
+  &__item {
+    font-size: 20px;
+    border-radius: 5px;
+    @include flex-row-center;
+    width: 100%;
+    height: 50px;
+    color: white;
+    margin: 10px 0;
+
+    &--left {
+      justify-content: flex-start;
+    }
+
+    &--green {
+      background: #82cc82;
+    }
+    &--blue {
+      background: #6d8cd4;
+    }
+    &--magenta {
+      background: #d46dc7;
+    }
+  }
+
+}
+

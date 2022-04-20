@@ -1,0 +1,249 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.pharmacy-list {
+  width: 100%;
+
+  &__items {
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    @include flex-row-center;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray-light;
+    padding: 25px;
+
+    &:nth-of-type(1) {
+      border-top: 1px solid $gray-light;
+    }
+
+    &:nth-of-type(odd) {
+      background: #e5f5ff;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      flex-wrap: wrap;
+    }
+
+    @media #{$desktop-small-screen} {
+
+    }
+
+    @media #{$tablet-big-screen} {
+      padding: 10px;
+    }
+  }
+
+  &__item-about {
+    width: calc(45% - 20px);
+
+
+    @media #{$desktop-extra-big-screen} {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-about-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $blue;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @media #{$mobile-big-screen} {
+      font-size: 18px;
+    }
+  }
+
+  &__item-contact {
+    @include flex-row;
+    flex-wrap: wrap;
+  }
+
+  &__item-contact-item {
+    color: $gray-dark;
+    @include flex-row;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 7px;
+
+
+    &:before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      min-height: 18px;
+      min-width: 18px;
+      background: $gray;
+      margin-right: 5px;
+    }
+
+    &--map {
+      width: calc(100% - 150px);
+
+      @media #{$tablet-big-screen} {
+        width: 100%;
+      }
+    }
+
+
+    &--map:before {
+      mask: url(../../../img/icon-map.svg);
+      -webkit-mask: url(../../../img/icon-map.svg);
+      @include mask-contain-center;
+    }
+
+    &--worktime {
+      width: 130px;
+      margin-left: 20px;
+
+      @media #{$tablet-big-screen} {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    &--worktime:before {
+      mask: url(../../../img/icon-clock.svg);
+      -webkit-mask: url(../../../img/icon-clock.svg);
+      @include mask-contain-center;
+    }
+
+    &--phone {
+      margin-right: 20px;
+    }
+
+    &--phone:before {
+      mask: url(../../../img/icon-phone.svg);
+      -webkit-mask: url(../../../img/icon-phone.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__item-natural {
+    width: calc(50% - 20px);
+
+    @media #{$desktop-extra-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__order {
+    @include flex-row-center;
+    justify-content: flex-end;
+
+    @media #{$desktop-extra-big-screen} {
+      justify-content: center;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__order-button {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: $blue;
+    cursor: pointer;
+
+    &:hover {
+      color: $gray-dark;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 18px;
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
+
+    @media #{$mobile-big-screen} {
+     margin-bottom: 10px;
+    }
+  }
+
+  &__order-price-block {
+    margin-left: 100px;
+
+    @media #{$desktop-extra-big-screen} {
+      margin-left: 0;
+      @include flex-row-center;
+    }
+
+
+  }
+
+  &__order-price-item {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+    }
+  }
+
+  &__order-price-time {
+    font-size: 13px;
+    font-weight: 300;
+    color: $gray-dark;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 18px;
+      margin: 0 15px;
+      margin-bottom: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+    }
+  }
+
+  &__order-price-factory {
+    font-size: 13px;
+    font-weight: 300;
+    color: $blue;
+    text-decoration: underline;
+    cursor: pointer;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+    }
+  }
+
+  &__worktime {
+    @include flex-row-center;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    width: fit-content;
+    padding: 0 20px;
+    cursor: pointer;
+    height: 45px;
+    border-radius: 5px;
+    color: $white;
+    background-color: $blue;
+    @include flex-row-center;
+    font-size: 18px;
+    margin: 20px auto;
+  }
+}

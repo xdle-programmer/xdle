@@ -1,0 +1,129 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.faq {
+  position: relative;
+  width: 100%;
+
+  &__items {
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    @media #{$desktop-small-screen} {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__item-header {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 15px 0;
+    @include flex-row-center;
+    justify-content: space-between;
+
+    @media #{$desktop-small-screen} {
+      padding: 7px 0;
+    }
+  }
+
+  &__item-header-name {
+    font-size: 26px;
+    @include font-noto('');
+
+    @media #{$desktop-small-screen} {
+      font-size: 20px;
+    }
+  }
+
+  &__item-header-open {
+    width: 30px;
+    height: 30px;
+    background: url(../../../img/section-20/plus.png);
+    @include background-contain-center;
+    min-width: 30px;
+  }
+
+  &__item-inner {
+    position: absolute;
+    border: 1px solid #dcdcdc;
+    background: $white;
+    @include absolute-fill;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 26px;
+    @include font-noto('');
+    padding: 25px;
+    padding-right: 80px;
+    line-height: 40px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 14px;
+      padding: 25px;
+      padding-right: 5px;
+      line-height: 20px;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 30px;
+      height: 30px;
+      right: 25px;
+      top: 30px;
+      transform: rotate(45deg);
+      background: url(../../../img/section-20/plus.png);
+      @include background-contain-center;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item-inner-close {
+  }
+
+  &__item-inner-text {
+    @media #{$tablet-big-screen} {
+      height: 100%;
+      overflow-y: auto;
+      padding-right: 80px;
+
+      &::-webkit-scrollbar-button {
+        background-image: none;
+        background-repeat: no-repeat;
+        width: 5px;
+        height: 0;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $red;
+        cursor: pointer;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $red;
+      }
+
+      &::-webkit-resizer {
+        background-image: none;
+        background-repeat: no-repeat;
+        width: 4px;
+        height: 0;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+    }
+
+
+  }
+}

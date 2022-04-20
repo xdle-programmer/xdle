@@ -1,0 +1,136 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.main-about {
+  @include flex-row;
+  flex-wrap: wrap;
+  min-height: 570px;
+  padding: 20px;
+
+  @media #{$mobile-big-screen} {
+    padding: 10px;
+  }
+
+  &__photo {
+    width: calc(50% - 120px);
+    @include background-cover-center;
+    align-self: stretch;
+
+
+    @media #{$desktop-big-screen} {
+      width: 50%;
+    }
+
+    @media #{$desktop-small-screen} {
+      width: 100%;
+      height: 500px;
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 350px;
+    }
+  }
+
+  &__desc {
+    width: calc(50% - 120px);
+    align-self: stretch;
+    padding: 40px 70px;
+
+    @media #{$desktop-big-screen} {
+      width: 50%;
+    }
+
+    @media #{$desktop-small-screen} {
+      padding: 20px 0;
+      width: 100%;
+      align-self: flex-start;
+      height: auto;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 10px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 500;
+    position: relative;
+
+    @media #{$desktop-small-screen} {
+      padding-left: 80px;
+      margin-bottom: 20px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 30px;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 10px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 24px;
+      padding-left: 30px;
+    }
+
+    &:after {
+      @include after-absolute;
+      left: -40px;
+      width: 64px;
+      height: 1px;
+      top: 50%;
+      background: $orange;
+      transform: translate(-100%, -50%);
+
+      @media #{$desktop-small-screen} {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+
+      @media #{$mobile-big-screen} {
+        width: 24px;
+        left: -10px;
+      }
+    }
+
+  }
+
+  &__text {
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &__counters {
+    width: 240px;
+    @include flex-column-center;
+    justify-content: space-between;
+    background: $gray-light;
+    align-self: stretch;
+    padding: 50px 0;
+
+    @media #{$desktop-big-screen} {
+      width: 100%;
+      @include flex-row-center;
+      justify-content: space-around;
+    }
+
+    @media #{$desktop-small-screen} {
+      width: 100%;
+    }
+    @media #{$tablet-big-screen} {
+      padding: 20px 50px;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      justify-content: space-between;
+      height: 470px;
+    }
+
+
+  }
+}

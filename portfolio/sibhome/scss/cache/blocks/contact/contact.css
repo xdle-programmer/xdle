@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff; }
+  @media (max-width: 767px) {
+    .contacts {
+      font-size: 18px; } }
+  .contacts__item {
+    margin-left: 25px;
+    padding-left: 40px;
+    position: relative; }
+    .contacts__item:nth-of-type(1) {
+      margin-left: 0; }
+    .contacts__item--link:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+    .contacts__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .contacts__item--phone:after {
+      background-image: url(../../img/phone-white.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .contacts__item--web:after {
+      background-image: url(../../img/web-white.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }

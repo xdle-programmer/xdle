@@ -1,0 +1,64 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.animation-third {
+  position: absolute;
+  @include absolute-fill;
+
+  @media #{$tablet-big-screen} {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 3%;
+    grid-gap: 3%;
+  }
+
+  @media #{$mobile-big-screen} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  * img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__line-1,
+  &__line-2 {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background: transparent;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__el {
+    position: absolute;
+    bottom: 3%;
+    width: 13%;
+    z-index: 1;
+
+    @media #{$tablet-big-screen} {
+      position: static;
+      width: 100%;
+    }
+
+    &--1 {
+      left: 19%;
+    }
+    &--2 {
+      left: 35.5%;
+    }
+    &--3 {
+      right: 35.5%;
+    }
+    &--4 {
+      right: 19%;
+    }
+  }
+}

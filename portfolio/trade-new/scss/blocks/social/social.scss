@@ -1,0 +1,51 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.social {
+  @include flex-row-center;
+  position: relative;
+
+  &__item {
+    width: 18px;
+    height: 20px;
+    background: #1e2126;
+    margin-right: 30px;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      @include gradient;
+    }
+
+    &--vk {
+      mask: url(../../img/social-vk.svg);
+      -webkit-mask: url(../../img/social-vk.svg);
+      @include mask-contain-center;
+    }
+    &--facebook {
+      mask: url(../../img/social-facebook.svg);
+      -webkit-mask: url(../../img/social-facebook.svg);
+      @include mask-contain-center;
+    }
+    &--twitter {
+      mask: url(../../img/social-twitter.svg);
+      -webkit-mask: url(../../img/social-twitter.svg);
+      @include mask-contain-center;
+    }
+    &--youtube {
+      mask: url(../../img/social-youtube.svg);
+      -webkit-mask: url(../../img/social-youtube.svg);
+      @include mask-contain-center;
+    }
+    &--instagram {
+      mask: url(../../img/social-instagram.svg);
+      -webkit-mask: url(../../img/social-instagram.svg);
+      @include mask-contain-center;
+    }
+  }
+
+}

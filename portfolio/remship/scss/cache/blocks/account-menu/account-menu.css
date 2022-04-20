@@ -1,0 +1,56 @@
+.account-menu__title {
+  margin: 15px 0;
+  font-size: 15px;
+  color: #333; }
+
+.account-menu__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.account-menu__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+  align-items: center;
+  border-radius: 3px;
+  width: calc(50% - 2px);
+  height: 75px;
+  margin-bottom: 4px;
+  background: #f1f1f1;
+  font-size: 16px;
+  color: #333; }
+  .account-menu__item:hover {
+    background: #339295;
+    color: #ffffff; }
+  @media (max-width: 767px) {
+    .account-menu__item {
+      width: 100%; } }
+
+.account-menu__item-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: url(/img/account-menu__sprite.png);
+  background-size: 600% 100%; }
+  .account-menu__item-icon--profile {
+    background-position-x: -100%; }
+  .account-menu__item-icon--basket {
+    background-position-x: -200%; }
+  .account-menu__item-icon--subscribe {
+    background-position-x: -300%; }
+  .account-menu__item-icon--contact {
+    background-position-x: -400%; }
+  .account-menu__item-icon--exit {
+    background-position-x: -500%; }
+
+.account-menu__item-text--exit {
+  color: #666; }
+
+.account-menu__item:hover .account-menu__item-text {
+  color: #ffffff; }

@@ -1,0 +1,24 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.pagination {
+  @include flex-row;
+
+  &__item {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: $white;
+    border: 1px solid #ebebeb;
+    margin-right: 7px;
+    @include flex-row-center;
+
+    &:hover,
+    &.active {
+      background: $blue;
+      border: 1px solid $blue;
+      color: $white;
+    }
+  }
+}

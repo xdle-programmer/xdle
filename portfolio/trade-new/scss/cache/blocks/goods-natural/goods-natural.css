@@ -1,0 +1,159 @@
+.goods-natural {
+  background: #303741;
+  position: fixed;
+  z-index: 100;
+  width: 300px;
+  height: 360px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-rows: auto 155px 1fr;
+  grid-template-columns: 1fr;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  margin: 15px 0;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2); }
+  @media (max-width: 1279px) {
+    .goods-natural {
+      display: none; } }
+  .goods-natural.active {
+    opacity: 1;
+    visibility: visible; }
+  .goods-natural, .goods-natural:after {
+    transition: all 0s, opacity .2s ease-out, visibility .2s ease-out; }
+  .goods-natural:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    z-index: -1;
+    background: #303741; }
+  .goods-natural.top:after {
+    bottom: 10px; }
+  .goods-natural.bottom:after {
+    top: 10px; }
+  .goods-natural.left:after {
+    left: 30px; }
+  .goods-natural.right:after {
+    right: 30px; }
+  .goods-natural__close {
+    display: none; }
+  .goods-natural__header {
+    padding: 0 15px;
+    width: 100%; }
+  .goods-natural__header-name {
+    color: #cddaec;
+    font-size: 16px;
+    font-weight: 700; }
+  .goods-natural__header-state {
+    color: #616f83;
+    font-size: 13px;
+    font-weight: 300; }
+  .goods-natural__content {
+    width: 100%;
+    height: 155px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; }
+  .goods-natural__content-img {
+    width: auto;
+    height: 100%; }
+  .goods-natural__content-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+  .goods-natural__content-button-3d {
+    width: 19px;
+    height: 19px;
+    background: url(../../img/3d_ico.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-right: 12px;
+    cursor: pointer; }
+    .goods-natural__content-button-3d:hover {
+      opacity: .6; }
+  .goods-natural__content-button-zoom {
+    width: 24px;
+    height: 19px;
+    background: url(../../img/zoom_ico.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    cursor: pointer; }
+    .goods-natural__content-button-zoom:hover {
+      opacity: .6; }
+  .goods-natural__footer {
+    width: 100%;
+    justify-self: stretch;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 3px; }
+  .goods-natural__float {
+    width: 100%;
+    position: relative; }
+  .goods-natural__float-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+  .goods-natural__float-title {
+    color: #616f83;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300; }
+  .goods-natural__float-numbers {
+    color: #cddaec;
+    font-size: 11px;
+    font-weight: 700; }
+  .goods-natural__float-arrow {
+    width: 10px;
+    height: 16px;
+    border-radius: 4px;
+    background: #96ef21;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    border: 3px solid #303741; }
+  .goods-natural__float-panel {
+    width: 100%;
+    height: 3px;
+    position: relative;
+    background: url(../../img/float.png) no-repeat;
+    background-size: 100% 100%; }
+  .goods-natural__inspect {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300; }
+  .goods-natural__inspect-link {
+    color: #87bbf0;
+    text-decoration: underline; }
+    .goods-natural__inspect-link:hover {
+      text-decoration: none; }
+  .goods-natural__inspect-numbers {
+    color: #edf4fb; }
+  .goods-natural__button {
+    width: 100%; }

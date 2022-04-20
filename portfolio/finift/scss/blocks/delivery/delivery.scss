@@ -1,0 +1,47 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.delivery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 65px;
+
+  @media #{$tablet-small-screen} {
+    grid-template-columns: 1fr;
+  }
+
+  &__text {
+
+  }
+
+  &__img {
+    height: 480px;
+    @include background-cover-center;
+    position: relative;
+
+    @media #{$tablet-small-screen} {
+      margin-bottom: 170px;
+    }
+  }
+  &__img-inner {
+    width: 879px;
+    height: 519px;
+    @include background-contain-center;
+    position: absolute;
+    bottom: -250px;
+    left: -300px;
+
+    @media #{$tablet-big-screen} {
+      width: 679px;
+      left: auto;
+      right: 0;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+}

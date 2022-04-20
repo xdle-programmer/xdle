@@ -1,0 +1,158 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-slider {
+  @media #{$tablet-big-screen} {
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+    position: relative;
+  }
+
+  &__wrapper {
+    @media #{$tablet-big-screen} {
+      position: absolute;
+      width: 250%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__items {
+  }
+
+  &__item {
+    height: 450px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @media #{$tablet-big-screen} {
+      height: 550px;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    @include absolute-fill;
+    width: 100vw;
+    @include background-cover-center;
+    background-position: top center !important;
+    z-index: 1;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      background-position: top left !important;
+    }
+  }
+
+  &__item-img-blur-block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    height: 100%;
+    width: calc(((100% - 1140px) / 2) + 1140px - 666px);
+    z-index: 2;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      height: 200px;
+      left: 0;
+      bottom: 0;
+      top: auto;
+      background-position: top left !important;
+    }
+  }
+
+  &__item-img-blur {
+    position: absolute;
+    width: calc(100vw + 20px);
+    height: calc(100% + 20px);
+    top: -10px;
+    right: -10px;
+    @include background-cover-center;
+    background-position: top center !important;
+    filter: blur(10px);
+
+    @media #{$tablet-big-screen} {
+      filter: blur(20px);
+      width: calc(100% + 40px);
+      height: calc(550px  + 40px);
+      right: -20px;
+      top: -370px;
+      background-position: top left !important;
+    }
+  }
+
+  &__item-desc-block {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__item-desc {
+    margin-left: auto;
+    width: 40%;
+    padding: 90px 40px;
+    color: $white;
+
+    @media #{$tablet-big-screen} {
+      @include margin-auto;
+      width: 35%;
+      text-align: center;
+      padding: 0;
+      padding-top: 350px;
+      height: 550px;
+      @include flex-column-center;
+    }
+  }
+
+  &__item-desc-title {
+    margin-bottom: 30px;
+    @include font-default;
+    font-size: 56px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 10px;
+      font-size: 40px;
+    }
+  }
+
+  &__item-desc-text {
+    @include font-proxima;
+    font-size: 23px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 18px;
+    }
+  }
+
+  &__hand-block {
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__hand {
+    position: absolute;
+    background: url(../../../img/main_slider/hand.png);
+    @include background-contain-center;
+    right: 0;
+    bottom: -130px;
+    width: 578px;
+    height: 291px;
+    z-index: 3;
+
+    &--thai {
+      bottom: -121px;
+      width: 578px;
+      height: 252px;
+    }
+  }
+
+}

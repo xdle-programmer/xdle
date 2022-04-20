@@ -1,0 +1,114 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.filter {
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+    padding-bottom: 10px;
+    z-index: 10;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+
+    @media #{$tablet-small-screen} {
+        position: relative;
+        top: auto;
+    }
+
+    @media #{$mobile-big-screen} {
+        margin-bottom: 20px;
+    }
+
+    &__block {
+        font-size: 15px;
+        @include flex-row;
+        color: $gray;
+
+        @media #{$tablet-small-screen} {
+            @include flex-column-center;
+        }
+    }
+
+    &__reset {
+        //color: $blue;
+        ////margin: 0 40px;
+        //cursor: pointer;
+        //
+        ////&:hover {
+        ////    text-decoration: underline;
+        ////}
+        //
+        //@media #{$tablet-small-screen} {
+        //    margin-bottom: 5px;
+        //}
+    }
+
+    &__items {
+        flex-grow: 1;
+        @include flex-row;
+        justify-content: space-around;
+        align-self: stretch;
+
+        @media #{$tablet-small-screen} {
+            @include flex-column-center;
+        }
+    }
+
+    $active-item: '.filter__item.active';
+
+    &__item {
+        padding: 10px;
+        @include flex-row;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        align-self: stretch;
+
+        &:after {
+            @include after-absolute;
+            width: 100%;
+            height: 2px;
+            background: $blue;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+        }
+
+        &:hover,
+        &.active {
+            color: $blue;
+
+            &:after {
+                transform: scaleX(1);
+            }
+        }
+
+        @media #{$tablet-small-screen} {
+            margin-bottom: 5px;
+            width: fit-content;
+            margin-left: 20px;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 5px;
+        }
+    }
+
+    .item1, .item2, .item3 {
+        background: $white;
+    }
+
+    &__item-name {
+        position: relative;
+    }
+
+    &__item-count {
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+        background: $magenta;
+        border-radius: 50%;
+        @include flex-row-center;
+        color: $white;
+    }
+}

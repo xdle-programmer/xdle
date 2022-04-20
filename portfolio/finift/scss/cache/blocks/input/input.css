@@ -1,0 +1,84 @@
+.input {
+  position: relative; }
+  .input.focus .warning.active {
+    opacity: 0;
+    visibility: hidden; }
+  .input.focus .placeholder {
+    opacity: 1;
+    visibility: visible; }
+  .input__button {
+    width: 100% !important;
+    min-width: 180px !important;
+    height: 50px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: 1px solid #e8e9ea !important;
+    border-radius: 0px !important;
+    background: #fff !important;
+    position: relative !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: space-between;
+    text-align: center; }
+    .input__button:focus {
+      outline: none !important;
+      background: #fff !important;
+      color: #000 !important; }
+    .input__button--open {
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important; }
+    .input__button--textarea {
+      height: auto !important;
+      align-items: stretch; }
+  .input__text {
+    font-display: auto;
+    font-family: 'cinzel', sans-serif;
+    float: none !important;
+    border-radius: 0px !important;
+    font-size: 16px !important;
+    font-weight: 100 !important;
+    color: #000 !important;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 100%;
+    flex-grow: 1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: flex-start; }
+    .input__button--textarea .input__text {
+      height: auto;
+      min-height: 150px;
+      resize: vertical;
+      padding-top: 0.5em !important; }
+    .input__text::-webkit-input-placeholder {
+      color: #656565; }
+    .input__text::-moz-placeholder {
+      color: #656565; }
+    .input__text:-moz-placeholder {
+      color: #656565; }
+    .input__text:-ms-input-placeholder {
+      color: #656565; }
+    .input__text:focus {
+      outline: none !important;
+      background: #fff !important;
+      color: #000 !important; }
+      .input__text:focus::-webkit-input-placeholder {
+        color: transparent; }
+      .input__text:focus::-moz-placeholder {
+        color: transparent; }
+      .input__text:focus:-moz-placeholder {
+        color: transparent; }
+      .input__text:focus:-ms-input-placeholder {
+        color: transparent; }

@@ -1,0 +1,83 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../../fonts/ProximaNova-Regular.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../../fonts/ProximaNova-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'ProximaNova', sans-serif;
+  box-sizing: border-box;
+  transition: all .2s ease-in;
+  margin: 0;
+}
+
+*:before,
+*:after {
+  transition: inherit;
+}
+
+.pswp,
+.pswp:before,
+.pswp:after,
+.pswp *,
+.pswp *:before,
+.pswp *:after {
+  transition: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+button, input, textarea {
+  border: none;
+}
+
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
+
+ul {
+}
+
+li {
+
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+.ui-datepicker,
+.ui-datepicker:before,
+.ui-datepicker:after,
+.ui-datepicker *,
+.ui-datepicker *:before,
+.ui-datepicker *:after {
+  transition: none;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 14px!important;
+}

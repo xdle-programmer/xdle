@@ -1,0 +1,82 @@
+.steps {
+  margin-top: 65px; }
+  .steps__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px; }
+    @media (max-width: 1023px) {
+      .steps__items {
+        grid-template-columns: 1fr;
+        grid-gap: 0; } }
+  .steps__item {
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    padding-left: 50px; }
+    @media (max-width: 1365px) {
+      .steps__item {
+        padding-left: 20px; } }
+    @media (max-width: 1023px) {
+      .steps__item {
+        padding: 20px; } }
+    .steps__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 360px;
+      height: 200px;
+      mask: url(../../../img/steps_mask.svg);
+      -webkit-mask: url(../../../img/steps_mask.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+      @media (max-width: 1023px) {
+        .steps__item:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          mask: none;
+          -webkit-mask: none; } }
+    .steps__item:nth-of-type(1):after {
+      background: linear-gradient(to bottom, #0c47d6, #0a21d8);
+      z-index: -1; }
+    .steps__item:nth-of-type(2):after {
+      background: linear-gradient(to bottom, #0f6bd8, #0c3fda);
+      z-index: -2; }
+    .steps__item:nth-of-type(3):after {
+      background: linear-gradient(to bottom, #118adc, #0f6dd8);
+      z-index: -3; }
+    .steps__item:nth-of-type(4):after {
+      background: linear-gradient(to bottom, #0f87c8, #118bdb);
+      z-index: -4; }
+  .steps__item-number {
+    font-size: 105px;
+    font-weight: 700;
+    margin-right: 10px; }
+  .steps__item-text {
+    font-size: 24px;
+    margin-right: -50px; }
+    @media (max-width: 1365px) {
+      .steps__item-text {
+        font-size: 18px;
+        margin-right: 0px; } }
+  .steps__button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 134px; }
+    @media (max-width: 1365px) {
+      .steps__button {
+        margin-top: 50px; } }

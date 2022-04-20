@@ -1,0 +1,56 @@
+{% include "partials/header.html" %}
+	<nav class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__elm">
+				<span>Главная</span>
+			</a>
+			<a href="#" class="breadcrumbs__elm">
+				<span>Оформление заказа</span>
+			</a>
+			<span class="breadcrumbs__elm">
+				Ваш заказ № N3421 успешно оформлен
+			</span>
+		</div>
+	</nav>
+	<main>
+		<div class="container">
+			<section class="success-order form-border">
+				<div class="success-order__content">
+					<h1 class="section-title">Ваш заказ № N3421<br>
+					успешно оформлен</h1>
+					<div class="regular-text">Спасибо за Ваш заказ! Наши менеджеры в течении дня свяжутся с Вами.<br>
+					Заказы сделанные в нерабочее время обрабатываются на следующий день.</div>
+					<div class="success-order__promo">
+						Ваш промокод для получения скидки на установку устройств: 
+						<span class="promo-code">%промокод%</span>
+						<div>Выбрать ближайший сервис вы можете <a href="#" class="text-link">здесь</a></div>
+					</div>
+					<div class="success-order__info">
+						<div class="info__row">Способ оплаты: Банковская карта</div>
+						<div class="info__price">31 970 руб.</div>
+					</div>
+					
+					<a href="#" class="button button_height button_dif-width">Оплатить заказ</a>
+					<div class="payment-hint">Вы будете перенаправленны на страницу оплаты. Услугу <br> предоставляет сервис онлайн-платежей «Яндекс.Касса».</div>
+					<div class="timout-container">
+						<div class="timout-container__text">
+							Вы будете перенаправлены через 
+						</div>
+						<div class="timout-container__visual">
+							<svg height="100" width="100">
+								  <circle class="circle-timer" cx="50" cy="50" r="40" stroke="#00adef" stroke-width="4"  fill="transparent"/>
+							</svg>
+							<span class="timout-container__timeout">5</span>
+						</div>
+					</div>
+				</div>
+				<div class="success-order__block-footer">
+					<div class="vertical-align-cell block-footer__text regular-text">
+						Остались вопросы? Напишите или позвоните нам<br>
+						Тел. 8 800 100-68-57 или mail: <a href="mailto:support@neoline.ru">support@neoline.ru</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+{% include "partials/footer.html" %}

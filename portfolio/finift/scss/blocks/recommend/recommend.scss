@@ -1,0 +1,67 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.recommend {
+  padding-top: 80px;
+  position: relative;
+
+  &__wrapper {
+  }
+
+  &__block {
+
+    & .owl-carousel {
+      position: static;
+    }
+  }
+
+  &__wrapper-slider {
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      width: 31px !important;
+      height: 81px !important;
+      background: url(../../../img/slider-arrow-blue.png) !important;
+      top: calc(50% + 90px);
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+
+    }
+
+    & .owl-next {
+      right: 0;
+    }
+
+    & .owl-prev {
+      left: 0;
+      transform: scaleX(-1) translateY(-50%);
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+    & .owl-prev.disabled,
+    & .owl-next.disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__button {
+    @include margin-auto;
+  }
+
+}

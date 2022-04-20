@@ -1,0 +1,26 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fifth {
+  background: url(../../../img/fifth.jpg);
+  @include background-cover-center;
+  background-position: top center !important;
+
+  &__title {
+    text-align: center;
+  }
+  &__text {
+    font-size: 18px!important;
+  }
+  &__text-center {
+    font-size: 18px!important;
+    text-align: center;
+    @include margin-auto;
+    display: flex;
+    margin-bottom: 50px!important;
+    width: 80%;
+  }
+  &__button {
+  }
+}

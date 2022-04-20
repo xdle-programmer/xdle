@@ -1,0 +1,49 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fran-fourth {
+  padding-top: 77px;
+  padding-bottom: 213px;
+
+  &__block {
+  }
+  &__subtitle {
+    @include font-intro-reg;
+    text-align: center;
+    font-size: 38px;
+    margin-top: 40px;
+    text-transform: uppercase;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 22px;
+    margin-top: 20px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    height: 146px;
+    @include flex-column-center;
+    text-align: center;
+    background: $yellow;
+
+  }
+  &__item-top {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 50px;
+
+    & span {
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+  &__item-bottom {
+    font-size: 30px;
+
+  }
+}

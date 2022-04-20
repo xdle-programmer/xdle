@@ -1,0 +1,49 @@
+.profile-balance {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .profile-balance__state-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(29, 30, 41, 0.5);
+    margin-bottom: 2px; }
+  .profile-balance__state-number {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1d1e29; }
+  .profile-balance__state-number-small {
+    font-size: 14px; }
+  .profile-balance__button {
+    width: 152px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 5px 11px 0 rgba(120, 198, 255, 0.41);
+    background-color: #5dbafd;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+    padding-left: 20px;
+    cursor: pointer;
+    position: relative; }
+    .profile-balance__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(../../../img/profile-balance/wallet.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%); }
+    .profile-balance__button:hover {
+      box-shadow: 0 5px 20px 0 rgba(120, 198, 255, 0.41); }

@@ -1,0 +1,28 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.contents {
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    width: 100%;
+
+    @media #{$mobile-big-screen} {
+      font-size: 20px;
+    }
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 11px;
+    width: 100%;
+
+    @media #{$mobile-big-screen} {
+      font-size: 17px;
+    }
+  }
+}

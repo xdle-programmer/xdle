@@ -1,0 +1,54 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section {
+  position: relative;
+  width: 100%;
+
+  &__background {
+    position: absolute;
+    @include absolute-fill;
+    z-index: -1;
+  }
+
+  &__background-wrapper {
+    position: absolute;
+    transform-origin: right bottom;
+    left: -10%;
+    bottom: 0;
+    height: 100%;
+    width: 110%;
+    transform: rotate(5deg);
+    border-bottom: 5px solid $red-dark;
+    overflow: hidden;
+
+    @media #{$tablet-small-screen} {
+      left: -55%;
+      width: 160%;
+      border-bottom: 12px solid $red-dark;
+    }
+
+  }
+
+  &__background-inner {
+    transform: rotate(-5deg);
+    position: absolute;
+    @include background-cover-center;
+    //background-color: $white;
+    width: 100%;
+    height: 130%;
+    top: -15%;
+    left: 0;
+
+    &--second {
+      height: 197%;
+      top: -35%;
+    }
+
+    &--fourth {
+      height: 197%;
+      top: -35%;
+    }
+  }
+}

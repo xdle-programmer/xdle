@@ -1,0 +1,318 @@
+.subscription {
+  position: relative;
+  padding-bottom: 50px;
+  width: 100%; }
+  @media (max-width: 767px) {
+    .subscription {
+      padding: 0 15px;
+      padding-bottom: 50px; } }
+  .subscription__background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 430px;
+    left: 0;
+    top: 0;
+    background: url(../../../img/subscription.png);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .subscription__block {
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 767px) {
+      .subscription__block {
+        width: 100%; } }
+  .subscription__title {
+    font-display: auto;
+    font-family: 'Proza libre', 'Open Sans', sans-serif !important;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+    padding-top: 25px;
+    margin-bottom: 15px;
+    text-align: center; }
+  .subscription__price-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 30px;
+    text-align: center; }
+  .subscription__subtitle {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    text-align: center; }
+  .subscription__price-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    align-items: baseline;
+    margin-bottom: 60px; }
+  .subscription__price {
+    font-size: 44px;
+    letter-spacing: 0.61px;
+    font-weight: 700; }
+  .subscription__price-inner {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.68px;
+    margin-left: 10px; }
+  .subscription__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px; }
+    .subscription__items--center {
+      grid-template-columns: 1fr;
+      padding: 0 25%; }
+      @media (max-width: 767px) {
+        .subscription__items--center {
+          padding: 0; } }
+    @media (max-width: 767px) {
+      .subscription__items {
+        grid-template-columns: 1fr;
+        grid-gap: 20px; } }
+  .subscription__item {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 25px;
+    margin-bottom: 30px; }
+    .subscription__item--blue {
+      box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 1px 18px rgba(0, 0, 0, 0.12), 0 6px 10px rgba(0, 0, 0, 0.14);
+      border-radius: 10px;
+      border: 1px solid #ffffff;
+      background-color: #0092e8;
+      color: #ffffff; }
+  .subscription__item ul {
+    color: #0092E8;
+    font-size: 16px;
+    font-weight: 400; }
+  .subscription__item--blue ul {
+    color: #ffffff; }
+  .subscription__item li {
+    margin-bottom: 15px; }
+  .subscription__item span {
+    color: #333333; }
+  .subscription__item--blue span {
+    color: #ffffff; }
+  .subscription__item-name {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: center; }
+    .subscription__item--blue .subscription__item-name {
+      color: #ffffff; }
+  .subscription__item-icon {
+    width: 100%;
+    height: 85px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-bottom: 10px; }
+  .subscription__item-title {
+    color: #0092E8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: baseline; }
+    .subscription__item--blue .subscription__item-title {
+      color: #ffffff; }
+  .subscription__item-title-big {
+    font-size: 62px;
+    font-weight: 300; }
+  .subscription__item-title-small {
+    font-size: 16px;
+    font-weight: 400; }
+  .subscription__item-title-desc {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: -10px; }
+  .subscription__item-subtitle {
+    position: relative;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center; }
+    .subscription__item-subtitle:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 2px;
+      border-radius: 2px;
+      background: #e7e7e7;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+      .subscription__item--blue .subscription__item-subtitle:after {
+        background: #ffffff; }
+  .subscription__item-button {
+    margin-top: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    border-radius: 99px;
+    border: 1px solid #0092e8;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    color: #0092e8; }
+    .subscription__item--blue .subscription__item-button {
+      color: #333333; }
+    .subscription__item-button--payu:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 20px;
+      background: url(../../../img/payu.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      margin-left: 8px; }
+    .subscription__item-button--invert-payu {
+      background: #0092e8;
+      color: #ffffff; }
+    .subscription__item-button--invert {
+      background: #0092e8;
+      color: #ffffff; }
+    .subscription__item-button--invert-payu:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 20px;
+      background: #ffffff;
+      mask: url(../../../img/payu.png);
+      -webkit-mask: url(../../../img/payu.png);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+      margin-left: 8px; }
+  .subscription__success-logo {
+    width: 244px;
+    height: 62px;
+    background: url(../../../img/TuSerwis_logo.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .subscription__success-logo {
+        margin-top: -35px; } }
+  .subscription__success-icon {
+    width: 277px;
+    height: 221px;
+    background: url(../../../img/subscription-success.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px; }
+  .subscription__success-title {
+    font-display: auto;
+    font-family: 'Proza libre', 'Open Sans', sans-serif !important;
+    color: #333333;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 30px; }
+  .subscription__success-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .subscription__success-button {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    height: 32px;
+    border-radius: 16px;
+    border: 2px solid #0093f0;
+    color: #0092e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 10px; }
+    .subscription__success-button--invert {
+      border-color: transparent; }
+  .subscription__item-input-block {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    position: relative; }
+  .subscription__item-input {
+    width: 140px;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid #0092e8;
+    font-size: 18px;
+    text-align: center; }
+  .subscription__fakture-button {
+    color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.53px;
+    text-align: center;
+    width: fit-content;
+    padding: 5px 25px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    padding-left: 41px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../../../img/fakture_background.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    position: relative; }
+    .subscription__fakture-button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      border-left: 1px dotted #ffffff;
+      height: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px; }
+  .subscription__subscribe-block {
+    padding-top: 30px; }
+  .subscription__subscribe-button {
+    color: #111111;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.61px;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer; }
+  .subscription__subscribe-form {
+    display: none; }

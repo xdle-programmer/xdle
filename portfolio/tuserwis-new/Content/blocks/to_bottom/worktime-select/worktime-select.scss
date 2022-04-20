@@ -1,0 +1,137 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.worktime-select {
+    width: 100%;
+    padding: 30px 0;
+
+    &__title {
+        text-align: center;
+        font-size: 15px;
+        color: $gray;
+        margin-bottom: 10px;
+    }
+
+    &__items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        @media #{$tablet-small-screen} {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+        }
+    }
+
+    &__item {
+        @include flex-column-center;
+        width: 100%;
+        padding: 0 20px;
+        border-right: 1px solid $gray;
+        position: relative;
+
+        &:after {
+            @include after-absolute;
+            @include absolute-fill;
+            background: rgba(255, 255, 255, 0);
+            cursor: default;
+            z-index: 1;
+            visibility: visible;
+        }
+
+        &.active:after {
+            visibility: hidden;
+        }
+
+        @media #{$tablet-small-screen} {
+            border-right: none;
+        }
+
+        &:nth-last-of-type(1) {
+            border-right: none;
+        }
+    }
+
+    $active: '.worktime-select__item.active';
+
+    &__item-switch {
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        text-decoration: underline;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__item-switch-active {
+        display: none;
+
+        #{$active} & {
+            display: block;
+            color: $blue;
+        }
+    }
+
+    &__item-switch-not-active {
+        display: block;
+        color: $gray;
+
+        #{$active} & {
+            display: none;
+        }
+    }
+
+    &__item-title {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: $gray;
+
+        #{$active} & {
+            color: $blue;
+        }
+    }
+
+    &__item-time {
+        width: 100%;
+        @include flex-row;
+        justify-content: space-between;
+    }
+
+    &__item-time-from {
+        width: calc(50% - 10px);
+        position: relative;
+
+        &:after {
+            @include after-absolute;
+            width: 6px;
+            height: 1px;
+            top: 54%;
+            background: $gray;
+            right: -13px;
+        }
+    }
+
+    &__item-time-to {
+        width: calc(50% - 10px);
+    }
+
+    &__item-time-input {
+        width: 100%;
+        text-align: center;
+        color: $gray-light;
+        border-bottom: 1px solid transparent;
+        opacity: 0;
+
+        #{$active} & {
+            border-bottom: 1px solid $blue;
+            color: $blue;
+            opacity: 1;
+        }
+    }
+}
+
+.td-clock {
+  margin-top: 23px !important;
+}

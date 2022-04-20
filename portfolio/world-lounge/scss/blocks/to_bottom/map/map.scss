@@ -1,0 +1,38 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.map {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  @include absolute-center;
+
+  @media #{$tablet-big-screen} {
+    display: none;
+  }
+
+  & iframe {
+    position: absolute;
+    @include absolute-fill;
+  }
+
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+    background: #343853;
+    opacity: .8;
+    transition: all .4s ease-in;
+    visibility: visible;
+
+    @media #{$tablet-big-screen} {
+      opacity: 0;
+    }
+  }
+
+  &:hover:after {
+    //opacity: 0;
+    //visibility: hidden;
+  }
+}

@@ -1,0 +1,107 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.share {
+  @include flex-row;
+  font-size: 13px;
+  font-weight: 300;
+  color: #808080;
+  flex-wrap: wrap;
+
+  &--white {
+    color: $white;
+  }
+
+  $share--white: '.share--white';
+
+  &__item {
+    @include flex-row;
+    margin-right: 12px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 13px;
+      height: 13px;
+      background: #808080;
+      margin-right: 5px;
+
+      #{$share--white} & {
+        background: $white;
+      }
+    }
+
+    &--date:before {
+      display: none;
+    }
+
+    &--like:before {
+      width: 12px;
+      height: 13px;
+      -webkit-mask-image: url(../../img/icon-like.png);
+      mask-image: url(../../img/icon-like.png);
+      @include mask-contain-center;
+    }
+
+    &--view:before {
+      width: 14px;
+      margin-top: 2px;
+      height: 10px;
+      -webkit-mask-image: url(../../img/icon-view.png);
+      mask-image: url(../../img/icon-view.png);
+      @include mask-contain-center;
+    }
+
+    &--comment:before {
+      width: 14px;
+      height: 12px;
+      -webkit-mask-image: url(../../img/icon-comment.png);
+      mask-image: url(../../img/icon-comment.png);
+      @include mask-contain-center;
+    }
+
+    &--tags:before {
+      display: none;
+    }
+
+    &--vk:before {
+      content: 'vk';
+      color: #808080;
+      font-weight: 700;
+      background: none;
+      margin-right: 7px;
+    }
+    &--ok:before {
+      content: 'ok';
+      font-weight: 700;
+      color: #808080;
+      background: none;
+      margin-right: 7px;
+    }
+
+  }
+
+  &__item-tag-title {
+    margin-right: 5px;
+  }
+  &__item-tag-link {
+    margin-right: 5px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 2px;
+    cursor: pointer;
+
+    &:after {
+      content: ',';
+    }
+    &:nth-last-of-type(1):after {
+      display: none;
+    }
+
+    &:hover {
+      color: $red;
+    }
+
+  }
+
+}

@@ -1,0 +1,72 @@
+{% include "partials/header.html" %}
+
+	<nav class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__elm">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__elm">
+				Вопросы и ответы
+			</span>
+		</div>
+	</nav>
+	<main>
+		<div class="container">
+			<section class="news-box auth-box">
+					<div class="popup__container container">
+						
+							<div class="auth-box__state auth-box__state_login">
+								<div class="log-reg-title">
+									<span class="js-change-state" data-state="auth-box__state_reg">Регистрация</span> /
+									<span class=" blue-link">Авторизация</span> 
+								</div>
+								<input type="text" name="" class="regular-input" placeholder="Логин">
+								<input type="password" name="" class="regular-input" placeholder="Пароль">
+								<div class="order-wrap">
+									<div class="half-wrap half-wrap_separate">
+										<button class="button button_height">Войти</button>
+									</div>
+									<div class="half-wrap half-wrap_separate">
+										<div class="dashed-button js-change-state" data-state="auth-box__state_reg">
+											<span>Востановить пароль</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="auth-box__state auth-box__state_reg">
+								<div class="log-reg-title">
+									<span class="blue-link">Регистрация</span> /
+									<span class="js-change-state" data-state="auth-box__state_login">Авторизация</span> 
+								</div>
+								<input type="text" name="" class="regular-input" placeholder="Номер телефона или email">
+								<div class="regular-text explain-text">Введите e-mail или телефон, на который будет отправлен Ваш пароль</div>
+								<button class="button button_full-width button_height">Зарегистрироваться</button>
+							</div>
+							<div class="auth-box__state auth-box__state_recover" >
+								<div class="log-reg-title">
+									<span class="js-change-state" data-state="auth-box__state_reg">Регистрация</span> /
+									<span class=" blue-link">Авторизация</span> 
+								</div>
+								<div class="regular-text explain-text">Введите e-mail или телефон. На него будет выслан пароль и дополнительная информация.</div>
+								<input type="text" name="" class="regular-input" placeholder="Номер телефона или email">
+								<div class="order-wrap">
+									<div class="half-wrap half-wrap_separate">
+										<div class="dashed-button">
+											<span>Выслать повторно код</span>
+										</div>
+									</div>
+									<div class="half-wrap half-wrap_separate">
+										<button class="button button_height">
+											Сменить пароль
+										</button>
+									</div>
+								</div>
+							</div>
+						
+						
+					</div>
+			</section>
+			
+		</div>
+	</main>
+{% include "partials/footer.html" %}

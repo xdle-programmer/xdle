@@ -1,0 +1,67 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.feedback-form {
+  background: #ededf1;
+  padding-top: 47px;
+  padding-bottom: 52px;
+
+  &__title {
+    padding: 0 45px;
+    margin-bottom: 5px;
+  }
+
+  &__desc {
+    font-size: 18px;
+    padding: 0 45px;
+    margin-bottom: 35px;
+  }
+
+  &__items {
+    padding: 0 45px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 7px;
+    grid-template-areas: 'name message' 'number message' 'mail check' 'city button';
+  }
+
+  &__item {
+    &--name {
+      grid-area: name
+    }
+
+    &--number {
+      grid-area: number
+    }
+
+    &--mail {
+      grid-area: mail
+    }
+
+    &--city {
+      grid-area: city
+    }
+
+    &--message {
+      grid-area: message
+    }
+
+    &--check {
+      grid-area: check;
+      padding-top: 4px;
+    }
+
+    &--button {
+      grid-area: button
+    }
+  }
+
+  &__item-check {
+    margin-bottom: 10px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+}

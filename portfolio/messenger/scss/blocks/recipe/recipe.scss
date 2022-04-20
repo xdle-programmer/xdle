@@ -1,0 +1,362 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  font-size: 14px;
+  font-weight: 500;
+
+  &__form {
+    //padding: 0 50px;
+    padding-top: 50px;
+    @include margin-auto;
+    width: 100%;
+    max-width: 550px;
+
+  }
+
+  &__input-block {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &--two-input {
+      display: grid;
+      grid-template-columns: 150px 150px;
+      grid-gap: 40px;
+    }
+
+    &--three-input {
+      display: grid;
+      grid-template-columns: 150px 150px 150px;
+      grid-gap: 40px;
+    }
+
+    &--no-margin {
+      margin-bottom: 0;
+    }
+
+    &--desc {
+      position: relative;
+    }
+  }
+
+  &__input-title {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  &__input-item {
+    width: 100%;
+    position: relative;
+  }
+
+  &__input-file {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+
+    & input[type="file"] {
+      display: block;
+      position: absolute;
+      @include absolute-fill;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    & label {
+      @include flex-row;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    & span {
+      border-radius: 17px;
+      border: 1px solid #e4e6f0;
+      background-color: #f0f0f7;
+      padding: 5px 15px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    & input[type="file"]:hover + span,
+    & input[type="file"]:focus + span {
+      background: #fffae1;
+    }
+
+  }
+
+  &__input-file-name {
+    border-radius: 17px;
+    padding: 5px 15px;
+    display: inline-block;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    color: #428bca;
+    margin-left: 20px;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__input {
+    height: 30px;
+    width: 100%;
+    border-bottom: 2px solid #0b9af5;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 20px;
+
+    &::-webkit-input-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+    &::-moz-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+    &:-moz-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+    &:-ms-input-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    &:focus {
+      background: #fffae1;
+    }
+
+    &.error {
+      border-color: red;
+      background: rgba(255, 0, 0, 0.05);
+      z-index: 1;
+    }
+
+  }
+
+  &__item-input-area,
+  &__item-input-area-hidden {
+    border: none;
+    border-bottom: 2px solid #d5dbe3;
+    resize: none;
+    padding: 0;
+    @include flex-row-center;
+    width: 100%;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    min-height: 60px;
+    height: 60px;
+  }
+
+  &__item-input-area {
+    overflow: hidden;
+  }
+  &__item-input-area-hidden {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  &__input-radio {
+    @include flex-row;
+  }
+  &__input-radio-item {
+    position: relative;
+  }
+
+  &__input-radio-item-input {
+    position: absolute;
+    @include absolute-fill;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &__input-radio-item-label {
+    height: 35px;
+    @include flex-row-center;
+    padding: 0 15px;
+    border: 1px solid #cccccc;
+    border-right: none;
+    cursor: pointer;
+  }
+
+  &__input-radio-item:nth-of-type(1) &__input-radio-item-label {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  &__input-radio-item:nth-last-of-type(1) &__input-radio-item-label {
+    border-right: 1px solid #cccccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &__input-radio-item-input:checked + &__input-radio-item-label {
+    background-color: #f0f0f7;
+    color: #3c4bf5;
+  }
+
+  &__input-radio-item-input:focus + &__input-radio-item-label {
+    background: #fffae1;
+    color: #3c4bf5;
+  }
+
+  &__table {
+
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 45px 1fr 130px 130px;
+    grid-auto-rows: 30px;
+  }
+
+  &__rows {
+    margin-bottom: 25px;
+  }
+
+  &__cell {
+    @include flex-row-center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &--list {
+    }
+
+  }
+
+  &__row-header {
+    border: 2px solid $gray-light;
+    @include flex-row-center;
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: 0;
+    left: 0;
+  }
+
+  &__row-number {
+    border: 2px solid $gray-light;
+    @include flex-row-center;
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: 0;
+    left: 0;
+  }
+
+  &__row-input {
+    border: 2px solid $gray-light;
+    padding-left: 10px;
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: 0;
+    left: 0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+
+    &::-webkit-input-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+    &::-moz-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+    &:-moz-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+    &:-ms-input-placeholder {
+      color: $gray-light;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    &.error {
+      border-color: red;
+      background: rgba(255, 0, 0, 0.05);
+      z-index: 1;
+    }
+
+    &:focus {
+      background: #fffae1;
+      z-index: 1;
+    }
+  }
+
+  &__autocomplete {
+    font-size: 15px;
+    border: 2px solid $gray-light !important;
+    border-top: none !important;
+    background: #fffae1 !important;
+  }
+
+  &__add-button {
+    @include margin-auto;
+    cursor: pointer;
+    width: 164px;
+    height: 45px;
+    border-radius: 23px;
+    border: 1px solid #e4e6f0;
+    background-color: #f0f0f7;
+    @include flex-row-center;
+    color: $blue;
+    font-size: 16px;
+    font-weight: 500;
+
+    &:focus {
+      background: rgba(255, 223, 57, 0.15);
+      border-color: $yellow;
+    }
+  }
+
+  &__buttons {
+    @include flex-row;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 23px;
+    border: 1px solid #e4e6f0;
+    background-color: #f0f0f7;
+    color: #3c4bf5;
+    font-size: 16px;
+    font-weight: 500;
+
+    &:focus {
+      background: rgba(255, 223, 57, 0.15);
+      border-color: $yellow;
+    }
+  }
+}

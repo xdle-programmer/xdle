@@ -1,0 +1,173 @@
+html {
+  overflow-x: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-weight: 400;
+  color: #333333; }
+
+@font-face {
+  font-family: 'exo2';
+  font-display: swap;
+  src: url(../../../fonts/Exo2-Light.ttf);
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'exo2';
+  font-display: swap;
+  src: url(../../../fonts/Exo2-Regular.ttf);
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'exo2';
+  font-display: swap;
+  src: url(../../../fonts/Exo2-SemiBold.ttf);
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'exo2';
+  font-display: swap;
+  src: url(../../../fonts/Exo2-Bold.ttf);
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'exo2';
+  font-display: swap;
+  src: url(../../../fonts/Exo2.0-Black.otf);
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  font-display: swap;
+  src: url(../../../fonts/Roboto-Thin.ttf);
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  font-display: swap;
+  src: url(../../../fonts/Roboto-Light.ttf);
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  font-display: swap;
+  src: url(../../../fonts/Roboto-Regular.ttf);
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  font-display: swap;
+  src: url(../../../fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  font-display: swap;
+  src: url(../../../fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  font-display: swap;
+  src: url(../../../fonts/Roboto-Black.ttf);
+  font-weight: 900;
+  font-style: normal; }
+
+* {
+  font-display: auto;
+  font-family: 'exo2', sans-serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
+
+select {
+  display: none; }
+
+.open-menu {
+  overflow: hidden;
+  background: #fafafa; }
+
+.wrapper {
+  min-height: 100vh;
+  font-weight: 500;
+  line-height: 22px;
+  position: relative; }
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: all 0.2s ease-in; }
+
+.wrapper *::-webkit-input-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *::-moz-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *:-moz-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *:-ms-input-placeholder {
+  transition: all 0.2s ease-in; }
+
+.touch-device * {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer; }
+
+button, input, textarea {
+  border: none;
+  background: none; }
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none; }
+
+.scroll-top {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  cursor: pointer;
+  bottom: 40px;
+  right: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(-1); }
+  .scroll-top:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 5px;
+    background: url(../../../img/arrow.png); }
+  .scroll-top.active {
+    visibility: visible;
+    opacity: 1; }
+
+.orange {
+  color: #e36c32; }
+
+.compensate-for-scrollbar {
+  margin-right: 0 !important; }

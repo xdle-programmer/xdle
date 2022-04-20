@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!--<script src="https://vuejs.org/js/vue.js"></script>-->
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <!--<script src="js/app.js"></script>-->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles/styles.css">
+    <title>trade-vgo</title>
+</head>
+
+<body>
+<noscript>
+    <strong>We're sorry but trade-vgo doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app" class="wrapper">
+    <div class="header">
+        <div class="header__left">
+
+            <div class="header__mobile-menu"></div>
+
+            <div class="header__logo">
+                <img src="img/logo.png" class="logo">
+            </div>
+
+            <div class="header__menu">
+                <a href="#" class="header__menu-item active">Partnership</a>
+                <a href="#" class="header__menu-item">FAQ</a>
+
+                <div class="header__social social">
+                    <a href="#" class="social__item social__item--vk"></a>
+                    <a href="#" class="social__item social__item--twitter"></a>
+                    <!--<a href="#" class="social__item social__item&#45;&#45;facebook"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;youtube"></a>-->
+                    <!--<a href="#" class="social__item social__item&#45;&#45;instagram"></a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="header__right">
+
+
+            <div class="header__language lang-selector">
+                <div class="lang-selector__button">
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+                <div class="lang-selector__list">
+                    <div class="lang-selector__item lang-selector__item--en">eng</div>
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+            </div>
+
+            <div class="header__bell"></div>
+
+            <a href="/authenticate" class="header__steam" style="display: none">
+                <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"
+                     class="header__steam-img" alt="">
+            </a>
+
+            <div class="header__login">
+                <div class="header__login-img" style="background: url(img/avatar.png);"></div>
+                <div class="header__login-nickname">Alexander Gudik</div>
+                <div class="header__login-arrow"></div>
+
+                <div class="header__login-menu">
+                    <div class="header__login-menu-item header__login-menu-item--trade-link">Trade link</div>
+                    <div class="header__login-menu-item header__login-menu-item--trade-history">Trade history</div>
+                    <div class="header__login-menu-item header__login-menu-item--partnership">Partnership</div>
+                    <div class="header__login-menu-item header__login-menu-item--logout">Logout</div>
+                    <div class="header__login-menu-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-shadow"></div>
+
+    <div class="chat">
+        <div class="chat__switch">
+            <div class="chat__switch-icon"></div>
+        </div>
+        <div class="chat__buttons">
+            <div class="chat__button active" data-switch-goal="message">CHAT</div>
+            <div class="chat__button chat__button--gray" data-switch-goal="withdraw">Withdrawals</div>
+        </div>
+        <div class="chat__items">
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item chat__item--goods" data-switch-mobile="message, withdraw" data-switch-desktop="message, withdraw">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-content-name">EnjoyMaloy</div>
+                    <div class="chat__item-content-text">
+                        Withdraw the
+                        item cost of
+                    </div>
+                    <div class="chat__item-content-price">
+                        $
+                        <div class="chat__item-content-price-inner">93.14</div>
+                    </div>
+                </div>
+                <div class="chat__item-goods-img-wrapper">
+                    <div class="chat__item-goods-img-block">
+                        <img class="chat__item-goods-img"
+                             src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                             alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item chat__item--goods chat__item--goods-sale" data-switch-mobile="message, withdraw" data-switch-desktop="message, withdraw">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-content-name">EnjoyMaloy</div>
+                    <div class="chat__item-content-text">
+                        Withdraw the
+                        item cost of
+                    </div>
+                    <div class="chat__item-content-price">
+                        $
+                        <div class="chat__item-content-price-inner">93.14</div>
+                    </div>
+                </div>
+                <div class="chat__item-goods-img-wrapper">
+                    <div class="chat__item-goods-img-block">
+                        <img class="chat__item-goods-img"
+                             src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                             alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item chat__item--goods" data-switch-mobile="message, withdraw" data-switch-desktop="message, withdraw">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-content-name">EnjoyMaloy</div>
+                    <div class="chat__item-content-text">
+                        Withdraw the
+                        item cost of
+                    </div>
+                    <div class="chat__item-content-price">
+                        $
+                        <div class="chat__item-content-price-inner">93.14</div>
+                    </div>
+                </div>
+                <div class="chat__item-goods-img-wrapper">
+                    <div class="chat__item-goods-img-block">
+                        <img class="chat__item-goods-img"
+                             src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                             alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item chat__item--goods chat__item--goods-sale" data-switch-mobile="message, withdraw" data-switch-desktop="message, withdraw">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-content-name">EnjoyMaloy</div>
+                    <div class="chat__item-content-text">
+                        Withdraw the
+                        item cost of
+                    </div>
+                    <div class="chat__item-content-price">
+                        $
+                        <div class="chat__item-content-price-inner">93.14</div>
+                    </div>
+                </div>
+                <div class="chat__item-goods-img-wrapper">
+                    <div class="chat__item-goods-img-block">
+                        <img class="chat__item-goods-img"
+                             src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                             alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item" data-switch-mobile="message" data-switch-desktop="message">
+                <div class="chat__item-img" style="background: url(img/avatar.png);"></div>
+                <div class="chat__item-content">
+                    <div class="chat__item-header">
+                        <div class="chat__item-header-name">Mad Mad</div>
+                        <div class="chat__item-header-time">19:36</div>
+                    </div>
+                    <div class="chat__item-message">
+                        Subscribe to my blog VK!
+                        Check <a href="#">vk.com/madmad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat__send">
+        <input class="chat__send-input" placeholder="Your message...">
+        <div class="chat__send-button"></div>
+    </div>
+
+    <div class="landing">
+        <div class="landing__text">
+            CSGO
+            <div class="landing__text-separator"></div>
+            VGO
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="content__block">
+            <div class="content__item">
+                <div class="goods-header">
+                    <div class="goods-header__title">
+                        Your offer
+                    </div>
+                    <div class="goods-header__title-mobile">
+                        <div class="goods-header__title-mobile-inner active">Your offer</div>
+                        <div class="goods-header__title-mobile-arrow"></div>
+                        <div class="goods-header__title-mobile-inner">BOT’S INVENTORY</div>
+                    </div>
+                    <div class="goods-header__balance">
+                        <div class="goods-header__balance-currency">$</div>
+                        <div class="goods-header__balance-value">1234.34</div>
+                    </div>
+                </div>
+                <div class="goods">
+                    <div class="goods__wrapper">
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__item hide">
+                <div class="goods-header">
+                    <div class="goods-header__title">
+                        BOT’S INVENTORY
+                    </div>
+                    <div class="goods-header__title-mobile">
+                        <div class="goods-header__title-mobile-inner">Your offer</div>
+                        <div class="goods-header__title-mobile-arrow"></div>
+                        <div class="goods-header__title-mobile-inner active">BOT’S INVENTORY</div>
+                    </div>
+                    <div class="goods-header__balance">
+                        <div class="goods-header__balance-currency">$</div>
+                        <div class="goods-header__balance-value">1234.34</div>
+                    </div>
+                </div>
+                <div class="goods">
+                    <div class="goods__wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content__control">
+
+
+            <div class="content__control-top">
+                <div class="content__control-balance balance">
+                    <div class="balance__title">Your Balance</div>
+                    <div class="balance__text">
+                        $ <span class="balance__text-inner">54.44</span> USD
+                    </div>
+                </div>
+
+                <div class="button-color button-color--gray content__control-top-button content__control-top-button--deposit">
+                    Deposit
+                </div>
+                <div class="button-color button-color--big content__control-top-button">Trade</div>
+                <div class="button-color button-color--big button-color--red content__control-top-button">Autoselect
+                </div>
+            </div>
+
+            <div class="content__menu-button"></div>
+
+            <div class="content__menu">
+                <div class="content__checkbox">
+                    <input class="switch" type="checkbox">
+                    <div class="content__checkbox-text">
+                        Live mode
+                    </div>
+                </div>
+
+                <div class="content__menu-title">FILTERS</div>
+
+                <div class="content__ranges">
+
+                    <div class="input-range content__ranges-item">
+                        <div class="input-range__block">
+                            <div class="input-range__desc">
+                                <input class="input-range__desc-input" type="text" id="price-amount-min">
+                            </div>
+                            <div class="input-range__desc">
+                                <input class="input-range__desc-input" type="text" id="price-amount-max">
+                            </div>
+                        </div>
+
+                        <div class="input-range__wrapper">
+                            <div id="slider-range" class="input-range__item">
+                                <div class="ui-slider-handle"></div>
+                                <div class="ui-slider-handle"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="content__control-select">
+                    <select class="select">
+                        <option>item type</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                        <option>Value 5</option>
+                    </select>
+                </div>
+
+                <div class="content__control-select">
+                    <select class="select select--blue">
+                        <option>exterior</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                        <option>Value 5</option>
+                    </select>
+                </div>
+
+                <div class="content__control-select">
+                    <select class="select">
+                        <option>quality</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                        <option>Value 5</option>
+                    </select>
+                </div>
+
+                <div class="content__reset">
+                    Reset filters
+                </div>
+
+                <div class="content__commission">
+                    <div class="content__commission-title">
+                        COMISSION 10%
+                    </div>
+                    <div class="content__commission-text">
+                        This commission applies
+                        to all items.
+                    </div>
+                </div>
+
+                <div class="content__bonus">
+                    <div class="content__bonus-icon"></div>
+                    <div class="content__bonus-title">How to get a bonus?</div>
+                    <div class="content__bonus-text">
+                        Add "
+                        <div class="content__bonus-text-inner">myvgo.com</div>
+                        " to Steam nickname then log in via Opskins
+                    </div>
+                    <div class="content__bonus-activate">BONUS ACTIVATED</div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="content__block">
+
+            <div class="content__switch">
+                <div class="content__switch-item active">YOUR OFFER</div>
+                <div class="content__switch-arrow"></div>
+                <div class="content__switch-item">BOT’S INVENTORY</div>
+            </div>
+
+
+            <div class="content__item content__item--switch active">
+                <div class="goods-header">
+                    <div class="goods-header__buttons">
+                        <div class="goods-header__button-reload"></div>
+                        <div class="goods-header__button goods-header__button--dota"></div>
+                        <div class="goods-header__button goods-header__button--cs-go"></div>
+                        <div class="goods-header__button goods-header__button--vgo"></div>
+                        <div class="goods-header__button goods-header__button--key"></div>
+                        <div class="goods-header__button goods-header__button--virl"></div>
+                    </div>
+
+                    <div class="goods-header__inputs">
+                        <div class="goods-header__sort">
+                            <select class="select select--small">
+                                <option>Order by..</option>
+                                <option>select 1</option>
+                                <option>select 2</option>
+                            </select>
+                        </div>
+                        <div class="goods-header__search">
+                            <div class="goods-header__search-button">
+                                <div class="goods-header__search-button-icon"></div>
+                            </div>
+                            <input type="text" placeholder='Search..' class="goods-header__search-input">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="goods">
+                    <div class="goods__wrapper goods__wrapper--big">
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__item content__item--switch">
+                <div class="goods-header">
+                    <div class="goods-header__buttons">
+                        <div class="goods-header__button-reload"></div>
+                        <div class="goods-header__button goods-header__button--dota"></div>
+                        <div class="goods-header__button goods-header__button--cs-go"></div>
+                        <div class="goods-header__button goods-header__button--vgo"></div>
+                        <div class="goods-header__button goods-header__button--key"></div>
+                        <div class="goods-header__button goods-header__button--virl"></div>
+                    </div>
+
+                    <div class="goods-header__inputs">
+                        <div class="goods-header__sort">
+                            <select class="select select--small">
+                                <option>Order by..</option>
+                                <option>select 1</option>
+                                <option>select 2</option>
+                            </select>
+                        </div>
+                        <div class="goods-header__search">
+                            <div class="goods-header__search-button">
+                                <div class="goods-header__search-button-icon"></div>
+                            </div>
+                            <input type="text" placeholder='Search..' class="goods-header__search-input">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="goods">
+                    <div class="goods__wrapper goods__wrapper--big">
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--sale">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/2969419275/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-sale">
+                                    <div class="goods__item-sale-item">-10%</div>
+                                </div>
+                                <div class="goods__item-count">x5</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goods__item goods__item--blue">
+                            <div class="goods__item-img-wrapper">
+                                <div class="goods__item-img-block">
+                                    <img class="goods__item-img"
+                                         src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                                         alt=""/>
+                                </div>
+                            </div>
+                            <div class="goods__item-buttons">
+                                <div class="goods__item-exterior">BS</div>
+                                <div class="goods__item-count">x32</div>
+                            </div>
+                            <div class="goods__item-info">
+                                <div class="goods__item-name">Tec-9 | Army Mesh</div>
+                                <div class="goods__item-price">
+                                    <div class="goods__item-price-currency">$</div>
+                                    <div class="goods__item-price-value">2.55</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+            <img class="footer__kassa" src="img/free-kassa.png">
+
+            <div class="footer__copyright">
+                (c) 2018 Powered by
+                vgowiki.com
+            </div>
+    </div>
+
+    <div class="goods-natural">
+        <div class="goods-natural__close"></div>
+        <div class="goods-natural__header">
+            <div class="goods-natural__header-name">AK-47 | Bloodsport</div>
+            <div class="goods-natural__header-state">Minimal Wear</div>
+        </div>
+        <div class="goods-natural__content">
+            <img class="goods-natural__content-img"
+                 src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                 alt=""/>
+        </div>
+        <div class="goods-natural__footer">
+            <div class="goods-natural__float">
+                <div class="goods-natural__float-desc">
+                    <div class="goods-natural__float-title">
+                        NAME TAG
+                    </div>
+                    <div class="goods-natural__float-numbers">
+                        Nagibator228
+                    </div>
+                </div>
+                <div class="goods-natural__float-desc">
+                    <div class="goods-natural__float-title">
+                        Float
+                    </div>
+                    <div class="goods-natural__float-numbers">
+                        0.12312415765
+                    </div>
+                </div>
+
+                <div class="goods-natural__float-panel">
+                    <div class="goods-natural__float-arrow" style="left:52px"></div>
+                </div>
+            </div>
+            <div class="goods-natural__button button-color">Buy 100$ (-10% SALE)</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+</html>

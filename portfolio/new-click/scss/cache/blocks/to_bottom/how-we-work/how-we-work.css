@@ -1,0 +1,164 @@
+.how-we-work {
+  height: 500px;
+  width: 100%;
+  background: url(../../img/how-we-work-background.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  position: relative;
+  color: #ffffff; }
+  @media (max-width: 767px) {
+    .how-we-work {
+      height: auto; } }
+  .how-we-work__block {
+    height: 100%; }
+  .how-we-work__title {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: 700;
+    font-size: 41px; }
+    @media (max-width: 1023px) {
+      .how-we-work__title {
+        font-size: 29px;
+        text-align: center;
+        width: 100%; } }
+    @media (max-width: 767px) {
+      .how-we-work__title {
+        font-size: 22px; } }
+  .how-we-work__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%; }
+    @media (max-width: 767px) {
+      .how-we-work__items {
+        flex-wrap: wrap;
+        padding-top: 100px;
+        padding-bottom: 30px; } }
+  .how-we-work__item {
+    width: 20%;
+    height: 100%;
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.6); }
+    .how-we-work__item:nth-of-type(1) {
+      border-left: 1px solid rgba(255, 255, 255, 0.6); }
+    @media (max-width: 1023px) {
+      .how-we-work__item {
+        padding-top: 135px; } }
+    @media (max-width: 767px) {
+      .how-we-work__item {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 15px 0;
+        border: none;
+        margin-bottom: 15px; }
+        .how-we-work__item:nth-of-type(1) {
+          border-left: none; } }
+  .how-we-work__item-number {
+    font-weight: 700;
+    font-size: 45px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; }
+    .how-we-work__item-number:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(130deg, #ff4903, #ffd800);
+      -webkit-mask-image: url(../../img/circle-mask.svg);
+      mask-image: url(../../img/circle-mask.svg); }
+      .how-we-work__item:hover .how-we-work__item-number:after {
+        transform: scale(1.1); }
+    @media (max-width: 767px) {
+      .how-we-work__item-number {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 1px;
+        top: 0;
+        font-size: 20px; } }
+  .how-we-work__item-text {
+    text-align: center;
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5; }
+    @media (max-width: 1279px) {
+      .how-we-work__item-text {
+        padding: 0 5px;
+        font-size: 16px; } }
+    @media (max-width: 1023px) {
+      .how-we-work__item-text {
+        font-size: 14px; } }
+    @media (max-width: 767px) {
+      .how-we-work__item-text {
+        padding-left: 50px;
+        text-align: left;
+        width: 100%;
+        font-size: 17px; } }
+  .how-we-work__item-line {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55px;
+    height: 13px;
+    overflow: hidden; }
+    @media (max-width: 767px) {
+      .how-we-work__item-line {
+        position: relative;
+        margin-top: 10px;
+        bottom: auto;
+        left: auto;
+        margin-left: 50px;
+        transform: none; } }
+  .how-we-work__item-line-inner {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .how-we-work__item-line-inner:before, .how-we-work__item-line-inner:after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 50%;
+      background: url(../../img/continuous-zigzag.svg);
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: 100% 100% !important;
+      animation: zigzag 3s infinite linear paused; }
+    .how-we-work__item:hover .how-we-work__item-line-inner:before,
+    .how-we-work__item:hover .how-we-work__item-line-inner:after {
+      animation-play-state: running; }
+
+@keyframes zigzag {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }

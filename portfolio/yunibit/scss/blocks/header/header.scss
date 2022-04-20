@@ -1,0 +1,94 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+  color: $white;
+  padding: 30px 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 5;
+
+
+  &--scroll {
+    padding: 10px 0;
+    background: #38383a;
+
+    @media #{$tablet-small-screen} {
+      opacity: 0;
+      visibility: hidden;
+      background: transparent;
+    }
+  }
+
+  @media #{$tablet-small-screen} {
+    padding: 10px 0;
+  }
+
+  &__block {
+    @include flex-row-center;
+
+    @media #{$tablet-small-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 500;
+    @include flex-row-center;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 55px;
+      height: 32px;
+      margin-right: 15px;
+      background: url(../../../img/logo.png);
+    }
+
+    @media #{$tablet-small-screen} {
+      @include margin-auto
+    }
+  }
+  &__phone {
+    margin-left: 30px;
+    @include flex-row-center;
+
+    @media #{$tablet-small-screen} {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      background: url(../../../img/header-phone-input.png);
+    }
+  }
+  &__callback {
+    margin-left: 50px;
+    padding: 25px 50px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #fcfcfc;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $blue-dark;
+      background: $blue-dark;
+      color: $white;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-left: 0;
+      margin-top: 10px;
+      padding: 10px 50px;
+    }
+  }
+}

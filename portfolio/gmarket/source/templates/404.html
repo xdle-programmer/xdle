@@ -1,0 +1,74 @@
+{% include "partials/header.html" with {
+		mini : true
+	}
+%}
+	<main>
+		<div class="container page-404">
+			<div class="header-404">
+				<a href="./" class="logo"></a>
+			</div>
+			<section class="info-404 mobile-stretch">
+				<div class="info-404__title">
+					<div class="user-icon user-icon_404">404</div>
+					<div class="md-title md-title_no-margin md-title_page-title">Cтраница не найдена.</div>
+				</div>
+				<p class="info-404__text">
+					К сожалению, страница, которую Вы запросили, не была найдена (ошибка 404).
+					Проверьте адрес страницы, вернитесь в <a href="#">каталог товаров</a> или перейдите на <a href="#">главную</a> страницу.
+					Если эта ошибка будет повторяться, обратитесь, пожалуйста, в службу поддержки.
+					<br><br>
+					Или воспользуйтесь поиском:
+				</p>
+				<form class="search-line search-line_404">
+                    <input type="text" name="" class="search-line__input" placeholder="Поиск товаров">
+                    <div class="suggest-list">
+                        <a href="#" class="suggest-list__suggest">
+							Планшет Apple iPad Pro 12.9 128GB Wi-Fi+Cell.Space Gray <br> Refubrished 
+						</a>
+                        <a href="#" class="suggest-list__suggest">
+							Наушники Bluetooth Beats Beats Solo3 Wireless Gold
+						</a>
+                    </div>
+                    <button class="search-line__submit"></button>
+                </form>
+			</section>
+			<section class="cont-section mobile-stretch">
+				<div class="container container_mobile-full">
+					<h2 class="md-title">Вас может заинтересовать</h2>
+					<div class="overflow-wrapper">
+						<div class="card-slider card-slider_start-quater">
+							{% 
+								set names = [
+									"Ноутбук Apple MacBook Pro 15 Touch Bar i7 2.9/16/512 MPTV2RU/A",
+									"Соковыжималка центробежная Moulinex JU610D10",
+									"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+									"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+									"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+									"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+									"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+									"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+									"Мультиварка Redmond RMC-М90"
+								]
+							%}
+							{% for i in 0..8 %}
+								<div class="slider-slide slider-slide_multiple">
+									{% 
+										include "partials/product-card.html" with {
+											name: names[i],
+											bages: "red",
+											img: "img/samples/catalog/c" ~ i ~ ".jpg"
+										}
+									 %}
+								</div> 
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</section> 
+			{% include "partials/banner_wide.html"%}
+		</div>
+	</main> 
+{% include "partials/footer.html" with {
+		mini : true
+	} 
+%} 

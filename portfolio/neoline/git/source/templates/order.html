@@ -1,0 +1,233 @@
+{% include "partials/header-small.html" %}
+	<nav class="breadcrumbs">
+		
+	</nav>
+	<main>
+		<div class="container">
+			<section class="order">
+				<div class="title-block title-block_margin">
+					<h1 class="section-title">Оформление заказа</h1>
+				</div>
+				<div class="order__center-colmn">
+					<div class="product-table">
+						<div class="product-table__row">
+							<div class="product-table__cell product-table__cell_img">
+								<img src="img/samples/suggest1.png" class="product-table__img">
+							</div>
+							<div class="product-table__cell product-table__cell_name">
+								<div class="regular-text product-table__product-name">
+									Видеорегистратор <br>
+									Neoline X-COP 9100
+								</div>
+							</div>
+							<div class="product-table__cell product-table__cell_price">
+								<div class="product-table__price">
+									7 990 руб.
+								</div>
+							</div>
+							<div class="product-table__cell product-table__cell_remove">
+								<div class="remove-button">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="product-table__row">
+							<div class="product-table__cell product-table__cell_img">
+								<img src="img/samples/suggest2.png" class="product-table__img">
+							</div>
+							<div class="product-table__cell product-table__cell_name">
+								<div class="regular-text product-table__product-name">
+									Видеорегистратор <br>
+									Neoline X-COP 9100
+								</div>
+							</div>
+							<div class="product-table__cell product-table__cell_price">
+								<div class="product-table__price">
+									7 990 руб.
+								</div>
+							</div>
+							<div class="product-table__cell product-table__cell_remove">
+								<div class="remove-button">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="product-table__row">
+							<div class="product-table__cell product-table__cell_img">
+								<img src="img/samples/suggest3.png" class="product-table__img">
+							</div>
+							<div class="product-table__cell product-table__cell_name">
+								<div class="regular-text product-table__product-name">
+									Видеорегистратор <br>
+									Neoline X-COP 9100
+								</div>
+							</div>
+							<div class="product-table__cell product-table__cell_price">
+								<div class="product-table__price">
+									<span class="price__old-price">10 990 руб.</span>
+									8 990 руб.
+								</div>
+							</div>
+							<div class="product-table__cell product-table__cell_remove">
+								<div class="remove-button">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-border">
+						<div class="container form-border__container">
+							<div class="form-border__title">Личные данные и доставка</div>
+							<div class="radio-row">
+								<label class="checkbox-label checkbox-label_radio">
+									<input  type="radio" class="checkbox-label__checkbox-hidden" name="type-user" checked="true">
+									<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+									<span class="checkbox-label__text">Физическое лицо</span>
+								</label>
+								<label class="checkbox-label checkbox-label_radio">
+									<input  type="radio" class="checkbox-label__checkbox-hidden" name="type-user">
+									<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+									<span class="checkbox-label__text">Юридическое лицо</span>
+								</label>
+							</div>
+							<div class="input-wrap">
+								<button class="input-wrap__button input-wrap__button_search">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</button>
+								<input type="text" name="" class="input-wrap__input" placeholder="Москва">
+								<button class="input-wrap__button input-wrap__button_clear">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button>
+							</div>
+							<input type="text" name="" class="regular-input" placeholder="Адрес доставки">
+							<div class="radio-colmn">
+								<label class="checkbox-label checkbox-label_radio">
+									<input  type="radio" class="checkbox-label__checkbox-hidden" name="type-delivery" checked="true">
+									<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+									<span class="checkbox-label__text">Доставка курьером (3-4 рабочих дня)</span>
+								</label>
+								<label class="checkbox-label checkbox-label_radio">
+									<input  type="radio" class="checkbox-label__checkbox-hidden" name="type-delivery">
+									<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+									<span class="checkbox-label__text">Доставка почтой России (10 рабочих дней)</span>
+								</label>
+							</div>
+							<div class="grey-info">
+								Стоимость доставки: 310 руб.<br>
+								Примерный срок доставки: 2 дня
+							</div>
+						</div>
+						<div class="map-place" >
+							<div class="map-place__error-text">Нужно выбрать пункт выдачи заказа на карте!</div>
+							<input type="hidden" name="" id="delivery-value">
+							<input type="hidden" name="" id="address-value">
+							<div id="delivery-map" class="map-place__map"></div>
+							<div class="grey-info" >
+								<div class="grey-info__container" id="pvz-info">
+
+								</div>
+								<div class="grey-info__handle">
+									<span>Показать больше</span>
+								</div>
+							</div>
+
+						</div>
+						<div class="container form-border__container">
+							<input type="text" name="" class="regular-input valid-text" placeholder="Имя*" required="true">
+							<input type="text" name="" class="regular-input valid-email" placeholder="Email*" required="true">
+							<input type="text" name="" class="regular-input phone-mask valid-phone" placeholder="Телефон*" required="true">
+							<textarea class="regular-input" placeholder="Комментарий к заказу"></textarea>
+						</div>
+					</div>
+					<div class="form-border">
+						<div class="container form-border__container">
+							<div class="form-border__title">Способ оплаты</div>
+							<label class="checkbox-label checkbox-label_radio">
+								<input  type="radio" class="checkbox-label__checkbox-hidden" name="type-payment" checked="true">
+								<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+								<span class="checkbox-label__text">Оплата банковской картой онлайн</span>
+							</label>
+							<label class="checkbox-label checkbox-label_radio">
+								<input  type="radio" class="checkbox-label__checkbox-hidden" name="type-payment">
+								<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+								<span class="checkbox-label__text">Яндекс Деньги</span>
+							</label>
+							<label class="checkbox-label checkbox-label_radio">
+								<input  type="radio" class="checkbox-label__checkbox-hidden" name="type-payment">
+								<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+								<span class="checkbox-label__text">Оплата при получении</span>
+							</label>
+						</div>
+					</div>
+					<div class="form-border form-border_grey-back">
+						<div class="container form-border__container">
+							<table class="result-table">
+								<tr>
+									<td>Товары на сумму:</td>
+									<td>31 970 руб.</td>
+								</tr>
+								<tr>
+									<td>Экономия:</td>
+									<td>2000 руб.</td>
+								</tr>
+								<tr>
+									<td>Доставка:</td>
+									<td>320 руб.</td>
+								</tr>
+								<tr class="result-table__result-row">
+									<td class="result-row__title">Итого</td>
+									<td>
+										3 товара на сумму
+										<div class="result-table__result-price">31 970 руб.</div>
+									</td>
+								</tr>
+							</table>
+							<button class="button button_height order-button">Оформить заказ</button>
+							<div class="regular-text">Нажимая на кнопку «Оформить заказ», вы принимаете условия Публичной оферты</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="right-colmn right-colmn_desctop">
+					<form class="feedback-block">
+						<div class="feedback-block__title">Требуется консультация?</div>
+						<div class="regular-text">Перезвоним в течении 5 минут
+						и ответим на Ваши вопросы</div>
+						<input type="text" name="" class="phone-mask feedback-block__input" placeholder="+7 (ххх) ххх-хх-хх">
+						<button class="button button_white button_height">Перезвоните мне</button>
+					</form>
+					<div class="order-advantages">
+						
+						<div class="order-advantages__adv-item">
+							<svg class="i-adv">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#order-vant1"></use>
+							</svg>
+							<div class="regular-text">Мы гарантируем Ваших персональных данных и не передаем их третьим лицам, кроме служб доставки.</div>
+						</div>
+						<div class="order-advantages__adv-item">
+							<svg class="i-adv">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#order-vant2"></use>
+							</svg>
+							<div class="regular-text">Оплата картой абсолютно безопасна, благодаря использованю SSL протокола. Данные вашей карты надежно защищены при онлайн оплате.</div>
+						</div>
+						<div class="order-advantages__adv-item">
+							<svg class="i-adv">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#order-vant3"></use>
+							</svg>
+							<div class="regular-text">После оплаты на указанный Вами E-mail придет электронный чек согласно ФЗ-54</div>
+						</div>
+						<div class="order-advantages__adv-item">
+							<svg class="i-adv">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#order-vant4"></use>
+							</svg>
+							<div class="regular-text">Доставка товара осуществляется
+							транспортной компанией ХХХ по всей России, время доставки 2-5 рабочих дней</div>
+						</div>
+						
+					</div>
+				</div> -->
+			</section>
+		</div>
+	</main>
+	
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+{% include "partials/footer.html" %}

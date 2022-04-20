@@ -1,0 +1,38 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.screen {
+  height: 100%;
+
+  @media #{$tablet-big-screen} {
+    height: 100%;
+  }
+
+  &__hidden {
+    //height: 3000px;
+  }
+
+  & *,
+  & *:before,
+  & *:after {
+    transition: $main-transition;
+  }
+
+  & *::-webkit-input-placeholder {
+    transition: $main-transition;
+  }
+
+  & *::-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-ms-input-placeholder {
+    transition: $main-transition;
+  }
+
+}

@@ -1,0 +1,149 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section-7 {
+  height: 100%;
+  @include flex-column-center;
+  width: 1620px;
+  position: relative;
+  align-items: flex-start;
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    order: 5;
+    padding: 40px;
+  }
+
+  &__circles {
+    position: absolute;
+    left: 480px;
+    top: 80vh;
+    z-index: -1;
+
+    @media #{$tablet-big-screen} {
+      left: 0;
+      top: 0;
+      transform: scale(0.4);
+    }
+
+    @media #{$tablet-big-screen} {
+      display: none!important;
+    }
+  }
+
+
+  $circles-red:'.section-7__circles--red';
+
+  &__circle {
+    border: 1px solid #f2f2f2;
+
+    position: absolute;
+    @include absolute-center;
+    border-radius: 50%;
+
+    z-index: -1;
+
+    @media #{$tablet-big-screen} {
+      border: 4px solid #f2f2f2;
+    }
+
+    #{$circles-red} & {
+      border: 1px solid $red;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    &--1 {
+      width: 828px;
+      height: 828px;
+    }
+
+    &--2 {
+      width: 1140px;
+      height: 1140px;
+    }
+
+    &--3 {
+      width: 1438px;
+      height: 1438px;
+    }
+
+    &--4 {
+      width: 1759px;
+      height: 1759px;
+    }
+
+    &--5 {
+      width: 2072px;
+      height: 2072px;
+    }
+  }
+
+  &__title {
+    font-size: 150px;
+    line-height: 224px;
+    @include font-noto('');
+    @include flex-row;
+    text-align: left;
+
+    &--1 {
+      padding-left: 260px;
+    }
+
+    &--2 {
+      padding-left: 370px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 35px;
+      line-height: 48px;
+      padding-left: 0;
+
+      &--2 {
+        padding-left: 30px;
+      }
+    }
+  }
+
+  &__title-inner {
+
+    &--red {
+      color: $red;
+    }
+
+    &--сube {
+      position: relative;
+      color: $white;
+      z-index: 1;
+
+      &:after {
+        @include after-absolute;
+        width: 100%;
+        padding-bottom: 100%;
+        background: $red;
+        @include absolute-center;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 60px;
+    line-height: 82px;
+    color: $gray-light;
+    @include font-noto('');
+    margin-top: 50px;
+    padding-left: 620px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 25px;
+      line-height: 25px;
+      padding-left: 50px;
+      margin-top: 20px;
+    }
+  }
+
+}

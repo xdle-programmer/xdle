@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.seventh {
+  background: url(../../../img/seventh.jpg);
+  @include background-cover-center;
+  background-position: top center !important;
+
+  &__block {
+    width: 60%;
+    padding: 50px 0;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__title {
+  }
+
+  &__text {
+    font-size: 18px !important;
+  }
+
+  &__list {
+    color: $white;
+    margin-top: 50px;
+  }
+
+  &__list-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__list-items {
+  }
+
+  &__list-item {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include flex-row;
+    align-items: center;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 14px;
+      background: url(../../../img/check-green.svg);
+      @include background-contain-center;
+      margin-right: 10px;
+    }
+  }
+}

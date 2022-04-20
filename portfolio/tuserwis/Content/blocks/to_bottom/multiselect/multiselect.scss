@@ -1,0 +1,65 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.multiselect {
+
+    &__block {
+        @include flex-row;
+        flex-wrap: wrap;
+    }
+
+    &__input {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 10px;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__input-inner {
+    }
+
+    &__input-all {
+        cursor: pointer;
+        color: $blue;
+        font-size: 13px;
+    }
+
+    &__value {
+        @include flex-row-center;
+        background: #0092e8;
+        padding: 5px 15px;
+        color: #fff;
+        font-size: 13px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__value-name {
+    }
+
+    &__value-del {
+        width: 10px;
+        height: 10px;
+        background: $white;
+        mask: url(../../../img/close.svg);
+        -webkit-mask: url(../../../img/close.svg);
+        @include mask-contain-center;
+        margin-left: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background: $magenta;
+        }
+
+        .editable-block & {
+            display: none
+        }
+
+        .editable-block.edit & {
+            display: block
+        }
+    }
+}

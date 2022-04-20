@@ -1,0 +1,78 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.range-slider {
+  padding-top: 16px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 0;
+  }
+
+  & *,
+  & *:before,
+  & *:after {
+    transition: none;
+  }
+
+
+  &__inputs {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    position: relative;
+  }
+
+  &__input {
+    @include flex-row;
+    height: 100%;
+    padding-left: 15px;
+    color: $gray-dark;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    width: calc(50% - 10px);
+    @include font-roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &__item {
+    margin-top: 25px;
+    width: calc(100% - 18px);
+    margin-bottom: 17px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  &__item-line {
+    height: 3px !important;
+    border: none !important;
+    background: $gray-light !important;
+  }
+
+  &__item-progress {
+    height: 3px !important;
+    border: none !important;
+    background: $gray-dark !important;
+  }
+
+  &__item-handle {
+    width: 17px !important;
+    height: 17px !important;
+    background: $red !important;
+    border-radius: 50% !important;
+    border: none !important;
+    top: -7px !important;
+    cursor: pointer !important;
+
+    &:hover {
+      background: $red-dark !important;
+    }
+  }
+
+  &__item-handle:focus {
+    outline: none !important;
+  }
+}

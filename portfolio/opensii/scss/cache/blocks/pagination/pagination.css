@@ -1,0 +1,45 @@
+.pagination {
+  background: #f8f8f8;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center; }
+  .pagination__item {
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #121212; }
+    .pagination__item:hover {
+      color: #bd1d00; }
+    .pagination__item.active {
+      background: #121212;
+      color: #ffffff; }
+    .pagination__item--next:after {
+      content: '';
+      display: block;
+      margin-left: 10px;
+      width: 6px;
+      height: 7px;
+      margin-top: 5px;
+      background: #121212;
+      -webkit-mask-image: url(../../img/icon-double-quote.png);
+      mask-image: url(../../img/icon-double-quote.png);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .pagination__item--next:hover:after {
+      background: #bd1d00; }

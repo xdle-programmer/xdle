@@ -1,0 +1,135 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fourth {
+  background: $magenta;
+  color: $white;
+
+  &__block {
+    padding-top: 160px;
+
+    @media #{$tablet-small-screen} {
+      padding-top: 60px;
+    }
+  }
+
+  &__title {
+    font-size: 63px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 57px;
+    padding-left: 290px;
+    margin-bottom: 100px;
+
+    @media #{$tablet-small-screen} {
+      padding-left: 0;
+      font-size: 43px;
+      line-height: 47px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    padding-bottom: 125px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      padding-bottom: 70px;
+    }
+
+    &:nth-last-of-type(1) {
+      padding-bottom: 0;
+
+      @media #{$tablet-small-screen} {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__item-number {
+    position: relative;
+    padding-left: 70px;
+
+    @media #{$tablet-small-screen} {
+      padding-left: 35px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-number-name {
+    position: absolute;
+    @include font-din-alternate;
+    left: -48px;
+    top: 44px;
+    transform: rotate(-90deg);
+    font-size: 60px;
+
+    @media #{$tablet-small-screen} {
+      left: -24px;
+      top: 29px;
+      transform: rotate(-90deg);
+      font-size: 29px;
+    }
+  }
+
+  &__item-number-value {
+    font-size: 171px;
+    line-height: 188px;
+    @include font-din-condensed;
+
+    @media #{$tablet-small-screen} {
+      font-size: 91px;
+      line-height: 1em;
+    }
+  }
+
+  &__item-text {
+    padding-right: 50px;
+  }
+
+  &__item-text-line {
+    font-size: 29px;
+    @include font-rubik;
+    margin-bottom: 36px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__el-1 {
+    width: 818px;
+    height: 818px;
+    position: absolute;
+    background: url(../../../img/fourth-el-1.png);
+    @include background-contain-center;
+    top: 81px;
+    right: -500px;
+    mix-blend-mode: luminosity;
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+
+  &__el-2 {
+    width: 500px;
+    height: 496px;
+    opacity: 0.75;
+    position: absolute;
+    background: url(../../../img/fourth-el-2.png);
+    @include background-contain-center;
+    bottom: -90px;
+    right: -472px;
+    mix-blend-mode: luminosity;
+    z-index: 2;
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+}

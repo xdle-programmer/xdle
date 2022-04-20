@@ -1,0 +1,64 @@
+.landing {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url(../../img/main-bacground-inner.png) no-repeat;
+  background-size: cover;
+  background-position: center bottom; }
+  @media (max-width: 767px) {
+    .landing {
+      display: none; } }
+  .landing:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding-bottom: 49.44%;
+    top: -6px;
+    background: url(../../img/main-bacground.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    z-index: -1; }
+  .landing__text {
+    font-size: 44px;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    position: relative;
+    text-shadow: -3px 3px 10px rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; }
+    .landing__text:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: url(../../img/arrow_light.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 40px);
+      height: calc(100% + 100px);
+      opacity: .7; }
+      @media (max-width: 767px) {
+        .landing__text:after {
+          display: none; } }
+    @media (max-width: 767px) {
+      .landing__text {
+        font-size: 31px; } }
+  .landing__text-separator {
+    background: url(../../img/landing-text.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    width: 60px;
+    height: 20px; }

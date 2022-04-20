@@ -1,0 +1,31 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.second {
+  position: absolute;
+  @include absolute-fill;
+  z-index: 5;
+
+  @media #{$tablet-big-screen} {
+    position: static;
+    order: -1;
+  }
+
+
+  &__content {
+    position: absolute;
+    top: 52%;
+    left: 46%;
+    right: 6%;
+    margin-top: -210px;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 30px);
+      @include margin-auto;
+      position: static;
+      margin-top: 15px;
+    }
+  }
+
+}

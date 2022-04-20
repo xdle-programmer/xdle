@@ -1,0 +1,148 @@
+.input {
+  position: relative;
+  width: 100%; }
+  .input--icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 23px;
+    left: 0;
+    top: 0; }
+  .input--icon--info:after {
+    width: 17px;
+    height: 17px;
+    content: '?';
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0092E8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    padding-bottom: 1px; }
+  .input--icon--date:after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../../../img/icon-date.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .input--icon--time:after {
+    background: url(../../../img/icon-time.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    left: 9px;
+    top: 7px; }
+  .input--icon--cost:after {
+    background: url(../../../img/icon-cost.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .input.focus .warning.active {
+    opacity: 0;
+    visibility: hidden; }
+  .input.focus .placeholder {
+    opacity: 1;
+    visibility: visible; }
+  .input__button {
+    width: 100% !important;
+    min-width: 180px !important;
+    height: 36px !important;
+    padding-top: 2px !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: 1px solid #e7e7e7 !important;
+    border-radius: 3px !important;
+    background: #fafafa !important;
+    position: relative !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: space-between;
+    text-align: center; }
+    .input__button:focus {
+      outline: none !important;
+      background: #fff !important;
+      color: #000 !important;
+      border-color: #0092E8 !important; }
+    .input__button--open {
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important; }
+    .input__button--textarea {
+      height: auto !important;
+      align-items: stretch;
+      resize: none; }
+    .input__button--textarea:focus {
+      background: #fff !important;
+      color: #000 !important;
+      border-color: #0092E8 !important; }
+    .input.focus .input__button {
+      background: #fff !important;
+      color: #000 !important;
+      border-color: #0092E8 !important; }
+  .input__text {
+    font-display: auto;
+    font-family: 'segoe', sans-serif !important;
+    float: none !important;
+    border-radius: 3px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #000 !important;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 100%;
+    flex-grow: 1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: flex-start; }
+    .input__button--textarea .input__text {
+      height: auto;
+      min-height: 80px;
+      resize: vertical;
+      padding-top: .5em !important; }
+    .input__button--textarea-big .input__text {
+      min-height: 156px; }
+    .input--icon .input__text {
+      padding-left: 40px !important; }
+    .input__text::-webkit-input-placeholder {
+      color: rgba(32, 36, 39, 0.2); }
+    .input__text::-moz-placeholder {
+      color: rgba(32, 36, 39, 0.2); }
+    .input__text:-moz-placeholder {
+      color: rgba(32, 36, 39, 0.2); }
+    .input__text:-ms-input-placeholder {
+      color: rgba(32, 36, 39, 0.2); }
+    .input__text:focus {
+      outline: none !important;
+      background: #fff !important;
+      color: #000 !important;
+      border-color: #0092E8 !important; }
+      .input__text:focus::-webkit-input-placeholder {
+        color: transparent; }
+      .input__text:focus::-moz-placeholder {
+        color: transparent; }
+      .input__text:focus:-moz-placeholder {
+        color: transparent; }
+      .input__text:focus:-ms-input-placeholder {
+        color: transparent; }

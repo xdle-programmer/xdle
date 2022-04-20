@@ -1,0 +1,20 @@
+.articles-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 30px; }
+  .articles-list--one-col {
+    grid-template-columns: 1fr; }
+  @media (max-width: 1279px) {
+    .articles-list {
+      grid-template-columns: 1fr; } }
+  .articles-list__link {
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-size: 20px;
+    font-weight: 700; }
+    .articles-list__link:hover {
+      color: #2e6e9d !important; }
+    @media (max-width: 700px) {
+      .articles-list__link {
+        font-size: 16px; } }

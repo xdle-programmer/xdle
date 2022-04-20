@@ -1,0 +1,96 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.fill-form {
+    padding-top: 433px;
+    padding-bottom: 302px;
+
+    @media #{$tablet-small-screen} {
+        padding-top: 270px;
+        padding-bottom: 270px;
+    }
+
+    @media #{$mobile-big-screen} {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+
+    @media #{$mobile-middle-screen} {
+        padding-bottom: 150px;
+    }
+
+    &__block {
+        padding-left: 231px;
+
+        @media #{$tablet-small-screen} {
+            padding-left: 150px;
+        }
+
+        @media #{$mobile-big-screen} {
+            padding-left: 50px;
+        }
+
+        @media #{$mobile-middle-screen} {
+            padding-left: 15px;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        @media #{$tablet-small-screen} {
+        }
+
+        @media #{$mobile-middle-screen} {
+            padding-left: 15px;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__form {
+        width: 627px;
+        display: flex;
+
+        @media #{$tablet-small-screen} {
+        }
+
+        @media #{$mobile-middle-screen} {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__el {
+        position: absolute;
+        right: -203px;
+        top: -368px;
+        width: 612px;
+        height: 844px;
+        z-index: -1;
+        background: url("../../../img/map-pointer-gray.svg");
+        @include background-contain-center;
+
+        @media #{$tablet-small-screen} {
+            width: 612px;
+            height: 744px;
+            top: -313px;
+        }
+
+        @media #{$mobile-big-screen} {
+            width: 512px;
+            height: 644px;
+            top: -282px;
+        }
+
+        @media #{$mobile-middle-screen} {
+            width: 312px;
+            height: 444px;
+            top: -155px;
+            right: -160px;
+        }
+    }
+}

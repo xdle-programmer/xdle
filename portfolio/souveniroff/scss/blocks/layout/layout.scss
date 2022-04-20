@@ -1,0 +1,49 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.layout {
+
+  &-half {
+    width: 48%;
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &--main {
+    @include layout-padding;
+  }
+
+  &--content {
+    @include layout-padding-content;
+  }
+
+  &--short {
+    width: 570px;
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &--with-menu {
+    width: calc(100% - 350px);
+
+    @media #{$desktop-middle-screen} {
+      width: calc(100% - 280px);
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+
+  }
+
+}

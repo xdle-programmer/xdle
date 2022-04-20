@@ -1,0 +1,47 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  height: auto;
+  border-radius: 30px;
+  border: 2px solid $gray;
+  color: $white;
+  font-weight: 500;
+  display: inline-block;
+  padding: 0 40px;
+  font-size: 16px;
+  line-height: 55px;
+  background: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  &:after {
+    z-index: -1;
+    @include after-absolute;
+    @include absolute-fill;
+
+    @include background-magenta-gradient;
+    opacity: 0;
+    transform: scale(1.2);
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+
+  @media #{$tablet-big-screen} {
+    font-size: 14px;
+    line-height: 35px;
+  }
+
+}

@@ -1,0 +1,111 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.about {
+  padding: 120px 0;
+  background: #f3f3f3;
+
+  @media #{$tablet-big-screen} {
+    padding: 40px 0;
+  }
+
+  &__block {
+    position: relative;
+    padding-top: 17px;
+  }
+
+  &__title {
+    @include font-druk;
+    font-size: 42px;
+    letter-spacing: 1px;
+    line-height: 37px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      font-size: 34px;
+      line-height: 30px;
+      margin-top: 15px;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logo {
+    width: 200px;
+    right: 0;
+    top: 13px;
+    position: absolute;
+
+    @media #{$tablet-big-screen} {
+      width: 130px;
+      position: relative;
+      right: auto;
+      top: auto;
+      @include margin-auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    line-height: 33px;
+    color: $gray;
+    font-size: 22px;
+  }
+
+  &__list {
+    visibility: hidden;
+    background: $black;
+    @include flex-row;
+    color: $white;
+    padding-top: 14px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 50px;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 66px;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__list-separator {
+    width: 1px;
+    height: 67px;
+    background: #3b3b3b;
+
+    @media #{$tablet-big-screen} {
+      width: 80%;
+      margin: 15px auto;
+      height: 1px;
+    }
+  }
+
+  &__list-item {
+
+    @media #{$tablet-big-screen} {
+      text-align: center;
+    }
+
+  }
+
+  &__list-item-top {
+    font-size: 44px;
+    font-weight: 700;
+    @include font-druk;
+  }
+
+  &__list-item-bottom {
+    font-size: 18px;
+  }
+}

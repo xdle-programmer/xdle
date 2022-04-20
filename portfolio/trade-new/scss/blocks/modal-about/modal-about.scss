@@ -1,0 +1,355 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.modal-about {
+  display: grid;
+  grid-template-columns: 540px 660px;
+  max-height: 95vh;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+
+  @media #{$tablet-big-screen} {
+    width: 95vw;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  &__desc {
+    @include flex-row-center;
+    background: url(../../img/modal-about__desc.jpg);
+    @include background-cover-center;
+    background-position: bottom center !important;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+
+    @media #{$tablet-big-screen} {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+
+    }
+  }
+
+  &__img {
+
+    @media #{$tablet-big-screen} {
+      @include flex-row-center;
+      height: 150px;
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 100px;
+    }
+  }
+
+  &__img-inner {
+
+    @media #{$tablet-big-screen} {
+      width: auto;
+      height: 90%;
+    }
+  }
+
+  &__el-1 {
+    position: absolute;
+    background: url(../../img/modal-about__el-1.png);
+    @include background-contain-center;
+    width: 288px;
+    height: 279px;
+    left: -60px;
+    top: 400px;
+
+    @media #{$desktop-extra-big-screen} {
+      top: 38vh;
+    }
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__el-2 {
+    position: absolute;
+    background: url(../../img/modal-about__el-2.png);
+    @include background-contain-center;
+    width: 117px;
+    height: 115px;
+    left: 130px;
+    top: -30px;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__el-3 {
+    position: absolute;
+    background: url(../../img/modal-about__el-3.png);
+    @include background-contain-center;
+    width: 159px;
+    height: 152px;
+    left: 320px;
+    top: 50px;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__info {
+    padding: 50px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    background-image: linear-gradient(-23deg, #e1eaee 0%, #fafafa 100%);
+
+    @media #{$desktop-extra-big-screen} {
+      padding: 20px 50px;
+    }
+
+    @media #{$tablet-big-screen} {
+      padding: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 10px;
+    }
+  }
+
+  &__title {
+    color: #4c5360;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 400;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 25px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+  }
+
+  &__text {
+    color: #969fad;
+    font-size: 20px;
+    font-weight: 400;
+
+    & span {
+      font-weight: 700;
+      color: #83c84b;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 15px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 13px;
+
+      & br {
+        display: none;
+      }
+    }
+  }
+
+  &__sep {
+    width: 100%;
+    border-bottom: 3px dashed #d5dde0;
+    margin: 20px 0;
+
+    @media #{$desktop-extra-big-screen} {
+      margin: 10px 0;
+    }
+  }
+
+  &__instant {
+    color: #576171;
+    font-size: 21px;
+    font-weight: 700;
+    padding-left: 45px;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    &:before {
+      @include after-absolute;
+      background: url(../../img/modal-about__instant.png);
+      @include background-contain-center;
+      width: 26px;
+      height: 33px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 15px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 13px;
+    }
+  }
+
+  &__checkbox-input {
+    display: none;
+  }
+
+  &__checkbox-label {
+    display: block;
+    color: #576171;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 700;
+    padding-left: 45px;
+    position: relative;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 15px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 13px;
+    }
+
+    &:before {
+      @include after-absolute;
+      width: 26px;
+      height: 26px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #d5dde0;
+      border-radius: 4px;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 18px;
+      height: 14px;
+      left: 4px;
+      top: 49%;
+      transform: translateY(-50%);
+      background: url(../../img/checkbox.png);
+      @include background-contain-center;
+      opacity: 0;
+    }
+
+  }
+
+  &__checkbox-input:checked + &__checkbox-label:after {
+    opacity: 1;
+  }
+
+  &__buttons {
+    @include flex-row;
+    margin-top: 25px;
+
+    @media #{$tablet-big-screen} {
+      justify-content: center;
+      margin-top: 15px;
+    }
+  }
+
+  &__button {
+    width: 249px;
+    height: 61px;
+    border-radius: 10px;
+    @include flex-row-center;
+    padding-left: 35px;
+    text-shadow: 0 6px 9px rgba(0, 0, 0, 0.15);
+    font-size: 29px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f7fafa;
+    margin-right: 35px;
+    position: relative;
+    cursor: pointer;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      height: 40px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 17px;
+      padding-left: 0;
+      width: 45%;
+      margin-right: 15px;
+
+      &:nth-last-of-type(1) {
+        margin-right: 0;
+      }
+    }
+
+
+    &--open {
+      box-shadow: 0 10px 20px rgba(131, 199, 75, 0.4);
+      background-image: linear-gradient(to right, #56ab2f 0%, #a8e063 100%);
+
+      &:before {
+        @include after-absolute;
+        width: 39px;
+        height: 40px;
+        background: url(../../img/mystery-cases__item-info-buttons-item-key.png);
+        @include background-contain-center;
+        left: 51px;
+        top: 12px;
+
+        @media #{$desktop-extra-big-screen} {
+          top: 4px;
+        }
+
+        @media #{$tablet-big-screen} {
+          display: none;
+        }
+      }
+    }
+    &--close {
+      background-color: #969fad;
+
+      &:before {
+        @include after-absolute;
+        width: 40px;
+        height: 40px;
+        background: url(../../img/modal-about__button--close.png);
+        @include background-contain-center;
+        left: 30px;
+        top: 13px;
+
+        @media #{$desktop-extra-big-screen} {
+          top: 4px;
+        }
+
+        @media #{$tablet-big-screen} {
+          display: none;
+        }
+      }
+    }
+  }
+}

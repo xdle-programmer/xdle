@@ -1,0 +1,434 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.car-animation {
+  padding-top: 85px;
+
+  @media #{$tablet-small-screen} {
+    padding-bottom: 00px;
+    padding-top: 00px;
+  }
+
+  @media #{$mobile-big-screen} {
+    padding-bottom: 50px;
+  }
+
+  &__block {
+    height: 423px;
+    @include margin-auto;
+    width: 490px;
+    position: relative;
+    opacity: 0;
+
+    @media #{$tablet-big-screen} {
+      transform: scale(.9);
+    }
+
+    @media #{$tablet-small-screen} {
+      transform: scale(.65);
+    }
+
+    @media #{$tablet-small-screen} {
+      transform: scale(1);
+      width: 100%;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    & *,
+    & *:before,
+    & *:after {
+      transition: none;
+    }
+  }
+
+  &__buildings {
+    width: 100%;
+    position: absolute;
+    height: 81%;
+    top: 0;
+    left: 0;
+  }
+
+  &__build {
+    position: absolute;
+    bottom: 0;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      z-index: 3;
+      background: $white;
+      opacity: .4;
+    }
+
+    &--1 {
+      width: 20%;
+      height: 65%;
+      left: 0;
+      z-index: 1;
+    }
+
+    &--2 {
+      width: 32%;
+      height: 74%;
+      left: 15%;
+      z-index: 2;
+    }
+
+    &--3 {
+      width: 32%;
+      height: 100%;
+      left: 35%;
+      z-index: 3;
+    }
+
+    &--4 {
+      width: 32%;
+      height: 68%;
+      left: 55%;
+      z-index: 2;
+    }
+
+    &--5 {
+      width: 25%;
+      height: 55%;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &__car {
+    position: absolute;
+    width: 62%;
+    height: 47%;
+    top: 43%;
+    left: 20%;
+    z-index: 4;
+  }
+
+  &__man {
+    position: absolute;
+    width: 33%;
+    height: 76%;
+    bottom: 0;
+    left: 37%;
+    z-index: 5;
+  }
+
+  &__inner-img {
+    position: absolute;
+    @include absolute-fill;
+    object-fit: contain;
+    object-position: center bottom !important;
+  }
+
+  &__message {
+    position: absolute;
+    color: $white;
+    background: $blue;
+    left: 600px;
+    top: 500px;
+    z-index: 8;
+    white-space: nowrap;
+    border-radius: 5px;
+    opacity: 0;
+    cursor: default;
+
+    &:after {
+      @include after-absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 9px 0 0 7px;
+      border-color: transparent transparent transparent #0093e8;
+      right: 0;
+      transform: translateX(100%);
+      bottom: 10px;
+    }
+
+    &--1 {
+      padding: 10px 15px;
+      left: -6%;
+      top: 20px;
+      font-size: 13px;
+
+      .car-animation__block.active & {
+        animation: message-animation-1 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .3s;
+      }
+
+      @keyframes message-animation-1 {
+        0% {
+          opacity: 0;
+          transform: translate(95px, 160px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
+    }
+
+    &--2 {
+      padding: 15px 30px;
+      left: -65%;
+      top: 120px;
+      font-size: 19px;
+
+      .car-animation__block.active & {
+        animation: message-animation-2 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .6s;
+      }
+
+      @keyframes message-animation-2 {
+        0% {
+          opacity: 0;
+          transform: translate(168px, 46px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
+    }
+
+    &--3 {
+      padding: 15px 20px;
+      left: -46%;
+      bottom: 60px;
+      top: auto;
+      font-size: 15px;
+
+      .car-animation__block.active & {
+        animation: message-animation-3 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .9s;
+      }
+
+      @keyframes message-animation-3 {
+        0% {
+          opacity: 0;
+          transform: translate(255px, -121px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
+    }
+
+    &--4 {
+      padding: 10px 20px;
+      left: 67%;
+      top: 0;
+      font-size: 18px;
+
+      .car-animation__block.active & {
+        animation: message-animation-4 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .9s;
+      }
+
+      @keyframes message-animation-4 {
+        0% {
+          opacity: 0;
+          transform: translate(-30px, 171px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
+
+
+      &:after {
+        @include after-absolute;
+        border-width: 0 0 9px 7px;
+        border-color: transparent transparent #0093e8 transparent;
+        left: 0;
+        transform: translateX(-100%);
+        bottom: 10px;
+      }
+    }
+
+    &--5 {
+      padding: 10px 20px;
+      left: 79%;
+      top: 130px;
+      font-size: 16px;
+
+      .car-animation__block.active & {
+        animation: message-animation-5 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .3s;
+      }
+
+      @keyframes message-animation-5 {
+        0% {
+          opacity: 0;
+          transform: translate(-85px, 43px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
+
+      &:after {
+        @include after-absolute;
+        border-width: 0 0 9px 7px;
+        border-color: transparent transparent #0093e8 transparent;
+        left: 0;
+        transform: translateX(-100%);
+        bottom: 10px;
+      }
+    }
+
+    &--6 {
+      padding: 20px 30px;
+      left: 76%;
+      top: auto;
+      bottom: 70px;
+      font-size: 22px;
+
+      .car-animation__block.active & {
+        animation: message-animation-6 .2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: .6s;
+      }
+
+      @keyframes message-animation-6 {
+        0% {
+          opacity: 0;
+          transform: translate(-71px, -99px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
+
+      &:after {
+        @include after-absolute;
+        border-width: 0 0 9px 7px;
+        border-color: transparent transparent #0093e8 transparent;
+        left: 0;
+        transform: translateX(-100%);
+        bottom: 10px;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+
+      animation: none !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      font-size: 16px;
+      padding: 7px 10px;
+      top: 42px;
+      bottom: auto;
+      white-space: normal;
+      height: auto;
+      opacity: 0;
+      transform: translateY(100px);
+
+      &:after {
+        @include after-absolute;
+        border-width: 9px 4.5px 0 4.5px;
+        border-color: #0093e8 transparent transparent transparent;
+        right: 74px;
+        left: auto;
+        transform: translateY(100%);
+        bottom: 0;
+      }
+
+      $duration-mobile:2000;
+
+      .car-animation__block.active & {
+        animation: message-animation-mobile #{$duration-mobile}ms ease-in-out!important;
+      }
+
+
+      .car-animation__block.active &--2 {
+        animation-delay: #{$duration-mobile * 1}ms!important;
+      }
+
+      .car-animation__block.active &--3 {
+        animation-delay: #{$duration-mobile * 2}ms!important;
+      }
+
+      .car-animation__block.active &--4 {
+        animation-delay: #{$duration-mobile * 3}ms!important;
+      }
+
+      .car-animation__block.active &--5 {
+        animation-delay: #{$duration-mobile * 4}ms!important;
+      }
+
+      .car-animation__block.active &--6 {
+        animation: message-animation-mobile-last #{$duration-mobile}ms ease-in-out!important;
+        animation-fill-mode: forwards!important;
+        animation-delay: #{$duration-mobile * 5}ms!important;
+      }
+
+
+      @keyframes message-animation-mobile {
+        0% {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+
+        10% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        90% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        100% {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+      }
+
+      @keyframes message-animation-mobile-last {
+        0% {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+
+        10% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        90% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,159 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section-15 {
+  height: 100%;
+  position: relative;
+  background: url(../../../img/section-15/background.jpg);
+  width: 2900px;
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    order: 12;
+    padding: 30px 0;
+    @include flex-column;
+  }
+
+
+  &__title-block {
+    position: absolute;
+    height: 37vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    @include flex-column;
+    justify-content: center;
+    padding-left: 70px;
+    @include font-noto('');
+    color: $white;
+
+    @media #{$desktop-small-screen} {
+      height: 25vh;
+    }
+
+    @media #{$tablet-big-screen} {
+      height: auto;
+      position: relative;
+      left: auto;
+      top: auto;
+      width: 100%;
+      padding: 0 30px;
+    }
+  }
+
+  &__title {
+    font-size: 63px;
+
+    @media #{$desktop-small-screen} {
+      font-size: 50px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 53px;
+
+    @media #{$desktop-small-screen} {
+      font-size: 45px;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle-inner {
+    display: inline;
+
+    &--red {
+      color: $red;
+    }
+  }
+
+  &__items {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    color: $white;
+
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      display: block;
+      margin-top: 20px;
+
+      @include dots;
+    }
+  }
+
+  &__item {
+    padding: 0 70px;
+    padding-bottom: 20px;
+    padding-top: 37vh;
+
+    @media #{$desktop-small-screen} {
+      padding-top: 25vh;
+    }
+
+    &:nth-of-type(even) {
+      background: rgba(255, 255, 255, .1);
+    }
+
+
+    @media #{$tablet-big-screen} {
+      padding: 30px;
+    }
+  }
+
+  &__item-icon {
+    width: 100px;
+    height: 100px;
+    @include background-contain-center;
+    margin-bottom: 50px;
+
+    @media #{$desktop-small-screen} {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item-title {
+    @include font-noto('');
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 180px;
+      height: 3px;
+      background: $red;
+      left: 0;
+      bottom: -17px;
+    }
+
+    @media #{$desktop-small-screen} {
+      font-size: 18px;
+    }
+  }
+
+  &__item-title-line {
+  }
+
+  &__item-text {
+    font-size: 18px;
+
+    @media #{$desktop-small-screen} {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+
+}

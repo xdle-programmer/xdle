@@ -1,0 +1,168 @@
+.link-change {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 1; }
+  .link-change:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 160px);
+    height: calc(100% + 40px);
+    z-index: -1;
+    background: rgba(26, 28, 30, 0.8); }
+    @media (max-width: 1599px) {
+      .link-change:after {
+        width: 100%; } }
+  @media (max-width: 767px) {
+    .link-change {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; } }
+  .link-change__input-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40px;
+    width: 60%; }
+    @media (max-width: 767px) {
+      .link-change__input-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto; } }
+  .link-change__title {
+    height: 100%;
+    position: relative; }
+    @media (max-width: 767px) {
+      .link-change__title {
+        height: 40px;
+        margin-bottom: 25px; } }
+  .link-change__title-item {
+    height: 100%;
+    background: #3d4145;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    color: #fff;
+    font-weight: 700; }
+  .link-change__title-service-block {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translateY(50%); }
+  .link-change__title-service {
+    height: 18px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    padding: 0 5px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 5px;
+    background: linear-gradient(to bottom, #989899, #868788);
+    cursor: pointer; }
+    .link-change__title-service--active {
+      background: linear-gradient(to bottom, #81bb2c, #6fa91a); }
+  .link-change__input {
+    background: #212325;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    color: #a6a7a8; }
+    @media (max-width: 767px) {
+      .link-change__input {
+        height: 40px;
+        width: 95%;
+        margin-bottom: 15px; } }
+  .link-change__input-button {
+    height: 100%;
+    background: linear-gradient(to bottom, #81bb2c, #6fa91a);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 35px;
+    margin-left: 10px;
+    cursor: pointer; }
+    .link-change__input-button:hover {
+      opacity: .6; }
+    @media (max-width: 1599px) {
+      .link-change__input-button {
+        padding: 0 10px;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      .link-change__input-button {
+        height: 30px;
+        margin-bottom: 15px;
+        margin-left: 0; } }
+  .link-change__buttons {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .link-change__buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto; } }
+  .link-change__button {
+    height: 100%;
+    background: linear-gradient(to bottom, #fbfffa, #e5fce2);
+    color: #202224;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 35px;
+    margin: 0 5px;
+    cursor: pointer; }
+    .link-change__button:hover {
+      opacity: .6; }
+    @media (max-width: 1599px) {
+      .link-change__button {
+        padding: 0 10px;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      .link-change__button {
+        height: 30px;
+        margin-bottom: 15px; } }

@@ -1,0 +1,198 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  margin-top: 92px;
+
+  @media #{$tablet-small-screen} {
+    margin-top: 50px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 50px;
+    color: #484d56;
+    padding-bottom: 86px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__contact {
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+  &__contact-title {
+    font-size: 60px;
+    font-weight: 700;
+
+    @media #{$tablet-small-screen} {
+      font-size: 33px;
+    }
+  }
+  &__contact-subtitle {
+    font-size: 18px;
+  }
+  &__contact-phone {
+    @include flex-row;
+    margin-top: 40px;
+
+    @media #{$tablet-small-screen} {
+      @include flex-row-center;
+    }
+  }
+  &__contact-phone-icon {
+    width: 31px;
+    height: 33px;
+    @include background-contain-center;
+    margin-right: 10px;
+
+    @media #{$tablet-small-screen} {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+  &__contact-phone-link {
+    font-size: 31px;
+    margin-right: 19px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 21px;
+    }
+  }
+  &__contact-mail {
+    @include flex-row;
+    font-size: 28px;
+    margin-top: 17px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 21px;
+      @include flex-row-center;
+    }
+  }
+  &__contact-mail-icon {
+    width: 32px;
+    height: 24px;
+    @include background-contain-center;
+    margin-right: 35px;
+
+    @media #{$tablet-small-screen} {
+      width: 20px;
+      margin-right: 5px;
+    }
+  }
+  &__contact-mail-text {
+  }
+  &__contact-map {
+    @include flex-row;
+    margin-top: 21px;
+  }
+  &__contact-map-icon {
+    width: 27px;
+    height: 35px;
+    @include background-contain-center;
+    margin-right: 40px;
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+
+  &__contact-map-text {
+    line-height: 30px;
+
+    @media #{$tablet-small-screen} {
+      text-align: center;
+    }
+  }
+
+  &__form {
+    padding-top: 10px;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__form-inner {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 19px;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+      width: 100%;
+    }
+  }
+
+  &__form-inner-title {
+    text-align: right;
+    width: 30%;
+    padding-right: 20px;
+    text-transform: uppercase;
+    padding-top: 8px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+  }
+
+  &__form-inner-input {
+    width: 0;
+    flex-grow: 1;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__form-inner-input-item {
+    @include flex-row;
+    width: 100%;
+    height: 55px;
+    border-color: #1f2733!important;
+    padding-left: 20px;
+
+    &--big {
+      height: 115px;
+    }
+  }
+
+  &__form-button {
+    height: 60px;
+    border-radius: 10px;
+    background-color: #1f2733;
+    color: $white;
+    @include flex-row-center;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+
+    @media #{$tablet-small-screen} {
+      font-size: 21px;
+    }
+  }
+
+  &__bottom {
+    background: #1f2733;
+    color: $white;
+    @include flex-row-center;
+    padding: 70px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+}

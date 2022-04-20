@@ -1,0 +1,20 @@
+.mobile-switch {
+  display: none; }
+  @media (max-width: 767px) {
+    .mobile-switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; } }
+  @media (max-width: 767px) {
+    .mobile-switch__button * {
+      font-size: 13px; }
+    .mobile-switch__button:nth-of-type(1) {
+      display: flex; }
+      .mobile-switch__button:nth-of-type(1):after {
+        content: '/';
+        color: #dd9c0a;
+        margin: 0 7px; } }
+  @media (max-width: 767px) {
+    .mobile-switch__item.hide {
+      display: none; } }

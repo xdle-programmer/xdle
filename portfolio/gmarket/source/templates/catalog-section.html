@@ -1,0 +1,74 @@
+{% include "partials/header.html" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Каталог товаров</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		<div class="container clear-fix">
+			<div class="md-title md-title_page-title">Планшеты</div>
+			<aside class="aside-colmn">
+				<div class="aside-colmn__desktop-view">
+					{% include "partials/filter.html" %} 
+				</div>
+				<div class="aside-colmn__mobile-view">
+					<button class="button filter-show js-open-side-menu" data-menu="filter-mobile">Показать фильр</button>
+				</div>
+				
+			</aside>
+			<div class="center-wrapper">
+				<section class="catalog-section mobile-stretch"> 
+					<div class="catalog-section__controls-row">
+						<select class="catalog-section__select">
+                            <option data-sort="1">По возрастанию цены</option>
+                            <option data-sort="2">По убыванию цены</option>
+                            <option data-sort="3">Наиболее популярные</option>
+                            <option data-sort="4">Наимение популярные</option> 
+                        </select>
+						<div class="view-toggle">
+							<div class="view-toggle__button view-toggle__button_active" id="view-grid"></div>
+							<div class="view-toggle__button" id="view-list"></div>
+						</div>
+					</div>
+					<div class="order-wrap view-container"> 
+						{% for i in 0..8 %}
+						<div class="third-wrap"> 
+							{% if i == 1 or i == 3 %}
+									{% 
+										include "partials/product-card.html" with {
+											name: "Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+											img: "img/samples/catalog/c" ~ 1 ~ ".jpg",
+											extended: true,
+											bages: "red"
+										}
+									 %}
+								{% else %}
+									{% 
+										include "partials/product-card.html" with {
+											name: "Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+											img: "img/samples/catalog/c" ~ 1 ~ ".jpg",
+											extended: true
+										}
+									 %}
+							 {% endif %}
+
+						</div>
+						{% endfor %}
+					</div>
+					{% include "partials/pagination.html" %}
+				</section>
+				{% include "partials/seo-text.html" with {
+					modifier: "description-text__space-top"
+				} %}				
+			</div>
+		</div>
+		
+		
+		
+	</main>
+{% include "partials/footer.html" %}

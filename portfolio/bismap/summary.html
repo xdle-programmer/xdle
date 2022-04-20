@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css" media="screen, projection, print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.theme.default.min.css">
+    <script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="plugins/select-picker-master/picker.min.css">
+    <script src="plugins/select-picker-master/picker.min.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="plugins/lightbox2/css/lightbox.min.css">
+    <script src="plugins/lightbox2/js/lightbox.min.js"></script>
+
+    <link rel="stylesheet" href="plugins/dropzone/basic.min.css">
+    <link rel="stylesheet" href="plugins/dropzone/dropzone.min.css">
+    <!--<script src="/plugins/dropzone/dropzone-amd-module.min.js"></script>-->
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+    <title>Резюме</title>
+</head>
+
+<body>
+
+<div class="wrapper wrapper--not-tools-menu">
+    <header class="header">
+
+        <div class="header__main layout">
+
+            <a href="#" class="header__main-logo"></a>
+
+            <div class="header__main-time">
+                <div class="header__main-time-item">
+                    <div class="header__main-time-item-inner">20:31</div>
+                    <div class="header__main-time-item-city">Минск</div>
+                </div>
+                <div class="header__main-time-item">
+                    <div class="header__main-time-item-inner">19:31</div>
+                    <div class="header__main-time-item-city">Москва</div>
+                </div>
+                <div class="header__main-time-item">
+                    <div class="header__main-time-item-inner">18:31</div>
+                    <div class="header__main-time-item-city">Калининград</div>
+                </div>
+
+                <div class="header__main-time-button open-modal" data-modal="#modal_time"></div>
+            </div>
+            <div class="header__mobile-news-button"></div>
+
+            <div class="header__mobile-search-button"></div>
+
+            <div class="header__main-button button-icon button-icon--plus"></div>
+
+            <div class="header__main-search">
+                <input class="header__main-search-input" placeholder="Поиск...">
+                <div class="header__main-search-button"></div>
+            </div>
+
+            <div class="header__mobile-messages-button mark"></div>
+
+            <div class="header__main-login mark">
+                <div class="header__main-login-photo" style="background: url(/img/profile.jpg)"></div>
+                <div class="header__main-login-name">Николай Саргсян</div>
+                <div class="header__main-login-submenu">
+                    <a href="#"
+                       class="header__main-login-submenu-link header__main-login-submenu-link--settings">Настройки</a>
+                    <a href="#" class="header__main-login-submenu-link header__main-login-submenu-link--exit">Выход</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__menu layout">
+            <div class="header__menu-block">
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Люди
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Компании
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Франчайзинг
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    инвесторы
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Бизнес планы
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Тендеры
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Резюме
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Вакансии
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-investments.svg">
+                    </div>
+                    Блоги
+                </a>
+                <a href="#" class="header__menu-item">
+                    <div class="header__menu-item-icon">
+                        <img class="header__menu-item-icon-inner" src="img/icon-training.svg">
+                    </div>
+                    Тренинги
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="tools-menu layout">
+        <div class="tools-menu__block">
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-menu__item-text">Люди</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-menu__item-text">Блоги</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-menu__item-text">Компании</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-cv.svg">
+                </div>
+                <div class="tools-menu__item-text">Резюме</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-investments.svg">
+                </div>
+                <div class="tools-menu__item-text">Инвестиции</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-jobs.svg">
+                </div>
+                <div class="tools-menu__item-text">Вакансии</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-tender.svg">
+                </div>
+                <div class="tools-menu__item-text">Тендеры</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-franchising.svg">
+                </div>
+                <div class="tools-menu__item-text">Франчайзинг</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-business-plan.svg">
+                </div>
+                <div class="tools-menu__item-text">Бизнес планы</div>
+            </a>
+            <a href="#" class="tools-menu__item">
+                <div class="tools-menu__item-img-block">
+                    <img class="tools-menu__item-img" src="img/icon-training.svg">
+                </div>
+                <div class="tools-menu__item-text">Тренинги</div>
+            </a>
+        </div>
+    </div>
+    <div class="tools-block">
+
+
+
+        <div class="tools-block__block">
+            <div class="tools-block__header-title">
+                Добавьте инструменты
+            </div>
+
+            <div class="tools-block__header-text">
+                Для успешной работы на нашей платформе создайте необходимые инструменты.
+            </div>
+
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-company.svg">
+                </div>
+                <div class="tools-block__item-text">Компании</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-cv.svg">
+                </div>
+                <div class="tools-block__item-text">Резюме</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-investments.svg">
+                </div>
+                <div class="tools-block__item-text">Инвестиции</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-jobs.svg">
+                </div>
+                <div class="tools-block__item-text">Вакансии</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-tender.svg">
+                </div>
+                <div class="tools-block__item-text">Тендеры</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-franchising.svg">
+                </div>
+                <div class="tools-block__item-text">Франчайзинг</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-business-plan.svg">
+                </div>
+                <div class="tools-block__item-text">Бизнес планы</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-training.svg">
+                </div>
+                <div class="tools-block__item-text">Тренинги</div>
+            </a>
+            <a href="#" class="tools-block__item">
+                <div class="tools-block__item-img-block">
+                    <img class="tools-block__item-img" src="img/icon-training.svg">
+                </div>
+                <div class="tools-block__item-text">Блог</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="layout">
+        <div class="menu__head"></div>
+        <div class="menu">
+
+            <div class="menu__photo" style="background: url(/img/profile.jpg)"></div>
+
+            <a href="#" class="menu__item menu__item--account active">Николай</a>
+            <a href="#" class="menu__item menu__item--messages">Сообщения
+                <div class="menu__item-count">25</div>
+            </a>
+            <a href="#" class="menu__item menu__item--contacts">Контакты</a>
+            <a href="#" class="menu__item menu__item--notes">Заметки</a>
+            <a href="#" class="menu__item menu__item--news">Новости</a>
+            <a href="#" class="menu__item menu__item--notifications">Уведомления</a>
+            <a href="#" class="menu__item menu__item--bookmarks">Закладки</a>
+            <div class="menu__separator"></div>
+            <a href="#" class="menu__item menu__item--settings menu__item--mobile">Настройки</a>
+            <a href="#" class="menu__item menu__item--exit menu__item--mobile">Выход</a>
+        </div>
+
+
+        <div class="layout__content">
+            <div class="layout__columns">
+                <div class="layout__half">
+                    <div class="layout__block" data-order-mobile="3">
+                        <div class="layout__block-header">
+                            <div class="layout__block-header-title">
+                                Данные резюме
+                            </div>
+                            <a href="#" class="layout__block-header-link">Редактировать</a>
+                        </div>
+                        <div class="layout__block-content">
+                            <div class="characteristic characteristic--no-top">
+                                <div class="characteristic__header">
+                                    <div class="characteristic__header-icon" style="background: url(img/characteristic-main.svg)"></div>
+                                    <div class="characteristic__header-title">Основная информация:</div>
+                                </div>
+                                <div class="characteristic__items">
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Переезд:</div>
+                                        <div class="characteristic__item-text">Желателен</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Командировки:</div>
+                                        <div class="characteristic__item-text">Готов</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Гражданство:</div>
+                                        <div class="characteristic__item-text">Россия</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Разрешение на работу:</div>
+                                        <div class="characteristic__item-text">Россия</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Время пути на работу:</div>
+                                        <div class="characteristic__item-text">Не более полутора часов</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout__block-content-title">Обо мне:</div>
+                            <div class="layout__block-content-text">
+                                В лингвистике термин «текст» используется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так, например, И. Р. Гальперин определяет текст следующим образом: «это письменное сообщение, объективированное в виде письменного документа, состоящее из ряда высказываний, объединённых разными типами лексической, грамматической и логической связи, имеющее определённый моральный характер, прагматическую установку и соответственно литературно обработанное».
+                            </div>
+                            <div class="characteristic">
+                                <div class="characteristic__header">
+                                    <div class="characteristic__header-icon" style="background: url(img/characteristic-position.svg)"></div>
+                                    <div class="characteristic__header-title">Должность:</div>
+                                </div>
+                                <div class="characteristic__items">
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Должность:</div>
+                                        <div class="characteristic__item-text">Веб дизайнер</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Профессиональная область:</div>
+                                        <div class="characteristic__item-text">UX/UI</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Зарплата:</div>
+                                        <div class="characteristic__item-text">260000 руб.</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Занятость:</div>
+                                        <div class="characteristic__item-text">Проектная/ временная работа</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">График работы:</div>
+                                        <div class="characteristic__item-text">Удаленная работа</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="characteristic">
+                                <div class="characteristic__header">
+                                    <div class="characteristic__header-icon" style="background: url(img/characteristic-education.svg)"></div>
+                                    <div class="characteristic__header-title">Образование:</div>
+                                </div>
+                                <div class="characteristic__items">
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Учебное заведение:</div>
+                                        <div class="characteristic__item-text">БФУ</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Факультет:</div>
+                                        <div class="characteristic__item-text">Психология</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Специальность:</div>
+                                        <div class="characteristic__item-text">Правовое дело</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Год окончания:</div>
+                                        <div class="characteristic__item-text">2015</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Уровень:</div>
+                                        <div class="characteristic__item-text">Высшее</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="characteristic">
+                                <div class="characteristic__header">
+                                    <div class="characteristic__header-icon" style="background: url(img/characteristic-education.svg)"></div>
+                                    <div class="characteristic__header-title">Языки:</div>
+                                </div>
+                                <div class="characteristic__items">
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Родной:</div>
+                                        <div class="characteristic__item-text">Русский</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Иностранный:</div>
+                                        <div class="characteristic__item-text">Польский</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Иностранный:</div>
+                                        <div class="characteristic__item-text">Китайский</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="characteristic">
+                                <div class="characteristic__header">
+                                    <div class="characteristic__header-icon" style="background: url(img/characteristic-education.svg)"></div>
+                                    <div class="characteristic__header-title">Повышение квалификации:</div>
+                                </div>
+                                <div class="characteristic__items">
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Наименование:</div>
+                                        <div class="characteristic__item-text">Курс продаж</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Специальность:</div>
+                                        <div class="characteristic__item-text">Менеджер</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Год окончания:</div>
+                                        <div class="characteristic__item-text">2015</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="characteristic">
+                                <div class="characteristic__header">
+                                    <div class="characteristic__header-icon" style="background: url(img/characteristic-education.svg)"></div>
+                                    <div class="characteristic__header-title">Опыт работы:</div>
+                                </div>
+                                <div class="characteristic__items">
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Место работы:</div>
+                                        <div class="characteristic__item-text">ООО Компания</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Время работы:</div>
+                                        <div class="characteristic__item-text">2012-2017</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="characteristic">
+                                <div class="characteristic__header">
+                                    <div class="characteristic__header-icon" style="background: url(img/characteristic-contact.svg)"></div>
+                                    <div class="characteristic__header-title">Контакты:</div>
+                                </div>
+                                <div class="characteristic__items">
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Телефон:</div>
+                                        <div class="characteristic__item-text">+7 999 999 99 99</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">E-mail:</div>
+                                        <div class="characteristic__item-text">mail@mail.ru</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Skype:</div>
+                                        <div class="characteristic__item-text">skype111</div>
+                                    </div>
+                                    <div class="characteristic__item">
+                                        <div class="characteristic__item-title">Web сайт:</div>
+                                        <div class="characteristic__item-text">www.site.ru</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout__half">
+                    <div class="layout__block cv">
+                        <div class="cv__header">
+                            <div class="cv__header-title">Резюме</div>
+                            <div class="cv__header-subtitle">Михаил Иванов</div>
+                        </div>
+
+                        <div class="cv__photo" style="background: url(img/profile.jpg)"></div>
+
+                        <div class="cv__button">
+                            Видео презентация
+                        </div>
+
+                        <div class="cv__about">
+                            <div class="cv__about-item">
+                                <div class="cv__about-title">День рождения:</div>
+                                <div class="cv__about-text">14 сентября, 1991 года (24 года)</div>
+                            </div>
+                            <div class="cv__about-item">
+                                <div class="cv__about-title">Город:</div>
+                                <div class="cv__about-text">Россия, Калининград</div>
+                            </div>
+                            <div class="cv__about-item">
+                                <div class="cv__about-title">Языки:</div>
+                                <div class="cv__about-text">Китайский, Английский</div>
+                            </div>
+                        </div>
+
+                        <div class="social">
+                            <a href="#" class="social__item"><img class="social__item-img" src="img/social-fb.svg"></a>
+                            <a href="#" class="social__item"><img class="social__item-img"
+                                                                  src="img/social-dribbble.svg"></a>
+                            <a href="#" class="social__item"><img class="social__item-img" src="img/social-vk.svg"></a>
+                            <a href="#" class="social__item"><img class="social__item-img"
+                                                                  src="img/social-gplus.svg"></a>
+                            <a href="#" class="social__item"><img class="social__item-img"
+                                                                  src="img/social-instagram.svg"></a>
+                            <a href="#" class="social__item"><img class="social__item-img"
+                                                                  src="img/social-behance.svg"></a>
+                            <a href="#" class="social__item"><img class="social__item-img"
+                                                                  src="img/social-twitter.svg"></a>
+                        </div>
+
+                        <div class="layout__block-buttons cv__bottom">
+                            <div class="button-gradient layout__block-button layout__block-button--mobile-first">Добавить в контакты</div>
+                            <div class="button-gradient layout__block-button layout__block-button--mobile-first button-gradient--invert">Сообщение</div>
+                        </div>
+                    </div>
+
+                    <div class="layout__block layout__block--button">
+                        <div class="layout__block-header">
+                            <div class="layout__block-header-title">
+                                Портфолио/достижения
+                            </div>
+                        </div>
+                        <div class="layout__block-content">
+                            <div class="project">
+                                <a href="#" class="project__item">
+                                    <div class="project__item-img" style="background: url(img/china.jpg)"></div>
+                                    <div class="project__item-title">Проект №1</div>
+                                </a>
+
+                                <a href="#" class="project__item">
+                                    <div class="project__item-img"></div>
+                                    <div class="project__item-title">Проект №2</div>
+                                </a>
+
+                                <a href="#" class="project__item">
+                                    <div class="project__item-img"></div>
+                                    <div class="project__item-title">Проект №3</div>
+                                </a>
+
+                                <a href="#" class="project__item">
+                                    <div class="project__item-img"></div>
+                                    <div class="project__item-title">Проект №4</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="layout__block-buttons">
+                            <div class="button-gradient layout__block-button">Смотреть все</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="js/script.js"></script>
+
+<div class="modal__background close-modal"></div>
+
+<div class="modal__block modal__block--recommend" id="modal_recommend_1">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__recommend-img" style="background: url(img/rec_1.png)"></div>
+    <div class="modal__recommend-text">
+        <p>
+            Хочешь произвести серьезное впечатление на будущих партнеров?
+        </p>
+        <p>
+            Заполни информацию вашей компании.
+        </p>
+        <div class="button-gradient">Перейти</div>
+    </div>
+</div>
+
+<div class="modal__block modal__block--recommend" id="modal_recommend_2">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__recommend-img" style="background: url(img/rec_2.png)"></div>
+    <div class="modal__recommend-text">
+        <p>
+            Ты сотрудник созданной компании?
+        </p>
+        <p>
+            Найди ее и вступи в блок сотрудники.
+        </p>
+    </div>
+
+    <div class="button-gradient">Перейти</div>
+</div>
+
+<div class="modal__block modal__block--recommend" id="modal_recommend_3">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__recommend-img" style="background: url(img/rec_3.png)"></div>
+    <div class="modal__recommend-text">
+        <p>
+            Хочешь произвести серьезное впечатление на будущих партнеров?
+        </p>
+        <p>
+            Заполни информацию вашей компании.
+        </p>
+        <div class="button-gradient">Перейти</div>
+    </div>
+</div>
+</body>
+</html>

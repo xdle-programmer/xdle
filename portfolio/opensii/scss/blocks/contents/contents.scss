@@ -1,0 +1,64 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.contents {
+  background: #f6f6ee;
+  padding: 40px;
+  margin-bottom: 30px;
+
+  @media #{$tablet-small-screen} {
+    padding: 15px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    @include flex-row;
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      margin-left: 15px;
+      width: 25px;
+      height: 13px;
+      margin-top: 18px;
+      background: $black;
+      -webkit-mask-image: url(../../img/contents__arrow.png);
+      mask-image: url(../../img/contents__arrow.png);
+      @include mask-contain-center;
+    }
+
+    &:hover:after {
+      background: $red;
+    }
+
+    &.hide:after {
+      transform: scaleY(-1);
+    }
+  }
+
+  &__list {
+    overflow: hidden;
+    padding-left: 21px;
+  }
+
+  &__list-item {
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 16px;
+    cursor: pointer;
+    padding-left: 2px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}

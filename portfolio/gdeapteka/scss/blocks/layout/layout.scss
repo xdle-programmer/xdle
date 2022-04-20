@@ -1,0 +1,22 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.layout {
+  width: calc(100% - 100px);
+  @include margin-auto;
+  position: relative;
+
+  &--main {
+    width: 1170px;
+    @include margin-auto;
+  }
+
+  @media #{$tablet-big-screen} {
+    width: calc(100% - 40px);
+  }
+
+  @media #{$mobile-big-screen} {
+    width: calc(100% - 20px);
+  }
+}

@@ -1,0 +1,47 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+$burger-active: ".burger-menu--active";
+
+.burger-menu {
+  position: relative;
+  flex-direction: column;
+  outline: none;
+  border: none;
+  min-height: 18px;
+  margin-left: 24px;
+  background: none;
+  display: flex;
+
+  &__item {
+    width: 26px;
+    height: 2px;
+    background: #3b3b3b;
+    border-radius: 4px;
+    transition: all .15s ease-out;
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    #{$burger-active} & {
+      margin-bottom: 0;
+
+      &:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(16px, 7px);
+      }
+
+      &:first-child {
+        transform: rotate(45deg) translate(7px, 6px);
+      }
+
+      &:last-child {
+        transform: rotate(-45deg) translate(-4px, 4px);
+      }
+    }
+  }
+}

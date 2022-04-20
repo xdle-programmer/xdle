@@ -1,0 +1,34 @@
+.warning {
+  font-display: auto;
+  font-family: 'Montserrat', sans-serif !important;
+  position: absolute;
+  white-space: nowrap;
+  height: 17px;
+  background: #ec4840;
+  top: -22px;
+  opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+  border-radius: 4px;
+  font-size: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15px; }
+  .warning:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -3px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 3px 0 3px;
+    border-color: #ec4840 transparent transparent transparent; }
+  .warning.active {
+    opacity: 1;
+    visibility: visible; }

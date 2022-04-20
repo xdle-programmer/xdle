@@ -1,0 +1,108 @@
+html {
+  overflow-x: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-weight: 400;
+  color: #232324; }
+
+@font-face {
+  font-family: 'muller';
+  font-display: swap;
+  src: url(../../../fonts/MULLERREGULAR.OTF);
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'muller';
+  font-display: swap;
+  src: url(../../../fonts/MULLERBOLD.OTF);
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'muller';
+  font-display: swap;
+  src: url(../../../fonts/MULLERBLACK.OTF);
+  font-weight: 900;
+  font-style: normal; }
+
+* {
+  font-display: auto;
+  font-family: 'muller', sans-serif !important;
+  box-sizing: border-box; }
+
+select {
+  display: none; }
+
+.wrapper {
+  min-height: 100vh;
+  font-weight: 500;
+  position: relative; }
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: all 0.2s ease-in; }
+
+.wrapper *::-webkit-input-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *::-moz-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *:-moz-placeholder {
+  transition: all 0.2s ease-in; }
+
+.wrapper *:-ms-input-placeholder {
+  transition: all 0.2s ease-in; }
+
+.touch-device * {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer; }
+
+button, input, textarea {
+  border: none;
+  background: none; }
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none; }
+
+.scroll-top {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  cursor: pointer;
+  bottom: 40px;
+  right: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(-1); }
+  .scroll-top:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 5px;
+    background: url(../../../img/arrow.png); }
+  .scroll-top.active {
+    visibility: visible;
+    opacity: 1; }
+
+.orange {
+  color: #f47137; }

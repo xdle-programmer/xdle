@@ -1,0 +1,75 @@
+.custom-select {
+  width: 75px;
+  border-radius: 7px;
+  position: relative;
+  z-index: 100; }
+  .custom-select__button {
+    position: relative;
+    height: 30px; }
+    .custom-select__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 9px;
+      height: 10px;
+      background: url(../../img/down-arrow.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      left: 7px;
+      top: 9px; }
+  .custom-select__list {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    transform: scaleY(0);
+    visibility: hidden;
+    transform-origin: top; }
+    .custom-select.active .custom-select__list {
+      transform: scaleY(1);
+      visibility: visible; }
+  .custom-select__item {
+    background: #1a1c1e;
+    text-transform: uppercase;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    border-radius: 8px; }
+    .custom-select__item:hover {
+      color: #aaaaac; }
+    .custom-select__item--no-icon {
+      padding-left: 13px; }
+    .custom-select__item--language-eng:after {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+      top: 6px;
+      border-radius: 50%;
+      background: url(../../img/language-usa.svg);
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .custom-select__item--language-ru:after {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+      top: 6px;
+      border-radius: 50%;
+      background: url(../../img/language-russia.svg);
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }

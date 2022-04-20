@@ -1,0 +1,106 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section {
+  background: #343853;
+  font-size: 20px;
+
+  @media #{$tablet-big-screen} {
+    position: relative;
+  }
+
+  &__background {
+    @include background-cover-center;
+    position: absolute;
+    @include absolute-fill;
+    opacity: .05;
+    filter: grayscale(1);
+    mix-blend-mode: luminosity;
+  }
+
+  &__wrapper {
+    height: 550px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$desktop-big-screen} {
+      height: 450px;
+    }
+
+    @media #{$tablet-big-screen} {
+      height: auto;
+      padding: 25px 0;
+    }
+  }
+
+  &__number {
+    @include flex-row;
+    font-size: 35px;
+    align-items: center;
+    margin-bottom: 40px;
+    z-index: 3;
+    position: relative;
+
+    @media #{$desktop-big-screen} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__number-value {
+    width: 62px;
+    height: 30px;
+    background: $brown;
+
+    &--1 {
+      mask: url(../../../../img/number_1.png);
+      -webkit-mask: url(../../../../img/number_1.png);
+      @include mask-contain-center;
+    }
+
+    &--2 {
+      mask: url(../../../../img/number_2.png);
+      -webkit-mask: url(../../../../img/number_2.png);
+      @include mask-contain-center;
+    }
+
+    &--3 {
+      mask: url(../../../../img/number_3.png);
+      -webkit-mask: url(../../../../img/number_3.png);
+      @include mask-contain-center;
+    }
+
+    &--4 {
+      mask: url(../../../../img/number_4.png);
+      -webkit-mask: url(../../../../img/number_4.png);
+      @include mask-contain-center;
+    }
+  }
+
+  &__number-name {
+    margin-left: 40px;
+    font-weight: 100;
+    color: $white;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    height: 550px;
+    @include background-contain-center;
+    background-position: right center !important;
+
+    @media #{$tablet-big-screen} {
+      opacity: .2;
+      margin-top: 150px;
+      display: none;
+    }
+  }
+  &__title {
+  }
+}

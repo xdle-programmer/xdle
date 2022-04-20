@@ -1,0 +1,118 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.about-expert {
+  @include flex-row;
+  justify-content: space-between;
+  padding-top: 30px;
+
+  @media #{$mobile-big-screen} {
+    flex-wrap: wrap;
+  }
+
+  &__skills {
+    width: 48%;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__skills-title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  &__skills-items {
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 18px;
+  }
+  &__skills-item {
+    width: 48%;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__contacts {
+    width: 48%;
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  &__contacts-item {
+    width: 48%;
+    margin-bottom: 15px;
+    text-align: right;
+
+    @media #{$mobile-big-screen} {
+      text-align: left;
+    }
+  }
+  &__contacts-title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 40px;
+    @include flex-row;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media #{$mobile-big-screen} {
+      font-size: 18px;
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    &--address:before {
+      background-image: url(../../img/map-green.svg);
+      @include background-contain-center;
+    }
+    &--phone:before {
+      background-image: url(../../img/phone-green.svg);
+      @include background-contain-center;
+    }
+    &--mail:before {
+      background-image: url(../../img/mail-green.svg);
+      @include background-contain-center;
+    }
+    &--web:before {
+      background-image: url(../../img/web-green.svg);
+      @include background-contain-center;
+    }
+  }
+
+  &__contacts-value {
+    font-size: 18px;
+    font-weight: 100;
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+    }
+  }
+}
+

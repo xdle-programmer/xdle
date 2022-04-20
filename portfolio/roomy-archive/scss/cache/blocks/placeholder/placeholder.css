@@ -1,0 +1,47 @@
+.placeholder {
+  position: relative;
+  display: block; }
+  .placeholder__item {
+    color: #888;
+    cursor: text;
+    font-size: 14px;
+    position: absolute;
+    top: 19px;
+    left: 0;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    transition: all 0.3s, opacity 0s;
+    transform-origin: left bottom;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden; }
+    .placeholder.input-autocomplete--main-catalog-filter .placeholder__item,
+    .placeholder.multi-select .placeholder__item {
+      font-size: 16px;
+      font-weight: 500;
+      opacity: 1;
+      top: 12px;
+      visibility: visible; }
+    .placeholder.multi-select--mini .placeholder__item,
+    .placeholder.select--mini .placeholder__item {
+      font-size: 14px;
+      font-weight: 500;
+      top: 6px;
+      color: #1d1e29; }
+    .placeholder.input-autocomplete--main-catalog-filter .placeholder__item {
+      opacity: 0; }
+    .placeholder.not-empty .placeholder__item {
+      font-size: 14px;
+      color: #888;
+      transform: translateY(-70%) scale(0.7);
+      opacity: 1;
+      visibility: visible; }
+    .placeholder.not-empty.placeholder.input-autocomplete--main-catalog-filter .placeholder__item,
+    .placeholder.not-empty.placeholder.multi-select .placeholder__item {
+      transform: translateY(-50%) scale(0.7); }
+    .placeholder.not-empty.placeholder.multi-select--mini .placeholder__item,
+    .placeholder.not-empty.placeholder.select--mini .placeholder__item {
+      transform: translateY(-43%) scale(0.7) translateX(7px);
+      color: #888; }

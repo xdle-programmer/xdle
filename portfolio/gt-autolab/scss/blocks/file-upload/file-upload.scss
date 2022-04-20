@@ -1,0 +1,52 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.file-upload {
+  margin-bottom: 30px;
+  display: block;
+  margin-top: 7px;
+
+  &__label {
+    width: 180px;
+    @include flex-row-center;
+    background: $gray-middle;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: $white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 7px;
+
+    &:hover {
+      background: $red;
+    }
+
+    &.disabled {
+      background: $gray-middle;
+      cursor: default;
+    }
+
+    &.disabled:hover {
+      background: $gray-middle;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__name-block {
+  }
+
+  &__name {
+    font-weight: 600;
+    color: $gray-middle;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+}

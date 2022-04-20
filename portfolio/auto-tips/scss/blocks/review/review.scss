@@ -1,0 +1,52 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.review {
+
+  $collapse: '.review.collapse';
+
+  &__items {
+
+  }
+
+  &__item {
+    margin-bottom: 45px;
+
+    #{$collapse} &:nth-of-type(1n + 3) {
+      display: none;
+    }
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+  }
+
+  &__button {
+    font-size: 15px;
+    font-weight: 700;
+    color: $blue;
+    cursor: pointer;
+  }
+
+  &__button-open {
+    display: none;
+
+    #{$collapse} & {
+      display: block;
+    }
+  }
+
+  &__button-close {
+
+    #{$collapse} & {
+      display: none;
+    }
+  }
+
+}

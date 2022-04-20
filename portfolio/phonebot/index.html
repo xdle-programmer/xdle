@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebot</title>
+    <link rel="stylesheet" href="/original-styles/stylesheet.css">
+    <link rel="stylesheet" href="/original-styles/home_style.css">
+  <link href="style.css" rel="stylesheet"></head>
+  <body><img class="temp-header-desc" src="images/temp-header.jpg"><img class="temp-header-mob" src="images/temp-header-mob.jpg">
+<div class="finder">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mladenilic/threesixty.js/dist/threesixty.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script>let videoProfileDuration = {
+    man30: 10000,
+    man40: 10000,
+    man50: 10000,
+    man30m: 10000,
+    man40m: 10000,
+    man50m: 10000,
+    woman30: 10000,
+    woman40: 10000,
+    woman50: 10000,
+    woman30m: 10000,
+    woman40m: 10000,
+    woman50m: 10000
+};
+  </script>
+  <div class="finder__load-video-test">
+    <video class="finder__load-video-test-item" autoplay muted>
+      <source src="src/blocks/finder/assets/video/0-in.mp4" type="video/mp4">
+    </video>
+    <video class="finder__load-video-test-item" autoplay muted>
+      <source src="src/blocks/finder/assets/video/0-out.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="finder__loader">
+    <svg class="finder__loader-circular" viewBox="25 25 50 50">
+      <circle class="finder__path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+    </svg>
+  </div>
+  <div class="finder__wrapper">
+    <div class="finder__default-back finder__default-back--hide"></div>
+    <div class="finder__item" data-slide="0">
+      <div class="finder__item-video-wrapper">
+        <video class="finder__item-video finder__item-video--in" autoplay muted>
+          <source src="src/blocks/finder/assets/video/0-in.mp4" type="video/mp4">
+        </video>
+        <video class="finder__item-video finder__item-video--out finder__item-video--hide" autoplay muted>
+          <source src="src/blocks/finder/assets/video/0-out.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="finder__item-content finder__item-content--1">
+        <div class="finder__item-content-inner">
+          <div class="finder__item-content-elem finder__item-animation-elem"></div>
+          <div class="finder__item-content-subtitle finder__item-animation-elem"></div>
+          <div class="finder__item-content-title finder__item-animation-elem">Phonebot Phone Finder</div>
+          <div class="finder__item-content-mobile-elem finder__item-animation-elem"></div>
+          <div class="finder__item-content-desc finder__item-animation-elem">In 3 minutes or less, Phonebot Phone Finder will help you select the right phone for yourself or your loved ones. Whether you are looking for the latest model with all new features or something more budget friendly, we will match you with our top picks that you’re sure to love.</div>
+          <div class="finder__item-content-button finder__item-animation-elem finder__item-content-button--first-slide">Let’s Begin</div>
+        </div>
+      </div>
+    </div>
+    <div class="finder__item" data-slide="1">
+      <div class="finder__item-video-wrapper">
+        <video class="finder__item-video finder__item-video--in" autoplay muted>
+          <source src="src/blocks/finder/assets/video/1-in.mp4" type="video/mp4">
+        </video>
+        <video class="finder__item-video finder__item-video--out finder__item-video--hide" autoplay muted>
+          <source src="src/blocks/finder/assets/video/1-out.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="finder__item-content finder__item-content--2">
+        <div class="finder__item-content-inner">
+          <div class="finder__item-content-inner-wrapper">
+            <div class="finder__item-content-title finder__item-animation-elem">Price selection</div>
+            <div class="finder__item-content-subtitle finder__item-animation-elem">What is your budget for this phone?</div>
+            <div class="finder__selection finder__price-selection">
+              <div class="finder__selection-item finder__price-selection-item finder__item-animation-elem" data-price-min="80" data-price-max="250">
+                <div class="finder__price-selection-item-icon"></div>
+                <div class="finder__price-selection-item-title">80 - 250</div>
+              </div>
+              <div class="finder__selection-item finder__price-selection-item finder__item-animation-elem" data-price-min="250" data-price-max="500">
+                <div class="finder__price-selection-item-icon"></div>
+                <div class="finder__price-selection-item-title">250 - 500</div>
+              </div>
+              <div class="finder__selection-item finder__price-selection-item finder__item-animation-elem" data-price-min="500" data-price-max="750">
+                <div class="finder__price-selection-item-icon"></div>
+                <div class="finder__price-selection-item-title">500 - 750</div>
+              </div>
+              <div class="finder__selection-item finder__price-selection-item finder__item-animation-elem" data-price-min="750" data-price-max="1000">
+                <div class="finder__price-selection-item-icon"></div>
+                <div class="finder__price-selection-item-title">750 - 1000+</div>
+              </div>
+              <div class="range-slider finder__item-animation-elem finder__item-animation-elem--opacity" id="price-range">
+                <div class="range-slider__item"></div>
+                <div class="range-slider__hints">
+                  <div class="range-slider__hint range-slider__hint--1">
+                    <div class="range-slider__hint-item">$ 80</div>
+                  </div>
+                  <div class="range-slider__hint range-slider__hint--2">
+                    <div class="range-slider__hint-item">$ 250</div>
+                  </div>
+                  <div class="range-slider__hint range-slider__hint--3">
+                    <div class="range-slider__hint-item">$ 500</div>
+                  </div>
+                  <div class="range-slider__hint range-slider__hint--4">
+                    <div class="range-slider__hint-item">$ 750</div>
+                  </div>
+                  <div class="range-slider__hint range-slider__hint--5">
+                    <div class="range-slider__hint-item">$ 1000+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="finder__item-price-to-img finder__item-animation-elem">
+              <div class="finder__item-price-to-img-wrapper">
+                <div class="finder__item-price-to-img-icon"></div>
+                <div class="finder__item-price-to-img-value">250 - 500</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="finder__item" data-slide="2">
+      <div class="finder__item-content finder__item-content--3">
+        <div class="finder__item-content-inner finder__item-animation-elem finder__item-animation-elem--opacity">
+          <div class="finder__item-content-inner-wrapper">
+            <div class="finder__item-content-title">Grade Selection</div>
+            <div class="finder__item-content-subtitle">Please select the cosmetic condition of your phone</div>
+            <div class="finder__item-condition-gallery">
+              <div class="finder__item-condition-gallery-buttons">
+                <div class="finder__item-condition-gallery-button finder__item-condition-gallery-button--left" id="threesixty-prev"></div>
+                <div class="finder__item-condition-gallery-button finder__item-condition-gallery-button--right" id="threesixty-next"></div>
+                <div class="finder__item-condition-gallery-button finder__item-condition-gallery-button--zoom-in"></div>
+                <div class="finder__item-condition-gallery-button finder__item-condition-gallery-button--zoom-out"></div>
+              </div>
+              <div class="finder__item-condition-gallery-wrapper">
+                <div class="finder__item-condition-gallery-item" id="threesixty"></div>
+              </div>
+            </div>
+            <div class="finder__selection finder__condition-selection">
+              <div class="finder__selection-item finder__condition-selection-item"><img class="finder__condition-selection-item-img" src="images/condition-icons/condition_1.png">
+                <div class="finder__condition-selection-item-desc">
+                  <div class="finder__condition-selection-item-title">Brand New</div>
+                  <div class="finder__condition-selection-item-desc">I want a brand new phone</div>
+                </div>
+              </div>
+              <div class="finder__selection-item finder__condition-selection-item"><img class="finder__condition-selection-item-img" src="images/condition-icons/condition_1.png">
+                <div class="finder__condition-selection-item-desc">
+                  <div class="finder__condition-selection-item-title">Open Box</div>
+                  <div class="finder__condition-selection-item-desc">I want a phone with no signs of use</div>
+                </div>
+              </div>
+              <div class="finder__selection-item finder__condition-selection-item"><img class="finder__condition-selection-item-img" src="images/condition-icons/condition_1.png">
+                <div class="finder__condition-selection-item-desc">
+                  <div class="finder__condition-selection-item-title">Like New</div>
+                  <div class="finder__condition-selection-item-desc">My phone should have very minimal signs of previous usage</div>
+                </div>
+              </div>
+              <div class="finder__selection-item finder__condition-selection-item"><img class="finder__condition-selection-item-img" src="images/condition-icons/condition_1.png">
+                <div class="finder__condition-selection-item-desc">
+                  <div class="finder__condition-selection-item-title">Grade A</div>
+                  <div class="finder__condition-selection-item-desc">Its okay if my phone has some signs of use</div>
+                </div>
+              </div>
+              <div class="finder__selection-item finder__condition-selection-item"><img class="finder__condition-selection-item-img" src="images/condition-icons/condition_1.png">
+                <div class="finder__condition-selection-item-desc">
+                  <div class="finder__condition-selection-item-title">Grade B</div>
+                  <div class="finder__condition-selection-item-desc">Its okay if my phone has significant signs of use as long as it works 100%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="finder__item" data-slide="3">
+      <div class="finder__item-video-wrapper"></div>
+      <div class="finder__item-content finder__item-content--4">
+        <div class="finder__item-content-inner">
+          <div class="finder__item-content-title finder__item-animation-elem">Operating System</div>
+          <div class="finder__item-content-subtitle finder__item-animation-elem">which operating system do you prefer?</div>
+          <div class="finder__item-os-selection-img">
+            <div class="finder__item-os-selection-img-inner">
+              <div class="finder__item-os-selection-img-inner-back finder__item-animation-elem"></div>
+              <div class="finder__item-os-selection-img-inner-phone finder__item-animation-elem">
+                <div class="finder__item-os-selection-img-inner-phone-apple"></div>
+                <div class="finder__item-os-selection-img-inner-phone-android"></div>
+              </div>
+              <div class="finder__item-os-selection-img-inner-cable finder__item-animation-elem finder__item-animation-elem--from-bottom"></div>
+            </div>
+          </div>
+          <div class="finder__item-os-selection finder__selection">
+            <div class="finder__selection-item finder__item-os-selection-item finder__item-os-selection-item--apple finder__item-animation-elem"></div>
+            <div class="finder__selection-item finder__item-os-selection-item finder__item-os-selection-item--android finder__item-animation-elem"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="finder__item" data-slide="4">
+      <div class="finder__item-video-wrapper"></div>
+      <div class="finder__item-content finder__item-content--5">
+        <div class="finder__item-content-inner">
+          <div class="finder__item-content-header finder__item-animation-elem">
+            <div class="finder__item-content-title">Lifestyle and Usage</div>
+            <!--.finder__item-content-header-button Skip-->
+          </div>
+          <div class="finder__item-content-inner-block finder__item-animation-elem">
+            <div class="finder__item-content-subsection-title">Your Profile</div>
+            <div class="finder__selection finder__profile-selection">
+              <div class="finder__selection-item finder__profile-selection-item finder__sex-selection-item" data-profile="woman">
+                <div class="finder__profile-selection-item-icon finder__profile-selection-item-icon--female"></div>
+              </div>
+              <div class="finder__selection-item finder__profile-selection-item finder__sex-selection-item" data-profile="man">
+                <div class="finder__profile-selection-item-icon finder__profile-selection-item-icon--male"></div>
+              </div>
+            </div>
+          </div>
+          <div class="finder__item-content-inner-block finder__item-animation-elem">
+            <div class="finder__item-content-subsection-title">Age</div>
+            <div class="finder__selection finder__profile-selection finder__profile-selection--age">
+              <div class="finder__selection-item finder__profile-selection-item finder__age-selection-item" data-profile="30">8 - 19</div>
+              <div class="finder__selection-item finder__profile-selection-item finder__age-selection-item" data-profile="30">20 - 30</div>
+              <div class="finder__selection-item finder__profile-selection-item finder__age-selection-item" data-profile="40">31 - 40</div>
+              <div class="finder__selection-item finder__profile-selection-item finder__age-selection-item" data-profile="50">41 - 60+</div>
+            </div>
+          </div>
+          <div class="finder__item-content-inner-block finder__item-animation-elem">
+            <div class="finder__item-content-subsection-title">Lifestyle</div>
+            <div class="finder__selection finder__profile-selection finder__profile-selection--lifestyle">
+              <div class="finder__selection-item finder__profile-selection-item finder__lifestyle-selection-item" data-profile="student">Student</div>
+              <div class="finder__selection-item finder__profile-selection-item finder__lifestyle-selection-item" data-profile="professional">Professional</div>
+              <div class="finder__selection-item finder__profile-selection-item finder__lifestyle-selection-item" data-profile="outdoor_worker">Outdoor worker</div>
+            </div>
+          </div>
+          <div class="finder__item-content-inner-block finder__item-animation-elem">
+            <div class="finder__item-content-subsection-title">Usage</div>
+            <div class="finder__selection finder__selection--multiselect finder__profile-selection finder__profile-selection--usage">
+              <div class="finder__selection-item finder__profile-selection-item finder__usage-selection-item finder__usage-selection-item--photography" data-profile="photography">
+                <div class="finder__usage-selection-item-icon"></div>
+                <div class="finder__usage-selection-item-title">Photography</div>
+              </div>
+              <div class="finder__selection-item finder__profile-selection-item finder__usage-selection-item finder__usage-selection-item--calling" data-profile="calling">
+                <div class="finder__usage-selection-item-icon"></div>
+                <div class="finder__usage-selection-item-title">Calling</div>
+              </div>
+              <div class="finder__selection-item finder__profile-selection-item finder__usage-selection-item finder__usage-selection-item--gaming" data-profile="gaming">
+                <div class="finder__usage-selection-item-icon"></div>
+                <div class="finder__usage-selection-item-title">Gaming</div>
+              </div>
+              <div class="finder__selection-item finder__profile-selection-item finder__usage-selection-item finder__usage-selection-item--apps" data-profile="apps">
+                <div class="finder__usage-selection-item-icon"></div>
+                <div class="finder__usage-selection-item-title">Apps</div>
+              </div>
+              <div class="finder__selection-item finder__profile-selection-item finder__usage-selection-item finder__usage-selection-item--office-work" data-profile="office-work">
+                <div class="finder__usage-selection-item-icon"></div>
+                <div class="finder__usage-selection-item-title">Office-work</div>
+              </div>
+            </div>
+          </div>
+          <div class="finder__item-content-title finder__item-content-title--mobile">Your avatar</div>
+          <div class="finder__item-content-mobile-hint">click on next to continue</div>
+          <div class="finder__item-content-usage-profile-avatar">
+            <div class="finder__item-content-inner-block finder__item-animation-elem">
+              <div class="finder__item-content-usage-profile-avatar-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="finder__item" data-slide="5">
+      <div class="finder__item-video-wrapper finder__item-video-wrapper--mobile">
+        <video class="finder__item-video finder__item-video--full-height finder__item-video--in" autoplay muted playsinline type="video/mp4" src=""></video>
+      </div>
+      <div class="finder__item-content finder__item-content--6">
+        <div class="finder__item-content-inner">
+          <div class="finder__item-content-title finder__item-content-title--center finder__item-animation-elem">Looks like these are the devices you’re looking for</div>
+          <div class="finder__item-content-usage-profile-avatar finder__item-content-usage-profile-avatar--left finder__item-animation-elem">
+            <div class="finder__item-content-inner-block">
+              <div class="finder__item-content-usage-profile-avatar-icon finder__item-content-usage-profile-avatar-icon--final"></div>
+            </div>
+          </div>
+          <div class="finder__item-recomendation finder__item-animation-elem">
+            <div class="finder__item-recomendation-inner">
+              <div class="finder__item-recomendation-item">
+<div class="product-thumb my_newly_added_products transition">
+  <div class="image"><a href="https://www.phonebot.com.au/nokia-7.2-64gb-refurbished" target="_blank"><img class="img-responsive" alt="Nokia 7.2 (64GB) [Grade A]" title="Nokia 7.2 (64GB) [Grade A]" src="https://www.phonebot.com.au/image/cache/catalog/refurbished/nokia/nokia-7-2-charcoal-200x170.jpg"></a></div>
+  <div class="caption">
+    <p class="stockLimit">&nbsp</p>
+    <div class="name">
+      <h2 style="margin-top: 0px !important;font-size:12px !important;"><a href="https://www.phonebot.com.au/nokia-7.2-64gb-refurbished" target="_blank">Nokia 7.2 (64GB) [Grade A]</a></h2>
+    </div>
+    <div class="price category-color-133">$309.00</div>
+  </div>
+</div>
+              </div>
+              <div class="finder__item-recomendation-item">
+<div class="product-thumb my_newly_added_products transition">
+  <div class="image"><a href="https://www.phonebot.com.au/nokia-7.2-64gb-refurbished" target="_blank"><img class="img-responsive" alt="Nokia 7.2 (64GB) [Grade A]" title="Nokia 7.2 (64GB) [Grade A]" src="https://www.phonebot.com.au/image/cache/catalog/refurbished/nokia/nokia-7-2-charcoal-200x170.jpg"></a></div>
+  <div class="caption">
+    <p class="stockLimit">&nbsp</p>
+    <div class="name">
+      <h2 style="margin-top: 0px !important;font-size:12px !important;"><a href="https://www.phonebot.com.au/nokia-7.2-64gb-refurbished" target="_blank">Nokia 7.2 (64GB) [Grade A]</a></h2>
+    </div>
+    <div class="price category-color-133">$309.00</div>
+  </div>
+</div>
+              </div>
+              <div class="finder__item-recomendation-item">
+<div class="product-thumb my_newly_added_products transition">
+  <div class="image"><a href="https://www.phonebot.com.au/nokia-7.2-64gb-refurbished" target="_blank"><img class="img-responsive" alt="Nokia 7.2 (64GB) [Grade A]" title="Nokia 7.2 (64GB) [Grade A]" src="https://www.phonebot.com.au/image/cache/catalog/refurbished/nokia/nokia-7-2-charcoal-200x170.jpg"></a></div>
+  <div class="caption">
+    <p class="stockLimit">&nbsp</p>
+    <div class="name">
+      <h2 style="margin-top: 0px !important;font-size:12px !important;"><a href="https://www.phonebot.com.au/nokia-7.2-64gb-refurbished" target="_blank">Nokia 7.2 (64GB) [Grade A]</a></h2>
+    </div>
+    <div class="price category-color-133">$309.00</div>
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="finder__footer finder__footer--show">
+    <div class="finder__footer-block">
+      <div class="finder__footer-left">
+        <div class="finder__footer-back">Back</div>
+        <div class="finder__footer-dots">
+          <div class="finder__footer-dot finder__footer-dot--active"></div>
+          <div class="finder__footer-dot finder__footer-dot--not-avaliable"></div>
+          <div class="finder__footer-dot finder__footer-dot--not-avaliable"></div>
+          <div class="finder__footer-dot finder__footer-dot--not-avaliable"></div>
+          <div class="finder__footer-dot finder__footer-dot--not-avaliable"></div>
+        </div>
+      </div>
+      <div class="finder__footer-right">
+        <div class="finder__footer-next">Next</div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="libs.js"></script><script src="main.js"></script><script src="style.js"></script></body>
+</html>

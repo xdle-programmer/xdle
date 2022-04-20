@@ -1,0 +1,85 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  padding-top: 37px;
+
+  &__top {
+    @include flex-row;
+    justify-content: space-between;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+  &__left {
+  }
+
+  &__logo {
+    width: 378px;
+    height: 63px;
+    background: url(../../../img/logo.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+  }
+  &__fb {
+    margin-top: 28px;
+
+    @media #{$tablet-big-screen} {
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &__center {
+  }
+  &__social-button {
+    margin: 5px 0;
+  }
+  &__right {
+    text-align: right;
+
+    @media #{$tablet-big-screen} {
+      text-align: center;
+    }
+  }
+  &__phone {
+    @include font-intro;
+    font-size: 24px;
+    font-weight: 700;
+    color: $orange;
+    margin-top: 12px;
+  }
+  &__mail {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__social {
+    @include flex-row;
+    justify-content: flex-end;
+    margin-top: 50px;
+
+    @media #{$tablet-big-screen} {
+      justify-content: center;
+    }
+  }
+  &__social-link {
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    @include flex-row-center;
+    align-items: flex-end;
+  }
+  &__bottom {
+    padding: 20px 0;
+    @include flex-row-center;
+  }
+  &__bottom-link {
+    font-size: 20px;
+  }
+}

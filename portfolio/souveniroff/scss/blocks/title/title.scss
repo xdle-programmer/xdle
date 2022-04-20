@@ -1,0 +1,50 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  font-size: 38px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  width: 100%;
+
+
+  @media #{$tablet-small-screen} {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  @media #{$mobile-big-screen} {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 24px;
+  }
+
+  &:after {
+    @include after-absolute;
+    background: $black;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+
+    @media #{$mobile-big-screen} {
+      bottom: -14px;
+    }
+
+  }
+
+  &--small {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 34px;
+
+    &:after {
+      display: none;
+    }
+  }
+}

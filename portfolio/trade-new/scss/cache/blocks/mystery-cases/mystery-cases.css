@@ -1,0 +1,288 @@
+.mystery-cases {
+  height: calc(100vh - 95px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 1439px) {
+    .mystery-cases {
+      height: auto; } }
+  @media (max-width: 1023px) {
+    .mystery-cases {
+      width: 100%; } }
+  .mystery-cases__title {
+    color: #cddaed;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    font-size: 30px; }
+  .mystery-cases__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .mystery-cases__button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    width: 206px;
+    height: 52px;
+    border-radius: 10px;
+    background-color: #303741;
+    z-index: 1;
+    position: relative;
+    height: 40px; }
+    .mystery-cases__button:nth-last-of-type(1) {
+      margin-right: 0; }
+    .mystery-cases__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(68, 180, 215, 0.2);
+      background-image: linear-gradient(to right, #0093e9 0%, #80d0c7 100%);
+      opacity: 0;
+      z-index: -1; }
+    .mystery-cases__button.active:after, .mystery-cases__button:hover:after {
+      opacity: 1; }
+    @media (max-width: 767px) {
+      .mystery-cases__button {
+        margin-right: 10px;
+        width: auto;
+        padding: 0 10px; }
+        .mystery-cases__button:nth-last-of-type(1) {
+          margin-right: 0; } }
+  .mystery-cases__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px 95px;
+    width: 1390px;
+    margin: 50px auto;
+    margin-bottom: 100px;
+    width: 1200px;
+    grid-gap: 4vh 95px;
+    margin: 30px auto;
+    margin-top: 5vh;
+    margin-bottom: 0; }
+    @media (max-width: 1279px) {
+      .mystery-cases__items {
+        width: 95vw; } }
+    @media (max-width: 1023px) {
+      .mystery-cases__items {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        grid-gap: 4vh 10px; } }
+  .mystery-cases__item {
+    height: 430px;
+    padding: 40px;
+    border-radius: 40px;
+    background-image: linear-gradient(to top, #0093e9 0%, #80d0c7 100%);
+    height: 31vh;
+    padding: 2vh; }
+    .mystery-cases__item--red {
+      background-image: linear-gradient(to top, #c04848 0%, #480048 100%); }
+    @media (max-width: 1023px) {
+      .mystery-cases__item {
+        border-radius: 10px;
+        height: 33vh; } }
+  .mystery-cases__item-title {
+    text-align: center;
+    text-shadow: 0 6px 9px rgba(0, 0, 0, 0.15);
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f7fafa;
+    margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 1vh; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-title {
+        font-size: 14px; } }
+  .mystery-cases__item-info {
+    width: 100%;
+    height: 378px;
+    border-radius: 25px;
+    background-image: linear-gradient(-23deg, #e1eaee 0%, #fafafa 100%);
+    padding: 15px;
+    position: relative;
+    padding: 15px 5px;
+    height: 26vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-info {
+        border-radius: 10px; } }
+  .mystery-cases__item-background {
+    width: calc(100% - 30px);
+    position: absolute;
+    top: 15px;
+    left: 15px; }
+  .mystery-cases__item-background-img {
+    width: 100%;
+    height: auto; }
+  .mystery-cases__item-info-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    padding: 1vh;
+    position: static;
+    left: auto;
+    transform: none;
+    transform: scale(1.7);
+    top: auto;
+    display: block; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-info-img {
+        height: 13vh;
+        transform: none; } }
+  .mystery-cases__item-info-img-inner {
+    width: auto;
+    height: auto;
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    z-index: 1;
+    position: relative; }
+  .mystery-cases__item-info-desc {
+    margin-top: 230px;
+    color: #a9b4ca;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 13px;
+    margin-bottom: 5px; }
+  .mystery-cases__item-info-buttons {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 146px 1fr;
+    border: 2px solid #c0ced0;
+    background-color: #eeeeee;
+    height: 50px;
+    border-radius: 8px;
+    height: 40px; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-info-buttons {
+        grid-template-columns: 1fr 1fr;
+        height: 35px; } }
+  .mystery-cases__item-info-buttons-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 6px 9px rgba(0, 0, 0, 0.15);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f7fafa;
+    position: relative;
+    padding-left: 18px;
+    z-index: 1;
+    cursor: pointer; }
+    .mystery-cases__item-info-buttons-item:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 39px;
+      height: 39px;
+      background: url(../../img/mystery-cases__item-info-buttons-item-key.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      left: 3px;
+      top: 8px; }
+      @media (max-width: 1023px) {
+        .mystery-cases__item-info-buttons-item:before {
+          display: none; } }
+    .mystery-cases__item-info-buttons-item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -2;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      box-shadow: 0 10px 20px rgba(131, 199, 75, 0.4);
+      background-image: linear-gradient(to right, #56ab2f 0%, #a8e063 100%);
+      border-radius: 8px;
+      cursor: pointer; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-info-buttons-item {
+        font-size: 14px;
+        padding-left: 0; } }
+  .mystery-cases__item-info-buttons-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #4c5360;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-info-buttons-price {
+        font-size: 14px; } }
+  .mystery-cases__item-info-el-1 {
+    position: absolute;
+    width: 183px;
+    height: 179px;
+    left: -88px;
+    top: 103px;
+    background: url(../../img/mystery-cases-el-1-left.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    height: 72px;
+    top: 60px; }
+    .mystery-cases__item--red .mystery-cases__item-info-el-1 {
+      background: url(../../img/mystery-cases-el-1-left-red.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-info-el-1 {
+        display: none; } }
+  .mystery-cases__item-info-el-2 {
+    position: absolute;
+    width: 90px;
+    height: 88px;
+    right: -35px;
+    top: 10px;
+    background: url(../../img/mystery-cases-el-1-right.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .mystery-cases__item--red .mystery-cases__item-info-el-2 {
+      background: url(../../img/mystery-cases-el-1-right-red.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    @media (max-width: 1023px) {
+      .mystery-cases__item-info-el-2 {
+        display: none; } }

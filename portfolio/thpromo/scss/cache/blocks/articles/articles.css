@@ -1,0 +1,89 @@
+.articles {
+  padding-top: 35px; }
+  @media (max-width: 1279px) {
+    .articles {
+      overflow: hidden; } }
+  @media (max-width: 1279px) {
+    .articles__wrapper {
+      width: 170%;
+      margin-left: 20px; } }
+  .articles__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px; }
+    @media (max-width: 1279px) {
+      .articles__items {
+        display: block; } }
+  .articles__item {
+    cursor: pointer; }
+  .articles__item-img-block {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden; }
+  .articles__item-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .articles__item:hover .articles__item-img {
+      transform: scale(1.1); }
+  .articles__item-img-logo {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+    .articles__item-img-logo:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2; }
+    .articles__item-img-logo:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60%;
+      height: 60%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../../../img/logo/logo.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      z-index: 3;
+      filter: brightness(4); }
+    .articles__item:hover .articles__item-img-logo {
+      opacity: 1; }
+  .articles__item-title {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 36px;
+    padding-bottom: 20px; }
+    .articles__item-title--thai {
+      height: 130px; }
+  .articles__item-text {
+    text-align: center;
+    font-display: auto;
+    font-family: "proxima", sans-serif !important;
+    font-size: 18px;
+    height: 110px; }
+    .articles__item-text--thai {
+      height: 130px; }
+    @media (max-width: 1279px) {
+      .articles__item-text {
+        height: 125px; } }
+  .articles__item-button {
+    margin-left: auto;
+    margin-right: auto; }

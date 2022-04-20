@@ -1,0 +1,118 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.lead {
+  @include background-cover-center;
+  padding: 60px 0;
+  position: relative;
+  margin-bottom: 110px;
+
+  @media #{$tablet-big-screen} {
+    margin-bottom: 40px;
+    padding: 40px 0;
+  }
+
+  &__block {
+    position: relative;
+  }
+
+  &__letter {
+    position: absolute;
+    width: 263px;
+    height: 258px;
+    top: -192px;
+    right: -292px;
+    background: url(../../../../img/g-letter.svg);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: $white;
+    text-align: center;
+    @include font-druk;
+    font-size: 42px;
+    margin-top: 4px;
+    letter-spacing: 1px;
+    line-height: 60px;
+    text-transform: uppercase;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      font-size: 34px;
+      line-height: 30px;
+      margin-top: 15px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+  &__subtitle {
+    font-size: 22px;
+    margin-top: 22px;
+    color: $white;
+    text-align: center;
+    width: 568px;
+    @include margin-auto;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  &__desc {
+    margin-top: 33px;
+    color: $white;
+    text-align: center;
+    font-size: 16px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+
+  &__form {
+    @include flex-row-center;
+    flex-wrap: wrap;
+    margin-top: 26px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 30px;
+    }
+  }
+
+  &__form-item {
+    width: 220px;
+    height: 60px;
+    margin: 0 4px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      height: 60px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__form-button {
+    @media #{$tablet-big-screen} {
+      @include margin-auto;
+    }
+  }
+
+  &__form-agree {
+    width: 100%;
+    font-size: 16px;
+    @include flex-row-center;
+    color: $white;
+    margin-top: 27px;
+
+    @media #{$tablet-big-screen} {
+      margin-top: 15px;
+    }
+  }
+}

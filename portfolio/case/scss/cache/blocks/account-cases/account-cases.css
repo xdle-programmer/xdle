@@ -1,0 +1,90 @@
+.account-cases {
+  padding-top: 10px; }
+  .account-cases__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; }
+  .account-cases__header-select {
+    margin-right: 20px; }
+  .account-cases__header-select-title {
+    background: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin-bottom: 5px; }
+  .account-cases__header-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .account-cases__header-button:nth-of-type(1) {
+    margin-bottom: 10px; }
+  .account-cases__block {
+    margin: 0 -80px;
+    overflow: hidden;
+    position: relative; }
+    @media (max-width: 1365px) {
+      .account-cases__block {
+        margin: 0; } }
+    @media (max-width: 767px) {
+      .account-cases__block {
+        margin: 0 -20px; } }
+    .account-cases__block:before, .account-cases__block:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 80px;
+      background: linear-gradient(to right, #1e2023, rgba(30, 32, 35, 0));
+      top: 0;
+      left: 0;
+      z-index: 5; }
+    .account-cases__block:after {
+      background: linear-gradient(to left, #1e2023, rgba(30, 32, 35, 0));
+      right: 0;
+      left: auto; }
+  .account-cases__wrapper {
+    width: 1920px; }
+    @media (max-width: 767px) {
+      .account-cases__wrapper {
+        width: 100%; } }
+  .account-cases__button {
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10; }
+    .account-cases__button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #595a5b;
+      width: 30px;
+      height: 30px;
+      mask: url(../../img/account-cases-button.svg);
+      -webkit-mask: url(../../img/account-cases-button.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .account-cases__button:hover:after {
+      background: #fff; }
+    .account-cases__button--prev {
+      left: 0;
+      top: 0;
+      transform: scaleX(-1); }
+    .account-cases__button--next {
+      right: 0;
+      top: 0; }

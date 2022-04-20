@@ -1,0 +1,91 @@
+.main-slider {
+  margin-bottom: 15px;
+  position: relative; }
+  .main-slider__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    background: linear-gradient(-50deg, #42c3e0, #3093b7);
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 25px; }
+    @media (max-width: 767px) {
+      .main-slider__item {
+        flex-wrap: wrap;
+        height: auto; } }
+  .main-slider__item-desc {
+    height: 100%;
+    width: 400px; }
+    @media (max-width: 767px) {
+      .main-slider__item-desc {
+        width: 100%; } }
+  .main-slider__item-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px; }
+  .main-slider__item-text {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 8px; }
+  .main-slider__item-button {
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 5px 10px;
+    display: inline-block;
+    cursor: pointer; }
+    .main-slider__item-button:hover {
+      border-color: #2b92b2; }
+  .main-slider__item-img-block {
+    background: linear-gradient(to bottom, #42c4e1, #2f91b6);
+    border: 1px solid #3093b7; }
+    @media (max-width: 767px) {
+      .main-slider__item-img-block {
+        width: 100%;
+        order: -1;
+        margin-bottom: 15px; } }
+  .main-slider__item-img-items {
+    padding: 10px; }
+  .main-slider__item-img-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; }
+  .main-slider__item-img-text {
+    font-size: 12px;
+    font-weight: 300; }
+  .main-slider__item-img-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 14px;
+    width: 101px;
+    height: 28px;
+    margin-left: auto;
+    font-size: 12px;
+    background: url(../../img/main-slider__item-img_button.png);
+    background-size: 101px 29px; }
+  .main-slider .owl-dots {
+    position: absolute;
+    left: 25px;
+    bottom: 22px; }
+    @media (max-width: 767px) {
+      .main-slider .owl-dots {
+        left: auto;
+        right: 15px;
+        bottom: 29px; } }
+  .main-slider .owl-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background: #97c8da !important; }
+    .main-slider .owl-dot:hover, .main-slider .owl-dot.active {
+      background: #fead32 !important; }

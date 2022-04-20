@@ -1,0 +1,50 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.reviews {
+
+  &__item {
+    padding: 15px 0;
+    margin-bottom: 15px;
+
+    &--answer {
+      border-left: 2px solid $green;
+      padding-left: 20px;
+      background: $gray-light;
+    }
+  }
+  &__item-author {
+    @include flex-row;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  &__item-author-name {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &__item-author-city {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__item-project {
+    @include flex-row;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  &__item-project-title {
+    font-size: 18px;
+  }
+  &__item-project-link {
+    margin-left: 5px;
+    font-size: 18px;
+    font-style: italic;
+    text-decoration: underline;
+  }
+  &__item-text {
+    font-size: 18px;
+    font-weight: 300;
+
+  }
+}

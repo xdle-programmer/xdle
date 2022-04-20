@@ -1,0 +1,28 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.layout {
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 24px;
+  @include margin-auto;
+  position: relative;
+
+  &--small {
+    width: 1136px;
+  }
+
+  @media #{$tablet-big-screen} {
+    width: calc(100% - 30px);
+  }
+
+  &__block {
+    width: 1105px;
+    @include margin-auto;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 30px);
+    }
+  }
+}

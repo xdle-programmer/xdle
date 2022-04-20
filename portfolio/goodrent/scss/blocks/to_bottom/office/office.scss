@@ -1,0 +1,132 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.office {
+  width: 100%;
+  cursor: pointer;
+
+  &__slider {
+    width: 100%;
+    position: relative;
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      width: 9px !important;
+      height: 16px !important;
+      background: url(../../../../img/side-arrow.svg) !important;
+      @include background-contain-center;
+      top: 50%;
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+
+    }
+
+    & .owl-next {
+      left: auto;
+      right: 15px;
+      transform: translateY(-50%) rotate(180deg);
+
+      &:hover {
+        transform: translateY(-50%) scale(1.5) rotate(180deg);
+      }
+    }
+
+    & .owl-prev {
+      left: 15px;
+      right: auto;
+      transform: translateY(-50%);
+
+      &:hover {
+        transform: translateY(-50%) scale(1.5);
+      }
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+  }
+  &__slider-item {
+    height: 160px;
+    width: 100%;
+    @include background-cover-center;
+  }
+
+
+
+  &__desc {
+    border: 1px solid #dfdfdf;
+    padding: 10px 22px;
+    height: 160px;
+  }
+
+  &:hover &__desc {
+    border-color: $green;
+  }
+
+  &__desc-item {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  &__desc-item-icon {
+    margin-right: 14px;
+    width: 12px;
+  }
+  &__desc-item-icon-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__desc-item-value {
+    font-size: 16px;
+  }
+  &__price {
+    padding: 14px 20px;
+    background: $green;
+    @include flex-row-center;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &:hover &__price {
+    background: #2c966b;
+  }
+
+  &__price-value {
+    color: $white;
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include font-druk;
+
+    & span {
+      margin-left: 9px;
+      font-size: 19px;
+    }
+  }
+  &__price-icon {
+    width: 52px;
+    height: 52px;
+    position: relative;
+    background: $white;
+    border-radius: 50%;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 24px;
+      height: 14px;
+      background: url(../../../../img/price-arrow.svg);
+      @include background-contain-center;
+    }
+  }
+}

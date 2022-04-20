@@ -1,0 +1,199 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.footer {
+    background-color: $blue;
+    background-image: url(../../../img/footer_background.svg);
+    @include background-cover-center;
+    color: $white;
+    padding: 70px 0;
+    font-size: 12px;
+
+    @media #{$tablet-small-screen} {
+        padding-top: 40px;
+    }
+
+    &__top {
+        width: 100%;
+        @include flex-row;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @media #{$tablet-small-screen} {
+            flex-wrap: wrap;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__form {
+        margin-left: 130px;
+
+        @media #{$tablet-small-screen} {
+            margin-bottom: 40px;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__form-title {
+        margin-bottom: 20px;
+
+        @media #{$tablet-small-screen} {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+
+    &__form-text {
+        margin-bottom: 20px;
+
+        @media #{$tablet-small-screen} {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+
+    &__form-inputs {
+        display: grid;
+        grid-template-columns: 1fr 140px;
+    }
+
+    &__form-inputs-input {
+        background: transparent;
+        border: 1px solid $white;
+        padding-left: 20px;
+        color: $white;
+
+        &::-webkit-input-placeholder {
+            color: $white;
+        }
+
+        &::-moz-placeholder {
+            color: $white;
+        }
+
+        &:-moz-placeholder {
+            color: $white;
+        }
+
+        &:-ms-input-placeholder {
+            color: $white;
+        }
+    }
+
+    &__form-inputs-button {
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 100px;
+        flex-grow: 1;
+        margin-bottom: 40px;
+
+        @media #{$tablet-small-screen} {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media #{$mobile-big-screen} {
+            grid-template-columns: 1fr;
+            grid-gap: 0;
+        }
+    }
+
+    &__links-col {
+    }
+
+    &__links-item {
+        font-size: 16px;
+        margin-bottom: 20px;
+
+        @media #{$tablet-small-screen} {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__form-contacts {
+        @include flex-row;
+
+        @media #{$tablet-small-screen} {
+            @include flex-row-center;
+        }
+    }
+
+    &__form-contacts-item {
+        white-space: nowrap;
+        margin-right: 30px;
+
+        &:nth-last-of-type(1) {
+            margin-right: 0;
+        }
+    }
+
+    &__bottom {
+        @include flex-row-center;
+    }
+
+    &__bottom-logo {
+        font-size: 30px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 28px;
+
+        &:after {
+            @include after-absolute;
+            width: 28px;
+            height: 38px;
+            background: url(../../../img/footer_logo.png);
+            @include background-contain-center;
+            left: 0;
+            top: 3px;
+        }
+    }
+
+    &__bottom-text {
+    }
+
+    &__bottom-social {
+        @include flex-row;
+        position: relative;
+        padding-top: 35px;
+        margin-top: 10px;
+
+        &:after {
+            @include after-absolute;
+            width: 68px;
+            height: 2px;
+            left: 0;
+            top: 0;
+            background: $white;
+
+            @media #{$tablet-small-screen} {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media #{$tablet-small-screen} {
+            @include flex-row-center;
+        }
+    }
+
+    &__bottom-social-link {
+        margin-left: 30px;
+        @include flex-row-center;
+        width: 15px;
+        height: 15px;
+
+        &:nth-of-type(1) {
+            margin-left: 0;
+        }
+    }
+
+    &__bottom-social-link-icon {
+        width: auto;
+        height: 100%;
+    }
+}

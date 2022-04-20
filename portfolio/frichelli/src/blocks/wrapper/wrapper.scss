@@ -1,0 +1,78 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.wrapper {
+  position: fixed;
+  @include absolute-fill;
+  background: url(../../../images/background/bg-pattern--blue.jpg);
+  @include background-cover-center;
+
+  $s-def:'.wrapper--default';
+  $s0:'.wrapper--0';
+  $s1:'.wrapper--1';
+  $s2:'.wrapper--2';
+  $s3:'.wrapper--3';
+
+  &__cook {
+    @include after-absolute;
+    background: url(../../../images/cook.png);
+    @include background-contain-center;
+    background-position: center bottom!important;
+    bottom: 0;
+    left: calc(50% + 13vw);
+    width: 21.3vw;
+    height: 100%;
+    opacity: .001;
+    transition: all 500ms ease-in;
+    z-index: 1;
+
+    #{$s0} & {opacity: 1}
+
+    @media #{$tablet-big-screen} {
+      right: -5vh;
+      left: auto;
+      width: 100vw;
+      height: 45vh;
+      background-position: right bottom!important;
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    @include absolute-fill;
+    transition: all 500ms ease-in;
+
+    &--blue {
+      background: url(../../../images/background/bg-pattern--blue.jpg);
+      @include background-cover-center;
+      opacity: .001;
+
+      #{$s1} & {opacity: 1}
+      #{$s-def} & {opacity: 1}
+    }
+
+    &--green {
+      background: url(../../../images/background/bg-pattern--green.jpg);
+      @include background-cover-center;
+      opacity: .001;
+
+      #{$s2} & {opacity: 1}
+    }
+
+    &--turquoise {
+      background: url(../../../images/background/bg-pattern--turquoise.jpg);
+      @include background-cover-center;
+      opacity: .001;
+
+      #{$s3} & {opacity: 1}
+    }
+  }
+
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+    background: url(../../../images/background/bg-draft.png);
+    @include background-contain-center;
+  }
+}

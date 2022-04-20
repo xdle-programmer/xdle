@@ -1,0 +1,65 @@
+.pagination {
+  height: 57px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0 25px; }
+  @media (max-width: 767px) {
+    .pagination {
+      padding: 0 15px; } }
+  .pagination__arrow {
+    background: #ca1626;
+    mask: url(../../../img/pagination_arrow.svg);
+    -webkit-mask: url(../../../img/pagination_arrow.svg);
+    width: 33px;
+    height: 15px;
+    cursor: pointer; }
+    @media (max-width: 767px) {
+      .pagination__arrow {
+        width: 25px; } }
+    .pagination__arrow:hover {
+      background: #333333; }
+    .pagination__arrow--next {
+      transform: scaleX(-1); }
+  .pagination__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px; }
+  .pagination__item {
+    width: 37px;
+    height: 37px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+    padding-bottom: 3px; }
+    @media (max-width: 767px) {
+      .pagination__item {
+        width: 30px;
+        height: 30px; } }
+    .pagination__item:hover, .pagination__item.active {
+      color: #ca1626;
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+  .pagination__dots {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; }

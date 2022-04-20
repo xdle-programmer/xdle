@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Получение данных вьюпорта</title>
+</head>
+<body>
+<link rel="stylesheet" href="../dist/style.css">
+<link rel="stylesheet" href="demo.css">
+
+
+<div class="demo">
+    <h1 class="demo__title">Получение данных вьюпорта</h1>
+    <div class="demo__text-article">
+        <a href="https://www.npmjs.com/package/get-viewport-options" class="demo__subtitle-h3">https://www.npmjs.com/package/get-viewport-options</a>
+        <h3 class="demo__subtitle-h3">npm i get-viewport-options</h3>
+    </div>
+
+    <h2 class="demo__subtitle-h2">Пример получения данных</h2>
+
+    <div class="demo__text">
+        <p class="demo__text-article">Для подключения нужно создать инстанс класса GetViewportOptions</p>
+        <p class="demo__text-article">Получить ширину вьюпорта .getViewportWidth()</p>
+        <p class="demo__text-article">Получить высоту вьюпорта .getViewportHeight()</p>
+        <p class="demo__text-article">Получить доступность ховера .getHoverAvailability()</p>
+        <p class="demo__text-article">Получить ширину скролла .getScrollWidth()</p>
+        <p class="demo__text-article">Получить все опции .getFullOptions()</p>
+
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+window.viewportOptions = new GetViewportOptions();
+
+viewportOptions.getViewportWidth();
+
+viewportOptions.getViewportHeight();
+
+viewportOptions.getHoverAvailability();
+
+viewportOptions.getScrollWidth();
+
+viewportOptions.getFullOptions();
+            </code>
+        </pre>
+        </div>
+    </div>
+</div>
+
+
+<script src="../dist/script.js"></script>
+<script src="bundle/demo.js"></script>
+</body>
+</html>

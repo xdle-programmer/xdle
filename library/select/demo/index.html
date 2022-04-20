@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Селект</title>
+</head>
+<body>
+<link rel="stylesheet" href="../dist/style.css">
+<link rel="stylesheet" href="demo.css">
+
+<div class="demo">
+    <h1 class="demo__title">Селект</h1>
+    <div class="demo__text-article">
+        <a href="https://www.npmjs.com/package/simple-custom-select" class="demo__subtitle-h3">https://www.npmjs.com/package/simple-custom-select</a>
+        <h3 class="demo__subtitle-h3">npm i simple-custom-select</h3>
+    </div>
+
+    <h2 class="demo__subtitle-h2">Пример использования селекта</h2>
+
+    <div class="demo__select">
+        <select class="select">
+            <option value="0" selected disabled hidden>Значение по умолчанию</option>
+            <option value="1">Опция 1</option>
+            <option value="2">Опция 2</option>
+            <option value="3">Опция 3</option>
+            <option disabled value="4">Опция 4 (выключенная)</option>
+        </select>
+    </div>
+
+    <h2 class="demo__subtitle-h2">Подключение</h2>
+    <div class="demo__text">
+        <p class="demo__text-article">Подключение максимально простое - нужно создать классический селект и после создать инстанс класса. Класс принимает три параметра:</p>
+        <p class="demo__text-article">Переключение на нативный селект задается в scss, в медиазапросе</p>
+        <p class="demo__text-article">События на селект транслируются в обе стороны, т.е. взаимодействовать с инстансом не нужно - для изменения значения можно изменить первоначальный селект и стриггерить событие 'change' на нем</p>
+
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+selectClass:'select',     // String. Класс селекта, который требуется стилизовать (применимо, если селект на странице один)
+$select:document.getElementsByClassName(this.selectClass)[0],       // node element, Селекта, который требуется стилизовать
+customSelectClass:'custom-select',     // String. Класс, который получит кастомный селект
+            </code>
+        </pre>
+        </div>
+        <p class="demo__text-article">Scss структура для классов по умолчанию</p>
+        <div class="demo__code-wrapper">
+        <pre>
+            <code class="demo__code">
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom-select {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  background: #fff;
+  z-index: 100;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #c1c1c1;
+
+  & select {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 102;
+    opacity: 0;
+    display: none;
+    font-size: 16px;
+
+    @media (max-width: 1390px) {
+      display: block;
+    }
+  }
+
+  &--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 101;
+  }
+
+  &:hover {
+    border-color: #444444;
+  }
+
+  $open: '.custom-select--open';
+  $hover: '.custom-select:hover';
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__input-name {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 0 15px;
+    height: 100%;
+    @include unselectable;
+  }
+
+  &__input-icon {
+    position: absolute;
+    width: 18px;
+    height: 11px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    #{$open} & {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 72%;
+      height: 2px;
+      background: #7b7b7b;
+      bottom: 0;
+
+      #{$hover} & {
+        background: #444444;
+      }
+    }
+
+    &:before {
+      left: 50%;
+      transform: rotate(-45deg);
+      transform-origin: left bottom;
+    }
+
+    &:after {
+      right: 50%;
+      transform: rotate(45deg);
+      transform-origin: right bottom;
+    }
+
+  }
+
+  &__list {
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    width: calc(100% + 2px);
+    border: 1px solid;
+    background: inherit;
+    border-color: inherit;
+    border-top-color: transparent;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top;
+
+    #{$open} & {
+      transform: scaleX(1);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    padding: 10px 15px;
+    cursor: pointer;
+    @include unselectable;
+
+    &:hover {
+      background: #f3f3f3;
+    }
+
+    &--selected {
+      background: #f3f3f3;
+    }
+
+    &--disabled {
+      cursor: default;
+      opacity: .7;
+
+      &:hover {
+        background: inherit;
+      }
+
+    }
+
+  }
+}
+            </code>
+        </pre>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="../dist/script.js"></script>
+<script src="bundle/demo.js"></script>
+</body>
+</html>

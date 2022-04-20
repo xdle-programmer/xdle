@@ -1,0 +1,109 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.workshop-settings {
+
+  &__block {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-gap: 50px;
+    position: relative;
+    margin-bottom: 20px;
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+      padding-top: 40px;
+    }
+  }
+
+  &__desc {
+
+    @media #{$mobile-big-screen} {
+      text-align: center;
+    }
+  }
+
+  &__desc-name {
+    font-size: 20px;
+    color: $blue;
+    margin-bottom: 20px;
+  }
+
+  &__desc-phone {
+    margin-bottom: 5px;
+  }
+
+  &__desc-email {
+    margin-bottom: 15px;
+  }
+
+  &__desc-text {
+    font-size: 13px;
+  }
+
+  &__subtitle {
+    color: $blue;
+    margin-bottom: 15px;
+
+    @media #{$mobile-big-screen} {
+      text-align: center;
+    }
+  }
+
+  &__main-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    @media #{$mobile-big-screen} {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      top: auto;
+      z-index: 5;
+      height: 45px;
+      width: 100%;
+    }
+
+  }
+
+  &__notification {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    position: relative;
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: rgba(255, 255, 255, .6);
+
+      .edit & {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+  }
+
+  &__notification-item {
+
+  }
+
+  &__input-block {
+    margin-bottom: 15px;
+  }
+
+}

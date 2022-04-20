@@ -1,0 +1,101 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.drug-list {
+
+  &__items {
+  }
+
+  &__item {
+    width: 100%;
+    @include flex-row-center;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray-light;
+    padding: 15px 25px;
+
+    &:nth-of-type(1) {
+      border-top: 1px solid $gray-light;
+    }
+
+    &:nth-of-type(odd) {
+      background: #e5f5ff;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      @include flex-column;
+    }
+  }
+
+  &__item-name {
+    width: 30%;
+    font-size: 20px;
+    font-weight: 500;
+
+    @media #{$desktop-extra-big-screen} {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+
+  &__item-offers {
+    width: 70%;
+
+    @media #{$desktop-extra-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__item-offers-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 5px;
+      padding-top: 7px;
+      margin-top: 7px;
+      border-top: 1px solid #afe0ff;
+    }
+  }
+
+  &__item-offers-item-link {
+    text-decoration: underline;
+    cursor: pointer;
+
+    @media #{$mobile-big-screen} {
+      font-size: 14px;
+    }
+  }
+
+  &__item-offers-item-favorite {
+    color: $blue;
+    @include flex-row;
+    cursor: pointer;
+
+    &:before {
+      width: 18px;
+      height: 17px;
+      display: block;
+      content: '';
+      background: $blue;
+      margin-right: 10px;
+      mask: url(../../../img/icon-favorite.svg);
+      -webkit-mask: url(../../../img/icon-favorite.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__item-offers-item-price {
+
+  }
+}

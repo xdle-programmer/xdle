@@ -1,0 +1,35 @@
+{% include "menu-mobile.html" %}
+{% include "filter-mobile.html" %}
+{% include "search-mobile.html" %} 
+{% include "category-list.html" %} 
+{% include "add-cart.html" %} 
+
+<div class="popup popup_cancel">
+	<div class="popup__block">
+		<div class="popup__close-button js-close-popup"></div>
+		<form>
+			<div class="input-row">
+                <label class="input-row__name">Укажите причину отмены заказа</label>
+                <div class="regular-input"> 
+                    <textarea type="text" name="" class="regular-input__input"></textarea>
+                </div>
+            </div>
+			<button class="button button_auto-width button_grey button_in-form" data-popup-info="Ваш заказ отменен">Отменить заказ</button>
+		</form>
+	</div>
+</div>
+<div class="popup popup_info">
+	<div class="popup__block">
+		<div class="popup__close-button js-close-popup"></div>
+		<div class="popup__info-msg"></div>
+	</div>
+</div>
+<div class="popup popup_product popup_with-fade">
+	<div class="popup__block popup__block_big">
+		<div class="popup__close-button js-close-popup"></div>
+		<div class="quick-view">
+			<div class="quick-view__view-slider"></div>
+			<div class="quick-view__info"></div>
+		</div>
+	</div>
+</div>

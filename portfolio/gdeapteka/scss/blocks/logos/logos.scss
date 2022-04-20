@@ -1,0 +1,45 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.logos {
+  padding: 35px 0;
+  padding-bottom: 50px;
+  background: $blue;
+
+  &__block {
+
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 35px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    height: 44px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+
+  }
+}

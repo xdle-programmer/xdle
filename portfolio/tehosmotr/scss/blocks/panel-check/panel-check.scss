@@ -1,0 +1,233 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.panel-check {
+  @include flex-row;
+  margin-top: 115px;
+
+  @media #{$tablet-big-screen} {
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    width: 50%;
+    height: 525px;
+    position: relative;
+    padding-right: 140px;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      background: url(../../../img/panel_light.jpg);
+      @include background-cover-center;
+      height: 100%;
+      left: 0;
+      width: calc(100% + 85px);
+      top: 0;
+      border-top-right-radius: 300px;
+      border-bottom-right-radius: 300px;
+
+      @media #{$tablet-small-screen} {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    &:before {
+      z-index: -1;
+      opacity: .1;
+    }
+    &:after {
+      z-index: -3;
+    }
+
+    @media #{$desktop-middle-screen} {
+      padding-right: 15px;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 90%;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__left-img {
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+    width: 367px;
+    height: 614px;
+    background: url(../../../img/girl.png);
+    @include background-contain-center;
+
+    @media #{$desktop-big-screen} {
+      left: -10px;
+    }
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    height: 525px;
+    position: relative;
+    padding-left: 140px;
+
+    &:before {
+      @include after-absolute;
+      background: url(../../../img/panel_dark.jpg);
+      @include background-cover-center;
+      height: 100%;
+      right: 0;
+      width: calc(100% + 85px);
+      top: 0;
+      border-top-left-radius: 300px;
+      border-bottom-left-radius: 300px;
+      z-index: -2;
+
+      @media #{$tablet-small-screen} {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    @media #{$desktop-middle-screen} {
+      padding-left: 15px;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 90%;
+      margin-left: auto;
+      margin-top: 40px;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__right-img {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    width: 403px;
+    height: 608px;
+    background: url(../../../img/man.png);
+    @include background-contain-center;
+
+    @media #{$desktop-big-screen} {
+      right: -90px;
+    }
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+
+  &__inner {
+    width: 445px;
+    height: 100%;
+    margin-left: auto;
+    padding: 100px 0;
+    @include flex-column;
+    padding-left: 69px;
+
+    @media #{$desktop-middle-screen} {
+      padding-right: 100px;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 600px;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      @include flex-column-center;
+    }
+
+    &--right {
+      margin-left: 0;
+      margin-right: auto;
+      padding-left: 0;
+
+      @media #{$desktop-middle-screen} {
+        padding-right: 0;
+      }
+
+      @media #{$tablet-small-screen} {
+        padding: 30px;
+      }
+    }
+  }
+
+  &__inner-title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    color: #1f2733;
+
+    &--white {
+      color: $white;
+    }
+  }
+
+  &__inner-subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #1f2733;
+
+    &--yellow {
+      color: $yellow;
+    }
+  }
+
+  &__inner-text {
+    font-size: 18px;
+    color: #656565;
+    margin-top: 20px;
+    font-weight: 100;
+
+    &--white {
+      color: $white;
+    }
+  }
+
+  &__inner-button {
+    margin-top: auto;
+    font-size: 21px;
+    width: 370px;
+    @include flex-row-center;
+    background: #1f2733;
+    color: $white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: .8;
+    }
+
+    &--white {
+      background: $white;
+      color: #1f2733;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+}

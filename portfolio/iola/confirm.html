@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Иола</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="header__top layout">
+            <div class="header__toggle-button"></div>
+            <div class="header__logo">
+                <img src="img/logo.svg" class="header__logo-img">
+            </div>
+            <div class="header__search-toggle"></div>
+            <div id="search" class="header__search js_search_form">
+                <input class="header__search-input" placeholder="Поиск товаров">
+                <div class="header__search-button"></div>
+            </div>
+            <div class="header__phone">
+                <div class="header__phone-item phone">
+                    <div class="phone__button">
+                        <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                        <div class="phone__submenu">
+                            <div class="phone__submenu-block">
+                                <a href="tel:+79047396823" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-23</div>
+                                    <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                </a>
+                                <a href="tel:+79047396824" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-24</div>
+                                </a>
+                                <a href="tel:+79509343767" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 950 934-37-67</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__icon"></div>
+                </div>
+                <div class="header__phone-worktime">
+                    Пн-Пт 09.00 — 18.00
+                </div>
+            </div>
+            <div id="show_cart" class="header__basket js_show_cart">
+                <div class="header__basket-icon"></div>
+                <div class="header__basket-count">
+                    <div class="header__basket-count-number">129</div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header__bottom-block layout">
+                <div class="header__catalog-button">
+                    <div class="header__catalog-button-icon"></div>
+                    <div class="header__catalog-button-text">Каталог товаров</div>
+                </div>
+                <div class="header__catalog-items">
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_1.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Запчасти Беламос, JeMIX, ALBA</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_2.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Водоснабжение, полив, отопление</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_3.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Системы очистки, фильтрации</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_4.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Сварочные расходники, аксессуары</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_5.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Мелко бытовая техника для дома</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_6.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Электроинструмент для строительства и ремонта</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_7.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Садовая техника</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_8.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Сезонный товар</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_9.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Снегоуборщики</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_10.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Оборудование для сварки и полипро- пиленовых труб</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_11.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Бетоносмесители и запчасти</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_12.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Тачки строительные, садовые и расходники</div>
+                    </a>
+
+                </div>
+                <div class="header__menu">
+                    <a href="#" class="header__menu-item">Распродажа</a>
+                    <a href="#" class="header__menu-item">О компании</a>
+                    <a href="#" class="header__menu-item">Доставка и оплата</a>
+                    <a href="#" class="header__menu-item">Новости</a>
+                    <a href="#" class="header__menu-item">Статьи</a>
+                    <a href="#" class="header__menu-item">Контакты</a>
+                </div>
+                <div class="header__account header__account--has-submenu">
+                    <div class="header__account-img"></div>
+                    <div class="header__account-text">kabinet_polzovatelya</div>
+                    <div class="header__account-arrow"></div>
+                    <div class="header__account-exit">Выйти</div>
+                    <div class="header__account-submenu">
+                        <div class="header__account-submenu-top">
+                            <a href="#" class="header__account-submenu-link">Личная страница</a>
+                            <a href="#" class="header__account-submenu-link">Настройки</a>
+                            <a href="#" class="header__account-submenu-link">Сообщения</a>
+                            <a href="#" class="header__account-submenu-link">Заказы</a>
+                        </div>
+                        <div class="header__account-submenu-bottom">
+                            <a href="#"
+                               class="header__account-submenu-link header__account-submenu-link--exit">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile-block">
+                    <div class="header__buttons-count">
+                        <div class="header__button-count">
+                            <div class="header__button-count-img-block">
+                                <img src="img/favorit.svg" class="header__button-count-img">
+                            </div>
+                            <div class="header__button-count-text">Избранное</div>
+                            <div class="header__button-count-number">19</div>
+                        </div>
+                        <div class="header__button-count">
+                            <div class="header__button-count-img-block">
+                                <img src="img/compare.svg" class="header__button-count-img">
+                            </div>
+                            <div class="header__button-count-text">Сравнить</div>
+                            <div class="header__button-count-number">2</div>
+                        </div>
+                    </div>
+                    <div class="header__mobile-email-block">
+                        <a href="mailto:iola_ufa@list.ru" class="header__mobile-email-link">iola_ufa@list.ru</a>
+                    </div>
+                    <div class="header__mobile-phone-block">
+                        <div class="phone phone--header">
+                            <div class="phone__button phone__button--header">
+                                <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                                <div class="phone__submenu phone__submenu--header">
+                                    <div class="phone__submenu-block">
+                                        <a href="tel:+79047396823" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 904 739-68-23</div>
+                                            <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                        </a>
+                                        <a href="tel:+79047396824" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 904 739-68-24</div>
+                                        </a>
+                                        <a href="tel:+79509343767" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 950 934-37-67</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone__icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__wrapper">
+                <div class="breadcrumbs__items">
+                    <a href="#" class="breadcrumbs__item">Главная</a>
+                    <a href="#" class="breadcrumbs__item">Водоснабжение, полив, отопление</a>
+                    <a href="#" class="breadcrumbs__item">Насосы</a>
+                    <a href="#" class="breadcrumbs__item">Поверхностные насосы (садовые)</a>
+                    <div class="breadcrumbs__item active">Поверхностный насос Беламос XА 13 (чугун)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="basket js_cart_table_form">
+            <div class="basket__title">Заказ оформлен</div>
+            <div class="basket__subtitle">Спасибо за Ваш заказ! В ближайшее время мы свяжемся с Вами!</div>
+
+            <div class="basket__block basket__block--confirm">
+                <div class="basket__product-row basket__product-row--header  basket__product-row--no-mobile">
+                    <div class="basket__product-header-cell">Товар</div>
+                    <div class="basket__product-header-cell">Количество</div>
+                    <div class="basket__product-header-cell">Цена со скидкой</div>
+                    <div class="basket__product-header-cell">Скидка</div>
+                    <div class="basket__product-header-cell">Сумма</div>
+                </div>
+
+                <div class="basket__product-row js_cart_item">
+
+                    <div class="basket__product-main">
+                        <div class="basket__product-img-block">
+                            <img src="img/cart-previews__1.jpg" class="basket__product-img">
+                        </div>
+                        <div class="basket__product-desc">
+                            <div class="basket__product-desc-title">Чайник LIRA LR 0113 RED (красный)</div>
+                            <div class="basket__product-desc-subtitle">Цвет: красный</div>
+                            <div class="basket__product-desc-subtitle">Арт: LR 0202</div>
+                        </div>
+                    </div>
+
+                    <div class="basket__product-counter js_cart_count">
+                        <div class="basket__product-counter-button basket__product-counter-button--minus js_cart_count_minus"></div>
+                        <div class="basket__product-counter-number">1</div>
+                        <div class="basket__product-counter-button basket__product-counter-button--plus js_cart_count_plus"></div>
+                    </div>
+                    <div class="basket__product-mobile-title">Цена со скидкой</div>
+                    <div class="basket__product-price">21 000 руб</div>
+                    <div class="basket__product-mobile-title">Скидка</div>
+                    <div class="basket__product-sale">-20%</div>
+                    <div class="basket__product-mobile-title">Общая цена</div>
+                    <div class="basket__product-price">28 000 руб</div>
+                    
+                </div>
+
+                <div class="basket__product-row js_cart_item">
+
+                    <div class="basket__product-main">
+                        <div class="basket__product-img-block">
+                            <img src="img/cart-previews__2.jpg" class="basket__product-img">
+                        </div>
+                        <div class="basket__product-desc">
+                            <div class="basket__product-desc-title">Поверхностный насос Беламос XА 13 (чугун)</div>
+                            <div class="basket__product-desc-subtitle">Цвет: красный</div>
+                            <div class="basket__product-desc-subtitle">Арт: LR 0202</div>
+                        </div>
+                    </div>
+
+                    <div class="basket__product-counter js_cart_count">
+                        <div class="basket__product-counter-button basket__product-counter-button--minus js_cart_count_minus"></div>
+                        <div class="basket__product-counter-number">1</div>
+                        <div class="basket__product-counter-button basket__product-counter-button--plus js_cart_count_plus"></div>
+                    </div>
+                    <div class="basket__product-mobile-title">Цена со скидкой</div>
+                    <div class="basket__product-price">21 000 руб</div>
+                    <div class="basket__product-mobile-title">Скидка</div>
+                    <div class="basket__product-sale">-20%</div>
+                    <div class="basket__product-mobile-title">Общая цена</div>
+                    <div class="basket__product-price">28 000 руб</div>
+                    
+                </div>
+
+                <div class="basket__product-row js_cart_item">
+
+                    <div class="basket__product-main">
+                        <div class="basket__product-img-block">
+                            <img src="img/cart-previews__3.jpg" class="basket__product-img">
+                        </div>
+                        <div class="basket__product-desc">
+                            <div class="basket__product-desc-title">Поверхностный насос Беламос XА 13 (чугун)</div>
+                            <div class="basket__product-desc-subtitle">Цвет: красный</div>
+                            <div class="basket__product-desc-subtitle">Арт: LR 0202</div>
+                        </div>
+                    </div>
+
+                    <div class="basket__product-counter js_cart_count">
+                        <div class="basket__product-counter-button basket__product-counter-button--minus js_cart_count_minus"></div>
+                        <div class="basket__product-counter-number">1</div>
+                        <div class="basket__product-counter-button basket__product-counter-button--plus js_cart_count_plus"></div>
+                    </div>
+                    <div class="basket__product-mobile-title">Цена со скидкой</div>
+                    <div class="basket__product-price">21 000 руб</div>
+                    <div class="basket__product-mobile-title">Скидка</div>
+                    <div class="basket__product-sale">-20%</div>
+                    <div class="basket__product-mobile-title">Общая цена</div>
+                    <div class="basket__product-price">28 000 руб</div>
+                    
+                </div>
+
+                <div class="basket__product-row js_cart_item">
+
+                    <div class="basket__product-main">
+                        <div class="basket__product-img-block">
+                            <img src="img/cart-previews__4.jpg" class="basket__product-img">
+                        </div>
+                        <div class="basket__product-desc">
+                            <div class="basket__product-desc-title">Чайник LIRA LR 0113 RED (красный)</div>
+                            <div class="basket__product-desc-subtitle">Цвет: красный</div>
+                            <div class="basket__product-desc-subtitle">Арт: LR 0202</div>
+                        </div>
+                    </div>
+
+                    <div class="basket__product-counter js_cart_count">
+                        <div class="basket__product-counter-button basket__product-counter-button--minus js_cart_count_minus"></div>
+                        <div class="basket__product-counter-number">1</div>
+                        <div class="basket__product-counter-button basket__product-counter-button--plus js_cart_count_plus"></div>
+                    </div>
+                    <div class="basket__product-mobile-title">Цена со скидкой</div>
+                    <div class="basket__product-price">21 000 руб</div>
+                    <div class="basket__product-mobile-title">Скидка</div>
+                    <div class="basket__product-sale">-20%</div>
+                    <div class="basket__product-mobile-title">Общая цена</div>
+                    <div class="basket__product-price">28 000 руб</div>
+                    
+                </div>
+
+                <div class="basket__block-footer">
+                    <div class="basket__block-footer-price">
+                        <div class="basket__block-footer-price-title">Итого за товары:</div>
+                        <div class="basket__block-footer-price-item">188 000 руб</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="basket__block  basket__block--confirm">
+                <div class="basket__product-row basket__product-row--header basket__product-row--select">
+                    <div class="basket__product-select-title">Дополнительно</div>
+                    <div class="basket__product-select-cell"></div>
+                    <div class="basket__product-select-cell"></div>
+                </div>
+
+                <div class="basket__product-row basket__product-row--select basket__product-row--select-inner">
+                    <div class="basket__select-desc">
+                        <div class="basket__select-desc-title">Подарочная упаковка</div>
+                        <div class="basket__select-desc-subtitle">Мы красиво оформим Ваш заказ</div>
+                    </div>
+                    <div class="basket__select-price basket__select-price--sale">-3%</div>
+                    <div class="basket__select-price">131 руб.</div>
+                </div>
+            </div>
+
+            <div class="basket__block">
+                <div class="basket__product-row basket__product-row--header basket__product-row--select">
+                    <div class="basket__product-select-title">Способ доставки</div>
+                    <div class="basket__product-select-cell"></div>
+                    <div class="basket__product-select-cell"></div>
+                </div>
+
+                <div class="basket__product-row basket__product-row--select basket__product-row--select-inner">
+                    <div class="basket__select-desc">
+                        <div class="basket__select-desc-title">Доставка курьером</div>
+                        <div class="basket__select-desc-subtitle">Товар доставляется курьером до двери Вашего дома.
+                        </div>
+                        <div class="basket__select-desc-subtitle">Стоимость 500 р</div>
+                        <div class="basket__select-desc-subtitle">Бесплатно от суммы 6000 р</div>
+                    </div>
+                    <div class="basket__select-price basket__select-price--sale"></div>
+                    <div class="basket__select-price">0 руб.</div>
+                </div>
+
+                <div class="basket__block-footer">
+                    <div class="basket__block-footer-price">
+                        <div class="basket__block-footer-price-title">Итого за товары:</div>
+                        <div class="basket__block-footer-price-item">203 000 руб</div>
+                    </div>
+                    <div class="basket__block-footer-desc">
+                        В том числе НДС 1 200 руб
+                    </div>
+                </div>
+            </div>
+
+            <div class="basket__block">
+                <div class="basket__product-row basket__product-row--header basket__product-row--select">
+                    <div class="basket__product-select-title">Данные для доставки</div>
+                </div>
+
+                <div class="basket__delivery-table">
+                    <div class="basket__delivery-table-item">
+                        <div class="basket__delivery-table-item-name">ФИО или название компании</div>
+                        <div class="basket__delivery-table-item-val">Админ</div>
+                    </div>
+                    <div class="basket__delivery-table-item">
+                        <div class="basket__delivery-table-item-name">E-mail</div>
+                        <div class="basket__delivery-table-item-val">test@test.ru</div>
+                    </div>
+                    <div class="basket__delivery-table-item">
+                        <div class="basket__delivery-table-item-name">Контактные телефоны (с кодом города)</div>
+                        <div class="basket__delivery-table-item-val">+7888 555 7744</div>
+                    </div>
+                    <div class="basket__delivery-table-item">
+                        <div class="basket__delivery-table-item-name">Город</div>
+                        <div class="basket__delivery-table-item-val">Новосибирск</div>
+                    </div>
+                    <div class="basket__delivery-table-item">
+                        <div class="basket__delivery-table-item-name">Улица, проспект и пр.</div>
+                        <div class="basket__delivery-table-item-val">Федосеева</div>
+                    </div>
+                    <div class="basket__delivery-table-item">
+                        <div class="basket__delivery-table-item-name">Номер дома</div>
+                        <div class="basket__delivery-table-item-val">10</div>
+                    </div>
+                    <div class="basket__delivery-table-item">
+                        <div class="basket__delivery-table-item-name">Квартира, офис</div>
+                        <div class="basket__delivery-table-item-val">15</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="layout footer__block">
+            <div class="footer__logo">
+                <img src="img/logo-short.svg" class="footer__logo-img">
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-item">
+                    <img src="img/whatsapp.svg" class="footer__social-item-img">
+                </a>
+                <a href="#" class="footer__social-item">
+                    <img src="img/vk.svg" class="footer__social-item-img">
+                </a>
+                <a href="#" class="footer__social-item">
+                    <img src="img/insta.svg" class="footer__social-item-img">
+                </a>
+            </div>
+            <div class="footer__phone">
+                <div class="phone phone--bottom">
+                    <div class="phone__button">
+                        <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                        <div class="phone__submenu">
+                            <div class="phone__submenu-block">
+                                <a href="tel:+79047396823" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-23</div>
+                                    <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                </a>
+                                <a href="tel:+79047396824" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904 739-68-24</div>
+                                </a>
+                                <a href="tel:+79509343767" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 950 934-37-67</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__icon"></div>
+                </div>
+            </div>
+            <a href="mailto:iola_ufa@list.ru" class="footer__email">iola_ufa@list.ru</a>
+            <a target="_blank" href="rozart.ru" class="footer__dev-logo">
+                <div class="footer__dev-logo-text">cоздание<br>сайта</div>
+                <img src="img/dev-logo.svg" class="footer__dev-logo-img">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="plugins/jquery.maskedinput.min.js"></script>
+    <script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</div>
+
+</body>

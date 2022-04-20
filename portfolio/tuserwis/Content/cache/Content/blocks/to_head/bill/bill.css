@@ -1,0 +1,71 @@
+.bill {
+  padding-bottom: 50px; }
+  .bill__block {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
+    background-color: #ffffff; }
+  .bill__title {
+    padding: 20px 25px;
+    color: #0092E8;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.61px; }
+  .bill__row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    border-bottom: 1px solid #e7e7e7; }
+    .bill__row--header {
+      border-top: 1px solid #e7e7e7; }
+      @media (max-width: 1023px) {
+        .bill__row--header {
+          display: none; } }
+    .bill__row:nth-of-type(odd) {
+      background: #f9f9f9; }
+    @media (max-width: 1023px) {
+      .bill__row {
+        grid-template-columns: 1fr;
+        padding: 10px 0; }
+        .bill__row:nth-of-type(odd) {
+          background: #ffffff; }
+        .bill__row:nth-of-type(2) {
+          border-top: 1px solid #e7e7e7; }
+        .bill__row:nth-of-type(even) {
+          background: #f9f9f9; } }
+  .bill__cell {
+    padding: 10px 25px;
+    font-size: 12px;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    text-align: center; }
+    .bill__row--header .bill__cell {
+      font-weight: 700;
+      color: #b9b9b9;
+      font-size: 14px; }
+    @media (max-width: 1023px) {
+      .bill__cell {
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #fff; }
+        .bill__cell:nth-last-of-type(1) {
+          border-bottom: none; } }
+  .bill__cell-mobile-name {
+    display: none; }
+    @media (max-width: 1023px) {
+      .bill__cell-mobile-name {
+        display: block; } }
+  .bill__cell-download {
+    width: 23px;
+    height: 20px;
+    cursor: pointer;
+    background: url(../../../img/bill-download.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-left: auto;
+    margin-right: auto; }
+    .bill__cell-download:hover {
+      transform: scale(1.05); }

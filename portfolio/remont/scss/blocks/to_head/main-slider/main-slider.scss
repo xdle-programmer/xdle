@@ -1,0 +1,138 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-slider {
+  width: 100%;
+  position: relative;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 90px;
+  }
+
+  @media #{$mobile-big-screen} {
+    padding-top: 217px;
+  }
+
+  &__block {
+
+  }
+
+  &__item {
+    height: 100vh;
+    @include flex-column;
+    padding-left: 120px;
+    justify-content: center;
+    position: relative;
+
+    @media #{$desktop-small-screen} {
+      padding-left: 77px;
+    }
+
+    @media #{$tablet-big-screen} {
+      padding-left: 40px;
+    }
+
+    @media #{$tablet-big-screen} {
+      height: calc(100vh - 90px);
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 550px;
+      padding: 15px;
+    }
+
+  }
+
+  &__background {
+    position: absolute;
+    @include absolute-fill;
+    @include background-cover-center;
+
+    @media #{$desktop-big-screen} {
+      opacity: .3;
+    }
+  }
+
+  &__item-title {
+    font-size: 48px;
+    font-weight: 200;
+    position: relative;
+    z-index: 10;
+
+    span {
+      font-weight: 700;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 36px;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 18px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__item-text {
+    margin: 60px 0;
+    font-size: 14px;
+    font-weight: 200;
+    width: 700px;
+    position: relative;
+    z-index: 10;
+
+    @media #{$mobile-big-screen} {
+      margin: 30px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+  &__item-buttons {
+    position: relative;
+    z-index: 10;
+
+    @media #{$mobile-big-screen} {
+      height: 115px;
+      @include flex-column-center;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__item-button {
+    margin-right: 15px;
+  }
+
+  & .owl-dots {
+    position: absolute;
+    left: 105px;
+    bottom: 15vh;
+
+    @media #{$desktop-small-screen} {
+      left: 62px;
+      bottom: 5vh;
+    }
+
+    @media #{$tablet-big-screen} {
+      padding-left: 25px;
+    }
+  }
+
+  & .owl-dot {
+    background: $white !important;
+    width: 9px;
+    margin: 15px;
+    height: 9px;
+    border-radius: 50%;
+
+    &:hover,
+    &.active {
+      background: $orange !important;
+    }
+  }
+
+}

@@ -1,0 +1,328 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.slider {
+
+  &__wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__items {
+
+    & .owl-dots {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      display: none !important;
+      @include flex-row-center;
+
+      &.active {
+        display: flex !important;
+      }
+
+      @media #{$mobile-big-screen} {
+        top: 0;
+        padding: 10px 14px;
+      }
+    }
+
+    & .owl-dot {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+      margin: 3px;
+
+      &:after {
+        @include after-absolute;
+        @include absolute-center;
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 255, .5);
+        border-radius: 50%;
+
+        @media #{$mobile-big-screen} {
+          transform: none;
+          @include absolute-fill;
+          border-radius: 2px;
+        }
+      }
+
+      &:hover:after,
+      &.active:after {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 1);
+
+        @media #{$mobile-big-screen} {
+          transform: none;
+          @include absolute-fill;
+        }
+      }
+
+      @media #{$mobile-big-screen} {
+        width: 0;
+        flex-grow: 1;
+        margin: 0 1px;
+        height: 3px;
+      }
+
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding-left: 110px;
+
+    @media #{$mobile-big-screen} {
+      padding-left: 0;
+      padding-top: 65px;
+    }
+  }
+
+  &__item-inner {
+    width: 624px;
+    @include margin-auto;
+    position: relative;
+    padding-top: 70px;
+
+    &--input {
+      padding-top: 110px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      @include flex-column;
+      padding-top: 30px;
+    }
+  }
+
+  $inner-input: '.slider__item-inner--input';
+
+  &__button {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    font-size: 17px;
+    background: $white;
+    border-radius: 30px;
+    color: $black;
+    @include margin-auto;
+    @include flex-row-center;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top: 0;
+    padding-bottom: 1px;
+    top: 0;
+    left: 110px;
+
+    @media #{$mobile-big-screen} {
+      width: 244px;
+      position: relative;
+      left: auto;
+      top: auto;
+      @include margin-auto;
+      font-size: 16px;
+      height: 40px;
+      padding-left: 30px;
+      margin-bottom: 50px;
+    }
+
+
+    &:after {
+      @include after-absolute;
+      width: 26px;
+      height: 29px;
+      background: url(../../../img/play-icon.png);
+      @include background-contain-center;
+      left: 35px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      @media #{$mobile-big-screen} {
+        width: 18px;
+        height: 18px;
+        left: 23px;
+      }
+    }
+  }
+
+
+  &__title {
+    font-size: 45px;
+    line-height: 56px;
+    font-weight: 100;
+    margin-bottom: 30px;
+
+    @media #{$mobile-big-screen} {
+      order: -1;
+      padding: 0 15px;
+      padding-right: 5px;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 40px;
+
+      #{$inner-input} & {
+        margin-bottom: 169px;
+      }
+    }
+  }
+
+  &__title-big {
+    display: inline;
+
+    @media #{$mobile-big-screen} {
+      display: block;
+      font-size: 48px;
+      line-height: 50px;
+    }
+  }
+
+  &__title-small {
+    display: inline;
+
+    @media #{$mobile-big-screen} {
+      display: block;
+      white-space: normal;
+      width: 100%;
+      line-height: 30px;
+      font-size: 22px;
+      letter-spacing: -.5px;
+    }
+  }
+
+  &__list {
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 10px;
+    }
+
+  }
+
+  &__list-item {
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    opacity: 0;
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 90px 1fr;
+      grid-gap: 15px;
+    }
+
+    .active & {
+      animation: fade_show .4s ease-in;
+      animation-fill-mode: forwards;
+    }
+
+    $delay: 200;
+
+    .active &:nth-of-type(1) {
+      animation-delay: #{$delay * 1}ms
+    }
+
+    .active &:nth-of-type(2) {
+      animation-delay: #{$delay * 2}ms
+    }
+
+    .active &:nth-of-type(3) {
+      animation-delay: #{$delay * 3}ms
+    }
+
+    .active &:nth-of-type(4) {
+      animation-delay: #{$delay * 4}ms
+    }
+
+    .active &:nth-of-type(5) {
+      animation-delay: #{$delay * 5}ms
+    }
+
+    .active &:nth-of-type(6) {
+      animation-delay: #{$delay * 6}ms
+    }
+
+    .active &:nth-of-type(7) {
+      animation-delay: #{$delay * 7}ms
+    }
+
+    .active &:nth-of-type(8) {
+      animation-delay: #{$delay * 8}ms
+    }
+
+    .active &:nth-of-type(9) {
+      animation-delay: #{$delay * 9}ms
+    }
+
+    .active &:nth-of-type(10) {
+      animation-delay: #{$delay * 10}ms
+    }
+
+    @keyframes fade_show {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+  }
+
+  &__list-item-img-block {
+    width: 75px;
+    height: 75px;
+    background: #541302;
+    border: 1px solid #c70116;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, .75);
+
+    @media #{$mobile-big-screen} {
+      width: 90px;
+      height: 90px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__list-item-img {
+    position: absolute;
+    @include absolute-center;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    object-position: center center;
+    filter: drop-shadow(1px 3px 1px rgba(0, 0, 0, .9));
+
+    @media #{$mobile-big-screen} {
+      left: 45%;
+    }
+  }
+
+  &__list-item-text {
+    font-size: 24px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 18px;
+    }
+  }
+
+  &__hidden-image-block {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+  }
+}

@@ -1,0 +1,22 @@
+.feedback
+    .feedback__block.layout
+        .feedback__title Обратная связь
+        .feedback__switch
+            .feedback__switch-item.feedback__switch-item--active(data-form-target='callback') запросить обратный звонок
+            .feedback__switch-item(data-form-target='calс') отправить запрос на расчет
+            .feedback__switch-item(data-form-target='messenger') написать в мессенджеры
+        .feedback__form
+            .feedback__form-item.feedback__form-item--active(data-form='callback')
+                .feedback__form-fields.feedback__form-fields--callback
+                    .feedback__form-field.feedback__form-field--name
+                        input.feedback__form-field-input(placeholder='Введите имя')
+                    .feedback__form-field.feedback__form-field--phone
+                        input.feedback__form-field-input(placeholder='Введите телефон')
+                    .feedback__form-field.feedback__form-field--time
+                        input.feedback__form-field-input(placeholder='Удобное время звонка')
+                    .feedback__form-field.feedback__form-field--desc
+                        textarea.feedback__form-field-input.feedback__form-field-input--big(placeholder='Введите текст письма (не обязательно)')
+                    //.feedback__form-field.feedback__form-field--file-input
+                    //    input.feedback__form-field-input(placeholder='Удобное время звонка')
+                    .feedback__form-field.feedback__form-field--sign Отправляя заявку, вы принимаете условия обработки персональных данных
+                    .feedback__form-field.feedback__form-field--button отправить заявку

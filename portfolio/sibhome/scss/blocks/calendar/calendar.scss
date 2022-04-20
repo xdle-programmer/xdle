@@ -1,0 +1,140 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.calendar {
+  position: relative;
+  background: $gray-light;
+  color: #666666;
+  margin: 30px 0;
+
+  &__item-block {
+    background: $gray-light;
+  }
+
+  &__item {
+    width: 830px;
+    @include margin-auto;
+    padding: 20px 50px;
+    background: $white;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 20px 0;
+    }
+  }
+
+  div.zabuto_calendar .table tr td div.day {
+    font-family: 'ProximaNova', sans-serif;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 23px;
+    font-weight: 100;
+    color: #000;
+  }
+
+  div.zabuto_calendar .table tr th, div.zabuto_calendar .table tr td {
+    background: none;
+  }
+
+  div.zabuto_calendar .table tr:last-child {
+    border-bottom: none;
+  }
+
+  div.zabuto_calendar .table tr.calendar-month-header td {
+    padding-bottom: 21px;
+    background: none;
+  }
+
+  div.zabuto_calendar .table tr.calendar-month-header td span {
+    font-size: 24px;
+  }
+
+  & .glyphicon.glyphicon-chevron-left {
+    position: relative !important;
+    display: block !important;
+    width: 100px;
+    height: 50px;
+
+    @media #{$mobile-big-screen} {
+      width: 40px;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(../../img/arrow-gray.svg);
+      transform: rotate(180deg);
+      @include background-contain-center;
+      background-size: 25% !important;
+      z-index: 1;
+    }
+  }
+
+  & .glyphicon.glyphicon-chevron-right {
+    position: relative !important;
+    display: block !important;
+    width: 100px;
+    height: 50px;
+
+    @media #{$mobile-big-screen} {
+      width: 40px;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(../../img/arrow-gray.svg);
+      @include background-contain-center;
+      background-size: 25% !important;
+      z-index: 1;
+    }
+  }
+
+  div.zabuto_calendar .badge-event, div.zabuto_calendar div.legend span.badge-event {
+    position: relative;
+    background: url(../../img/pattern.jpg);
+    @include background-cover-center;
+    color: $white!important;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    @include flex-row-center;
+    text-align: center;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: 100;
+    border-radius: 5px;
+    @include margin-auto;
+
+  }
+
+  .event-styled {
+    position: relative;
+  }
+
+  .event-styled {
+
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: transparent;
+      z-index: 1;
+    }
+
+  }
+
+  div.zabuto_calendar .table tr.calendar-dow-header th {
+    background: none !important;
+  }
+
+  & .calendar-dow td:nth-of-type(6n) .day,
+  & .calendar-dow td:nth-of-type(7n) .day {
+    color: red !important;
+  }
+
+}

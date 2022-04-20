@@ -1,0 +1,31 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.rating {
+
+  &__title {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__stars {
+    @include flex-row-center;
+  }
+
+  &__star {
+    font-size: 24px;
+    color: #ebebeb;
+    cursor: pointer;
+
+    & i {
+      color: #ebebeb;
+    }
+
+    &:hover i {
+      color: $green;
+    }
+  }
+}

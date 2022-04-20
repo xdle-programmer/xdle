@@ -1,0 +1,215 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.new-main-ticket {
+  padding: 80px 0;
+  background: $blue;
+  margin-top: 140px;
+  position: relative;
+
+  @media #{$tablet-small-screen} {
+    padding: 40px 0;
+    margin-top: 60px;
+  }
+
+  &:after {
+    @include after-absolute;
+    height: 100%;
+    width: calc(50vw - 640px);
+    background: $white;
+    right: 0;
+    z-index: 1;
+    top: 0;
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+
+  &:before {
+    @include after-absolute;
+    height: 100%;
+    width: calc(50vw - 640px);
+    background: url(../../../img/new-main/border.png);
+    @include background-contain-center;
+    background-size: 20px 100% !important;
+    background-position: left center !important;
+    right: 1px;
+    z-index: 2;
+    top: 0;
+
+    @media #{$tablet-small-screen} {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    color: $white;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      width: 22px !important;
+      height: 6px !important;
+      background: $white !important;
+      mask: url(../../../img/new-main/small-arrow.svg) !important;
+      -webkit-mask: url(../../../img/new-main/small-arrow.svg) !important;
+      @include mask-contain-center;
+      bottom: -20px;
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+    }
+
+    & .owl-next {
+      left: auto;
+      right: 10px;
+
+    }
+
+    & .owl-prev {
+      left: auto;
+      right: 50px;
+      transform: scaleX(-1);
+
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+  }
+
+  &__item {
+    background: $white;
+    border-radius: 15px;
+    padding: 25px 15px;
+    height: 270px;
+    @include flex-column;
+    padding-bottom: 15px;
+
+    @media #{$tablet-big-screen} {
+      &:nth-last-of-type(1) {
+        display: none;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      &:nth-last-of-type(1) {
+        display: block;
+      }
+    }
+  }
+
+  &__item-header {
+    display: grid;
+    grid-template-columns: 66px 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__item-header-img {
+    height: 66px;
+    object-fit: contain;
+    width: 100%;
+    display: block;
+  }
+
+  &__item-header-desc {
+    width: 100%;
+  }
+
+  &__item-header-desc-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+    text-overflow: ellipsis;
+
+    @media #{$tablet-big-screen} {
+      white-space: normal;
+      overflow: visible;
+      max-width: none;
+    }
+  }
+
+  &__item-header-desc-subtitle {
+    color: #0f4c81;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @media #{$tablet-big-screen} {
+      white-space: normal;
+      overflow: visible;
+      max-width: none;
+    }
+  }
+
+  &__item-text {
+    color: #7d9daf;
+    line-height: 26px;
+  }
+
+  &__item-date {
+    width: 100%;
+    margin-top: auto;
+    color: #7d9daf;
+    text-align: right;
+  }
+
+
+  &__link {
+    margin-top: 30px;
+    color: $white;
+    cursor: pointer;
+    @include flex-row-center;
+
+    &:after {
+      display: block;
+      content: '';
+      width: 20px;
+      height: 5px;
+      background: $white;
+      mask: url(../../../img/new-main/small-arrow.svg);
+      -webkit-mask: url(../../../img/new-main/small-arrow.svg);
+      @include mask-contain-center;
+      margin-left: 10px;
+
+      @media #{$mobile-big-screen} {
+        display: none;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      justify-content: flex-end;
+      padding-right: 20px;
+      margin-top: 50px;
+    }
+  }
+}

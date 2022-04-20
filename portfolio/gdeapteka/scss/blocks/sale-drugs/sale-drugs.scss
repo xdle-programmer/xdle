@@ -1,0 +1,68 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.sale-drugs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 40px 0;
+
+  @media #{$tablet-big-screen} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media #{$mobile-big-screen} {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    padding: 10px 20px;
+    border: 1px solid $gray-light;
+    border-radius: 5px;
+  }
+
+  &__item-img {
+    width: 100%;
+    padding-bottom: 70%;
+    @include background-contain-center;
+  }
+
+  &__item-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+    line-height: 15px;
+  }
+
+  &__item-border {
+    width: 100%;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, $black 0px, $black 2px, $white 2px, $white 7px);
+    }
+  }
+
+  &__item-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 12px 0;
+    color: $blue;
+    margin-top: 23px;
+  }
+
+  &__item-button {
+    @include flex-row-center;
+    border-radius: 5px;
+    padding: 4px 15px;
+    @include margin-auto;
+    background: $blue;
+    color: $white;
+  }
+}

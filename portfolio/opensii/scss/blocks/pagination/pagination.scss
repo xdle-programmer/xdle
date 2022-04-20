@@ -1,0 +1,52 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.pagination {
+  background: #f8f8f8;
+  width: 100%;
+  padding: 10px 20px;
+  @include flex-row;
+  align-items: center;
+
+  &__item {
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-right: 10px;
+    @include flex-row-center;
+    color: $black;
+
+    &:hover {
+      color: $red;
+    }
+
+    &.active {
+      background: $black;
+      color: $white;
+    }
+    &--next {
+
+      &:after {
+        content: '';
+        display: block;
+        margin-left: 10px;
+        width: 6px;
+        height: 7px;
+        margin-top: 5px;
+        background: $black;
+        -webkit-mask-image: url(../../img/icon-double-quote.png);
+        mask-image: url(../../img/icon-double-quote.png);
+        @include mask-contain-center;
+      }
+
+
+      &:hover:after {
+        background: $red;
+      }
+    }
+  }
+}

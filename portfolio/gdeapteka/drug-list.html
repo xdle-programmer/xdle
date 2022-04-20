@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Где Лекарство</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+</head>
+
+<body>
+
+<div class="banner banner--main" style="background: url(img/banner.jpg)"></div>
+
+<header class="header">
+    <div class="header__block layout">
+        <div class="header__logo"></div>
+        <div class="header__mobile-button"></div>
+        <div class="header__city">Санкт-Петербург</div>
+        <div class="header__search">
+            <div class="header__search-wrapper">
+                <input class="header__search-input" placeholder="Введите название лекарства">
+                <div class="header__search-button"></div>
+                <div class="header__search-close"></div>
+            </div>
+            <div class="header__search-toggle-button"></div>
+        </div>
+
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-book.png">
+            </div>
+            <div class="header__menu-button-text">Справочники</div>
+        </a>
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-pharmacy.png">
+            </div>
+            <div class="header__menu-button-text">Для аптек</div>
+        </a>
+        <a href="#" class="header__menu-button header__menu-button--basket">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-basket.png">
+            </div>
+            <div class="header__menu-button-text">Корзина</div>
+        </a>
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-login.png">
+            </div>
+            <div class="header__menu-button-text">Войти</div>
+        </a>
+    </div>
+</header>
+
+<div class="wrapper">
+
+    <div class="wrapper__map wrapper__map-toggle--hidden">
+        <div id="YMapsID"
+             style="width: 100%;height: 100%;background-size: cover;background: url(img/map-example.jpg)"></div>
+    </div>
+
+    <div class="wrapper__left-col scroll-holder">
+        <div class="menu">
+            <div class="menu__title">Каталог товаров</div>
+            <div class="menu__items">
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Витамины и БАДы</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Ежедневная гигиена</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Красота и уход</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Лекарства</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Лечебная косметика</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Медтехника и изделия медицинского назначения</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Товары для детей и мам</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Товары для здоровья</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper__center-col wrapper__map-toggle">
+
+        <div class="title">Список аптек</div>
+
+        <div class="district-filter">
+            <div class="district-filter__header">
+                <div class="district-filter__button">Район</div>
+                <div class="district-filter__list">
+                    <div class="district-filter__list-item district-filter__list-item--all">Все районы</div>
+                    <div class="district-filter__list-item" data-district="Дзержинский">Дзержинский</div>
+                    <div class="district-filter__list-item" data-district="Железнодорожный">Железнодорожный</div>
+                    <div class="district-filter__list-item" data-district="Заельцовский">Заельцовский</div>
+                    <div class="district-filter__list-item" data-district="Калининский">Калининский</div>
+                    <div class="district-filter__list-item" data-district="Кировский">Кировский</div>
+                    <div class="district-filter__list-item" data-district="Кольцово">Кольцово</div>
+                    <div class="district-filter__list-item" data-district="Краснообск">Краснообск</div>
+                    <div class="district-filter__list-item" data-district="Ленинский">Ленинский</div>
+                    <div class="district-filter__list-item" data-district="Обь">Обь</div>
+                    <div class="district-filter__list-item" data-district="Октябрьский">Октябрьский</div>
+                    <div class="district-filter__list-item" data-district="Первомайский">Первомайский</div>
+                    <div class="district-filter__list-item" data-district="Советский">Советский</div>
+                    <div class="district-filter__list-item" data-district="Центральный">Центральный</div>
+                </div>
+            </div>
+            <div class="district-filter__result"></div>
+        </div>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__wrapper">
+                <div class="breadcrumbs__items">
+                    <a href="#" class="breadcrumbs__item">A</a>
+                    <a href="#" class="breadcrumbs__item">A12</a>
+                    <a href="#" class="breadcrumbs__item">A12C</a>
+                    <div class="breadcrumbs__item active">A12CX другие минеральные вещества</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drug-list">
+            <div class="drug-list__items">
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-list__item">
+                    <div class="drug-list__item-name">АЛЬКА-ПРИМ</div>
+                    <div class="drug-list__item-offers">
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                        <div class="drug-list__item-offers-item">
+                            <div class="drug-list__item-offers-item-link">АЛЬКА-ПРИМ 0,33 N10 ТАБЛ ШИП</div>
+                            <div class="drug-list__item-offers-item-favorite">В избранное</div>
+                            <div class="drug-list__item-offers-item-price">32 341 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sale-drugs">
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="wrapper__right-col scroll-holder">
+        <div class="filter">
+            <div class="filter__close"></div>
+            <div class="filter__title">Фильтр</div>
+            <div class="filter__items">
+                <div class="filter__item">
+                    <a href="#" class="filter__item-link">Лекарственная форма</a>
+                    <div class="radiobutton">
+                        <input class="radiobutton__input" id="radio_1" type="radio" name="test_1"/>
+                        <label class="radiobutton__label" for="radio_1">Пор для р-ра для в/в и в/м введ</label>
+                    </div>
+                    <div class="radiobutton">
+                        <input class="radiobutton__input" id="radio_2" type="radio" name="test_1"/>
+                        <label class="radiobutton__label" for="radio_2">Пор для р-ра для в/в и в/м введ</label>
+                    </div>
+                    <div class="radiobutton">
+                        <input class="radiobutton__input" id="radio_3" type="radio" name="test_1"/>
+                        <label class="radiobutton__label" for="radio_3">Пор для р-ра для в/в и в/м введ</label>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <a href="#" class="filter__item-link">Дозировка</a>
+                    <div class="radiobutton">
+                        <input class="radiobutton__input" id="radio_4" type="radio" name="test_2"/>
+                        <label class="radiobutton__label" for="radio_4">1.0</label>
+                    </div>
+                    <div class="radiobutton">
+                        <input class="radiobutton__input" id="radio_5" type="radio" name="test_2"/>
+                        <label class="radiobutton__label" for="radio_5">2.0</label>
+                    </div>
+                    <div class="radiobutton">
+                        <input class="radiobutton__input" id="radio_6" type="radio" name="test_2"/>
+                        <label class="radiobutton__label" for="radio_6">3.0</label>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <a href="#" class="filter__item-link">Упаковка</a>
+                    <div class="checkbox products__item-desc-checkbox">
+                        <input class="checkbox__input" id="check_1" name="fabric" value="checkbox_1" type="checkbox"/>
+                        <label class="checkbox__label" for="check_1">Флак 1</label>
+                    </div>
+                    <div class="checkbox products__item-desc-checkbox">
+                        <input class="checkbox__input" id="check_2" name="fabric" value="checkbox_2" type="checkbox"/>
+                        <label class="checkbox__label" for="check_2">Флак 2</label>
+                    </div>
+                    <div class="checkbox products__item-desc-checkbox">
+                        <input class="checkbox__input" id="check_3" name="fabric" value="checkbox_3" type="checkbox"/>
+                        <label class="checkbox__label" for="check_3">Флак 3</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper__switch scroll-holder">
+        <div class="wrapper__switch-button wrapper__switch-button--map"></div>
+        <div class="wrapper__switch-button wrapper__switch-button--list active"></div>
+    </div>
+    <div class="wrapper__filter scroll-holder">
+        <div class="wrapper__filter-button">
+            <div class="wrapper__filter-button-icon"></div>
+            <div class="wrapper__filter-button-text">Фильтр</div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer__top layout">
+        <div class="footer__logo"></div>
+        <div class="footer__social">
+            <div class="footer__social-title">Для подписчиков</div>
+            <div class="footer__social-items">
+                <div class="footer__social-item footer__social-item--tw"></div>
+                <div class="footer__social-item footer__social-item--fb"></div>
+                <div class="footer__social-item footer__social-item--yt"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom layout">
+        <div class="footer__copyright">
+            © 2019. Все права защищены
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<script src="plugins/jquery.maskedinput.min.js"></script>
+<script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>

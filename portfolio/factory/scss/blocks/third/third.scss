@@ -1,0 +1,81 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.third {
+  margin-bottom: 170px;
+
+  @media #{$tablet-small-screen} {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    font-size: 25px;
+    @include font-rubik;
+    font-weight: 700;
+    position: relative;
+    color: $magenta;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @include flex-column;
+    width: 70%;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &__text-item {
+    padding-left: 60px;
+    position: relative;
+    @include font-rubik;
+    font-size: 29px;
+    color: $gray;
+    margin-bottom: 30px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 20px;
+      padding-left: 40px;
+
+      & br {
+        display: none;
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: calc(100% - 20px);
+      width: 3px;
+      background: $gray;
+      left: 0;
+    }
+  }
+
+  &__button {
+    margin-left: 60px;
+    height: 54px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    @include flex-row-center;
+    border-radius: 27px;
+    background: $black;
+    padding: 0 35px;
+    cursor: pointer;
+
+    &:hover {
+      background: $magenta;
+    }
+
+    @media #{$tablet-small-screen} {
+      font-size: 20px;
+      height: 42px;
+      @include margin-auto;
+    }
+  }
+}

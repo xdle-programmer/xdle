@@ -1,0 +1,59 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.wrapper {
+
+  & *,
+  & *:before,
+  & *:after {
+    transition: $main-transition;
+  }
+
+  & *::-webkit-input-placeholder {
+    transition: $main-transition;
+  }
+
+  & *::-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-ms-input-placeholder {
+    transition: $main-transition;
+  }
+
+  &__section {
+    padding-top: 40px;
+
+    &--background-forest {
+      background: url(../../../img/backgrounds/forest.jpg);
+      @include background-contain-center;
+      background-position: center bottom!important;
+      background-size: 100% auto!important;
+    }
+
+    &--background-forest-mountains {
+      background: url(../../../img/backgrounds/forest-mountains.jpg);
+      @include background-contain-center;
+      background-position: center bottom!important;
+      background-size: 100% auto!important;
+    }
+
+    &--background-mountains {
+      background: url(../../../img/backgrounds/mountains.jpg);
+      @include background-contain-center;
+      background-position: center bottom!important;
+      background-size: 100% auto!important;
+    }
+
+    &--bottom {
+      padding-bottom: 100px;
+    }
+  }
+
+
+}

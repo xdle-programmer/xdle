@@ -1,0 +1,408 @@
+.workshop-profile {
+  margin-bottom: 50px;
+  position: relative; }
+  .workshop-profile__edit-buttons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end; }
+    @media (max-width: 767px) {
+      .workshop-profile__edit-buttons {
+        top: -40px;
+        width: 100%;
+        justify-content: center; } }
+  .workshop-profile__edit-button {
+    padding: 5px 20px;
+    border-radius: 30px;
+    color: #ffffff;
+    background: #0092E8;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    margin-left: 10px; }
+    .workshop-profile__edit-button--invert {
+      background: transparent;
+      color: #0092E8; }
+    @media (max-width: 767px) {
+      .workshop-profile__edit-button {
+        margin: 0 10px; } }
+  .workshop-profile__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .workshop-profile__main-img {
+    width: 110px;
+    height: 110px;
+    background: url(../../../img/profile_default.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 50%; }
+  .workshop-profile__main-img-input {
+    display: none; }
+  .workshop-profile__main-img-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 13px;
+    cursor: pointer; }
+  .workshop-profile__main-name {
+    color: #0092E8;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px; }
+    .workshop-profile__main-name--edit {
+      color: #e7e7e7; }
+  .workshop-profile__main-current-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 12px; }
+    .workshop-profile__main-current-rating--left {
+      justify-content: flex-start; }
+      @media (max-width: 1023px) {
+        .workshop-profile__main-current-rating--left {
+          justify-content: center; } }
+    .workshop-profile__main-current-rating--edit {
+      opacity: 0;
+      visibility: hidden; }
+  .workshop-profile__main-current-rating-number {
+    position: relative;
+    padding-left: 26px; }
+    .workshop-profile__main-current-rating-number:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ffdc64;
+      width: 18px;
+      height: 17px;
+      mask: url(../../../img/star.svg);
+      -webkit-mask: url(../../../img/star.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+  .workshop-profile__main-current-rating-link {
+    margin-left: 30px;
+    color: #0092E8;
+    text-decoration: underline;
+    cursor: pointer; }
+  .workshop-profile__section {
+    padding: 25px;
+    border-bottom: 1px solid #b9b9b9; }
+    .workshop-profile__section:nth-last-of-type(1) {
+      border-bottom: none; }
+  .workshop-profile__section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    color: #b9b9b9;
+    margin-bottom: 15px; }
+  .workshop-profile__section-inner {
+    color: #202427; }
+  .workshop-profile__section-about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 60px;
+    font-size: 15px; }
+    @media (max-width: 1023px) {
+      .workshop-profile__section-about {
+        grid-template-columns: 1fr;
+        grid-gap: 30px; } }
+  .workshop-profile__section-about-desc {
+    line-height: 27px; }
+  .workshop-profile__section-about-desc-textarea {
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    font-size: 15px;
+    line-height: 27px;
+    width: 100%;
+    resize: none;
+    height: 340px; }
+    @media (max-width: 1279px) {
+      .workshop-profile__section-about-desc-textarea {
+        min-height: auto; } }
+  .workshop-profile__section-about-contacts-item {
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 20px; }
+    .workshop-profile__section-about-contacts-item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: #202427;
+      left: 0;
+      top: 0; }
+    .workshop-profile__section-about-contacts-item--edit {
+      color: #e7e7e7; }
+    .workshop-profile__section-about-contacts-item--edit:after {
+      background: #e7e7e7; }
+    .workshop-profile__section-about-contacts-item--map:after {
+      mask: url(../../../img/profile-map-icon.svg);
+      -webkit-mask: url(../../../img/profile-map-icon.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .workshop-profile__section-about-contacts-item--link:after {
+      mask: url(../../../img/profile-link-icon.svg);
+      -webkit-mask: url(../../../img/profile-link-icon.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .workshop-profile__section-about-contacts-item--time:after {
+      mask: url(../../../img/profile-time-icon.svg);
+      -webkit-mask: url(../../../img/profile-time-icon.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+  .workshop-profile__section-about-contacts-item-input {
+    height: 100%;
+    border: 1px solid #e7e7e7;
+    font-size: 16px;
+    line-height: 27px;
+    width: 100%;
+    padding: 5px; }
+  .workshop-profile__worktime-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px; }
+  .workshop-profile__worktime-wrapper {
+    border: 1px solid #e7e7e7; }
+  .workshop-profile__item-time-input-timepicker-block {
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+    position: relative; }
+    .workshop-profile__item-time-input-timepicker-block:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      visibility: hidden; }
+    .workshop-profile__worktime-item.not-work .workshop-profile__item-time-input-timepicker-block:after {
+      opacity: 1;
+      visibility: visible; }
+  .workshop-profile__item-time-input-timepicker {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline; }
+  .workshop-profile__worktime {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    min-height: 30px;
+    font-size: 13px;
+    border-bottom: 1px solid #e7e7e7; }
+    .workshop-profile__worktime:nth-last-of-type(1) {
+      border-bottom: none; }
+  .workshop-profile__worktime-item-day-toggle {
+    margin-top: 5px;
+    cursor: pointer;
+    text-decoration: underline; }
+    .workshop-profile__worktime-item.not-work .workshop-profile__worktime-item-day-toggle {
+      color: #0092E8; }
+  .workshop-profile__worktime-day {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #e7e7e7; }
+  .workshop-profile__cart-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap; }
+  .workshop-profile__cart-item {
+    background: #0092E8;
+    padding: 5px 15px;
+    color: #ffffff;
+    font-size: 13px;
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .workshop-profile__img-slider {
+    position: relative; }
+    .workshop-profile__img-slider .owl-prev,
+    .workshop-profile__img-slider .owl-next {
+      position: absolute;
+      width: 20px !important;
+      height: 15px !important;
+      background: url(../../../img/arrow.svg) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      top: 50%;
+      transform: translateY(-50%) scaleX(-1); }
+      .workshop-profile__img-slider .owl-prev:focus, .workshop-profile__img-slider .owl-prev:active,
+      .workshop-profile__img-slider .owl-next:focus,
+      .workshop-profile__img-slider .owl-next:active {
+        outline: none !important; }
+    .workshop-profile__img-slider .owl-next {
+      left: auto;
+      right: -25px;
+      transform: translateY(-50%) rotate(-90deg); }
+    .workshop-profile__img-slider .owl-prev {
+      left: -25px;
+      right: auto;
+      transform: translateY(-50%) rotate(90deg); }
+    .workshop-profile__img-slider .owl-prev span,
+    .workshop-profile__img-slider .owl-next span {
+      display: none; }
+    .workshop-profile__img-slider .owl-prev.disabled,
+    .workshop-profile__img-slider .owl-next.disabled {
+      display: none !important; }
+    .workshop-profile__img-slider .owl-dots {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+    .workshop-profile__img-slider .owl-dot {
+      width: 10px;
+      height: 10px;
+      border: 1px solid #0092E8 !important;
+      background-color: #ffffff !important;
+      border-radius: 50%;
+      margin: 8px;
+      cursor: pointer;
+      position: relative; }
+      .workshop-profile__img-slider .owl-dot:after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border: 1px solid #0092E8;
+        opacity: 0;
+        border-radius: 50%; }
+      .workshop-profile__img-slider .owl-dot:hover, .workshop-profile__img-slider .owl-dot.active {
+        background-color: #0092E8 !important; }
+      .workshop-profile__img-slider .owl-dot:hover:after, .workshop-profile__img-slider .owl-dot.active:after {
+        opacity: 0.3; }
+  .workshop-profile__img-slider-item {
+    width: 100%;
+    height: 150px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .workshop-profile__img-download {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px; }
+    @media (max-width: 1023px) {
+      .workshop-profile__img-download {
+        grid-template-columns: 1fr 1fr; } }
+  .workshop-profile__img-download-img {
+    width: 100%;
+    height: 180px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    position: relative;
+    cursor: pointer; }
+    @media (max-width: 1023px) {
+      .workshop-profile__img-download-img {
+        height: 100px; } }
+    .workshop-profile__img-download-img:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+      opacity: 0; }
+    .workshop-profile__img-download-img:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      background: url(../../../img/plus.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      transform: translate(-50%, -50%) rotate(45deg);
+      opacity: 0; }
+    .workshop-profile__img-download-img:hover:before, .workshop-profile__img-download-img:hover:after {
+      opacity: 1; }
+  .workshop-profile__img-download-input-block {
+    width: 100%;
+    height: 180px;
+    position: relative; }
+    @media (max-width: 1023px) {
+      .workshop-profile__img-download-input-block {
+        height: 100px; } }
+  .workshop-profile__img-download-input {
+    display: none; }
+  .workshop-profile__img-download-input-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fafafa;
+    cursor: pointer; }
+    .workshop-profile__img-download-input-label:hover {
+      background: rgba(0, 0, 0, 0.2); }
+    .workshop-profile__img-download-input-label:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      background: url(../../../img/plus.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }

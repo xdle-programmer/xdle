@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Cargo Placement</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+
+
+<div class="layout">
+    <div class="layout__output"></div>
+    <div class="layout__control">
+        <div class="layout__control-item active">
+
+            <div class="setting">
+                <div class="setting__block">
+                    <div class="setting__title">Камера</div>
+                    <div class="setting__item">
+                        <div class="setting__buttons">
+                            <div class="button change-view" data-view="perspective">3D</div>
+                            <div class="button change-view" data-view="right">Справа</div>
+                            <div class="button change-view" data-view="left">Слева</div>
+                            <div class="button change-view" data-view="front">Спереди</div>
+                            <div class="button change-view" data-view="back">Сзади</div>
+                            <div class="button change-view" data-view="top">Сверху</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="setting__block">
+                    <div class="setting__title">Контейнер</div>
+                    <div class="setting__item">
+                        <div class="setting__buttons">
+                            <div class="button change-container" data-container="feet20">20 футов</div>
+                            <div class="button change-container" data-container="feet40">40 футов</div>
+                            <div class="button change-container" data-container="feet40HC">40 футов "High-Cube"</div>
+                            <div class="button change-container" data-container="feet45HC">45 футов "High-Cube"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting__block">
+                    <div class="setting__title">Добавить груз</div>
+                    <div class="setting__item">
+                        <div class="setting__cargo">
+                            <div class="setting__cargo-row">
+                                <div class="radio form-check__field" data-check-type="input" data-check="radio-required">
+                                    <div class="radio__items">
+                                        <div class="radio__item">
+                                            <input class="radio__item-input" id="cargo_type_box" name="cargo_type" value="cargo_type_box"
+                                                   type="radio"/>
+                                            <label class="radio__item-label" for="cargo_type_box">Ящик</label>
+                                        </div>
+                                        <div class="radio__item">
+                                            <input class="radio__item-input" id="cargo_type_bag" name="cargo_type" value="cargo_type_bag"
+                                                   type="radio"/>
+                                            <label class="radio__item-label" for="cargo_type_bag">Мешок</label>
+                                        </div>
+                                        <div class="radio__item">
+                                            <input class="radio__item-input" id="cargo_type_pallet" name="cargo_type" value="cargo_type_pallet"
+                                                   type="radio"/>
+                                            <label class="radio__item-label" for="cargo_type_pallet">Поддон</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting__cargo-row">
+                                <div class="checkbox form-check__field" data-check-type="input" data-check="checkbox-required">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_1" name="test_11" value="checkbox_1"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_1">Можно ставить сверху</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting__cargo-row">
+                                <div class="setting__cargo-inputs">
+                                    <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                                         data-placeholder="Длинна (см)">
+                                        <div class="input__button">
+                                            <input type="number" class="input__text" placeholder="Длинна (см)" name="test_4" autocomplete="photo">
+                                        </div>
+                                    </div>
+                                    <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                                         data-placeholder="Ширина (см)">
+                                        <div class="input__button">
+                                            <input type="number" class="input__text" placeholder="Ширина (см)" name="test_4" autocomplete="photo">
+                                        </div>
+                                    </div>
+                                    <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                                         data-placeholder="Высота (см)">
+                                        <div class="input__button">
+                                            <input type="number" class="input__text" placeholder="Высота (см)" name="test_4" autocomplete="photo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting__cargo-row">
+                                <div class="setting__cargo-inputs">
+                                    <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                                         data-placeholder="Вес (кг)">
+                                        <div class="input__button">
+                                            <input type="number" class="input__text" placeholder="Вес" name="test_4" autocomplete="photo">
+                                        </div>
+                                    </div>
+                                    <div class="input form-check__field" data-check-type="input" data-check="input-required"
+                                         data-placeholder="Кол-во мест">
+                                        <div class="input__button">
+                                            <input type="number" class="input__text" placeholder="Кол-во мест" value="1" name="test_4" autocomplete="photo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="setting__cargo-row">
+                                <div class="button add-cargo form-check__button">Добавить груз</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="setting__block">
+                    <div class="setting__title">Временные настройки</div>
+
+
+                    <div class="setting__item">
+                        <div class="setting__item-title">position x</div>
+                        <div class="setting__item-control">
+                            <div class="range-slider" id="position_x_range">
+                                <div class="range-slider__inputs">
+                                    <input class="range-slider__input range-slider__input--min">
+                                </div>
+                                <div class="range-slider__item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting__item">
+                        <div class="setting__item-title">position y</div>
+                        <div class="setting__item-control">
+                            <div class="range-slider" id="position_y_range">
+                                <div class="range-slider__inputs">
+                                    <input class="range-slider__input range-slider__input--min">
+                                </div>
+                                <div class="range-slider__item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting__item">
+                        <div class="setting__item-title">position z</div>
+                        <div class="setting__item-control">
+                            <div class="range-slider" id="position_z_range">
+                                <div class="range-slider__inputs">
+                                    <input class="range-slider__input range-slider__input--min">
+                                </div>
+                                <div class="range-slider__item"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="layout__control-item ">
+
+            <div class="setting">
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>-->
+<!--<script src="lib/three.js-master/examples/jsm/loaders/OBJLoader.js"></script>-->
+<script src="js/main.js"></script>
+<script src="js/cargo-placement.js" type="module"></script>
+
+
+</body>

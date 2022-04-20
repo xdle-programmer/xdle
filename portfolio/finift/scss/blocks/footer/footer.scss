@@ -1,0 +1,122 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  padding: 27px 0;
+
+  &__block {
+    display: grid;
+    width: 1520px;
+    grid-template-columns: 270px 1fr 230px;
+    @include margin-auto;
+    align-items: center;
+
+    @media #{$desktop-middle-screen} {
+      width: calc(100% - 40px);
+    }
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__logo {
+    width: 212px;
+    height: 67px;
+    background: url(../../../img/logo.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      @include margin-auto;
+    }
+  }
+
+  &__menu {
+    @include flex-row-center;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__menu-item {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-right: 36px;
+    position: relative;
+    cursor: pointer;
+
+    @media #{$tablet-big-screen} {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--basket {
+
+    }
+
+    &:after {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -21px;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #93b7d1;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__menu-item-icon-counter {
+    position: absolute;
+    right: -29px;
+    top: 5px;
+    width: 17px;
+    height: 14px;
+    background: url(../../../img/basket.png);
+    @include background-contain-center;
+  }
+
+  &__menu-item-icon-counter-number {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    color: #fff;
+    @include flex-row-center;
+    font-size: 19px;
+    top: -18px;
+    right: -18px;
+  }
+
+  &__dev {
+    width: 134px;
+    height: 28px;
+    margin-left: auto;
+    background: url(../../../img/papa-logo.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      @include margin-auto;
+    }
+  }
+}

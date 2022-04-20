@@ -1,0 +1,203 @@
+@import "../base/variables";
+
+@mixin font-default($imp) {
+  font-display: auto;
+  font-family: 'mss', sans-serif#{$imp};
+}
+
+
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin main-background {
+  //background: linear-gradient(to right, #feda75 0%, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%);
+  background: #b6a182;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin background-cover-center {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+@mixin background-contain-center {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+@mixin after-absolute {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+@mixin absolute-fill {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@mixin absolute-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin mask-contain-center {
+  mask-repeat: no-repeat !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-position: center center !important;
+  -webkit-mask-position: center center !important;
+  mask-size: contain !important;
+  -webkit-mask-size: contain !important;
+}
+
+@mixin scroll {
+  overflow-y: auto;
+  padding-right: 10px;
+
+  &::-webkit-scrollbar-button {
+    background-image: none;
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue-extra-light;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $blue;
+    cursor: pointer;
+  }
+
+  &::-webkit-resizer {
+    background-image: none;
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+@mixin horizontal-scroll {
+  overflow-x: auto;
+  padding-bottom: 20px;
+
+  &::-webkit-scrollbar-button {
+    background-image: none;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e1e1e1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $red;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $red-dark;
+  }
+
+  &::-webkit-resizer {
+    background-image: none;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 100%;
+    height: 3px;
+  }
+}
+
+@mixin preloader {
+
+  position: relative;
+
+  &:before {
+    $product-card__loader-width: 40;
+    @include after-absolute;
+    @include absolute-center;
+    width: #{$product-card__loader-width}px;
+    height: #{$product-card__loader-width}px;
+    background: url(../../../img/preloader.svg);
+    @include background-contain-center;
+
+
+    @keyframes rotate {
+      0% {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    animation: rotate 3s linear;
+    animation-iteration-count: infinite;
+
+  }
+}
+
+@mixin gradient {
+  background: linear-gradient(to right, #554ae8, #de92c2);
+}
+
+@mixin text-gradient {
+  @include gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #554ae8;
+}

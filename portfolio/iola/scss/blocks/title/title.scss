@@ -1,0 +1,16 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 24px;
+  color: $gray-dark;
+
+  @media #{$mobile-big-screen} {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 24px;
+  }
+}

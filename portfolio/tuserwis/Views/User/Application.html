@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ticket</title>
+    <link rel="stylesheet" type="text/css" href="../../Scripts/fileuploader-2.2/dist/jquery.fileuploader.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles_to_head.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles.css">
+    <script src="../../Scripts/modernizr-2.8.3.js"></script>
+
+</head>
+<body class="body-new-index">
+<header class="header">
+    <div class="layout">
+        <form class="header__block" id="logoutForm" method="post">
+            <div class="header__logo">
+                <a href="/" title="Home Page" class="header__logo__link">
+                    <img src="../..../../../img/TuSerwis_logo.svg">
+                </a>
+            </div>
+
+            <div class="header__profile">
+                <div class="header__profile-close"></div>
+                <div class="header__balance">
+                    <div class="header__balance-number">862</div>
+                    <div class="header__balance-icon">zł</div>
+                    <div class="button-circle"></div>
+                </div>
+                <div class="header__notifications header__notifications--has-unread">
+                    <div class="header__notifications-icon"></div>
+                    <div class="header__notifications-text">Notifications</div>
+                </div>
+
+                <div class="header__profile-menu">
+                    <a class="header__profile-menu-link" href="#">Account</a>
+                    <a class="header__profile-menu-link" href="#">Wyloguj</a>
+                </div>
+            </div>
+
+            <div class="header__profile-button" style="background: url(../..../../../img/workshop_logo.png)"></div>
+        </form>
+    </div>
+</header>
+
+<div class="wrapper">
+    <div class="quizes" id="quizes">
+        <div class="quizes__header">
+            <div class="quizes__header-back-block">
+                <div class="quizes__header-back quizes-change" data-quiz-goal="0" data-current="1">Samochód</div>
+                <div class="quizes__header-back quizes-change" data-quiz-goal="1" data-current="2">Model</div>
+                <div class="quizes__header-back quizes-change" data-quiz-goal="2" data-current="3">Rok</div>
+                <div class="quizes__header-back quizes-change" data-quiz-goal="3" data-current="4">Opis</div>
+                <div class="quizes__header-back quizes-change" data-quiz-goal="3" data-current="5">Miejsce</div>
+            </div>
+            <div class="quizes__header-pointer"></div>
+
+            <div class="quizes__header-steps">
+                <div class="quizes__header-step" data-name="car" data-order="0">
+                    <div class="quizes__header-step-item">Samochód</div>
+                </div>
+                <div class="quizes__header-step" data-name="desc" data-order="1">
+                    <div class="quizes__header-step-item">Opis</div>
+                </div>
+                <div class="quizes__header-step" data-name="contact" data-order="2">
+                    <div class="quizes__header-step-item">Kontakt</div>
+                </div>
+            </div>
+        </div>
+        <div class="quizes__wrapper">
+            <div class="quizes__items">
+                <div id="step_1" data-name-goal="car" class="active quizes__item">
+                    <div class="form">
+                        <div class="form__wrapper">
+                            <div class="form__wrapper-inner">
+                                <div class="form__title">Twoje samochódy</div>
+                                <div class="search-selection search-selection--list">
+                                    <input class="search-selection__input-result" type="hidden">
+                                    <div class="search-selection__item quizes-change" data-search="Mercedes-Benz" data-quiz-goal="3">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Mercedes-Benz-logo.png">
+                                        <div class="search-selection__item-text">Mercedes-Benz s63 amg 2017</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="UAZ" data-quiz-goal="3">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Renault-logo.png">
+                                        <div class="search-selection__item-text">Renault Duster 2018</div>
+                                    </div>
+                                </div>
+                                <div class="form__title">Wybierz nowy samochód</div>
+                                <div class="search-selection">
+                                    <div class="search-selection__input-block">
+                                        <input class="search-selection__input" placeholder="Znaleść">
+                                    </div>
+                                    <input class="search-selection__input-result" type="hidden">
+                                    <div class="search-selection__item quizes-change" data-search="Mercedes-Benz" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Mercedes-Benz-logo.png">
+                                        <div class="search-selection__item-text">Mercedes-Benz</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="UAZ" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/UAZ-logo.png">
+                                        <div class="search-selection__item-text">UAZ</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="Aston Martin" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Aston-Martin-logo.png">
+                                        <div class="search-selection__item-text">Aston Martin</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="BMW" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/BMW-logo.png">
+                                        <div class="search-selection__item-text">BMW</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="Honda" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Honda-logo.png">
+                                        <div class="search-selection__item-text">Honda</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="Cadillac" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Cadillac-logo.png">
+                                        <div class="search-selection__item-text">Cadillac</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="GMC" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/GMC-logo.png">
+                                        <div class="search-selection__item-text">GMC</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="Mitcubishi" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Mitsubishi-logo.png">
+                                        <div class="search-selection__item-text">Mitcubishi</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="Dodge" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Dodge-logo.png">
+                                        <div class="search-selection__item-text">Dodge</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="Nissan" data-quiz-goal="1">
+                                        <img class="search-selection__item-icon" src="/Content/img/logos/Nissan-logo.png">
+                                        <div class="search-selection__item-text">Nissan</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="step_2" data-name-goal="car" class="quizes__item">
+                    <div class="form">
+                        <div class="form__wrapper">
+                            <div class="form__wrapper-inner">
+                                <div class="form__title">Wybierz model</div>
+                                <div class="search-selection">
+                                    <div class="search-selection__input-block">
+                                        <input class="search-selection__input" placeholder="Znaleść">
+                                    </div>
+                                    <input class="search-selection__input-result" type="hidden">
+                                    <div class="search-selection__item quizes-change" data-search="model-1" data-quiz-goal="2">
+                                        <div class="search-selection__item-text">Model 1</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="model-2" data-quiz-goal="2">
+                                        <div class="search-selection__item-text">Model 2</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="model-3" data-quiz-goal="2">
+                                        <div class="search-selection__item-text">Model 3</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="model-4" data-quiz-goal="2">
+                                        <div class="search-selection__item-text">Model 4</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="model-5" data-quiz-goal="2">
+                                        <div class="search-selection__item-text">Model 5</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="model-6" data-quiz-goal="2">
+                                        <div class="search-selection__item-text">Model 6</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="model-7" data-quiz-goal="2">
+                                        <div class="search-selection__item-text">Model 7</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="step_3" data-name-goal="car" class="quizes__item">
+                    <div class="form">
+                        <div class="form__wrapper">
+                            <div class="form__wrapper-inner">
+                                <div class="form__title">Wybierz model</div>
+                                <div class="search-selection">
+                                    <div class="search-selection__input-block">
+                                        <input class="search-selection__input" placeholder="Znaleść">
+                                    </div>
+                                    <input class="search-selection__input-result" type="hidden">
+                                    <div class="search-selection__item quizes-change" data-search="2020" data-quiz-goal="3">
+                                        <div class="search-selection__item-text">2020</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="2019" data-quiz-goal="3">
+                                        <div class="search-selection__item-text">2019</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="2018" data-quiz-goal="3">
+                                        <div class="search-selection__item-text">2018</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="2017" data-quiz-goal="3">
+                                        <div class="search-selection__item-text">2017</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="2016" data-quiz-goal="3">
+                                        <div class="search-selection__item-text">2016</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="2015" data-quiz-goal="3">
+                                        <div class="search-selection__item-text">2015</div>
+                                    </div>
+                                    <div class="search-selection__item quizes-change" data-search="2014" data-quiz-goal="3">
+                                        <div class="search-selection__item-text">2014</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="step_4" data-name-goal="desc" class="quizes__item form-check">
+
+                    <div class="form">
+                        <div class="form__wrapper form__wrapper--small">
+                            <div class="form__wrapper-inner">
+                                <div class="form__title">
+                                    Describe your problem
+                                </div>
+                                <div class="form__wrapper-fields">
+                                    <div class="form__field-title">Opis</div>
+                                    <div class="form__field">
+                                        <div class="input form-check__field" data-check-type="textarea"
+                                             data-check="input-required">
+                                            <div class="input__button input__button--textarea">
+                                                    <textarea class="input__text"
+                                                              placeholder="ex. «oil change»"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__field">
+                                        <input type="file" name="upload" id="upload">
+                                    </div>
+                                    <div class="form__field">
+
+                                        <div class="form__field-half">
+                                            <div class="form__field-title">Data</div>
+                                            <div class="datepicker input input--icon input--icon--date form-check__field"
+                                                 data-check-type="input"
+                                                 data-check="input-required">
+                                                <div class="input__button">
+                                                    <input readonly="readonly" type="text" class="input__text"
+                                                           placeholder="Expected repair date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__field-half">
+                                            <div class="form__field-title">kod Vin</div>
+                                            <div class="input form-check__field input--icon input--icon--info"
+                                                 data-check-type="input"
+                                                 data-check="input-required">
+                                                <div class="input__button">
+                                                    <input type="text" class="input__text"
+                                                           placeholder="VIN-code">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form__field">
+                                        <div class="form__field-half form__field-half--small-mobile-margin">
+                                            <div class="checkbox">
+                                                <div class="checkbox__item">
+                                                    <input class="checkbox__item-input" id="checkbox_1"
+                                                           value="checkbox_1"
+                                                           type="checkbox"/>
+                                                    <label class="checkbox__item-label" for="checkbox_1">Potrzebuję
+                                                        lawety</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__field-half">
+                                            <div class="checkbox">
+                                                <div class="checkbox__item">
+                                                    <input class="checkbox__item-input" id="checkbox_2"
+                                                           value="checkbox_2"
+                                                           type="checkbox"/>
+                                                    <label class="checkbox__item-label" for="checkbox_2">Mam
+                                                        swoje części</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__footer">
+                                    <div class="form__footer-button-big quizes-change form-check__button"
+                                         data-quiz-goal="4">
+                                        PSZEJDŹ DALEJ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="step_5" data-name-goal="desc" class="quizes__item form-check">
+                    <div class="form">
+                        <div class="form__wrapper form__wrapper--middle">
+                            <div class="form__wrapper-inner">
+                                <div class="form__title">
+                                    Podaj lokalizacje
+                                </div>
+                                <div class="select-location">
+                                    <div class="select-location__header form__address">
+                                        <div class="select-location__header-address">
+                                            <div class="input form-check__field"
+                                                 data-placeholder="Address" data-check-type="input"
+                                                 data-check="input-required">
+                                                <div class="input__button">
+                                                    <input type="text" class="input__text" name="address"
+                                                           id="address"
+                                                           placeholder="Address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="select-location__header-button-position">Korzystaj z geolokalizacji</div>
+                                    </div>
+                                    <div class="select-location__map-block">
+                                        <div class="select-location__map" id="map"></div>
+                                    </div>
+
+                                    <div class="select-location__radius-block">
+                                        <div class="select-location__radius-title">Wybierz zakres w km</div>
+                                        <div class="select-location__radius">
+                                            <div class="select-location__radius-item active" data-radius="5">5</div>
+                                            <div class="select-location__radius-item" data-radius="10">10</div>
+                                            <div class="select-location__radius-item" data-radius="20">20</div>
+                                            <div class="select-location__radius-item" data-radius="50">50</div>
+                                            <div class="select-location__radius-item" data-radius="100">100</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__footer">
+                                    <div class="form__footer-button-big quizes-change form-check__button"
+                                         data-quiz-goal="5">
+                                        Dalej
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="step_6" data-name-goal="contact" class="quizes__item">
+                    <div class="form">
+                        <div class="form__wrapper">
+                            <div class="form__wrapper-inner">
+                                <div class="modern-form modern-form--application">
+                                    <div class="modern-form__inner active form-check failed" id="form-number">
+                                        <div class="form__title">
+                                            Podaj numer telefonu
+                                        </div>
+                                        <div class="form__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus ut scelerisque.
+                                        </div>
+                                        <div class="modern-form__block">
+                                            <div class="modern-form__input-block modern-form__input-block--white form-check__field input--phone error" data-check-type="input"
+                                                 data-check="input-required">
+                                                <input class="modern-form__input" data-val="true" data-val-required="The UserPhoneNumber field is required." id="phoneNumber"
+                                                       name="UserPhoneNumber"
+                                                       placeholder="+48 " type="tel" value="">
+                                                <div class="warning">Pole jest wymagane</div>
+                                            </div>
+                                            <div class="modern-form__input-block form-check__field" data-check-type="input" data-check="checkbox-required">
+                                                <input class="modern-form__input-check-input" checked data-val="true" data-val-required="The AcceptTerms field is required."
+                                                       id="AcceptTerms" name="AcceptTerms"
+                                                       type="checkbox" value="">
+                                                <label for="AcceptTerms" class="modern-form__input-check-label">Zapoznałem się i akceptuję <a href="/privacypolicy"
+                                                                                                                                              class="link link--small">politykę
+                                                    prywatności</a> i <a href="/termsofservice" class="link link--small">regulamin</a></label>
+                                                <div class="warning">Zaznaczenie checkboxa jest wymagane</div>
+                                            </div>
+                                        </div>
+                                        <div class="modern-form__main-button form-check__button" id="show-code">Zgłoś</div>
+                                    </div>
+                                    <div class="modern-form__inner form-check" id="code-form">
+                                        <div class="modern-form__small-title">Wpisz 4-cyfrowy kod z SMS</div>
+                                        <div class="modern-form__input-block">
+                                            <div class="modern-form__input-code-block form-check__field" data-check-type="#verCode" data-check="sms-code" id="txtCode">
+                                                <div class="modern-form__input-code-block-row modern-form__input-code-block-row--application">
+                                                    <div class="modern-form__input-code-block-row-hide-el"></div>
+                                                    <div class="modern-form__input-code"></div>
+                                                    <div class="modern-form__input-code"></div>
+                                                    <div class="modern-form__input-code"></div>
+                                                    <div class="modern-form__input-code"></div>
+                                                    <input class="modern-form__input-result" type="tel" autocomplete="one-time-code" id="verCode">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modern-form__main-button form-check__button">Zgłoś</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal__background close-modal"></div>
+
+<div class="animation-scroll scroll-top"></div>
+
+<footer class="footer">
+    <div class="layout">
+        <div class="footer__top">
+            <div class="footer__links">
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Privacy Policy</a>
+                    <div class="footer__links-item">© 2019 TuSerwis Inc.</div>
+                </div>
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Contact Us</a>
+                    <a href="#" class="footer__links-item">Ordering & Payment</a>
+                    <a href="#" class="footer__links-item">FAQ</a>
+                </div>
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Pracyj z nami</a>
+                    <a href="#" class="footer__links-item">Regulamin</a>
+                </div>
+            </div>
+
+
+            <div class="footer__form">
+                <div class="footer__form-contacts">
+                    <a href="mailto:kontakt@tuserwis.pl" class="footer__links-item footer__form-contacts-item">info@tuserwis.com</a>
+                    <a href="mailto:kontakt@tuserwis.pl" class="footer__links-item footer__form-contacts-item">+1 800
+                        123-1001</a>
+                </div>
+
+                <div class="footer__bottom-social">
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/instagram.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/twitter.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/facebook.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-logo">TuSerwis</div>
+
+        </div>
+    </div>
+</footer>
+
+<link href="../../Scripts/timedropper/timedropper.min.css" rel="stylesheet" defer>
+<script src="../../Scripts/timedropper/timedropper.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="../../Scripts/jquery.maskedinput.min.js" defer></script>
+<script src="../../Scripts/lightbox2/js/lightbox.min.js"></script>
+<script src="../../Scripts/owlcarousel2/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Scripts/lightbox2/css/lightbox.min.css">
+<link rel="stylesheet" type="text/css" href="../../Scripts/owlcarousel2/assets/owl.carousel.min.css">
+<script src="../../Scripts/fileuploader-2.2/dist/jquery.fileuploader.min.js"></script>
+<script src="../../Content/js/gallery_application.js"></script>
+<script src="../../Content/js/main.js"></script>
+<script src="../../Content/js/errors_handler.js"></script>
+<script src="../../Content/js/newticket.js"></script>
+<script src="../../Content/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwl91tizjVH8SJLr3XnJWckLCog_TTHgQ&callback=initMap&libraries=places" type="text/javascript"></script>
+</body>
+</html>

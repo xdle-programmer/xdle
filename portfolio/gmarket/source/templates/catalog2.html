@@ -1,0 +1,190 @@
+{% include "partials/header.html" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Каталог товаров</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		<div class="container clear-fix">
+			<div class="md-title md-title_page-title">Apple</div>
+			<aside class="aside-colmn">
+				<nav class="nav-block">
+					<div class="nav-block__title">
+						Mac
+					</div>
+					<ul class="nav-block__list">
+						<li><a href="#" class="underline-hover">MacBook</a></li>
+						<li><a href="#" class="underline-hover">MacBook Air</a></li>
+						<li><a href="#" class="underline-hover">MacBook Pro</a></li>
+						<li><a href="#" class="underline-hover">MacBook Pro (TouchBar)</a></li>
+						<li><a href="#" class="underline-hover">iMac</a></li>
+						<li><a href="#" class="underline-hover">iMac 5k</a></li>
+						<li><a href="#" class="underline-hover">iMac Pro</a></li>
+						<li><a href="#" class="underline-hover">Mac mini</a></li>
+					</ul>
+				</nav>
+				<nav class="nav-block">
+					<div class="nav-block__title">
+						iPad
+					</div>
+					<ul class="nav-block__list">
+						<li><a href="#" class="underline-hover">iPad Pro</a></li>
+						<li><a href="#" class="underline-hover">iPad Pro 2017</a></li>
+						<li><a href="#" class="underline-hover">iPad 2017</a></li>
+						<li><a href="#" class="underline-hover">iPad Air 2</a></li>
+						<li><a href="#" class="underline-hover">iPad mini 4</a></li>
+						<li><a href="#" class="underline-hover">Аксессуары для iPad</a></li>
+					</ul>
+				</nav>
+				<nav class="nav-block">
+					<div class="nav-block__title">
+						iPhone
+					</div>
+					<ul class="nav-block__list">
+						<li><a href="#" class="underline-hover">iPhone</a></li>
+						<li><a href="#" class="underline-hover">iPhone 7 Plus</a></li>
+						<li><a href="#" class="underline-hover">iPhone 7</a></li>
+						<li><a href="#" class="underline-hover">iPhone SE</a></li>
+						<li><a href="#" class="underline-hover">iPhone 6s Plus</a></li>
+						<li><a href="#" class="underline-hover">iPhone 6s</a></li>
+						<li><a href="#" class="underline-hover">iPhone 6 Plus</a></li>
+						<li><a href="#" class="underline-hover">iPhone 6</a></li>
+						<li><a href="#" class="underline-hover">Показать все</a></li>
+					</ul>
+				</nav>
+				<nav class="nav-block">
+					<div class="nav-block__title">
+						iPod
+					</div>
+					<ul class="nav-block__list">
+						<li><a href="#" class="underline-hover">iPod Touch</a></li>
+						<li><a href="#" class="underline-hover">iPod Nano</a></li>
+						<li><a href="#" class="underline-hover">iPod Shuffle</a></li>
+						<li><a href="#" class="underline-hover">iTunes card</a></li>
+					</ul>
+				</nav>
+				<nav class="nav-block">
+					<div class="nav-block__title">
+						Аксессуары
+					</div>
+					<ul class="nav-block__list">
+						<li><a href="#" class="underline-hover">AirPort</a></li>
+						<li><a href="#" class="underline-hover">Apple TV</a></li>
+						<li><a href="#" class="underline-hover">Кейсы для iPhone</a></li>
+						<li><a href="#" class="underline-hover">Чехлы для iPad</a></li>
+						<li><a href="#" class="underline-hover">Мыши и клавиатуры</a></li>
+						<li><a href="#" class="underline-hover">Зарядные устройства</a></li>
+						<li><a href="#" class="underline-hover">Наушники Beats</a></li>
+						<li><a href="#" class="underline-hover">Другие аксессуары</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<div class="center-wrapper">
+				{% include "partials/banner_big.html"  with {
+					modifier: "banner-slider_in-catalog banner-slider_small"
+				}%}
+				<section class="cont-section catalog-cells mobile-stretch">
+					<div class="order-wrap">
+						<div class="third-wrap">
+							<a href="#" class="catalog-cell">
+								<div class="catalog-cell__pic">
+									<img src="img/samples/menu/m1.png">
+								</div>
+								<div class="catalog-cell__name">
+									Mac
+								</div>
+							</a>
+						</div>
+						<div class="third-wrap">
+							<a href="#" class="catalog-cell">
+								<div class="catalog-cell__pic">
+									<img src="img/samples/menu/m2.png">
+								</div>
+								<div class="catalog-cell__name">
+									iPad
+								</div>
+							</a>
+						</div>
+						<div class="third-wrap">
+							<a href="#" class="catalog-cell">
+								<div class="catalog-cell__pic">
+									<img src="img/samples/menu/m3.png">
+								</div>
+								<div class="catalog-cell__name">
+									iPhone
+								</div>
+							</a>
+						</div>
+						<div class="third-wrap">
+							<a href="#" class="catalog-cell">
+								<div class="catalog-cell__pic">
+									<img src="img/samples/menu/m4.png">
+								</div>
+								<div class="catalog-cell__name">
+									iPod
+								</div>
+							</a>
+						</div>
+						<div class="third-wrap">
+							<a href="#" class="catalog-cell">
+								<div class="catalog-cell__pic">
+									<img src="img/samples/menu/m5.png">
+								</div>
+								<div class="catalog-cell__name">
+									Аксессуары
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+				{% include "partials/banner_wide.html"%}
+				<section class="cont-section mobile-stretch">
+					<div class="container container_mobile-full">
+						<h2 class="md-title">Хиты продаж</h2>
+						<div class="overflow-wrapper">
+							<div class="card-slider card-slider_start-third">
+								{% 
+									set names = [
+										"Ноутбук Apple MacBook Pro 15 Touch Bar i7 2.9/16/512 MPTV2RU/A",
+										"Соковыжималка центробежная Moulinex JU610D10",
+										"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+										"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+										"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+										"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+										"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+										"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+										"Мультиварка Redmond RMC-М90"
+									]
+								%}
+								{% for i in 0..8 %}
+									<div class="slider-slide slider-slide_multiple">
+										{% 
+											include "partials/product-card.html" with {
+												name: names[i],
+												notSale: true,
+												img: "img/samples/catalog/c" ~ i ~ ".jpg"
+											}
+										 %}
+									</div> 
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</section>
+				{% include "partials/seo-text.html" with {
+					modifier: "cont-section description-text_space-top"
+				} %}
+			</div>
+		</div>
+		{% include "partials/news-block.html" with {
+			modifier: "no-mobile"
+		} %}
+		
+		
+	</main>
+{% include "partials/footer.html" %}

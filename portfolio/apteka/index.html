@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Apteka</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+
+
+<div class="layout">
+    <header class="header">
+        <div class="header__block">
+            <div class="header__block-logo">
+                <img class="header__logo" src="img/logo.png">
+            </div>
+        </div>
+
+        <div class="header__block">
+            <div class="header__inner">
+                <div class="header__inner-row">
+                    <span class="header__text-name">Дата:</span>
+                    <span class="header__text-value">05.11.19</span>
+                </div>
+                <div class="header__inner-row">
+                    <span class="header__text-name">Кассир:</span>
+                    <span class="header__text-value">Иванов И.И.</span>
+                </div>
+                <div class="header__inner-row">
+                    <span class="header__text-name">Действие:</span>
+                    <span class="header__text-value">Продажа</span>
+                </div>
+            </div>
+            <div class="header__inner">
+                <div class="header__inner-row">
+                    <div class="button button--small">Отчет</div>
+                </div>
+                <div class="header__inner-row">
+                    <div class="button button--small">Выход</div>
+                </div>
+                <div class="header__inner-row">
+                    <div class="button button--small">Изменить</div>
+                </div>
+            </div>
+        </div>
+        <div class="header__block">
+            <div class="header__inner">
+                <div class="header__inner-row">
+                    <span class="header__text-name">Отдел:</span>
+                    <span class="header__text-value">Безрецептурный</span>
+                </div>
+                <div class="header__inner-row">
+                    <span class="header__text-name">Текущий режим:</span>
+                    <span class="header__text-value">ОН-лайн</span>
+                </div>
+            </div>
+        </div>
+        <div class="header__block">
+            <div class="header__inner">
+                <div class="header__inner-row">
+                    <span class="header__text-name">ККМ:</span>
+                    <span class="header__text-value">К103-2</span>
+                </div>
+                <div class="header__inner-row">
+                    <span class="header__text-name">Чек:</span>
+                    <span class="header__text-value">103</span>
+                </div>
+            </div>
+        </div>
+        <div class="header__block">
+            <div class="header__inner">
+                <div class="header__inner-row">
+                    <span class="header__text-name">Скидка на аспирин! ЛЮБОЙ! СРОЧНО! ВАГОНАМИ!</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout__blocks-wrapper">
+        <div class="layout__blocks">
+            <div class="layout__block layout__block--15">
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="title">
+                            <div class="title__middle">Номер телефона</div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Номер телефона">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout__block layout__block--20">
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="title">
+                            <div class="title__middle">Номер карты</div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Номер карты">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout__block layout__block--20">
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="title">
+                            <div class="title__middle">ФИО</div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="ФИО">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout__block layout__block--25">
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="title">
+                            <div class="title__middle">Последняя покупка</div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="layout__inputs">
+                            <input class="layout__input input" type="text" placeholder="Дата">
+                            <input class="layout__input input" type="text" placeholder="Сумма">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout__block layout__block--20">
+                <div class="layout__block-inner">
+                    <div class="layout__sale">
+                        <div class="title">
+                            <div class="title__small">Персональное предложение</div>
+                            <div class="title__big">Скидка на леденцы 10%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout__blocks">
+            <div class="layout__block layout__block--15">
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="title">
+                            <div class="title__small">Персональное предложение</div>
+                            <div class="title__big">Скидка на леденцы 10%</div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Номер телефона">
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Номер карты">
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="ФИО">
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Последняя покупка">
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Скидка">
+                    </div>
+                </div>
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="separator"></div>
+                    </div>
+                </div>
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="button button--invert button--del">Удалить чек</div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="button button--invert button--box">Открыть ящик</div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="button button--invert button--payment">Перейти к оплате</div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="button button--invert button--print">Печать чека</div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="button button--support">Техподдержка</div>
+                    </div>
+                </div>
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="title">
+                            <div class="title__middle">Дополнительные товары</div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Аспирин</div>
+                            <div class="add-product__price">32 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Длинное название препарата</div>
+                            <div class="add-product__price">32 938 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Бинт</div>
+                            <div class="add-product__price">38 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="button button--pink">Импульсные товары (20)</div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Аспирин</div>
+                            <div class="add-product__price">32 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Длинное название препарата</div>
+                            <div class="add-product__price">32 938 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Бинт</div>
+                            <div class="add-product__price">38 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout__block layout__block--65">
+                <div class="grid  grid--scroll">
+                    <div class="grid__top">
+                        <div class="grid__title">Строки чека</div>
+                    </div>
+                    <div class="grid__item grid__item--header">
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell">№</div>
+                            <div class="grid__cell">Название</div>
+                            <div class="grid__cell">Штрих</div>
+                            <div class="grid__cell">Цена</div>
+                            <div class="grid__cell">Кол-во</div>
+                            <div class="grid__cell">Сумма</div>
+                            <div class="grid__cell">Скидка</div>
+                            <div class="grid__cell">% Скидки</div>
+                            <div class="grid__cell">К оплате</div>
+                            <div class="grid__cell"></div>
+                        </div>
+                    </div>
+                    <div class="grid__item grid__item--scroll">
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">1</div>
+                            <div class="grid__cell grid__cell--left">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">2</div>
+                            <div class="grid__cell grid__cell--left">Длинное название на несколько строк Аспирин-С Байер
+                                №10
+                                ШИП.ТАБ
+                            </div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid--scroll">
+                    <div class="grid__top">
+                        <div class="grid__title">Товар для продажи</div>
+
+
+                        <div class="search">
+                            <div class="search__panel">
+                                <div class="search__input-block">
+                                    <input class="search__input" type="search">
+                                    <div class="search__button"></div>
+                                </div>
+                                <div class="search__tags">
+                                    <div class="search__tag">ШК/ЗШК</div>
+                                    <div class="search__tag">Название</div>
+                                    <div class="search__tag">Код</div>
+                                    <div class="search__tag">Цена</div>
+                                    <div class="search__tag">Симптомы</div>
+                                    <div class="search__tag">Аналоги</div>
+                                </div>
+                            </div>
+
+                            <div class="search__panel">
+                                <div class="search__input-block">
+                                    <input class="search__input" type="search">
+                                    <div class="search__button"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__item grid__item--header">
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell">№</div>
+                            <div class="grid__cell">Название</div>
+                            <div class="grid__cell">Штрих</div>
+                            <div class="grid__cell">Цена</div>
+                            <div class="grid__cell">Кол-во</div>
+                            <div class="grid__cell">Сумма</div>
+                            <div class="grid__cell">Скидка</div>
+                            <div class="grid__cell">% Скидки</div>
+                            <div class="grid__cell">К оплате</div>
+                            <div class="grid__cell"></div>
+                        </div>
+                    </div>
+                    <div class="grid__item grid__item--scroll">
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">1</div>
+                            <div class="grid__cell grid__cell--left">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">2</div>
+                            <div class="grid__cell grid__cell--left">Длинное название на несколько строк Аспирин-С Байер
+                                №10
+                                ШИП.ТАБ
+                            </div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">1</div>
+                            <div class="grid__cell grid__cell--left">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">2</div>
+                            <div class="grid__cell grid__cell--left">Длинное название на несколько строк Аспирин-С Байер
+                                №10
+                                ШИП.ТАБ
+                            </div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">1</div>
+                            <div class="grid__cell grid__cell--left">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">2</div>
+                            <div class="grid__cell grid__cell--left">Длинное название на несколько строк Аспирин-С Байер
+                                №10
+                                ШИП.ТАБ
+                            </div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">1</div>
+                            <div class="grid__cell grid__cell--left">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">2</div>
+                            <div class="grid__cell grid__cell--left">Длинное название на несколько строк Аспирин-С Байер
+                                №10
+                                ШИП.ТАБ
+                            </div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">1</div>
+                            <div class="grid__cell grid__cell--left">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">2</div>
+                            <div class="grid__cell grid__cell--left">Длинное название на несколько строк Аспирин-С Байер
+                                №10
+                                ШИП.ТАБ
+                            </div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">1</div>
+                            <div class="grid__cell grid__cell--left">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row--10">
+                            <div class="grid__cell grid__cell--number">2</div>
+                            <div class="grid__cell grid__cell--left">Длинное название на несколько строк Аспирин-С Байер
+                                №10
+                                ШИП.ТАБ
+                            </div>
+                            <div class="grid__cell">201100000866</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="counter">
+                                    <div class="counter__button counter__button--minus"></div>
+                                    <input class="counter__input" type="number">
+                                    <div class="counter__button counter__button--plus"></div>
+                                </div>
+                            </div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">0 руб.</div>
+                            <div class="grid__cell">0%</div>
+                            <div class="grid__cell">3260 руб.</div>
+                            <div class="grid__cell">
+                                <div class="grid__del"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="grid__top">
+                        <div class="grid__title">Информация о выбранном товаре</div>
+                    </div>
+
+                    <div class="product">
+                        <div class="product__cell product__cell--name">Аспирин-С Байер №10 ШИП.ТАБ</div>
+                        <div class="product__cell product__cell--subname">(ориг: аспирин)</div>
+                        <div class="product__cell product__cell--number">Серия: ХХ-122-odd</div>
+                        <div class="product__cell product__cell--date">Срок годности: 10.12.2022</div>
+                        <div class="product__cell product__cell--course">Курс: 2 упак, 1 мес</div>
+                        <div class="product__cell product__cell--count">На складе: 3 упаковки</div>
+                        <div class="product__cell product__cell--limitations">
+                            <div class="product__cell-limits">
+                                <div class="product__cell-limits-text">Огранич:</div>
+                                <img class="product__cell-limits-icon" src="img/limit-1.png">
+                                <img class="product__cell-limits-icon" src="img/limit-2.png">
+                                <img class="product__cell-limits-icon" src="img/limit-3.png">
+                                <img class="product__cell-limits-icon" src="img/limit-4.png">
+                            </div>
+                        </div>
+                        <div class="product__cell product__cell--sale">Акции по товару: второй в подарок</div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid--half">
+                    <div class="grid__top">
+                        <div class="grid__title">Дополнительные товары к выбору</div>
+                    </div>
+                    <div class="recommend">
+                        <div class="recommend__row">
+                            <div class="recommend__cell">Номер</div>
+                            <div class="recommend__cell">Barcode</div>
+                            <div class="recommend__cell">Название</div>
+                        </div>
+                        <div class="recommend__row">
+                            <div class="recommend__cell">200600429913</div>
+                            <div class="recommend__cell">200600429913</div>
+                            <div class="recommend__cell">Аспирин Экспресс 500 МГ. №12 ШИП.ТАБ.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid--half">
+                    <div class="grid__top">
+                        <div class="grid__title">Лучшие замены для выбранного товара</div>
+                    </div>
+                    <div class="recommend">
+                        <div class="recommend__row">
+                            <div class="recommend__cell">Номер</div>
+                            <div class="recommend__cell">Barcode</div>
+                            <div class="recommend__cell">Название</div>
+                        </div>
+                        <div class="recommend__row">
+                            <div class="recommend__cell">200600429913</div>
+                            <div class="recommend__cell">200600429913</div>
+                            <div class="recommend__cell">Аспирин Экспресс 500 МГ. №12 ШИП.ТАБ.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout__block layout__block--20  layout__block--top-sticky">
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="bill">
+                            <div class="bill__row">
+                                <div class="bill__name">Сумма чека без скидки:</div>
+                                <div class="bill__price">6320 руб.</div>
+                            </div>
+                            <div class="bill__row">
+                                <div class="bill__name">Процент скидки по чеку:</div>
+                                <div class="bill__price">0 руб.</div>
+                            </div>
+                            <div class="bill__row">
+                                <div class="bill__name">Сумма скидки по чеку:</div>
+                                <div class="bill__price">0 руб.</div>
+                            </div>
+                            <div class="bill__row bill__row--result">
+                                <div class="bill__name">К оплате:</div>
+                                <div class="bill__price">6320 руб.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Внесено">
+                    </div>
+                    <div class="layout__row">
+                        <input class="input" type="text" placeholder="Сдача">
+                    </div>
+                    <div class="layout__row">
+                        <div class="button">На сдачу</div>
+                    </div>
+                </div>
+                <div class="layout__block-inner">
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Аспирин</div>
+                            <div class="add-product__price">32 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Длинное название препарата</div>
+                            <div class="add-product__price">32 938 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="add-product">
+                            <div class="add-product__name">Бинт</div>
+                            <div class="add-product__price">38 руб.</div>
+                            <div class="add-product__plus"></div>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="checkbox">
+                            <input class="checkbox__input" id="checkbox_1" type="checkbox"/>
+                            <label class="checkbox__label" for="checkbox_1">Чек на телефон</label>
+                        </div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="button">Выбор формы оплаты</div>
+                    </div>
+                    <div class="layout__row">
+                        <div class="button button--invert button--print">Печать чека</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__block">
+            <div class="footer__item">
+                © 2019 АйТи-Аптека
+            </div>
+        </div>
+        <div class="footer__block">
+            <div class="footer__item">
+                Создание продукта - Абарис
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<div class="open-modal" data-modal="#product-modal">Тест модалки</div>
+
+<div class="modal__background close-modal"></div>
+
+<div class="modal__block" id="product-modal">
+    <div class="modal__header">
+        <div class="modal__title">Информация о выбранно товаре</div>
+        <div class="modal__close close-modal"></div>
+    </div>
+    <div class="modal__table">
+        <div class="modal__cell modal__cell--50">Аспирин-С Байер №10 ШИП.ТАБ</div>
+        <div class="modal__cell modal__cell--50">82</div>
+        <div class="modal__cell">Курс: 1</div>
+        <div class="modal__cell">Оригинальный препарат: 1</div>
+        <div class="modal__cell">201100000866</div>
+        <div class="modal__cell">201100000866</div>
+        <div class="modal__cell modal__cell--50">201100000866</div>
+        <div class="modal__cell modal__cell--50">201100000866</div>
+    </div>
+</div>
+
+</body>

@@ -1,0 +1,96 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.video-section {
+  height: 550px;
+  width: 100%;
+  position: relative;
+
+  &__background-video {
+    background-color: $black;
+    background-image: url(../../img/background-video.jpg);
+    @include background-contain-center;
+    position: absolute;
+    @include absolute-fill;
+  }
+
+  &__desc {
+    width: 820px;
+    height: 100%;
+    @include flex-column-center;
+    @include margin-auto;
+    color: $white;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding-top: 180px;
+    }
+
+  }
+
+  &__title {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    @media #{$tablet-small-screen} {
+      font-size: 45px;
+      width: 70%;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 30px;
+      width: 95%;
+    }
+  }
+
+  &__text {
+    font-size: 32px;
+    font-weight: 500;
+    position: relative;
+    padding: 25px 40px;
+    @include flex-row-center;
+
+    &:before {
+      @include after-absolute;
+      @include absolute-fill;
+      @include gradient;
+      z-index: 3;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $black;
+      z-index: 4;
+
+      @media #{$mobile-big-screen} {
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 22px;
+      width: 200px;
+      padding: 10px 20px;
+    }
+  }
+
+  &__text-item {
+    position: relative;
+    z-index: 5;
+  }
+
+}

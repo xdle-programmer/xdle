@@ -1,0 +1,54 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.review {
+  &__item {
+    background: #fff;
+    padding: 40px 30px;
+  }
+  &__item-header {
+    @include flex-row;
+    align-items: center;
+  }
+  &__item-header-img {
+    width: 110px;
+    height: 110px;
+    @include background-cover-center;
+    margin-right: 40px;
+
+    @media #{$tablet-big-screen} {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__item-header-name {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__item-text {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  & .owl-dots {
+    @include flex-row-center;
+    margin-top: 30px;
+  }
+
+  & .owl-dot {
+    width: 15px;
+    height: 15px;
+    background: #818181!important;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 50%;
+
+    &.active,
+    &:hover {
+      background: $red;
+    }
+  }
+}
+      

@@ -1,0 +1,257 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.case-open {
+
+  &__header {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+    @media #{$mobile-big-screen} {
+      flex-wrap: wrap;
+    }
+
+  }
+  &__header-title {
+    @include flex-row;
+    align-items: center;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+  &__header-icon-block {
+    margin-right: 25px;
+    width: 70px;
+    height: 70px;
+    @include flex-row-center;
+    background: #1f2123;
+    border: 1px solid #2d2f31;
+    border-radius: 5px;
+
+    @media #{$mobile-big-screen} {
+      margin-right: 10px;
+    }
+  }
+  &__header-icon {
+    width: 100%;
+    height: auto;
+  }
+  &__header-text {
+  }
+  &__header-big {
+    font-size: 20px;
+    font-weight: 700;
+    @include flex-row;
+
+    @media #{$mobile-big-screen} {
+      font-size: 17px;
+    }
+  }
+  &__header-big-white {
+    background: #fff;
+    @include text-shadow;
+    text-transform: uppercase;
+  }
+  &__header-big-yellow {
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    @include text-shadow;
+    margin-left: 5px;
+    text-transform: uppercase;
+  }
+  &__header-small {
+    font-size: 15px;
+    background: #fff;
+    @include text-shadow;
+  }
+
+  &__header-desc {
+    text-align: right;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+  &__header-desc-price {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    @include text-shadow;
+    margin-left: 5px;
+    text-transform: uppercase;
+  }
+
+  &__header-desc-text {
+    font-size: 15px;
+    background: #fff;
+    @include text-shadow;
+  }
+
+  &__roulette {
+    position: relative;
+    background: rgba(26, 28, 30, .6);
+    border: 1px solid #2d2f31;
+    border-right: none;
+    border-left: none;
+    margin: 0 -80px;
+
+    @media #{$desktop-small-screen} {
+      margin: 0 -60px;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin: 0 -10px;
+    }
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      height: 100%;
+      width: 5%;
+      z-index: 10;
+      top: 0;
+    }
+
+    &:before {
+      left: 0;
+      background: linear-gradient(to right, rgba(26, 28, 30, 1), rgba(0, 0, 0, 0));
+    }
+
+    &:after {
+      right: 0;
+      background: linear-gradient(to left, rgba(26, 28, 30, 1), rgba(0, 0, 0, 0));
+    }
+
+  }
+  &__roulette-mark {
+    position: absolute;
+    z-index: 10;
+    width: 36px;
+    height: 100%;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:before {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(../../img/roulette-mark.png);
+      @include background-contain-center;
+      background-position: center top !important;
+      z-index: 1;
+    }
+
+    &:after {
+      @include after-absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      width: 2px;
+      height: calc(100% + 3px);
+      background: linear-gradient(to bottom, #fea412, #c1511e);
+    }
+  }
+
+  &__roulette-lines {
+    position: absolute;
+    z-index: 9;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      width: 100%;
+      left: 0;
+      height: 1px;
+      background: linear-gradient(to right, rgba(202, 141, 41, 0), rgba(202, 141, 41, 1), rgba(202, 141, 41, 0));
+    }
+
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+
+  }
+
+  &__buttons {
+    @include flex-row-center;
+    padding: 20px 0;
+
+    @media #{$mobile-big-screen} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__button-test {
+    text-transform: uppercase;
+    color: #000;
+    width: 140px;
+    padding: 6px 12px;
+    min-width: 70px;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 30px;
+    display: inline-block;
+    background: linear-gradient(to bottom, #f6fef4, #e0fcdc);
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button-start {
+    width: 170px;
+    color: #000;
+    padding: 12px;
+    min-width: 70px;
+    font-weight: 500;
+    margin: 0 20px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 30px;
+    display: inline-block;
+    background: linear-gradient(to bottom, #d9a939, #e08628);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__select {
+    width: 140px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+}

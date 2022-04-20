@@ -1,0 +1,154 @@
+.delivery-status__input-block {
+  display: grid;
+  grid-template-columns: 350px 50px;
+  grid-gap: 10px;
+  margin-bottom: 60px; }
+  @media (max-width: 1023px) {
+    .delivery-status__input-block {
+      grid-template-columns: 1fr 50px;
+      margin-bottom: 40px; } }
+
+.delivery-status__button {
+  width: 50px;
+  height: 60px;
+  position: relative; }
+  .delivery-status__button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 11px;
+    background: #ffffff;
+    mask: url(../../../img/delivery-status/right-arrow.svg);
+    -webkit-mask: url(../../../img/delivery-status/right-arrow.svg);
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center center !important;
+    -webkit-mask-position: center center !important;
+    mask-size: contain !important;
+    -webkit-mask-size: contain !important; }
+
+.delivery-status__item--hide {
+  display: none; }
+
+.delivery-status__cities {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 60px; }
+  @media (max-width: 1023px) {
+    .delivery-status__cities {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 40px; } }
+
+.delivery-status__cities-item {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-template-areas: 'name city' '. date';
+  margin-right: 100px;
+  align-items: baseline;
+  grid-gap: 12px; }
+  .delivery-status__cities-item:nth-last-of-type(1) {
+    margin-right: 0; }
+  @media (max-width: 1023px) {
+    .delivery-status__cities-item {
+      margin-right: 0;
+      margin-bottom: 30px;
+      grid-template-columns: 60px 1fr; } }
+
+.delivery-status__cities-item-name {
+  grid-area: name;
+  font-size: 16px;
+  color: #8d9091; }
+
+.delivery-status__cities-item-city {
+  grid-area: city;
+  font-size: 21px;
+  color: #0a0c0a; }
+
+.delivery-status__cities-item-date {
+  grid-area: date;
+  font-size: 13px;
+  color: #0a0c0a; }
+
+.delivery-status__title {
+  font-size: 31px;
+  margin-bottom: 35px; }
+  .delivery-status__title--error {
+    color: #f54949; }
+
+.delivery-status__title-name {
+  display: inline; }
+
+.delivery-status__title-val {
+  display: inline;
+  color: #00615b; }
+
+.delivery-status__visual-item {
+  display: grid;
+  grid-template-columns: 25px 200px;
+  grid-gap: 15px;
+  padding-bottom: 90px;
+  position: relative; }
+  @media (max-width: 1023px) {
+    .delivery-status__visual-item {
+      padding-bottom: 50px; } }
+  .delivery-status__visual-item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 12px;
+    height: 100%;
+    width: 2px;
+    background: #00615b; }
+  .delivery-status__visual-item:nth-last-of-type(1):after {
+    display: none; }
+
+.delivery-status__visual-item-icon {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #00615b;
+  background: #ffffff;
+  position: relative;
+  border-radius: 50%;
+  z-index: 1; }
+  .delivery-status__visual-item-icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 10px;
+    background: #ffffff;
+    mask: url(../../../img/delivery-status/check.svg);
+    -webkit-mask: url(../../../img/delivery-status/check.svg);
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center center !important;
+    -webkit-mask-position: center center !important;
+    mask-size: contain !important;
+    -webkit-mask-size: contain !important;
+    opacity: 0; }
+  .delivery-status__visual-item--success .delivery-status__visual-item-icon {
+    background: #00615b; }
+  .delivery-status__visual-item--success .delivery-status__visual-item-icon:after {
+    opacity: 1; }
+
+.delivery-status__visual-item-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center;
+  font-size: 13px;
+  height: 100%; }

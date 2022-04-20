@@ -1,0 +1,21 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  background-color: #13283a;
+  @include flex-row-center;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  padding: 45px;
+  text-align: center;
+
+  &__text {
+    color: #ffffff;
+  }
+  &__link {
+    color: #999999;
+    margin-left: 10px;
+  }
+}

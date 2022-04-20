@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quest.sale</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__block">
+        <a href="/" class="header__back-mobile"></a>
+        <a href="/" class="logo"><span class="logo__bold">quest</span>.sale</a>
+        <a href="login.html" class="button header__login">Войти</a>
+    </div>
+</header>
+
+<div class="wrapper">
+
+    <div class="layout__main">
+
+        <div class="all-quest">
+
+            <div class="all-quest__ticket">
+                <div class="quest-ticket ticket">
+                    <div class="quest-ticket__info ticket__top">
+                        <div class="quest-ticket__info-main"></div>
+                        <div class="quest-ticket__info-img"
+                             style="background: url('img/slider-test-1.jpg') no-repeat center center"></div>
+
+                        <div class="quest-ticket__info-main">
+                            <div class="quest-ticket__info-name">Индиана Джонс и храм иллюминатов</div>
+                            <div class="quest-ticket__info-duration">
+                                Продолжительность -
+                                <div class="quest-ticket__info-duration-item">
+                                    2ч 33 мин
+                                </div>
+                            </div>
+                            <div class="quest-ticket__info-rate">8.6</div>
+                            <div class="quest-ticket__info-place">HorrorQuest</div>
+                        </div>
+
+                        <div class="quest-ticket__info-address">Адрес
+                            <div class="quest-ticket__info-address-item">
+                                м.Чистые пруды, ул.Длинное Непроизносимое Название им.с.Швейка 12
+                            </div>
+                        </div>
+
+                        <div class="quest-ticket__info-date">
+                            <div class="quest-ticket__info-date-day">Дата
+                                <div class="quest-ticket__info-date-day-item">Пн. 25 июля</div>
+                            </div>
+
+                            <div class="quest-ticket__info-date-from">Начало
+                                <div class="quest-ticket__info-date-day-item">13:20</div>
+                            </div>
+
+                            <div class="quest-ticket__info-date-to">До
+                                <div class="quest-ticket__info-date-day-item">15:30</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="ticket__bottom">
+
+
+                        <div class="quest-ticket__payment">
+
+                            <div class="quest-ticket__payment-contact">
+
+                                <div class="quest-ticket__payment-contact-name">
+                                    <input class="quest-ticket__payment-input" placeholder="Имя*">
+                                </div>
+                                <div class="quest-ticket__payment-contact-count">
+                                    Человек
+                                    <!--<div class="quest-ticket__payment-contact-count-item">4</div>-->
+                                    <select class="quest-ticket__payment-contact-count-select">
+                                        <!--<option class="quest-ticket__payment-contact-count-option">2</option>-->
+                                        <!--<option class="quest-ticket__payment-contact-count-option">3</option>-->
+                                        <!--<option class="quest-ticket__payment-contact-count-option">4</option>-->
+                                        <!--<option class="quest-ticket__payment-contact-count-option">5 (+1000 RUB)</option>-->
+                                        <!--<option class="quest-ticket__payment-contact-count-option">6 (+1000 RUB)</option>-->
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (+1000 RUB)</option>
+                                        <option>6 (+1000 RUB)</option>
+                                    </select>
+                                </div>
+
+                                <div class="quest-ticket__payment-contact-phone">
+                                    <input class="quest-ticket__payment-input" placeholder="Телефон*">
+                                </div>
+
+
+                            </div>
+
+                            <div class="quest-ticket__payment-info">
+                                <div class="quest-ticket__payment-info-ticket-number">Номер билета
+                                    <div class="quest-ticket__payment-info-ticket-number-item">57830258346354008</div>
+                                </div>
+
+                                <div class="quest-ticket__payment-info-ticket-price">Цена
+                                    <div class="quest-ticket__payment-info-ticket-price-item">4000 RUB</div>
+                                </div>
+
+                                <div class="quest-ticket__payment-info-ticket-explanation">
+                                    За 4 человек или 1000 рублей с каждого
+                                </div>
+
+
+                                <button class="button button--payment-card quest-ticket__payment-card quest-ticket__payment-card-mobile">
+                                    Оплатить картой
+                                </button>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="quest-ticket__select-card-block">
+                            <div class="quest-ticket__select-card">
+                                <div class="quest-ticket__select-card-slider owl-carousel">
+                                    <div class="quest-ticket__select-card-slider-item-block">
+                                        <div class="quest-ticket__select-card-slider-item"
+                                             style="background: url('/img/card_1.png') no-repeat center center"></div>
+                                    </div>
+                                    <div class="quest-ticket__select-card-slider-item-block">
+                                        <div class="quest-ticket__select-card-slider-item"
+                                             style="background: url('/img/card_2.png') no-repeat center center"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="bottom-block bottom-block--mobile">
+    <a href="payment-successful.html" class="button button--fill button--payment-apple-mobile">
+        <img class="button--payment-apple-mobile-icon" src="img/button--payment-apple-logo.svg">
+        <span class="button--payment-apple-mobile-text">Оплатить через Apple Pay</span>
+        <img class="button--payment-apple-mobile-arrow" src="img/arrow-white.svg">
+    </a>
+</div>
+
+
+<link rel="stylesheet" href="styles/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
+<link rel="stylesheet" href="plugins/owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="plugins/owlcarousel/assets/owl.theme.default.min.css">
+<script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+</body>
+</html>

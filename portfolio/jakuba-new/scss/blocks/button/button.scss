@@ -1,0 +1,65 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  width: 420px;
+  height: 85px;
+  color: $white;
+  font-size: 24px;
+  font-weight: 700;
+  background: $red;
+  cursor: pointer;
+  @include flex-row-center;
+
+  &--viber {
+    background: url(../../img/viber.jpg);
+    @include background-cover-center;
+    height: 70px;
+    width: 280px;
+    margin-bottom: 10px;
+    color: #fff!important;
+    display: flex!important;
+    @include flex-row-center;
+    padding-left: 10px;
+  }
+  &--telegram {
+    background: url(../../img/telegram.jpg);
+    @include background-cover-center;
+    height: 70px;
+    width: 280px;
+    margin-bottom: 10px;
+    color: #fff!important;
+    display: flex!important;
+    @include flex-row-center;
+    padding-left: 10px;
+  }
+  &--messenger {
+    background: url(../../img/messenger.jpg);
+    @include background-cover-center;
+    height: 70px;
+    width: 280px;
+    margin-bottom: 10px;
+    color: #fff!important;
+    display: flex!important;
+    @include flex-row-center;
+    padding-left: 10px;
+  }
+
+  &--vk {
+    background: url(../../img/vk.jpg);
+    @include background-cover-center;
+    height: 70px;
+    width: 280px;
+    color: #fff!important;
+    display: flex!important;
+    @include flex-row-center;
+    padding-left: 10px;
+  }
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
+}

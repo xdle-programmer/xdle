@@ -1,0 +1,63 @@
+.case-create-slider {
+  margin-bottom: 70px; }
+  .case-create-slider__items {
+    position: relative; }
+  .case-create-slider__item {
+    height: 95px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    background: #2e3033;
+    cursor: pointer;
+    border-radius: 5px; }
+    .case-create-slider__item:hover {
+      opacity: .6; }
+  .case-create-slider__item-img {
+    height: 100% !important;
+    width: auto !important; }
+  .case-create-slider .owl-prev,
+  .case-create-slider .owl-next {
+    position: absolute;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%) scaleX(-1);
+    background: rgba(72, 72, 72, 0.2) !important; }
+    .case-create-slider .owl-prev:focus, .case-create-slider .owl-prev:active,
+    .case-create-slider .owl-next:focus,
+    .case-create-slider .owl-next:active {
+      outline: none !important; }
+    .case-create-slider .owl-prev:hover,
+    .case-create-slider .owl-next:hover {
+      background: rgba(72, 72, 72, 0.4) !important; }
+    .case-create-slider .owl-prev:before,
+    .case-create-slider .owl-next:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(-90deg);
+      width: 10px;
+      height: 10px;
+      background: url(../../img/down-arrow.svg) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    @media (max-width: 1023px) {
+      .case-create-slider .owl-prev,
+      .case-create-slider .owl-next {
+        display: none; } }
+  .case-create-slider .owl-next {
+    left: auto;
+    right: -60px;
+    transform: translateY(-50%); }
+  .case-create-slider .owl-prev span,
+  .case-create-slider .owl-next span {
+    display: none; }

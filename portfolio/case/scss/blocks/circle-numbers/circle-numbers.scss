@@ -1,0 +1,53 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.circle-numbers {
+  @include flex-row-center;
+  padding-bottom: 30px;
+
+  @media #{$mobile-big-screen} {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 5px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #303337;
+    border-radius: 50%;
+    @include flex-row-center;
+
+    @media #{$desktop-big-screen} {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  &__item-number {
+    position: absolute;
+    @include flex-row-center;
+    right: -5px;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+
+    @media #{$desktop-big-screen} {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__item-text {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    background: #fff;
+    @include text-shadow;
+    z-index: 1;
+  }
+}

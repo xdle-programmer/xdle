@@ -1,0 +1,128 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #212326;
+  position: relative;
+
+  &.pattern {
+    background: none;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      //height: calc(100% + 10px);
+      background: #212326;
+      z-index: -2;
+    }
+
+    &--1:after {
+      background: url(../../img/pattern_1.jpg);
+      z-index: -1;
+      background-size: auto !important;
+    }
+
+    &--2:after {
+      background: url(../../img/pattern_2.jpg);
+      z-index: -1;
+      background-size: auto !important;
+    }
+
+    &--3:after {
+      background: url(../../img/pattern_3.jpg);
+      z-index: -1;
+      background-size: auto !important;
+    }
+
+  }
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: all .2s ease-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  @include flex-row;
+  flex-wrap: wrap;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+  display: block;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.text {
+  font-size: 14px;
+  color: #71767b;
+  line-height: 2;
+}
+
+input {
+  color: #c2952e !important;
+  font-size: 16px !important;
+}
+
+.mobile-visible {
+  display: none;
+
+  @media #{$mobile-big-screen} {
+    display: block;
+  }
+}
+
+.mobile-hidden {
+  display: block;
+
+  @media #{$mobile-big-screen} {
+    display: none;
+  }
+}
+
+.show-button {
+  background: url(../../img/title-arrow.png);
+  @include background-contain-center;
+  margin: 10px auto;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transform: rotate(180deg);
+
+  &.active {
+    transform: rotate(0);
+  }
+}
+
+.show-button__block {
+  &.active {
+    display: block;
+  }
+}

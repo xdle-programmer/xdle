@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.may-be {
+  margin-top: 300px;
+  background: #f4f4f4;
+  padding-top: 120px;
+  padding-bottom: 140px;
+  width: 100%;
+
+  @media #{$mobile-big-screen} {
+    margin-top: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__block {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(50% - 30px);
+    font-size: 12px;
+    line-height: 26px;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__sign {
+    @include flex-row-center;
+  }
+
+  &__sign-img {
+    width: 175px;
+    height: 114px;
+    background: url(../../../img/sign.png);
+    @include background-contain-center;
+    margin-right: 10px;
+
+    @media #{$mobile-big-screen} {
+      width: 135px;
+    }
+  }
+
+  &__sign-text {
+    color: #31253a;
+    font-size: 16px;
+  }
+
+}

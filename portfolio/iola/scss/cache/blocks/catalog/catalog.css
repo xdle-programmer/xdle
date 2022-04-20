@@ -1,0 +1,80 @@
+.catalog {
+  padding-top: 100px; }
+  @media (max-width: 1279px) {
+    .catalog {
+      padding-top: 35px; } }
+  @media (max-width: 767px) {
+    .catalog {
+      padding-top: 25px; } }
+  .catalog__items {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px 30px;
+    margin-bottom: 40px; }
+    @media (max-width: 1279px) {
+      .catalog__items {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px 20px; } }
+    @media (max-width: 767px) {
+      .catalog__items {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        margin-top: 20px;
+        margin-bottom: 10px; } }
+  .catalog__item {
+    padding: 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding-bottom: 40px; }
+    .catalog__item--selected {
+      background: rgba(0, 0, 0, 0.05); }
+    .catalog__item:hover {
+      border: 1px solid #f2f2f2; }
+    @media (max-width: 767px) {
+      .catalog__item {
+        border: 1px solid #f2f2f2;
+        padding: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px; } }
+  .catalog__item-img-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 225px;
+    width: 100%; }
+    @media (max-width: 767px) {
+      .catalog__item-img-block {
+        width: 67px;
+        height: 67px; } }
+  .catalog__item-img {
+    width: auto;
+    height: auto; }
+    @media (max-width: 1279px) {
+      .catalog__item-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; } }
+  .catalog__item-title {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 26px;
+    text-align: center; }
+    .catalog__item--selected .catalog__item-title {
+      color: #165bca; }
+    .catalog__item:hover .catalog__item-title {
+      color: #ca1626; }
+    @media (max-width: 767px) {
+      .catalog__item-title {
+        width: calc(100% - 80px);
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 21px;
+        text-align: left; } }

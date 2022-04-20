@@ -1,0 +1,100 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  height: 57px;
+  min-height: 57px;
+  border-radius: 5px;
+  padding: 0 60px;
+  color: $white;
+  font-size: 17px;
+  font-weight: 900;
+  @include flex-row-center;
+  width: fit-content;width: -moz-fit-content;
+  background: $red;
+  cursor: pointer;
+  padding-bottom: 2px;
+
+  &--small {
+    height: 47px;
+    min-height: 47px;
+    padding: 0 50px;
+    padding-bottom: 4px;
+  }
+
+  &:hover {
+    background: $red-dark;
+  }
+
+  @media #{$mobile-big-screen} {
+    font-size: 14px;
+    padding: 0 20px;
+    height: 44px;
+    min-height: 44px;
+    padding-bottom: 2px;
+  }
+
+
+  &--link {
+    width: 100%;
+    position: relative;
+    padding: 0 25px;
+    padding-bottom: 2px;
+    padding-right: 58px;
+    justify-content: flex-start;
+
+    &:after {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 33px;
+      height: 16px;
+      right: 25px;
+      background: $white;
+      mask: url(../../../img/arrow-right.svg);
+      -webkit-mask: url(../../../img/arrow-right.svg);
+      @include mask-contain-center;
+    }
+
+    &:hover:after {
+      background: $white;
+    }
+  }
+
+  &--gray {
+    background: $gray-light;
+    color: $gray-dark;
+
+    &:hover {
+      background: $red-light;
+      color: $white;
+    }
+
+    &:after {
+      background: $gray-dark;
+    }
+
+    &:hover:after {
+      background: $white;
+    }
+  }
+
+  &--white {
+    background: $white;
+    color: $gray-dark;
+
+    &:hover {
+      background: $red-light;
+      color: $white;
+    }
+
+    &:after {
+      background: $gray-dark;
+    }
+
+    &:hover:after {
+      background: $white;
+    }
+  }
+}

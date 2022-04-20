@@ -1,0 +1,190 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.mode-select {
+  height: 65px;
+  padding: 0 80px;
+  background: rgba(30, 32, 34, .7);
+  border: 10px solid #1c1e20;
+  border-top: none;
+  @include flex-row-center;
+  width: 100%;
+
+  @media #{$desktop-big-screen} {
+    padding: 0;
+  }
+
+  @media #{$tablet-small-screen} {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  @media #{$mobile-big-screen} {
+    justify-content: space-between;
+  }
+
+  &__button {
+    height: 40px;
+    border-radius: 25px;
+    margin-right: 50px;
+    color: #fff;
+    @include flex-row-center;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #73b119, #5b8a1a);
+    cursor: pointer;
+
+    @media #{$desktop-extra-big-screen} {
+      margin-right: 10px;
+    }
+
+    @media #{$desktop-big-screen} {
+      text-align: center;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin: 0 44%;
+      margin-bottom: 10px;
+      white-space: nowrap;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      filter: brightness(1.5) saturate(2);
+    }
+  }
+  &__item {
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #36383c;
+    margin: 0 10px;
+    cursor: pointer;
+    @include flex-row;
+
+    &--active {
+      border-color: #5b8a1a;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 18%;
+      margin-bottom: 15px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 47%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      filter: brightness(1.5) saturate(2);
+    }
+  }
+  &__item-name {
+    height: 100%;
+    border-radius: 25px;
+    width: 90px;
+    color: #fff;
+    @include flex-row-center;
+    font-size: 18px;
+    background: #36383c;
+    text-shadow: 0 3px 9px #000;
+
+    @media #{$desktop-extra-big-screen} {
+      width: 70px;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 60px;
+      font-size: 15px;
+    }
+
+  }
+  &__item--active &__item-name {
+    background: linear-gradient(to bottom, #73b119, #5b8a1a);
+  }
+
+  &__item-price {
+    width: 90px;
+    height: 100%;
+    @include flex-row-center;
+
+    @media #{$tablet-big-screen} {
+      width: 70px;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include margin-auto;
+    }
+  }
+  &__item-price-white {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    z-index: 1;
+    background: #fff;
+    @include text-shadow;
+  }
+  &__item-price-yellow {
+    text-transform: uppercase;
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    z-index: 1;
+    background: #ffc02d;
+    @include text-shadow;
+  }
+  &__hash {
+    margin-left: 50px;
+    border: 1px solid #858a85;
+    height: 40px;
+    border-radius: 25px;
+    margin-left: 50px;
+    color: #fff;
+    @include flex-row-center;
+    align-items: baseline;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 12px;
+    padding-left: 30px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      left: 13px;
+      top: 7px;
+      width: 20px;
+      height: 20px;
+      background: url(../../img/hash.png);
+      @include background-contain-center;
+    }
+
+    @media #{$desktop-extra-big-screen} {
+      margin-left: 10px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  &__hash-title {
+    font-size: 11px;
+    color: #aaaaac;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  &__hash-item {
+  }
+}

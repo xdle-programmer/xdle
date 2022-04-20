@@ -1,0 +1,71 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.map {
+  position: relative;
+
+  iframe {
+    width: 100% !important;
+    height: 700px !important;
+  }
+
+  &__contact-block {
+    position: relative;
+  }
+
+  &__contact {
+    background: var(--white-color);
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    top: 100px;
+    left: 0;
+    @include flex-column;
+
+    @media #{$mobile-big-screen}{
+      position: static;
+      width: 100%;
+    }
+  }
+
+  &__contact-inner {
+    width: 100%;
+    flex-grow: 1;
+    padding: 40px 30px;
+  }
+
+  &__contact-title {
+    font-size: 42px;
+  }
+
+  &__contact-field {
+    margin-top: 25px;
+  }
+
+  &__contact-field-title {
+    font-size: 12px;
+    color: var(--light-grey-color);
+  }
+
+  &__contact-field-item {
+    font-size: 18px;
+    color: var(--blue-color);
+  }
+
+  &__contact-field-social {
+    margin-top: 50px;
+  }
+
+  &__contact-field-button {
+    color: var(--white-color);
+    background: var(--beige-color);
+    height: 65px;
+    @include flex-row-center;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+}

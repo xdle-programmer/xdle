@@ -1,0 +1,18 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.logo {
+  position: relative;
+  width: 291px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 31.27%;
+    background: url("../../img/logo.png");
+    @include background-contain-center;
+  }
+
+}

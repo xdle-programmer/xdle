@@ -1,0 +1,26 @@
+.about-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 80px; }
+  @media (max-width: 767px) {
+    .about-blocks {
+      display: none; } }
+  .about-blocks__item {
+    position: relative; }
+  .about-blocks__item-border {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #000000; }
+  .about-blocks__item-text {
+    font-size: 48px;
+    text-transform: uppercase;
+    background: #ffffff;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    font-weight: 700; }
+    @media (max-width: 767px) {
+      .about-blocks__item-text {
+        font-size: 40px; } }

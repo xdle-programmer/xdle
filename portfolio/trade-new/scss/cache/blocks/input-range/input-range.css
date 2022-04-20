@@ -1,0 +1,81 @@
+.input-range {
+  width: 100%; }
+  .input-range__wrapper {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 10px; }
+  .input-range,
+  .input-range * {
+    transition: none; }
+  .input-range__item {
+    width: 100%; }
+    .input-range__item .ui-slider-range {
+      background: linear-gradient(to right, #264de4, #02ecff);
+      height: 3px !important; }
+  .input-range__track {
+    height: 6px !important;
+    border: none !important;
+    background: linear-gradient(to bottom, #3f454c, #262b30) !important;
+    border-radius: 4px !important; }
+  .input-range__handle {
+    width: 17px !important;
+    height: 12px !important;
+    top: -4px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    border-radius: 0 !important;
+    background: url(../../img/handle.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    border: none !important; }
+    .input-range__handle:focus, .input-range__handle:active {
+      outline: none !important; }
+  .input-range__block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative; }
+    .input-range__block:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 2px;
+      background: #616f83; }
+  .input-range__desc {
+    position: relative;
+    font-size: 13px;
+    font-weight: 300; }
+    .input-range__desc:after {
+      position: absolute;
+      content: '$';
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #616f83;
+      font-size: 13px;
+      font-weight: 300; }
+  .input-range__desc-input {
+    width: 75px;
+    height: 32px;
+    border-radius: 3px;
+    color: #cddaec;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 0 8px;
+    background: #303741; }

@@ -1,0 +1,528 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.reviews {
+
+  $main: '.reviews--main';
+  $orders: '.reviews--orders';
+
+  &--main {
+    padding-top: 182px;
+  }
+
+  &--modal {
+    max-height: 80vh;
+    @include scroll;
+  }
+
+  @media #{$tablet-small-screen} {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &--orders {
+    @media #{$mobile-big-screen} {
+      padding-bottom: 0;
+    }
+  }
+
+  &__block {
+    #{$main} & {
+      padding-left: 266px;
+
+      @media #{$mobile-big-screen} {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    #{$orders} & {
+      padding: 120px 0;
+      padding-right: 266px;
+
+      @media #{$mobile-big-screen} {
+        padding: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    @media #{$tablet-small-screen} {
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__items-slider {
+
+    @media #{$mobile-big-screen} {
+      position: static;
+    }
+  }
+
+  &__items {
+
+    @media #{$mobile-big-screen} {
+      //width: 150%;
+      display: block;
+      width: calc(100% - 30px);
+      @include margin-auto;
+    }
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      width: 10px !important;
+      height: 5px !important;
+      background: url("../../../img/arrow.svg") !important;
+      @include background-contain-center;
+      top: 50%;
+      transform: translateY(-50%) scaleX(-1);
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+
+      @media #{$mobile-big-screen} {
+        width: 20px !important;
+        height: 10px !important;
+      }
+    }
+
+    & .owl-next {
+      left: auto;
+      right: -15px;
+      transform: translateY(-50%) rotate(-90deg);
+
+      @media #{$mobile-big-screen} {
+        right: -20px;
+      }
+    }
+
+    & .owl-prev {
+      left: -15px;
+      right: auto;
+      transform: translateY(-50%) rotate(90deg);
+
+      @media #{$mobile-big-screen} {
+        left: -20px;
+      }
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+    & .owl-prev.disabled,
+    & .owl-next.disabled {
+      display: none !important;
+    }
+
+    & .owl-dots {
+      @include flex-row-center;
+    }
+
+    & .owl-dot {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $blue !important;
+      background-color: #ffffff !important;
+      border-radius: 50%;
+      margin: 8px;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        @include after-absolute;
+        @include absolute-center;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $blue;
+        opacity: 0;
+        border-radius: 50%;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $blue !important;
+      }
+
+      &:hover:after,
+      &.active:after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__item {
+    box-shadow: $main-shadow;
+    background: $white;
+    padding: 20px 30px;
+    margin-top: 20px;
+    transition: $shadow-transition;
+
+    #{$main} & {
+      margin-top: 50px;
+
+      @media #{$mobile-big-screen} {
+        margin-top: 20px;
+      }
+    }
+
+    #{$orders} & {
+      margin-top: 50px;
+
+      @media #{$mobile-big-screen} {
+        margin-top: 20px;
+      }
+    }
+
+    &:hover {
+      box-shadow: $focus-within-shadow;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      text-align: center;
+      padding: 20px;
+      margin-top: 0;
+      box-shadow: none;
+      border: 1px solid #f5f5f5;
+      min-height: 350px;
+      position: relative;
+
+      #{$orders} & {
+        min-height: 230px;
+      }
+    }
+  }
+
+  &__item-header {
+    position: relative;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 40px min-content auto min-content;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e7e7e7;
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 40px 1fr;
+      grid-template-areas: 'img name' 'img review';
+      position: static;
+      align-items: center;
+      grid-gap: 3px 15px;
+    }
+  }
+
+  &__item-header-img {
+    width: 40px;
+    height: 40px;
+    @include background-cover-center;
+    border-radius: 50%;
+
+    @media #{$mobile-big-screen} {
+      grid-area: img;
+    }
+  }
+
+  &__item-header-name {
+    white-space: nowrap;
+
+    @media #{$mobile-big-screen} {
+      grid-area: name;
+      text-align: left;
+    }
+  }
+
+  &__item-header-review {
+    position: relative;
+    padding-left: 26px;
+    font-size: 13px;
+    font-weight: 700;
+
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ffdc64;
+      width: 18px;
+      height: 17px;
+      mask: url(../../../img/star.svg);
+      -webkit-mask: url(../../../img/star.svg);
+      @include mask-contain-center;
+    }
+
+    @media #{$mobile-big-screen} {
+      text-align: left;
+      grid-area: review;
+    }
+
+  }
+
+  &__item-header-date {
+    white-space: nowrap;
+    color: $blue;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      padding-left: 40px;
+      position: absolute;
+      color: $blue;
+      bottom: 10px;
+      right: 20px;
+      text-align: right;
+    }
+  }
+
+  &__item-header-review-val {
+  }
+
+  &__item-subheader {
+    @include flex-row;
+    align-items: center;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+
+  &__item-subheader-workshop {
+    margin-right: 25px;
+    color: $blue;
+  }
+
+  &__item-subheader-car {
+    @include flex-row;
+    align-items: center;
+
+    @media #{$mobile-big-screen} {
+      margin-top: 7px;
+    }
+  }
+
+  &__item-subheader-car-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    @include background-contain-center;
+  }
+
+  &__item-subheader-car-name {
+  }
+
+  &__item-desc {
+    font-size: 16px;
+    margin-top: 15px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    @include flex-row;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__el-top {
+    color: #f4f4f4;
+    @include font-bolde;
+    font-size: 220px;
+    line-height: 140px;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: right;
+    top: -212px;
+    right: 5px;
+    z-index: -1;
+
+    @media #{$tablet-small-screen} {
+      font-size: 120px;
+      line-height: 50px;
+      top: -80px;
+      right: -15px;
+
+      .br_hide {
+        display: none;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      display: none;
+    }
+  }
+
+  &__el-left {
+    position: absolute;
+    left: -7px;
+    top: 329px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+
+    @media #{$tablet-small-screen} {
+      top: 500px;
+    }
+
+    @media #{$mobile-big-screen} {
+      display: none;
+    }
+  }
+
+  &__el-left-inner-1 {
+    position: absolute;
+    width: 1144px;
+    height: 1144px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: url("../../../img/gear-gray.svg");
+    @include background-contain-center;
+    z-index: 1;
+
+    @media #{$tablet-small-screen} {
+      width: 925px;
+      height: 925px;
+    }
+  }
+
+  &__el-left-inner-2 {
+    position: absolute;
+    width: 929px;
+    height: 929px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: url("../../../img/gear-blue.svg");
+    @include background-contain-center;
+    z-index: 2;
+
+    @media #{$tablet-small-screen} {
+      width: 710px;
+      height: 710px;
+    }
+  }
+
+  &__el-right {
+    position: absolute;
+    right: -7px;
+    top: 729px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+
+    @media #{$tablet-small-screen} {
+      top: 500px;
+    }
+
+    @media #{$mobile-big-screen} {
+      display: none;
+    }
+  }
+
+  &__el-right-inner-1 {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: url("../../../img/gear-gray.svg");
+    @include background-contain-center;
+    z-index: 1;
+
+    @media #{$tablet-small-screen} {
+      width: 430px;
+      height: 430px;
+    }
+  }
+
+  &__el-right-inner-2 {
+    position: absolute;
+    width: 530px;
+    height: 530px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: url("../../../img/gear-blue.svg");
+    @include background-contain-center;
+    z-index: 2;
+
+    @media #{$tablet-small-screen} {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  &__item-header-order {
+    display: grid;
+    grid-template-columns: 65px 1fr 100px;
+    grid-gap: 15px;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+
+    @media #{$mobile-big-screen} {
+      @include flex-row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item-header-order-img {
+    width: 64px;
+    height: 64px;
+    @include background-contain-center;
+
+    @media #{$mobile-big-screen} {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  &__item-header-order-about {
+  }
+
+  &__item-header-order-about-car {
+    font-size: 16px;
+  }
+
+  &__item-header-order-about-name {
+    font-size: 13px;
+    margin-top: 5px;
+    color: $blue;
+  }
+
+  &__item-header-order-date {
+    text-align: right;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      padding-left: 40px;
+      position: absolute;
+      color: $blue;
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+
+}

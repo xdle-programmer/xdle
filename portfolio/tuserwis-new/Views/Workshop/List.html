@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles_to_head.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/styles.css">
+    <script src="../../Scripts/modernizr-2.8.3.js"></script>
+
+</head>
+<body>
+<header class="header">
+    <div class="layout">
+        <form class="header__block" id="logoutForm" method="post">
+            <div class="header__logo">
+                <a href="/" title="Home Page" class="header__logo__link">
+                    <img src="../..../../../img/TuSerwis_logo.svg">
+                </a>
+            </div>
+
+            <div class="header__profile">
+                <div class="header__profile-close"></div>
+                <div class="header__balance">
+                    <div class="header__balance-number">862</div>
+                    <div class="header__balance-icon">zł</div>
+                    <div class="button-circle"></div>
+                </div>
+                <div class="header__notifications header__notifications--has-unread">
+                    <div class="header__notifications-icon"></div>
+                    <div class="header__notifications-text">Notifications</div>
+                </div>
+
+                <div class="header__profile-menu">
+                    <a class="header__profile-menu-link" href="#">Account</a>
+                    <a class="header__profile-menu-link" href="#">Wyloguj</a>
+                </div>
+            </div>
+
+            <div class="header__profile-button" style="background: url(../..../../../img/workshop_logo.png)"></div>
+        </form>
+    </div>
+</header>
+
+<div class="wrapper wrapper--background">
+    <div class="layout">
+        <div class="workshop-list">
+            <div class="workshop-list__filter workshop-list__hidden" data-workshop-layer="filter">
+                <div class="workshop-list__filter-close workshop-list__switch-button" data-workshop-goal="list"></div>
+                <div class="workshop-list__header">
+                    Filtry
+                </div>
+
+                <div class="workshop-list__filter-wrapper">
+                    <div class="workshop-list__filter-block workshop-list__filter-block--filter">
+                        <div class="workshop-list__filter-block-title"></div>
+                        <div class="workshop-list__filter-block-items">
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_1" value="Warszawa"
+                                               type="radio" name="city_filter"/>
+                                        <label class="checkbox__item-label" for="checkbox_1">Warszawa</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" checked id="checkbox_2" value="Kraków"
+                                               type="radio" name="city_filter"/>
+                                        <label class="checkbox__item-label" for="checkbox_2">Kraków</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_3" value="Łódź"
+                                               type="radio" name="city_filter"/>
+                                        <label class="checkbox__item-label" for="checkbox_3">Łódź</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_4" value="Wrocław"
+                                               type="radio" name="city_filter"/>
+                                        <label class="checkbox__item-label" for="checkbox_4">Wrocław</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_5" value="Poznań"
+                                               type="radio" name="city_filter"/>
+                                        <label class="checkbox__item-label" for="checkbox_5">Poznań</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_6" value="Gdańsk"
+                                               type="radio" name="city_filter"/>
+                                        <label class="checkbox__item-label" for="checkbox_6">Gdańsk</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__filter-block-more">SHOW MORE</div>
+                    </div>
+                    <div class="workshop-list__filter-block active">
+                        <div class="workshop-list__filter-block-title">Car</div>
+                        <div class="workshop-list__filter-block-items">
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_7" value="checkbox_7"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_7">Audi</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_8" value="checkbox_8"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_8">Opel</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_9" value="checkbox_9"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_9">BMW</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_10" value="checkbox_10"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_10">Toyota</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_11" value="checkbox_11"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_11">Nissan</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_12" value="checkbox_12"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_12">Skoda</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__filter-block-more">SHOW MORE</div>
+                    </div>
+                    <div class="workshop-list__filter-block">
+                        <div class="workshop-list__filter-block-title">Rok</div>
+                        <div class="workshop-list__filter-block-items">
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_13" value="checkbox_13"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_13">2019</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_14" value="checkbox_14"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_14">2018</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_15" value="checkbox_15"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_15">2017</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_16" value="checkbox_16"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_16">2016</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_17" value="checkbox_17"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_17">2015</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-list__filter-block-item">
+                                <div class="checkbox">
+                                    <div class="checkbox__item">
+                                        <input class="checkbox__item-input" id="checkbox_18" value="checkbox_18"
+                                               type="checkbox"/>
+                                        <label class="checkbox__item-label" for="checkbox_18">2014</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__filter-block-more">SHOW MORE</div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="workshop-list__items">
+                <div class="workshop-list__header">
+                    wybrano 345 pozycj
+                    <div class="workshop-list__switch">
+                        <div class="workshop-list__switch-button" data-workshop-goal="filter">Filter</div>
+                        <div class="workshop-list__switch-button active" data-workshop-goal="list">Lista</div>
+                        <div class="workshop-list__switch-button" data-workshop-goal="map">Na mapie</div>
+                    </div>
+                </div>
+
+                <div class="workshop-list__preloader">
+                    <div class="preloader">
+                        <div class="preloader__spinner active"></div>
+                    </div>
+                </div>
+
+                <div class="workshop-list__hidden workshop-list__map" data-workshop-layer="map">
+                    <div class="workshop-list__map-inner" id="workshop-list-map"></div>
+                </div>
+
+                <div class="workshop-list__hidden workshop-list__list active" data-workshop-layer="list">
+
+
+                    <div class="workshop-list__list-item" data-address="Aleja Krakowska 7, 02-001, Warszawa"
+                         data-name="Real-Auto Service Studio" data-rating="4.2">
+                        <div class="workshop-list__list-item-header">
+                            <div class="workshop-list__list-item-header-main">
+                                <div class="workshop-list__list-item-header-name">Real-Auto Service Studio</div>
+                                <div class="workshop-list__list-item-header-link">View profile</div>
+                            </div>
+                            <div class="workshop-list__list-item-header-natural">
+                                <div class="workshop-profile__main-current-rating workshop-profile__main-current-rating--left">
+                                    <div class="workshop-profile__main-current-rating-number">4.2</div>
+                                    <a href="#" class="workshop-profile__main-current-rating-link">3 reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__list-item-info">
+                            <div class="workshop-list__list-item-img"></div>
+                            <div class="workshop-list__list-item-desc">
+                                <div class="workshop-list__list-item-desc-address">Aleja Krakowska 7, 02-001, Warszawa
+                                </div>
+                                <div class="workshop-list__list-item-text">
+                                    <div class="workshop-list__list-item-text-full">
+                                        Zapewniamy pelna game systemów do naprawy i naprawy samochodów. alternatory).
+                                        Wymiana pasów i lancuchów rozrzadu; CO%. Sprzetowa automatyczna skrzynia biegów.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi..
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi..
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                    </div>
+                                    <div class="workshop-list__list-item-text-short">
+
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--more">
+                                        czytaj wiencej
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--less">
+                                        czytaj mniej
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workshop-list__list-item" data-address="Aleja Krakowska 17, 02-001, Warszawa"
+                         data-name="Real-Auto Service Studio" data-rating="4.2">
+                        <div class="workshop-list__list-item-header">
+                            <div class="workshop-list__list-item-header-main">
+                                <div class="workshop-list__list-item-header-name">Real-Auto Service Studio</div>
+                                <div class="workshop-list__list-item-header-link">View profile</div>
+                            </div>
+                            <div class="workshop-list__list-item-header-natural">
+                                <div class="workshop-profile__main-current-rating workshop-profile__main-current-rating--left">
+                                    <div class="workshop-profile__main-current-rating-number">4.2</div>
+                                    <a href="#" class="workshop-profile__main-current-rating-link">3 reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__list-item-info">
+                            <div class="workshop-list__list-item-img"
+                                 style="background: url(../..../../../img/workshop2_logo.jpg)"></div>
+                            <div class="workshop-list__list-item-desc">
+                                <div class="workshop-list__list-item-desc-address">Aleja Krakowska 17, 02-001, Warszawa
+                                </div>
+                                <div class="workshop-list__list-item-text">
+                                    <div class="workshop-list__list-item-text-full">
+                                        Zapewniamy pelna game systemów do naprawy i naprawy samochodów. alternatory).
+                                        Wymiana pasów i lancuchów rozrzadu; CO%. Sprzetowa automatyczna skrzynia biegów.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi..
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                    </div>
+                                    <div class="workshop-list__list-item-text-short">
+
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--more">
+                                        czytaj wiencej
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--less">
+                                        czytaj mniej
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workshop-list__list-item" data-address="Aleja Krakowska 10, 02-001, Warszawa"
+                         data-name="Real-Auto Service Studio" data-rating="4.2">
+                        <div class="workshop-list__list-item-header">
+                            <div class="workshop-list__list-item-header-main">
+                                <div class="workshop-list__list-item-header-name">Real-Auto Service Studio</div>
+                                <div class="workshop-list__list-item-header-link">View profile</div>
+                            </div>
+                            <div class="workshop-list__list-item-header-natural">
+                                <div class="workshop-profile__main-current-rating workshop-profile__main-current-rating--left">
+                                    <div class="workshop-profile__main-current-rating-number">4.2</div>
+                                    <a href="#" class="workshop-profile__main-current-rating-link">3 reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__list-item-info">
+                            <div class="workshop-list__list-item-img"></div>
+                            <div class="workshop-list__list-item-desc">
+                                <div class="workshop-list__list-item-desc-address">Aleja Krakowska 10, 02-001, Warszawa
+                                </div>
+                                <div class="workshop-list__list-item-text">
+                                    <div class="workshop-list__list-item-text-full">
+                                        Zapewniamy pelna game systemów do naprawy i naprawy samochodów. alternatory).
+                                        Wymiana pasów i lancuchów rozrzadu; CO%. Sprzetowa automatyczna skrzynia biegów.
+                                    </div>
+                                    <div class="workshop-list__list-item-text-short">
+
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--more">
+                                        czytaj wiencej
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--less">
+                                        czytaj mniej
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workshop-list__list-item" data-address="1 sierpnia, 02-001, Warszawa"
+                         data-name="Real-Auto Service Studio" data-rating="4.2">
+                        <div class="workshop-list__list-item-header">
+                            <div class="workshop-list__list-item-header-main">
+                                <div class="workshop-list__list-item-header-name">Real-Auto Service Studio</div>
+                                <div class="workshop-list__list-item-header-link">View profile</div>
+                            </div>
+                            <div class="workshop-list__list-item-header-natural">
+                                <div class="workshop-profile__main-current-rating workshop-profile__main-current-rating--left">
+                                    <div class="workshop-profile__main-current-rating-number">4.2</div>
+                                    <a href="#" class="workshop-profile__main-current-rating-link">3 reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__list-item-info">
+                            <div class="workshop-list__list-item-img"></div>
+                            <div class="workshop-list__list-item-desc">
+                                <div class="workshop-list__list-item-desc-address">1 sierpnia, 02-001, Warszawa
+                                </div>
+                                <div class="workshop-list__list-item-text">
+                                    <div class="workshop-list__list-item-text-full">
+                                        Zapewniamy pelna game systemów do naprawy i naprawy samochodów. alternatory).
+                                        Wymiana pasów i lancuchów rozrzadu; CO%. Sprzetowa automatyczna skrzynia biegów.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi..
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi..
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                    </div>
+                                    <div class="workshop-list__list-item-text-short">
+
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--more">
+                                        czytaj wiencej
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--less">
+                                        czytaj mniej
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workshop-list__list-item" data-address="1 sierpnia, 02-001, Warszawa"
+                         data-name="Real-Auto Service Studio" data-rating="4.2">
+                        <div class="workshop-list__list-item-header">
+                            <div class="workshop-list__list-item-header-main">
+                                <div class="workshop-list__list-item-header-name">Real-Auto Service Studio</div>
+                                <div class="workshop-list__list-item-header-link">View profile</div>
+                            </div>
+                            <div class="workshop-list__list-item-header-natural">
+                                <div class="workshop-profile__main-current-rating workshop-profile__main-current-rating--left">
+                                    <div class="workshop-profile__main-current-rating-number">4.2</div>
+                                    <div class="workshop-profile__main-current-rating-link animation-scroll"
+                                         data-scroll-goal="#reviews">3 reviews
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workshop-list__list-item-info">
+                            <div class="workshop-list__list-item-img"
+                                 style="background: url(../..../../../img/workshop2_logo.jpg)"></div>
+                            <div class="workshop-list__list-item-desc">
+                                <div class="workshop-list__list-item-desc-address">Aleja Krakowska 7, 02-001, Warszawa
+                                </div>
+                                <div class="workshop-list__list-item-text">
+                                    <div class="workshop-list__list-item-text-full">
+                                        Zapewniamy pelna game systemów do naprawy i naprawy samochodów. alternatory).
+                                        Wymiana pasów i lancuchów rozrzadu; CO%. Sprzetowa automatyczna skrzynia biegów.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi..
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                        Plukanie wtryskiwacza, regulacja zaworu. Wyrównanie kól, naprawa nadwozi.
+                                    </div>
+                                    <div class="workshop-list__list-item-text-short">
+
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--more">
+                                        czytaj wiencej
+                                    </div>
+                                    <div class="workshop-list__list-item-text-button workshop-list__list-item-text-button--less">
+                                        czytaj mniej
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workshop-list__pagination">
+                        <div class="workshop-list__pagination-arrow workshop-list__pagination-arrow--prev"></div>
+                        <div class="workshop-list__pagination-numbers">
+                            <div class="workshop-list__pagination-number">1</div>
+                            <div class="workshop-list__pagination-number">2</div>
+                            <div class="workshop-list__pagination-separator">...</div>
+                            <div class="workshop-list__pagination-number">11</div>
+                            <div class="workshop-list__pagination-number">12</div>
+                        </div>
+                        <div class="workshop-list__pagination-arrow workshop-list__pagination-arrow--next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal__background close-modal"></div>
+
+<div class="animation-scroll scroll-top"></div>
+
+<footer class="footer">
+    <div class="layout">
+        <div class="footer__top">
+            <div class="footer__links">
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Privacy Policy</a>
+                    <div class="footer__links-item">© 2019 TuSerwis Inc.</div>
+                </div>
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Contact Us</a>
+                    <a href="#" class="footer__links-item">Ordering & Payment</a>
+                    <a href="#" class="footer__links-item">FAQ</a>
+                </div>
+                <div class="footer__links-col">
+                    <a href="#" class="footer__links-item">Pracyj z nami</a>
+                    <a href="#" class="footer__links-item">Regulamin</a>
+                </div>
+            </div>
+
+
+            <div class="footer__form">
+                <div class="footer__form-contacts">
+                    <a href="mailto:kontakt@tuserwis.pl" class="footer__links-item footer__form-contacts-item">info@tuserwis.com</a>
+                    <a href="mailto:kontakt@tuserwis.pl" class="footer__links-item footer__form-contacts-item">+1 800
+                        123-1001</a>
+                </div>
+
+                <div class="footer__bottom-social">
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/instagram.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/twitter.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                    <a href="#" class="footer__bottom-social-link">
+                        <img src="../..../../../img/facebook.svg" class="footer__bottom-social-link-icon">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-logo">TuSerwis</div>
+
+        </div>
+    </div>
+</footer>
+
+<link href="../../Scripts/timedropper/timedropper.min.css" rel="stylesheet" defer>
+<script src="../../Scripts/timedropper/timedropper.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="../../Scripts/jquery.maskedinput.min.js" defer></script>
+<script src="../../Scripts/lightbox2/js/lightbox.min.js"></script>
+<script src="../../Scripts/owlcarousel2/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Scripts/lightbox2/css/lightbox.min.css">
+<link rel="stylesheet" type="text/css" href="../../Scripts/owlcarousel2/assets/owl.carousel.min.css">
+<script src="../../Content/js/main.js"></script>
+<script src="../../Content/js/map_workshop.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwl91tizjVH8SJLr3XnJWckLCog_TTHgQ&callback=initMap&libraries=places" type="text/javascript"></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwl91tizjVH8SJLr3XnJWckLCog_TTHgQ&libraries=places"
+        type="text/javascript"></script>
+</body>
+</html>

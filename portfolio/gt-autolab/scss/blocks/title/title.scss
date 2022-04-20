@@ -1,0 +1,20 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  padding-top: 62px;
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+
+  &:after {
+    @include after-absolute;
+    left: 0;
+    top: 105px;
+    width: 70px;
+    height: 3px;
+    background: $red;
+    border-radius: 3px;
+  }
+}

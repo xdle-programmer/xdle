@@ -1,0 +1,236 @@
+.filter,
+.filter *,
+.filter *:before,
+.filter *:after {
+  transition: none; }
+
+.filter__title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 19px;
+  margin-bottom: 18px; }
+  @media (max-width: 1279px) {
+    .filter__title {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 44px;
+      padding-bottom: 5px;
+      cursor: pointer; }
+      .filter__title:before {
+        display: block;
+        margin-top: 1px;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-color: #333333;
+        margin-right: 9px;
+        mask: url(../../../img/filter-icon.svg);
+        -webkit-mask: url(../../../img/filter-icon.svg);
+        mask-repeat: no-repeat !important;
+        -webkit-mask-repeat: no-repeat !important;
+        mask-position: center center !important;
+        -webkit-mask-position: center center !important;
+        mask-size: contain !important;
+        -webkit-mask-size: contain !important; } }
+
+@media (max-width: 1279px) {
+  .filter__wrapper {
+    display: none;
+    margin-bottom: 15px; }
+    .filter__wrapper.active {
+      display: block; } }
+
+.filter__controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+  @media (max-width: 1279px) {
+    .filter__controls {
+      grid-template-columns: 1fr; } }
+
+.filter__control-wrapper {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  margin-right: -1px;
+  margin-bottom: -1px; }
+  .filter__controls.collapse .filter__control-wrapper:nth-of-type(1n + 4) {
+    display: none; }
+    @media (max-width: 1279px) {
+      .filter__controls.collapse .filter__control-wrapper:nth-of-type(1n + 4) {
+        display: block;
+        margin-right: 0; } }
+
+.filter__control.active {
+  z-index: 5; }
+
+.filter__control-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  padding: 15px 25px;
+  padding-bottom: 5px;
+  cursor: pointer; }
+  @media (max-width: 1279px) {
+    .filter__control-header {
+      padding: 10px 25px; } }
+  .filter__control.active .filter__control-header {
+    z-index: 6; }
+
+.filter__control-header-name {
+  color: #333333;
+  font-display: auto;
+  font-family: "roboto", sans-serif !important;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px; }
+
+.filter__control-header-toggle {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer; }
+  .filter__control-header-toggle:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 7px;
+    background-color: #ca1626;
+    mask: url(../../../img/small-arrow.svg);
+    -webkit-mask: url(../../../img/small-arrow.svg);
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center center !important;
+    -webkit-mask-position: center center !important;
+    mask-size: contain !important;
+    -webkit-mask-size: contain !important; }
+  .filter__control.active .filter__control-header-toggle {
+    transform: scaleY(-1); }
+  @media (max-width: 1279px) {
+    .filter__control-header-toggle {
+      display: none; } }
+
+.filter__control-value {
+  color: #333333;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 20px 25px;
+  padding-top: 0; }
+  @media (max-width: 1279px) {
+    .filter__control-value {
+      display: none; } }
+
+.filter__control-items {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  left: 0;
+  top: 35px;
+  opacity: 0;
+  visibility: hidden;
+  padding: 5px 25px; }
+  .filter__control.active .filter__control-items {
+    opacity: 1;
+    visibility: visible; }
+  .filter__control-items:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -38px;
+    height: calc(100% + 41px);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    background-color: #ffffff;
+    z-index: -1; }
+    @media (max-width: 1279px) {
+      .filter__control-items:after {
+        display: none; } }
+  @media (max-width: 1279px) {
+    .filter__control-items {
+      position: static;
+      opacity: 1;
+      visibility: visible; } }
+
+.filter__footer {
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-top: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center; }
+  @media (max-width: 1279px) {
+    .filter__footer {
+      grid-template-columns: 1fr; } }
+
+.filter__footer-collapse {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content;
+  cursor: pointer;
+  margin-left: 25px; }
+  .filter__footer-collapse:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #d1d1d1;
+    left: 0;
+    bottom: 0; }
+  .filter__footer-collapse:hover {
+    color: #ca1626; }
+  @media (max-width: 1279px) {
+    .filter__footer-collapse {
+      display: none; } }
+
+.filter__footer-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px; }
+  @media (max-width: 1279px) {
+    .filter__footer-buttons {
+      padding: 11px 25px; } }
+
+.filter__footer-button {
+  width: calc(50% - 2px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 24px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  border-radius: 3px; }
+  .filter__footer-button:hover {
+    background: #ca1626;
+    color: #ffffff; }
+  @media (max-width: 1279px) {
+    .filter__footer-button {
+      width: calc(50% - 15px); } }

@@ -1,0 +1,40 @@
+.ninth {
+  background: url(../../../img/ninth.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-position: top center !important; }
+  .ninth__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 120px;
+    color: #ffffff; }
+    @media (max-width: 767px) {
+      .ninth__list {
+        grid-template-columns: 1fr;
+        grid-gap: 0; } }
+  .ninth__list-item {
+    margin-bottom: 30px;
+    padding-left: 65px;
+    position: relative;
+    font-size: 16px; }
+    .ninth__list-item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 51px;
+      height: 51px;
+      background: url(../../../img/check-star.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      left: 0;
+      top: -4px; }
+  .ninth__list-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    width: 36%; }
+    @media (max-width: 767px) {
+      .ninth__list-item-title {
+        width: 100%; } }

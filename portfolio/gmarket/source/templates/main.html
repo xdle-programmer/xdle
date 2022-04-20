@@ -1,0 +1,177 @@
+{% include "partials/header.html" with {catalog: 'unwrap'}%}
+		<main>
+			<section class="main-banner ">
+				<div class="container main-banner__container">
+					<div class="right-wrap">
+						{% include "partials/banner_big.html"%}
+					</div>
+				</div>
+			</section>
+			<section class="cont-section">
+				<div class="container container_mobile-full">
+					<h2 class="md-title">Успейте купить</h2>
+					<div class="overflow-wrapper">
+						<div class="card-slider card-slider_start-quater">
+							{% for i in 0..8 %}
+								<div class="slider-slide slider-slide_multiple">
+									{% 
+										include "partials/product-card.html" with {
+											name: "Ноутбук Apple MacBook Pro 15 Touch Bar i7 2.9/16/512 MPTV2RU/A",
+											bages: "red",
+											img: "img/samples/catalog/c" ~ i ~ ".jpg"
+										}
+									 %}
+								</div> 
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="cont-section pop-categorys">
+				<div class="container container_mobile-full">
+					<div class="third-wrap">
+						<a href="#" class="category-cap">
+							<div class="category-cap__icon-handle">
+								<i class="i-apple-logo"></i>
+							</div>
+							<div class="category-cap__title">
+								<span>
+									<span class="category-cap__hover-decor">
+									Apple
+									</span>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="third-wrap">
+						<a href="#" class="category-cap">
+							<div class="category-cap__icon-handle">
+								<i class="i-smartphone"></i>
+							</div>
+							<div class="category-cap__title">
+								<span>
+									<span class="category-cap__hover-decor">
+										Смартфоны,
+										телефоны и гаджеты
+									</span>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="third-wrap">
+						<a href="#" class="category-cap">
+							<div class="category-cap__icon-handle">
+								<i class="i-home-tech"></i>
+							</div>
+							<div class="category-cap__title">
+								<span>
+									<span class="category-cap__hover-decor">
+										Бытовая техника
+									</span>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="third-wrap">
+						<a href="#" class="category-cap">
+							<div class="category-cap__icon-handle">
+								<i class="i-pc"></i>
+							</div>
+							<div class="category-cap__title">
+								<span>
+									<span class="category-cap__hover-decor">
+										Компьютеры,
+										ноутбуки и планшеты
+									</span>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="third-wrap">
+						<a href="#" class="category-cap">
+							<div class="category-cap__icon-handle">
+								<i class="i-photo"></i>
+							</div>
+							<div class="category-cap__title">
+								<span>
+									<span class="category-cap__hover-decor">
+									Фото и видео
+									</span>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="third-wrap">
+						<a href="#" class="category-cap">
+							<div class="category-cap__icon-handle">
+								<i class="i-network"></i>
+							</div>
+							<div class="category-cap__title">
+								<span>
+									<span class="category-cap__hover-decor">
+									Сетевое
+									оборудование
+									</span>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="cont-section">
+				<div class="container container_mobile-full">
+					<h2 class="md-title">Хиты продаж</h2>
+					<div class="overflow-wrapper">
+						<div class="card-slider card-slider_start-quater">
+							{% 
+								set names = [
+									"Ноутбук Apple MacBook Pro 15 Touch Bar i7 2.9/16/512 MPTV2RU/A",
+									"Соковыжималка центробежная Moulinex JU610D10",
+									"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+									"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+									"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+									"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+									"Холодильник с нижней морозильной камерой LG GA-M429SARZ",
+									"Смартфон Apple iPhone 7 32Gb Black (MN8X2RU/A)",
+									"Мультиварка Redmond RMC-М90"
+								]
+							%}
+							{% for i in 0..8 %}
+								<div class="slider-slide slider-slide_multiple">
+									{% 
+										include "partials/product-card.html" with {
+											name: names[i],
+											bages: "red",
+											img: "img/samples/catalog/c" ~ i ~ ".jpg"
+										}
+									 %}
+								</div> 
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</section> 
+			{% include "partials/banner_wide.html"%}
+			<section class="cont-section">
+				<div class="container container_mobile-full">
+					<h2 class="md-title">Рекомендуем посмотреть</h2>
+					<div class="overflow-wrapper">
+						<div class="card-slider card-slider_start-quater">
+							{% for i in 0..8 %}
+								<div class="slider-slide slider-slide_multiple">
+									{% 
+										include "partials/product-card.html" with {
+											name: "Ноутбук Apple MacBook Pro 15 Touch Bar i7 2.9/16/512 MPTV2RU/A",
+											img: "img/samples/catalog/c" ~ (i+1) ~ ".jpg"
+										}
+									 %}
+								</div> 
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</section>
+			{% include "partials/news-block.html" %}
+			{% include "partials/seo-text.html" %}
+		</main>
+{% include "partials/footer.html" %}

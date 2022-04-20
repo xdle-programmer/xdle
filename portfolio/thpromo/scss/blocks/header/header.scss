@@ -1,0 +1,55 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.header {
+  height: 100px;
+  @include flex-row-center;
+  position: relative;
+
+  @media #{$tablet-big-screen} {
+    height: 80px;
+  }
+
+  &__logo {
+    height: 20px;
+    width: 250px;
+    background: url(../../../img/logo/logo.svg);
+    @include background-contain-center;
+  }
+
+  &__lang {
+    @include flex-row-center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__logo-flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    &--english {
+      background: url(../../../img/english.jpg);
+      @include background-contain-center;
+    }
+
+    &--thailand {
+      background: url(../../../img/thailand.jpg);
+      @include background-contain-center;
+    }
+  }
+
+  &__logo-name {
+    margin-left: 15px;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+}

@@ -1,0 +1,99 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.second {
+
+  &__text {
+    width: 79%;
+  }
+
+  &__list {
+
+  }
+
+  &__list-title {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  &__list-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 70px;
+
+    @media #{$mobile-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+  }
+
+  &__list-item {
+    color: $gray-dark;
+  }
+
+  &__list-item-header {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__list-item-header-icon {
+    width: 123px;
+    height: 123px;
+    margin-right: 20px;
+  }
+
+  &__list-item-header-name {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 40%;
+  }
+
+  &__list-item-text {
+    @include font-montserrat;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__list-item-negative {
+    background: url(../../../img/negative_background.jpg);
+    @include background-cover-center;
+    border-radius: 10px;
+    padding: 30px;
+    padding-right: 15px;
+    color: $white;
+
+  }
+
+  &__list-item-negative-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__list-item-negative-list {
+    font-size: 13px;
+    padding: 0;
+    padding-left: 13px;
+    margin: 0;
+    line-height: 21px;
+  }
+
+  &__list-item-negative-list-item {
+    margin-bottom: 5px;
+    color: $red;
+  }
+
+  &__list-item-negative-list-item-inner {
+    color: $white;
+  }
+
+  &__button {
+    margin-top: 70px;
+  }
+}

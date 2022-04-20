@@ -1,0 +1,94 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.eleventh {
+  padding-top: 26px;
+  padding-bottom: 270px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 280px;
+    padding-bottom: 150px;
+  }
+
+
+  &__rules {
+    position: absolute;
+    right: 0;
+    top: 34px;
+
+    @media #{$tablet-big-screen} {
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__title {
+    text-align: left!important;
+    padding-left: 100px;
+
+    @media #{$tablet-big-screen} {
+      padding-left: 0;
+      text-align: center!important;
+    }
+  }
+
+  &__subtitle {
+    font-size: 50px;
+    margin-top: 151px;
+    margin-left: 378px;
+    line-height: 55px;
+    margin-bottom: 93px;
+    @include font-intro-reg;
+
+    @media #{$tablet-big-screen} {
+      font-size: 36px;
+      line-height: 40px;
+      margin: 20px 0;
+      text-align: center;
+    }
+  }
+  &__img {
+    width: 266px;
+    height: 297px;
+    left: 40px;
+    top: 217px;
+    position: absolute;
+    background: url(../../../img/eleventh-img.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin: 20px auto;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__grid-item {
+    height: 173px;
+    @include flex-column;
+    padding: 20px 30px;
+    background: $yellow;
+    text-align: center;
+    align-items: center;
+  }
+  &__grid-item-number {
+    color: $white;
+    font-size: 60px;
+    @include font-intro-bold;
+    margin-bottom: 5px;
+  }
+  &__grid-item-text {
+    font-size: 18px;
+  }
+}

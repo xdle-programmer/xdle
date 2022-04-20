@@ -1,0 +1,61 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.line-separator {
+  width: 50%;
+  margin: 20px auto;
+  margin-top: 0;
+  position: relative;
+  height: 5px;
+
+  &--margin-top {
+    margin-top: 20px;
+  }
+
+  &--small {
+    margin-bottom: 5px;
+  }
+
+  &--vertical {
+    width: 5px;
+    height: 580px;
+  }
+
+  &:before {
+    @include after-absolute;
+    @include absolute-fill;
+    width: 100%;
+    border-bottom: 2px dashed #a27a19;
+
+    #{$pattern3} & {
+      border-bottom: 2px dashed #ff0000;
+    }
+
+    mask: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &--vertical:before {
+    height: 100%;
+    border-right: 2px dashed #a27a19;
+
+    #{$pattern3} & {
+      border-right: 2px dashed #ff0000;
+    }
+    mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+    top: 10px;
+    background: #000;
+    filter: blur(20px);
+    opacity: .5;
+  }
+
+  &--vertical:after {
+  }
+}

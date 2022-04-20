@@ -1,0 +1,41 @@
+{% include "partials/header-new.html" %}
+	<nav class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__elm">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__elm">
+				Вопросы и ответы
+			</span>
+		</div>
+	</nav>
+	<main>
+		<div class="container">
+			<section class="return-page">
+				<h1>Возврат</h1>
+				<p>Согласно ст. 26.1 Закона «О защите прав потребителей», вы в праве вернуть товар, приобретенный в онлайн-магазине, в течение 7 дней после получения товара.</p>
+				<div class="return-page__box">
+					<div class="return-page__title">
+						<h2>Инструкция</h2>
+					</div>
+					<p>Когда был куплен товар?</p>
+					
+                    <label class="checkbox-label checkbox-label_radio" data-url="#1">
+						<input type="radio" class="checkbox-label__checkbox-hidden" name="type-delivery" checked="true">
+						<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+						<span class="checkbox-label__text">Менее 7 дней назад</span>
+					</label>
+                    <label class="checkbox-label checkbox-label_radio" data-url="#2">
+						<input type="radio" class="checkbox-label__checkbox-hidden" name="type-delivery">
+						<div class="checkbox-label__checkbox-visual checkbox-label__checkbox-visual_radio"></div>
+						<span class="checkbox-label__text">8 дней и более</span>
+					</label>
+                   
+					<a href="#" class="button button_blue button_small" id="next-step">
+						Далее
+					</a>
+				</div>
+			</section>			
+		</div>
+	</main>
+{% include "partials/footer-new.html" %}

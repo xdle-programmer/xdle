@@ -1,0 +1,83 @@
+.roulette {
+  width: 100%;
+  overflow: hidden;
+  padding: 35px 0; }
+  .roulette__wrapper {
+    width: 100000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .roulette__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .roulette__items--animation {
+      animation: roulette; }
+  .roulette__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px; }
+    .roulette__item.active {
+      transform: scale(1.3);
+      animation-delay: .3s;
+      animation: roulette_item .3s ease-in;
+      animation-fill-mode: forwards; }
+
+@keyframes roulette_item {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.3); } }
+      @media (max-width: 767px) {
+        .roulette__item.active {
+          animation: none; } }
+  .roulette__item-inner {
+    width: 100px; }
+    @media (max-width: 1900px) {
+      .roulette__item-inner {
+        width: 110px; } }
+    @media (max-width: 767px) {
+      .roulette__item-inner {
+        width: 95px; } }
+
+@keyframes roulette {
+  0% {
+    transform: translateX(0);
+    animation-timing-function: ease-in; }
+  29.9999% {
+    transform: translateX(-100%);
+    animation-timing-function: ease-in; }
+  30% {
+    transform: translateX(0);
+    animation-timing-function: linear; }
+  39.9999% {
+    transform: translateX(-100%);
+    animation-timing-function: linear; }
+  40% {
+    transform: translateX(0);
+    animation-timing-function: linear; }
+  49.9999% {
+    transform: translateX(-100%);
+    animation-timing-function: linear; }
+  50% {
+    transform: translateX(0);
+    animation-timing-function: linear; }
+  59.9999% {
+    transform: translateX(-100%);
+    animation-timing-function: linear; }
+  60% {
+    transform: translateX(0);
+    animation-timing-function: linear; }
+  69.9999% {
+    transform: translateX(-100%);
+    animation-timing-function: linear; }
+  70% {
+    transform: translateX(0);
+    animation-timing-function: ease-out; }
+  100% {
+    transform: translateX(-100%);
+    animation-timing-function: ease-out; } }

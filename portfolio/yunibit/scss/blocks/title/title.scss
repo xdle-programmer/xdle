@@ -1,0 +1,33 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  color: #262626;
+  font-size: 36px;
+  font-weight: 400;
+  position: relative;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &:after {
+    @include after-absolute;
+    left: 0;
+    bottom: -15px;
+    width: 37px;
+    height: 3px;
+    background-color: #bfbfbf;
+  }
+
+  &--center:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}

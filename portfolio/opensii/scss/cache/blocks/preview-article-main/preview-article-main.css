@@ -1,0 +1,73 @@
+.preview-article-main {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #f8f8f8;
+  padding: 21px 22px;
+  margin-bottom: 25px; }
+  .preview-article-main__author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .preview-article-main__author {
+        display: inline; } }
+  .preview-article-main__author-photo {
+    width: 30px;
+    height: 30px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-right: 15px;
+    border-radius: 50%;
+    filter: grayscale(1); }
+    @media (max-width: 767px) {
+      .preview-article-main__author-photo {
+        display: none; } }
+  .preview-article-main__author-name {
+    font-size: 14px;
+    font-weight: 700; }
+    @media (max-width: 767px) {
+      .preview-article-main__author-name {
+        display: inline; } }
+  .preview-article-main__author-position {
+    font-size: 14px;
+    font-weight: 300; }
+    .preview-article-main__author-position:before {
+      content: ', '; }
+    @media (max-width: 767px) {
+      .preview-article-main__author-position {
+        display: inline; } }
+  .preview-article-main__title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: -17px;
+    line-height: 1.2;
+    cursor: pointer; }
+    .preview-article-main__title:before {
+      content: '';
+      display: block;
+      width: 82px;
+      height: 89px;
+      margin-bottom: -8px;
+      margin-left: -11px;
+      background: #121212;
+      -webkit-mask-image: url(../../img/icon-cap.png);
+      mask-image: url(../../img/icon-cap.png);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .preview-article-main__title:hover {
+      color: #bd1d00; }
+    @media (max-width: 767px) {
+      .preview-article-main__title {
+        font-size: 24px; } }

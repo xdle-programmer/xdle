@@ -1,0 +1,73 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.table {
+  font-size: 14px;
+
+  &--shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 100px;
+    padding: 10px 40px;
+    background: $white;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      padding: 10px 10px;
+    }
+
+    &--header {
+      background: $blue;
+    }
+    &--subheader {
+      background: #f7f7f7;
+    }
+  }
+
+  &--short &__row:nth-of-type(1n + 8) {
+    display: none;
+  }
+
+  &--small &__row {
+    padding: 10px 20px;
+
+    @media #{$tablet-small-screen} {
+      padding: 10px 5px;
+    }
+  }
+
+  &--even-lines &__row:nth-of-type(even) {
+    background-color: #f7f7f7;
+  }
+
+  &__cell {
+    min-height: 40px;
+    @include flex-row-center;
+
+    &--left {
+      justify-content: flex-start;
+    }
+
+    @media #{$tablet-small-screen} {
+      padding: 0 5px;
+    }
+  }
+
+  &--small &__cell {
+    min-height: 20px;
+  }
+
+  &__row--header &__cell {
+    color: $white;
+  }
+
+  &__row--subheader &__cell {
+    min-height: 20px;
+    font-weight: 700;
+  }
+
+}

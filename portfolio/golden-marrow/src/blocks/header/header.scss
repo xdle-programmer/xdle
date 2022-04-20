@@ -1,0 +1,351 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &--scroll {
+    background: var(--white-color);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+
+    #{$night} & {
+      background: #11132d;
+    }
+  }
+
+  $scroll: '.header--scroll';
+
+  &__block {
+    @media #{$tablet-big-screen}{
+      #{$scroll} & {
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  &__top {
+    @include flex-row-center;
+    justify-content: space-between;
+    padding-top: 15px;
+
+    @media #{$tablet-big-screen}{
+      align-items: flex-start;
+    }
+
+    @media #{$mobile-big-screen}{
+      flex-wrap: wrap;
+    }
+
+    #{$scroll} & {
+      padding-top: 5px;
+    }
+  }
+
+  &__language {
+    @include flex-row;
+
+    @media #{$tablet-big-screen}{
+      margin-right: auto;
+      margin-left: 30px;
+    }
+
+    @media #{$mobile-big-screen}{
+      display: none;
+    }
+  }
+
+  &__language-item {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--beige-color);
+    cursor: pointer;
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+
+    &:hover,
+    &--active {
+      color: var(--blue-color);
+    }
+
+    &:nth-last-of-type(1):before {
+      content: '/';
+      margin: 0 5px;
+      color: var(--beige-color);
+    }
+  }
+
+  &__social {
+    @media #{$tablet-big-screen}{
+      @include flex-column;
+      align-items: flex-end;
+      margin-right: 45px;
+    }
+
+    @media #{$mobile-big-screen}{
+      order: 1;
+      width: 100%;
+      @include flex-row-center;
+      justify-content: space-between;
+      margin-right: 0;
+    }
+  }
+
+  &__mobile-phone {
+    display: none;
+
+    @media #{$tablet-big-screen}{
+      display: block;
+      margin-top: 5px;
+      color: var(--dark-grey-color);
+
+      #{$night} & {
+        color: var(--white-color);
+      }
+    }
+
+    @media #{$mobile-big-screen}{
+      font-size: 18px;
+      margin-top: 0;
+    }
+  }
+
+  &__mobile-button {
+    display: none;
+
+    @media #{$tablet-big-screen}{
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: var(--beige-color);
+      border-radius: 50%;
+      cursor: pointer;
+
+      position: relative;
+
+      &:after {
+        @include after-absolute;
+        width: 22px;
+        height: 15px;
+        @include absolute-center;
+        background: url(assets/img/menu-open.png);
+        @include background-contain-center;
+      }
+    }
+
+    @media #{$mobile-big-screen}{
+      order: 3;
+      margin-top: 10px;
+    }
+  }
+
+  &__bottom-wrapper {
+    @media #{$tablet-big-screen}{
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+      background: rgba(17, 18, 44, .9);
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  $active: '.header__bottom-wrapper.active';
+
+  &__bottom {
+    @include flex-row;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 5px;
+
+    @media #{$tablet-big-screen}{
+      background: #eaf3f6;
+      width: 270px;
+      margin-left: auto;
+      @include flex-column;
+      padding: 50px 10px;
+      padding-left: 25px;
+      height: 100%;
+      transform: translateX(100%);
+
+      #{$active} & {
+        transform: translateX(0);
+      }
+
+      #{$night} & {
+        background: var(--blue-color);
+      }
+    }
+  }
+
+  &__logo {
+    width: 222px;
+
+    #{$scroll} & {
+      width: 100px;
+    }
+
+    @media #{$tablet-big-screen}{
+      display: none;
+    }
+  }
+
+  &__mobile-logo {
+    display: none;
+
+    @media #{$tablet-big-screen}{
+      display: block;
+      width: 222px;
+      padding-top: 3px;
+
+      #{$scroll} & {
+        width: 100px;
+      }
+    }
+
+    @media #{$mobile-big-screen}{
+      order: 2;
+      width: 130px;
+      padding-top: 15px;
+
+      #{$scroll} & {
+        width: 100px;
+      }
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+    padding-top: 10px;
+
+    @media #{$tablet-big-screen}{
+      @include flex-column;
+      margin-left: 0;
+    }
+  }
+
+  &__menu-item {
+    font-size: 14px;
+    //font-weight: 300;
+    color: var(--dark-grey-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 60px;
+    letter-spacing: .06em;
+    position: relative;
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+
+    &:hover {
+      color: var(--beige-color);
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 2px;
+      height: calc(100% - 8px);
+      background: var(--beige-color);
+      left: -30px;
+      top: 4px;
+
+      @media #{$tablet-big-screen}{
+        display: none;
+      }
+    }
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(1):after {
+      display: none;
+    }
+
+    @media #{$tablet-big-screen}{
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+  &__phone {
+    color: var(--dark-grey-color);
+    font-size: 18px;
+    padding-top: 7px;
+    letter-spacing: .04em;
+    margin-left: 25px;
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+
+    &:hover {
+      color: var(--beige-color);
+    }
+
+    @media #{$tablet-big-screen}{
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+  &__bottom-mobile-header {
+    display: none;
+
+    @media #{$tablet-big-screen}{
+      @include flex-row-center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__bottom-mobile-header-logo {
+    width: 132px;
+  }
+
+  &__bottom-mobile-header-button {
+    width: 50px;
+    height: 50px;
+    background: var(--beige-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 15px;
+      height: 15px;
+      @include absolute-center;
+      background: url(assets/img/menu-close.png);
+      @include background-contain-center;
+    }
+
+  }
+
+
+  &__bottom-social {
+    display: none;
+
+    @media #{$tablet-big-screen}{
+      display: block;
+      margin-top: 45px;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.advantages {
+  margin-bottom: 160px;
+
+  @media #{$tablet-big-screen} {
+    margin-bottom: 40px;
+  }
+
+  &__block {
+  }
+  &__title {
+    @include font-druk;
+    font-size: 42px;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      font-size: 34px;
+      line-height: 30px;
+      margin-top: 15px;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  &__subtitle {
+    font-size: 22px;
+    color: $gray;
+    margin-bottom: 39px;
+
+    @media #{$tablet-big-screen} {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    margin-bottom: 116px;
+    position: relative;
+
+    &:nth-of-type(1) {
+      padding-right: 465px;
+
+      @media #{$tablet-big-screen} {
+        padding-right: 0;
+      }
+    }
+    &:nth-of-type(2) {
+      padding-left: 514px;
+
+      @media #{$tablet-big-screen} {
+        padding-left: 0;
+      }
+    }
+    &:nth-of-type(3) {
+      padding-right: 465px;
+
+      @media #{$tablet-big-screen} {
+        padding-right: 0;
+      }
+    }
+
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 50px;
+    }
+  }
+
+  $item-1: '.advantages__item:nth-of-type(1)';
+  $item-2: '.advantages__item:nth-of-type(2)';
+  $item-3: '.advantages__item:nth-of-type(3)';
+
+  &__item-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__item-list {
+
+  }
+  &__item-list-item {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 43px;
+    padding-left: 64px;
+    position: relative;
+    visibility: hidden;
+
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 18px;
+    }
+
+    &:before {
+      @include after-absolute;
+      width: 40px;
+      height: 40px;
+      margin-right: 24px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../../../../img/advantages-list-icon.svg);
+      @include background-contain-center;
+
+    }
+  }
+  &__item-img {
+    position: absolute;
+
+    #{$item-1} &--1 {
+      width: 51px;
+      height: 51px;
+      background-color: #297f5c;
+      border-radius: 50%;
+      right: -9px;
+      top: -102px;
+      z-index: 1;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    #{$item-1} &--2 {
+      right: 0;
+      top: 42%;
+      transform: translateY(-50%);
+      width: 428px;
+      height: 419px;
+      background: url(../../../../img/advantages-img-1.jpg);
+      @include background-contain-center;
+
+      @media #{$tablet-big-screen} {
+        position: relative;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+        height: 180px;
+      }
+    }
+
+    #{$item-2} &--1 {
+      width: 432px;
+      height: 432px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../../../../img/advantages-img-2.jpg);
+      @include background-contain-center;
+
+      @media #{$tablet-big-screen} {
+        position: relative;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+        height: 180px;
+      }
+    }
+
+    #{$item-2} &--2 {
+      width: 109px;
+      height: 109px;
+      bottom: 14px;
+      left: -205px;
+      background-color: #754476;
+      border-radius: 50%;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+
+    #{$item-3} &--1 {
+      width: 384px;
+      height: 332px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../../../../img/advantages-img-3.jpg);
+      @include background-contain-center;
+
+      @media #{$tablet-big-screen} {
+        position: relative;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+        height: 180px;
+      }
+    }
+
+    #{$item-3} &--2 {
+      left: -250px;
+      bottom: -240px;
+      width: 263px;
+      height: 258px;
+      background: url(../../../../img/g-letter.svg);
+      @include background-contain-center;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+  }
+}

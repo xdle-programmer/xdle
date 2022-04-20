@@ -1,0 +1,243 @@
+.comment {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 26px 12px;
+  background: #f6f6ee;
+  padding-right: 20px;
+  padding-bottom: 15px; }
+  .comment * {
+    color: #121212; }
+  @media (max-width: 767px) {
+    .comment {
+      padding: 15px 5px; } }
+  .comment__author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .comment__author-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px; }
+    @media (max-width: 767px) {
+      .comment__author-img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px; } }
+  .comment__author-desc {
+    width: calc(100% - 80px); }
+    @media (max-width: 767px) {
+      .comment__author-desc {
+        width: calc(100% - 50px); } }
+  .comment__author-desc-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: baseline;
+    margin-bottom: 10px; }
+  .comment__author-desc-item-name {
+    font-size: 16px;
+    font-weight: 700; }
+    @media (max-width: 767px) {
+      .comment__author-desc-item-name {
+        font-size: 14px; } }
+  .comment__author-desc-item-position {
+    margin-left: 6px;
+    font-size: 11px;
+    font-weight: 300; }
+  .comment__author-desc-question {
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.4;
+    padding-right: 20px; }
+    @media (max-width: 767px) {
+      .comment__author-desc-question {
+        font-size: 17px;
+        padding-right: 0; } }
+  .comment__input {
+    height: 80px;
+    border: 1px solid #b8b8b8;
+    background: #ffffff;
+    width: calc(100% - 95px);
+    margin-left: 95px;
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    padding: 16px 10px;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 4px; }
+    @media (max-width: 767px) {
+      .comment__input {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px; } }
+  .comment__talk {
+    width: calc(100% - 95px);
+    margin-left: 95px; }
+    @media (max-width: 767px) {
+      .comment__talk {
+        width: 100%;
+        margin-left: 0; } }
+  .comment__talk-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 35px; }
+  .comment__talk-header-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 13px;
+    font-weight: 300;
+    align-items: flex-end; }
+    .comment__talk-header-count:before {
+      content: '';
+      display: block;
+      width: 19px;
+      height: 19px;
+      margin-right: 4px;
+      background: url(../../img/comment-count.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+  .comment__talk-header-switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .comment__talk-header-switch-item {
+    padding: 5px 0;
+    margin: 0 7px;
+    cursor: pointer;
+    border-bottom: 1px dashed #acaca8;
+    font-size: 13px;
+    font-weight: 300;
+    padding-bottom: 1px; }
+    .comment__talk-header-switch-item:hover {
+      color: #bd1d00; }
+    .comment__talk-header-switch-item.active {
+      margin: 0;
+      padding: 5px 7px;
+      background: #e8e8e2;
+      cursor: default;
+      text-decoration: none;
+      border-radius: 2px;
+      border-bottom: none; }
+      .comment__talk-header-switch-item.active:hover {
+        color: #121212; }
+  .comment__talk-item {
+    width: 100%; }
+  .comment__talk-item .comment__talk-item {
+    width: calc(100% - 95px);
+    margin-left: 95px; }
+    @media (max-width: 767px) {
+      .comment__talk-item .comment__talk-item {
+        width: calc(100% - 20px);
+        margin-left: 20px; } }
+  .comment__talk-item-inner {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .comment__talk-item-author-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 767px) {
+      .comment__talk-item-author-img {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px; } }
+  .comment__talk-item-author-desc {
+    width: calc(100% - 135px); }
+    @media (max-width: 767px) {
+      .comment__talk-item-author-desc {
+        width: calc(100% - 75px); } }
+  .comment__talk-item-author-desc-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: baseline;
+    margin-bottom: 15px; }
+  .comment__talk-item-author-desc-item-name {
+    font-size: 16px;
+    font-weight: 700; }
+  .comment__talk-item-author-desc-item-position {
+    margin-left: 6px;
+    font-size: 11px;
+    font-weight: 300; }
+  .comment__author-desc-answer {
+    font-size: 13px;
+    font-weight: 300; }
+  .comment__author-desc-button {
+    cursor: pointer;
+    border-bottom: 1px dashed #acaca8;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 300; }
+    .comment__author-desc-button:hover {
+      color: #bd1d00; }
+  .comment__talk-item-vote {
+    width: 60px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-between; }
+    @media (max-width: 767px) {
+      .comment__talk-item-vote {
+        width: 40px;
+        padding-right: 5px; } }
+  .comment__talk-item-vote-button {
+    cursor: pointer;
+    width: 18px;
+    height: 9px;
+    background: #d2d2cb;
+    -webkit-mask-image: url(../../img/comment_vote.png);
+    mask-image: url(../../img/comment_vote.png);
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center center !important;
+    -webkit-mask-position: center center !important;
+    mask-size: contain !important;
+    -webkit-mask-size: contain !important; }
+    .comment__talk-item-vote-button:hover {
+      background: #bd1d00; }
+    .comment__talk-item-vote-button--down {
+      transform: scaleY(-1); }
+  .comment__talk-item-vote-count {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    width: 18px; }
+  .comment__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #cacac5;
+    margin-top: -20px; }
+  .comment__footer-button {
+    cursor: pointer;
+    border-bottom: 1px dashed #acaca8;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 300; }
+    .comment__footer-button:hover {
+      color: #bd1d00; }

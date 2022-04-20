@@ -1,0 +1,220 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.user-content {
+    h1 {
+        color: $blue;
+        margin-bottom: .5em;
+        margin-top: 0;
+    }
+
+    h2 {
+        color: $blue;
+        margin-bottom: .5em;
+        margin-top: 0;
+    }
+
+    h3 {
+        color: $blue;
+        margin-bottom: .5em;
+        margin-top: 0;
+
+        @media #{$mobile-big-screen} {
+            text-align: center;
+        }
+    }
+
+    h4 {
+        color: $blue;
+        margin-bottom: .5em;
+        margin-top: 0;
+    }
+
+    h5 {
+        color: $blue;
+        margin-bottom: .5em;
+        margin-top: 0;
+    }
+
+    h6 {
+        color: $blue;
+        margin-bottom: .5em;
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: .5em;
+        line-height: 1.5em;
+        color: #333;
+    }
+
+    .subscribe-box {
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+
+        @media #{$mobile-big-screen} {
+            width: 100%;
+        }
+    }
+
+    .subscribe {
+        width: 350px;
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        height: 40px;
+        margin-bottom: 1em;
+        position: relative;
+
+        @media #{$mobile-big-screen} {
+            width: 100%;
+        }
+
+        &__input {
+            border: 1px solid #e7e7e7;
+            font-size: 16px;
+            padding-left: 15px;
+            width: 100%;
+        }
+
+        &__button {
+            padding: 5px 30px;
+            @include flex-column-center;
+            white-space: nowrap;
+            color: $white;
+            background: $blue;
+            border: 1px solid $blue;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+            height: 100%;
+            letter-spacing: 0.46px;
+            text-transform: uppercase;
+
+            @media #{$mobile-big-screen} {
+                font-size: 0;
+                background: $blue;
+                //background: $blue url(../../../img/send-button.svg);
+                //background-repeat: no-repeat !important;
+                //background-position: center center !important;
+                //background-size: 20px 20px;
+                color: transparent;
+                position: relative;
+
+                &:after {
+                    @include after-absolute;
+                    @include absolute-center;
+                    width: 20px;
+                    height: 20px;
+                    background: $white;
+                    mask: url(../../../img/send-button.svg);
+                    -webkit-mask: url(../../../img/send-button.svg);
+                    @include mask-contain-center;
+                }
+            }
+
+            &.disabled {
+                cursor: not-allowed;
+                filter: grayscale(1);
+            }
+
+            &:active {
+                background: #0092e8;
+                filter: grayscale(.1);
+            }
+        }
+    }
+
+    .desc {
+        font-size: 13px;
+        margin-bottom: .5em;
+        color: #bbb;
+    }
+
+    .information-block {
+        padding: 40px 60px;
+        margin-bottom: 50px;
+        width: 100%;
+
+        @media #{$mobile-big-screen} {
+            padding: 20px 20px;
+            width: 100%;
+        }
+    }
+
+    &--small {
+        h1 {
+            color: $blue;
+            margin-bottom: .5em;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: $blue;
+            margin-bottom: .5em;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: $blue;
+            margin-bottom: .5em;
+            margin-top: 0;
+
+            @media #{$mobile-big-screen} {
+                text-align: center;
+            }
+        }
+
+        h4 {
+            color: $blue;
+            margin-bottom: .5em;
+            margin-top: 0;
+        }
+
+        h5 {
+            color: $blue;
+            margin-bottom: .5em;
+            margin-top: 0;
+        }
+
+        h6 {
+            color: $blue;
+            margin-bottom: .5em;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 13px;
+            margin-bottom: .5em;
+            line-height: 1.5em;
+        }
+
+        ol li {
+            font-size: 13px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: $blue;
+        }
+
+        .desc {
+            font-size: 13px;
+            margin-bottom: .5em;
+            color: #bbb;
+        }
+
+        .information-block {
+            padding: 40px 60px;
+            margin-bottom: 50px;
+            width: 100%;
+
+            @media #{$mobile-big-screen} {
+                padding: 20px 20px;
+                width: 100%;
+            }
+        }
+    }
+}

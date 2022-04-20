@@ -1,0 +1,175 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 18px 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 2000;
+
+  &--scroll {
+    padding: 8px 0;
+    background: $white;
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,.2);
+  }
+
+  $scroll: '.header--scroll';
+
+  &__block {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 200px;
+    cursor: pointer;
+
+    @media #{$tablet-big-screen} {
+      width: 130px;
+      order: 1;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__menu-button {
+    display: none;
+
+    @media #{$tablet-big-screen} {
+      display: block;
+      width: 26px;
+      height: 26px;
+      background: $green;
+      order: 3;
+      border-radius: 50%;
+      position: relative;
+
+      &:after {
+        @include after-absolute;
+        @include absolute-center;
+        width: 17px;
+        height: 17px;
+        background: url(../../../../img/menu-button.svg);
+        @include background-contain-center;
+      }
+    }
+  }
+
+  &__menu {
+    @media #{$tablet-big-screen} {
+      position: fixed;
+      width: 100%;
+      height: calc(100vh + 70px);
+      background: $green;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__menu-close {
+    display: none;
+
+    @media #{$tablet-big-screen} {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      background: url(../../../../img/cancel.svg);
+      @include background-contain-center;
+      z-index: 1;
+    }
+  }
+  &__menu-items {
+    @include flex-row;
+    margin-left: 30px;
+    margin-bottom: 7px;
+
+
+    @media #{$tablet-big-screen} {
+      position: absolute;
+      @include absolute-fill;
+      @include flex-column-center;
+      color: $white;
+    }
+  }
+  &__menu-item {
+    margin: 0 22px;
+    font-size: 12px;
+    color: $gray;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      @include after-absolute;
+      width: 100%;
+      height: 1px;
+      background: $gray;
+      left: 0;
+      bottom: -1px;
+      transform: scaleX(0);
+      transform-origin: left;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media #{$tablet-big-screen} {
+      margin: 20px 0;
+      color: $white;
+      font-size: 20px;
+    }
+  }
+
+  &__phone {
+    font-size: 20px;
+    @include flex-row-center;
+    margin-bottom: 7px;
+
+    &:hover {
+      color: $green;
+    }
+
+    @media #{$tablet-big-screen} {
+      font-size: 16px;
+      width: auto;
+      margin-bottom: 6px;
+      order: 2;
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      margin-right: 11px;
+      width: 16px;
+      height: 16px;
+      background: url(../../../../img/phone-icon.svg);
+      @include background-contain-center;
+
+      @media #{$tablet-big-screen} {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  width: fit-content;
+  min-width: 43px;
+  height: 43px;
+  @include flex-row-center;
+  color: $white;
+  background: $magenta;
+  border: 1px solid $magenta;
+  border-radius: 25px;
+  padding: 0 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px 0 rgba(211, 64, 133, 0.5);
+  overflow: hidden;
+  position: relative;
+  margin: 0 10px;
+
+  @media #{$tablet-small-screen} {
+    margin: 0 3px;
+    padding: 0 10px;
+    min-width: 35px;
+    height: 35px;
+  }
+
+  &:after {
+    @include after-absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, .1) 10%, hsla(0, 0%, 100%, .2) 20%, hsla(0, 0%, 100%, .6));
+    width: 20px;
+    transform: skewX(-45deg);
+    left: -20%;
+    transition: all .6s ease;
+    animation-name: blick;
+    animation-duration: 6s;
+    animation-iteration-count: infinite
+  }
+
+  @keyframes blick {
+    15%, to {
+      left: 110%
+    }
+  }
+
+  &--gray {
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    box-shadow: none;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: .6;
+  }
+
+  &__text {
+    @media #{$tablet-small-screen} {
+      font-size: 13px;
+    }
+  }
+
+  &__icon {
+
+    &--prev {
+      width: 20px;
+      height: 100%;
+      background: #929292;
+      mask: url(../../../img/arrow.svg);
+      -webkit-mask: url(../../../img/arrow.svg);
+      @include mask-contain-center;
+      transform: scaleX(-1);
+    }
+
+    &--next {
+      width: 20px;
+      height: 100%;
+      background: $white;
+      margin-left: 10px;
+      mask: url(../../../img/arrow.svg);
+      -webkit-mask: url(../../../img/arrow.svg);
+      @include mask-contain-center;
+    }
+
+    &--check {
+      width: 20px;
+      height: 100%;
+      background: $white;
+      margin-right: 10px;
+      mask: url(../../../img/check.svg);
+      -webkit-mask: url(../../../img/check.svg);
+      @include mask-contain-center;
+    }
+  }
+
+
+}

@@ -1,0 +1,103 @@
+.range-slider *,
+.range-slider *:before,
+.range-slider *:after {
+  transition: none; }
+
+.range-slider__inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: auto;
+  height: 100%;
+  position: relative; }
+  .range-slider__inputs--hidden {
+    display: none; }
+  .range-slider__inputs:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 1px;
+    background: #000000; }
+
+.range-slider__input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 85px;
+  height: 100%;
+  border: 1px solid #999;
+  padding-left: 15px;
+  color: #515151; }
+  .range-slider__input:nth-of-type(2) {
+    margin-left: 35px; }
+
+.range-slider__item {
+  width: calc(100% - 26px);
+  margin-bottom: 17px;
+  margin-left: 12px;
+  margin-right: 12px; }
+
+.range-slider__item-line {
+  height: 6px !important;
+  border: none !important;
+  background: #e7e7e7 !important; }
+
+.range-slider__item-progress {
+  height: 6px !important;
+  border: none !important;
+  background: #6c376d !important; }
+
+.range-slider__item-handle {
+  width: 26px !important;
+  height: 26px !important;
+  background: #4d254e !important;
+  border-radius: 50% !important;
+  border: none !important;
+  top: -11px !important;
+  cursor: pointer !important; }
+  .range-slider__item-handle:hover {
+    background: #6c376d !important;
+    transform: rotate(90deg); }
+
+.range-slider__item-handle:focus {
+  outline: none !important; }
+
+.range-slider__item-handle:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../../../../img/handler.svg);
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  width: 4px;
+  height: 6px; }
+
+.range-slider__values {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.range-slider__value {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: baseline;
+  font-size: 14px;
+  font-weight: 700; }
+
+.range-slider__value-currency {
+  margin-left: 3px; }

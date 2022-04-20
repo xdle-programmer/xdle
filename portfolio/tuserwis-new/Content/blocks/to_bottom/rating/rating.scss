@@ -1,0 +1,108 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.rating {
+  width: 91px;
+  height: 15px;
+  background: url(../../../img/rating.svg);
+  @include background-contain-center;
+  position: relative;
+  z-index: 1;
+
+  &--text {
+    background: none;
+    position: absolute;
+    @include absolute-fill;
+  }
+
+  &:after {
+    @include after-absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, .7);
+  }
+
+  &--0-0:after {
+    width: 100%;
+  }
+
+  &--0-5:after {
+    width: 90%;
+  }
+
+  &--1-0:after {
+    width: 80%;
+  }
+
+  &--1-5:after {
+    width: 70%;
+  }
+
+  &--2-0:after {
+    width: 60%;
+  }
+
+  &--2-5:after {
+    width: 50%;
+  }
+
+  &--3-0:after {
+    width: 40%;
+  }
+
+  &--3-5:after {
+    width: 30%;
+  }
+
+  &--4-0:after {
+    width: 20%;
+  }
+
+  &--4-5:after {
+    width: 10%;
+  }
+
+  &--5-0:after {
+    width: 0;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 25px;
+    box-shadow: $main-shadow;
+    background: $white;
+    padding: 20px;
+    left: 0;
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+
+    @media #{$mobile-big-screen} {
+      display: none;
+    }
+  }
+
+  &:hover &__inner {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+  }
+
+  &__row {
+    width: 400px;
+    @include flex-row-center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row-name {
+  }
+}

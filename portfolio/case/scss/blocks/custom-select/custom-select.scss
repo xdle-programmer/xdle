@@ -1,0 +1,85 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.custom-select {
+  width: 75px;
+  border-radius: 7px;
+  position: relative;
+  z-index: 100;
+
+  $active: '.custom-select.active';
+
+  &__button {
+    position: relative;
+    height: 30px;
+
+    &:after {
+      @include after-absolute;
+      width: 9px;
+      height: 10px;
+      background: url(../../img/down-arrow.svg);
+      @include background-contain-center;
+      left: 7px;
+      top: 9px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    transform: scaleY(0);
+    visibility: hidden;
+    transform-origin: top;
+
+    #{$active} & {
+      transform: scaleY(1);
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    background: #1a1c1e;
+    text-transform: uppercase;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+    @include flex-row-center;
+    color: #fff;
+    position: relative;
+    border-radius: 8px;
+
+    &:hover {
+      color: #aaaaac;
+    }
+
+    &--no-icon {
+      padding-left: 13px;
+    }
+
+    &--language-eng:after {
+      @include after-absolute;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+      top: 6px;
+      border-radius: 50%;
+      background: url(../../img/language-usa.svg);
+      @include background-cover-center;
+    }
+    &--language-ru:after {
+      @include after-absolute;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+      top: 6px;
+      border-radius: 50%;
+      background: url(../../img/language-russia.svg);
+      @include background-cover-center;
+    }
+  }
+
+}

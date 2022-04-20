@@ -1,0 +1,159 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i|Ubuntu:300,400,500|Yanone+Kaffeesatz:200,300,400,700&display=swap&subset=cyrillic,cyrillic-ext');
+
+.animation-first {
+  position: absolute;
+  @include absolute-fill;
+  z-index: 2;
+
+  @media #{$tablet-big-screen} {
+    position: static;
+  }
+
+  &--final {
+    opacity: 0;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+
+  * img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__background {
+    width: 23%;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+
+    @media #{$tablet-big-screen} {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      width: 50%;
+      margin: 40px auto;
+    }
+
+    &--final {
+
+    }
+  }
+
+  &__background-img {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__final-line {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background: red;
+  }
+
+  &__el {
+    position: absolute;
+
+    &--1 {
+      width: 11%;
+      top: 19%;
+      left: 30%;
+
+      &--final {
+        top: -7%;
+        left: 76%;
+      }
+    }
+
+    &--2 {
+      width: 14%;
+      top: 19%;
+      left: 10.5%;
+
+      &--final {
+        top: -9%;
+        left: 87%;
+      }
+    }
+
+    &--3 {
+      width: 11%;
+      top: 59%;
+      left: 28%;
+
+      &--final {
+        top: -12%;
+        left: 103%;
+      }
+    }
+    &--4 {
+      width: 15.5%;
+      top: 70.7%;
+      left: 12%;
+
+      &--final {
+        top: -15%;
+        left: 110%;
+      }
+    }
+    &--5 {
+      width: 14%;
+      top: 49%;
+      left: 43.3%;
+
+      &--final {
+        top: -16%;
+        left: 109%;
+      }
+    }
+    &--6 {
+      width: 10%;
+      top: 10%;
+      left: 63%;
+
+      &--final {
+        top: -11%;
+        left: 76%;
+      }
+    }
+    &--7 {
+      width: 19%;
+      top: 10%;
+      left: 73%;
+
+      &--final {
+        top: -10%;
+        left: 91%;
+      }
+    }
+    &--8 {
+      width: 15.5%;
+      top: 65%;
+      left: 61%;
+
+      &--final {
+        top: -10%;
+        left: 91%;
+      }
+    }
+    &--9 {
+      width: 9%;
+      top: 7%;
+      left: 25%;
+
+      &--final {
+        top: -10%;
+        left: 91%;
+      }
+    }
+
+  }
+}

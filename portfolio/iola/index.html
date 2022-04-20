@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Iola</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="header__top layout">
+            <div class="header__toggle-button"></div>
+            <div class="header__logo">
+                <img src="img/logo.svg" class="header__logo-img">
+            </div>
+            <div class="header__search-toggle"></div>
+            <div id="search" class="header__search js_search_form">
+                <input class="header__search-input" placeholder="Поиск товаров">
+                <div class="header__search-button"></div>
+            </div>
+            <div class="header__phone">
+                <div class="header__phone-item phone">
+                    <div class="phone__button">
+                        <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                        <div class="phone__submenu">
+                            <div class="phone__submenu-block">
+                                <a href="tel:+79047396823" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904  739-68-23</div>
+                                    <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                </a>
+                                <a href="tel:+79047396824" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904  739-68-24</div>
+                                </a>
+                                <a href="tel:+79509343767" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 950  934-37-67</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__icon"></div>
+                </div>
+                <div class="header__phone-worktime">
+                    Пн-Пт 09.00 — 18.00
+                </div>
+            </div>
+            <div id="show_cart" class="header__basket js_show_cart">
+                <div class="header__basket-icon"></div>
+                <div class="header__basket-count">
+                    <div class="header__basket-count-number">129</div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header__bottom-block layout">
+                <div class="header__catalog-button">
+                    <div class="header__catalog-button-icon"></div>
+                    <div class="header__catalog-button-text">Каталог товаров</div>
+                </div>
+                <div class="header__catalog-items">
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_1.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Запчасти Беламос, JeMIX, ALBA</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_2.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Водоснабжение, полив, отопление</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_3.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Системы очистки, фильтрации</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_4.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Сварочные расходники, аксессуары</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_5.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Мелко бытовая техника для дома</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_6.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Электроинструмент для строительства и ремонта</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_7.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Садовая техника</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_8.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Сезонный товар</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_9.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Снегоуборщики</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_10.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Оборудование для сварки и полипро- пиленовых труб</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_11.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Бетоносмесители и запчасти</div>
+                    </a>
+
+                    <a href="#" class="header__catalog-item">
+                        <div class="header__catalog-item-img-block">
+                            <img src="img/catalog_12.png" class="header__catalog-item-img">
+                        </div>
+                        <div class="header__catalog-item-title">Тачки строительные, садовые и расходники</div>
+                    </a>
+
+                </div>
+                <div class="header__menu">
+                    <a href="#" class="header__menu-item">Распродажа</a>
+                    <a href="#" class="header__menu-item">О компании</a>
+                    <a href="#" class="header__menu-item">Доставка и оплата</a>
+                    <a href="#" class="header__menu-item">Новости</a>
+                    <a href="#" class="header__menu-item">Статьи</a>
+                    <a href="#" class="header__menu-item">Контакты</a>
+                </div>
+                <div class="header__account header__account--has-submenu">
+                    <div class="header__account-img"></div>
+                    <div class="header__account-text">kabinet_polzovatelya</div>
+                    <div class="header__account-arrow"></div>
+                    <div class="header__account-exit">Выйти</div>
+                    <div class="header__account-submenu">
+                        <div class="header__account-submenu-top">
+                            <a href="#" class="header__account-submenu-link">Личная страница</a>
+                            <a href="#" class="header__account-submenu-link">Настройки</a>
+                            <a href="#" class="header__account-submenu-link">Сообщения</a>
+                            <a href="#" class="header__account-submenu-link">Заказы</a>
+                        </div>
+                        <div class="header__account-submenu-bottom">
+                            <a href="#"
+                               class="header__account-submenu-link header__account-submenu-link--exit">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile-block">
+                    <div class="header__buttons-count">
+                        <div class="header__button-count">
+                            <div class="header__button-count-img-block">
+                                <img src="img/favorit.svg" class="header__button-count-img">
+                            </div>
+                            <div class="header__button-count-text">Избранное</div>
+                            <div class="header__button-count-number">19</div>
+                        </div>
+                        <div class="header__button-count">
+                            <div class="header__button-count-img-block">
+                                <img src="img/compare.svg" class="header__button-count-img">
+                            </div>
+                            <div class="header__button-count-text">Сравнить</div>
+                            <div class="header__button-count-number">2</div>
+                        </div>
+                    </div>
+                    <div class="header__mobile-email-block">
+                        <a href="mailto:iola_ufa@list.ru" class="header__mobile-email-link">iola_ufa@list.ru</a>
+                    </div>
+                    <div class="header__mobile-phone-block">
+                        <div class="phone phone--header">
+                            <div class="phone__button phone__button--header">
+                                <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                                <div class="phone__submenu phone__submenu--header">
+                                    <div class="phone__submenu-block">
+                                        <a href="tel:+79047396823" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 904  739-68-23</div>
+                                            <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                        </a>
+                                        <a href="tel:+79047396824" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 904  739-68-24</div>
+                                        </a>
+                                        <a href="tel:+79509343767" class="phone__submenu-link">
+                                            <div class="phone__submenu-link-item">+7 950  934-37-67</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone__icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-slider">
+        <div class="main-slider__block layout">
+            <div class="main-slider__block-item">
+                <div class="main-slider__block-item-inner owl-carousel">
+                    <div class="main-slider__block-item-slide"
+                         style="background: url(img/slider_background_1.jpg);">
+                        <div class="main-slider__block-item-slide-desc">
+                            <div class="main-slider__block-item-slide-desc-title">Насосное оборудование</div>
+                            <div class="main-slider__block-item-slide-desc-text">У нас в наличии насосы и насосное
+                                оборудование таких брендов как Беламос, JeMIX, ALBA
+                            </div>
+                            <a href="#" class="main-slider__block-item-slide-desc-button button">В каталог</a>
+                        </div>
+                        <div class="main-slider__block-item-slide-img-block">
+                            <img src="img/example_1.png" class="main-slider__block-item-slide-img">
+                        </div>
+                    </div>
+
+                    <div class="main-slider__block-item-slide"
+                         style="background: url(img/slider_background_1.jpg);">
+                        <div class="main-slider__block-item-slide-desc">
+                            <div class="main-slider__block-item-slide-desc-title">Заголовок</div>
+                            <div class="main-slider__block-item-slide-desc-text">Короткое описание
+                            </div>
+                            <a href="#" class="main-slider__block-item-slide-desc-button button">В каталог</a>
+                        </div>
+                        <div class="main-slider__block-item-slide-img-block">
+                            <img src="img/example_1.png" class="main-slider__block-item-slide-img">
+                        </div>
+                    </div>
+
+                    <div class="main-slider__block-item-slide"
+                         style="background: url(img/slider_background_1.jpg);">
+                        <div class="main-slider__block-item-slide-desc">
+                            <div class="main-slider__block-item-slide-desc-title">Длинный заголовок</div>
+                            <div class="main-slider__block-item-slide-desc-text">Длинное описание длинное описание
+                                длинное описание длинное описание длинное описание длинное описание длинное описание
+                                длинное описание
+                            </div>
+                            <a href="#" class="main-slider__block-item-slide-desc-button button">В каталог</a>
+                        </div>
+                        <div class="main-slider__block-item-slide-img-block">
+                            <img src="img/example_1.png" class="main-slider__block-item-slide-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-slider__block-previews">
+                <a href="#" class="main-slider__block-preview"
+                   style="background: url(img/slider_background_2.jpg);">
+                    <div class="main-slider__block-preview-desc">
+                        <div class="main-slider__block-preview-tag main-slider__block-preview-tag--orange">СКИДКИ
+                        </div>
+                        <div class="main-slider__block-preview-title">Скидки<br>на насосы</div>
+                    </div>
+                    <div class="main-slider__block-preview-img-block">
+                        <img src="img/example_2.png" class="main-slider__block-preview-img">
+                    </div>
+                </a>
+                <a href="#" class="main-slider__block-preview"
+                   style="background: url(img/slider_background_3.jpg);">
+                    <div class="main-slider__block-preview-desc">
+                        <div class="main-slider__block-preview-tag">Новинка</div>
+                        <div class="main-slider__block-preview-title">Поступление картриджей для очистки воды</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="catalog">
+        <div class="layout">
+            <div class="title">Категории товаров</div>
+            <div class="catalog__items">
+
+                <a href="#" class="catalog__item catalog__item--selected">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_1.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Запчасти Беламос, JeMIX, ALBA</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_2.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Водоснабжение, полив, отопление</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_3.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Системы очистки, фильтрации</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_4.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Сварочные расходники, аксессуары</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_5.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Мелко бытовая техника для дома</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_6.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Электроинструмент для строительства и ремонта</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_7.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Садовая техника</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_8.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Сезонный товар</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_9.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Снегоуборщики</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_10.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Оборудование для сварки и полипро- пиленовых труб</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_11.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Бетоносмесители и запчасти</div>
+                </a>
+
+                <a href="#" class="catalog__item">
+                    <div class="catalog__item-img-block">
+                        <img src="img/catalog_12.png" class="catalog__item-img">
+                    </div>
+                    <div class="catalog__item-title">Тачки строительные, садовые и расходники</div>
+                </a>
+
+            </div>
+            <a href="#" class="button button--gray button--link">Перейти в каталог</a>
+        </div>
+    </div>
+
+    <div class="cart-previews">
+        <div class="layout">
+            <div class="title">Спецпредложения</div>
+
+            <div class="cart-previews__wrapper swiper-container custom-swiper">
+
+                <div class="cart-previews__items swiper-wrapper custom-swiper__wrapper">
+
+                    <div class="swiper-slide cart-previews__item js_shop custom-swiper__slide">
+                        <div class="cart-previews__item-tag cart-previews__item-tag--blue">Хит</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__1.jpg" class="cart-previews__item-img js_shop_img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Чайник LIRA LR 0113 RED (красный)</a>
+                        <div class="cart-previews__item-production">Производитель: Lira</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom js_shop_form">
+                            <div class="cart-previews__item-price">
+                                <div class="cart-previews__item-price-number js_shop_param_price">2 399 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button js_shop_buy"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide cart-previews__item js_shop custom-swiper__slide">
+                        <div class="cart-previews__item-tag cart-previews__item-tag--orange">АКЦИЯ</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__2.jpg" class="cart-previews__item-img js_shop_img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Копия Утюг LIRA LR 060</a>
+                        <div class="cart-previews__item-production">Производитель: Lira</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom js_shop_form">
+                            <div class="cart-previews__item-price cart-previews__item-price--sale">
+                                <div class="cart-previews__item-price-number-sale">6 500 р.</div>
+                                <div class="cart-previews__item-price-number js_shop_param_price">5 219 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button js_shop_buy"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide cart-previews__item js_shop custom-swiper__slide">
+                        <div class="cart-previews__item-tag">НОВИНКА</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__3.jpg" class="cart-previews__item-img js_shop_img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Циркуляционный насос Беламос BRS25/4G</a>
+                        <div class="cart-previews__item-production">Производитель: Belamos</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom js_shop_form">
+                            <div class="cart-previews__item-price">
+                                <div class="cart-previews__item-price-number js_shop_param_price">42 000 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button js_shop_buy"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide cart-previews__item js_shop custom-swiper__slide">
+                        <div class="cart-previews__item-tag">НОВИНКА</div>
+                        <a href="#" class="cart-previews__item-img-block">
+                            <img src="img/cart-previews__4.jpg" class="cart-previews__item-img js_shop_img">
+                        </a>
+                        <a href="#" class="cart-previews__item-title">Насос дренажный Беламос Omega 55F</a>
+                        <div class="cart-previews__item-production">Производитель: Belamos</div>
+                        <div class="cart-previews__item-desc">
+                            <div class="cart-previews__item-desc-in-stock">В наличии</div>
+                            <div class="cart-previews__item-desc-code">Арт: BRS25/4G</div>
+                        </div>
+                        <div class="cart-previews__item-bottom js_shop_form">
+                            <div class="cart-previews__item-price cart-previews__item-price--sale">
+                                <div class="cart-previews__item-price-number-sale">25 000 р.</div>
+                                <div class="cart-previews__item-price-number js_shop_param_price">16 800 р.</div>
+                            </div>
+                            <div class="cart-previews__item-button js_shop_buy"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination custom-swiper__progressbar"></div>
+
+            </div>
+
+            <a href="#" class="button button--gray button--link">Все спецпредложения</a>
+        </div>
+    </div>
+
+    <div class="news-previews">
+        <div class="layout">
+            <div class="title">Новости</div>
+            <div class="news-previews__wrapper swiper-container custom-swiper">
+
+                <div class="news-previews__items swiper-wrapper custom-swiper__wrapper">
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Новости</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_1.jpg)"></div>
+                        <div class="news-previews__item-date">19 сентября</div>
+                        <div class="news-previews__item-title">Новинка этой недели компании Иола Уфа</div>
+                    </div>
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Статьи</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_2.jpg)"></div>
+                        <div class="news-previews__item-date">1 ноября</div>
+                        <div class="news-previews__item-title">Можно ли в Уфе пить воду из-под крана?</div>
+                    </div>
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Статьи</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_3.jpg)"></div>
+                        <div class="news-previews__item-date">19 сентября</div>
+                        <div class="news-previews__item-title">Что лучше бензопила или электропила: сравнительный обзор
+                        </div>
+                    </div>
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Статьи</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_4.jpg)"></div>
+                        <div class="news-previews__item-date">19 сентября</div>
+                        <div class="news-previews__item-title">Новинки ассортимента насосного оборудования Компании Иола
+                            Уфа
+                        </div>
+                    </div>
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Статьи</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_4.jpg)"></div>
+                        <div class="news-previews__item-date">19 сентября</div>
+                        <div class="news-previews__item-title">Новинки ассортимента насосного оборудования Компании Иола
+                            Уфа
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination custom-swiper__progressbar"></div>
+
+            </div>
+            <a href="#" class="button button--white button--link">Все новости</a>
+        </div>
+    </div>
+
+    <div class="about-main">
+        <div class="layout">
+
+            <div class="title">Компания Иола Уфа</div>
+
+            <div class="about-main__block">
+                <div class="about-main__block-item">
+                    <div class="about-main__block-item-text">
+                        <p>Компания Иола Уфа основана в 2005 году профи своего дела, которые знают как подобрать
+                            потребителю, оборудованием хорошего качества по приемлемой цене. В настоящее время мы не
+                            стоим на месте и охватываем новые направления бизнеса.</p>
+                        <p>Наша компания успешно работает на рынках Башкортостана по оптовой продаже оборудований:
+                            для
+                            водоснабжения, отопления, сварки, строительства, а также бытовой техники для дома и
+                            сада..</p>
+                        <p>Мы представляем нашим партнерам и потребителям ведущие российские и иностранные бренды,
+                            произведенные на современных и высокотехнологичных предприятиях Бренды по водоснабжению
+                            и
+                            фильтрации- это .Беламос, Jemix, AQUAMOTOR,ТЕПЛОКС, Аквабрайт... По сварке LAVA,.. По
+                            технике для дома и сада Patriot, Энергоппром, ТЕХПРОМ, MASTER, LIDER, LIRA, GALAXY.</p>
+                    </div>
+
+                    <div class="about-main__block-item-button">
+                        <a href="#" class="button button--gray button--link">Подробнее</a>
+                    </div>
+
+                </div>
+                <div class="about-main__block-img" style="background: url(img/about.jpg);"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-previews">
+        <div class="layout">
+            <div class="title">События</div>
+            <div class="news-previews__wrapper swiper-container custom-swiper">
+
+                <div class="news-previews__items swiper-wrapper custom-swiper__wrapper">
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Новости</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_1.jpg)"></div>
+                        <div class="news-previews__item-date">19 сентября</div>
+                        <div class="news-previews__item-title">Новинка этой недели компании Иола Уфа</div>
+                    </div>
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Статьи</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_2.jpg)"></div>
+                        <div class="news-previews__item-date">1 ноября</div>
+                        <div class="news-previews__item-title">Можно ли в Уфе пить воду из-под крана?</div>
+                    </div>
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Статьи</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_3.jpg)"></div>
+                        <div class="news-previews__item-date">19 сентября</div>
+                        <div class="news-previews__item-title">Что лучше бензопила или электропила: сравнительный обзор
+                        </div>
+                    </div>
+                    <div class="news-previews__item swiper-slide custom-swiper__slide">
+                        <div class="news-previews__item-tag">Статьи</div>
+                        <div class="news-previews__item-img" style="background: url(img/news_4.jpg)"></div>
+                        <div class="news-previews__item-date">19 сентября</div>
+                        <div class="news-previews__item-title">Новинки ассортимента насосного оборудования Компании Иола
+                            Уфа
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination custom-swiper__progressbar"></div>
+
+            </div>
+            <a href="#" class="button button--white button--link">Все новости</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="layout footer__block">
+            <div class="footer__logo">
+                <img src="img/logo-short.svg" class="footer__logo-img">
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-item">
+                    <img src="img/whatsapp.svg" class="footer__social-item-img">
+                </a>
+                <a href="#" class="footer__social-item">
+                    <img src="img/vk.svg" class="footer__social-item-img">
+                </a>
+                <a href="#" class="footer__social-item">
+                    <img src="img/insta.svg" class="footer__social-item-img">
+                </a>
+            </div>
+            <div class="footer__phone">
+                <div class="phone phone--bottom">
+                    <div class="phone__button">
+                        <a href="tel:+73472929773" class="phone__link">+7 347 292-97-73</a>
+                        <div class="phone__submenu">
+                            <div class="phone__submenu-block">
+                                <a href="tel:+79047396823" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904  739-68-23</div>
+                                    <div class="phone__submenu-link-icon phone__submenu-link-icon--whathsap"></div>
+                                </a>
+                                <a href="tel:+79047396824" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 904  739-68-24</div>
+                                </a>
+                                <a href="tel:+79509343767" class="phone__submenu-link">
+                                    <div class="phone__submenu-link-item">+7 950  934-37-67</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone__icon"></div>
+                </div>
+            </div>
+            <a href="mailto:iola_ufa@list.ru" class="footer__email">iola_ufa@list.ru</a>
+            <a target="_blank" href="rozart.ru" class="footer__dev-logo">
+                <div class="footer__dev-logo-text">cоздание<br>сайта</div>
+                <img src="img/dev-logo.svg" class="footer__dev-logo-img">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="plugins/jquery.maskedinput.min.js"></script>
+    <script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</div>
+
+</body>

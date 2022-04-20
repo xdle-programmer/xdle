@@ -1,0 +1,46 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.language {
+  width: 1300px;
+  @include margin-auto;
+  @include flex-row;
+  justify-content: flex-end;
+  padding: 40px 0;
+  margin-bottom: 75px;
+
+  @media #{$desktop-small-screen} {
+    width: calc(100% - 25px);
+    padding: 10px 0;
+  }
+
+  @media #{$tablet-small-screen} {
+    margin-bottom: 45px;
+  }
+
+  &__item {
+    margin: 0 10px;
+    @include font-lucida;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      color: $magenta;
+    }
+
+    &.active {
+      color: $magenta;
+      cursor: default;
+    }
+
+    @media #{$desktop-small-screen} {
+      margin: 0;
+      margin-left: 10px;
+      font-size: 10px;
+    }
+
+  }
+}
+

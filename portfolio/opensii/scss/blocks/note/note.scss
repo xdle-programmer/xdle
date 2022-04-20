@@ -1,0 +1,156 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.note {
+  position: relative;
+  background: #f8f8f8;
+  padding-left: 110px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 50px;
+
+  @media #{$tablet-small-screen} {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &:after {
+    @include after-absolute;
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media #{$tablet-small-screen} {
+      width: 40px;
+      height: 40px;
+      left: 15px;
+      display: none;
+    }
+  }
+
+  &--question {
+    border-color: #0374ff;
+  }
+
+  &--question:after {
+    width: 45px;
+    height: 44px;
+    background: #0374ff;
+    -webkit-mask-image: url(../../img/icon-question-note.png);
+    mask-image: url(../../img/icon-question-note.png);
+    @include mask-contain-center;
+  }
+
+  &--attention {
+    border-color: #bd1d00;
+  }
+
+  &--attention:after {
+    width: 56px;
+    height: 44px;
+    background: #bd1d00;
+    -webkit-mask-image: url(../../img/icon-attention-note.png);
+    mask-image: url(../../img/icon-attention-note.png);
+    @include mask-contain-center;
+  }
+
+  &--quote {
+    border-color: #34bc58;
+  }
+
+  &--quote:after {
+    background: #34bc58;
+    -webkit-mask-image: url(../../img/icon-quote-note.png);
+    mask-image: url(../../img/icon-quote-note.png);
+    @include mask-contain-center;
+  }
+
+  &--not-icon {
+    border-color: #bd1d00;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    padding-top: 35px;
+    padding-right: 50px;
+
+
+    @media #{$tablet-small-screen} {
+      padding-left: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &--not-icon:after {
+    display: none;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  &__list-check {
+  }
+  &__list-check-item {
+    padding-left: 40px;
+    font-family: 'CharterITC', sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 20px;
+      height: 20px;
+      background: $black;
+      left: 0;
+      top: 3px;
+      -webkit-mask-image: url(../../img/icon-check-note.svg);
+      mask-image: url(../../img/icon-check-note.svg);
+      @include mask-contain-center;
+    }
+
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 0;
+    line-height: 1.7;
+  }
+
+  &__list-contact {
+  }
+  &__list-contact-item {
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 13px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 23px;
+      height: 23px;
+      background: $black;
+      left: 0;
+      top: 3px;
+      -webkit-mask-image: url(../../img/icon-phone-note.svg);
+      mask-image: url(../../img/icon-phone-note.svg);
+      @include mask-contain-center;
+    }
+
+    &--not-icon:after {
+      display: none;
+    }
+
+  }
+
+}
+

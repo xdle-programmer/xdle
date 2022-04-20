@@ -1,0 +1,169 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  background: $blue-brightness;
+  color: $white;
+  padding-top: 49px;
+
+
+  &__block {
+    padding: 0 17px;
+  }
+
+  &__items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding-bottom: 40px;
+  }
+
+  &__items-grid-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+    padding-bottom: 40px;
+  }
+
+  &__item {
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 800;
+    padding-bottom: 11px;
+    border-bottom: 1px solid $blue-extra-light;
+    width: calc(100% - 20px);
+  }
+
+  &__item-list {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 6px 0;
+
+    &--big {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+  }
+
+  &__bottom {
+    background: $white;
+    color: $black;
+    margin-top: -40px;
+    padding-top: 23px;
+    padding-bottom: 30px;
+  }
+
+  &__bottom-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px 40px;
+  }
+
+  &__bottom-item {
+  }
+
+  &__bottom-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__bottom-text {
+    font-size: 14px;
+  }
+
+  &__bottom-link-phone {
+    font-size: 24px;
+  }
+
+  &__bottom-link-mail {
+    font-size: 17px;
+    color: $blue;
+    font-weight: 500;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__bottom-social {
+    height: 100%;
+    @include flex-row;
+    //padding: 0 10px;
+  }
+
+  &__bottom-social-item {
+    height: 24px;
+    width: 24px;
+    background: $black;
+    margin-right: 15px;
+
+    &:hover {
+      background: $blue-light;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    &--fb {
+      mask: url(../../../img/icons/facebook.png);
+      -webkit-mask: url(../../../img/icons/facebook.png);
+      @include mask-contain-center;
+    }
+
+    &--yt {
+      mask: url(../../../img/icons/youtube.png);
+      -webkit-mask: url(../../../img/icons/youtube.png);
+      @include mask-contain-center;
+    }
+  }
+
+  &__bottom-link-policy {
+    font-size: 14px;
+    font-weight: 500;
+    color: $blue;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__bottom-link-international {
+    padding-left: 25px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: $blue;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 2px;
+      width: 17px;
+      height: 12px;
+      background: url(../../../img/footer/footer-international.png);
+      @include background-contain-center;
+    }
+  }
+
+  &__bottom-author-item {
+    display: inline;
+    font-size: 14px;
+
+    &--big {
+      font-weight: 700;
+    }
+  }
+
+}

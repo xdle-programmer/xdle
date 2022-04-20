@@ -1,0 +1,66 @@
+{% include "partials/header-new.html" %}
+	<nav class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__elm">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__elm">
+				сервисные центры
+			</span>
+		</div>
+	</nav>
+	<main>
+		<div class="title-block title-block_margin">
+			<div class="container">
+				<h1 class="section-title">Партнерские установочные центры Neoline</h1>
+			</div>
+            
+        </div>
+		
+		<section class="location-map">
+				
+				<div class="container location-map__container">
+					<div class="location-map__info">
+						<div class="select-row">
+							Ваш город: 
+							<div class="regular-select city-select">
+								<div class="regular-select__val">
+									Выберите город из списка
+								</div>
+								<div class="regular-select__option-list" id="city-list">
+									<div class="option-list__item">
+										Бизнес-покупка
+									</div>
+									<div class="option-list__item">
+										Эксперт-покупка
+									</div>
+									<div class="option-list__item">
+										Малый бизнес-покупка
+									</div>
+									<div class="option-list__item">
+										Стандарт-Покупка
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="button js-show-map">
+							Показать на карте
+						</div>
+						<div class="location-map__places">
+							
+							<div class="office-type">
+								<div class="office-type__offices" id="loc-services"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="map-container-sv">
+					<div class="map-close" id="js-close-map">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+					<div class="service-map" id="service-map"></div>
+				</div>
+			</section>	
+	</main>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+{% include "partials/footer-new.html" %}

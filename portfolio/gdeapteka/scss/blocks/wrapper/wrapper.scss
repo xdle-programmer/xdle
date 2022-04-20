@@ -1,0 +1,238 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & *,
+  & *:before,
+  & *:after {
+    transition: $main-transition;
+  }
+
+  & *::-webkit-input-placeholder {
+    transition: $main-transition;
+  }
+
+  & *::-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-moz-placeholder {
+    transition: $main-transition;
+  }
+
+  & *:-ms-input-placeholder {
+    transition: $main-transition;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+  }
+
+  &__map {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    &,
+    & *,
+    & *:before,
+    & *:after {
+      transition: none;
+    }
+
+    & #map {
+      position: absolute;
+      @include absolute-fill;
+    }
+  }
+
+  &__left-col {
+    top: 90px;
+    position: fixed;
+    left: 50px;
+    width: 280px;
+    padding-bottom: 50px;
+    z-index: 2;
+    transition: none;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      left: 50px;
+      transform: none !important;
+      order: 2;
+    }
+  }
+
+  &__center-col {
+    width: calc(100% - 740px);
+    @include margin-auto;
+    position: relative;
+    z-index: 2;
+    padding: 20px 0;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 40px);
+      order: 1;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: calc(100% - 20px);
+      padding-top: 60px;
+    }
+  }
+
+  &__right-col {
+    top: 90px;
+    width: 280px;
+    right: 50px;
+    position: fixed;
+    padding-bottom: 50px;
+    z-index: 2;
+    transition: none;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      position: fixed;
+      @include margin-auto;
+      @include absolute-fill;
+      transform: none !important;
+      z-index: 30;
+      visibility: hidden;
+      opacity: 0;
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__switch {
+    position: fixed;
+    right: 20px;
+    top: 90px;
+    width: 120px;
+    height: 40px;
+    @include flex-row;
+    z-index: 2;
+    transition: none;
+
+    @media #{$tablet-big-screen} {
+      top: 70px;
+      width: 80px;
+      height: 30px;
+    }
+  }
+
+  &__switch-button {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    border: 1px solid $gray;
+    background: $white;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid $blue;
+      background: $blue;
+    }
+
+    &:nth-of-type(1) {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:nth-last-of-type(1) {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 20px;
+      height: 20px;
+      background: $gray;
+    }
+
+    &.active:after {
+      background: $white;
+    }
+
+    &--map:after {
+      mask: url(../../../img/icon-switch-map.svg);
+      -webkit-mask: url(../../../img/icon-switch-map.svg);
+      @include mask-contain-center;
+    }
+
+    &--list:after {
+      mask: url(../../../img/icon-switch-list.svg);
+      -webkit-mask: url(../../../img/icon-switch-list.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__map-toggle {
+    transition: none;
+
+    &--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__filter {
+    display: none;
+
+    @media #{$tablet-big-screen} {
+      position: fixed;
+      @include flex-row-center;
+      left: 20px;
+      z-index: 2;
+      transition: none;
+      top: 70px;
+      width: auto;
+      height: 30px;
+      background: $blue;
+      cursor: pointer;
+      padding: 0 15px;
+      border-radius: 5px;
+    }
+  }
+
+  &__filter-button {
+    @include flex-row-center;
+  }
+
+  &__filter-button-icon {
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    background: $white;
+    mask: url(../../../img/filter.svg);
+    -webkit-mask: url(../../../img/filter.svg);
+    @include mask-contain-center;
+  }
+
+  &__filter-button-text {
+    color: $white;
+    margin-bottom: 2px;
+  }
+
+}

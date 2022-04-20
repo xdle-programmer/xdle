@@ -1,0 +1,36 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.layout {
+
+  &-main {
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media #{$desktop-small-screen} {
+      width: calc(100% - 60px);
+    }
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 20px);
+    }
+
+  }
+
+  &-half {
+    width: 48%;
+    @media #{$tablet-small-screen} {
+      width: 100%;
+    }
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+}

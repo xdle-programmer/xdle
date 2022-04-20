@@ -1,0 +1,146 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.video {
+  padding: 70px 0 85px;
+  overflow: hidden;
+
+  #{$night} & {
+    background: #11132d;
+  }
+
+  &__block {
+    position: relative;
+  }
+
+  &__planet {
+  }
+
+  &__planet-small {
+    transition: none;
+  }
+
+  &__planet-small-orbit {
+    background: url(assets/img/planet-big-orbit.svg);
+    @include background-contain-center;
+    width: 619px;
+    height: 619px;
+    position: absolute;
+    top: -230px;
+    left: 560px;
+
+    &--empty {
+      background: none;
+    }
+  }
+
+  &__planet-small-item-big-wrapper {
+    position: absolute;
+    @include absolute-fill;
+    z-index: 2;
+
+    @keyframes rotate-small {
+      0% {
+        transform: rotate(0)
+      }
+      40% {
+        transform: rotate(160deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    animation: rotate-small linear;
+    animation-duration: var(--speed-animation-small);
+    animation-iteration-count: infinite;
+  }
+
+  &__planet-small-item-big {
+    background: url(assets/img/planet-small-item.svg);
+    @include background-contain-center;
+
+    #{$night} & {
+      background: url(assets/img/planet-small-item-dark.svg);
+      @include background-contain-center;
+    }
+
+    width: 152px;
+    height: 152px;
+    position: absolute;
+    top: 421px;
+    left: -9px;
+
+    @keyframes rotate-inner {
+      0% {
+        transform: rotate(0) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+      50% {
+        transform: rotate(-210deg) rotate3d(1, 1, 1, -15deg) scale(0.3);
+      }
+      100% {
+        transform: rotate(-360deg) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+    }
+
+    animation: rotate-inner linear;
+    animation-duration: var(--speed-animation-small);
+    animation-iteration-count: infinite;
+  }
+
+  &__header {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__header-title {
+    color: var(--blue-color);
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+  }
+
+  &__header-planet {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: -50px;
+    top: -34px;
+    transform: rotate(-115deg);
+    background: url(assets/img/planet-free.svg);
+    @include background-contain-center;
+
+    #{$night} & {
+      background: url(assets/img/planet-free-dark.svg);
+      @include background-contain-center;
+    }
+
+    transition: none;
+  }
+
+  &__player {
+    width: 730px;
+    @include margin-auto;
+    position: relative;
+    z-index: 2;
+
+    @media #{$tablet-big-screen}{
+      width: calc(100% - 20px);
+    }
+  }
+
+  &__player-inner {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+
+    & iframe {
+      position: absolute;
+      @include absolute-fill;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}

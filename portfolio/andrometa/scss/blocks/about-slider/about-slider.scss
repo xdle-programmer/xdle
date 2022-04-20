@@ -1,0 +1,257 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.about-slider {
+  padding: 78px 0;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    left: 25px;
+    top: 65px;
+    width: 400px;
+  }
+
+  &__items {
+
+    & .owl-dots {
+      left: 615px;
+      bottom: 32px;
+      z-index: 100;
+    }
+
+    & .owl-nav {
+      top: 140px;
+      right: 33px;
+      position: absolute;
+      width: 97px;
+      height: 267px;
+      border: 1px solid $blue-extra-light;
+      @include flex-column-center;
+    }
+
+    & .owl-prev,
+    & .owl-next {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        @include after-absolute;
+        @include absolute-center;
+        width: 28px;
+        height: 17px;
+        background: $white;
+        mask: url(../../../img/about-slider/about-slider-arrow.png);
+        -webkit-mask: url(../../../img/about-slider/about-slider-arrow.png);
+        @include mask-contain-center;
+      }
+
+      &:hover:after {
+        background: $red-light;
+      }
+    }
+
+    & .owl-next {
+      &:after {
+        transform: translate(-50%, -50%) scaleX(-1);
+      }
+    }
+
+
+    & .owl-next {
+      margin-top: 120px;
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 584px 1fr;
+    height: 630px;
+  }
+
+  &__item-desc {
+    background: $blue;
+    height: calc(100% - 78px);
+    color: $white;
+    position: relative;
+    @include flex-column;
+    justify-content: center;
+    padding-right: 150px;
+    z-index: 2;
+
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 0;
+      width: 98px;
+      transform: translateX(-100%);
+      height: 100%;
+      background: $blue;
+      z-index: -1;
+    }
+  }
+
+  &__item-desc-big-text {
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 39px;
+  }
+
+  &__item-desc-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+  }
+
+  &__item-img-block {
+    height: 380px;
+    margin-top: auto;
+    background: #e8e8e8;
+    position: relative;
+  }
+
+  &__item-img {
+    position: absolute;
+    @include absolute-fill;
+    @include background-cover-center;
+  }
+
+  &__item-desc-list {
+    padding-left: 5px;
+  }
+
+  &__item-desc-list-item {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-bottom: 43px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 25px;
+      height: 25px;
+      background: url(../../../img/list-marker.png);
+      @include background-contain-center;
+      left: -50px;
+      top: 7px;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-desc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 73px 23px;
+    padding-bottom: 28px;
+  }
+
+  &__item-desc-grid-item {
+  }
+
+  &__item-desc-grid-item-title {
+    font-size: 46px;
+    font-weight: 700;
+  }
+
+  &__item-desc-grid-item-text {
+    font-size: 20px;
+    line-height: 25px;
+    padding-right: 80px;
+  }
+
+  &__item-youtube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & iframe {
+      position: absolute;
+      @include absolute-fill;
+    }
+
+
+  }
+
+  &__item-download {
+    width: 100%;
+    height: 100%;
+    @include flex-column-center;
+    padding-right: 140px;
+    padding-bottom: 10px;
+  }
+
+  &__item-download-preview {
+    width: 207px;
+    height: 147px;
+    @include background-contain-center;
+    margin-bottom: 25px;
+    box-shadow: 0 0 12px 2px rgba(0, 32, 91, 0.5);
+  }
+
+  &__item-download-title {
+    @include flex-row;
+    align-items: baseline;
+
+  }
+
+  &__item-download-title-name {
+    font-size: 16px;
+    color: $blue;
+    font-weight: 500;
+    position: relative;
+    padding-left: 30px;
+
+    &:after {
+      @include after-absolute;
+      width: 14px;
+      height: 15px;
+      background: $blue;
+      mask: url(../../../img/about-slider/about-slider-download-icon.png);
+      -webkit-mask: url(../../../img/about-slider/about-slider-download-icon.png);
+      @include mask-contain-center;
+      left: 5px;
+      top: 0;
+    }
+  }
+
+  &__item-download-title-desc {
+    color: #aeaeae;
+    font-size: 13px;
+    margin-left: 15px;
+  }
+
+  &__item-sert-block {
+    @include flex-row-center;
+    padding-right: 100px;
+    padding-top: 90px;
+  }
+
+  &__item-sert {
+    width: 149px;
+    height: 211px;
+    margin-right: 4px;
+    @include background-cover-center;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: -60px;
+    }
+  }
+
+}

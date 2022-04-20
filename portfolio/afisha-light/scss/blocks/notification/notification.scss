@@ -1,0 +1,42 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.notification {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  color: $gray-dark;
+
+  @media #{$mobile-big-screen} {
+    grid-template-columns: 1fr;
+  }
+
+  &__text {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 40px;
+    @include flex-row-center;
+  }
+
+  &__button {
+    font-size: 14px;
+    @include flex-row-center;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      margin-left: 5px;
+      width: 10px;
+      height: 10px;
+      background: $gray-dark;
+      mask: url(../../../img/close.svg);
+      -webkit-mask: url(../../../img/close.svg);
+      @include mask-contain-center;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin: 10px;
+    }
+  }
+
+}

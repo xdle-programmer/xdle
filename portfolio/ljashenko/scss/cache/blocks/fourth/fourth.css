@@ -1,0 +1,122 @@
+.fourth__book {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  @media (max-width: 767px) {
+    .fourth__book {
+      flex-wrap: wrap; } }
+
+.fourth__book-img {
+  width: 40%;
+  height: 417px;
+  background: url(../../../img/book.png);
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important; }
+  @media (max-width: 767px) {
+    .fourth__book-img {
+      width: 50%;
+      height: 280px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+.fourth__book-info {
+  width: 50%; }
+  @media (max-width: 767px) {
+    .fourth__book-info {
+      width: 100%; } }
+
+.fourth__button {
+  margin-left: 0;
+  margin-top: 50px; }
+
+.fourth__list {
+  margin-top: 60px; }
+
+.fourth__list-title-wrapper {
+  text-align: center;
+  margin-bottom: 100px; }
+  @media (max-width: 767px) {
+    .fourth__list-title-wrapper {
+      margin-bottom: 30px; } }
+
+.fourth__list-title {
+  font-size: 50px;
+  margin-bottom: 25px; }
+
+.fourth__list-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 60px; }
+  @media (max-width: 767px) {
+    .fourth__list-items {
+      grid-template-columns: 1fr;
+      grid-gap: 30px; } }
+
+.fourth__list-item-icon {
+  width: 123px;
+  height: 123px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .fourth__list-item-icon:before {
+    content: '';
+    position: absolute;
+    display: block;
+    right: -8px;
+    top: 0;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 22px; }
+  .fourth__list-item:nth-of-type(1) .fourth__list-item-icon:before {
+    content: '1'; }
+  .fourth__list-item:nth-of-type(2) .fourth__list-item-icon:before {
+    content: '2'; }
+  .fourth__list-item:nth-of-type(3) .fourth__list-item-icon:before {
+    content: '3'; }
+  .fourth__list-item:nth-of-type(4) .fourth__list-item-icon:before {
+    content: '4'; }
+  .fourth__list-item-icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 271px;
+    height: 52px;
+    background: url(../../../img/arrow.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    right: -294px;
+    top: -45px; }
+    @media (max-width: 767px) {
+      .fourth__list-item-icon:after {
+        display: none; } }
+  .fourth__list-item:nth-of-type(4) .fourth__list-item-icon:after {
+    display: none; }
+
+.fourth__list-item-icon-img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.fourth__list-item-title {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  width: 60%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center; }
+  @media (max-width: 767px) {
+    .fourth__list-item-title {
+      margin-bottom: 0;
+      height: auto; } }
+
+.fourth__list-item-text {
+  font-family: "Montserrat", sans-serif !important; }

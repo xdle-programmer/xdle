@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    [[blocks/head.html*1]]
+    <title>Блог</title>
+</head>
+
+<body>
+
+<div class="wrapper wrapper--not-tools-menu">
+    [[blocks/header.html*1]]
+    [[blocks/tools-menu.html*1]]
+    [[blocks/tools-block.html*1]]
+
+    <div class="layout">
+        [[blocks/menu.html*1]]
+
+        <div class="layout__content">
+            <div class="layout__fill">
+                [[blocks/blog.html*1]]
+            </div>
+            <div class="layout__columns">
+                <div class="layout__half">
+
+
+                    <div class="layout__switch" data-order-mobile="3">
+                        <div class="layout__switch-button active" data-switch-goal="blog_items">Записи блога</div>
+                        <div class="layout__switch-button" data-switch-goal="blog_add">Добавить запись</div>
+                    </div>
+
+                    <div class="layout__block" data-order-mobile="4" data-switch-mobile="blog_items" data-switch-desktop="blog_items">
+                        <div class="layout__block-header">
+                            <div class="layout__block-header-title">
+                                Запись блога №1
+                            </div>
+                            <div class="layout__block-header-link layout__block-header-link--no-hover">10.12.2018</div>
+
+                        </div>
+                        <div class="layout__block-content">
+                            <div class="layout__block-content-text">
+                                У нас чтото произошло и все такое. Таким образом рамки и место обучения кадров позволяет
+                                оценить
+                                значение дальнейших направлений развития. Разнообразный и богатый опыт рамки и место
+                                обучения
+                                кадров влечет за собой процесс внедрения и модернизации существенных финансовых и
+                                административных условий.
+
+                                [[blocks/share.html*1]]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout__block" data-order-mobile="5"  data-switch-mobile="blog_items" data-switch-desktop="blog_items">
+                        <div class="layout__block-header">
+                            <div class="layout__block-header-title">
+                                Запись блога №2
+                            </div>
+                            <div class="layout__block-header-link layout__block-header-link--no-hover">10.12.2018</div>
+
+                        </div>
+                        <div class="layout__block-content">
+
+                            <img src="/img/china.jpg" class="layout__img">
+
+                            <div class="layout__block-content-text">
+                                У нас чтото произошло и все такое. Таким образом рамки и место обучения кадров позволяет
+                                оценить
+                                значение дальнейших направлений развития. Разнообразный и богатый опыт рамки и место
+                                обучения
+                                кадров влечет за собой процесс внедрения и модернизации существенных финансовых и
+                                административных условий.
+
+                                [[blocks/share.html*1]]
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="layout__block hide" data-switch-mobile="blog_add" data-switch-desktop="blog_add" data-order-mobile="6">
+                        <div class="layout__block-header">
+                            <div class="layout__block-header-title">
+                                Создание записи
+                            </div>
+
+                            <div class="layout__block-header-control">
+                                <div class="layout__block-header-hide"></div>
+                            </div>
+                        </div>
+                        <div class="layout__block-content">
+                            <div class="layout__block-content-inputs-wrapper">
+                                <div class="layout__block-content-inputs">
+                                    <div class="layout__block-content-inputs-item">
+                                        <input class="input" placeholder="Название записи">
+                                    </div>
+                                    <div class="layout__block-content-inputs-item">
+                                        <textarea class="input input--big" placeholder="Текст"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hide-block">
+                                <div class="hide-block__title">Прикрепить обложку/видео</div>
+                                <div class="hide-block__item hide">
+                                    <div class="layout__block-content-title">
+                                        Настройки обложки
+                                    </div>
+                                    <div class="layout__block-content-inputs-wrapper">
+                                        <div class="layout__block-content-inputs">
+                                            <div class="layout__block-content-inputs-item">
+                                                <div class="dropzone">
+                                                    <div class="dropzone__input">
+                                                        <div class="dropzone__input-title">
+                                                            Просто перетащите сюда картинку
+                                                            <br>или нажмите
+                                                            <div class="dropzone__input-title-button">Загрузить</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layout__block-content-title">
+                                        Добавить видео
+                                    </div>
+                                    <div class="layout__block-content-inputs-wrapper">
+                                        <div class="layout__block-content-inputs">
+                                            <div class="layout__block-content-inputs-item">
+                                                <input class="input" placeholder="Ссылка YouTube">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout__block-content-buttons">
+                                <div class="button-gradient button-gradient--small">Добавить</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="layout__half">
+
+                    <div class="layout__block" data-order-mobile="2">
+                        <div class="layout__block-header">
+                            <div class="layout__block-header-title">
+                                Читатели
+                            </div>
+                            <div class="layout__block-header-control">
+                                <div class="search">
+                                    <input class="search__input" placeholder="Поиск...">
+                                    <div class="search__button"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layout__block-content">
+                            <div class="short-block short-block--4 collapse">
+                                <div class="short-block__button"></div>
+                                <div class="layout__icon-row">
+                                    <a href="#" class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </a>
+                                    <div class="layout__icon-row-text">В контактах</div>
+                                </div>
+
+                                <div class="layout__icon-row">
+                                    <a href="#" class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </a>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </div>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+
+                                <a href="#" class="layout__icon-row">
+                                    <div class="layout__icon-row-info">
+                                        <div class="layout__icon-row-img"
+                                             style="background: url(/img/profile.jpg)"></div>
+                                        <div class="layout__icon-row-name">
+                                            <div class="layout__icon-row-title">Василий Мухин</div>
+                                            <div class="layout__icon-row-subtitle">Директор</div>
+                                        </div>
+                                    </div>
+                                    <div class="button-gradient button-gradient--small">Добавить</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+[[blocks/footer.html*1]]
+</body>
+</html>

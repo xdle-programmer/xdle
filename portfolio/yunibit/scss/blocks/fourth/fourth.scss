@@ -1,0 +1,113 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fourth {
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__block-images {
+    position: relative;
+
+    @media #{$tablet-small-screen} {
+      order: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+  &__block-image {
+    position: absolute;
+
+    @media #{$tablet-small-screen} {
+      position: relative;
+    }
+
+    &:nth-of-type(1) {
+      width: 261px;
+      height: 343px;
+      left: 0;
+      top: 100px;
+
+      @media #{$tablet-small-screen} {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        top: auto;
+      }
+    }
+    &:nth-of-type(2) {
+      width: 261px;
+      height: 343px;
+      left: 291px;
+      top: 0;
+
+      @media #{$tablet-small-screen} {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        top: auto;
+      }
+    }
+    &:nth-of-type(3) {
+      width: 164px;
+      height: 158px;
+      top: 373px;
+      left: 291px;
+
+      @media #{$tablet-small-screen} {
+display: none;
+      }
+    }
+  }
+  &__block-desc {
+    padding-left: 85px;
+    @include flex-column;
+
+    @media #{$tablet-small-screen} {
+      order: 1;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__block-title {
+  }
+
+  &__block-text {
+    margin-top: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 86%;
+  }
+  &__list {
+    margin: 32px 0;
+  }
+  &__list-item {
+    @include flex-row;
+    align-items: center;
+    margin: 20px 0;
+  }
+  &__list-item-icon {
+    width: 43px;
+    height: 43px;
+    @include background-contain-center;
+    margin-right: 15px;
+  }
+  &__list-item-text {
+  }
+
+  &__button {
+    margin-top: auto;
+  }
+}

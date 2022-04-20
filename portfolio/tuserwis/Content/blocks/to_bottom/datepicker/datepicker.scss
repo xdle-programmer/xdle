@@ -1,0 +1,80 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.ui-datepicker {
+    @include font-default;
+    width: 280px !important;
+    z-index: 10001 !important;
+
+    &,
+    & * {
+        transition: none !important;
+    }
+}
+
+.ui-widget-header {
+    background: $blue !important;
+    border-radius: 0 !important;
+    color: $white !important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.ui-datepicker-prev-hover,
+.ui-datepicker-next-hover,
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    width: 20px !important;
+    height: 20px !important;
+    background: $white !important;
+    position: absolute !important;
+    border-radius: 50% !important;
+    border: 1px solid $white !important;
+    top: 50% !important;
+
+    &:after {
+        @include after-absolute;
+        @include absolute-center;
+        width: 12px;
+        height: 12px;
+        background: url("../../../img/arrow.svg");
+        @include background-contain-center;
+    }
+
+    span {
+        display: none !important;
+    }
+}
+
+.ui-datepicker-next-hover,
+.ui-datepicker-next {
+    transform: translateY(-50%) rotate(-90deg);
+    right: 5px !important;
+}
+
+.ui-datepicker-prev-hover,
+.ui-datepicker-prev {
+    transform: translateY(-50%) rotate(90deg);
+    left: 5px !important;
+}
+
+.ui-datepicker-calendar td > a {
+    background: $white !important;
+    font-size: 13px !important;
+}
+
+.ui-datepicker-calendar td > a.ui-state-highlight {
+    background: $blue !important;
+    font-size: 13px !important;
+    color: $white;
+}
+
+.ui-datepicker-calendar th > span {
+    font-weight: 300 !important;
+    font-size: 13px !important;
+    color: $blue !important;
+}

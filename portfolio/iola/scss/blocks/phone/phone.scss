@@ -1,0 +1,222 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.phone {
+  position: relative;
+  @include flex-row-center;
+
+  &--contacts {
+    justify-content: flex-start;
+    width: fit-content;width: -moz-fit-content;
+  }
+
+  @media #{$tablet-big-screen} {
+    &--header {
+      width: 100%;
+    }
+  }
+
+  $hover: '.phone:hover';
+  $bottom: '.phone--bottom';
+  $header: '.phone--header';
+  $contacts: '.phone--contacts';
+
+  &__button {
+    @include flex-row-center;
+
+    @media #{$tablet-big-screen} {
+      #{$header} & {
+        flex-wrap: wrap;
+        width: 100%;
+
+        &:after {
+          @include after-absolute;
+          width: 15px;
+          height: 15px;
+          top: 26px;
+          right: 15px;
+          background: $gray-dark;
+          mask: url(../../../img/arrow-left.svg);
+          -webkit-mask: url(../../../img/arrow-left.svg);
+          @include mask-contain-center;
+          margin-right: 0;
+          transform: translateY(-50%) rotate(-180deg);
+        }
+
+        &.active:after {
+          transform: translateY(-50%) rotate(-90deg);
+        }
+
+
+      }
+    }
+  }
+
+  &__icon {
+    width: 23px;
+    height: 20px;
+    padding-left: 9px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      background: $red;
+      width: 14px;
+      height: 8px;
+      left: 9px;
+      top: 6px;
+      mask: url(../../../img/arrow-down.svg);
+      -webkit-mask: url(../../../img/arrow-down.svg);
+      @include mask-contain-center;
+    }
+
+    @media #{$tablet-big-screen} {
+      #{$header} & {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 23px;
+    font-weight: 900;
+    color: $gray-dark;
+
+    &:hover {
+      color: $red;
+    }
+
+    @media #{$tablet-big-screen} {
+      #{$header} & {
+        background: #fafafa;
+        margin: 0;
+        height: 51px;
+        color: $gray-dark;
+        padding: 0 15px;
+        @include flex-row;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    top: 100%;
+    right: -19px;
+    width: calc(100% + 55px);
+    z-index: 4;
+    padding-top: 25px;
+    opacity: 0;
+    visibility: hidden;
+
+    #{$hover} & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #{$bottom} & {
+      top: auto;
+      bottom: 100%;
+      padding-bottom: 25px;
+    }
+
+    #{$contacts} & {
+      padding-top: 15px;
+    }
+
+
+    @media #{$tablet-big-screen} {
+      #{$header} & {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        width: 100%;
+        padding: 0;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__submenu-block {
+    background: $white;
+    padding: 15px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-right: 0;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      top: 0;
+      right: 18px;
+      transform: translateY(-100%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 10px 8px;
+      border-color: transparent transparent #ffffff transparent;
+
+      #{$bottom} & {
+        top: auto;
+        bottom: 0;
+        transform: translateY(100%);
+        border-width: 10px 8px 0 8px;
+        border-color: #ffffff transparent transparent transparent;
+      }
+    }
+
+    @media #{$tablet-big-screen} {
+      #{$header} & {
+        background: none;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__submenu-link {
+    color: $gray-dark;
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0.23px;
+    line-height: 32px;
+    @include flex-row-center;
+    justify-content: flex-start;
+
+    &:hover {
+      color: $red;
+    }
+
+    @media #{$tablet-big-screen} {
+      #{$header} & {
+        min-height: 51px;
+        border-top: 1px solid #e6e6e6;
+        justify-content: flex-start;
+        background: #fafafa;
+        padding: 0 15px;
+      }
+    }
+  }
+
+  &__submenu-link-item {
+    width: fit-content;width: -moz-fit-content;
+  }
+
+  &__submenu-link-icon {
+    width: 45px;
+
+    &--whathsap {
+      background: url(../../../img/whatsapp.svg);
+      @include background-contain-center;
+      height: 18px;
+    }
+
+  }
+}

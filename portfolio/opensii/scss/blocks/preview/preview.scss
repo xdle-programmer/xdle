@@ -1,0 +1,240 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.preview {
+  cursor: pointer;
+  margin-bottom: 25px;
+
+  $preview-hover: '.preview:hover';
+
+  &__background {
+    height: 390px;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    padding-right: 50px;
+    cursor: pointer;
+    color: $white;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: $black;
+      opacity: .5;
+      z-index: -1;
+    }
+
+    #{$preview-hover} &:after {
+      opacity: 0;
+    }
+
+    &--big {
+      padding: 20px 30px;
+      padding-right: 50px;
+    }
+
+  }
+
+  $preview-background-bottom: '.preview__background--bottom';
+  $preview-background-left: '.preview__background--left';
+  $preview-background-big: '.preview__background--big';
+
+  &__background-item {
+    position: absolute;
+    @include absolute-fill;
+    @include background-cover-center;
+    z-index: -2;
+  }
+
+  &__background-inner {
+    @include absolute-fill;
+    @include flex-column;
+    justify-content: space-between;
+
+    #{$preview-background-bottom} & {
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    #{$preview-background-left} & {
+      align-items: flex-start;
+    }
+  }
+
+  &__background-topic {
+    font-size: 13px;
+    font-weight: 500;
+    color: inherit;
+
+    #{$preview-background-bottom} & {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__background-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: inherit;
+    margin-top: 30px;
+
+    #{$preview-background-bottom} & {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    #{$preview-background-big} & {
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    #{$preview-hover} & {
+      color: #cbcbcb;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    @include background-cover-center;
+    margin-bottom: 15px;
+
+    &--square {
+      padding-bottom: 95%;
+    }
+
+    &--rectangle {
+      padding-bottom: 80%;
+    }
+
+    &--rectangle-small {
+      padding-bottom: 67.24%;
+    }
+
+    &--border {
+      border: 1px solid $black;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 15px;
+
+    &--small {
+      font-size: 16px;
+    }
+
+    #{$preview-hover} & {
+      color: $red;
+    }
+
+    &--article {
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: rgba(0, 0, 0, .3);
+      line-height: 1.5;
+    }
+  }
+
+  &__horizontal {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  &__horizontal-img {
+    width: 140px;
+    height: 120px;
+    margin-right: 10px;
+    @include background-cover-center;
+  }
+  &__horizontal-desc {
+    width: calc(100% - 150px);
+  }
+  &__horizontal-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, .3);
+    line-height: 1.5;
+
+    #{$preview-hover} & {
+      color: $red;
+    }
+  }
+  &__horizontal-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+
+    #{$preview-hover} & {
+      color: $red;
+    }
+  }
+
+  &__article-background {
+    height: 470px;
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    cursor: pointer;
+    color: $white;
+    @include flex-row;
+    @include background-cover-center;
+
+    &--black {
+      color: $black;
+    }
+  }
+
+  &__article-background-inner {
+    width: 100%;
+    height: 100%;
+    @include flex-column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__article-background-topic {
+    padding: 3px 8px;
+    background: $white;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 6px;
+    color: #0100b7;
+  }
+
+  &__article-background--black &__article-background-topic {
+    background: $black;
+    color: $white;
+  }
+
+  &__article-background-title {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, .5);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  &__article-background--black &__article-background-title {
+    text-decoration-color: rgba(0, 0, 0, .2);
+
+    #{$preview-hover} & {
+      color: $red;
+    }
+  }
+
+  &__article-background-desc {
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 8px;
+    margin-bottom: 30px;
+  }
+
+}

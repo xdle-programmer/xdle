@@ -1,0 +1,29 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.client-logos {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+
+  @media #{$tablet-big-screen} {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  &__item {
+    @include flex-row-center;
+  }
+  &__item-img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+  &__desc {
+    margin-top: 40px;
+    text-align: center;
+    text-decoration: underline;
+  }
+}

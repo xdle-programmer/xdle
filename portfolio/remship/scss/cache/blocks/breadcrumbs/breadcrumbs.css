@@ -1,0 +1,30 @@
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 12px;
+  font-weight: 300;
+  color: #999999;
+  padding: 15px 0; }
+  .breadcrumbs__link {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative; }
+    .breadcrumbs__link:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 1px;
+      top: 0;
+      right: -9px;
+      background: #999999;
+      margin-left: 3px;
+      transform: rotate(23deg); }
+    .breadcrumbs__link:hover {
+      color: #333;
+      text-decoration: underline; }

@@ -1,0 +1,176 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.feedback {
+  background: #3c3c3c;
+  color: $white;
+  padding: 100px 0;
+  width: 100%;
+  margin-top: 50px;
+
+  &--no-margin {
+    margin-top: 0;
+  }
+
+  @media #{$mobile-big-screen} {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-size: 30px;
+    text-align: center;
+
+    @media #{$mobile-big-screen} {
+      font-family: Montserrat-bold, sans-serif;
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Montserrat-regular, sans-serif;
+    margin-top: 10px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form {
+    padding: 0 100px;
+    @include flex-column-center;
+
+    @media #{$mobile-big-screen} {
+      padding: 0;
+    }
+
+  }
+
+  &__form-title {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 22px;
+    }
+  }
+
+  &__form-subtitle {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-family: Montserrat-regular, sans-serif;
+    margin-bottom: 30px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 16px;
+    }
+  }
+
+  &__form-services {
+    width: 100%;
+    @include flex-row-center;
+    flex-wrap: wrap;
+  }
+
+  &__form-services-item {
+    margin: 10px;
+    border: 1px solid $white;
+    opacity: .5;
+    cursor: pointer;
+    font-family: Montserrat-regular, sans-serif;
+    font-size: 13px;
+    padding: 10px 30px;
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__inputs {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__input-block {
+    position: relative;
+    width: 31%;
+    margin-bottom: 20px;
+
+    &--fill {
+      width: 100%;
+    }
+
+    &:after {
+      @include after-absolute;
+      bottom: -2px;
+      height: 2px;
+      background: $white;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all .4s ease-in;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__inputs.ready &__input-block {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+
+  &__input {
+    font-size: 20px;
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 10px 0;
+    font-family: Montserrat-regular, sans-serif;
+    color: $white;
+  }
+
+  &__button {
+    font-size: 16px;
+    padding: 10px 30px;
+    font-family: Montserrat-regular, sans-serif;
+    margin-top: 20px;
+  }
+
+  &__agree {
+    font-size: 13px;
+    font-family: Montserrat-regular, sans-serif;
+    margin-top: 10px;
+    opacity: .3;
+
+    @media #{$mobile-big-screen} {
+      text-align: center;
+    }
+  }
+
+  &__agree-link {
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+}

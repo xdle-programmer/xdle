@@ -1,0 +1,250 @@
+{% include "header-new.html" %}
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Neoline</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+</head>
+<body>
+	
+	<div class="page">
+		<header class="header">
+			<div class="info-plate">
+				<div class="container">
+					<div class="info-plate__text">
+						Работая с этим сайтом, вы даете свое согласие на использование файлов cookie. Это необходимо для нормального функционирования сайта, показа целевой рекламы и анализа трафика. Статистика использования сайта отправляется в Google, Yandex.
+					</div>
+					<button class="button button_small" id="js-ok-cookie">Принять</button>
+				</div>
+				
+			</div>
+			<div class="header__top-section">
+				<div class="container">
+					<div data-menu="mobile-menu_main" class="mobile-menu-button square-button js-toggle-menu">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</div>
+					<a href="./" class="logo-link">
+						<svg class="i-logo">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#logo"></use>
+						</svg>
+						<svg class="i-logo_mobile">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#logo_mobile"></use>
+						</svg>
+					</a>
+					<div class="search-box">
+						<div class="search-menu search-menu_static">
+							<div class="search-menu__top">
+								<form class="search-line">
+									<input type="text" name="" class="search-line__input" placeholder="Поиск по сайту">
+									<button class="search-line__search">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+								</form>
+							</div>
+							<div class="suggest-block">
+								<a href="#" class="suggest-block__suggest-product">
+									<div class="vertical-align-cell suggest-product__img">
+										<img src="img/samples/suggest1.png">
+									</div>
+									<div class="vertical-align-cell suggest-product__description">
+										<div class="suggest-product__name">Видеорегистратор Neoline X-COP 9100</div>
+										<div class="suggest-product__price">7 990 руб.</div>
+									</div>
+								</a>
+								<a href="#" class="suggest-block__suggest-product">
+									<div class="vertical-align-cell suggest-product__img">
+										<img src="img/samples/suggest2.png">
+									</div>
+									<div class="vertical-align-cell suggest-product__description">
+										<div class="suggest-product__name">Видеорегистратор Neoline X-COP 9100</div>
+										<div class="suggest-product__price">7 990 руб.</div>
+									</div>
+								</a>
+								<a href="#" class="suggest-block__suggest-product">
+									<div class="vertical-align-cell suggest-product__img">
+										<img src="img/samples/suggest3.png">
+									</div>
+									<div class="vertical-align-cell suggest-product__description">
+										<div class="suggest-product__name">Видеорегистратор Neoline X-COP 9100</div>
+										<div class="suggest-product__price">7 990 руб.</div>
+									</div>
+								</a>
+								<a href="#" class="suggest-block__to-all">
+									<div class="vertical-align-cell">
+										Все результаты 
+										<i class="fa fa-angle-right" aria-hidden="true"></i>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="header__contacts">
+						<span class="big-phone">8 (800) 100-68-57</span>
+						Звонки по России бесплатные
+					</div>
+					<div class="header__controls">
+						<div class="account-button js-call-popup" data-popup="popup_login">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</div>
+						<div class="account-button">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<div class="account-menu drop-menu">
+								<div class="account-menu__item">
+									<b class="vertical-align-cell">Дмитрий Сергеенко</b>
+								</div>
+								<a href="#" class="account-menu__item">
+									<span class="vertical-align-cell">
+										Личный кабинет
+									</span>
+									
+								</a>
+								<a href="#" class="account-menu__item">
+									<span class="vertical-align-cell">
+										Список заказов
+									</span>
+								</a>
+								<a href="#" class="account-menu__item">
+									<span class="vertical-align-cell">
+										Выход
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="basket-module">
+							<div class="basket-button">
+								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+								<div class="basket-button__counter">2</div>
+								<div class="cart-menu drop-menu">
+									<a href="#" class="cart-menu__mini-product cart-menu__item">
+										<div class="close-button">
+											<i class="fa fa-times" aria-hidden="true"></i>
+										</div>
+										<div class="min-product__img">
+											<img src="img/samples/suggest1.png">
+										</div>
+										<div class="cart-menu__text-container">
+											<div class="regular-text">
+												Видеорегистратор Neoline X-COP 9700
+											</div>
+											<div class="min-product__price">14 990 руб.</div>
+										</div>
+									</a>
+									<a href="#" class="cart-menu__mini-product cart-menu__item">
+										<div class="close-button">
+											<i class="fa fa-times" aria-hidden="true"></i>
+										</div>
+										<div class="min-product__img">
+											<img src="img/samples/suggest2.png">
+										</div>
+										<div class="cart-menu__text-container">
+											<div class="regular-text">
+												Видеорегистратор Neoline X-COP 9700
+											</div>
+											<div class="min-product__price">14 990 руб.</div>
+										</div>
+									</a>
+									<div class="cart-menu__result cart-menu__item">
+										<div class="result__title">Итого:</div>
+										<div class="cart-menu__text-container">
+											<div class="regular-text">3 товара на сумму</div>
+											<div class="result__price">31 970 руб.</div>
+										</div>
+									</div>
+									<a href="#" class="button button_height">Перейти к оформлению</a>
+								</div>
+							</div>
+							<a href="#" class="basket-button basket-button_mobile">
+								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+								<div class="basket-button__counter">2</div>
+							</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom-section">
+				<div class="container">
+					<div class="bottom-section__wrap">
+						<nav class="header__nav">
+							<a href="#" class="nav__block-link">
+								Гибриды
+							</a>
+							<a href="#" class="nav__block-link">
+								Видеорегистраторы
+							</a>
+							<a href="#" class="nav__block-link">
+								Радар-детекторы
+							</a>
+							<a href="#" class="nav__block-link">
+								Инверторы
+							</a>
+							<a href="#" class="nav__block-link">
+								Аксессуары
+							</a>
+							<a href="#" class="nav__block-link">
+								Оплата и доставка
+							</a>
+							<a href="#" class="nav__block-link">
+								Акции
+							</a>
+							<a href="#" class="nav__block-link">
+								Контакты
+							</a>
+						</nav>
+						<div class="search-button">
+							<div class="search-button__toggle">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+							<div class="search-menu">
+								<div class="search-menu__top">
+									<form class="search-line">
+										<input type="text" name="" class="search-line__input" placeholder="Поиск по сайту">
+										<button class="search-line__search">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+								</div>
+								<div class="suggest-block">
+									<a href="#" class="suggest-block__suggest-product">
+										<div class="vertical-align-cell suggest-product__img">
+											<img src="img/samples/suggest1.png">
+										</div>
+										<div class="vertical-align-cell suggest-product__description">
+											<div class="suggest-product__name">Видеорегистратор Neoline X-COP 9100</div>
+											<div class="suggest-product__price">7 990 руб.</div>
+										</div>
+									</a>
+									<a href="#" class="suggest-block__suggest-product">
+										<div class="vertical-align-cell suggest-product__img">
+											<img src="img/samples/suggest2.png">
+										</div>
+										<div class="vertical-align-cell suggest-product__description">
+											<div class="suggest-product__name">Видеорегистратор Neoline X-COP 9100</div>
+											<div class="suggest-product__price">7 990 руб.</div>
+										</div>
+									</a>
+									<a href="#" class="suggest-block__suggest-product">
+										<div class="vertical-align-cell suggest-product__img">
+											<img src="img/samples/suggest3.png">
+										</div>
+										<div class="vertical-align-cell suggest-product__description">
+											<div class="suggest-product__name">Видеорегистратор Neoline X-COP 9100</div>
+											<div class="suggest-product__price">7 990 руб.</div>
+										</div>
+									</a>
+									<a href="#" class="suggest-block__to-all">
+										<div class="vertical-align-cell">
+											Все результаты 
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</header> -->

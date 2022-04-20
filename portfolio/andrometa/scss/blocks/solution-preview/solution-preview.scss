@@ -1,0 +1,95 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.solution-preview {
+  @include background-cover-center;
+  height: 289px;
+  color: $white;
+  position: relative;
+  @include flex-column;
+  padding: 53px 25px;
+
+  &--big {
+    height: 315px;
+    padding-bottom: 30px;
+  }
+
+  &:after {
+    @include after-absolute;
+    @include absolute-fill;
+    background: linear-gradient(to top, rgba(0, 32, 91, .7), rgba(0, 32, 91, 0));
+    z-index: 1;
+  }
+
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover &__title {
+    opacity: 0;
+  }
+
+  &__hover {
+    position: absolute;
+    @include absolute-fill;
+    background: $blue-transparent;
+    opacity: 0;
+    z-index: 3;
+    padding: 30px;
+    @include flex-column;
+  }
+
+  &:hover &__hover {
+    opacity: 1;
+  }
+
+  &__hover-title {
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  &__hover-list {
+    padding: 14px 0;
+  }
+
+  &__hover-list-item {
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 13px;
+    padding-left: 20px;
+
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      background: $white;
+      mask: url(../../../img/list-marker.png);
+      -webkit-mask: url(../../../img/list-marker.png);
+      @include mask-contain-center;
+    }
+  }
+
+  &__hover-button {
+    font-size: 15px;
+    font-weight: 800;
+    background: $red-light;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: auto;
+
+    &:hover {
+      background: $blue-light;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.sms-input {
+  position: relative;
+  width: 384px;
+  @include margin-auto;
+
+  @media #{$mobile-big-screen} {
+    width: 320px;
+  }
+
+  &__block {
+  }
+
+  &__row {
+    width: 100%;
+    @include margin-auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:after {
+      @include after-absolute;
+      width: 100px;
+      height: 100%;
+      background: $white;
+      right: -100px;
+    }
+
+  }
+
+  &__input-code {
+    border-radius: 3px;
+    border: 1px solid #e1e4e7;
+    width: 100%;
+    color: #333;
+    font-size: 25px;
+    font-weight: 700;
+    height: 64px;
+    text-align: center;
+
+    @media #{$mobile-big-screen} {
+      height: 50px;
+    }
+
+
+    &.focus {
+      border-color: #00adef;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+  }
+
+  &__input-result {
+    position: absolute;
+    @include absolute-fill;
+    width: calc(100% + 100px);
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1d1e29;
+    letter-spacing: 67px;
+    padding: 0 25px;
+    //caret-color: transparent;
+    background: transparent;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+
+    @media #{$mobile-big-screen} {
+      letter-spacing: 54px;
+      padding: 0 17px;
+    }
+  }
+
+  &__counter {
+    @include flex-row-center;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__counter-button {
+
+
+    &.active {
+      color: #00adef;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__counter-item {
+    margin-left: 5px;
+  }
+
+  &__submit {
+    width: 100%;
+    cursor: pointer;
+
+    &.hide {
+      display: none;
+    }
+
+    & .button {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__wrapper {
+    &.hide {
+      display: none;
+    }
+  }
+
+}

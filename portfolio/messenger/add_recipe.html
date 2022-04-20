@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles/styles.css">
+    <title>Добавить рецепт</title>
+</head>
+
+<script>
+    var product_list = [
+        'Яйца', 'Молоко', 'Картошка', 'Макароны', 'Рис', 'Крабовые палочки', 'Творог', 'Майонез', 'Соль', 'Сахар'
+    ];
+    var suffix_list = [
+        'шт.', 'гр.', 'мл.', 'по вкусу'
+    ];
+</script>
+
+
+<body>
+
+<div class="layout">
+    <div class="layout__preloader show">
+        <div class="layout__preloader-inner layout__list" style="opacity: 0;">
+            <div class="layout__list-header">
+
+            </div>
+
+            <div class="layout__list-content">
+
+            </div>
+        </div>
+    </div>
+    <div class="layout__preloader show">
+        <div class="layout__content layout__preloader-inner" style="opacity: 0">
+
+            <div class="recipe">
+                <form class="recipe__form" method="POST" enctype="multipart/form-data">
+                    <div class="recipe__input-block">
+                        <div class="recipe__input-title">
+                            Название рецепта
+                        </div>
+                        <div class="recipe__input-item">
+                            <input name="title" class="select-list__input recipe__input start-focus-input"
+                                   placeholder="Например: Салат с крабовыми палочками">
+                        </div>
+                    </div>
+
+                    <div class="recipe__input-block">
+                        <div class="recipe__input-title">
+                            Выберите диету
+                        </div>
+                        <div class="recipe__input-item recipe__input-item--select select-list">
+                            <select name="dietId">
+                                <option value="3">Гречневая диета. Одна из самых спокойных для вашего желудка.</option>
+                                <option value="5">Шоколадная диета. Сладкоежки - это для Вас.</option>
+                                <option value="7">Диета Дюкана. Основана на потреблении малоуглеводной пищи.</option>
+                                <option value="8">Английская диета. Благодаря этой диете Вы еще и сэкономите на
+                                    продуктах.
+                                </option>
+                                <option value="9">Огуречная диета. Прекрасные плоды.</option>
+                                <option value="10">Капустная диета. Такая диета приносит прекрасные результаты.</option>
+                                <option selected value="0"></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="recipe__input-block">
+                        <div class="recipe__input-title">
+                            Изображение
+                        </div>
+                        <div class="recipe__input-file">
+                            <label>
+                                <input type="file" name="image">
+                                <span>Выберите файл</span>
+                                <div class="recipe__input-file-name"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="recipe__input-block">
+                        <div class="recipe__input-title">
+                            Тип рецепта
+                        </div>
+
+
+                        <div class="recipe__input-radio">
+                            <div class="recipe__input-radio-item">
+                                <input class="recipe__input-radio-item-input" id="breakfast" name="mealTypeRadio"
+                                       type="radio"/>
+                                <label class="recipe__input-radio-item-label" for="breakfast">Завтрак</label>
+                            </div>
+                            <div class="recipe__input-radio-item">
+                                <input class="recipe__input-radio-item-input" id="lunch" name="mealTypeRadio" type="radio"/>
+                                <label class="recipe__input-radio-item-label" for="lunch">Обед</label>
+                            </div>
+                            <div class="recipe__input-radio-item">
+                                <input class="recipe__input-radio-item-input" id="dinner" name="mealTypeRadio" type="radio"/>
+                                <label class="recipe__input-radio-item-label" for="dinner">Ужин</label>
+                            </div>
+                            <input type="hidden" name="mealType" class="recipe__input-radio-hidden">
+                        </div>
+
+
+                    </div>
+
+                    <div class="recipe__input-block recipe__input-block--two-input">
+                        <div class="recipe__input-block recipe__input-block--no-margin">
+                            <div class="recipe__input-title">
+                                Время приготовления
+                            </div>
+                            <div class="recipe__input-item">
+                                <input name="cookingTimeInMinutes" class="select-list__input recipe__input">
+                            </div>
+                        </div>
+
+                        <div class="recipe__input-block recipe__input-block--no-margin">
+                            <div class="recipe__input-title">
+                                Ккал
+                            </div>
+                            <div class="recipe__input-item">
+                                <input name="kcal" class="select-list__input recipe__input start-focus-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe__input-block recipe__input-block--three-input">
+                        <div class="recipe__input-block recipe__input-block--no-margin">
+                            <div class="recipe__input-title">
+                                Белки
+                            </div>
+                            <div class="recipe__input-item">
+                                <input name="proteins" class="select-list__input recipe__input recipe__input--components" placeholder="от 0 до 1">
+                            </div>
+                        </div>
+
+                        <div class="recipe__input-block recipe__input-block--no-margin">
+                            <div class="recipe__input-title">
+                                Жиры
+                            </div>
+                            <div class="recipe__input-item">
+                                <input name="fats" class="select-list__input recipe__input recipe__input--components" placeholder="от 0 до 1">
+                            </div>
+                        </div>
+
+                        <div class="recipe__input-block recipe__input-block--no-margin">
+                            <div class="recipe__input-title">
+                                Углеводы
+                            </div>
+                            <div class="recipe__input-item">
+                                <input name="carbohydrates" class="select-list__input recipe__input recipe__input--components" placeholder="от 0 до 1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe__table">
+                        <div class="recipe__input-title">
+                            Ингридиенты
+                        </div>
+                        <div class="recipe__rows">
+                            <div class="recipe__row">
+                                <div class="recipe__cell">
+                                    <div class="recipe__row-header"></div>
+                                </div>
+                                <div class="recipe__cell">
+                                    <div class="recipe__row-header">Название</div>
+                                </div>
+                                <div class="recipe__cell">
+                                    <div class="recipe__row-header">Число</div>
+                                </div>
+                                <div class="recipe__cell">
+                                    <div class="recipe__row-header">Суффикс</div>
+                                </div>
+                            </div>
+                            <div class="recipe__row recipe__row--inputs">
+                                <div class="recipe__cell">
+                                    <div class="recipe__row-number">1</div>
+                                </div>
+                                <div class="recipe__cell recipe__cell--list">
+                                    <input class="recipe__row-input recipe__row-input--name">
+                                </div>
+                                <div class="recipe__cell">
+                                    <input class="recipe__row-input recipe__row-input--count">
+                                </div>
+                                <div class="recipe__cell recipe__cell--list">
+                                    <input class="recipe__row-input recipe__row-input--suffix">
+                                </div>
+                            </div>
+                            <div class="recipe__row recipe__row--inputs">
+                                <div class="recipe__cell">
+                                    <div class="recipe__row-number">2</div>
+                                </div>
+                                <div class="recipe__cell recipe__cell--list">
+                                    <input class="recipe__row-input recipe__row-input--name">
+                                </div>
+                                <div class="recipe__cell">
+                                    <input class="recipe__row-input recipe__row-input--count">
+                                </div>
+                                <div class="recipe__cell recipe__cell--list">
+                                    <input class="recipe__row-input recipe__row-input--suffix">
+                                </div>
+                            </div>
+                            <div class="recipe__row recipe__row--inputs">
+                                <div class="recipe__cell">
+                                    <div class="recipe__row-number">3</div>
+                                </div>
+                                <div class="recipe__cell recipe__cell--list">
+                                    <input class="recipe__row-input recipe__row-input--name">
+                                </div>
+                                <div class="recipe__cell">
+                                    <input class="recipe__row-input recipe__row-input--count">
+                                </div>
+                                <div class="recipe__cell recipe__cell--list">
+                                    <input class="recipe__row-input recipe__row-input--suffix">
+                                </div>
+                            </div>
+                        </div>
+                        <!--<button type="button" class="recipe__add-button">Добавить строку</button>-->
+                        <input type="hidden" name="ingredients">
+                    </div>
+
+                    <div class="recipe__input-block recipe__input-block--desc">
+                        <div class="recipe__input-title">
+                            Описание
+                        </div>
+
+                        <textarea name="description" class="recipe__item-input-area"></textarea>
+                        <div class="recipe__item-input-area-hidden"></div>
+                    </div>
+                    <div class="recipe__buttons">
+                        <div id="console" class="recipe__button">Вывести в консоль</div>
+                        <button type="submit" class="recipe__button">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+</html>

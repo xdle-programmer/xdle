@@ -1,0 +1,83 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.icons {
+
+  width: 100%;
+  position: relative;
+  max-width: 50px;
+
+  &--small-line {
+    max-width: 40px;
+    margin-right: 10px;
+  }
+
+  &__item {
+    position: absolute;
+    padding-bottom: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  $count_icons: 8;
+  $count_colors: 3;
+  &__item:after {
+    @include after-absolute;
+    background: url(/img/icons.svg);
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: #{$count_icons * 100%} #{$count_colors * 100%};
+  }
+
+  &__item--facebook:after {
+    background-position-x: #{100% / ($count_icons - 1) * 0};
+  }
+
+  &__item--insta:after {
+    background-position-x: #{100% / ($count_icons - 1) * 1};
+  }
+
+  &__item--twitter:after {
+    background-position-x: #{100% / ($count_icons - 1) * 2};
+  }
+
+  &__item--g-plus:after {
+    background-position-x: #{100% / ($count_icons - 1) * 3};
+  }
+
+  &__item--whatsapp:after {
+    background-position-x: #{100% / ($count_icons - 1) * 4};
+  }
+
+  &__item--map:after {
+    background-position-x: #{100% / ($count_icons - 1) * 5};
+  }
+  &__item--mail:after {
+    background-position-x: #{100% / ($count_icons - 1) * 6};
+  }
+  &__item--phone:after {
+    background-position-x: #{100% / ($count_icons - 1) * 7};
+  }
+
+  &__item--blue:after {
+    background-position-y: #{100% / ($count_colors - 1) * 1};
+  }
+
+  &__item--black:after {
+    background-position-y: #{100% / ($count_colors - 2) * 1};
+  }
+
+  &__block {
+    margin-top: 10px;
+    margin-bottom: 90px;
+    display: flex;
+  }
+
+}
+
+

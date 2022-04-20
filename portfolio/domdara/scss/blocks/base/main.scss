@@ -1,0 +1,90 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@font-face {
+  font-family: 'museo';
+  font-display: swap;
+  src: url(../../../fonts/MuseoSansCyrl-100.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'museo';
+  font-display: swap;
+  src: url(../../../fonts/MuseoSansCyrl-300.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'museo';
+  font-display: swap;
+  src: url(../../../fonts/MuseoSansCyrl-500.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+  @include font-default('');
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  background: #d70119;
+  color: $white;
+}
+
+select {
+  display: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 15px;
+
+  @media #{$mobile-big-screen} {
+    font-size: 30px;
+  }
+}
+
+
+button, input, textarea {
+  border: none;
+  background: none;
+}
+
+button:active, input:active, textarea:active,
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}

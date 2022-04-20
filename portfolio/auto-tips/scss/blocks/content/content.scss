@@ -1,0 +1,86 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.content {
+  margin-bottom: 30px;
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+
+  //&:after {
+  //  display: block;
+  //  content: '';
+  //  clear: both;
+  //}
+
+  a {
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    width: 100%;
+
+    @media #{$mobile-big-screen} {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 11px;
+    width: 100%;
+
+    @media #{$mobile-big-screen} {
+      font-size: 17px;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 100%;
+    color: #3b3b3b;
+  }
+
+  a:hover h2,
+  a:hover h3,
+  a:hover h4 {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  a {
+    color: $blue;
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 21px;
+    font-weight: 400;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    &.short {
+      width: 70%;
+
+      @media #{$mobile-big-screen} {
+        width: 100%;
+      }
+    }
+  }
+}

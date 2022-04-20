@@ -1,0 +1,329 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+
+  $scroll: '.header.scroll';
+
+  &__logo {
+    width: 52px;
+    height: 58px;
+    position: fixed;
+    left: 80px;
+    top: 44px;
+
+    &:before {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(../../../img/logo.png);
+      @include background-contain-center;
+      z-index: 2;
+    }
+
+    #{$scroll} & {
+      opacity: 0;
+      visibility: hidden;
+      top: 0;
+    }
+
+    @media #{$tablet-big-screen} {
+      top: 10px;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 33px;
+      left: 20px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 25px;
+      height: 40px;
+      z-index: 40;
+
+      &:after {
+        @include after-absolute;
+        background: $white;
+        height: 60px;
+        width: 1000px;
+        left: -20px;
+        top: -10px;
+        background: $white;
+        z-index: 1;
+      }
+
+      #{$scroll} & {
+        opacity: 1;
+        visibility: visible;
+        top: 10px;
+      }
+    }
+  }
+
+  &__toggle-button {
+    visibility: hidden;
+    opacity: 0;
+    width: 30px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+
+    #{$scroll} & {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media #{$tablet-big-screen} {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: $gray-dark;
+    }
+
+    &:before {
+      mask: url(../../../img/menu.svg);
+      -webkit-mask: url(../../../img/menu.svg);
+      @include mask-contain-center;
+    }
+
+    &:after {
+      mask: url(../../../img/close.svg);
+      -webkit-mask: url(../../../img/close.svg);
+      @include mask-contain-center;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    #{$scroll} &.active:before {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    #{$scroll} &.active:after {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media #{$tablet-small-screen} {
+
+      &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:after {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+
+      &.active:before {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &.active:after {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      #{$scroll} &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      #{$scroll} &:after {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+
+      #{$scroll} &.active:before {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      #{$scroll} &.active:after {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &__menu {
+    @include flex-row-center;
+    justify-content: flex-end;
+    position: fixed;
+    right: 270px;
+    padding: 0 30px;
+    height: 60px;
+    top: 45px;
+    width: calc(100% - 160px - 380px);
+    overflow: hidden;
+    z-index: 10;
+
+    @media #{$tablet-big-screen} {
+      top: 0;
+      background: $white;
+      width: 65px;
+      padding: 0 15px;
+    }
+
+    @media #{$tablet-small-screen} {
+      z-index: 40;
+      right: 200px;
+    }
+
+    #{$scroll} & {
+      width: 90px;
+      background: $white;
+      top: 0;
+
+      @media #{$tablet-big-screen} {
+        width: 65px;
+      }
+    }
+
+    #{$scroll} &.active {
+      width: calc(100% - 160px - 380px);
+
+      @media #{$tablet-big-screen} {
+        width: calc(100% - 380px);
+      }
+
+      @media #{$tablet-small-screen} {
+        width: 65px;
+      }
+    }
+  }
+
+  $scroll-active-menu: '.header.scroll .header__menu.active';
+  $active-menu: '.header__menu.active';
+
+  &__menu-items {
+    @include flex-row-center;
+    position: absolute;
+    @include absolute-fill;
+
+    @media #{$tablet-big-screen} {
+      background: #fff;
+      position: fixed;
+      visibility: visible;
+      transform: none;
+      opacity: 0;
+
+      #{$active-menu} & {
+        opacity: 1;
+      }
+    }
+
+    @media #{$tablet-small-screen} {
+      visibility: hidden;
+
+      #{$active-menu} & {
+        visibility: visible;
+      }
+    }
+
+    #{$scroll} & {
+      transform: translateX(120%);
+      visibility: hidden;
+      opacity: 0;
+
+      @media #{$tablet-big-screen} {
+        transform: none;
+      }
+    }
+
+    #{$scroll-active-menu} & {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+
+      @media #{$tablet-big-screen} {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+    }
+
+  }
+
+  &__menu-item {
+    color: $gray-dark;
+    cursor: pointer;
+    margin-left: 70px;
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    &:after {
+      @include after-absolute;
+      height: 2px;
+      width: 70%;
+      background: $gray-dark;
+      left: 0;
+      top: -9px;
+      border-radius: 2px;
+      transform-origin: left;
+      transform: scaleX(0);
+      opacity: 0;
+      visibility: hidden;
+
+      @media #{$mobile-big-screen} {
+        display: none;
+      }
+    }
+
+    &:hover:after,
+    &.active:after {
+      transform: scaleX(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-left: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__language {
+    position: fixed;
+    right: 0;
+    padding-right: 80px;
+    height: 60px;
+    top: 45px;
+    @include flex-row;
+    align-items: center;
+    z-index: 10;
+
+    @media #{$tablet-big-screen} {
+      background: $white;
+      top: 0;
+    }
+
+    @media #{$tablet-small-screen} {
+      padding-right: 10px;
+      z-index: 40;
+    }
+
+    #{$scroll} & {
+      background: $white;
+      top: 0;
+    }
+  }
+}

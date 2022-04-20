@@ -1,0 +1,162 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.filter {
+  padding-top: 80px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 30px;
+  }
+
+  &__header-wrapper {
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      overflow-x: scroll;
+      flex-shrink: 1;
+
+      & * {
+        flex-shrink: 1;
+      }
+    }
+  }
+
+  &__header {
+    @include flex-row-center;
+    margin-bottom: 25px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__header-item {
+    margin: 0 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      font-size: 18px;
+      padding: 5px 10px;
+      margin: 0 10px;
+    }
+
+    &:after {
+      @include after-absolute;
+      height: 2px;
+      background: $gold;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &:hover:after,
+    &.active:after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  &__wrapper {
+
+    @media #{$tablet-big-screen} {
+      width:calc(100% - 20px);
+      margin-left: 20px;
+      overflow: hidden;
+    }
+
+  }
+
+  &__block {
+    @media #{$tablet-big-screen} {
+      width: 180%;
+    }
+  }
+
+  &__items {
+
+    & .owl-dots {
+      width: 100%;
+      @include flex-row-center;
+      margin-top: 30px;
+    }
+
+    & .owl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #eff1f0 !important;
+      margin: 0 5px;
+
+      &:hover,
+      &.active {
+        background-color: #c4c4c4 !important;
+      }
+    }
+
+  }
+
+  &__item {
+    overflow: hidden;
+  }
+
+  &__item-wrapper {
+    @include flex-row;
+    flex-wrap: wrap;
+    width: calc(100% + 25px);
+  }
+
+  &__item-img {
+    @include background-cover-center;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    &--small {
+      height: 180px;
+    }
+
+    &--big {
+      height: 300px;
+    }
+
+    &--25 {
+      width: calc(25% - 25px);
+    }
+
+    &--33 {
+      width: calc((100% / 3) - 25px);
+    }
+
+    &--34 {
+      width: calc(34% - 25px);
+    }
+
+    &--50 {
+      width: calc(50% - 25px);
+    }
+
+    &--66 {
+      width: calc(66% - 25px);
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 100% !important;
+      margin: 0 !important;
+      height: 220px!important;
+    }
+  }
+
+  &__button {
+    @include margin-auto;
+    margin-top: 30px;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 40px);
+    }
+  }
+
+}

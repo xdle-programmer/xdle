@@ -1,0 +1,69 @@
+.pagination {
+  display: inline-block; }
+  .pagination__item {
+    font-size: 20px;
+    margin-right: 34px;
+    position: relative;
+    display: inline;
+    cursor: pointer; }
+    .pagination__item:nth-last-of-type(1) {
+      margin-right: 0; }
+    .pagination__item:hover {
+      color: #5a9ecf; }
+    .pagination__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      right: -21px;
+      bottom: 6px;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #5a9ecf;
+      border-radius: 50%; }
+    .pagination__item:nth-last-of-type(1):after {
+      display: none; }
+    .pagination__item--first {
+      color: #5a9ecf; }
+    .pagination__item--active {
+      color: #878787; }
+  .pagination__block {
+    display: flex;
+    margin-top: 30px; }
+  .pagination__item-number {
+    margin-right: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #4291ca;
+    position: relative; }
+    .pagination__item-number.active, .pagination__item-number:hover {
+      background: #5a9ecf; }
+    .pagination__item-number.active {
+      cursor: default; }
+    .pagination__item-number--back:after, .pagination__item-number--forward:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #ffffff;
+      width: 15px;
+      height: 15px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      mask: url(../../../img/arrow-down-blue.svg);
+      -webkit-mask: url(../../../img/arrow-down-blue.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important; }
+    .pagination__item-number--back:after {
+      transform: translate(-50%, -50%) rotate(90deg); }
+    .pagination__item-number--forward:after {
+      transform: translate(-50%, -50%) rotate(-90deg); }

@@ -1,0 +1,17 @@
+.wrapper {
+  min-height: 101vh; }
+  .wrapper, .wrapper:before, .wrapper:after,
+  .wrapper *,
+  .wrapper *:before,
+  .wrapper *:after {
+    transition: all 0.2s ease-out; }
+  .wrapper.hide {
+    opacity: 0;
+    visibility: hidden; }
+  .wrapper__inner {
+    width: 886px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 1023px) {
+      .wrapper__inner {
+        width: calc(100% - 20px); } }

@@ -1,0 +1,242 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-100.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-100Italic.ttf);
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-300.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-300Italic.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-500.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-500Italic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-700.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-700Italic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-900.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url(../../fonts/MuseoSansCyrl-900Italic.ttf);
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Thin.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Thin.Italic.otf);
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Italic.otf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Medium.Italic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Bold.Italic.otf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Black.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url(../../fonts/FontFont_FF.Mark.Pro.Black.Italic.otf);
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e2126;
+  position: relative;
+}
+
+* {
+  @include font-default;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  transition: all .2s ease-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+textarea,
+input,
+button {
+  border: none;
+  background: none;
+  display: block;
+  color: #cddaec;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+*::-webkit-scrollbar-button {
+  background-image: none;
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #1e2226;
+
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #264de4, #02ecff);
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #02ecff;
+}
+
+*::-webkit-resizer {
+  background-image: none;
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wrapper {
+  padding-top: 70px;
+
+  @media #{$tablet-small-screen} {
+    padding-top: 55px;
+  }
+}
+
+.mobile-shadow {
+  display: none;
+
+  @media #{$tablet-small-screen} {
+    display: block;
+    position: fixed;
+    @include absolute-fill;
+    background: rgba(0, 0, 0, .7);
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

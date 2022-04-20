@@ -1,0 +1,23 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title-lead {
+  padding: 90px 0;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+
+  @media #{$tablet-small-screen} {
+    font-size: 24px;
+  }
+
+  &__text {
+    color: #959595;
+  }
+
+  &__link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

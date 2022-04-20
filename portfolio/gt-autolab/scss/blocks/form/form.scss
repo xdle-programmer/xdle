@@ -1,0 +1,130 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.form {
+  overflow: hidden;
+
+  $margin: 25px;
+
+  &__items {
+    @include flex-row;
+    flex-wrap: wrap;
+    width: calc(100% + #{$margin});
+    padding-top: 7px;
+  }
+
+  &__item {
+    margin-right: #{$margin};
+    margin-bottom: 7px;
+
+    &--no-title {
+      padding-top: 18px;
+    }
+
+    &--17 {
+      width: calc((50% - (100% / 3)) - #{$margin});
+    }
+
+    &--22 {
+      width: calc(((100% - (100% / 3)) / 3) - #{$margin});
+    }
+
+    &--33 {
+      width: calc(100% / 3 - #{$margin});
+    }
+
+    &--50 {
+      width: calc(50% - #{$margin});
+    }
+
+    &--66 {
+      width: calc((100% - (100% / 3)) - #{$margin});
+    }
+
+    @media #{$tablet-small-screen} {
+      width: calc(100% - #{$margin});
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    color: $gray-middle;
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  &__item-input {
+  }
+
+  &__button {
+    margin-top: 15px;
+    width: 180px;
+    @include flex-row-center;
+    background: $red;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: $white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    @include margin-auto;
+
+    &:hover {
+      background: $red-dark;
+    }
+
+    &.disabled {
+      background: $gray-middle;
+      cursor: default;
+    }
+
+    &.disabled:hover {
+      background: $gray-middle;
+    }
+  }
+
+  &__main {
+    &.disabled {
+      display: none;
+    }
+  }
+
+  &__natural {
+
+    &.hide {
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+    }
+
+  }
+
+  &__natural-title {
+    font-weight: 600;
+    color: $red;
+    padding: 15px 0;
+    font-size: 15px;
+  }
+
+  &__rules {
+    height: 200px;
+    @include scroll;
+    margin: 20px 0;
+
+    & H5 {
+      margin-top: 0;
+    }
+
+    & p {
+      line-height: 19px;
+      font-size: 13px;
+    }
+  }
+
+  &__rules-inner {
+  }
+}

@@ -1,0 +1,71 @@
+.third__header-text {
+  width: 430px;
+  margin: 50px auto;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .third__header-text {
+      width: 100%;
+      margin: 30px auto; } }
+
+.third__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 35px; }
+  @media (max-width: 1023px) {
+    .third__buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+
+.third__button-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #3e80ff;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer; }
+  .third__button-more:after {
+    display: block;
+    content: '';
+    width: 11px;
+    height: 10px;
+    margin-left: 10px;
+    background: url(../../../img/arrow-down.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .third__button-more .hide {
+    display: inline; }
+  .third__button-more .show {
+    display: none; }
+  .third__button-more.active .hide {
+    display: none; }
+  .third__button-more.active .show {
+    display: inline; }
+  .third__button-more.active:after {
+    transform: scaleY(-1); }
+  @media (max-width: 1023px) {
+    .third__button-more {
+      margin-bottom: 20px; } }
+
+.third__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .third__button:before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 23px;
+    margin-right: 10px;
+    background: url(../../../img/pdf.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }

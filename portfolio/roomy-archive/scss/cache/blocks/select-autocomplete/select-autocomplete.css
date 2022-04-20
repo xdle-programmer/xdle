@@ -1,0 +1,137 @@
+.select-autocomplete {
+  width: 100%;
+  position: relative; }
+  .select-autocomplete.focus .warning.active {
+    opacity: 0;
+    visibility: hidden; }
+  .select-autocomplete.focus .placeholder {
+    opacity: 1;
+    visibility: visible; }
+  .select-autocomplete__button {
+    width: 100% !important;
+    min-width: 58px !important;
+    height: 56px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: none !important;
+    background: #ffffff !important;
+    position: relative !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: space-between; }
+    .select-autocomplete__button:focus {
+      outline: none !important; }
+  .select-autocomplete__text {
+    font-family: "Montserrat", sans-serif;
+    float: none !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 100% !important;
+    flex-grow: 1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 20px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    justify-content: flex-start; }
+    .select-autocomplete__text::-webkit-input-placeholder {
+      color: #000000; }
+    .select-autocomplete__text::-moz-placeholder {
+      color: #000000; }
+    .select-autocomplete__text:-moz-placeholder {
+      color: #000000; }
+    .select-autocomplete__text:-ms-input-placeholder {
+      color: #000000; }
+    .select-autocomplete__text:focus {
+      outline: none !important;
+      background: #ffffff !important;
+      color: #000 !important; }
+      .select-autocomplete__text:focus::-webkit-input-placeholder {
+        color: #1d519d; }
+      .select-autocomplete__text:focus::-moz-placeholder {
+        color: #1d519d; }
+      .select-autocomplete__text:focus:-moz-placeholder {
+        color: #1d519d; }
+      .select-autocomplete__text:focus:-ms-input-placeholder {
+        color: #1d519d; }
+    .select-autocomplete__button--open .select-autocomplete__text {
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important; }
+  .select-autocomplete__icon {
+    width: 24px !important;
+    height: 24px !important;
+    background: url(../../../img/icons/arrow.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 10px !important;
+    transform: translateY(-50%) !important; }
+    .select-autocomplete__button--open .select-autocomplete__icon {
+      transform: translateY(-50%) rotate(180deg) !important; }
+  .select-autocomplete__menu {
+    transition: all 0s;
+    border: 1px solid #ffffff !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+    max-height: 150px;
+    overflow-y: auto; }
+    .select-autocomplete__menu::-webkit-scrollbar-button {
+      background-image: none;
+      background-repeat: no-repeat;
+      width: 4px;
+      height: 0; }
+    .select-autocomplete__menu::-webkit-scrollbar-track {
+      background: #ffffff;
+      cursor: pointer; }
+    .select-autocomplete__menu::-webkit-scrollbar-thumb {
+      background-color: #1d519d;
+      cursor: pointer; }
+    .select-autocomplete__menu::-webkit-scrollbar-thumb:hover {
+      background-color: #1d519d;
+      cursor: pointer; }
+    .select-autocomplete__menu::-webkit-resizer {
+      background-image: none;
+      background-repeat: no-repeat;
+      width: 4px;
+      height: 0; }
+    .select-autocomplete__menu::-webkit-scrollbar {
+      width: 4px; }
+    .select-autocomplete__menu .ui-menu-item-wrapper {
+      height: 56px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: 15px !important;
+      padding-right: 20px !important;
+      font-family: "Montserrat", sans-serif;
+      float: none !important;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      color: #000000 !important;
+      position: relative !important;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: flex-start;
+      display: flex !important;
+      margin: 0 !important;
+      border: none !important; }
+      .select-autocomplete__menu .ui-menu-item-wrapper:hover, .select-autocomplete__menu .ui-menu-item-wrapper.ui-state-active, .select-autocomplete__menu .ui-menu-item-wrapper.active {
+        color: #000000 !important;
+        background: #eff3f8 !important; }

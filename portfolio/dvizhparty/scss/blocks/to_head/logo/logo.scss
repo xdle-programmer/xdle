@@ -1,0 +1,19 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.logo {
+  position: relative;
+  width: 244px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 41.28%;
+    background: url("/img/logo.svg");
+    background: url("/img/logo.png");
+    @include background-contain-center;
+  }
+
+}

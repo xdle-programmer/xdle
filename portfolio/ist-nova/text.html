@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+
+
+        <link rel="stylesheet" type="text/css" href="scss/styles/styles.css" media="screen, projection, print">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="plugins/owlcarousel2/assets/owl.theme.default.min.css">
+        <script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <title>Каталог</title>
+</head>
+
+<body>
+<div class="wrapper">
+
+
+    <header class="header">
+        <div class="header__mobile-background"></div>
+        <div class="header__block layout-main">
+            <div class="header__shops">
+                <div class="header__city">
+                    Ваш город:
+                    <div class="header__city-current open-modal" data-modal="#city-choiсe">Екатеринбург</div>
+                </div>
+                <a href="#" class="header__shops-link">Все магазины</a>
+            </div>
+
+            <a href="#" class="header__logo"></a>
+
+            <div class="header__contacts">
+                <div class="header__contacts-phone">+7 (343) 370-1-370</div>
+                <a href="#" class="header__contacts-login"></a>
+                <a href="#" class="header__contacts-basket">
+                    <div class="header__contacts-basket-count">45</div>
+                </a>
+            </div>
+        </div>
+        <div class="header__menu-close"></div>
+        <div class="header__menu">
+            <div class="header__menu-block layout-main">
+                <ul class="header__menu-list">
+                    <li class="header__menu-list-item active">
+                        <div class="header__menu-list-item-title">Для женщин</div>
+                        <div class="header__menu-inner">
+                            <div class="header__menu-inner-banner" style="background: url(img/banner.jpg)"></div>
+                            <div class="header__menu-inner-block layout-main">
+                                <div class="header__menu-inner-menu">
+                                    <div class="header__menu-inner-title">Для женщин</div>
+                                    <div class="header__menu-inner-item">
+                                        <div class="header__menu-inner-item-col">
+                                            <div class="header__menu-inner-item-title">Категории</div>
+                                            <div class="header__menu-inner-item-category-list category-list">
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ШУБЫ И МЕХА</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">КУРТКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ДУБЛЕНКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ПУХОВИКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ПАРКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ЖИЛЕТЫ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ПАЛЬТО</a>
+                                            </div>
+
+                                            <div class="mobile-hidden header__menu-inner-item-title">Фильтры</div>
+                                            <div class="mobile-hidden range-slider">
+                                                <div class="range-slider__inputs">
+                                                    <input type="number"
+                                                           class="range-slider__input range-slider__input--min">
+                                                    <input type="number"
+                                                           class="range-slider__input range-slider__input--max">
+                                                </div>
+                                                <div class="range-slider__item"></div>
+                                                <div class="range-slider__values">
+                                                    <div class="range-slider__value range-slider__value--min">
+                                                        <div class="range-slider__value-item"></div>
+                                                        <div class="range-slider__value-currency">руб</div>
+                                                    </div>
+                                                    <div class="range-slider__value range-slider__value--max">
+                                                        <div class="range-slider__value-item"></div>
+                                                        <div class="range-slider__value-currency">руб</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="mobile-hidden header__menu-inner-item-col header__menu-inner-item-col--padding">
+                                            <div class="filter">
+                                                <div class="filter__title">Материал</div>
+                                                <a href="#" class="filter__item">НОРКА</a>
+                                                <a href="#" class="filter__item">СТРИЖЕННАЯ НОРКА
+                                                    СОБОЛЬ</a>
+                                                <a href="#" class="filter__item">МУТОН</a>
+                                                <a href="#" class="filter__item">КОЖА</a>
+                                                <a href="#" class="filter__item">ЗАМША</a>
+                                                <a href="#" class="filter__item">КРОЛИК</a>
+                                                <a href="#" class="filter__item">БОБЕР</a>
+                                                <a href="#" class="filter__item">НУТРИЯ</a>
+                                                <a href="#" class="filter__item">ОВЧИНА</a>
+                                                <a href="#" class="filter__item">ЛИСА</a>
+                                                <a href="#" class="filter__item">КАРАКУЛЬЧА</a>
+                                                <a href="#" class="filter__item">ПИТОН</a>
+                                                <a href="#" class="filter__item">ШИНШИЛЛА</a>
+                                                <a href="#" class="filter__item">ЕНОТ</a>
+                                                <a href="#" class="filter__item">ТИНСУЛЕЙТ</a>
+                                                <a href="#" class="filter__item">АЛЬПАКА</a>
+                                                <a href="#" class="filter__item">КАШЕМИР</a>
+                                                <a href="#" class="filter__item">ШЕРСТЬ</a>
+                                                <a href="#" class="filter__item">ДЖИНСА</a>
+                                                <a href="#" class="filter__item">ПЕСЕЦ</a>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-hidden header__menu-inner-item-col header__menu-inner-item-col--padding">
+                                            <div class="filter">
+                                                <div class="filter__title">Бренд</div>
+                                                <a href="#" class="filter__item">ISNOVA</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Длина</div>
+                                                <a href="#" class="filter__item">ДЛИННЫЕ</a>
+                                                <a href="#" class="filter__item">КОРОТКИЕ</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Воротник</div>
+                                                <a href="#" class="filter__item">БЕЗ ВОРОТНИКА</a>
+                                                <a href="#" class="filter__item">ВОРОТНИК</a>
+                                                <a href="#" class="filter__item">КАПЮШОН</a>
+                                                <a href="#" class="filter__item">СТОЙКА</a>
+                                                <a href="#" class="filter__item">ШАНЕЛЬ</a>
+                                                <a href="#" class="filter__item">ОТЛОЖНОЙ</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Есть большие размеры?
+                                                </div>
+                                                <a href="#" class="filter__item">Есть</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Сезон</div>
+                                                <a href="#" class="filter__item">ЗИМА</a>
+                                                <a href="#" class="filter__item">ДЕМИСЕЗОН</a>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-hidden header__menu-inner-item-col header__menu-inner-item-col--padding">
+                                            <div class="filter">
+                                                <div class="filter__title">Цвет</div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_1"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_1" class="checkbox__label checkbox__label--green">ЗЕЛЕНЫЙ</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_2"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_2" class="checkbox__label checkbox__label--brown">Коричневый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_3"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_3" class="checkbox__label checkbox__label--red">Красный</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_4"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_4" class="checkbox__label checkbox__label--metall">Металлик</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_5"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_5" class="checkbox__label checkbox__label--lactic">Молочный</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_6"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_6" class="checkbox__label checkbox__label--multi">Мульти</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_7"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_7" class="checkbox__label checkbox__label--orange">Оранжевый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_8"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_8" class="checkbox__label checkbox__label--pink">Розовый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_9"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_9"
+                                                        class="checkbox__label checkbox__label--fox">Рыжый</label></div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_10"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_10" class="checkbox__label checkbox__label--gray">Серый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_11"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_11" class="checkbox__label checkbox__label--blue">Синий</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_12"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_12" class="checkbox__label checkbox__label--purple">Фиолетовый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_13"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_13" class="checkbox__label checkbox__label--black">Черный</label>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Модель</div>
+                                                <a href="#" class="filter__item">ПИЛОТ</a>
+                                                <a href="#" class="filter__item">ТРАНСФОРМЕР</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Дополнительные элементы
+                                                </div>
+                                                <a href="#" class="filter__item">С МЕХОМ</a>
+                                                <a href="#" class="filter__item">С ПОЯСОМ</a>
+                                                <a href="#" class="filter__item">СО СТРАЗАМИ</a>
+                                                <a href="#" class="filter__item">С ВЫШИВКОЙ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile-hidden header__menu-inner-promo">
+                                    <div class="header__menu-inner-title">Товар дня</div>
+                                    <a href="#" class="promo">
+                                        <div class="promo__item active" style="background: url(img/promo_1.jpg)">
+                                            <div class="promo__item-hover">
+                                                <div class="promo__item-title">Мутоновые шубы</div>
+                                                <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__menu-list-item">
+                        <div class="header__menu-list-item-title">Для мужчин</div>
+                        <div class="header__menu-inner">
+                            <div class="header__menu-inner-banner" style="background: url(img/banner.jpg)"></div>
+                            <div class="header__menu-inner-block layout-main">
+                                <div class="header__menu-inner-menu">
+                                    <div class="header__menu-inner-title">Для мужчин</div>
+                                    <div class="header__menu-inner-item">
+                                        <div class="header__menu-inner-item-col">
+                                            <div class="header__menu-inner-item-title">Категории</div>
+                                            <div class="header__menu-inner-item-category-list">
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ШУБЫ И МЕХА</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">КУРТКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ДУБЛЕНКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ПУХОВИКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ПАРКИ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ЖИЛЕТЫ</a>
+                                                <a href="#" class="header__menu-inner-item-category category-list__item">ПАЛЬТО</a>
+                                            </div>
+
+                                            <div class="mobile-hidden header__menu-inner-item-title">Фильтры</div>
+                                            <div class="mobile-hidden range-slider">
+                                                <div class="range-slider__inputs">
+                                                    <input type="number"
+                                                           class="range-slider__input range-slider__input--min">
+                                                    <input type="number"
+                                                           class="range-slider__input range-slider__input--max">
+                                                </div>
+                                                <div class="range-slider__item"></div>
+                                                <div class="range-slider__values">
+                                                    <div class="range-slider__value range-slider__value--min">
+                                                        <div class="range-slider__value-item"></div>
+                                                        <div class="range-slider__value-currency">руб</div>
+                                                    </div>
+                                                    <div class="range-slider__value range-slider__value--max">
+                                                        <div class="range-slider__value-item"></div>
+                                                        <div class="range-slider__value-currency">руб</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="mobile-hidden header__menu-inner-item-col header__menu-inner-item-col--padding">
+                                            <div class="filter">
+                                                <div class="filter__title">Материал</div>
+                                                <a href="#" class="filter__item">НОРКА</a>
+                                                <a href="#" class="filter__item">СТРИЖЕННАЯ НОРКА
+                                                    СОБОЛЬ</a>
+                                                <a href="#" class="filter__item">МУТОН</a>
+                                                <a href="#" class="filter__item">КОЖА</a>
+                                                <a href="#" class="filter__item">ЗАМША</a>
+                                                <a href="#" class="filter__item">КРОЛИК</a>
+                                                <a href="#" class="filter__item">БОБЕР</a>
+                                                <a href="#" class="filter__item">НУТРИЯ</a>
+                                                <a href="#" class="filter__item">ОВЧИНА</a>
+                                                <a href="#" class="filter__item">ЛИСА</a>
+                                                <a href="#" class="filter__item">КАРАКУЛЬЧА</a>
+                                                <a href="#" class="filter__item">ПИТОН</a>
+                                                <a href="#" class="filter__item">ШИНШИЛЛА</a>
+                                                <a href="#" class="filter__item">ЕНОТ</a>
+                                                <a href="#" class="filter__item">ТИНСУЛЕЙТ</a>
+                                                <a href="#" class="filter__item">АЛЬПАКА</a>
+                                                <a href="#" class="filter__item">КАШЕМИР</a>
+                                                <a href="#" class="filter__item">ШЕРСТЬ</a>
+                                                <a href="#" class="filter__item">ДЖИНСА</a>
+                                                <a href="#" class="filter__item">ПЕСЕЦ</a>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-hidden header__menu-inner-item-col header__menu-inner-item-col--padding">
+                                            <div class="filter">
+                                                <div class="filter__title">Бренд</div>
+                                                <a href="#" class="filter__item">ISNOVA</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Длина</div>
+                                                <a href="#" class="filter__item">ДЛИННЫЕ</a>
+                                                <a href="#" class="filter__item">КОРОТКИЕ</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Воротник</div>
+                                                <a href="#" class="filter__item">БЕЗ ВОРОТНИКА</a>
+                                                <a href="#" class="filter__item">ВОРОТНИК</a>
+                                                <a href="#" class="filter__item">КАПЮШОН</a>
+                                                <a href="#" class="filter__item">СТОЙКА</a>
+                                                <a href="#" class="filter__item">ШАНЕЛЬ</a>
+                                                <a href="#" class="filter__item">ОТЛОЖНОЙ</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Есть большие размеры?
+                                                </div>
+                                                <a href="#" class="filter__item">Есть</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Сезон</div>
+                                                <a href="#" class="filter__item">ЗИМА</a>
+                                                <a href="#" class="filter__item">ДЕМИСЕЗОН</a>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-hidden header__menu-inner-item-col header__menu-inner-item-col--padding">
+                                            <div class="filter">
+                                                <div class="filter__title">Цвет</div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_14"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_14" class="checkbox__label checkbox__label--green">ЗЕЛЕНЫЙ</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_15"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_15" class="checkbox__label checkbox__label--brown">Коричневый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_16"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_16" class="checkbox__label checkbox__label--red">Красный</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_17"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_17" class="checkbox__label checkbox__label--metall">Металлик</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_18"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_18" class="checkbox__label checkbox__label--lactic">Молочный</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_19"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_19" class="checkbox__label checkbox__label--multi">Мульти</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_20"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_20" class="checkbox__label checkbox__label--orange">Оранжевый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_21"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_21" class="checkbox__label checkbox__label--pink">Розовый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_22"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_22"
+                                                        class="checkbox__label checkbox__label--fox">Рыжый</label></div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_23"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_23" class="checkbox__label checkbox__label--gray">Серый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_24"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_24" class="checkbox__label checkbox__label--blue">Синий</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_25"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_25" class="checkbox__label checkbox__label--purple">Фиолетовый</label>
+                                                </div>
+                                                <div class="filter__item"><input type="checkbox" name="checkbox"
+                                                                                 id="checkbox_26"
+                                                                                 class="checkbox__input"/><label
+                                                        for="checkbox_26" class="checkbox__label checkbox__label--black">Черный</label>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Модель</div>
+                                                <a href="#" class="filter__item">ПИЛОТ</a>
+                                                <a href="#" class="filter__item">ТРАНСФОРМЕР</a>
+                                            </div>
+                                            <div class="filter">
+                                                <div class="filter__title">Дополнительные элементы
+                                                </div>
+                                                <a href="#" class="filter__item">С МЕХОМ</a>
+                                                <a href="#" class="filter__item">С ПОЯСОМ</a>
+                                                <a href="#" class="filter__item">СО СТРАЗАМИ</a>
+                                                <a href="#" class="filter__item">С ВЫШИВКОЙ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile-hidden header__menu-inner-promo">
+                                    <div class="header__menu-inner-title">Товар дня</div>
+                                    <a href="#" class="promo">
+                                        <div class="promo__item active" style="background: url(img/promo_1.jpg)">
+                                            <div class="promo__item-hover">
+                                                <div class="promo__item-title">Мутоновые шубы</div>
+                                                <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__menu-list-item"><a href="#"
+                                                          class="header__menu-list-item-title header__menu-list-item-title--link">Распродажа</a>
+                    </li>
+                    <li class="header__menu-list-item"><a href="#"
+                                                          class="header__menu-list-item-title header__menu-list-item-title--link">Рассрочка</a>
+                    </li>
+                    <li class="header__menu-list-item"><a href="#"
+                                                          class="header__menu-list-item-title header__menu-list-item-title--link">Акции</a>
+                    </li>
+                    <li class="header__menu-list-item"><a href="#"
+                                                          class="header__menu-list-item-title header__menu-list-item-title--link">Преимущества</a>
+                    </li>
+                </ul>
+
+                <div class="header__menu-search search-row">
+                    <input class="search-row__input" placeholder="Поиск по сайту">
+                    <button class="search-row__button"></button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="header__mobile">
+            <a href="#" class="header__mobile-basket"></a>
+            <div class="header__mobile-button-menu"></div>
+            <a href="#" class="header__mobile-login"></a>
+            <a href="#" class="header__mobile-favorites"></a>
+            <div class="header__mobile-search open-modal" data-modal="#search"></div>
+            <div class="header__mobile-phone">
+                <div class="header__mobile-phone-desc">Круглосуточный номер:</div>
+                <a href="tel:88007778999" class="header__mobile-phone-number">88007778999</a>
+            </div>
+        </div>
+
+    </header>
+    <div class="modal">
+
+    </div>
+    <div class="banner" style="background: url(img/banner.jpg)"></div>
+    <div class="layout-main">
+        <div class="breadcrumbs">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+            <a href="#" class="breadcrumbs__link">Каталог</a>
+            <div class="breadcrumbs__text">Продукт</div>
+        </div>
+    </div>
+
+
+    <div class="layout-main">
+        <h1>«РАССРОЧКА»: кредит без первоначального взноса и переплат</h1>
+        <h2>В магазине меха и кожи «ISTNOVA» вы всегда можете приобрести понравившееся изделие в рассрочку. Не стоит
+            ограничивать себя в выборе или откладывать покупку «на потом». Воспользуйтесь услугой и сразу же
+            наслаждаетесь покупкой!</h2>
+        <p>Приобрести в рассрочку можно практически любое изделие, по выгодным условиям для любого бюджета, достаточно
+            лишь показать паспорт. Сомневаетесь, что это действительно выгодно или все же боитесь процентов?</p>
+        <h2>Давайте разберемся!</h2>
+        <p><b>Рассрочка</b> – это кредит, но кредит без переплаты. Проценты по кредиту действительно есть, но ложатся
+            они не на покупателя, а на магазин. Как это? Мы специально договорились с банком и дали скидку на товар -
+            именно эта скидка и идет на погашение процентов по кредиту.</p>
+        <h2>Условия предоставления кредита (рассрочки):</h2>
+        <p>Кредит предоставляется сроком от 6 до 24 месяцев. Вы можете самостоятельно выбрать удобный для вас срок в
+            рамках указанного диапазона.</p>
+        <ul class="orange">
+            <li><p>Валюта кредита – рубли.</p></li>
+            <li><p>Кредитный лимит: от <span class="inline orange">10 000 руб.</span> до <span class="inline orange">200 000</span>
+                руб.;</p></li>
+            <li><p>Комиссия за обслуживание текущего кредитного счета — 0 %</p></li>
+            <li><p>Комиссия за предоставление кредита — 0 рублей.</p></li>
+        </ul>
+        <p>Погашение кредита осуществляется ежемесячно равными частями, согласно графику погашения, рассчитанному при
+            оформлении кредита.
+            Возможно полное досрочное погашение<sup class="footnote">*</sup> задолженности по кредиту, плат и штрафов за
+            полное досрочное погашение
+            не взимается!</p>
+
+        <p class="p-small"><sup class="footnote">*</sup> Полное досрочное погашение осуществляется в соответствии с
+            «Общими условиями предоставления
+            физическим лицам Потребительского кредита в ОАО «Альфа-Банк»</p>
+        <h2>Простые действия – Быстрый результат! (По документам)</h2>
+
+
+        <p>Наши сотрудники помогут подобрать наиболее подходящий вариант кредита с учетом Ваших индивидуальных
+            потребностей. Сотрудник расскажет Вам обо всех условиях оформления кредита. Для оформления кредита необходим
+            – паспорт гражданина Российской Федерации.</p>
+        <p>Погашение кредита:</p>
+        <p>Внесение средств для погашения задолженности по кредиту через банкоматы/устройства с функцией внесения
+            наличных осуществляется бесплатно более чем в 300 городах России. (Внесение средств для погашения
+            задолженности по кредиту через банкоматы/устройства с функцией внесения наличных АО «АЛЬФА-БАНК»
+            осуществляется бесплатно. При использовании платежных систем – партнеров АО «АЛЬФА-БАНК» взимается комиссия
+            со стороны данных платежных систем).</p>
+
+        <p>Более подробную информацию об условиях потребительского кредита АО «АЛЬФА-БАНК» Вы можете узнать на сайте
+            www.alfabank.ru и в круглосуточном Телефонном центре «Альфа-Консультант» по телефонам:
+            8 (800) 200-00-00 (для регионов) и 8 (495) 788-88-78 (для Москвы).</p>
+        <br>
+        <p>Кредит предоставляет АО "АЛЬФА-БАНК", Генеральная лицензия Банка России на осуществление банковских операций
+            №1326 от 15 января 2015г.</p>
+
+    </div>
+
+    <div class="layout-main">
+        <div class="title">Недавно просмотренные товары</div>
+        <div class="promo__slider-block">
+
+            <div class="promo--slider owl-carousel">
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo">
+                    <div class="promo__item" style="background: url(img/promo_1.jpg)">
+                        <div class="promo__item-hover">
+                            <div class="promo__item-title">Мутоновые шубы</div>
+                            <div class="promo__item-desc">Рассрочка от 929 р. /месяц</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var device;
+        var touch;
+        var apple;
+        if (navigator.userAgent.toUpperCase().indexOf('android'.toUpperCase()) + 1) {
+            device = 'android'
+        } else if (navigator.userAgent.toUpperCase().indexOf('iphone'.toUpperCase()) + 1) {
+            device = 'iphone';
+        } else if (navigator.userAgent.toUpperCase().indexOf('ipad'.toUpperCase()) + 1) {
+            device = 'ipad';
+        } else if (navigator.userAgent.toUpperCase().indexOf('macintosh'.toUpperCase()) + 1) {
+            device = 'macintosh';
+        } else if (navigator.userAgent.toUpperCase().indexOf('windows'.toUpperCase()) + 1) {
+            device = 'windows';
+        } else {
+            device = 'windows';
+        }
+
+
+        if (device === 'iphone' || device === 'ipad' || device === 'android') {
+            document.getElementsByTagName('body')[0].setAttribute('class', 'touch-device');
+            touch = true;
+            apple = true;
+        }
+    </script>
+
+
+
+    <div class="mobile-hidden" style="position: fixed;bottom: 0;
+    right: 30px;width: 300px;height: 38px;
+    z-index: 10;">
+        <img src="img/temp-jivosite.png">
+    </div>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__top-item footer__top-item--has-inner mobile-hidden">Информация
+                <div class="footer__top-item-inner">
+                    <a class="footer__top-item-inner-item" href="#">Карта сайта</a>
+                    <a class="footer__top-item-inner-item" href="#">ПРАВИЛА ПРОДАЖИ</a>
+                    <a class="footer__top-item-inner-item" href="#">УСЛОВИЯ ВОЗВРАТА</a>
+                    <a class="footer__top-item-inner-item" href="#">Рассрочка</a>
+                    <a class="footer__top-item-inner-item" href="#">Политика конфиденциальности</a>
+                    <a class="footer__top-item-inner-item" href="#">Бонусная программа</a>
+                </div>
+
+            </div>
+            <a href="tel:+73832922700" class="footer__top-item">+7 (383) 292-27-00</a>
+            <div class="footer__top-item">info@istnova.com</div>
+            <a href="#" class="footer__top-item">Акции</a>
+
+
+        </div>
+        <div class="footer__main layout-main">
+            <div class="footer__links">
+                <div class="footer__col">
+                    <div class="footer__col-title">ДЛЯ ЖЕНЩИН</div>
+                    <a href="#" class="footer__col-link">ШУБЫ И МЕХА</a>
+                    <a href="#" class="footer__col-link">КУРТКИ</a>
+                    <a href="#" class="footer__col-link">ДУБЛЕНКИ</a>
+                    <a href="#" class="footer__col-link">ПУХОВИКИ</a>
+                    <a href="#" class="footer__col-link">ПАРКИ</a>
+                    <a href="#" class="footer__col-link">ЖИЛЕТЫ</a>
+                    <a href="#" class="footer__col-link">ПАЛЬТО</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__col-title">ДЛЯ МУЖЧИН</div>
+                    <a href="#" class="footer__col-link">КУРТКИ</a>
+                    <a href="#" class="footer__col-link">ДУБЛЕНКИ</a>
+                    <a href="#" class="footer__col-link">ПУХОВИКИ</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__col-title">ИНФОРМАЦИЯ</div>
+                    <a href="#" class="footer__col-link">КАРТА САЙТА</a>
+                    <a href="#" class="footer__col-link">ПРАВИЛА ПРОДАЖИ</a>
+                    <a href="#" class="footer__col-link">УСЛОВИЯ ВОЗВРАТА</a>
+                    <a href="#" class="footer__col-link">РАССРОЧКА</a>
+                    <a href="#" class="footer__col-link">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                    <a href="#" class="footer__col-link">БОНУСНАЯ ПРОГРАММА</a>
+                    <a href="#" class="footer__col-link">ПОДБОРКИ ТОВАРОВ</a>
+
+                </div>
+            </div>
+            <div class="footer__social">
+                <div class="footer__social-block">
+                    <a href="https://vk.com/istnovaofficial" class="footer__social-icon footer__social-icon--vk"></a>
+                    <a href="https://ok.ru/group/52097695285354" class="footer__social-icon footer__social-icon--ok"></a>
+                    <a href="https://www.facebook.com/istnovaofficial/" class="footer__social-icon footer__social-icon--fb"></a>
+                    <a href="https://www.instagram.com/istnova_official/" class="footer__social-icon footer__social-icon--inst"></a>
+                    <a href="https://www.youtube.com/channel/UCAOqYbnVm8z34nQcpldUw1g" class="footer__social-icon footer__social-icon--youtube"></a>
+                </div>
+                <p>E-MAIL: INFO@IST-NOVA.RU</p>
+            </div>
+        </div>
+        <div class="footer__about layout-main">
+            <div class="footer__about-copyright">
+                © 2016-2018 «ИСТ-НОВА»
+                <br>
+                <br>
+                ВСЕ ЦЕНЫ НА САЙТЕ УКАЗАНЫ СО СКИДКОЙ. ВСЯ ПРЕДСТАВЛЕННАЯ НА САЙТЕ ИНФОРМАЦИЯ, КАСАЮЩАЯСЯ СТОИМОСТИ ТОВАРОВ, НОСИТ ИНФОРМАЦИОННЫЙ ХАРАКТЕР И НИ ПРИ КАКИХ УСЛОВИЯХ НЕ ЯВЛЯЕТСЯ ПУБЛИЧНОЙ ОФЕРТОЙ.
+
+            </div>
+            <div class="footer__about-create">
+                <a href="http://www.siteseo.ru/" class="footer__about-create-text">СОЗДАНИЕ САЙТА И ПРОДВИЖЕНИЕ САЙТА</a>
+                <a href="http://abaris.ru/" class="footer__about-create-logo">ABARIS.RU</a>
+            </div>
+        </div>
+    </footer>
+    <div class="modal__background"></div>
+    <div class="modal__block" id="city-choiсe">
+        <div class="modal__close"></div>
+
+        <div class="modal__content">
+            <div class="modal__title">
+                Выберите Ваш город
+            </div>
+            <a class="modal__link modal__link--big" href="#">Все города</a>
+            <a class="modal__link" href="#">Тюмень</a>
+            <a class="modal__link" href="#">Новосибирск</a>
+            <a class="modal__link" href="#">Екатеринбург</a>
+            <a class="modal__link" href="#">Новокузнецк</a>
+            <a class="modal__link" href="#">Иркутск</a>
+            <a class="modal__link" href="#">Омск</a>
+            <a class="modal__link" href="#">Красноярск</a>
+            <a class="modal__link" href="#">Якутск</a>
+            <a class="modal__link" href="#">Кемерово</a>
+        </div>
+    </div>
+    <div class="modal__block" id="search">
+        <div class="modal__close"></div>
+
+        <div class="modal__content">
+            <div class="modal__title">
+                Поиск
+            </div>
+            <div class="modal__search search-row">
+                <input class="search-row__input modal__search-input" placeholder="Поиск по сайту">
+                <button class="search-row__button"></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

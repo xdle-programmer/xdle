@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Где Лекарство</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+</head>
+
+<body>
+
+<div class="banner banner--main" style="background: url(img/banner.jpg)"></div>
+
+<header class="header">
+    <div class="header__block layout">
+        <div class="header__logo"></div>
+        <div class="header__mobile-button"></div>
+        <div class="header__city">Санкт-Петербург</div>
+        <div class="header__search">
+            <div class="header__search-wrapper">
+                <input class="header__search-input" placeholder="Введите название лекарства">
+                <div class="header__search-button"></div>
+                <div class="header__search-close"></div>
+            </div>
+            <div class="header__search-toggle-button"></div>
+        </div>
+
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-book.png">
+            </div>
+            <div class="header__menu-button-text">Справочники</div>
+        </a>
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-pharmacy.png">
+            </div>
+            <div class="header__menu-button-text">Для аптек</div>
+        </a>
+        <a href="#" class="header__menu-button header__menu-button--basket">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-basket.png">
+            </div>
+            <div class="header__menu-button-text">Корзина</div>
+        </a>
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-login.png">
+            </div>
+            <div class="header__menu-button-text">Войти</div>
+        </a>
+    </div>
+</header>
+
+<div class="wrapper">
+
+    <div class="wrapper__map wrapper__map-toggle--hidden">
+        <div id="YMapsID"
+             style="width: 100%;height: 100%;background-size: cover;background: url(img/map-example.jpg)"></div>
+    </div>
+
+    <div class="wrapper__left-col scroll-holder">
+        <div class="menu">
+            <div class="menu__title">Каталог товаров</div>
+            <div class="menu__items">
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Витамины и БАДы</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Ежедневная гигиена</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Красота и уход</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Лекарства</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Лечебная косметика</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Медтехника и изделия медицинского назначения</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Товары для детей и мам</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Товары для здоровья</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper__center-col wrapper__map-toggle">
+
+        <div class="title">Список аптек</div>
+
+        <div class="district-filter">
+            <div class="district-filter__header">
+                <div class="district-filter__button">Район</div>
+                <div class="district-filter__list">
+                    <div class="district-filter__list-item district-filter__list-item--all">Все районы</div>
+                    <div class="district-filter__list-item" data-district="Дзержинский">Дзержинский</div>
+                    <div class="district-filter__list-item" data-district="Железнодорожный">Железнодорожный</div>
+                    <div class="district-filter__list-item" data-district="Заельцовский">Заельцовский</div>
+                    <div class="district-filter__list-item" data-district="Калининский">Калининский</div>
+                    <div class="district-filter__list-item" data-district="Кировский">Кировский</div>
+                    <div class="district-filter__list-item" data-district="Кольцово">Кольцово</div>
+                    <div class="district-filter__list-item" data-district="Краснообск">Краснообск</div>
+                    <div class="district-filter__list-item" data-district="Ленинский">Ленинский</div>
+                    <div class="district-filter__list-item" data-district="Обь">Обь</div>
+                    <div class="district-filter__list-item" data-district="Октябрьский">Октябрьский</div>
+                    <div class="district-filter__list-item" data-district="Первомайский">Первомайский</div>
+                    <div class="district-filter__list-item" data-district="Советский">Советский</div>
+                    <div class="district-filter__list-item" data-district="Центральный">Центральный</div>
+                </div>
+            </div>
+            <div class="district-filter__result"></div>
+        </div>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__wrapper">
+                <div class="breadcrumbs__items">
+                    <a href="#" class="breadcrumbs__item">A</a>
+                    <a href="#" class="breadcrumbs__item">A12</a>
+                    <a href="#" class="breadcrumbs__item">A12C</a>
+                    <div class="breadcrumbs__item active">A12CX другие минеральные вещества</div>
+                </div>
+            </div>
+        </div>
+        <div class="basket">
+            <div class="basket__table">
+                <div class="basket__table-header">
+                    <div class="basket__table-row basket__table-row--header">
+                        <div class="basket__table-header-item">Товар</div>
+                        <div class="basket__table-header-item">Название</div>
+                        <div class="basket__table-header-item">Количество</div>
+                        <div class="basket__table-header-item">Номер заказа</div>
+                        <div class="basket__table-header-item">дата/время оформления заказа</div>
+                        <div class="basket__table-header-item">Статус заказа</div>
+                    </div>
+                </div>
+                <div class="basket__table-items">
+                    <div class="basket__table-row">
+                        <div class="basket__table-item-img" style="background: url(img/example.jpg)"></div>
+                        <div class="basket__table-item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                        <div class="basket__table-item">
+                            <div class="counter">
+                                <div class="counter__button counter__button--minus"></div>
+                                <div class="counter__number">1</div>
+                                <div class="counter__button counter__button--plus"></div>
+                            </div>
+                        </div>
+                        <div class="basket__table-item">5693256</div>
+                        <div class="basket__table-item">27,09,2019</div>
+                        <div class="basket__table-item-state">комплектуется</div>
+                        <div class="basket__table-button basket__table-button--del">Удалить</div>
+                    </div>
+                    <div class="basket__table-row">
+                        <div class="basket__table-item-img" style="background: url(img/example.jpg)"></div>
+                        <div class="basket__table-item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                        <div class="basket__table-item">
+                            <div class="counter">
+                                <div class="counter__button counter__button--minus"></div>
+                                <div class="counter__number">1</div>
+                                <div class="counter__button counter__button--plus"></div>
+                            </div>
+                        </div>
+                        <div class="basket__table-item">5693256</div>
+                        <div class="basket__table-item">27,09,2019</div>
+                        <div class="basket__table-item-state">комплектуется</div>
+                        <div class="basket__table-button basket__table-button--repeat">Повторить</div>
+                    </div>
+                    <div class="basket__table-row">
+                        <div class="basket__table-item-img" style="background: url(img/example.jpg)"></div>
+                        <div class="basket__table-item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                        <div class="basket__table-item">
+                            <div class="counter">
+                                <div class="counter__button counter__button--minus"></div>
+                                <div class="counter__number">1</div>
+                                <div class="counter__button counter__button--plus"></div>
+                            </div>
+                        </div>
+                        <div class="basket__table-item">5693256</div>
+                        <div class="basket__table-item">27,09,2019</div>
+                        <div class="basket__table-item-state">комплектуется</div>
+                        <div class="basket__table-button basket__table-button--change">Изменить</div>
+                    </div>
+                </div>
+                <div class="basket__table-footer">
+                    <div class="basket__table-footer-buttons">
+                        <div class="basket__table-footer-button basket__table-footer-button--white">Продолжить покупки
+                        </div>
+                        <div class="basket__table-footer-button">Оформить заказ</div>
+                    </div>
+                    <div class="basket__table-footer-result">
+                        <div class="basket__table-footer-result-text">15 товаров на сумму:</div>
+                        <div class="basket__table-footer-result-price">3456 руб.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="basket__natural">
+                <div class="basket__natural-item">
+                    <div class="basket__natural-block">
+                        <div class="basket__natural-title">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+                        <div class="basket__contact">
+                            <div class="basket__contact-title">Ваши данные</div>
+                            <div class="basket__contact-subtitle">Персональная информация</div>
+                            <div class="basket__contact-items">
+                                <div class="basket__contact-item">
+                                    <div class="basket__contact-item-name">Фамилия</div>
+                                    <input class="basket__contact-item-input">
+                                </div>
+                                <div class="basket__contact-item">
+                                    <div class="basket__contact-item-name">E-Mail</div>
+                                    <input class="basket__contact-item-input">
+                                </div>
+                                <div class="basket__contact-item">
+                                    <div class="basket__contact-item-name">Имя</div>
+                                    <input class="basket__contact-item-input">
+                                </div>
+                                <div class="basket__contact-item">
+                                    <div class="basket__contact-item-name">Телефон</div>
+                                    <input class="basket__contact-item-input">
+                                </div>
+                                <div class="basket__contact-item">
+                                    <div class="basket__contact-item-name">Отчество</div>
+                                    <input class="basket__contact-item-input">
+                                </div>
+                                <div class="basket__contact-item">
+                                    <div class="basket__contact-item-name">Пол</div>
+
+                                    <div class="basket__contact-item-radio-block">
+                                        <input class="basket__contact-item-radio-input" id="radio_1" name="test_1"
+                                               value="radio_1"
+                                               type="radio"/>
+                                        <label class="basket__contact-item-radio-label" for="radio_1">Мужской</label>
+
+                                        <input class="basket__contact-item-radio-input" id="radio_2" name="test_1"
+                                               value="radio_1"
+                                               type="radio"/>
+                                        <label class="basket__contact-item-radio-label" for="radio_2">Женский</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__contact-item basket__contact-item--top">
+                                <div class="basket__contact-item-name">Адрес доставки</div>
+                                <div class="basket__contact-address">
+                                    <div class="basket__contact-address-item">
+                                        <div class="basket__contact-address-input-block">
+                                            <input class="basket__contact-item-radio-input" id="radio_3" name="test_2"
+                                                   value="radio_1"
+                                                   type="radio"/>
+                                            <label class="basket__contact-item-radio-label" for="radio_3">196256 РФ, г.
+                                                Санкт-Петербург, ул. Ленина 67 -А </label>
+                                            <input class="basket__contact-item-input hide" placeholder="Адрес" value="196256 РФ, г. Санкт-Петербург, ул. Ленина 67 -А">
+                                        </div>
+                                        <div class="basket__contact-address-controls">
+                                            <div class="basket__contact-address-change basket__contact-address-change--edit active">Изменить</div>
+                                            <div class="basket__contact-address-change basket__contact-address-change--save">Сохранить</div>
+                                            <div class="basket__contact-address-del">Удалить</div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__contact-address-item">
+                                        <div class="basket__contact-address-input-block">
+                                            <input class="basket__contact-item-radio-input" id="radio_4" name="test_2"
+                                                   value="radio_1"
+                                                   type="radio"/>
+                                            <label class="basket__contact-item-radio-label" for="radio_4">196256 РФ, г.
+                                                Санкт-Петербург, ул. Ленина 67 -А </label>
+                                            <input class="basket__contact-item-input hide" placeholder="Адрес" value="196256 РФ, г. Санкт-Петербург, ул. Ленина 67 -А">
+                                        </div>
+                                        <div class="basket__contact-address-controls">
+                                            <div class="basket__contact-address-change basket__contact-address-change--edit active">Изменить</div>
+                                            <div class="basket__contact-address-change basket__contact-address-change--save">Сохранить</div>
+                                            <div class="basket__contact-address-del">Удалить</div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__contact-address-item">
+                                        <div class="basket__contact-address-input-block">
+                                            <input class="basket__contact-item-radio-input" id="radio_5" name="test_2"
+                                                   value="new_address"
+                                                   type="radio"/>
+                                            <label class="basket__contact-item-radio-label" for="radio_5">Новый адрес</label>
+                                            <input class="basket__contact-item-input hide" placeholder="Адрес">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__table-footer-button">ПРодолжить</div>
+                        </div>
+
+
+                    </div>
+                    <div class="basket__natural-block basket__custom-radio-block">
+                        <div class="basket__natural-title">Доставка</div>
+
+                        <div class="basket__custom-radio active">
+                            <div class="basket__custom-radio-header">
+                                <div class="basket__custom-radio-header-val">Курьерская доставка</div>
+                                <div class="basket__custom-radio-header-price">1000 РУБ</div>
+                            </div>
+                            <div class="basket__custom-radio-text">
+                                Доставка ограничивается только определенной страной и регионом. Стоимость доставки рассчитывается на основании итоговой стоимости заказа либо веса отправления.
+                                <br>
+                                <br>
+                                Приблизительное время доставки: <b>24 октября 2019г.</b>
+                            </div>
+                        </div>
+
+                        <div class="basket__custom-radio">
+                            <div class="basket__custom-radio-header">
+                                <div class="basket__custom-radio-header-val">Самовывоз из аптеки</div>
+                                <div class="basket__custom-radio-header-price">1000 РУБ</div>
+                            </div>
+                            <div class="basket__custom-radio-text">
+                                Самовывоз из ближайшей точки выдачи (список точек доступен в виде списка)
+                                <br>
+                                <br>
+                                <div class="select">
+                                    <select>
+                                        <option>Аптека «Гринвич» (100 руб.)</option>
+                                        <option>Аптека «Гринвич» (200 руб.)</option>
+                                        <option>Аптека «Гринвич» (300 руб.)</option>
+                                        <option>Аптека «Гринвич» (400 руб.)</option>
+                                        <option>Аптека «Гринвич» (500 руб.)</option>
+                                        <option>Аптека «Гринвич» (600 руб.)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="basket__custom-radio">
+                            <div class="basket__custom-radio-header">
+                                <div class="basket__custom-radio-header-val">Почта России</div>
+                                <div class="basket__custom-radio-header-price">1000 РУБ</div>
+                            </div>
+                            <div class="basket__custom-radio-text">
+                                Расчет стоимости доставки по алгоритму, опубликованному на <a href="#">сайте Почты России</a> для отправления посылок.
+                                <br>
+                                <br>
+                                Приблизительное время доставки: <b>24 октября 2019г.</b>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="basket__natural-block basket__custom-radio-block">
+                        <div class="basket__natural-title">Оплата</div>
+
+                        <div class="basket__natural-block-two-col">
+                        <div class="basket__custom-radio active">
+                            <div class="basket__custom-radio-header">
+                                <div class="basket__custom-radio-header-val">Наличные</div>
+                            </div>
+                            <div class="basket__custom-radio-text">
+                                Оплата наличными при получении заказа
+                            </div>
+                        </div>
+
+                        <div class="basket__custom-radio">
+                            <div class="basket__custom-radio-header">
+                                <div class="basket__custom-radio-header-val">Банковская карта</div>
+                            </div>
+                            <div class="basket__custom-radio-text">
+                                Оплата банковскими картами Visa MasterCard
+                            </div>
+                        </div>
+
+                        <div class="basket__custom-radio">
+                            <div class="basket__custom-radio-header">
+                                <div class="basket__custom-radio-header-val">Оплата по счету</div>
+                            </div>
+                            <div class="basket__custom-radio-text">
+                                Оплата безналичным расчетом
+                            </div>
+                        </div>
+
+                        <div class="basket__custom-radio">
+                            <div class="basket__custom-radio-header">
+                                <div class="basket__custom-radio-header-val">Яндекс. Деньги</div>
+                            </div>
+                            <div class="basket__custom-radio-text">
+                                Оплата через платежную систему Яндекс.Деньги
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="basket__natural-block">
+                        <div class="basket__natural-title">Комментарий</div>
+
+                        <div class="basket__contact-item">
+                            <div class="basket__contact-item-name">Комментарий</div>
+                            <textarea class="basket__contact-item-input basket__contact-item-input--big"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__natural-item">
+                    <div class="basket__natural-block">
+                        <div class="basket__natural-title">Подтверждение</div>
+
+                        <div class="basket__confirm-row">
+                            <div class="basket__confirm-photo" style="background: url(img/example.jpg)"></div>
+                            <div class="basket__confirm-desc">
+                                <div class="basket__confirm-desc-name">Аспиратор назальный детский, Бэби-Вак</div>
+                                <div class="basket__confirm-desc-text">1236 руб. х 2 шт</div>
+                            </div>
+                        </div>
+                        <div class="basket__confirm-row">
+                            <div class="basket__confirm-photo" style="background: url(img/example.jpg)"></div>
+                            <div class="basket__confirm-desc">
+                                <div class="basket__confirm-desc-name">Аспиратор назальный детский, Бэби-Вак</div>
+                                <div class="basket__confirm-desc-text">1236 руб. х 2 шт</div>
+                            </div>
+                        </div>
+
+                        <div class="basket__confirm-subresult">
+                            <div class="basket__confirm-subresult-text">2 товара на сумму:</div>
+                            <div class="basket__confirm-subresult-val">3456 руб.</div>
+                        </div>
+                        <div class="basket__confirm-subresult">
+                            <div class="basket__confirm-subresult-text">Доставка:<br>самовывоз из аптеки «Гринвич» </div>
+                            <div class="basket__confirm-subresult-val">100 руб.</div>
+                        </div>
+                        <div class="basket__confirm-result">
+                            <div class="basket__confirm-result-text">Итого</div>
+                            <div class="basket__confirm-result-val">3556 руб.</div>
+                        </div>
+
+                        <div class="basket__table-footer-button basket__table-footer-button--fill">Оформить заказ</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="wrapper__right-col scroll-holder">
+
+    </div>
+    <div class="wrapper__switch scroll-holder">
+        <div class="wrapper__switch-button wrapper__switch-button--map"></div>
+        <div class="wrapper__switch-button wrapper__switch-button--list active"></div>
+    </div>
+    <div class="wrapper__filter scroll-holder">
+        <div class="wrapper__filter-button">
+            <div class="wrapper__filter-button-icon"></div>
+            <div class="wrapper__filter-button-text">Фильтр</div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer__top layout">
+        <div class="footer__logo"></div>
+        <div class="footer__social">
+            <div class="footer__social-title">Для подписчиков</div>
+            <div class="footer__social-items">
+                <div class="footer__social-item footer__social-item--tw"></div>
+                <div class="footer__social-item footer__social-item--fb"></div>
+                <div class="footer__social-item footer__social-item--yt"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom layout">
+        <div class="footer__copyright">
+            © 2019. Все права защищены
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<script src="plugins/jquery.maskedinput.min.js"></script>
+<script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>

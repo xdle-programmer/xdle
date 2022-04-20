@@ -1,0 +1,30 @@
+.switch {
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border-radius: 25px;
+  background: #24292d;
+  border: 2px solid #24292d;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  @media (max-width: 767px) {
+    .switch {
+      background: #000; } }
+  .switch:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(to right, #264de4, #02ecff);
+    transition: all .2s ease-in;
+    border-radius: 50%; }
+  .switch:checked:after {
+    transform: translateX(28px); }

@@ -1,0 +1,211 @@
+.settings {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
+  border-radius: 3px;
+  background-color: #ffffff;
+  margin-bottom: 25px; }
+  .settings--pass {
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 767px) {
+      .settings--pass {
+        width: 100%; } }
+  .settings__header {
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7e7e7; }
+    @media (max-width: 767px) {
+      .settings__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+  .settings__name {
+    color: #0092E8;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.76px; }
+    @media (max-width: 767px) {
+      .settings__name {
+        margin-bottom: 15px; } }
+  .settings__control {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end; }
+    .settings__control--right {
+      margin-left: auto; }
+      @media (max-width: 767px) {
+        .settings__control--right {
+          margin-left: auto;
+          margin-right: auto; } }
+  .settings__button {
+    padding: 5px 20px;
+    border-radius: 30px;
+    color: #ffffff;
+    background: #0092E8;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    margin-left: 10px; }
+    .settings__button--invert {
+      background: transparent;
+      color: #0092E8; }
+    @media (max-width: 767px) {
+      .settings__button {
+        margin: 0 10px; } }
+  .settings__item {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    color: #333333; }
+    .settings__item--user {
+      grid-template-columns: 150px 1fr 1fr;
+      grid-gap: 40px; }
+    @media (max-width: 767px) {
+      .settings__item {
+        grid-template-columns: 1fr;
+        grid-gap: 10px; } }
+    .settings__item--one-col {
+      grid-template-columns: 1fr;
+      grid-gap: 0; }
+  .settings__item-img {
+    width: 150px;
+    height: 150px;
+    background-image: url(../../../img/user-pic-default.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 767px) {
+      .settings__item-img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px; } }
+  .settings__subname {
+    color: #b9b9b9;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
+  .settings__item-row {
+    margin-bottom: 20px;
+    position: relative; }
+  .settings__contact {
+    padding-left: 40px;
+    position: relative; }
+    .settings__contact:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .settings__contact--name:after {
+      width: 20px;
+      height: 20px;
+      background: url(../../../img/user_icon.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .settings__contact--map:after {
+      width: 14px;
+      height: 20px;
+      background: url(../../../img/place_icon.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      left: 3px; }
+    .settings__contact--mail:after {
+      width: 20px;
+      height: 16px;
+      background: url(../../../img/mail_icon.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .settings__contact--phone:after {
+      width: 16px;
+      height: 16px;
+      background: url(../../../img/phone-icon.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+  .settings__item-check {
+    padding-left: 35px;
+    position: relative; }
+    .settings__item-check:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background-color: #333333; }
+    .settings__item-check:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 5px;
+      top: 49%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 9px;
+      background: url(../../../img/done_icon.svg);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+    .settings__item-check--label {
+      cursor: pointer; }
+    .settings__item-check--label:before {
+      background: #0092E8; }
+    .settings__item-check--label:after {
+      opacity: 0; }
+    .settings__item-check-input:checked + .settings__item-check--label:after {
+      opacity: 1; }
+  .settings__item-check-input {
+    display: none; }
+  .settings__input {
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    padding-left: 10px; }
+  .settings__input-desc {
+    color: #b9b9b9;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 5px; }
+  .settings__success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px; }
+  .settings__success-icon {
+    width: 60px;
+    height: 60px;
+    background: url(../../../img/setting-success.svg); }
+  .settings__success-title {
+    color: #0092E8;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.76px;
+    margin: 10px 0; }
+  .settings__success-text {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.61px;
+    text-align: center; }

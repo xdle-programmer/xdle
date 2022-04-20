@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles/styles.css">
+    <title>Чат (много сообщений, много контактов)</title>
+</head>
+
+<body>
+
+<div class="layout">
+        <div class="layout__preloader show">
+            <div class="layout__preloader-inner layout__list" style="opacity: 0;">
+                <div class="layout__list-header chat__list-header">
+                    <div class="chat__search">
+                        <div class="chat__search-button"></div>
+                        <input class="chat__search-input" placeholder="Search">
+                    </div>
+                    <div class="chat__bookmarks">839</div>
+                </div>
+
+                <div class="layout__list-content">
+                    <div class="chat__list-items">
+                        <div class="chat__list-item chat__list-item--bookmark chat__list-item--active chat__list-item--unread">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">19:30</div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item chat__list-item--bookmark chat__list-item--unread">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item chat__list-item--bookmark">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item">
+                            <div class="chat__list-item-mark"></div>
+                            <div class="chat__list-item-desc">
+                                <div class="chat__list-item-desc-name">User 102</div>
+                                <div class="chat__list-item-desc-text">Привет! Подскажите какие мне продукты
+                                    использовать для …
+                                </div>
+                            </div>
+                            <div class="chat__list-item-info">
+                                <div class="chat__list-item-info-bookmark"></div>
+                                <div class="chat__list-item-info-time">
+                                    <div class="chat__list-item-info-time-inner">19:30</div>
+                                    <div class="chat__list-item-info-time-date">25 декабря</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="layout__preloader show">
+            <div class="layout__content chat__messages layout__preloader-inner" style="opacity: 0">
+                <div class="chat__item">
+
+                    <div class="chat__item-inner">
+                        <div class="chat__item-inner-messages">
+                            <div class="chat__item-date">18 oct.</div>
+                            <div class="chat__message">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Спасибо за совет!</div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Тест даты в полном формате</div>
+                                <div class="chat__message-time">30 декабря 18:40</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text test long text test
+                                    long
+                                    text
+                                    test long text test long text test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text
+                                </div>
+                                <div class="chat__message-time">18:40</div>
+                            </div>
+                            <div class="chat__message">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Спасибо за совет!</div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Тест даты в полном формате</div>
+                                <div class="chat__message-time">30 декабря 18:40</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text test long text test
+                                    long
+                                    text
+                                    test long text test long text test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text
+                                </div>
+                                <div class="chat__message-time">18:40</div>
+                            </div>
+                            <div class="chat__message">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Спасибо за совет!</div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Тест даты в полном формате</div>
+                                <div class="chat__message-time">30 декабря 18:40</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text test long text test
+                                    long
+                                    text
+                                    test long text test long text test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text
+                                </div>
+                                <div class="chat__message-time">18:40</div>
+                            </div>
+                            <div class="chat__message">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Спасибо за совет!</div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--unread">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Привет!<br>
+                                    Обращайтесь.
+                                </div>
+                                <div class="chat__message-time">19:30</div>
+                            </div>
+                            <div class="chat__message chat__message--unread chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Тест даты в полном формате</div>
+                                <div class="chat__message-time">30 декабря 18:40</div>
+                            </div>
+                            <div class="chat__message chat__message--unread chat__message--invert">
+                                <div class="chat__message-read-mark"></div>
+                                <div class="chat__message-text">Test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text test long text test
+                                    long
+                                    text
+                                    test long text test long text test long text test long text test long text test long
+                                    text
+                                    test
+                                    long text test long text test long text test long text test long text test long text
+                                    test
+                                    long
+                                    text test long text test long text test long text test long text
+                                </div>
+                                <div class="chat__message-time">18:40</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat__item-inputs">
+                        <textarea class="chat__item-input" placeholder="Напишите ваше сообщение"></textarea>
+                        <div class="chat__item-input-hidden"></div>
+                        <button class="chat__item-button"></button>
+                    </div>
+                </div>
+                <div class="chat__info">
+                    <div class="chat__info-user">User 102</div>
+                    <div class="chat__info-item">
+                        <div class="chat__info-item-title">СПОСОБ ОПЛАТЫ</div>
+                        <div class="chat__info-item-value">Полный доступ</div>
+                    </div>
+                    <div class="chat__info-item">
+                        <div class="chat__info-item-title">ВЕС</div>
+                        <div class="chat__info-item-value">55 кг</div>
+                    </div>
+                    <div class="chat__info-item">
+                        <div class="chat__info-item-title">ЖЕЛАЕМЫЙ ВЕС</div>
+                        <div class="chat__info-item-value">50 кг (сбросить 5 кг)</div>
+                    </div>
+                    <div class="chat__info-item">
+                        <div class="chat__info-item-title">ЖЕЛАЕМЫЙ СРОК ДОСТИЖЕНИЯ ВЕСА</div>
+                        <div class="chat__info-item-value">4 недель</div>
+                    </div>
+                    <div class="chat__info-item">
+                        <div class="chat__info-item-title">РОСТ</div>
+                        <div class="chat__info-item-value">170 см</div>
+                    </div>
+                    <div class="chat__info-item">
+                        <div class="chat__info-item-title">ГОД РОЖДЕНИЯ</div>
+                        <div class="chat__info-item-value">1991</div>
+                    </div>
+                    <div class="chat__info-item">
+                        <div class="chat__info-item-title">ПОЛ</div>
+                        <div class="chat__info-item-value">Женский</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+
+
+</html>

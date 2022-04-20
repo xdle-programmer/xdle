@@ -1,0 +1,45 @@
+.user-bar-menu {
+  background: #38414b;
+  position: absolute;
+  top: 54px;
+  left: 75px;
+  width: calc(100% - 99px);
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transition: all .3s ease-in; }
+  .user-bar-menu.active {
+    transform: scaleY(1);
+    visibility: visible;
+    opacity: 1; }
+  .user-bar-menu__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 41px;
+    border-bottom: 2px solid #303741; }
+  .user-bar-menu__item-icon {
+    height: 41px;
+    width: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .user-bar-menu__item-text {
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    font-weight: 900;
+    font-size: 12px;
+    font-style: italic;
+    box-shadow: 0 0 #000;
+    color: #7f8a99;
+    cursor: pointer; }
+    .user-bar-menu__item-text:hover {
+      color: #fff; }

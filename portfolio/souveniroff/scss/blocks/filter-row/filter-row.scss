@@ -1,0 +1,80 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.filter-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $gray;
+
+  &__select-items,
+  &__select-items *,
+  &__selects * {
+    transition: all 0s ease-in-out;
+  }
+
+  &__select-block {
+    display: flex;
+    align-items: center;
+    @media #{$mobile-big-screen} {
+      &--non-mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__selects-name {
+    @include flex-row;
+    font-size: 14px;
+    align-items: center;
+    padding-right: 20px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__select-button {
+    height: 29px !important;
+    border: 1px solid $gray !important;
+    border-radius: 3px;
+    background: #fff !important;
+    font-weight: 300 !important;
+    font-size: 12px !important;
+    width: auto !important;
+    padding-top: 6px !important;
+
+    @media #{$mobile-big-screen} {
+      font-size: 9px !important;
+      height: 20px !important;
+      padding: 3px !important;
+      padding-top: 3px !important;
+    }
+  }
+
+  &__select-button:focus,
+  &__select-button:active {
+    outline: none !important;
+  }
+
+  &__select-icon {
+    @media #{$mobile-big-screen} {
+      margin-top: -2px !important;
+    }
+  }
+
+  &__select-items {
+
+    & .ui-widget {
+      @media #{$mobile-big-screen} {
+        font-size: 9px !important;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,35 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.rules-sticker {
+  width: 228px;
+  height: 228px;
+  border-radius: 50%;
+  background: $yellow;
+  @include flex-column-center;
+  padding-top: 22px;
+
+  &--white {
+    background: $white;
+  }
+
+  &__title {
+    width: 141px;
+    height: 42px;
+    font-size: 37px;
+    text-align: center;
+    text-transform: lowercase;
+    color: $yellow;
+    background: $orange;
+    @include font-intro-reg;
+  }
+
+  &__number {
+    @include font-intro-reg;
+    color: $black;
+    font-size: 56px;
+    text-align: center;
+  }
+
+}

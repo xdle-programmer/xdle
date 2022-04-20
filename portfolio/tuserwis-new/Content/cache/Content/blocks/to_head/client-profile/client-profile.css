@@ -1,0 +1,112 @@
+.client-profile__block {
+  margin-bottom: 20px;
+  width: 100%; }
+
+.client-profile__main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 180px 200px;
+  grid-gap: 20px;
+  position: relative;
+  align-items: center;
+  padding-bottom: 0; }
+  @media (max-width: 767px) {
+    .client-profile__main {
+      grid-template-columns: 1fr;
+      padding-top: 40px; } }
+
+.client-profile__photo {
+  height: 180px;
+  position: relative; }
+  @media (max-width: 767px) {
+    .client-profile__photo {
+      width: 180px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+.client-profile__photo-preview {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  border: 2px solid #0092E8; }
+
+.client-profile__photo-input {
+  display: none; }
+
+.client-profile__photo-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fafafa;
+  border: 2px solid #0092E8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+@media (max-width: 767px) {
+  .client-profile__desc {
+    text-align: center; } }
+
+.client-profile__desc-name {
+  font-size: 20px;
+  color: #0092E8;
+  margin-bottom: 20px; }
+
+.client-profile__desc-phone {
+  margin-bottom: 5px; }
+
+.client-profile__desc-email {
+  margin-bottom: 15px; }
+
+.client-profile__desc-text {
+  font-size: 13px; }
+
+.client-profile__subtitle {
+  padding: 0 20px;
+  padding-top: 10px;
+  color: #0092E8; }
+
+.client-profile__main-button {
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  @media (max-width: 767px) {
+    .client-profile__main-button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      top: auto;
+      z-index: 5;
+      height: 45px;
+      width: 100%; } }
+
+.client-profile__notification {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding: 20px;
+  position: relative; }
+  @media (max-width: 767px) {
+    .client-profile__notification {
+      grid-template-columns: 1fr; } }
+  .client-profile__notification:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6); }
+    .edit .client-profile__notification:after {
+      opacity: 0;
+      visibility: hidden; }

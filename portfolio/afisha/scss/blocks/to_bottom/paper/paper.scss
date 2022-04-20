@@ -1,0 +1,251 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.paper {
+  position: relative;
+  width: 100%;
+  //width: 450px;
+  //height: 319px;
+  padding-bottom: 70.7317%;
+  color: #4f3e95;
+  border: 1px solid #4f3e95;
+
+  $item: '.paper__item';
+
+  &__item {
+    cursor: pointer;
+    border: 1px solid rgba(102, 102, 102, .3);
+    flex-wrap: wrap;
+    position: absolute;
+
+    &:hover {
+      border-color: rgba(79, 62, 149, 1);
+    }
+
+    &--a0 {
+      z-index: 1;
+      width: 100px;
+      height: 70px;
+      border: none;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--a1 {
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+    }
+
+    &--a2 {
+      width: 50%;
+      height: 50%;
+      top: 0;
+      left: 0;
+    }
+
+    &--a3 {
+      width: 25%;
+      height: 50%;
+      top: 50%;
+      left: 25%;
+    }
+
+    &--a4 {
+      width: 25%;
+      height: 25%;
+      top: 50%;
+      left: 0;
+    }
+
+    &--a5 {
+      width: 12.5%;
+      left: 12.5%;
+      top: 75%;
+      height: 25%;
+    }
+
+    &--a6 {
+      width: 12.5%;
+      height: 12.5%;
+      left: 0;
+      top: 75%;
+    }
+
+    &--a7 {
+      cursor: default;
+      width: 6.25%;
+      height: 12.5%;
+      top: 87.5%;
+      left: 6.25%;
+
+      &:hover {
+        border: 1px solid rgba(102, 102, 102, .3);
+      }
+    }
+
+    &--a8 {
+      cursor: default;
+      width: 6.25%;
+      height: 6.25%;
+      left: 0;
+      top: 87.5%;
+
+      &:hover {
+        border: 1px solid rgba(102, 102, 102, .3);
+      }
+    }
+
+    &--last {
+      cursor: default;
+      width: 6.25%;
+      height: 6.25%;
+      left: 0;
+      top: 93.75%;
+
+      &:hover {
+        border: 1px solid rgba(102, 102, 102, .3);
+      }
+    }
+
+  }
+
+  &__desc {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--a1 {
+      height: 100%;
+      top: 20px;
+      right: 20px;
+      left: auto;
+      transform: translate(0);
+    }
+
+    &--a2 {
+      height: 100%;
+      top: 15px;
+      right: 15px;
+      left: auto;
+      transform: translate(0);
+    }
+
+    &--a3 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+  }
+
+  &__name {
+    font-weight: 700;
+    color: #949494;
+
+    #{$item}:hover &,
+    #{$item}.active & {
+      color: rgba(79, 62, 149, 1);
+    }
+
+    &--a0 {
+      font-size: 80px;
+      line-height: 60px;
+    }
+
+    &--a1 {
+      font-size: 70px;
+    }
+
+    &--a2 {
+      font-size: 60px;
+    }
+
+    &--a3 {
+      font-size: 40px;
+    }
+
+    &--a4 {
+      font-size: 28px;
+    }
+
+    &--a5 {
+      font-size: 27px;
+    }
+
+    &--a6 {
+      font-size: 20px;
+    }
+
+    &--a7 {
+      font-size: 17px;
+
+      #{$item}:hover &,
+      #{$item}.active & {
+        color: #949494;
+      }
+
+    }
+
+    &--a8 {
+      font-size: 14px;
+
+      #{$item}:hover &,
+      #{$item}.active & {
+        color: #949494;
+      }
+    }
+
+  }
+
+  &__size {
+    color: rgba(102, 102, 102, .3);
+
+    & span {
+      color: rgba(102, 102, 102, .3);
+    }
+
+    #{$item}:hover & span,
+    #{$item}.active & span,
+    #{$item}:hover &,
+    #{$item}.active & {
+      color: rgba(79, 62, 149, 1);
+    }
+
+    &--a0 {
+      font-size: 18px;
+    }
+
+    &--a1 {
+      font-size: 24px;
+    }
+
+    &--a2 {
+      font-size: 20px;
+    }
+
+    &--a3 {
+      font-size: 18px;
+    }
+
+    &--a4 {
+      font-size: 18px;
+    }
+
+    &--a5 {
+      font-size: 11px;
+    }
+
+    &--a6 {
+      font-size: 10px;
+    }
+
+  }
+}

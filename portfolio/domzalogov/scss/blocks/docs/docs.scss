@@ -1,0 +1,67 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.docs {
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  &__item {
+    @include flex-row;
+    margin-bottom: 25px;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column;
+      margin-bottom: 40px;
+    }
+  }
+  &__item-img-block {
+    width: 290px;
+    margin-right: 30px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-right: 0;
+    }
+
+  }
+  &__item-img {
+    width: 100%;
+    height: auto;
+
+    @media #{$mobile-big-screen} {
+      width: 280px;
+      @include margin-auto;
+      display: block;
+    }
+  }
+
+  &__item-desc {
+    width: calc(100% - 290px);
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      order: -1;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-desc-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #2cb387;
+    margin-bottom: 30px;
+  }
+  &__item-desc-author {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__item-desc-text {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+}

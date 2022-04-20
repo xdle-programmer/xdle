@@ -1,0 +1,151 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.fifteenth {
+  padding-top: 86px;
+  padding-bottom: 106px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__block {
+    position: relative;
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+    padding-top: 160px;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column;
+      padding-top: 0;
+    }
+
+    &:after {
+      @include after-absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      width: 1422px;
+      height: 924px;
+      background: url(../../../img/fifteenth-background.jpg);
+      @include background-contain-center;
+      z-index: 0;
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+  }
+  &__desc {
+    position: relative;
+    z-index: 2;
+    width: 615px;
+    height: 658px;
+    background: $white;
+    padding: 0 40px;
+    padding-top: 100px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      height: auto;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 184px;
+      height: 142px;
+      top: -20px;
+      left: -40px;
+      background: url(../../../img/fifteenth-icon.png);
+      @include background-contain-center;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 31px;
+  }
+
+  &__sign {
+    margin-top: 13px;
+    @include flex-row;
+    align-items: center;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column-center;
+    }
+  }
+  &__sign-img {
+    width: 157px;
+    height: 157px;
+    margin-right: 55px;
+    background: url(../../../img/fifteenth-sign.png);
+    @include background-cover-center;
+
+    @media #{$tablet-big-screen} {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__sign-text {
+
+    @media #{$tablet-big-screen} {
+      text-align: center;
+    }
+
+  }
+  &__sign-name {
+    font-size: 36px;
+    @include font-intro-reg;
+    margin-bottom: 10px;
+
+    @media #{$tablet-big-screen} {
+      text-align: center;
+    }
+  }
+  &__sign-position {
+    font-size: 20px;
+  }
+  &__lead {
+    position: relative;
+    z-index: 2;
+    width: 359px;
+    padding-top: 58px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+
+  }
+  &__lead-title {
+    color: $white;
+    @include font-intro-reg;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  &__lead-field {
+    margin-bottom: 20px;
+  }
+
+  &__lead-button {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  &__img {
+    position: absolute;
+    top: 502px;
+    z-index: 2;
+    left: -299px;
+    width: 285px;
+    height: 529px;
+    background: url(../../../img/fifteenth-img.png);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+}

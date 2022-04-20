@@ -1,0 +1,46 @@
+.line-separator {
+  width: 50%;
+  margin: 20px auto;
+  margin-top: 0;
+  position: relative;
+  height: 5px; }
+  .line-separator--margin-top {
+    margin-top: 20px; }
+  .line-separator--small {
+    margin-bottom: 5px; }
+  .line-separator--vertical {
+    width: 5px;
+    height: 580px; }
+  .line-separator:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px dashed #a27a19;
+    mask: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%); }
+    .pattern--3 .line-separator:before {
+      border-bottom: 2px dashed #ff0000; }
+  .line-separator--vertical:before {
+    height: 100%;
+    border-right: 2px dashed #a27a19;
+    mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%); }
+    .pattern--3 .line-separator--vertical:before {
+      border-right: 2px dashed #ff0000; }
+  .line-separator:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    top: 10px;
+    background: #000;
+    filter: blur(20px);
+    opacity: .5; }

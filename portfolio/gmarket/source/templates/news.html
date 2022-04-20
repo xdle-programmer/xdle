@@ -1,0 +1,64 @@
+{% include "partials/header.html" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Новости</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		{%
+			set descritpions = [
+				"Какой ноутбук выбрать школьникам и студентам?",
+				"Техника высоких достижений.",
+				"Мощные игровые ноутбуки с экраном 17,3 дюйма.",
+				"Техника высоких достижений.",
+				"Гуру йоги в мире ноутбуков."
+			]
+		%}
+
+		{% 
+			set titles = [
+				"Девайсы для учёбы",
+				"Быстрее, выше, сильнее!",
+				"Девайсы для учёбы",
+				"Быстрее, выше, сильнее!",
+				"MSI GP72 Leopard Pro"
+			]
+		%}
+		{% 
+			set counter = -1
+		%}
+		<div class="container">
+			<section class="news-grid">
+				<div class="md-title md-title_page-title">Новости</div>
+				<div class="order-wrap">
+					{% for i in 0..15 %}
+						{% set counter = counter + 1 %}
+						{% if counter > 4 %}
+					   		{% set counter = 0 %}
+						{% endif %}
+						<div class="quater-wrap">
+							{% 
+								include "partials/news-card.html" with {
+									img: "img/samples/news/news" ~ counter ~ ".jpg",
+									title: titles[counter],
+									date: true,
+									description: descritpions[counter]
+								}
+							 %}
+						</div> 
+					{% endfor %}
+				</div>
+				{% include "partials/pagination.html" %}
+			</section>
+			{% include "partials/banner_wide.html"%}
+			{% include "partials/seo-text.html" %}
+		</div>
+		
+		
+	</main>
+{% include "partials/footer.html" %}

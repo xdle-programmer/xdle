@@ -1,0 +1,349 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.form {
+  padding-top: 20px;
+  position: relative;
+
+  &--icon {
+
+    &:after {
+      @include after-absolute;
+      width: 22px;
+      height: 30px;
+      left: 50%;
+      top: 0px;
+      background: url("../../../img/map-pointer-magenta.svg");
+      @include background-contain-center;
+      transform: translate(-50%, -100%);
+
+      @media #{$tablet-small-screen} {
+        top: 0px;
+      }
+    }
+  }
+
+  @media #{$tablet-small-screen} {
+    padding-top: 50px;
+  }
+
+  &__block {
+    position: relative;
+
+    &.disabled:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: rgba(255, 255, 255, .5);
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    //border: 1px solid $gray-light;
+    background: $white;
+    @include flex-column;
+    align-items: center;
+    position: relative;
+
+    &--small {
+      width: 500px;
+      @include margin-auto;
+
+      @media #{$tablet-small-screen} {
+        width: 100%;
+      }
+    }
+
+    &--middle {
+      width: 700px;
+      @include margin-auto;
+
+      @media #{$tablet-small-screen} {
+        width: 100%;
+      }
+    }
+
+    &--shadow {
+      //box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+
+      @media #{$mobile-big-screen} {
+        //box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  &__wrapper-inner {
+    @include flex-column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+
+    @media #{$tablet-small-screen} {
+      padding: 30px 10px;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 15px 5px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 16px;
+    padding: 20px 0;
+    color: $blue;
+    width: 100%;
+
+    &--small {
+      margin-bottom: 10px;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 10px;
+    }
+
+    &--back {
+      position: relative;
+      padding-left: 65px;
+
+      @media #{$mobile-big-screen} {
+        padding-left: 45px;
+      }
+    }
+
+    @media #{$mobile-small-screen} {
+      font-size: 18px;
+    }
+
+  }
+
+  &__back-button {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $blue;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:after {
+      @include after-absolute;
+      width: 15px;
+      height: 15px;
+      background: $white;
+      mask: url(../../../img/arrow.svg);
+      -webkit-mask: url(../../../img/arrow.svg);
+      @include mask-contain-center;
+      @include absolute-center;
+      transform: translate(-65%, -50%) rotate(90deg);
+    }
+
+    @media #{$mobile-big-screen} {
+      left: 10px;
+    }
+  }
+
+  &__address {
+    width: 100%;
+  }
+
+  &__field {
+    margin-bottom: 25px;
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+
+    &.hide {
+      transform: scaleY(0);
+      height: 0;
+      margin: 0;
+      visibility: hidden;
+    }
+
+    @media #{$tablet-small-screen} {
+      flex-wrap: wrap;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__field-car {
+    margin-bottom: 10px;
+    width: 100%;
+
+    &.hide {
+      transform: scaleY(0);
+      height: 0;
+      margin: 0;
+      visibility: hidden;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__field-title {
+    color: #333333;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.31px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    &--center {
+      text-align: center;
+    }
+
+    &--left {
+      margin-right: auto;
+      text-align: left;
+    }
+  }
+
+  &__wrapper-fields {
+    padding: 25px 0;
+    width: 100%;
+
+    @media #{$mobile-big-screen} {
+      padding: 20px 0;
+    }
+  }
+
+  &__field-separator {
+    margin: 30px 0;
+    @include flex-row-center;
+    width: 100%;
+    color: $blue;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.31px;
+    text-transform: uppercase;
+
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+      flex-grow: 1;
+      background: $blue;
+      height: 1px;
+    }
+
+    &:before {
+      margin-right: 5px;
+    }
+
+    &:after {
+      margin-left: 5px;
+    }
+  }
+
+  &__field-half {
+    width: 48%;
+
+    @media #{$tablet-small-screen} {
+      width: 100%;
+      margin-bottom: 45px;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media #{$tablet-small-screen} {
+      &--small-mobile-margin {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__footer {
+    @include flex-column-center;
+    margin-top: auto;
+    padding-bottom: 25px;
+
+    &--modal {
+      padding-top: 25px;
+      padding-bottom: 0;
+    }
+
+    &--two-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__footer-button-big {
+    @include margin-auto;
+    @include flex-row-center;
+    color: $white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    background: $blue;
+    border: 1px solid $blue;
+    padding: 10px 25px;
+    white-space: nowrap;
+    border-radius: 30px;
+    width: 100%;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &.hide {
+      //transform: scaleY(0);
+      //height: 0;
+      //margin: 0;
+      //visibility: hidden;
+      display: none;
+    }
+
+    &--invert {
+      color: $blue;
+      background: $white;
+    }
+
+    &.disabled {
+      background: gray;
+    }
+  }
+
+  &__footer-button-small {
+    @include margin-auto;
+    @include flex-row-center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    white-space: nowrap;
+    border-radius: 30px;
+    background: $white;
+    color: $blue;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &.hide {
+      //transform: scaleY(0);
+      //height: 0;
+      //margin: 0;
+      //visibility: hidden;
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.constitution {
+  position: relative;
+  z-index: 9;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  &__title {
+    text-transform: uppercase;
+    color: var(--beige-color);
+    font-size: 47px;
+    line-height: 53px;
+    font-weight: 300;
+    position: relative;
+    cursor: default;
+    margin-bottom: 30px;
+
+    @media #{$mobile-big-screen}{
+      margin-top: 30px;
+    }
+  }
+
+  &__list {
+  }
+
+  &__list-item {
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding-left: 30px;
+    position: relative;
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 17px;
+      left: 0;
+      top: 11px;
+      height: 1px;
+      background: var(--beige-color);
+
+      #{$night} & {
+        background: var(--white-color);
+      }
+    }
+  }
+
+}

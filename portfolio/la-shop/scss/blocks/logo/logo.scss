@@ -1,0 +1,23 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.logo {
+  width: 150px;
+  height: 21px;
+  @include flex-row-center;
+
+  &__text {
+    width: 125px;
+    height: 15px;
+    @include background-contain-center;
+  }
+  &__circle {
+    width: 21px;
+    height: 21px;
+    margin-right: 4px;
+    @include main-background;
+    border-radius: 50%;
+    margin-bottom: 2px;
+  }
+}

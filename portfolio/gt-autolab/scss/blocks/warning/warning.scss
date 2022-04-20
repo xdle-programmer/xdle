@@ -1,0 +1,39 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.warning {
+
+  @include font-default;
+
+  position: absolute;
+  white-space: nowrap;
+  height: 17px;
+  background: $red;
+  top: -22px;
+  opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+  border-radius: 4px;
+  font-size: 10px;
+  color: $white;
+  @include flex-row-center;
+  text-align: center;
+  padding: 0 15px;
+
+  &:after {
+    @include after-absolute;
+    bottom: -3px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 3px 0 3px;
+    border-color: $red transparent transparent transparent;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

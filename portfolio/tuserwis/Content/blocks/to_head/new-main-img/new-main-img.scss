@@ -1,0 +1,20 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.new-main-img {
+
+  @media #{$mobile-big-screen} {
+    display: none;
+  }
+
+  &__block {
+  }
+
+  &__block-img {
+    height: 333px;
+    width: calc(100% + 60px);
+    @include background-contain-center;
+    margin: 0 -30px;
+  }
+}

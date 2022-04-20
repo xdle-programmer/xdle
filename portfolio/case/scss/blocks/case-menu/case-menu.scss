@@ -1,0 +1,113 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.case-menu {
+  @include flex-row;
+  width: 100%;
+  border: 10px solid #1c1e20;
+  border-top: none;
+  background: rgba(30, 32, 34, .5);
+
+  @media #{$mobile-big-screen} {
+    @include flex-column;
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    height: 70px;
+    @include flex-row-center;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      @include after-absolute;
+      width: 2px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: #bfff00;
+
+      @media #{$mobile-big-screen} {
+        display: none;
+      }
+    }
+
+    &--active:after {
+      @include after-absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -1px;
+      left: 0;
+      background: linear-gradient(to right, #fd2c00 0%, #f7d000 50%, #bfff00 100%);
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+
+  }
+
+  &__item-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  &__item-icon-item {
+    width: 100%;
+    height: auto;
+  }
+
+  &__item-text {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 1;
+    background: #fff;
+    @include text-shadow;
+  }
+
+  &__item-hint {
+    position: relative;
+    margin-left: 10px;
+    height: 10px;
+    width: 5px;
+  }
+  &__item-hint-icon {
+    position: absolute;
+    color: #ffc22e;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ffc22e;
+    border-radius: 50%;
+    @include flex-row-center;
+    left: -2px;
+    top: -12px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  &__item-hint-inner {
+    position: absolute;
+    color: #ffc22e;
+    background: #1b1c20;
+    border: 1px solid #ffc22e;
+    padding: 10px;
+    width: 200px;
+    right: -8px;
+    top: 11px;
+    z-index: 1;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 13px;
+  }
+
+  &__item-hint:hover &__item-hint-inner,
+  &__item-hint-inner:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}

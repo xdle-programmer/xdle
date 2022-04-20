@@ -1,0 +1,124 @@
+.contract {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative; }
+  @media (max-width: 1023px) {
+    .contract__desc-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 30px; } }
+  .contract__desc {
+    position: absolute;
+    top: 5vw; }
+    @media (max-width: 1023px) {
+      .contract__desc {
+        position: relative;
+        top: auto; } }
+    .contract__desc--left {
+      left: 5vw; }
+      @media (max-width: 1023px) {
+        .contract__desc--left {
+          left: auto; } }
+    .contract__desc--right {
+      right: 2vw; }
+      @media (max-width: 1023px) {
+        .contract__desc--right {
+          right: auto; } }
+  .contract__desc-subtitle {
+    text-transform: uppercase;
+    font-size: .7vw;
+    font-weight: 700;
+    background: #fff;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text; }
+    @media (max-width: 1023px) {
+      .contract__desc-subtitle {
+        font-size: 1.5vw; } }
+    @media (max-width: 767px) {
+      .contract__desc-subtitle {
+        font-size: 14px; } }
+  .contract__desc-title {
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text; }
+    @media (max-width: 1023px) {
+      .contract__desc-title {
+        font-size: 3vw; } }
+    @media (max-width: 767px) {
+      .contract__desc-title {
+        font-size: 18px; } }
+  .contract__wrapper {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; }
+  .contract__items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: -7vw; }
+    @media (max-width: 1023px) {
+      .contract__items {
+        margin-bottom: -10vw; } }
+    @media (max-width: 767px) {
+      .contract__items {
+        margin-bottom: -11vw; } }
+    .contract__items:nth-last-of-type(1) {
+      margin-bottom: 3vw; }
+  .contract__item {
+    width: 14vw;
+    height: 14vw;
+    margin: 5px;
+    background: url(../../img/contract.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .contract__item--empty {
+      background: url(../../img/contract-empty.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+    @media (max-width: 1023px) {
+      .contract__item {
+        width: 20vw;
+        height: 20vw; } }
+    @media (max-width: 767px) {
+      .contract__item {
+        width: 21vw;
+        height: 21vw;
+        margin: 0; } }
+  .contract__item-img {
+    width: 48%;
+    height: auto; }
+    @media (max-width: 767px) {
+      .contract__item-img {
+        width: 85%; } }

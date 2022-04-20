@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>Roomy</title>
+</head>
+<link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+
+<body>
+
+<div class="wrapper wrapper--inner">
+
+    <header class="header header--authorized">
+        <div class="header__block layout">
+            <div class="header__switch header__switch--desktop">
+                <div class="role-switch">
+                    <div class="role-switch__item">Продавец</div>
+                    <div class="role-switch__item active">Покупатель</div>
+                </div>
+            </div>
+
+            <div class="header__count header__count--desktop">
+                <div class="profile-balance">
+                    <div class="profile-balance__state">
+                        <div class="profile-balance__state-name">Счет</div>
+                        <div class="profile-balance__state-number">
+                            € 25<span class="profile-balance__state-number-small">.05</span>
+                        </div>
+                    </div>
+                    <div class="profile-balance__button">
+                        <div class="profile-balance__button-icon"></div>
+                        <div class="profile-balance__button-text">Пополнить</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__profile">
+
+                <div class="header__profile-about header__profile-about--desktop">
+                    <div class="header__profile-about-name">Иван Иванович</div>
+                    <div class="header__profile-about-id">ID 24564</div>
+                </div>
+
+                <div class="header__profile-menu-button">
+                    <img class="header__profile-menu-button-icon" src="img/user-icon.svg">
+                </div>
+                <div class="header__profile-menu">
+                    <div style="display: none">
+
+                        <div class="header__profile-about">
+                            <div class="header__profile-about-name">Иван Иванович</div>
+                            <div class="header__profile-about-id">ID 24564</div>
+                        </div>
+
+                        <div class="header__switch">
+                            <div class="role-switch">
+                                <div class="role-switch__item">Продавец</div>
+                                <div class="role-switch__item active">Покупатель</div>
+                            </div>
+                        </div>
+
+                        <div class="header__count">
+                            <div class="profile-balance">
+                                <div class="profile-balance__state">
+                                    <div class="profile-balance__state-name">Счет</div>
+                                    <div class="profile-balance__state-number">
+                                        € 25<span class="profile-balance__state-number-small">.05</span>
+                                    </div>
+                                </div>
+                                <div class="profile-balance__button">
+                                    <div class="profile-balance__button-icon"></div>
+                                    <div class="profile-balance__button-text">Пополнить</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="header__profile-menu-link">Управление профилем</div>
+                    <div class="header__profile-menu-logout">Выйти</div>
+                </div>
+            </div>
+
+            <div class="header__interface-settings">
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--white">
+                        <div class="dropdown-circle__button">€</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">€</div>
+                                <div class="dropdown-circle__list-item-text">Евро</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">$</div>
+                                <div class="dropdown-circle__list-item-text">Доллар</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--white">
+                        <div class="dropdown-circle__button">ES</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">EN</div>
+                                <div class="dropdown-circle__list-item-text">Английский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">ES</div>
+                                <div class="dropdown-circle__list-item-text">Испанский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">RU</div>
+                                <div class="dropdown-circle__list-item-text">Русский</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu side-menu--hide">
+        <div class="side-menu__logo">
+            <div class="side-menu__logo-icon"></div>
+            <div class="side-menu__logo-text-block">
+                <div class="side-menu__logo-text side-menu__logo-text--1">Ro</div>
+                <div class="side-menu__logo-text side-menu__logo-text--2">o</div>
+                <div class="side-menu__logo-text side-menu__logo-text--3">my</div>
+            </div>
+        </div>
+        <div class="side-menu__items">
+            <div class="side-menu__item active">
+                <div class="side-menu__item-icon side-menu__item-icon--dashboard"></div>
+                <div class="side-menu__item-text">Рабочий стол</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--catalog"></div>
+                <div class="side-menu__item-text">Каталог</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--applications"></div>
+                <div class="side-menu__item-text">Заявки</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--deal"></div>
+                <div class="side-menu__item-text">Сделки</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--favorites"></div>
+                <div class="side-menu__item-text">Избранное</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--saved"></div>
+                <div class="side-menu__item-text">Сохраненные поиски</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--settings"></div>
+                <div class="side-menu__item-text">Настройки кабинета</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="layout">
+        <div class="main-title">Каталог</div>
+
+
+        <div class="object">
+
+            <div class="object__header">
+                <div class="object__title">Квартира на продажу на Calle de José Antonio Tavio</div>
+                <div class="object__cost">2.600.252 €</div>
+                <div class="object__history">
+                    История торгов
+                    <div class="object__history-arrow">
+                        <img src="img/object/select.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="object__container">
+                <div class="object__place-name">Costa Adeje</div>
+                <div class="button button--blue">
+                    <div class="button__icon button__icon--contact"></div>
+                    Связаться
+                </div>
+            </div>
+            <div class="object__place-nav">
+                <div class="object__place-visual-box">
+                    <a href="#" class="object__place-visual">
+                        <div class="object__place-visual-icon object__place-visual-icon--tour"></div>
+                        Tour 360
+                    </a>
+                    <a href="#" class="object__place-visual">
+                        <div class="object__place-visual-icon object__place-visual-icon--video"></div>
+                        Video
+                    </a>
+                    <a href="#" class="object__place-visual">
+                        <div class="object__place-visual-icon object__place-visual-icon--plan"></div>
+                        Plan
+                    </a>
+                </div>
+
+                <div class="object__place-management">
+                    <a class="object__place-management-icon object__place-management-icon--favourites"></a>
+                    <a class="object__place-management-icon object__place-management-icon--comparison"></a>
+                    <a href="#" class="object__place-visual">
+                        <div class="object__place-visual-icon object__place-visual-icon--map"></div>
+                        На карте
+                    </a>
+                </div>
+            </div>
+            <div class="object__grid">
+
+                <div class="object__carousel">
+                    <div class="object__image-box">
+                        <img class="object__image" src="img/object/place-image.png" alt="">
+                        <div class="object__image-overlay">
+                            <div class="object__image-enlarge">
+                                <img src="img/object/search.svg" alt="">
+                            </div>
+                            <div class="object__all-photo">
+                                <img src="img/object/photos.svg" alt="">
+                                <div class="object__all-photo-value">1/13</div>
+                                <div class="object__all-photo-text">All fotos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object__image-box">
+                        <img class="object__image" src="img/object/place-image.png" alt="">
+                        <div class="object__image-overlay">
+                            <div class="object__image-enlarge">
+                                <img src="img/object/search.svg" alt="">
+                            </div>
+                            <div class="object__all-photo">
+                                <img src="img/object/photos.svg" alt="">
+                                <div class="object__all-photo-value">1/13</div>
+                                <div class="object__all-photo-text">All fotos</div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    <div class="object__carousel-prev"></div>-->
+<!--                    <div class="object__carousel-next"></div>-->
+                </div>
+
+                <div class="object__photo-grid">
+                    <div class="object__photo-box">
+                        <img class="object__photo" src="img/object/photo.png" alt="">
+                    </div>
+                    <div class="object__photo-box">
+                        <img class="object__photo" src="img/object/photo.png" alt="">
+                    </div>
+                    <div class="object__photo-box">
+                        <img class="object__photo" src="img/object/photo.png" alt="">
+                    </div>
+                    <div class="object__photo-box">
+                        <img class="object__photo" src="img/object/photo.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!--Отчет-->
+            <div class="object__box">
+                <div class="title title--medium object__report-title">Отчет о проверке</div>
+                <div class="object__report-inner">
+                    <div class="object__report-item">
+                        <div class="object__report-icon">
+                            <img src="img/object/checkok.svg" alt="">
+                        </div>
+                        Техническая проверка
+                    </div>
+                    <div class="object__report-item object__report-item--red">
+                        <div class="object__report-icon">
+                            <img src="img/object/not.svg" alt="">
+                        </div>
+                        Техническая проверка
+                        <div class="object__report-info">
+                            <img src="img/object/info-2.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Характеристики-->
+            <div class="object__box">
+                <div class="title title--medium object__title-medium">Основные характеристики</div>
+                <div class="object__characteristics-inner">
+
+                    <div class="object__characteristics-col">
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/calendar.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Год постройки: 2009 год</div>
+                        </div>
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/home.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Тип: Квартира</div>
+                        </div>
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/address.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Расположение: Adeje</div>
+                        </div>
+                    </div>
+
+
+                    <div class="object__characteristics-col">
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/state.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Состояние: Ремонт не требуется</div>
+                        </div>
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/beach.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">До пляжа: 600 m</div>
+                        </div>
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/town.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">До центра: 700 m</div>
+                        </div>
+                    </div>
+
+
+                    <div class="object__characteristics-col">
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/m-2.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Общая площадь: 80 m²</div>
+                        </div>
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/door.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Спальни: 3</div>
+                        </div>
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/bathroom.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Ванные комнаты: 2</div>
+                        </div>
+                    </div>
+
+
+                    <div class="object__characteristics-col">
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/floor.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">Этаж: 3</div>
+                        </div>
+
+                        <div class="object__characteristics-row">
+                            <div class="object__characteristics-icon">
+                                <img src="img/object/furniture.svg" alt="">
+                            </div>
+                            <div class="object__characteristics-text">С мебелью: Да</div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Описание-->
+            <div class="object__box">
+                <div class="title title--medium object__title-medium">Описание</div>
+                <div class="object__description-text">
+                    Возможна аренда с правом выкупа! Хорошая квартира, расположенная в одном из лучших туристических
+                    комплексов Коста Адехе - Laguna Park 2. Состоит из 1 спальни со встроенными шкафами,
+                    гостиной-столовой, полностью оборудованной американской кухни, 1 ванной комнаты, внутреннего дворика
+                    с прачечной и террасы с видом на горы. В комплексе есть круглосуточная рецепция, охрана, бассейны
+                    для взрослых и детей, бар-ресторан, детская площадка, теннисные корты, сады, лифты, частная парковка
+                    и супермаркет. Всего в 3 минутах езды от лучших пляжей Коста Адехе! Коммунальные услуги 193 евро
+                    в месяц, включая воду и электричество. Иби 200 евро в год.
+                </div>
+            </div>
+
+            <!--Особенности-->
+            <div class="object__box">
+                <div class="title title--medium object__title-medium">Особенности</div>
+                <div class="object__features-inner">
+
+                    <div class="object__features-col">
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Гараж</div>
+                        </div>
+
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Бассейн</div>
+                        </div>
+
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Кондиционер</div>
+                        </div>
+                    </div>
+
+
+                    <div class="object__features-col">
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Отопление</div>
+                        </div>
+
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Электронагреватель</div>
+                        </div>
+
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Лифт</div>
+                        </div>
+                    </div>
+
+
+                    <div class="object__features-col">
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Типо пола: Керамгронит</div>
+                        </div>
+
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Встроенные шкафы</div>
+                        </div>
+
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Вода</div>
+                        </div>
+                    </div>
+
+
+                    <div class="object__features-col">
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Терраса</div>
+                        </div>
+                        <div class="object__features-row">
+
+                            <div class="object__features-icon">
+                                <img src="img/object/ok.svg" alt="">
+                            </div>
+
+                            <div class="object__features-title">Сад</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!--Сертификат-->
+            <div class="object__box">
+                <div class="title title--medium object__title-medium">Энергетический сертификат</div>
+                <div class="object__certificate-inner">
+                    <div class="object__certificate-class">Классификация: Не указано</div>
+                    <div class="object__emissions">
+                        <div class="object__emissions-title">Выбросы: </div>
+                        <div class="object__emissions-item">
+                            <div class="object__emissions-item-power object__emissions-item-power--a">A</div>
+                            <div class="object__emissions-item-power object__emissions-item-power--b">B</div>
+                            <div class="object__emissions-item-power object__emissions-item-power--c">C</div>
+                            <div class="object__emissions-item-power object__emissions-item-power--d">D</div>
+                            <div class="object__emissions-item-power object__emissions-item-power--e object__emissions-item-power--active">E</div>
+                            <div class="object__emissions-item-power object__emissions-item-power--f">F</div>
+                            <div class="object__emissions-item-power object__emissions-item-power--g">G</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Калькулятор-->
+            <div class="object__box">
+                <div class="title title--medium object__title-medium">Ипотечный калькулятор</div>
+                <div class="object__calculator-box">
+                    <div class="object__calculator-title">
+                        Стоимость недвижимости: <span class="object__calculator-cost">2.200.000 €</span>
+                    </div>
+
+                   <div class="object__calculator-items">
+                       <div class="object__calculator-item">
+                           <div class="object__calculator-item-title">Первый взнос:</div>
+                           <div class="object__calculator-item-sum">20 000 €</div>
+                           <div class="object__calculator-item-min">Мин. 20% </div>
+                       </div>
+
+                       <div class="object__calculator-item">
+                           <div class="object__calculator-item-title">Срок ипотеки:</div>
+                           <div class="object__calculator-item-sum">10 лет</div>
+                           <div class="object__calculator-item-min">Мин. 5 лет </div>
+                       </div>
+
+                       <div class="object__calculator-item">
+                           <div class="object__calculator-item-title">Процентная ставка:</div>
+                           <div class="object__calculator-item-sum">3%</div>
+                           <div class="object__calculator-item-min">Мин. 1%</div>
+                       </div>
+                   </div>
+
+                </div>
+                <a href="#" class="button button--blue">Купить объект</a>
+            </div>
+
+            <!--Карта -->
+            <div class="object__location">
+                <div class="title title--medium object__title-medium">Расположение</div>
+                <div class="object__location-header">
+                    <a href="#" class="object__location-header-item">
+                        <div class="object__location-header-icon object__location-header-icon--map"></div>
+                        Вилла в Адехе
+                    </a>
+                    <a href="#" class="object__location-header-item object__location-header-item--grey">
+                        <div class="object__location-header-icon object__location-header-icon--info"></div>
+                        Местоположение недвижимости приблизительное
+                    </a>
+                </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28160.637022676397!2d-16.746525290941122!3d28.08311388880362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a975a1ef338cb%3A0xba8c8c7bd5044e9f!2z0JrQvtGB0YLQsCDQkNC00LXRhdC1LCDQodCw0L3RgtCwLdCa0YDRg9GBLdC00LUt0KLQtdC90LXRgNC40YTQtSwg0JjRgdC_0LDQvdC40Y8!5e0!3m2!1sru!2sru!4v1599149016868!5m2!1sru!2sru" class="object__map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <div class="object__footer">
+                    <a href="#" class="object__footer-item">
+                        <div class="object__footer-icon object__footer-icon--printer"></div>
+                        Напечатать
+                    </a>
+
+                    <a href="#" class="object__footer-item">
+                        <div class="object__footer-icon object__footer-icon--share"></div>
+                        Поделиться
+                    </a>
+
+                    <a href="#" class="object__footer-item">
+                        <div class="object__footer-icon object__footer-icon--complain"></div>
+                        Пожаловаться на объявление
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div style="width: 100%;height: 2000px"></div>
+
+    <footer class="footer">
+        <div class="footer__block layout">
+            <div class="footer__top">
+                <div class="footer__menu">
+                    <a href="#" class="footer__menu-item">Фотографам</a>
+                    <a href="#" class="footer__menu-item">Инженерам</a>
+                    <a href="#" class="footer__menu-item">Нотариусам</a>
+                    <a href="#" class="footer__menu-item">Переезды</a>
+                </div>
+                <div class="footer__buttons">
+                    <div class="footer__buttons-contact">
+                        <!--                        <div class="footer__buttons-contact-item footer__buttons-contact-item&#45;&#45;chat">Онлайн чат</div>-->
+                        <div class="footer__buttons-contact-item footer__buttons-contact-item--mail">Отправить письмо
+                        </div>
+                    </div>
+                    <div class="footer__app">
+                        <div class="footer__app-title">
+                            Для мобильного устройства:
+                        </div>
+                        <div class="footer__app-buttons">
+                            <div class="footer__app-button footer__app-button--apple"></div>
+                            <div class="footer__app-button footer__app-button--android"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__logo">
+                    <div class="logo"></div>
+                </div>
+                <div class="footer__copyright">©2020 Roomy.case</div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    <a href="#" class="footer__link">Условия</a>
+                </div>
+                <div class="footer__interface-settings">
+                    <div class="footer__interface-settings-item">
+                        <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                            <div class="dropdown-circle__button">€</div>
+                            <div class="dropdown-circle__list">
+                                <div class="dropdown-circle__list-item active">
+                                    <div class="dropdown-circle__list-item-icon">€</div>
+                                    <div class="dropdown-circle__list-item-text">Евро</div>
+                                </div>
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">$</div>
+                                    <div class="dropdown-circle__list-item-text">Доллар</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__interface-settings-item">
+                        <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                            <div class="dropdown-circle__button">ES</div>
+                            <div class="dropdown-circle__list">
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">EN</div>
+                                    <div class="dropdown-circle__list-item-text">Английский</div>
+                                </div>
+                                <div class="dropdown-circle__list-item active">
+                                    <div class="dropdown-circle__list-item-icon">ES</div>
+                                    <div class="dropdown-circle__list-item-text">Испанский</div>
+                                </div>
+                                <div class="dropdown-circle__list-item">
+                                    <div class="dropdown-circle__list-item-icon">RU</div>
+                                    <div class="dropdown-circle__list-item-text">Русский</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="plugins/errors_handler.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/object-carousel.js"></script>
+</html>

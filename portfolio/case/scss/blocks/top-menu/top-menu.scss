@@ -1,0 +1,44 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.top-menu {
+  @include flex-row;
+  justify-content: space-between;
+  height: 70px;
+  border: 10px solid #1c1e20;
+  border-top: none;
+  border-bottom: none;
+  width: 100%;
+
+  @media #{$tablet-small-screen} {
+    order: 1;
+    height: auto;
+    flex-wrap: wrap;
+    display: inline;
+    padding: 10px 0;
+  }
+
+  &__item {
+    height: 100%;
+    @include flex-row-center;
+    font-size: 14px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px #000;
+    color: #aaaaac;
+    width: calc(100% / 8);
+    border-right: 2px solid rgba(70, 70, 71, 0.35);
+    background: rgba(28, 30, 32, 0.5);
+    text-align: center;
+
+    &:hover {
+      background: rgba(70, 70, 71, 0.35);
+    }
+
+    @media #{$tablet-small-screen} {
+      height: 28px;
+      width: 100%;
+      color: #d0d0d4;
+    }
+  }
+}

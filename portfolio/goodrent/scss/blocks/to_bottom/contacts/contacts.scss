@@ -1,0 +1,77 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.contacts {
+  padding-top: 89px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 0;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 640px;
+    grid-gap: 90px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+  }
+  &__info {
+  }
+  &__title {
+    @include font-druk;
+    font-size: 43px;
+    letter-spacing: 1px;
+    line-height: 37px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      font-size: 34px;
+      line-height: 30px;
+      margin-top: 15px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__list {
+  }
+  &__list-item {
+    margin-bottom: 50px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 20px;
+    }
+  }
+  &__list-item-name {
+    position: relative;
+    padding-left: 28px;
+  }
+  &__list-item-name-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+  &__list-item-name-text {
+    font-size: 14px;
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  &__list-item-value {
+    padding-left: 28px;
+    color: #292929;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__map {
+  }
+}

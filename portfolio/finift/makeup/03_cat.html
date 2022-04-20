@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    [[blocks/head.html*1]]
+</head>
+
+<body>
+
+<title>Каталог (внутренняя)</title>
+
+
+<div class="wrapper">
+    [[blocks/header.html*1]]
+
+    [[blocks/main-slider.html*1]]
+
+    <div class="filter-header layout">
+        <div class="filter-header__title title title--no-margin">
+            <div class="title__big">Каталог</div>
+            <div class="title__small">Ювелирных украшений</div>
+        </div>
+
+        <div class="filter-header__filters">
+            <div class="filter-header__values">
+                <div class="filter-header__values-item">
+                    <div class="filter-header__values-item-text">Браслеты</div>
+                    <div class="filter-header__values-item-close"></div>
+                </div>
+                <div class="filter-header__values-item">
+                    <div class="filter-header__values-item-text">Броши</div>
+                    <div class="filter-header__values-item-close"></div>
+                </div>
+                <div class="filter-header__values-item">
+                    <div class="filter-header__values-item-text">Серьги</div>
+                    <div class="filter-header__values-item-close"></div>
+                </div>
+                <div class="filter-header__values-item">
+                    <div class="filter-header__values-item-text">Стоимость: 1 000 - 96 600</div>
+                    <div class="filter-header__values-item-close"></div>
+                </div>
+            </div>
+            <div class="filter-header__sort">
+                <div class="filter-header__sort-title">Сортировка:</div>
+
+                <div class="filter-header__sort-select select select--fit-content" data-class-wrapper="sort">
+                    <select name="sort-list">
+                        <option>По рейтингу</option>
+                        <option>По стоимости</option>
+                        <option>По размеру скидки</option>
+                        <option>По новизне</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="filter-header__pagination">
+            <div class="pagination">
+                <a href="#" class="pagination__item pagination__item--first">Главная</a>
+                <a href="#" class="pagination__item">Каталог</a>
+                <a href="#" class="pagination__item">Ювелирные украшения</a>
+                <a href="#" class="pagination__item pagination__item--active">Броши</a>
+            </div>
+        </div>
+        <div class="filter-header__clear">
+            <div class="filter-header__clear-text">сбросить все фильтры</div>
+            <div class="filter-header__clear-close"></div>
+        </div>
+    </div>
+
+    <div class="product-list">
+        <div class="product-list__block layout">
+
+
+            <div class="filter-list">
+                <div class="filter-list__button button">Фильтры</div>
+
+                <div class="filter-list__items">
+                    <div class="filter-list__button-close"></div>
+                    <div class="filter-list__button-search button">Применить</div>
+
+
+                    <div class="filter-list__item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Диапазон цен:</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="range-slider">
+                                <div class="range-slider__inputs">
+                                    <input type="number" class="range-slider__input range-slider__input--min">
+                                    <input type="number" class="range-slider__input range-slider__input--max">
+                                </div>
+                                <div class="range-slider__item"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Сортировка:</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-sort-list">
+                                <div class="filter-list__content-sort-list-item active">По рейтингу</div>
+                                <div class="filter-list__content-sort-list-item">По стоимости</div>
+                                <div class="filter-list__content-sort-list-item">По размеру скидки</div>
+                                <div class="filter-list__content-sort-list-item">По новизне</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item filter-list__item--has-item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Товары со скидкой</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-check-list">
+                                <div class="filter-list__content-check-list-item">Все</div>
+                                <div class="filter-list__content-check-list-item">Акционные</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item filter-list__item--has-item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Предметы посуды</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-check-list">
+                                <div class="filter-list__content-check-list-item">Все</div>
+                                <div class="filter-list__content-check-list-item">Браслеты</div>
+                                <div class="filter-list__content-check-list-item">Кулоны</div>
+                                <div class="filter-list__content-check-list-item">Колье</div>
+                                <div class="filter-list__content-check-list-item">Панно</div>
+                                <div class="filter-list__content-check-list-item">Иконы</div>
+                                <div class="filter-list__content-check-list-item">Броши</div>
+                                <div class="filter-list__content-check-list-item">Серьги</div>
+                                <div class="filter-list__content-check-list-item">Кольца</div>
+                                <div class="filter-list__content-check-list-item">Часы</div>
+                                <div class="filter-list__content-check-list-item">Шкатулки</div>
+                                <div class="filter-list__content-check-list-item">Другое</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item filter-list__item--has-item active">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Ювелирные украшения</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-check-list">
+                                <div class="filter-list__content-check-list-item">Все</div>
+                                <div class="filter-list__content-check-list-item">Браслеты</div>
+                                <div class="filter-list__content-check-list-item">Кулоны</div>
+                                <div class="filter-list__content-check-list-item">Колье</div>
+                                <div class="filter-list__content-check-list-item">Панно</div>
+                                <div class="filter-list__content-check-list-item">Иконы</div>
+                                <div class="filter-list__content-check-list-item">Броши</div>
+                                <div class="filter-list__content-check-list-item">Серьги</div>
+                                <div class="filter-list__content-check-list-item">Кольца</div>
+                                <div class="filter-list__content-check-list-item">Часы</div>
+                                <div class="filter-list__content-check-list-item">Шкатулки</div>
+                                <div class="filter-list__content-check-list-item">Другое</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item filter-list__item--has-item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Предметы православия</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-check-list">
+                                <div class="filter-list__content-check-list-item">Все</div>
+                                <div class="filter-list__content-check-list-item">Браслеты</div>
+                                <div class="filter-list__content-check-list-item">Кулоны</div>
+                                <div class="filter-list__content-check-list-item">Колье</div>
+                                <div class="filter-list__content-check-list-item">Панно</div>
+                                <div class="filter-list__content-check-list-item">Иконы</div>
+                                <div class="filter-list__content-check-list-item">Броши</div>
+                                <div class="filter-list__content-check-list-item">Серьги</div>
+                                <div class="filter-list__content-check-list-item">Кольца</div>
+                                <div class="filter-list__content-check-list-item">Часы</div>
+                                <div class="filter-list__content-check-list-item">Шкатулки</div>
+                                <div class="filter-list__content-check-list-item">Другое</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item filter-list__item--has-item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Патриотическая символика</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-check-list">
+                                <div class="filter-list__content-check-list-item">Все</div>
+                                <div class="filter-list__content-check-list-item">Браслеты</div>
+                                <div class="filter-list__content-check-list-item">Кулоны</div>
+                                <div class="filter-list__content-check-list-item">Колье</div>
+                                <div class="filter-list__content-check-list-item">Панно</div>
+                                <div class="filter-list__content-check-list-item">Иконы</div>
+                                <div class="filter-list__content-check-list-item">Броши</div>
+                                <div class="filter-list__content-check-list-item">Серьги</div>
+                                <div class="filter-list__content-check-list-item">Кольца</div>
+                                <div class="filter-list__content-check-list-item">Часы</div>
+                                <div class="filter-list__content-check-list-item">Шкатулки</div>
+                                <div class="filter-list__content-check-list-item">Другое</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item filter-list__item--has-item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Подарки и сувениры</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-check-list">
+                                <div class="filter-list__content-check-list-item">Все</div>
+                                <div class="filter-list__content-check-list-item">Браслеты</div>
+                                <div class="filter-list__content-check-list-item">Кулоны</div>
+                                <div class="filter-list__content-check-list-item">Колье</div>
+                                <div class="filter-list__content-check-list-item">Панно</div>
+                                <div class="filter-list__content-check-list-item">Иконы</div>
+                                <div class="filter-list__content-check-list-item">Броши</div>
+                                <div class="filter-list__content-check-list-item">Серьги</div>
+                                <div class="filter-list__content-check-list-item">Кольца</div>
+                                <div class="filter-list__content-check-list-item">Часы</div>
+                                <div class="filter-list__content-check-list-item">Шкатулки</div>
+                                <div class="filter-list__content-check-list-item">Другое</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-list__item filter-list__item--has-item">
+                        <div class="filter-list__header">
+                            <div class="filter-list__header-title">Корпоративные подарки</div>
+                        </div>
+                        <div class="filter-list__content">
+                            <div class="filter-list__content-check-list">
+                                <div class="filter-list__content-check-list-item">Все</div>
+                                <div class="filter-list__content-check-list-item">Браслеты</div>
+                                <div class="filter-list__content-check-list-item">Кулоны</div>
+                                <div class="filter-list__content-check-list-item">Колье</div>
+                                <div class="filter-list__content-check-list-item">Панно</div>
+                                <div class="filter-list__content-check-list-item">Иконы</div>
+                                <div class="filter-list__content-check-list-item">Броши</div>
+                                <div class="filter-list__content-check-list-item">Серьги</div>
+                                <div class="filter-list__content-check-list-item">Кольца</div>
+                                <div class="filter-list__content-check-list-item">Часы</div>
+                                <div class="filter-list__content-check-list-item">Шкатулки</div>
+                                <div class="filter-list__content-check-list-item">Другое</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="product-list__items">
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+
+                <div class="product-list__item">
+                    <div class="product-list__item-background">
+                        <div class="product-list__item-button">Добавить</div>
+                    </div>
+                    <div class="product-list__item-img" style="background: url(/img/product_1.png);"></div>
+                    <div class="product-list__item-type">Брошь</div>
+                    <div class="product-list__item-name">Венец солнца</div>
+                    <div class="product-list__item-price">4700</div>
+                    <div class="product-list__item-currency">рублей</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    [[blocks/form.html*1]]
+
+    [[blocks/recommend.html*1]]
+
+    [[blocks/news.html*1]]
+
+    [[blocks/may_be.html*1]]
+
+    [[blocks/social.html*1]]
+</div>
+
+
+[[blocks/footer.html*1]]
+
+</body>
+</html>

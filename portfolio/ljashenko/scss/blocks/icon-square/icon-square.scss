@@ -1,0 +1,16 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.icon-square {
+  width: 62px;
+  height: 62px;
+  @include flex-row-center;
+  background: url(../../../img/icon-square.png);
+  @include background-contain-center;
+
+  &__img {
+    width: 25%;
+    height: auto;
+  }
+}

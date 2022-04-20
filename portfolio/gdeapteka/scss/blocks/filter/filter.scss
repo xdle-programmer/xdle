@@ -1,0 +1,84 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.filter {
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: $blue;
+  background-image: url(../../../img/menu-pattern-white.png);
+  position: relative;
+  color: $white;
+  margin-top: 70px;
+
+  @media #{$tablet-big-screen} {
+    position: absolute;
+    @include absolute-fill;
+    margin-top: 0;
+    @include scroll;
+    border-radius: 0;
+  }
+
+  &__close {
+    display: none;
+
+    @media #{$tablet-big-screen} {
+      display: block;
+      position: fixed;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      right: 15px;
+      top: 15px;
+      background: $white;
+      mask: url(../../../img/close.svg);
+      -webkit-mask: url(../../../img/close.svg);
+      @include mask-contain-center;
+      z-index: 10;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    width: 100%;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, $white 0px, $white 2px, transparent 2px, transparent 7px);
+    }
+  }
+
+  &__items {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__item {
+    padding: 10px 0;
+    border-bottom: 1px solid #1e80c1;
+    position: relative;
+    @include flex-row;
+    align-items: center;
+    min-height: 37px;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &:nth-last-of-type(1) {
+      border-bottom: none;
+    }
+  }
+
+  &__item-link {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+  }
+}

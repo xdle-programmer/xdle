@@ -1,0 +1,80 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.banner {
+  @include background-cover-center;
+  position: relative;
+  @include flex-column-center;
+  border: 10px solid #1c1e20;
+  height: 140px;
+  width: 100%;
+
+  @media #{$tablet-small-screen} {
+    order: 1;
+    height: 180px;
+    padding-top: 40px;
+  }
+
+  &.hide {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 116px;
+    height: 28px;
+    background: url(../../img/logo.svg);
+    @include background-contain-center;
+    filter: grayscale(1) contrast(.5);
+    right: 10px;
+    top: 20px;
+
+    @media #{$tablet-small-screen} {
+      transform: translateX(-50%);
+      left: 50%;
+      top: 10px;
+      right: auto;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    mask: url(../../img/close.svg);
+    -webkit-mask: url(../../img/close.svg);
+    @include mask-contain-center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+
+    & span {
+      color: #ffc22e;
+
+      #{$pattern3} & {
+        color: #ff0000;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,54 @@
+{% include "partials/header.html" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<a href="#" class="breadcrumbs__item">
+				<span>Личный кабинет</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Изменение личных данных</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		<div class="container container_mobile-full">
+			
+			<section class="compare">
+				<div class="md-title md-title_page-title md-title_flex md-title_buttons-wrap">
+					<div class="md-title__part">
+						<h1 class="order-detail__title">Сравнение товаров</h1>
+					</div>
+					<div class="md-title__buttons">
+						<a href="#" class="button button_grey button_space-min">
+							Добавить товар
+						</a>
+						<div class="button button_grey">
+							Очистить список
+						</div>
+					</div>
+				</div>
+				<div class="compare__prod-type tab-nav">
+					<div class="tab-nav__button">Холодильники (3)</div>
+					<div class="tab-nav__button">Моноблоки (2)</div>
+					<div class="tab-nav__button">Ноутбуки (5)</div>
+				</div>
+				<div class="compare__tables-container">
+					<div class="tab-item">
+						{% include "partials/compare-table.html" %}
+					</div>
+					<div class="tab-item">
+						{% include "partials/compare-table.html" %}
+					</div>
+					<div class="tab-item">
+						{% include "partials/compare-table.html" %}
+					</div>
+				</div>				
+			</section>
+			
+		</div>
+		
+		
+	</main>
+{% include "partials/footer.html" %}

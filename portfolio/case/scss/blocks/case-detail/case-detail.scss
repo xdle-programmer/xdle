@@ -1,0 +1,132 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.case-detail {
+  height: 100px;
+  width: 100%;
+  background: green;
+  @include flex-column;
+
+  @media #{$tablet-big-screen} {
+    margin-bottom: 10px;
+    height: 70px;
+  }
+
+  &--green-yellow {
+    background: linear-gradient(to right, #16ee03, #9a8800);
+  }
+  &--red-purple {
+    background: linear-gradient(to right, #d11e3c, #6e1589);
+  }
+  &--blue-green {
+    background: linear-gradient(to right, #1e8dd0, #15863c);
+  }
+  &--orange-purple {
+    background: linear-gradient(to right, #d0611e, #891660);
+  }
+  &--yellow-red {
+    background: linear-gradient(to right, #d0ae1e, #86152e);
+  }
+  &--turquoise-green {
+    background: linear-gradient(to right, #1ed090, #408a13);
+  }
+
+  &__item {
+    height: calc(100% - 2px);
+    width: 100%;
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+    background: linear-gradient(to bottom,#15181d,#14151a);
+    @include flex-column;
+    position: relative;
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 18px;
+    padding-left: 13px;
+  }
+  &__item-topic {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 400;
+    width: 100%;
+    text-align: right;
+    @include flex-row;
+    justify-content: flex-end;
+    align-items: center;
+
+    &:after {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      margin-left: 4px;
+    }
+
+    &--orange {
+      color: #d5aa1d;
+    }
+
+    &--orange:after {
+      background: #d5aa1d;
+    }
+
+    &--green {
+      color: #1ce900;
+    }
+
+    &--green:after {
+      background: #1ce900;
+    }
+
+    &--gray {
+      color: #a3a3a8;
+    }
+
+    &--gray:after {
+      background: #a3a3a8;
+    }
+
+  }
+
+  &__item-name {
+    color: #aaaaac;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: auto;
+  }
+  &__item-category {
+    color: #66686f;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 3px;
+  }
+  &__item-img-block {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    width: 50%;
+    height: 100%;
+
+    &:after {
+      @include after-absolute;
+      background: #000;
+      width: 50%;
+      height: 10%;
+      border-radius: 50%;
+      filter: blur(5px);
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: .5;
+    }
+  }
+  &__item-img {
+    position: absolute;
+    @include absolute-center;
+    width: 100%;
+  }
+}
+
+
+

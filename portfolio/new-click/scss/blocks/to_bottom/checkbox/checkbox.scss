@@ -1,0 +1,75 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.checkbox {
+
+  &__input {
+    display: none;
+  }
+
+  $radio-side: 12;
+  $radio-different: 8;
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    padding-left: #{$radio-side + 10}px;
+    font-size: 14px;
+    color: $gray;
+    display: block;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    &--small {
+      font-size: 11px;
+    }
+
+    &:before {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: #{$radio-side}px;
+      height: #{$radio-side}px;
+      border: 2px solid $gray;
+    }
+
+    &:after {
+      @include after-absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: #{(($radio-side - ($radio-side - $radio-different))/2)}px;
+      width: #{$radio-side - $radio-different}px;
+      height: #{$radio-side - $radio-different}px;
+      border: 2px solid $orange;
+      background: $orange;
+      opacity: 0;
+    }
+
+  }
+
+  &__input:checked + &__label:after {
+    opacity: 1;
+  }
+
+  &__input:checked + &__label {
+    color: $black;
+  }
+
+  &__input.error + &__label {
+    color: red;
+  }
+
+
+  &__input:checked + &__label:after {
+    box-shadow: none;
+  }
+
+
+
+}
+

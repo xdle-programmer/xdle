@@ -1,0 +1,37 @@
+.worktime {
+  width: 100%;
+  max-width: 350px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 3px; }
+  @media (max-width: 1900px) {
+    .worktime {
+      max-width: 100%; } }
+  .worktime__item.active {
+    background: #e5f5ff; }
+  .pharmacy-list__item .worktime__item.active {
+    background: #c7e9ff; }
+  .worktime__item-day {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #cccccc; }
+  .worktime__item-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-top: 2px solid #2b97df; }
+    .worktime__item.active .worktime__item-time {
+      border-color: transparent; }
+  .worktime__item-time-start {
+    font-size: 14px;
+    font-weight: 500; }
+  .worktime__item-time-end {
+    font-size: 14px;
+    font-weight: 500; }

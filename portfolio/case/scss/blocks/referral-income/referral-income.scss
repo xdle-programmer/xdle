@@ -1,0 +1,145 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.referral-income {
+  background: rgba(26, 28, 30, .7);
+  margin: 20px -80px;
+  padding: 20px 80px;
+  @include flex-row;
+  align-items: center;
+
+  @media #{$desktop-big-screen} {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media #{$desktop-small-screen} {
+    margin: 20px -60px;
+    padding: 20px 60px;
+  }
+
+  @media #{$tablet-small-screen} {
+    margin: 20px -10px;
+    padding: 20px 10px;
+  }
+
+  &__side-block {
+    width: 43%;
+    @include flex-row;
+
+    @media #{$desktop-big-screen} {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @media #{$mobile-big-screen} {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input-title {
+    background: #3d4145;
+    color: #fff;
+    width: 190px;
+    height: 40px;
+    @include flex-row-center;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 700;
+
+    @media #{$desktop-extra-big-screen} {
+      font-size: 15px;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    background: #212325;
+    color: #fff;
+    width: 300px;
+    height: 40px;
+    @include flex-row;
+    padding-left: 20px;
+    flex-grow: 1;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__input-button {
+    height: 40px;
+    background: linear-gradient(to bottom, #6b6b6b, #555556);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include flex-row-center;
+    border-radius: 5px;
+    padding: 0 35px;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+  }
+  &__center-block {
+    width: 14%;
+    @include flex-column-center;
+
+    @media #{$desktop-big-screen} {
+      width: 100%;
+      order: -1;
+      margin-bottom: 30px;
+    }
+  }
+  &__sum {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    @include text-shadow;
+    z-index: 1;
+  }
+  &__sum-button {
+    height: 40px;
+    background: linear-gradient(to bottom, #81bb2c, #6fa91a);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include flex-row-center;
+    border-radius: 5px;
+    padding: 0 35px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.5) saturate(2);
+    }
+
+    @media #{$desktop-big-screen} {
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    @media #{$mobile-big-screen} {
+      height: 30px;
+      margin-bottom: 15px;
+      margin-left: 0;
+    }
+  }
+}

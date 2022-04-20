@@ -1,0 +1,66 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.voting {
+  width: 100%;
+  @include flex-row;
+  justify-content: space-between;
+  padding: 30px 25px;
+  background: #f8f8f8;
+  border-radius: 5px;
+
+  @media #{$tablet-small-screen} {
+    align-items: center;
+    padding: 30px 15px;
+  }
+
+
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+
+    @media #{$mobile-big-screen} {
+      font-size: 13px;
+    }
+  }
+  &__buttons {
+    @include flex-row;
+  }
+  &__button {
+    padding-left: 35px;
+    margin-left: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+
+
+    &:after {
+      @include after-absolute;
+      width: 25px;
+      height: 25px;
+      background: #808080;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-mask-image: url(../../img/icon-like.svg);
+      mask-image: url(../../img/icon-like.svg);
+      @include mask-contain-center;
+    }
+
+    &--up {
+      color: #40c061;
+    }
+    &--down {
+      color: #c53a21;
+    }
+
+    &--down:after {
+      transform: translateY(-50%) scaleY(-1);
+    }
+
+  }
+}
+

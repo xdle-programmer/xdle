@@ -1,0 +1,74 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.placeholder {
+  position: relative;
+  display: block;
+
+  $not-empty: '.placeholder.not-empty';
+  $multi: '.placeholder.multi-select';
+  $select-mini: '.placeholder.select--mini';
+  $multi-select-mini: '.placeholder.multi-select--mini';
+  $input-autocomplete-main-catalog-filter: '.placeholder.input-autocomplete--main-catalog-filter';
+
+  &__item {
+    color: #888;
+    cursor: text;
+    font-size: 14px;
+    position: absolute;
+    top: 19px;
+    left: 0;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    transition: all 0.3s, opacity 0s;
+    transform-origin: left bottom;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+
+
+    #{$input-autocomplete-main-catalog-filter} &,
+    #{$multi} & {
+      font-size: 16px;
+      font-weight: 500;
+      opacity: 1;
+      top: 12px;
+      visibility: visible;
+    }
+
+    #{$multi-select-mini} &,
+    #{$select-mini} & {
+      font-size: 14px;
+      font-weight: 500;
+      top: 6px;
+      color: #1d1e29;
+    }
+
+    #{$input-autocomplete-main-catalog-filter} & {
+      opacity: 0;
+    }
+
+    #{$not-empty} & {
+      font-size: 14px;
+      color: #888;
+      transform: translateY(-70%) scale(.7);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #{$not-empty}#{$input-autocomplete-main-catalog-filter} &,
+    #{$not-empty}#{$multi} & {
+      transform: translateY(-50%) scale(.7);
+    }
+
+    #{$not-empty}#{$multi-select-mini} &,
+    #{$not-empty}#{$select-mini} & {
+      transform: translateY(-43%) scale(.7) translateX(7px);
+      color: #888;
+    }
+  }
+
+}

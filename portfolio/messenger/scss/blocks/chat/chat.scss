@@ -1,0 +1,414 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.chat {
+
+  &__messages {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+  }
+
+  &__item {
+    background-image: linear-gradient(to right, #f6f8ff 0%, #ffffff 70%);
+    @include flex-column;
+    padding-bottom: 20px;
+  }
+
+  &__item-date {
+    @include flex-row-center;
+    height: 65px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: $gray;
+    position: relative;
+  }
+
+  &__item-inner {
+    padding: 0 30px;
+    width: 100%;
+    height: 0;
+    flex-grow: 1;
+    padding-bottom: 100px;
+    @include scroll;
+  }
+
+  &__message {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 35px;
+
+    &--invert {
+    }
+  }
+
+  $invert-message: '.chat__message--invert';
+  $unread-message: '.chat__message--unread';
+
+  &__message-time {
+    color: $gray-light;
+    font-size: 13px;
+    margin-top: auto;
+    width: 130px;
+    padding-left: 10px;
+
+    #{$invert-message} & {
+      order: 1;
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+
+  &__message-read-mark {
+    width: 22px;
+    height: 22px;
+    opacity: 0;
+    background-color: $yellow;
+    border-radius: 50%;
+
+    #{$unread-message} & {
+      opacity: 1;
+    }
+
+    #{$invert-message} & {
+      background-color: $blue;
+      order: 3;
+    }
+  }
+
+  &__message-text {
+    width: calc(100% - 130px - 22px - 10px);
+    margin-left: 10px;
+    box-shadow: 0 2px 4px rgba(210, 210, 210, 0.5);
+    border-radius: 20px;
+    background-color: $white;
+    padding: 10px 40px;
+    color: $gray-dark;
+    line-height: 25px;
+
+    #{$invert-message} & {
+      margin-left: 0;
+      margin-right: 10px;
+      order: 2;
+
+    }
+
+    #{$invert-message}#{$unread-message} & {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &__item-inputs {
+    margin: 0 50px;
+    width: calc(100% - 100px);
+    position: relative;
+  }
+
+  &__item-input-hidden,
+  &__item-input {
+    border: none;
+    border-top: 2px solid #d5dbe3;
+    padding: 10px;
+    resize: none;
+    @include flex-row-center;
+    width: 100%;
+    font-size: 16px;
+    color: $gray-dark;
+    padding-right: 45px;
+    line-height: 23px;
+    min-height: 60px;
+    height: 60px;
+  }
+
+  &__item-input {
+    overflow: hidden;
+  }
+
+  &__item-input-hidden {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  &__item-button {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    right: 0;
+    bottom: 7px;
+    //background: $blue;
+    background: #0b9af5;
+    mask: url(../../img/send_button.svg);
+    -webkit-mask: url(../../img/send_button.svg);
+    @include mask-contain-center;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+
+    &:hover {
+      background: $yellow;
+    }
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__info {
+    background: #f8f8fb;
+    padding: 35px 50px;
+  }
+
+  &__info-user {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &__info-item {
+    margin-top: 25px;
+  }
+
+  &__info-item-title {
+    font-size: 10px;
+    font-weight: 300;
+    color: $gray;
+  }
+
+  &__info-item-value {
+    color: $gray-dark;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__list-header {
+    @include flex-row-center;
+    padding: 10px 35px;
+    height: 61px;
+    min-height: 61px;
+  }
+
+  &__search {
+    @include flex-row-center;
+    flex-grow: 1;
+  }
+
+  &__search-button {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: #808fa3;
+    mask: url(../../img/search.svg);
+    -webkit-mask: url(../../img/search.svg);
+    @include mask-contain-center;
+    cursor: pointer;
+
+    &:hover {
+      background: $gray-dark;
+    }
+
+  }
+
+  &__search-input {
+    font-size: 18px;
+    color: $gray-dark;
+    width: calc(100% - 26px);
+
+    &::-webkit-input-placeholder {
+      color: #808fa3;
+    }
+    &::-moz-placeholder {
+      color: #808fa3;
+    }
+    &:-moz-placeholder {
+      color: #808fa3;
+    }
+    &:-ms-input-placeholder {
+      color: #808fa3;
+    }
+  }
+
+  &__bookmarks {
+    @include flex-row;
+    padding: 10px 15px;
+    color: $gray-light;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid #ebebeb;
+    background-color: #f9fafb;
+    margin-left: 20px;
+    cursor: pointer;
+
+    &:after {
+      display: block;
+      content: '';
+      width: 13px;
+      height: 19px;
+      background: $gray-light;
+      margin-left: 10px;
+      mask: url(../../img/bookmark.svg);
+      -webkit-mask: url(../../img/bookmark.svg);
+      @include mask-contain-center;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+    &:hover:after {
+      background: $gray;
+    }
+  }
+
+  &__list-items {
+  }
+
+  &__list-item {
+    padding-top: 18px;
+    padding-bottom: 40px;
+    padding-left: 17px;
+    padding-right: 37px;
+    @include flex-row;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &--active {
+      box-shadow: 0 5px 18px rgba(64, 80, 245, 0.49);
+      background-color: $blue;
+    }
+  }
+
+  $list-item-active: '.chat__list-item--active';
+  $list-item-unread: '.chat__list-item--unread';
+  $list-item-bookmark: '.chat__list-item--bookmark';
+
+  &__list-item-mark {
+    width: 22px;
+    height: 22px;
+    margin-right: 18px;
+    border-radius: 50%;
+
+    #{$list-item-unread} & {
+      background-color: $yellow;
+    }
+
+  }
+
+  &__list-item-desc {
+    width: calc(100% - 22px - 18px - 65px);
+  }
+
+  &__list-item-desc-name {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 13px;
+
+    #{$list-item-active} & {
+      color: #fff;
+    }
+  }
+
+  &__list-item-desc-text {
+    color: #8b8b8b;
+    font-size: 15px;
+    line-height: 22px;
+
+    #{$list-item-active} & {
+      color: #fff;
+    }
+  }
+
+  &__list-item-info {
+    @include flex-column;
+    width: 65px;
+  }
+
+  &__list-item-info-bookmark {
+    width: 19px;
+    height: 29px;
+    margin-left: auto;
+    position: relative;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: #e2e0e0;
+    }
+
+    &:before {
+      background: #e2e0e0;
+      mask: url(../../img/bookmark-border.svg);
+      -webkit-mask: url(../../img/bookmark-border.svg);
+      @include mask-contain-center;
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    &:after {
+      background: #e2e0e0;
+      mask: url(../../img/bookmark-fill.svg);
+      -webkit-mask: url(../../img/bookmark-fill.svg);
+      @include mask-contain-center;
+      opacity: 0;
+    }
+
+    #{$list-item-active} & {
+      &:before,
+      &:after {
+        @include after-absolute;
+        @include absolute-fill;
+        background: #fff;
+      }
+    }
+
+    #{$list-item-bookmark} & {
+      &:before {
+        opacity: 0;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__list-item-info-time {
+    text-align: right;
+    color: #8b8b8b;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    height: 34px;
+    @include flex-column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    #{$list-item-active} & {
+      color: #fff;
+      font-size: 13px;
+    }
+  }
+
+  &__list-item-info-time-inner {
+  }
+
+  &__list-item-info-time-date {
+    white-space: nowrap;
+    font-size: 11px;
+    margin-top: 2px;
+
+  }
+
+
+}

@@ -1,0 +1,233 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  padding-top: 68px;
+
+  &__top {
+    background: $white;
+    padding-top: 17px;
+    padding-bottom: 13px;
+  }
+
+  &__subscribe {
+    @include flex-row-center;
+    justify-content: space-between;
+
+    @media #{$tablet-big-screen} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__form {
+    @include flex-row;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__form-name {
+    font-size: 20px;
+    font-weight: 700;
+    width: 164px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__form-item {
+    display: grid;
+    grid-template-columns: 195px 130px;
+
+    @media #{$tablet-big-screen} {
+      flex-grow: 1;
+      grid-template-columns: 1fr 130px;
+    }
+  }
+
+  &__form-item-input {
+    height: 45px;
+    border: 1px solid #d3d3d3;
+    padding-left: 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &__form-item-button {
+    height: 45px;
+    background: $blue;
+    border: 1px solid $blue;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    @include flex-row-center;
+    color: $white;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &__social {
+    @include flex-row;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+    }
+  }
+
+  &__social-name {
+    font-size: 20px;
+    font-weight: 700;
+    width: 112px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social-items {
+    @include flex-row;
+
+    @media #{$tablet-big-screen} {
+      flex-grow: 1;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      width: 100%;
+    }
+  }
+
+  &__social-item {
+    width: 140px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 700;
+    background: $blue;
+    margin-left: 13px;
+    @include flex-row-center;
+    text-decoration: none;
+    color: $white;
+    border-radius: 3px;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    &--vk {
+      background: #1c4986;
+    }
+
+    &--ok {
+      background: #f98e3c;
+    }
+
+    &--fb {
+      background: #00275c;
+    }
+
+    @media #{$tablet-big-screen} {
+      flex-grow: 1;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-left: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+
+  &__bottom {
+    background: #001634;
+    color: $white;
+  }
+
+  &__bottom-item {
+    @include flex-row-center;
+    justify-content: space-between;
+    padding: 25px 0;
+    padding-left: 15px;
+
+    @media #{$mobile-big-screen} {
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+  }
+
+  &__bottom-logo {
+    width: 105px;
+    height: 45px;
+    background: url(../../../img/icons/logo-invers.png);
+    @include background-contain-center;
+
+    @media #{$mobile-big-screen} {
+      @include margin-auto;
+    }
+  }
+
+  &__bottom-menu {
+    @include flex-row;
+
+    @media #{$tablet-big-screen} {
+      flex-grow: 1;
+      padding: 0 30px;
+      justify-content: space-between;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column-center;
+      width: 100%;
+      padding-top: 30px;
+    }
+  }
+
+  &__menu-item {
+    font-size: 13px;
+    margin-left: 46px;
+    text-decoration: none;
+
+    &.active,
+    &:hover {
+      filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, .7));
+    }
+
+    &.active {
+      cursor: default;
+    }
+
+    @media #{$tablet-big-screen} {
+      margin-left: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__bottom-copyright {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 20px;
+
+    @media #{$mobile-big-screen} {
+      padding: 0 40px;
+      padding-bottom: 20px;
+    }
+  }
+}

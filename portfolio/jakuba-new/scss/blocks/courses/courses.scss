@@ -1,0 +1,71 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.courses {
+  display: grid;
+  grid-template-columns: 450px 450px 1fr;
+  grid-gap: 35px;
+  width: 100%;
+  justify-content: space-between;
+
+  &--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media #{$tablet-big-screen} {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  &__item {
+    background: $white;
+    color: $black;
+    text-align: center;
+  }
+
+
+  &__header {
+    font-size: 24px;
+    font-weight: 700;
+    height: 60px;
+    @include flex-row-center;
+
+    &--yellow {
+      background: #fff682;
+    }
+
+    &--orange {
+      background: #f7941d;
+    }
+
+    &--red {
+      background: #f26522;
+    }
+  }
+
+  &__block {
+  }
+  &__block-item {
+    padding: 30px;
+    border-bottom: 1px solid #cdcdcd;
+
+    &--not {
+      color: #8c8c8c;
+    }
+  }
+
+  &__price {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__button {
+    width: calc(100% - 100px) !important;
+    margin: 30px auto;
+    margin-top: 0;
+    height: 60px;
+  }
+}

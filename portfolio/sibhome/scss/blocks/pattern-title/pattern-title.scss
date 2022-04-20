@@ -1,0 +1,44 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.pattern-title {
+  padding: 20px 0;
+  @include pattern-background;
+  margin: 30px 0;
+
+  &__items {
+    @include flex-row;
+
+    @media #{$tablet-big-screen} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    font-size: 26px;
+    color: $white;
+    margin-right: 40px;
+
+    &--link:hover {
+      text-decoration: underline;
+    }
+
+    @media #{$mobile-big-screen} {
+      font-size: 18px;
+      margin-right: 20px;
+    }
+
+  }
+
+  &__contacts {
+    margin-left: auto;
+
+    @media #{$tablet-big-screen} {
+      margin-left: 0;
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+}
+

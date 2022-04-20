@@ -1,0 +1,232 @@
+.search-box {
+  position: relative;
+  height: 50px;
+
+  & * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(225, 225, 225, .35);
+  }
+
+  $open: '.search-box--open';
+  $not-empty: '.search-box--not-empty';
+  $on-focus: '.search-box--on-focus';
+
+  $desktop-button-width: 200px;
+  $desktop-border-radius: 5px;
+  $desktop-border-color: #c1c1c1;
+
+  @mixin mobile-breakpoint {
+    @media (max-width: 1023px) {
+      @content
+    }
+  }
+
+  &__input-wrapper {
+    height: 100%;
+    width: 100%;
+    border: 1px solid;
+    border-color: #{$desktop-border-color};
+    border-radius: #{$desktop-border-radius};
+    position: relative;
+
+    #{$open} & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include mobile-breakpoint() {
+      #{$on-focus} & {
+        margin: 0 -30px;
+        width: calc(100% + 60px);
+        border-radius: 0;
+        border-right-color: transparent;
+        border-left-color: transparent;
+      }
+    }
+  }
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 300;
+    padding-right: #{$desktop-button-width};
+    border-radius: #{$desktop-border-radius};
+    position: relative;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+
+
+    #{$open} & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include mobile-breakpoint() {
+      padding-right: 15px;
+
+      #{$open} & {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      #{$on-focus} & {
+        padding-left: 30px;
+      }
+
+    }
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    width: 200px;
+    top: 1px;
+    height: calc(100% - 2px);
+    position: absolute;
+    right: 1px;
+    background: #ececec;
+    border-radius: #{$desktop-border-radius};
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    &:hover {
+      background: #e2e2e2;
+    }
+
+    #{$open} & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include mobile-breakpoint() {
+      display: none;
+    }
+  }
+
+  &__clear-button {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    right: #{$desktop-button-width};
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: #ff7e7e;
+      mask: url(../src/assets/img/close.svg);
+      -webkit-mask: url(../src/assets/img/close.svg);
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-position: 50%;
+      -webkit-mask-position: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #{$not-empty} & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include mobile-breakpoint() {
+      right: 2px;
+
+      #{$on-focus} & {
+        right: 5px;
+      }
+    }
+  }
+
+  &__back-button {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: -30px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    width: 50px;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 18px;
+      background: #5d5b5b;
+      mask: url(../src/assets/img/arrow-back.svg);
+      -webkit-mask: url(../src/assets/img/arrow-back.svg);
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-position: 50%;
+      -webkit-mask-position: 50%;
+    }
+
+    @include mobile-breakpoint() {
+      #{$on-focus} & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+  }
+
+  &__hints {
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    width: calc(100% + 2px);
+    background: #fff;
+    border: 1px solid;
+    border-color: #{$desktop-border-color};
+    border-top: none;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+
+    #{$open} & {
+      transform: scaleY(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include mobile-breakpoint() {
+      left: -30px;
+      width: calc(100% + 60px);
+      border-right-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+}

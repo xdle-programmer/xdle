@@ -1,0 +1,33 @@
+.link {
+  color: #0092E8;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px; }
+  .link--small {
+    font-size: 15px; }
+  .link--black {
+    color: #000000; }
+  .link--white {
+    color: #ffffff; }
+  .link:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #0092E8;
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    left: 0; }
+  .link--white:after {
+    background: #ffffff; }
+  .link:hover:after {
+    transform: scaleX(0); }
+  .link--black:after {
+    background: #000000; }
+  .link--black:hover:after {
+    background: #000000; }
+  .link--invert:after {
+    transform: scaleX(0); }
+  .link--invert:hover:after {
+    transform: scaleX(1); }

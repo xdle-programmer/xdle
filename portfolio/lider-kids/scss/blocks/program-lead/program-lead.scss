@@ -1,0 +1,34 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.program-lead {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__form {
+    @include flex-column-center;
+    margin-top: 60px;
+  }
+
+  &__form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    grid-gap: 30px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__form-field {
+
+  }
+
+  &__form-agree {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  &__form-button {
+  }
+}

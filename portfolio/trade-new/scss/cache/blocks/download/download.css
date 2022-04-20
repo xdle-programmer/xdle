@@ -1,0 +1,28 @@
+.download {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 6px;
+  border-radius: 4px; }
+  @media (max-width: 1023px) {
+    .download {
+      margin-bottom: 10px; } }
+  .download__state {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    background: #303842; }
+    .download__state--background {
+      z-index: 1; }
+    .download__state--progress {
+      z-index: 2;
+      background: linear-gradient(to right, #264de4, #02ecff); }
+      .download--full .download__state--progress {
+        background: #18ea58 !important; }

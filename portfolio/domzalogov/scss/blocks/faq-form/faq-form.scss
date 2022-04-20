@@ -1,0 +1,216 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.faq-form {
+  margin-bottom: 50px;
+
+  &__item {
+    background: #f8f8f8;
+    border: 1px solid #e6e6e6;
+    padding: 30px 90px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .3);
+
+    @media #{$tablet-small-screen} {
+      padding: 30px 30px;
+    }
+
+    @media #{$mobile-big-screen} {
+      padding: 30px 10px;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: $green;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  &__question-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__question-form {
+    background: #fff;
+    height: 150px;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid #e6e6e6;
+  }
+  &__download {
+    margin-bottom: 20px;
+    @include flex-row;
+    align-items: center;
+    margin-top: 12px;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column;
+    }
+  }
+
+  &__download-input {
+    display: none;
+  }
+  &__download-label {
+    height: 40px;
+    padding: 0;
+    width: 135px;
+    text-align: center;
+    @include flex-row-center;
+    margin-right: 20px;
+    border-radius: 5px;
+
+    @media #{$mobile-big-screen} {
+      width: 220px;
+      @include margin-auto;
+    }
+  }
+
+  &__download-name {
+    font-size: 12px;
+    font-weight: 300;
+    width: 300px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
+
+  &__topic-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__topic-form {
+    height: 35px;
+    width: 100%;
+    @include flex-row;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+  }
+  &__topic-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: #808080;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  &__contact {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @media #{$mobile-big-screen} {
+      @include flex-column;
+    }
+  }
+  &__contact-inputs {
+    width: calc(100% - 190px);
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+  &__contact-input-block {
+    margin-bottom: 12px;
+    @include flex-row;
+    align-items: center;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    @media #{$mobile-big-screen} {
+      @include flex-column;
+    }
+  }
+  &__contact-input-title {
+    width: 125px;
+    padding-right: 25px;
+    font-size: 14px;
+    font-weight: 700;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+  &__contact-input-input {
+    width: calc(100% - 125px);
+    height: 35px;
+    @include flex-row;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+  &__contact-desc {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    width: 190px;
+    padding-left: 15px;
+    @include flex-row-center;
+    color: $green;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  &__button {
+  }
+  &__desc {
+    color: #5e5e5e;
+    font-size: 12px;
+    padding: 15px 30px;
+
+    @media #{$mobile-big-screen} {
+      padding: 15px 0;
+    }
+  }
+
+  &__desc-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5e5e5e;
+  }
+  &__desc-links {
+    font-size: 12px;
+    font-weight: 300;
+    color: #5e5e5e;
+  }
+  &__desc-link {
+    font-size: 12px;
+    font-weight: 300;
+    color: #002fb6;
+    text-decoration: underline;
+    display: inline;
+
+    &:hover {
+      color: #262626;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title {
+  margin: 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 25px;
+  display: block;
+  position: relative;
+
+  &--big {
+    font-size: 30px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 24px;
+    }
+
+  }
+
+  &--background {
+    @include main-background;
+    color: $white;
+    padding: 15px 0;
+  }
+
+  &--wave {
+    margin-bottom: 50px;
+
+    &:after {
+      @include after-absolute;
+      width: 150px;
+      height: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px;
+      @include main-background;
+      -webkit-mask-image: url(/assets/wave.svg);
+      mask-image: url(/assets/wave.svg);
+      mask-repeat: no-repeat !important;
+      -webkit-mask-repeat: no-repeat !important;
+      mask-position: center center !important;
+      -webkit-mask-position: center center !important;
+      mask-size: contain !important;
+      -webkit-mask-size: contain !important;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    height: auto;
+    margin-top: 10px;
+  }
+}

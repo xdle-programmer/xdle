@@ -1,0 +1,40 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.wrapper {
+
+  @media #{$tablet-big-screen} {
+    &,
+    & *,
+    & *:before,
+    & *:after {
+      transition: none !important;
+    }
+  } 
+
+  @include absolute-fill;
+  overflow: hidden;
+  position: fixed;
+
+  @media #{$tablet-big-screen} {
+    position: static;
+    overflow: visible;
+  }
+
+  &__inner {
+    width: 40000px;
+    @include flex-row;
+    overflow: hidden;
+    height: 100vh;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      height: auto;
+      @include flex-column;
+      overflow: visible;
+    }
+  }
+
+
+}

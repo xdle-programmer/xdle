@@ -1,0 +1,92 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.header {
+  height: 70px;
+  width: 100%;
+  background: $brown;
+  -webkit-transform: translate3d(0, 0, 0);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  @include flex-row-center;
+
+  &__block {
+    @include flex-row-center;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    color: $white;
+  }
+
+  &__logo {
+    width: 212px;
+    height: 30px;
+    background: url(../../../../img/logo.png);
+    @include background-contain-center;
+  }
+
+  &__menu-button {
+    display: none;
+
+    @media #{$tablet-big-screen} {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url(../../../../img/menu-button.svg);
+      @include background-contain-center;
+    }
+  }
+
+  &__menu {
+    @include flex-row;
+    align-items: center;
+
+    @media #{$tablet-big-screen} {
+      position: absolute;
+      top: 70px;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%) scaleY(0);
+      @include flex-column-center;
+      padding: 20px;
+      background: $brown;
+      transform-origin: top;
+      opacity: 0;
+      visibility: hidden;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scaleY(1);
+      }
+    }
+
+  }
+  &__menu-item {
+    margin-left: 36px;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: lowercase;
+
+    @media #{$tablet-big-screen} {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__menu-insta {
+    margin-left: 68px;
+    width: 24px;
+    height: 24px;
+    background: url(../../../../img/instagram.svg);
+    @include background-contain-center;
+
+    @media #{$tablet-big-screen} {
+      margin-left: 0;
+    }
+  }
+
+}

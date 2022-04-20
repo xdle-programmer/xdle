@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>Factory</title>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="language">
+    <div class="language__item active">EN</div>
+    <div class="language__item">RU</div>
+</div>
+
+<div class="first layout">
+    <div class="first__item">
+        <div class="first__item-icon" style="background: url(img/ui.svg)"></div>
+        <div class="first__item-text">UI</div>
+    </div>
+    <div class="first__item">
+        <div class="first__item-icon" style="background: url(img/dev.svg)"></div>
+        <div class="first__item-text">Dev</div>
+    </div>
+    <div class="first__item">
+        <div class="first__item-icon" style="background: url(img/ua.svg)"></div>
+        <div class="first__item-text">UA</div>
+    </div>
+</div>
+
+<div class="second layout">
+    <div class="second__title-block">
+        <div class="second__title">
+            omni
+        </div>
+    </div>
+    <div class="second__items">
+        <div class="second__text">
+            For each campaign we set up post-install user conversion funnel and analyze the users' behavior.
+        </div>
+        <div class="second__video">
+            <div class="second__video-inner">
+                <div class="second__video-inner-author">KARPOV ROSTISLAV</div>
+                <div class="second__video-inner-title">USER ACQUISITION</div>
+                <video id="video" controls preload="auto" class="video-js-custom-setting video-js"
+                       poster="img/video_poster.jpg"
+                       data-setup='{"aspectRatio":"160:90"}'>
+                    <source src="video/videoplayback.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="third layout">
+    <div class="third__title">Quick launch</div>
+    <div class="third__text">
+        <div class="third__text-item">
+            We will boost your app<br>
+            Promoting iOS and Android apps,<br>
+            mobile websites, games, services<br>
+            and ecommerce apps
+        </div>
+        <div class="third__button open-modal" data-modal="modal_feedback">CONTACT US</div>
+    </div>
+</div>
+
+<div class="fourth">
+    <div class="fourth__block layout">
+        <div class="fourth__title">HOW WE<br>WORK</div>
+        <div class="fourth__items">
+            <div class="fourth__item">
+                <div class="fourth__item-number">
+                    <div class="fourth__item-number-name">STEP</div>
+                    <div class="fourth__item-number-value">01</div>
+                </div>
+                <div class="fourth__item-text">
+                    <div class="fourth__item-text-line">
+                        You define the goals for your campaign
+                    </div>
+                    <div class="fourth__item-text-line">
+                        Fill in the form and tell us about any requirements you have
+                    </div>
+                </div>
+            </div>
+            <div class="fourth__item">
+                <div class="fourth__item-number">
+                    <div class="fourth__item-number-name">STEP</div>
+                    <div class="fourth__item-number-value">02</div>
+                </div>
+                <div class="fourth__item-text">
+                    <div class="fourth__item-text-line">
+                        Traffic sources
+                    </div>
+                    <div class="fourth__item-text-line">
+                        We will call you back within a day and make a media plan
+                    </div>
+                </div>
+            </div>
+            <div class="fourth__item">
+                <div class="fourth__item-number">
+                    <div class="fourth__item-number-name">STEP</div>
+                    <div class="fourth__item-number-value">03</div>
+                </div>
+                <div class="fourth__item-text">
+                    <div class="fourth__item-text-line">
+                        Integration
+                    </div>
+                    <div class="fourth__item-text-line">
+                        We will set up the analytics and provide traffic
+                    </div>
+                </div>
+            </div>
+            <div class="fourth__item">
+                <div class="fourth__item-number">
+                    <div class="fourth__item-number-name">STEP</div>
+                    <div class="fourth__item-number-value">04</div>
+                </div>
+                <div class="fourth__item-text">
+                    <div class="fourth__item-text-line">
+                        Get the results
+                    </div>
+                    <div class="fourth__item-text-line">
+                        Profit! We look at the results and prepare a report for you
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fourth__el-1"></div>
+        <div class="fourth__el-2"></div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer__block">
+        <div class="footer__block-links">
+            <div class="footer__block-link-wrapper">
+                <a href="#" class="footer__block-link">NETVORK</a>
+            </div>
+            <div class="footer__block-link-wrapper">
+                <a href="#" class="footer__block-link">NEWS</a>
+            </div>
+        </div>
+        <div class="footer__block-logo">
+            <div class="footer__block-logo-text">FACTORY<br>MARKETING</div>
+            <div class="footer__block-logo-img"></div>
+        </div>
+    </div>
+    <div class="footer__background"></div>
+</div>
+
+<div class="modal__background close-modal"></div>
+
+<div class="modal__block" data-modal-name="modal_feedback">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__content">
+        <div class="form form--small form-check" id="form-feedback">
+            <div class="form__wrapper">
+                <div class="form__wrapper-inner">
+
+                    <div class="form__field">
+                        <div class="input form-check__field" data-check-type="input"
+                             data-check="input-required" data-placeholder="Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Name"
+                                       name="name">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form__field">
+                        <div class="input form-check__field" data-check-type="input"
+                             data-check="input-required" data-placeholder="E-mail">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="E-mail"
+                                       name="email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__field">
+                        <div class="form__button form-check__button">
+                            Send
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal__block" data-modal-name="modal_thank">
+    <div class="modal__close close-modal"></div>
+    <div class="modal__content">
+        <div class="form form--small">
+            <div class="form__wrapper">
+                <div class="form__wrapper-inner">
+                    <div class="form__title">
+                        Thank you!
+                    </div>
+                    <div class="form__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="plugins/jquery.maskedinput.min.js"></script>
+<script src="plugins/video-js/video.min.js"></script>
+<link href="plugins/video-js/video-js.min.css" rel="stylesheet">
+<script src="js/main.js"></script>
+
+</body>

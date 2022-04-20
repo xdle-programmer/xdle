@@ -1,0 +1,47 @@
+.preloader {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  transition: all .2s ease-in; }
+  .preloader.hide {
+    opacity: 0;
+    visibility: hidden; }
+  .preloader__img-wrapper {
+    position: relative; }
+    .preloader__img-wrapper:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.5);
+      transform-origin: right;
+      animation: ease-in preloader 3s;
+      animation-fill-mode: forwards; }
+
+@keyframes preloader {
+  0% {
+    transform: scaleX(1); }
+  20% {
+    transform: scaleX(0.9); }
+  40% {
+    transform: scaleX(0.7); }
+  60% {
+    transform: scaleX(0.6); }
+  80% {
+    transform: scaleX(0.4); }
+  100% {
+    transform: scaleX(0); } }
+  .preloader__img {
+    width: 100%;
+    height: auto; }

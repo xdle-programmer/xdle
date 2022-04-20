@@ -1,0 +1,178 @@
+.games {
+  min-height: 805px;
+  padding-top: 20px;
+  position: relative; }
+  @media (max-width: 1023px) {
+    .games {
+      min-height: auto;
+      padding-bottom: 300px; } }
+  @media (max-width: 767px) {
+    .games {
+      padding-bottom: 230px; } }
+  .games__header {
+    width: 100%;
+    height: 40px;
+    background: #2e3133;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .games__header {
+        height: 60px; } }
+  .games__header-title {
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    background: #3d4145; }
+    @media (max-width: 767px) {
+      .games__header-title {
+        text-align: left;
+        padding: 0 6px;
+        font-size: 12px; } }
+  .games__header-item {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffbb02;
+    text-decoration: underline;
+    flex-grow: 1;
+    padding: 0 10px; }
+    @media (max-width: 767px) {
+      .games__header-item {
+        text-align: left;
+        font-size: 12px; } }
+  .games__header-button {
+    padding: 0 17px;
+    background: linear-gradient(to bottom, #73b119, #5b891a);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 100%;
+    text-transform: uppercase; }
+    @media (max-width: 767px) {
+      .games__header-button {
+        text-align: left;
+        padding: 0 6px;
+        font-size: 12px; } }
+  .games__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    @media (max-width: 767px) {
+      .games__items {
+        margin-left: -10px;
+        margin-right: -10px;
+        justify-content: space-between; } }
+  .games__item-wrapper {
+    width: 30%;
+    margin: 0 5%; }
+    @media (max-width: 767px) {
+      .games__item-wrapper {
+        width: 48%;
+        margin: 0 1%; } }
+  .games__item-block {
+    width: 100%;
+    position: relative;
+    padding-bottom: 111.53%; }
+  .games__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../../img/games__item.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .games__item--empty {
+      background: url(../../img/games__item-empty.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+  .games__item-number {
+    position: absolute;
+    background: url(../../img/number-grid.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 18%; }
+    @media (max-width: 767px) {
+      .games__item-number {
+        width: 20px;
+        height: 20px; } }
+  .games__item-img-block {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .games__item-img {
+    width: 100%;
+    height: auto; }
+  .games__item-price {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .games__item-price {
+        bottom: 7%; } }
+  .games__item-price-value {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    z-index: 1;
+    margin-right: 5px; }
+  .games__item-price-current {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    background: #fff;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    z-index: 1; }

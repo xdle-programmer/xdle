@@ -1,0 +1,23 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.layout {
+  width: 1130px;
+  @include margin-auto;
+  position: relative;
+
+
+  @media #{$tablet-big-screen} {
+    width: calc(100% - 30px);
+  }
+
+  &__block {
+    width: 1105px;
+    @include margin-auto;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 30px);
+    }
+  }
+}

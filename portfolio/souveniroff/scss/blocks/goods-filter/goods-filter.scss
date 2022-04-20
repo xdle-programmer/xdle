@@ -1,0 +1,103 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.goods-filter {
+
+  @media #{$mobile-big-screen} {
+    display: none;
+    position: absolute;
+    background: $white;
+    z-index: 10;
+    margin-top: 0 !important;
+    top: 0;
+    left: 0;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item {
+    @media #{$mobile-big-screen} {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__header {
+    @media #{$mobile-big-screen} {
+      border: none !important;
+      padding: 10px 30px !important;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &__header:before,
+  &__header:after {
+    @media #{$mobile-big-screen} {
+      display: none !important;
+    }
+  }
+
+  &__content {
+    @media #{$mobile-big-screen} {
+      display: block !important;
+      border: none !important;
+      padding: 10px 30px !important;
+    }
+  }
+
+  &__mobile-button {
+    display: none;
+
+    @media #{$mobile-big-screen} {
+      @include flex-row-center;
+      padding: 0 10px;
+      height: 20px;
+      font-size: 9px;
+      font-weight: 600;
+      color: $white;
+      background: $blue-light;
+      border-radius: 3px;
+
+      &--big {
+        height: 40px;
+        font-size: 14px;
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__buttons {
+    @include flex-row;
+    justify-content: space-between;
+
+    @media #{$mobile-big-screen} {
+      @include flex-row;
+      justify-content: space-between;
+      margin: 30px;
+    }
+
+  }
+  &__button-reset {
+    @include flex-row-center;
+    height: #{$control-height}px;
+    background: $white;
+    border: 1px solid $blue-light;
+    padding: 0 10px;
+    color: $blue-light;
+    border-radius: 3px;
+  }
+  &__button-apply {
+    @include flex-row-center;
+    height: #{$control-height}px;
+    background: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    padding: 0 10px;
+    border-radius: 3px;
+  }
+
+}

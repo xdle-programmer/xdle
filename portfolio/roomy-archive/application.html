@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>Roomy</title>
+</head>
+<link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+
+<body>
+
+<div class="wrapper wrapper--inner">
+
+    <header class="header header--authorized">
+        <div class="header__block layout">
+            <div class="header__switch header__switch--desktop">
+                <div class="role-switch">
+                    <div class="role-switch__item">Продавец</div>
+                    <div class="role-switch__item active">Покупатель</div>
+                </div>
+            </div>
+
+            <div class="header__count header__count--desktop">
+                <div class="profile-balance">
+                    <div class="profile-balance__state">
+                        <div class="profile-balance__state-name">Счет</div>
+                        <div class="profile-balance__state-number">
+                            € 25<span class="profile-balance__state-number-small">.05</span>
+                        </div>
+                    </div>
+                    <div class="profile-balance__button">
+                        <div class="profile-balance__button-icon"></div>
+                        <div class="profile-balance__button-text">Пополнить</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__profile">
+
+                <div class="header__profile-about header__profile-about--desktop">
+                    <div class="header__profile-about-name">Иван Иванович</div>
+                    <div class="header__profile-about-id">ID 24564</div>
+                </div>
+
+                <div class="header__profile-menu-button">
+                    <img class="header__profile-menu-button-icon" src="img/user-icon.svg">
+                </div>
+                <div class="header__profile-menu">
+                    <div style="display: none">
+
+                        <div class="header__profile-about">
+                            <div class="header__profile-about-name">Иван Иванович</div>
+                            <div class="header__profile-about-id">ID 24564</div>
+                        </div>
+
+                        <div class="header__switch">
+                            <div class="role-switch">
+                                <div class="role-switch__item">Продавец</div>
+                                <div class="role-switch__item active">Покупатель</div>
+                            </div>
+                        </div>
+
+                        <div class="header__count">
+                            <div class="profile-balance">
+                                <div class="profile-balance__state">
+                                    <div class="profile-balance__state-name">Счет</div>
+                                    <div class="profile-balance__state-number">
+                                        € 25<span class="profile-balance__state-number-small">.05</span>
+                                    </div>
+                                </div>
+                                <div class="profile-balance__button">
+                                    <div class="profile-balance__button-icon"></div>
+                                    <div class="profile-balance__button-text">Пополнить</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="header__profile-menu-link">Управление профилем</div>
+                    <div class="header__profile-menu-logout">Выйти</div>
+                </div>
+            </div>
+
+            <div class="header__interface-settings">
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--white">
+                        <div class="dropdown-circle__button">€</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">€</div>
+                                <div class="dropdown-circle__list-item-text">Евро</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">$</div>
+                                <div class="dropdown-circle__list-item-text">Доллар</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--white">
+                        <div class="dropdown-circle__button">ES</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">EN</div>
+                                <div class="dropdown-circle__list-item-text">Английский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">ES</div>
+                                <div class="dropdown-circle__list-item-text">Испанский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">RU</div>
+                                <div class="dropdown-circle__list-item-text">Русский</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu side-menu--hide">
+        <div class="side-menu__logo">
+            <div class="side-menu__logo-icon"></div>
+            <div class="side-menu__logo-text-block">
+                <div class="side-menu__logo-text side-menu__logo-text--1">Ro</div>
+                <div class="side-menu__logo-text side-menu__logo-text--2">o</div>
+                <div class="side-menu__logo-text side-menu__logo-text--3">my</div>
+            </div>
+        </div>
+        <div class="side-menu__items">
+            <div class="side-menu__item active">
+                <div class="side-menu__item-icon side-menu__item-icon--dashboard"></div>
+                <div class="side-menu__item-text">Рабочий стол</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--catalog"></div>
+                <div class="side-menu__item-text">Каталог</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--applications"></div>
+                <div class="side-menu__item-text">Заявки</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--deal"></div>
+                <div class="side-menu__item-text">Сделки</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--favorites"></div>
+                <div class="side-menu__item-text">Избранное</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--saved"></div>
+                <div class="side-menu__item-text">Сохраненные поиски</div>
+            </div>
+            <div class="side-menu__item">
+                <div class="side-menu__item-icon side-menu__item-icon--settings"></div>
+                <div class="side-menu__item-text">Настройки кабинета</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="layout">
+        <div class="main-title">Заявки</div>
+
+
+        <div class="application">
+            <div class="application__title">
+                <div class="title title--medium">
+                    Актуальные заявки
+                </div>
+                <div class="application__notification">6</div>
+            </div>
+            <div class="application__description">
+                Заявки на открытие сделки отображаются после соглосования даты и времени, для просмотра объекта.
+            </div>
+            <div class="application__items">
+
+                <div class="application__item">
+                    <div class="application__item-image">
+                        <img src="img/application/application-item.png" alt="">
+                    </div>
+                    <div class="application__item-about">
+                        <div class="application__item-title">Квартира, 86 m², 4 комнаты, € 63 500.</div>
+                        <div class="application__item-text">Адрес: Испания, Барселона</div>
+                    </div>
+                    <div class="application__item-overlay">
+                        <div class="application__button-box">
+                            <a href="#" class="application__button">Написать</a>
+                            <a href="#" class="application__button">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="application__title">
+                <div class="title title--medium">
+                    Чат
+                </div>
+                <div class="application__title-icon">
+                    <img src="img/application/info.svg" alt="">
+                </div>
+            </div>
+
+            <div class="chat-box">
+                <div class="chat chat--mr">
+
+                    <div class="chat__panel">
+                        <div class="chat__panel-inner">
+                            <div class="chat__panel-title">Выберите чат:</div>
+                            <div class="chat__item chat__item--small-padding">
+                                <div class="chat__support-icon">
+                                    <img src="img/chat/support.svg" alt="">
+                                </div>
+                                <div class="chat__support-information">
+                                    <div class="chat__name">Чат с поддержкой Rommy</div>
+                                    <div class="chat__status">На связи 24/7</div>
+                                </div>
+                            </div>
+                            <div class="chat__item">
+                                <div class="chat__item-icon">
+                                    <img src="img/chat/photo-1.png" alt="">
+                                </div>
+                                <div class="chat__item-information">
+                                    <div class="chat__name">Квартира в Глориета дель Поэта Висенте Мохика</div>
+                                    <div class="chat__about-item">
+                                        <div class="chat__about-item-text">€ 162 000</div>
+                                        <div class="chat__about-item-text">85 m²</div>
+                                    </div>
+                                </div>
+                                <div class="chat__menu"></div>
+                            </div>
+
+                            <div class="chat__item chat__item--active">
+                                <div class="chat__item-icon">
+                                    <img src="img/chat/photo-1.png" alt="">
+                                </div>
+                                <div class="chat__item-information">
+                                    <div class="chat__name">Квартира в Глориета дель Поэта Висенте Мохика</div>
+                                    <div class="chat__about-item">
+                                        <div class="chat__about-item-text">€ 162 000</div>
+                                        <div class="chat__about-item-text">85 m²</div>
+                                    </div>
+                                </div>
+                                <div class="chat__menu"></div>
+                            </div>
+
+                            <div class="chat__item ">
+                                <div class="chat__item-icon">
+                                    <img src="img/chat/photo-1.png" alt="">
+                                </div>
+                                <div class="chat__item-information">
+                                    <div class="chat__name">Квартира в Глориета дель Поэта Висенте Мохика</div>
+                                    <div class="chat__about-item">
+                                        <div class="chat__about-item-text">€ 162 000</div>
+                                        <div class="chat__about-item-text">85 m²</div>
+                                    </div>
+                                </div>
+                                <div class="chat__menu"></div>
+                            </div>
+
+                            <div class="chat__item ">
+                                <div class="chat__item-icon">
+                                    <img src="img/chat/photo-1.png" alt="">
+                                </div>
+                                <div class="chat__item-information">
+                                    <div class="chat__name">Квартира в Глориета дель Поэта Висенте Мохика</div>
+                                    <div class="chat__about-item">
+                                        <div class="chat__about-item-text">€ 162 000</div>
+                                        <div class="chat__about-item-text">85 m²</div>
+                                    </div>
+                                </div>
+                                <div class="chat__menu"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat__area-box">
+                        <div class="chat__area">
+                            <div class="chat__area-search">
+                                <input type="text" class="" placeholder="Поиск по адресу или дате">
+                            </div>
+                            <div class="chat__area-day">Сегодня</div>
+
+                            <div class="chat__message chat__message--right">
+                                <div class="chat__message-text">
+                                    Здравствуйте! <br>
+                                    Заинтересовал ваш дом
+                                </div>
+                                <div class="chat__message-time">12:05</div>
+                            </div>
+                            <div class="chat__message chat__message--active">
+                                <div class="chat__message-text">
+                                    Здравствуйте! <br>
+                                    Еще актуально, пишите
+                                </div>
+                                <div class="chat__message-time">12:05</div>
+                            </div>
+                            <div class="chat__message chat__message--right">
+                                <div class="chat__message-text">
+                                    Отлично! <br>
+                                    Хочу посмотреть на ваш объект
+                                </div>
+                                <div class="chat__message-time">12:05</div>
+                            </div>
+                            <div class="chat__message chat__message--active">
+                                <div class="chat__message-text">
+                                    Здравствуйте! <br>
+                                    Еще актуально, пишите
+                                </div>
+                                <div class="chat__message-time">12:05</div>
+                            </div>
+
+                        </div>
+                        <div class="chat__choice">
+                            <div class="chat__select-box">
+                                <div class="chat__select-item">Назначить встречу</div>
+                                <div class="chat__select-item">Передать документы</div>
+                                <div class="chat__select-item">Сделка</div>
+                            </div>
+                            <div class="chat__choice-message">
+                                <div class="chat__choice-file">
+                                    <img src="img/chat/clip.svg" alt="">
+                                </div>
+                                <div class="chat__choice-text" contenteditable="true">Хочу посмотреть на ваш объект,
+                                    давайте назначим встречу. <br>
+                                    Когда вам будет удобно?
+                                </div>
+                                <div class="chat__choice-button">
+                                    <img src="img/chat/send.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat__place">
+                    <img class="chat__place-image" src="img/chat/place.jpg" alt="">
+                    <div class="chat__place-inner">
+                        <div class="chat__place-title">Piso en venta en Calle de Manuel Amorós Gozálbez</div>
+                        <div class="chat__place-position">Sant Joan d'Alacant</div>
+                        <div class="chat__place-cost-box">
+
+                            <div class="chat__place-cost">
+                                <div class="chat__place-cost-status">
+                                    <img src="img/chat/up.svg" alt="">
+                                </div>
+                                € 170 000
+                            </div>
+
+                            <div class="chat__place-discount">€ 165 000</div>
+
+                        </div>
+                        <div class="chat__title-small">Основные характеристики:</div>
+                        <div class="chat__place-characteristics chat__place-characteristics--mb">
+                            <div class="chat__place-characteristics-item">
+                                <div class="chat__place-characteristics-text">
+                                    150 m²
+                                </div>
+                                <div class="chat__place-characteristics-icon">
+                                    <img src="img/chat/m-2.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="chat__place-characteristics-item">
+                                <div class="chat__place-characteristics-text">
+                                    5
+                                </div>
+                                <div class="chat__place-characteristics-icon">
+                                    <img src="img/chat/door.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="chat__place-characteristics-item">
+                                <div class="chat__place-characteristics-text">
+                                    3
+                                </div>
+                                <div class="chat__place-characteristics-icon">
+                                    <img src="img/chat/bathroom.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat__title-small">Дополнительно имеется:</div>
+                        <div class="chat__place-characteristics">
+                            <div class="chat__place-characteristics-item">
+
+                                <div class="chat__place-characteristics-icon">
+                                    <img src="img/chat/furniture.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="chat__place-characteristics-item">
+
+                                <div class="chat__place-characteristics-icon">
+                                    <img src="img/chat/copy.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="chat__place-characteristics-item">
+
+                                <div class="chat__place-characteristics-icon">
+                                    <img src="img/chat/pool.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="chat__place-characteristics-item">
+
+                                <div class="chat__place-characteristics-icon">
+                                    <img src="img/chat/conditioning.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <a href="#" class="chat__place-link">
+                            Подробнее
+                            <div class="chat__place-link-icon"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div style="width: 100%;height: 2000px"></div>
+
+<footer class="footer">
+    <div class="footer__block layout">
+        <div class="footer__top">
+            <div class="footer__menu">
+                <a href="#" class="footer__menu-item">Фотографам</a>
+                <a href="#" class="footer__menu-item">Инженерам</a>
+                <a href="#" class="footer__menu-item">Нотариусам</a>
+                <a href="#" class="footer__menu-item">Переезды</a>
+            </div>
+            <div class="footer__buttons">
+                <div class="footer__buttons-contact">
+                    <!--                        <div class="footer__buttons-contact-item footer__buttons-contact-item&#45;&#45;chat">Онлайн чат</div>-->
+                    <div class="footer__buttons-contact-item footer__buttons-contact-item--mail">Отправить письмо
+                    </div>
+                </div>
+                <div class="footer__app">
+                    <div class="footer__app-title">
+                        Для мобильного устройства:
+                    </div>
+                    <div class="footer__app-buttons">
+                        <div class="footer__app-button footer__app-button--apple"></div>
+                        <div class="footer__app-button footer__app-button--android"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__logo">
+                <div class="logo"></div>
+            </div>
+            <div class="footer__copyright">©2020 Roomy.case</div>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link">Условия</a>
+            </div>
+            <div class="footer__interface-settings">
+                <div class="footer__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                        <div class="dropdown-circle__button">€</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">€</div>
+                                <div class="dropdown-circle__list-item-text">Евро</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">$</div>
+                                <div class="dropdown-circle__list-item-text">Доллар</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__interface-settings-item">
+                    <div class="dropdown-circle dropdown-circle--gray dropdown-circle--top-menu">
+                        <div class="dropdown-circle__button">ES</div>
+                        <div class="dropdown-circle__list">
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">EN</div>
+                                <div class="dropdown-circle__list-item-text">Английский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item active">
+                                <div class="dropdown-circle__list-item-icon">ES</div>
+                                <div class="dropdown-circle__list-item-text">Испанский</div>
+                            </div>
+                            <div class="dropdown-circle__list-item">
+                                <div class="dropdown-circle__list-item-icon">RU</div>
+                                <div class="dropdown-circle__list-item-text">Русский</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="plugins/errors_handler.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/object-carousel.js"></script>
+</html>

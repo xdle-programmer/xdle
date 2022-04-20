@@ -1,0 +1,117 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.main-banner {
+  height: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @media #{$mobile-big-screen} {
+    height: auto;
+    min-height: 800px;
+  }
+
+
+  &__background {
+    position: absolute;
+    @include absolute-fill;
+    height: 700px;
+    z-index: -1;
+  }
+
+  &__block {
+    @include flex-column;
+    height: 100%;
+  }
+
+  &__desc {
+    @include flex-column;
+    justify-content: center;
+    flex-grow: 1;
+    color: $white;
+    padding: 20px;
+    padding-top: 100px;
+
+    @media #{$mobile-big-screen} {
+      padding: 0;
+      padding-top: 100px;
+      padding-bottom: 35px;
+    }
+  }
+
+  &__desc-title {
+    font-size: 40px;
+    font-weight: 900;
+    width: 70%;
+    margin-bottom: 13px;
+
+    @media #{$mobile-big-screen} {
+      font-size: 30px;
+      width: 100%;
+    }
+  }
+
+  &__desc-text {
+    line-height: 25px;
+    width: 70%;
+    margin-bottom: 28px;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+  }
+
+  &__desc-button {
+  }
+
+  &__slider {
+    position: relative;
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      right: -45px;
+      top: 74px;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 28px;
+      background: url(../../../img/icons/slider-arrow.png) !important;
+      @include background-contain-center;
+
+      & span {
+        display: none;
+      }
+
+      &.disabled {
+        display: none;
+      }
+
+      @media #{$tablet-big-screen} {
+        right: 45px;
+      }
+
+      @media #{$mobile-big-screen} {
+        right: 15px;
+      }
+    }
+
+    & .owl-next {
+      transform: translateY(-50%) scaleX(-1);
+    }
+
+    & .owl-prev {
+      right: auto;
+      left: -45px;
+
+      @media #{$tablet-big-screen} {
+        left: 45px;
+      }
+
+      @media #{$mobile-big-screen} {
+       left: 15px;
+      }
+    }
+  }
+}

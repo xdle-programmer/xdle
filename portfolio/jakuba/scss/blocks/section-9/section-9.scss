@@ -1,0 +1,121 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.section-9 {
+  @include flex-column-center;
+  align-items: flex-start;
+  height: 100%;
+  width: 1020px;
+  padding-left: 150px;
+  background: url(../../../img/section-9/background.jpg);
+  position: relative;
+  z-index: 2;
+
+  @media #{$tablet-big-screen} {
+    width: 100%;
+    order: 7;
+    padding: 40px 30px;
+  }
+
+  &__items {
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 230px 400px;
+    margin-bottom: 130px;
+    align-items: center;
+    grid-gap: 60px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    @media #{$desktop-small-screen} {
+      margin-bottom: 50px;
+      grid-template-columns: 150px 400px;
+    }
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 40px;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__item-img {
+    width: 230px;
+    height: 310px;
+    @include background-cover-center;
+
+    @media #{$desktop-small-screen} {
+      height: 200px;
+      width: 150px;
+    }
+
+    @media #{$tablet-big-screen} {
+      @include margin-auto
+    }
+
+  }
+
+  &__item-desc {
+    margin-bottom: 40px;
+
+    @media #{$tablet-big-screen} {
+      text-align: center;
+    }
+  }
+
+  &__item-desc-title {
+    font-size: 80px;
+    line-height: 109px;
+    @include font-noto('');
+    color: $red;
+    @include flex-row;
+    margin-bottom: 20px;
+
+    @media #{$tablet-big-screen} {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 10px;
+      @include margin-auto;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  &__item-desc-title-inner {
+
+
+    &--red {
+      color: $white;
+    }
+  }
+
+  &__item-desc-text {
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+
+    @media #{$tablet-big-screen} {
+      font-weight: 300;
+    }
+  }
+
+  &__img {
+    width: 600px;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    right: -400px;
+    background: url(../../../img/section-9/jakuba.png);
+    @include background-contain-center;
+    background-position: center bottom !important;
+
+    @media #{$tablet-big-screen} {
+      display: none;
+    }
+  }
+}

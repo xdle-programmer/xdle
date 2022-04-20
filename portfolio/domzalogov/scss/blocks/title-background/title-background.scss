@@ -1,0 +1,15 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.title-background {
+  @include flex-row;
+  align-items: center;
+  padding: 30px;
+  height: 300px;
+  @include background-cover-center;
+
+  &__item {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button-gradient {
+  border-radius: 100px;
+  position: relative;
+  display: inline-block;
+  color: $white;
+  font-weight: 700;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:before {
+    @include after-absolute;
+    @include absolute-fill;
+    @include gradient;
+    background-size: 200% 100%;
+    animation: poster-button 5s ease infinite paused;
+    z-index: -2;
+  }
+
+  @keyframes poster-button {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+
+  }
+
+  &:hover:before {
+    animation-play-state: running;
+  }
+
+}

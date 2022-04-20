@@ -1,0 +1,89 @@
+.newsletter {
+  background: #000000;
+  padding: 25px 80px;
+  margin: 50px 100px; }
+  @media (max-width: 1023px) {
+    .newsletter {
+      padding: 40px;
+      margin: 50px 0; } }
+  @media (max-width: 767px) {
+    .newsletter {
+      padding: 20px;
+      margin: 50px 0; } }
+  .newsletter__title {
+    padding: 0 80px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Antiqua', sans-serif;
+    text-align: center;
+    font-size: 28px; }
+    @media (max-width: 1365px) {
+      .newsletter__title {
+        padding: 0 30px; } }
+    @media (max-width: 1023px) {
+      .newsletter__title {
+        padding: 0; } }
+    @media (max-width: 767px) {
+      .newsletter__title {
+        font-size: 16px; } }
+  .newsletter__input-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 60px; }
+    @media (max-width: 767px) {
+      .newsletter__input-block {
+        height: auto;
+        flex-wrap: wrap; } }
+  .newsletter__input {
+    width: 80%;
+    height: 100%;
+    padding-left: 20px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+    @media (max-width: 1365px) {
+      .newsletter__input {
+        width: 70%; } }
+    @media (max-width: 767px) {
+      .newsletter__input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px; } }
+  .newsletter:hover .newsletter__input {
+    border-color: #ffb037;
+    font-size: 18px; }
+  .newsletter__button {
+    width: 20%;
+    height: 100%;
+    background: #ffb037;
+    font-size: 22px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+    @media (max-width: 1365px) {
+      .newsletter__button {
+        width: 30%; } }
+    @media (max-width: 767px) {
+      .newsletter__button {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height: 40px;
+        font-size: 18px; } }
+  .newsletter__checkbox {
+    margin-top: 10px; }
+  .newsletter__checkbox .checkbox__label:hover {
+    color: #666 !important;
+    text-decoration: none !important; }
+  .newsletter__checkbox .checkbox__input:checked + .checkbox__label {
+    color: #666 !important; }
+  .newsletter__checkbox .checkbox__label:after {
+    background: #ffb037 !important; }

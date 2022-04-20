@@ -1,0 +1,47 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.recommendation {
+  padding: 15px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 2px 0 rgba(0, 0, 0, .2);
+  @include flex-row;
+
+  @media #{$mobile-big-screen} {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  &--invert {
+    flex-direction: row-reverse;
+  }
+
+  @media #{$mobile-big-screen} {
+    @include flex-column;
+  }
+
+  &__img {
+    width: 250px;
+    height: 180px;
+    @include background-cover-center;
+
+    @media #{$mobile-big-screen} {
+      @include margin-auto
+    }
+  }
+
+  &__desc {
+    width: calc(100% - 250px);
+    padding: 20px 35px;
+    padding-bottom: 0;
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+      padding: 20px 0;
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.why-we {
+  background-color: #061335;
+  @include background-cover-center;
+  width: 100%;
+  padding: 100px 0;
+  padding-bottom: 25%;
+  position: relative;
+
+  &:before {
+    @include after-absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-99%);
+    padding-bottom: 5.87%;
+    background: url(/img/why_we_top.svg);
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+  }
+
+  &:after {
+    @include after-absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(6, 19, 53, 1) 0%, rgba(6, 19, 53, 0) 100%);
+  }
+
+  &__block {
+    @include flex-row;
+    justify-content: space-between;
+
+    @media #{$tablet-big-screen} {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  $item-margin: 1;
+  $item-width: 270;
+
+  &__desc {
+    width: calc(100% - #{($item-width * 3) + ($item-margin * 6)}px);
+    padding-right: 10px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+  &__desc-title {
+
+  }
+
+  &__desc-text {
+    color: $blue-gray;
+    margin: 30px 0;
+    line-height: 27px;
+  }
+
+  &__desc-link {
+  }
+
+  &__items {
+    @include flex-row;
+    flex-wrap: wrap;
+    width: #{($item-width * 3) + ($item-margin * 6)}px;
+
+    @media #{$tablet-big-screen} {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  $item-hover: '.why-we__item:hover';
+
+  &__item {
+    margin: 1px;
+    width: #{$item-width}px;
+    height: #{$item-width}px;
+    @include flex-column-center;
+    @include background-magenta-gradient;
+    position: relative;
+    padding: 40px;
+    overflow: hidden;
+
+    &:after {
+      @include after-absolute;
+      left: 10px;
+      top: 10px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      background: $blue-dark;
+    }
+
+    &:hover:after {
+      opacity: 0;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: calc(33.3% - 2px);
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 100%;
+    }
+
+  }
+
+  &__item-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      background: url(/img/why_we_icons-sprite.svg);
+      background-size: 600% 200%;
+      background-position-y: 100%;
+    }
+
+    &:after {
+      opacity: 0;
+      background-position-y: 0;
+
+      #{$item-hover} & {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+
+      #{$item-hover} & {
+        opacity: 0;
+      }
+    }
+
+    &--handshake:before,
+    &--handshake:after {
+      background-position-x: 600%;
+    }
+
+    &--balloon:before,
+    &--balloon:after {
+      background-position-x: 500%;
+    }
+
+    &--glasses:before,
+    &--glasses:after {
+      background-position-x: 400%;
+    }
+
+    &--hat:before,
+    &--hat:after {
+      background-position-x: 300%;
+    }
+
+    &--speech:before,
+    &--speech:after {
+      background-position-x: 200%;
+    }
+
+    &--bulb:before,
+    &--bulb:after {
+      background-position-x: 100%;
+    }
+
+  }
+
+  &__item-name {
+    $line-height: 22;
+    line-height: #{$line-height}px;
+    height: #{$line-height * 2}px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $magenta;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-transform: uppercase;
+
+    #{$item-hover} & {
+      color: $white;
+    }
+  }
+
+  &__item-desc {
+    color: $blue-gray;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    $line-height: 18;
+    line-height: #{$line-height}px;
+    height: #{$line-height * 2}px;
+    overflow: hidden;
+    margin-top: 10px;
+
+    #{$item-hover} & {
+      color: $white;
+    }
+  }
+
+}

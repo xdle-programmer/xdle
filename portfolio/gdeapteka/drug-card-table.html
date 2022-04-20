@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Где Лекарство</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+</head>
+
+<body>
+
+<div class="banner banner--main" style="background: url(img/banner.jpg)"></div>
+
+<header class="header">
+    <div class="header__block layout">
+        <div class="header__logo"></div>
+        <div class="header__mobile-button"></div>
+        <div class="header__city">Санкт-Петербург</div>
+        <div class="header__search">
+            <div class="header__search-wrapper">
+                <input class="header__search-input" placeholder="Введите название лекарства">
+                <div class="header__search-button"></div>
+                <div class="header__search-close"></div>
+            </div>
+            <div class="header__search-toggle-button"></div>
+        </div>
+
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-book.png">
+            </div>
+            <div class="header__menu-button-text">Справочники</div>
+        </a>
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-pharmacy.png">
+            </div>
+            <div class="header__menu-button-text">Для аптек</div>
+        </a>
+        <a href="#" class="header__menu-button header__menu-button--basket">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-basket.png">
+            </div>
+            <div class="header__menu-button-text">Корзина</div>
+        </a>
+        <a href="#" class="header__menu-button">
+            <div class="header__menu-button-icon">
+                <img class="header__menu-button-icon-img" src="img/icon-login.png">
+            </div>
+            <div class="header__menu-button-text">Войти</div>
+        </a>
+    </div>
+</header>
+
+<div class="wrapper">
+
+    <div class="wrapper__map wrapper__map-toggle--hidden">
+        <div id="YMapsID"
+             style="width: 100%;height: 100%;background-size: cover;background: url(img/map-example.jpg)"></div>
+    </div>
+    <div class="wrapper__left-col scroll-holder">
+        <div class="menu">
+            <div class="menu__title">Каталог товаров</div>
+            <div class="menu__items">
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Витамины и БАДы</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Ежедневная гигиена</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Красота и уход</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Лекарства</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Лечебная косметика</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Медтехника и изделия медицинского назначения</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Товары для детей и мам</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#" class="menu__item-link">Товары для здоровья</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper__center-col wrapper__map-toggle">
+
+        <div class="district-filter">
+            <div class="district-filter__header">
+                <div class="district-filter__button">Район</div>
+                <div class="district-filter__list">
+                    <div class="district-filter__list-item district-filter__list-item--all">Все районы</div>
+                    <div class="district-filter__list-item" data-district="Дзержинский">Дзержинский</div>
+                    <div class="district-filter__list-item" data-district="Железнодорожный">Железнодорожный</div>
+                    <div class="district-filter__list-item" data-district="Заельцовский">Заельцовский</div>
+                    <div class="district-filter__list-item" data-district="Калининский">Калининский</div>
+                    <div class="district-filter__list-item" data-district="Кировский">Кировский</div>
+                    <div class="district-filter__list-item" data-district="Кольцово">Кольцово</div>
+                    <div class="district-filter__list-item" data-district="Краснообск">Краснообск</div>
+                    <div class="district-filter__list-item" data-district="Ленинский">Ленинский</div>
+                    <div class="district-filter__list-item" data-district="Обь">Обь</div>
+                    <div class="district-filter__list-item" data-district="Октябрьский">Октябрьский</div>
+                    <div class="district-filter__list-item" data-district="Первомайский">Первомайский</div>
+                    <div class="district-filter__list-item" data-district="Советский">Советский</div>
+                    <div class="district-filter__list-item" data-district="Центральный">Центральный</div>
+                </div>
+            </div>
+            <div class="district-filter__result"></div>
+        </div>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__wrapper">
+                <div class="breadcrumbs__items">
+                    <a href="#" class="breadcrumbs__item">A</a>
+                    <a href="#" class="breadcrumbs__item">A12</a>
+                    <a href="#" class="breadcrumbs__item">A12C</a>
+                    <div class="breadcrumbs__item active">A12CX другие минеральные вещества</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drug-card">
+            <div class="drug-card__short">
+                <div class="drug-card__short-block">
+                    <div class="drug-card__title-block">
+                        <div class="drug-card__title">АСПАРКАМ</div>
+                        <div class="drug-card__subtitle">
+                            <div class="drug-card__subtitle-black">(МНН:</div>
+                            <div class="drug-card__subtitle-blue">КАЛИЯ И МАГНИЯ АСПАРАГИНАТ)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-card__short-block">
+                    <div class="drug-card__info-desc-main drug-card__info-desc-main--short">
+                        <div class="drug-card__info-desc-main-item">
+                            <div class="drug-card__info-desc-main-item-title">Лекарственная форма:</div>
+                            <div class="drug-card__info-desc-main-item-value">Пор для р-ра для в/в и в/м введ</div>
+                        </div>
+                        <div class="drug-card__info-desc-main-item">
+                            <div class="drug-card__info-desc-main-item-title">Фасовка:</div>
+                            <div class="drug-card__info-desc-main-item-value">N56</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-card__short-block">
+                    <div class="drug-card__info-desc-manual">Инструкция по применению</div>
+                </div>
+                <div class="drug-card__short-block">
+                    <div class="drug-card__info-desc-help">Наличие и цены уточняйте в аптеках города</div>
+                </div>
+                <div class="drug-card__short-block">
+                    <div class="drug-card__filter">
+                        <div class="drug-card__filter-name">Все</div>
+                        <div class="drug-card__filter-items">
+                            <div class="drug-card__filter-item">Круглосуточные</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drug-card__short-block">
+                    <div class="drug-card__filter">
+                        <div class="drug-card__filter-name">Сортировать по:</div>
+                        <div class="drug-card__filter-items">
+                            <div class="drug-card__filter-item">Расстоянию</div>
+                            <div class="drug-card__filter-item">Цене</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pharmacy-list">
+            <div class="pharmacy-list__items">
+
+                <div class="pharmacy-list__item">
+                    <div class="pharmacy-list__item-about">
+                        <div class="pharmacy-list__item-about-name">Моя аптека сервис заказа лекарств</div>
+                        <div class="pharmacy-list__item-contact">
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--map">
+                                Новосибирск, Ленинский райно, Колхидская,11
+                                длинное название улицы
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--worktime">с
+                                08:00 до 22:00
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--phone">
+                                8-913-630-01-35
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-list__item-natural pharmacy-list__order">
+                        <div class="pharmacy-list__order-button">Заказать</div>
+                        <div class="pharmacy-list__order-price-block">
+                            <div class="pharmacy-list__order-price-item">308.00 ₽</div>
+                            <div class="pharmacy-list__order-price-time">04.09.2019 г.</div>
+                            <div class="pharmacy-list__order-price-factory">Производитель</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pharmacy-list__item">
+                    <div class="pharmacy-list__item-about">
+                        <div class="pharmacy-list__item-about-name">Моя аптека сервис заказа лекарств</div>
+                        <div class="pharmacy-list__item-contact">
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--map">
+                                Новосибирск, Ленинский, Колхидская,11
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--worktime">с
+                                08:00 до 22:00
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--phone">
+                                8-913-630-01-35
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--phone">
+                                8-913-630-01-35
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-list__item-natural pharmacy-list__order">
+                        <div class="pharmacy-list__order-button">Заказать</div>
+                        <div class="pharmacy-list__order-price-block">
+                            <div class="pharmacy-list__order-price-item">308.00 ₽</div>
+                            <div class="pharmacy-list__order-price-time">04.09.2019 г.</div>
+                            <div class="pharmacy-list__order-price-factory">Производитель</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pharmacy-list__item">
+                    <div class="pharmacy-list__item-about">
+                        <div class="pharmacy-list__item-about-name">Моя аптека сервис заказа лекарств</div>
+                        <div class="pharmacy-list__item-contact">
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--map">
+                                Новосибирск, Ленинский райно, Колхидская,11
+                                длинное название улицы
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--worktime">с
+                                08:00 до 22:00
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--phone">
+                                8-913-630-01-35
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-list__item-natural pharmacy-list__order">
+                        <div class="pharmacy-list__order-button">Заказать</div>
+                        <div class="pharmacy-list__order-price-block">
+                            <div class="pharmacy-list__order-price-item">308.00 ₽</div>
+                            <div class="pharmacy-list__order-price-time">04.09.2019 г.</div>
+                            <div class="pharmacy-list__order-price-factory">Производитель</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pharmacy-list__item">
+                    <div class="pharmacy-list__item-about">
+                        <div class="pharmacy-list__item-about-name">Моя аптека сервис заказа лекарств</div>
+                        <div class="pharmacy-list__item-contact">
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--map">
+                                Новосибирск, Ленинский, Колхидская,11
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--worktime">с
+                                08:00 до 22:00
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--phone">
+                                8-913-630-01-35
+                            </div>
+                            <div class="pharmacy-list__item-contact-item pharmacy-list__item-contact-item--phone">
+                                8-913-630-01-35
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-list__item-natural pharmacy-list__order">
+                        <div class="pharmacy-list__order-button">Заказать</div>
+                        <div class="pharmacy-list__order-price-block">
+                            <div class="pharmacy-list__order-price-item">308.00 ₽</div>
+                            <div class="pharmacy-list__order-price-time">04.09.2019 г.</div>
+                            <div class="pharmacy-list__order-price-factory">Производитель</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pharmacy-list__button">Показать еще</div>
+        </div>
+
+        <div class="manual">
+
+            <div class="manual__title">Инструкция по применению Аспаркам таб. n50</div>
+            <div class="manual__tags">
+                <div class="manual__tag">Фармакологическое действие</div>
+                <div class="manual__tag">Показания</div>
+                <div class="manual__tag">Способ применения и дозировка</div>
+                <div class="manual__tag">Побочные действия</div>
+                <div class="manual__tag">Противопоказания</div>
+                <div class="manual__tag">Передозировка</div>
+                <div class="manual__tag">Взаимодействие с другими препаратами</div>
+                <div class="manual__tag">Условия хранения</div>
+            </div>
+            <div class="manual__subtitle">Фармакологическое действие</div>
+            <div class="manual__text">Фармакологическое действие - восполняющее дефицит магния и калия,
+                антиаритмическое. Является источником ионов калия и магния, способствует их проникновению во
+                внутриклеточное пространство. Регулирует метаболические процессы. Нормализует электролитный баланс.
+                Понижает возбудимость и проводимость миокарда, оказывает антиаритмическое действие. Легко всасывается
+                при приеме внутрь, выводится почками.
+            </div>
+            <div class="manual__subtitle">Фармакологическое действие</div>
+            <div class="manual__text">Фармакологическое действие - восполняющее дефицит магния и калия,
+                антиаритмическое. Является источником ионов калия и магния, способствует их проникновению во
+                внутриклеточное пространство. Регулирует метаболические процессы. Нормализует электролитный баланс.
+                Понижает возбудимость и проводимость миокарда, оказывает антиаритмическое действие. Легко всасывается
+                при приеме внутрь, выводится почками.
+            </div>
+            <div class="manual__subtitle">Фармакологическое действие</div>
+            <div class="manual__text">Фармакологическое действие - восполняющее дефицит магния и калия,
+                антиаритмическое. Является источником ионов калия и магния, способствует их проникновению во
+                внутриклеточное пространство. Регулирует метаболические процессы. Нормализует электролитный баланс.
+                Понижает возбудимость и проводимость миокарда, оказывает антиаритмическое действие. Легко всасывается
+                при приеме внутрь, выводится почками.
+            </div>
+            <div class="manual__subtitle">Фармакологическое действие</div>
+            <div class="manual__text">Фармакологическое действие - восполняющее дефицит магния и калия,
+                антиаритмическое. Является источником ионов калия и магния, способствует их проникновению во
+                внутриклеточное пространство. Регулирует метаболические процессы. Нормализует электролитный баланс.
+                Понижает возбудимость и проводимость миокарда, оказывает антиаритмическое действие. Легко всасывается
+                при приеме внутрь, выводится почками.
+            </div>
+            <div class="manual__subtitle">Фармакологическое действие</div>
+            <div class="manual__text">Фармакологическое действие - восполняющее дефицит магния и калия,
+                антиаритмическое. Является источником ионов калия и магния, способствует их проникновению во
+                внутриклеточное пространство. Регулирует метаболические процессы. Нормализует электролитный баланс.
+                Понижает возбудимость и проводимость миокарда, оказывает антиаритмическое действие. Легко всасывается
+                при приеме внутрь, выводится почками.
+            </div>
+            <div class="manual__subtitle">Фармакологическое действие</div>
+            <div class="manual__text">Фармакологическое действие - восполняющее дефицит магния и калия,
+                антиаритмическое. Является источником ионов калия и магния, способствует их проникновению во
+                внутриклеточное пространство. Регулирует метаболические процессы. Нормализует электролитный баланс.
+                Понижает возбудимость и проводимость миокарда, оказывает антиаритмическое действие. Легко всасывается
+                при приеме внутрь, выводится почками.
+            </div>
+        </div>
+
+        <div class="drug-buy">
+
+            <div class="drug-buy__title">Все формы (10)</div>
+            <div class="drug-buy__items">
+                <div class="drug-buy__item">
+                    <div class="drug-buy__item-photo">
+                        <img class="drug-buy__item-photo-inner" src="img/example.jpg">
+                    </div>
+                    <div class="drug-buy__item-desc">
+                        <div class="drug-buy__item-desc-name">АСПАРКАМ</div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Действующее вещество (МНН):</div>
+                            <div class="drug-buy__item-desc-item-value">Калия и магния аспарагинат</div>
+                        </div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Производитель:</div>
+                            <div class="drug-buy__item-desc-item-value">АО Медисорб</div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-instock">В наличии</div>
+                    <div class="drug-buy__item-price">308.00 ₽</div>
+                    <div class="drug-buy__item-counter">
+                        <div class="counter">
+                            <div class="counter__button counter__button--minus"></div>
+                            <div class="counter__number">1</div>
+                            <div class="counter__button counter__button--plus"></div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-button">
+                        В корзину
+                    </div>
+                </div>
+                <div class="drug-buy__item">
+                    <div class="drug-buy__item-photo">
+                        <img class="drug-buy__item-photo-inner" src="img/example.jpg">
+                    </div>
+                    <div class="drug-buy__item-desc">
+                        <div class="drug-buy__item-desc-name">АСПАРКАМ</div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Действующее вещество (МНН):</div>
+                            <div class="drug-buy__item-desc-item-value">Калия и магния аспарагинат</div>
+                        </div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Производитель:</div>
+                            <div class="drug-buy__item-desc-item-value">АО Медисорб</div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-instock">В наличии</div>
+                    <div class="drug-buy__item-price">308.00 ₽</div>
+                    <div class="drug-buy__item-counter">
+                        <div class="counter">
+                            <div class="counter__button counter__button--minus"></div>
+                            <div class="counter__number">1</div>
+                            <div class="counter__button counter__button--plus"></div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-button">
+                        В корзину
+                    </div>
+                </div>
+                <div class="drug-buy__item">
+                    <div class="drug-buy__item-photo">
+                        <img class="drug-buy__item-photo-inner" src="img/example.jpg">
+                    </div>
+                    <div class="drug-buy__item-desc">
+                        <div class="drug-buy__item-desc-name">АСПАРКАМ</div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Действующее вещество (МНН):</div>
+                            <div class="drug-buy__item-desc-item-value">Калия и магния аспарагинат</div>
+                        </div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Производитель:</div>
+                            <div class="drug-buy__item-desc-item-value">АО Медисорб</div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-instock">В наличии</div>
+                    <div class="drug-buy__item-price">308.00 ₽</div>
+                    <div class="drug-buy__item-counter">
+                        <div class="counter">
+                            <div class="counter__button counter__button--minus"></div>
+                            <div class="counter__number">1</div>
+                            <div class="counter__button counter__button--plus"></div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-button">
+                        В корзину
+                    </div>
+                </div>
+                <div class="drug-buy__item">
+                    <div class="drug-buy__item-photo">
+                        <img class="drug-buy__item-photo-inner" src="img/example.jpg">
+                    </div>
+                    <div class="drug-buy__item-desc">
+                        <div class="drug-buy__item-desc-name">АСПАРКАМ</div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Действующее вещество (МНН):</div>
+                            <div class="drug-buy__item-desc-item-value">Калия и магния аспарагинат</div>
+                        </div>
+                        <div class="drug-buy__item-desc-item">
+                            <div class="drug-buy__item-desc-item-name">Производитель:</div>
+                            <div class="drug-buy__item-desc-item-value">АО Медисорб</div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-instock">В наличии</div>
+                    <div class="drug-buy__item-price">308.00 ₽</div>
+                    <div class="drug-buy__item-counter">
+                        <div class="counter">
+                            <div class="counter__button counter__button--minus"></div>
+                            <div class="counter__number">1</div>
+                            <div class="counter__button counter__button--plus"></div>
+                        </div>
+                    </div>
+                    <div class="drug-buy__item-button">
+                        В корзину
+                    </div>
+                </div>
+            </div>
+            <div class="drug-buy__button">Показать еще</div>
+        </div>
+
+        <div class="sale-drugs">
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+            <div class="sale-drugs__item">
+                <div class="sale-drugs__item-img" style="background: url(img/example.jpg)"></div>
+                <div class="sale-drugs__item-name">Аспиратор назальный детский, Бэби-Вак</div>
+                <div class="sale-drugs__item-border"></div>
+                <div class="sale-drugs__item-price">32 341 ₽</div>
+                <div class="sale-drugs__item-button">Ещё</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="wrapper__right-col scroll-holder"></div>
+    <div class="wrapper__switch scroll-holder">
+        <div class="wrapper__switch-button wrapper__switch-button--map"></div>
+        <div class="wrapper__switch-button wrapper__switch-button--list active"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer__top layout">
+        <div class="footer__logo"></div>
+        <div class="footer__social">
+            <div class="footer__social-title">Для подписчиков</div>
+            <div class="footer__social-items">
+                <div class="footer__social-item footer__social-item--tw"></div>
+                <div class="footer__social-item footer__social-item--fb"></div>
+                <div class="footer__social-item footer__social-item--yt"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom layout">
+        <div class="footer__copyright">
+            © 2019. Все права защищены
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<script src="plugins/jquery.maskedinput.min.js"></script>
+<script src="plugins/owlcarousel2/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>

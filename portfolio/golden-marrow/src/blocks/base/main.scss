@@ -1,0 +1,180 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+:root {
+  --beige-color: #bb8b50;
+  --blue-color: #11122c;
+  --white-color: #fff;
+  --black-color: #000;
+  --light-grey-color: #828282;
+
+  --speed-animation-big:50s;
+  --speed-animation-small:25s;
+  --speed-animation-middle:10s;
+  --speed-animation-orbit:20s;
+}
+
+@font-face {
+  font-family: 'corinthia';
+  src: url("../../fonts/corinthia.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-ExtraLightItalic.ttf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-RegularItalic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-SemiBold.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-SemiBoldItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-Heavy.ttf");
+  font-weight: 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'squad';
+  src: url("../../fonts/Squad-HeavyItalic.ttf");
+  font-weight: 1000;
+  font-style: italic;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  transition: all 200ms ease-out;
+  letter-spacing: .04em;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'squad', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}

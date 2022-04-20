@@ -1,0 +1,180 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.first {
+  position: relative;
+  width: 100%;
+  background: url(../../../img/first_background.jpg);
+  @include background-cover-center;
+  background-position: center top !important;
+  padding-top: 200px;
+
+  @media #{$tablet-small-screen} {
+    padding-top: 100px;
+  }
+
+  &__block {
+    border: 20px solid rgba(255, 255, 255, .4);
+    padding: 40px 85px;
+    @include flex-column;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    @media #{$tablet-small-screen} {
+      border: 5px solid rgba(255, 255, 255, .4);
+      padding: 20px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    background: url(../../../img/pattern.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $black;
+    font-size: 161px;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    @media #{$tablet-big-screen} {
+      font-size: 116px;
+      margin-left: auto;
+    }
+
+    @media #{$tablet-small-screen} {
+      font-size: 44px;
+      @include margin-auto;
+    }
+  }
+
+  &__subtitle {
+    background: url(../../../img/pattern.jpg);
+    background-position: left center;
+    color: $yellow;
+    margin-left: auto;
+    font-size: 81px;
+    padding: 0 57px;
+    line-height: 81px;
+    padding-top: 14px;
+    text-transform: uppercase;
+    margin-top: -33px;
+
+    @media #{$tablet-big-screen} {
+      line-height: 54px;
+      margin-top: -21px;
+      font-size: 59px;
+    }
+
+    @media #{$tablet-small-screen} {
+      font-size: 33px;
+      @include margin-auto;
+      line-height: 35px;
+      margin-top: 2px;
+    }
+  }
+  &__icon {
+    position: relative;
+    padding-left: 57px;
+    margin-top: 10px;
+    margin-right: auto;
+
+    @media #{$tablet-big-screen} {
+      padding-left: 0;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-top: 70px;
+      @include margin-auto;
+    }
+  }
+  &__icon-img {
+    width: 150px;
+    height: 0;
+    position: absolute;
+    top: -90px;
+    left: 16px;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      padding-bottom: 72.66%;
+      background: url(../../../img/first_icon.png);
+      @include background-contain-center;
+    }
+
+    @media #{$tablet-big-screen} {
+      width: 130px;
+      top: -81px;
+      left: -27px;
+    }
+
+    @media #{$tablet-small-screen} {
+      width: 70px;
+      top: -41px;
+    }
+
+  }
+
+  &__icon-text {
+    background: url(../../../img/pattern.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $black;
+    font-size: 79px;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @media #{$tablet-big-screen} {
+      font-size: 59px;
+    }
+  }
+
+  &__img {
+    width: 90vw;
+    margin: 0 -19vw;
+    margin-top: -163px;
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      position: relative;
+      @include absolute-fill;
+      padding-bottom: 33.181%;
+      background: url(../../../img/car.png);
+      @include background-contain-center;
+    }
+
+    @media #{$desktop-middle-screen} {
+      width: 120%;
+      margin: 0 -10%;
+      margin-top: -147px;
+    }
+
+    @media #{$tablet-big-screen} {
+      margin-top: -121px;
+    }
+
+    @media #{$tablet-small-screen} {
+      margin-top: 25px;
+    }
+  }
+
+  &__arrow {
+    width: 93px;
+    height: 30px;
+    @include margin-auto;
+    background: url(../../../img/first_arrow.png);
+    @include background-contain-center;
+    cursor: pointer;
+    margin-top: 20px;
+
+    &:hover {
+      opacity: .8;
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--[if IE]>
+    <meta http-equiv="ImageResize" content="no">
+    <meta http-equiv="ImageToolbar" content="no">
+    <meta name="MSSmartTagsPreventParsing" content="true">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><![endif]-->
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta name="google-site-verification" content="">
+    <!--<link rel="shortcut icon" href="images/favicon.ico">-->
+
+    <link rel="stylesheet" href="/js/vendor/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/js/vendor/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/general.css">
+
+</head>
+<body id="appsPage">
+
+<script>
+    var apps = ['albes', 'vincentdecor', 'art-restorer', 'letscolor', 'onescore', 'ebn', '112mo', 'donor', 'jkhclient', 'bitcoen'];
+    var app_id = window.location.href.split('#')[1];
+    var app_id_index;
+    var app_slider_block_class = 'apps_slider';
+    var app_slider_item_class = 'slide';
+    var app_desc_item_class = 'app_text';
+    var url_part = '/apps/#';
+    var url_part_with_id;
+
+    // Share links var
+    var link_part_1 = window.location.href.split('#')[0];
+    var link_img_part_1 = window.location.href.split('/')[0];
+    var link_img_part_2 = window.location.href.split('/')[2];
+    var fb_link_part_1 = 'http://www.facebook.com/sharer.php?s=100&p[url]=';
+    var fb_link_part_2 = '&p[title]=';
+    var fb_link_part_3 = '&p[summary]=';
+    var fb_link_part_4 = '&p[images][0]=';
+    var twitter_link = 'https://twitter.com/intent/tweet?text=';
+
+
+    detect_id();
+
+    function find_app_index(apps, app_id) {
+        if (apps.indexOf) {
+            return apps.indexOf(app_id);
+        }
+
+        for (var i = 0; i < apps.length; i++) {
+            if (apps[i] === app_id) return i;
+        }
+
+        return -1;
+    }
+
+    function set_id(new_id) {
+        try {
+            history.pushState(null, null, new_id);
+            return;
+        } catch (e) {
+        }
+        location.hash = new_id;
+    }
+
+    function detect_id() {
+
+        app_id = window.location.href.split('#')[1];
+
+        if (typeof app_id == 'undefined') {
+            app_id_index = 0;
+            url_part_with_id = url_part + apps[app_id_index];
+            set_id(url_part_with_id);
+        } else {
+            app_id_index = find_app_index(apps, app_id);
+
+            if (app_id_index === -1) {
+                app_id_index = 0;
+                url_part_with_id = url_part + apps[app_id_index];
+                set_id(url_part_with_id);
+            } else {
+                app_id = apps[app_id_index];
+            }
+        }
+
+    }
+
+
+</script>
+
+<header class="style--dark">
+    <div class="wrapper">
+        <div class="logo">
+            <a href="/"></a>
+        </div>
+        <nav><!-- start nav -->
+            <ul>
+                <li><a href="/portfolio/">
+                    <img src="/images/icon_portfolio.png" alt="">
+                    Портфолио
+                </a></li>
+                <li><a  href="/what-we-do/">
+                    <img src="/images/icon_dev.png" alt="">
+                    Что мы делаем
+                </a></li>
+                <li><a href="/about/">
+                    <img src="/images/icon_about.png" alt="">
+                    Команда
+                </a></li>
+                <li><a href="/contacts/">
+                    <img src="/images/icon_contacts.png" alt="">
+                    Контакты
+                </a></li>
+                <button class="button">
+                    Заказать приложение
+                </button>
+            </ul>
+        </nav><!-- end nav -->
+        <button class="menu-button">
+        </button>
+    </div><!-- end wrapper -->
+</header><!-- end header -->
+
+<section class="offer">
+    <div class="wrapper">
+        <div class="apps_slider owl-carousel">
+            <div class="slide" data-index-app="0">
+                <img src="/images/app_albes_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">Албес</h2>
+                <p class="app__description">Каталог «Албес» предназначен для специалистов, которые занимаются решением
+                    архитектурных и дизайнерских задач на реальных проектах. В Аплике спроектировали и запрограммировали
+                    приложение вместе с серверной частью.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/app/id969495917" target="_blank"
+                           class="icon-appstore-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>Албес</span>
+                    <span><strong>Год выпуска: </strong>2015</span>
+                    <span><strong>Платформа: </strong>iOS</span>
+                    <span><strong>Срок разработки: </strong>1 год</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="1">
+                <img src="/images/app_vincentdecor_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">Vincent Decor</h2>
+                <p class="app__description">Декоративные материалы Vincent Decor позволяют создать современный дизайн,
+                    удовлетворяющий самым изысканным требованиям оформления интерьеров. В Аплике спроектировали,
+                    нарисовали и запрограммировали каталог Vincent Decor в версиях под iPhone и iPad.</p>
+                <div class="app__links">
+                    <div class="social">
+
+
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/ru/app/vincent-decor/id480639136?mt=8" target="_blank"
+                           class="icon-appstore-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>Лакос Маркетинг</span>
+                    <span><strong>Год выпуска: </strong>2011</span>
+                    <span><strong>Платформа: </strong>iOS</span>
+                    <span><strong>Срок разработки: </strong>1 год</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="2">
+                <img src="/images/app_art_restorer_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">Реставратор</h2>
+                <p class="app__description">В «Реставраторе» игрок перевоплощается в опытного мастера и знатока
+                    искусства. Шаг за шагом он восстанавливает известные произведения: от наскальной живописи до
+                    шедевров эпохи Возрождения. В Аплике разработали концепцию игры, спроектировали, нарисовали и
+                    запрограммировали ее.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/ru/app/restorer-art-puzzles/id804777839?l=ru" target="_blank"
+                           class="icon-appstore-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>Aplica</span>
+                    <span><strong>Год выпуска: </strong>2014</span>
+                    <span><strong>Платформа: </strong>iOS</span>
+                    <span><strong>Срок разработки: </strong>1 год</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="3">
+                <img src="/images/app_art_letcolor_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">Раскрась-ка!</h2>
+                <p class="app__description">«Раскрась-ка!» — это интерактивная книжка-раскраска для детей младшего
+                    возраста. Кто-то считает наши раскраски отличным способом развить в ребенке воображение и творческие
+                    способности, мы же идем дальше и называем их просто лучшими в App Store.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/ru/app/raskras-ka!-volsebnye-detskie/id492186051?mt=8"
+                           target="_blank" class="icon-appstore-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>Aplica</span>
+                    <span><strong>Год выпуска: </strong>2011</span>
+                    <span><strong>Платформа: </strong>iOS</span>
+                    <span><strong>Срок разработки: </strong>1 год</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="4">
+                <img src="/images/app_one_score_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">OneScore</h2>
+                <p class="app__description">Приложение OneScore копит бонусные баллы, пока пользователь стоите в пробке.
+                    Эти баллы затем обмениваются на товары или услуги у партнеров. В Аплике запрограммировали проект
+                    вместе с серверной частью, основным iOS- и вспомогательным Android-приложением.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>OneScore</span>
+                    <span><strong>Год выпуска: </strong>2015</span>
+                    <span><strong>Платформа: </strong>iOS</span>
+                    <span><strong>Срок разработки: </strong>3 месяца</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="5">
+                <img src="/images/app_ebn_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">EBN.ru</h2>
+                <p class="app__description">EBN.ru — это база объявлений о продаже и аренде недвижимости, выполненная не
+                    по канонам. Здесь пользователь может не только выбрать подходящий объект, но и найти риелтора,
+                    который поможет закрыть сделку. В Аплике запрограммировали сайт и мобильное приложение.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white active"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white active"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/ru/app/ebn/id1069276558" target="_blank"
+                           class="icon-appstore-white"></a>
+                        <a href="https://play.google.com/store/apps/details?id=ru.ebn.android" target="_blank"
+                           class="icon-google-play-white"></a>
+                        <a href="https://ebn.ru" target="_blank"
+                           class="icon-website-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>EBN.ru</span>
+                    <span><strong>Год выпуска: </strong>2016</span>
+                    <span><strong>Платформа: </strong>iOS, HTML5, Android</span>
+                    <span><strong>Срок разработки: </strong>1 год</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="6">
+                <img src="/images/app_112mo_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">112 МО</h2>
+                <p class="app__description">Приложение 112 МО — официальное приложение Службой спасения Московской
+                    области. В Аплике запрограммировали приложение по предоставленному ТЗ и макетам для платформ iOS и
+                    Android.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white active"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/ru/app/112-%D0%BC%D0%BE/id1230002615?mt=8" target="_blank"
+                           class="icon-appstore-white"></a>
+                        <a href="https://play.google.com/store/apps/details?id=ru.mosreg.mo112&hl=ru" target="_blank"
+                           class="icon-google-play-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>Служба спасения Московской области</span>
+                    <span><strong>Год выпуска: </strong>2017</span>
+                    <span><strong>Платформа: </strong>iOS, Android</span>
+                    <span><strong>Срок разработки: </strong>4 месяца</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="7">
+                <img src="/images/app_donor_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">Служба Крови</h2>
+                <p class="app__description">«Служба Крови» — официальное приложение Государственной программы развития
+                    безвозмездного донорства крови и ее компонентов. В Аплике запрограммировали приложение по
+                    предоставленному ТЗ и макетам для платформ iOS и Android.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white active"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/ru/app/%D0%B4%D0%BE%D0%BD%D0%BE%D1%80/id578970724?mt=8"
+                           target="_blank" class="icon-appstore-white"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.hintsolutions.donor&hl=ru"
+                           target="_blank" class="icon-google-play-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>Служба крови</span>
+                    <span><strong>Год выпуска: </strong>2017</span>
+                    <span><strong>Платформа: </strong>iOS, Android</span>
+                    <span><strong>Срок разработки: </strong>3 месяца</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="8">
+                <img src="/images/app_jkhclient_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">ЖКХ-Плюс</h2>
+                <p class="app__description">«ЖКХ-Плюс» — приложение для жителей Санкт-Петербурга для решения проблем с
+                    ремонтом и обслуживанием квартир. В Аплике спроектировали и запрограммировали приложение для
+                    платформ iOS и Android.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white active"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                        <a href="https://itunes.apple.com/ru/app/%D0%B6%D0%BA%D1%85-%D0%BF%D0%BB%D1%8E%D1%81/id1339279764?mt=8"
+                           target="_blank" class="icon-appstore-white"></a>
+                        <a href="https://play.google.com/store/apps/details?id=ru.dp.jkhclient" target="_blank"
+                           class="icon-google-play-white"></a>
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>Нанотехпроект</span>
+                    <span><strong>Год выпуска: </strong>2018</span>
+                    <span><strong>Платформа: </strong>iOS, Android</span>
+                    <span><strong>Срок разработки: </strong>4 месяца</span>
+                </div>
+            </div>
+
+            <div class="slide" data-index-app="9">
+                <img src="/images/app_bit_coen_logo.png" alt="" class="app__logo">
+                <h2 class="app__title">BitCoen</h2>
+                <p class="app__description">BitCoen Wallet — мобильный кошелек и бэкенд для криптовалюты BitCoen. В
+                    Аплике запрограммировали приложение для платформ iOS и Android.</p>
+                <div class="app__links">
+                    <div class="social">
+
+                    </div>
+                    <div class="platforms">
+                        <i class="icon-apple-white active"></i>
+                        <i class="icon-android-white active"></i>
+                        <i class="icon-windows-white"></i>
+                        <i class="icon-html5-white"></i>
+                    </div>
+                    <div class="download">
+                    </div>
+                </div>
+                <div class="app__features">
+                    <span><strong>Клиент: </strong>BitCoen</span>
+                    <span><strong>Год выпуска: </strong>2018</span>
+                    <span><strong>Платформа: </strong>iOS, Android</span>
+                    <span><strong>Срок разработки: </strong>3 месяца</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="content content--apps">
+    <div class="wrapper">
+        <div class="app_text" data-item-index-app="0">
+            <h2>Каталог</h2>
+            <p>В каталоге представлен полный ассортимент потолочных систем «Албес». У каждой модели — десятки опций
+                кастомизации, которые помогают решать функциональные и эстетические задачи, поставленные перед
+                архитектором. Приложение автоматически рассчитывает количество необходимых материалов, исходя из
+                параметров помещения и выбранной продукции. Каждому типу потолка соответствует 3D-модель, которую можно
+                вращать, перекрашивать и модифицировать.</p>
+
+            <p>Приложение синхронизировано с собственной серверной частью, поэтому для обновления каталога не требуется
+                обновлять само приложение.</p>
+
+            <div class="app_text_slider app_text_slider--ipad">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/albes_1_1.png" src="">
+                    <img data-src="/images/apps_screen/albes_1_2.png" src="">
+                    <img data-src="/images/apps_screen/albes_1_1.png" src="">
+                </div>
+            </div>
+
+            <h2>Декоратор</h2>
+            <p>Выбранную потолочную систему можно наложить на фотографию проектируемого помещения для быстрой
+                демонстрации готового проекта. Это мощный инструмент визуальной оценки того, как выбранная форма, цвет и
+                размер потолочных панелей будет смотреться в реальной жизни.</p>
+
+            <div class="app_text_slider app_text_slider--ipad">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/albes_2_1.png" src="">
+                    <img data-src="/images/apps_screen/albes_2_2.png" src="">
+                    <img data-src="/images/apps_screen/albes_2_1.png" src="">
+                </div>
+            </div>
+
+
+            <h2>Приятные мелочи</h2>
+            <p>По просьбе клиента в приложение были добавлены информационные разделы: портфолио реализованных проектов,
+                календарь семинаров, технические рекомендации по эксплуатации, хранению и монтажу продукции и список
+                компаний-партнеров компании «Албес».</p>
+
+            <div class="app_text_slider app_text_slider--ipad">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/albes_3_1.png" src="">
+                    <img data-src="/images/apps_screen/albes_3_2.png" src="">
+                    <img data-src="/images/apps_screen/albes_3_1.png" src="">
+                </div>
+            </div>
+
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/app/id969495917" class="icon-appstore-dark"></a>
+                </div>
+                <div class="socials pull-left">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="1">
+            <h2>Каталог для перфекционистов</h2>
+            <p>Каталог Vincent Decor — это не набор картинок и сухих цифр, а мощный инструмент планирования ремонта.
+                Приложение рассчитает объем материалов, исходя из площади помещения и выбранного типа покрытия, даст
+                рекомендации по выбору инструментов и сформирует исчерпывающий заказ. Его можно распечатать и
+                отправиться в ближайший магазин. Список магазинов
+                здесь же, на карте.</p>
+
+            <div class="app_text_slider app_text_slider--ipad">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/vincent_1_1.png" src="">
+                    <img data-src="/images/apps_screen/vincent_1_2.png" src="">
+                    <img data-src="/images/apps_screen/vincent_1_3.png" src="">
+                </div>
+            </div>
+
+            <h2>Декоративные покрытия вдоль и поперек</h2>
+            <p>Каждому покрытию дано исчерпывающее описание, перечислены все фактуры и цвета. Отдельно сгруппированы
+                обучающие видеоролики по нанесению, которые специалисты Vincent Decor подготовили специально для
+                приложения.</p>
+
+            <div class="app_text_slider app_text_slider--ipad">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/vincent_2_1.png" src="">
+                    <img data-src="/images/apps_screen/vincent_2_2.png" src="">
+                    <img data-src="/images/apps_screen/vincent_2_3.png" src="">
+                </div>
+            </div>
+
+
+            <h2>Инструмент «Декоратор»</h2>
+            <p>«Декоратор» — уникальная функция приложения, позволяющая представить, как будет выглядеть комната после
+                ремонта. Фотографируем помещение, выбираем покрытие и через секунду на экране эскиз будущей комнаты.
+                «Декоратор» автоматически различает посторонние объекты: висящие на стенах картины или приставленная
+                мебель не закрашивается. По фотографии обновленной комнаты приложение сформирует заказ на все
+                необходимые материалы. Модуль «Декоратор» эксплуатирует механику дополненной реальности и был разработан
+                специально для приложения Vincent Decor.</p>
+
+            <div class="app_text_slider app_text_slider--ipad">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/vincent_3_1.png" src="">
+                    <img data-src="/images/apps_screen/vincent_3_2.png" src="">
+                    <img data-src="/images/apps_screen/vincent_3_3.png" src="">
+                </div>
+            </div>
+
+            <h2>Отзывы СМИ</h2>
+            <p>Приложений, которые помогут вам самим сделать ремонт в своей квартире, неважно, куплена ли она только что
+                или вы живете в ней уже какое-то время, совсем немного. Однако же отечественное приложение Vincent Decor
+                как раз поможет решить проблему декорирования помещения, причем решить легко и элегантно — от выбора
+                декоративных эффектов и до виртуальной примерки на стены и заказа материалов, и все это не выходя из
+                приложения!<br><a href="http://appleinsider.ru/video/app-store-hd-vincent-decor-luchshij-pomoshhnik-v-remonte.html">Читать далее</a>
+                </p>
+
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/ru/app/vincent-decor/id480639136?mt=8"
+                       class="icon-appstore-dark"></a>
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="2">
+            <h2>Головоломка под другим углом</h2>
+            <p>В основе «Реставратора» лежит схема классической
+                мозаики-головоломки, но в отличие от традиционного
+                пазла, где куски имеют строго определенную форму,
+                каждый элемент мозаики «Реставратора» уникален.</p>
+            <img data-src="/images/apps_screen/art-restorer_1.png" src="">
+            <h2>От новичка до мастера</h2>
+            <p>Чтобы реставрировать шедевры было интересно
+                вновь и вновь, они каждый раз разрушаются
+                по-разному. Чем выше уровень сложности, тем
+                серьезнее разрушения. И чтобы еще немного
+                усложнить задачу, элементы шедевра нужно вращать
+                вокруг своей оси, подбирая подходящую ориентацию.</p>
+            <img data-src="/images/apps_screen/art-restorer_2.png" src="">
+            <h2>Награды творцам</h2>
+            <p>Чем быстрее пользователь отреставрирует объект,
+                тем больше золотых монет он получит. Приятное
+                дополнение к игровому процессу — краткая
+                историческая справка о шедевре, чтобы игра была не
+                только интересной, но и познавательной.</p>
+            <img data-src="/images/apps_screen/art-restorer_3.png" src="">
+            <h2>Факт</h2>
+            <p>«Реставратор» — одно из лучших на сегодняшний день
+                приложений категории edutainment.</p>
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/ru/app/restorer-art-puzzles/id804777839?l=ru"
+                       class="icon-appstore-dark"></a>
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="3">
+            <h2>20 альбомов, море удовольствия</h2>
+            <p>В приложение загружено 20 тематических
+                альбомов-раскрасок для мальчиков и девочек.
+                Парни наверняка выберут «Пиратов» или
+                «Рыцарей», а девушки — «Принцесс» или
+                «Лошадок». В альбомах по 10 картинок,
+                каждая нарисована профессиональным
+                иллюстратором и прошла контроль
+                детского психолога.</p>
+
+            <img data-src="/images/apps_screen/letscolor_1.png" src="">
+            <h2>Раскраски как искусство</h2>
+            <p>Примитивные шаблоны — это не про нас.
+                В отличие от других раскрасок, наши
+                картинки детально проработаны
+                и раскрасить в них можно даже самые
+                мелкие элементы.</p>
+            <img data-src="/images/apps_screen/letscolor_2.png" src="">
+            <h2>Уникальные интерфейсные решения</h2>
+            <p>Чтобы помочь справиться с раскраской мелких
+                деталей, приложение затеняет часть рисунка.
+                У ребенка получатся полноценные
+                иллюстрации, которыми будет гордиться и он,
+                и его родители.</p>
+            <img data-src="/images/apps_screen/letscolor_3.png" src="">
+            <h2>Инструменты</h2>
+            <p>В распоряжении маленького художника
+                двенадцать цветных фломастеров, каждый
+                имеет пять оттенков. Если этого покажется
+                недостаточным, можно открыть палитру и
+                выбрать подходящий цвет там.</p>
+
+            <p> В приложении два режима раскрашивания:
+                заливка и раскрашивание пальчиками. Самым
+                маленьким подойдет первый, а дети постарше
+                предпочтут второй. Если что-то пошло не так,
+                приложение позволит отменить до пяти
+                последних действий. </p>
+            <img data-src="/images/apps_screen/letscolor_4.png" src="">
+
+
+            <h2>Поделиться с бабушкой</h2>
+            <p>Заботливые родители часто наклеивают детские
+                картинки на холодильник, мы же разрешаем
+                публиковать их в Facebook, отправлять по E-mail
+                родственникам и сохранять в фотогалерею iPad.</p>
+            <img data-src="/images/apps_screen/letscolor_5.png" src="">
+
+            <h2>Защита взрослых от самых маленьких</h2>
+            <p>Кнопки покупок, настроек и публикации
+                защищены от случайных нажатий: можно,
+                не опасаться, что ребенок завалит
+                Facebook родителей сотней рисунков
+                или без спроса купит дополнительные альбомы.</p>
+            <img data-src="/images/apps_screen/letscolor_6.png" src="">
+
+
+            <h2>Отзывы пользователей</h2>
+            <img data-src="/images/apps_screen/letscolor_7.png" src="">
+            <p><b>Хорошая раскраска.</b> Очень удобно рисовать картинки. Можно выделить каждый элемент в отдельности и
+                рисовать только нам нем не задевая другие, что очень удобно. В общем хорошее приложение.</p>
+            <img data-src="/images/apps_screen/letscolor_8.png" src="">
+            <p><b>Really AMAZing.</b> Looked and looked this is the best I found</p>
+            <br>
+            <br>
+
+
+            <h2>Отзывы СМИ</h2>
+            <img data-src="/images/apps_screen/letscolor_9.png" src="">
+            <p>Разработчики отлично постарались над второй версией своего прекрасного приложения. Оно стало еще
+                интереснее и увлекательнее. Можете не сомневаться в том, что ваши детишки останутся к нему не
+                равнодушны.
+                http://www.appleinsider.ru</p>
+            <img data-src="/images/apps_screen/letscolor_10.png" src="">
+            <p>В «Раскрась-ке» есть масса удобных и просто симпатичных мелочей. Например, ластик издает забавный «чпок»,
+                беззвучный режим обозначен как спящая улитка, а само приложение оформлено в близкой для детской души
+                магической тематике.
+                http://www.planetiphone.ru</p>
+            <img data-src="/images/apps_screen/letscolor_11.png" src="">
+            <p>Для ребенка возможность рисовать просто пальцем без красок и карандашей сродни волшебству. Каждый штрих —
+                это как пассаж фокусника, на свободу вырывается сноп искрящихся звезд и происходит маленькое чудо –
+                появляется цвет.
+                http://ipaded.ru</p>
+
+
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/ru/app/raskras-ka!-volsebnye-detskie/id492186051?mt=8"
+                       class="icon-appstore-dark"></a>
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="4">
+            <h2>Самая полезная партнерская программа</h2>
+            <p>OneScore делает пребывание в автомобильных пробках не таким уж
+                бесполезным занятием: чем дольше стоим, тем больше баллов накопим.</p>
+
+            <p> Приложение в реальном времени определяет, когда пользователь стоит
+                в пробке, когда движется слишком быстро, а когда припарковался.</p>
+
+            <p> OneScore может работать в фоновом режиме: не нужно жертвовать
+                навигатором и другими полезными в автомобиле приложениями.</p>
+            <img data-src="/images/apps_screen/onescore_1.png" src="">
+            <p>Обмен баллов на товары и услуги чем-то напоминает обычную покупку, только вместо денег кассиру
+                предъявляется сгенерированный QR-код. Кассир считывает его партнерским Android-приложением, пара секунд
+                на авторизацию — и заработанная чашка кофе уже в руках.</p>
+
+            <p>Партнеры OneScore получают статистику о продажах через собственный личный кабинет.</p>
+            <img data-src="/images/apps_screen/onescore_2.png" src="">
+
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="5">
+            <h2>Возможности для клиентов и риелторов</h2>
+            <p>На EBN.ru риелторы продвигают не только свои объекты, но и свои визитные карточки.</p>
+
+            <p> Ищите квартиру в центре Москвы? Вот список подходящих объектов, а вот список риелторов, которые работают
+                в данном районе и специализируются на данном типе недвижимости.</p>
+
+            <p> Да, искать можно прямо из поисковой строки — удобно, если нужно найти дом на конкретной улице.</p>
+            <img data-src="/images/apps_screen/ebn_1.png" src="">
+
+            <p>Каждый объект на EBN.ru имеет форму быстрой связи с представителем владельца, и другими риелторами,
+                работающими в этом районе.</p>
+
+            <p>По желанию риелтора вид страницы можно изменить, отключив рекламу, — это поможет сосредоточить внимание
+                клиента на конкретном объекте.</p>
+            <img data-src="/images/apps_screen/ebn_2.png" src="">
+
+            <p>Кто-то ищет риелтора отдельно? База специалистов EBN.ru поддерживает поиск в отрыве от объектов: можно
+                найти риелторов, работающих в данном городе или районе, и прямо с сайта отправить им приветственное
+                сообщение.</p>
+            <img data-src="/images/apps_screen/ebn_3.png" src="">
+            <h2>EBN под iOS и Android</h2>
+            <p>Мобильная версия сервиса под iOS и Android предлагает пользователю главное — поиск объектов и быструю
+                связь с риелтором, разместившим объект.</p>
+            <img  class="app_text_image_phone" data-src="/images/apps_screen/ebn_4.png" src="">
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/ru/app/ebn/id1069276558" target="_blank"
+                       class="icon-appstore-dark"></a>
+                    <a href="https://play.google.com/store/apps/details?id=ru.ebn.android" target="_blank"
+                       class="icon-google-play-dark"></a>
+                    <a href="https://ebn.ru" target="_blank"
+                       class="icon-website-dark"></a>
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="6">
+
+            <p>При экстренном вызове через приложение 112 МО сотрудник Службы спасения получит полные данные из профиля
+                пользователя, его экстренные контакты, медицинские противопоказания и последнюю известную
+                геопозицию.</p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/112mo_1_1.png" src="">
+                    <img data-src="/images/apps_screen/112mo_1_2.png" src="">
+                </div>
+            </div>
+            <p>Пользователи 112 МО сообщают МЧС о происшествиях, свидетелями которых они стали. К заявке на выезд
+                экстренных служб можно прикрепить фотографии и описание. Пока оперативные бригады реагируют на выезд,
+                оказать первую помощь пострадавшим можно следуя инструкциям из справочника 112.
+            </p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/112mo_2_1.png" src="">
+                    <img data-src="/images/apps_screen/112mo_2_2.png" src="">
+                </div>
+            </div>
+            <p>Через ленту новостей подмосковное службы уведомляют пользователей об актуальных событиях, чрезвычайных
+                происшествиях и передают предупреждения. Экстренные сообщения дублируются в push-уведомлениях с
+                таргетингом на регион проживания пользователя. На карте в приложении работает поиск по муниципальным
+                учреждениям.</p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/112mo_3_1.png" src="">
+                    <img data-src="/images/apps_screen/112mo_3_2.png" src="">
+                </div>
+            </div>
+
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/ru/app/112-%D0%BC%D0%BE/id1230002615?mt=8" target="_blank"
+                       class="icon-appstore-dark"></a>
+                    <a href="https://play.google.com/store/apps/details?id=ru.mosreg.mo112&hl=ru" target="_blank"
+                       class="icon-google-play-dark"></a>
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="7">
+            <p>«Служба крови» — это структура, объединяющая медицинские учреждения, которые занимаются заготовкой,
+                переработкой, хранением и обеспечением безопасности донорской крови и ее компонентов.</p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/donor_1_1.png" src="">
+                    <img data-src="/images/apps_screen/donor_1_2.png" src="">
+                </div>
+            </div>
+            <p>В приложении «Службы крови» можно вести календарь донаций, планировать визиты, получать результаты
+                медицинского и лабораторного обследования. Через приложение можно напрямую обратиться за помощью к
+                специалистам «Службы».
+            </p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/donor_2_1.png" src="">
+                    <img data-src="/images/apps_screen/donor_2_2.png" src="">
+                </div>
+            </div>
+            <p>«Служба крови» найдет ближайшие к пользователю станции переливания крови, поможет подготовиться к
+                процедуре, расскажет о противопоказаниях.
+            </p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/donor_3_1.png" src="">
+                    <img data-src="/images/apps_screen/donor_3_2.png" src="">
+                </div>
+            </div>
+            <p>В новой версии приложения доноры получили доступ к Всероссийской Программе лояльности. Полученный в
+                учреждении «Службы крови» промо-код можно активировать в приложении, выбрав одну из многочисленных
+                привилегий компаний-партнеров.
+
+            </p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/donor_4_1.png" src="">
+                    <img data-src="/images/apps_screen/donor_4_2.png" src="">
+                </div>
+            </div>
+
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/ru/app/%D0%B4%D0%BE%D0%BD%D0%BE%D1%80/id578970724?mt=8"
+                       target="_blank" class="icon-appstore-white"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.hintsolutions.donor&hl=ru"
+                       target="_blank" class="icon-google-play-white"></a>
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="8">
+
+            <p>Через приложение «ЖКХ-Плюс» жители Санкт-Петербурга могут оплатить коммунальные счета, передать показания
+                счетчиков и вызвать на дом мастера для мелкого бытового ремонта или уборки.</p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/jkhclient_1_1.png" src="">
+                    <img data-src="/images/apps_screen/jkhclient_1_2.png" src="">
+                </div>
+            </div>
+            <p>Оставленная заявка проходит через оператора «ЖКХ-Плюс» и попадает напрямую к мастеру через
+                приложение-компаньон — «ЖКХ-Плюс для мастеров».
+            </p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/jkhclient_2_1.png" src="">
+                    <img data-src="/images/apps_screen/jkhclient_2_2.png" src="">
+                </div>
+            </div>
+            <p>Через «ЖКХ-Плюс» можно застраховать свою недвижимость. В приложении можно выбрать страховщика, тип
+                страхования, настроить покрытие по основным рискам. Полис будет оформлен за несколько секунд и придет по
+                электронной почте.</p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/jkhclient_3_1.png" src="">
+                    <img data-src="/images/apps_screen/jkhclient_3_2.png" src="">
+                </div>
+            </div>
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                    <a href="https://itunes.apple.com/ru/app/%D0%B6%D0%BA%D1%85-%D0%BF%D0%BB%D1%8E%D1%81/id1339279764?mt=8"
+                       target="_blank" class="icon-appstore-white"></a>
+                    <a href="https://play.google.com/store/apps/details?id=ru.dp.jkhclient" target="_blank"
+                       class="icon-google-play-white"></a>
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app_text" data-item-index-app="9">
+            <p>BitCoen – первый в мире коммьюнити токен. Проект начинался как «кошерная» криптовалюта для проведения
+                транзакций внутри еврейского сообщества — еврейский закон накладывает значительные ограничения на
+                финансовые операции для иудеев. С BitCoen стало возможным проведение операций, главным образом связанных
+                с кредитованием, без нарушения религиозных норм. В 2018 году проект стал открыт для всех пользователей
+                вне зависимости от религиозной или национальной принадлежности.
+            </p>
+            <div class="app_text_slider app_text_slider--iphone">
+                <div class="app_text_slider_content owl-carousel">
+                    <img data-src="/images/apps_screen/bitcoen_1_1.png" src="">
+                    <img data-src="/images/apps_screen/bitcoen_1_2.png" src="">
+                </div>
+            </div>
+            <p>В «Аплике» разработали мобильный кошелек с функциями отправки и обмена новой валюты, а также серверный
+                бэкенд с полноценным узлом блокчейна на платформе iZ³.
+            </p>
+            <img class="app_text_image_phone" data-src="/images/apps_screen/bitcoen_2.png" src="">
+
+            <div class="links clearfix">
+                <div class="dowload pull-right">
+                </div>
+                <div class="socials pull-left">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- end content section -->
+
+
+<!-- //////////////////////////////////////////////////////////////////////// -->
+
+
+<script>
+    var app_desc_items = document.querySelectorAll('.' + app_desc_item_class);
+    var app_desc_item_arr;
+    var app_desc_item;
+
+
+    function show_desc(index) {
+
+        app_desc_item_arr = document.querySelectorAll('[data-item-index-app="' + index + '"]');
+
+        for (var i = 0; i < app_desc_items.length; i++) {
+            app_desc_item = app_desc_items[i];
+            app_desc_item.classList.remove('active');
+        }
+
+        for (var k = 0; k < app_desc_item_arr.length; k++) {
+            app_desc_item = app_desc_item_arr[k];
+            app_desc_item.classList.add('active');
+        }
+
+        var app_desc_images = app_desc_item_arr[0].getElementsByTagName('img');
+        var app_desc_image;
+        for (var l = 0; l < app_desc_images.length; l++) {
+            app_desc_image = app_desc_images[l];
+            app_desc_image.src = app_desc_image.dataset.src;
+        }
+
+    }
+
+    show_desc(app_id_index);
+
+
+</script>
+
+
+<footer class="footer--secondary footer--dark">
+
+    <div class="wrapper clearfix">
+        <p>Проектирование, дизайн, программирование, <br>поддержка и продвижение</p>
+        <div class="buttons">
+            <a href="/iphone/">iPhone</a>
+            <a href="/ipad/">iPad</a>
+            <a href="/android/">Android</a>
+        </div>
+        <p class="copy">© Компания «Аплика», 2010-2018</p>
+
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="/portfolio/">Портфолио</a></li>
+                <li><a href="/what-we-do/">Что мы делаем</a></li>
+                <li><a href="/about/">Команда</a></li>
+                <li><a href="/contacts/">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="order_app">
+
+            <a href="/contacts/" class="order">Заказать приложение</a>
+        </div>
+    </div>
+</footer>
+
+<div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+
+<!--<script src="js/vendor/modernizr.js"></script>-->
+<!--<script src="js/vendor/jquery-1.11.3.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="/js/slick/slick.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/shuffle-3.1.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+
+        var owl = $('.' + app_slider_block_class).owlCarousel({
+            loop: true,
+            nav: true,
+            dots: false,
+            mouseDrag: false,
+            touchDrag: false,
+            pullDrag: false,
+            navText: ['', ''],
+            startPosition: app_id_index,
+            items: 1
+        });
+
+        $('.apps_slider .owl-next').click(function () {
+            var app_id_index = $('.owl-item.active').find('.' + app_slider_item_class).data('index-app');
+            if (app_id_index > (apps.length - 1)) {
+                app_id_index = 0;
+            } else {
+
+            }
+
+            url_part_with_id = url_part + apps[app_id_index];
+            set_id(url_part_with_id);
+            show_desc(app_id_index);
+        });
+
+        $('.apps_slider .owl-prev').click(function () {
+            var app_id_index = $('.owl-item.active').find('.' + app_slider_item_class).data('index-app');
+            if (app_id_index < 0) {
+                app_id_index = apps.length - 1;
+            } else {
+
+            }
+
+            url_part_with_id = url_part + apps[app_id_index];
+            set_id(url_part_with_id);
+            show_desc(app_id_index);
+        });
+
+        window.addEventListener('hashchange', function () {
+            detect_id();
+            owl.trigger('to.owl.carousel', app_id_index);
+        });
+
+
+        var item_link = link_part_1;
+        var item_title = 'Aplica';
+        var item_summary = 'Разработка первоклассных мобильных приложений';
+        var item_images = link_img_part_1 + '//' + link_img_part_2 + '/' + 'images/logo.png';
+        $('a.icon-facebook-white').attr("href", fb_link_part_1 + item_link + fb_link_part_2 + item_title + fb_link_part_3 + item_summary + fb_link_part_4 + item_images);
+        $('a.icon-facebook-dark').attr("href", fb_link_part_1 + item_link + fb_link_part_2 + item_title + fb_link_part_3 + item_summary + fb_link_part_4 + item_images);
+        $('a.icon-twitter-white').attr("href", twitter_link + item_title + ' ' + item_summary + ' ' + item_link);
+        $('a.icon-twitter-dark').attr("href", twitter_link + item_title + ' ' + item_summary + ' ' + item_link);
+
+
+    });
+</script>
+
+</body>
+</html>

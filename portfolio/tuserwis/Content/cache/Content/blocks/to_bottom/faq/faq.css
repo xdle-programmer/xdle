@@ -1,0 +1,56 @@
+.faq {
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  width: 100%; }
+  .faq--small {
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 10px; }
+  .faq:nth-last-of-type(1) {
+    margin-bottom: 50px; }
+  .faq,
+  .faq *,
+  .faq *:before,
+  .faq *:after {
+    transition: none; }
+  .faq__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%; }
+  .faq__title-text {
+    font-size: 20px;
+    font-weight: 600;
+    width: calc(100% - 50px); }
+  .faq__title-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0092E8;
+    position: relative; }
+    .faq__title-icon:before, .faq__title-icon:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #ffffff;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+    .faq__title-icon:before {
+      height: 70%;
+      width: 2px; }
+      .faq.active .faq__title-icon:before {
+        opacity: 0; }
+    .faq__title-icon:after {
+      height: 2px;
+      width: 70%; }
+  .faq__item {
+    margin-bottom: 10px;
+    display: none;
+    font-size: 20px;
+    font-weight: 300; }

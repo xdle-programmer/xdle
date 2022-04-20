@@ -1,0 +1,250 @@
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=460,maximum-scale=2,user-scalable=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/functions.js"></script>
+
+	<title>Деньгосапер</title>
+</head>
+<body>
+
+<div id="content-size"></div>
+
+<div id="all-content">
+
+	<div class="main-block">
+		<div class="logo-block">
+			<a href="#">Каждый клик дает 30р</a>
+			<span>
+				Под одной из этих ячеек мина. Каждый раз,<br>
+				нажимая на поле без мины, ты получаешь деньги
+				<B>КЛИКНИ НА ЛЮБУЮ ЯЧЕЙКУ НИЖЕ:</B>
+			</span>
+		</div>
+		<div class="balance">
+			<div class="take-btn">Вывести</div>
+			Баланс: <span>0</span>₽ <img src="img/pig.png" height="27" alt="">
+			<div class="add-btn">Пополнить</div>
+		</div>
+		<div class="field-block">
+			<div class="empty"></div>
+			<a href="#" id="take-money">Забрать <span>0</span>₽</a>
+
+			<div id="grid">
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+				<div class="money">
+					<div class="money-front">30₽</div>
+					<div class="money-back"></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	
+
+</div>
+
+<div id="modal">
+	<div class="modal bomb">
+		<div class="middle"></div>
+		<div class="modal-data">
+			<b>Вы попали на мину :(</b>
+			<div class="modal-btn red"><span>Сыграть  еще раз</span></div>
+		</div>
+		<div class="close-modal"></div>
+	</div>
+	<div class="modal real-money">
+		<div class="middle"></div>
+		<div class="modal-data">
+			<b>Хотите сыграть<br>
+				на реальные деньги?</b>
+			<div class="modal-btn red">Да</div>
+			<div class="modal-btn blue to-why">Нет</div>
+		</div>
+		<div class="close-modal"></div>
+	</div>
+	<div class="modal why">
+		<div class="middle"></div>
+		<div class="modal-data">
+			<b>Почему?</b>
+			<div class="modal-btn red" onclick="yaCounter48891506.reachGoal('somnevauswin');"><small>Сомневаюсь,<br>что выиграю</small></div>
+			<div class="modal-btn blue" onclick="yaCounter48891506.reachGoal('somnevausvivod');"><small>Сомневаюсь, что смогу<br>вывести выигрыш</small></div>
+		</div>
+		<div class="close-modal"></div>
+	</div>
+	<div class="modal add-sum">
+		<div class="middle"></div>
+		<div class="modal-data">
+			<form action="#">
+				<b>Выберите сумму<br>
+					пополнения</b>
+				<div class="modal-input">
+					<input type="text" name="sum" placeholder="0" required>
+					<span>₽</span>
+				</div>
+				<button type="submit" class="modal-btn blue">Пополнить</button>
+				<input type="hidden" name="form-name" value="form-add-sum">
+			</form>
+		</div>
+		<div class="close-modal"></div>
+	</div>
+	<div class="modal take-sum">
+		<div class="middle"></div>
+		<div class="modal-data">
+			<b>Выберите сумму<br>
+				вывода</b>
+			<div class="modal-input">
+				<input type="text" value="0">
+				<span>₽</span>
+			</div>
+			<div class="modal-btn red">Вывести</div>
+		</div>
+		<div class="close-modal"></div>
+	</div>
+	<div class="modal payment-method">
+		<div class="middle"></div>
+		<div class="modal-data">
+			<b>Выберите метод<br>
+				оплаты</b>
+			<div class="modal-btn blue" onclick="yaCounter48891506.reachGoal('sms');">Оплата по СМС</div>
+			<div class="modal-btn blue" onclick="yaCounter48891506.reachGoal('bitcoin');">Bitcoin/Etherium</div>
+			<div class="modal-btn blue" onclick="yaCounter48891506.reachGoal('creditcard');">Банковская карта</div>
+			<div class="modal-btn blue" onclick="yaCounter48891506.reachGoal('yandexmoney');">Яндекс деньги</div>
+			<div class="modal-btn blue" onclick="yaCounter48891506.reachGoal('qiwi');">QIWI кошелек</div>
+			
+		</div>
+		<div class="close-modal"></div>
+	</div>
+	<div class="modal in-demo">
+		<div class="middle"></div>
+		<div class="modal-data">
+			<b><small>
+				Вы в демо режиме.<br>
+				Пополните свой счет, чтобы<br>
+				иметь возможность вывода
+			</small></b>
+			<div class="modal-btn red to-add" onclick="yaCounter48891506.reachGoal('popolnit2');">Пополнить</div>
+			<div class="modal-btn blue to-why" onclick="yaCounter48891506.reachGoal('demo');"><span>Продолжить демо</span></div>
+		</div>
+		<div class="close-modal"></div>
+	</div>
+</div>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48891506 = new Ya.Metrika({ id:48891506, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48891506" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

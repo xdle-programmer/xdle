@@ -1,0 +1,31 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.wrapper {
+  min-height: 101vh;
+
+  &,
+  &:before,
+  &:after,
+  & *,
+  & *:before,
+  & *:after {
+    transition: $main-transition;
+  }
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__inner {
+    width: 886px;
+    @include margin-auto;
+
+    @media #{$tablet-small-screen} {
+      width: calc(100% - 20px);
+    }
+  }
+
+}

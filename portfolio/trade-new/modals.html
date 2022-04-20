@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!--<script src="https://vuejs.org/js/vue.js"></script>-->
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <!--<script src="js/app.js"></script>-->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles/styles.css">
+    <title>trade-vgo</title>
+</head>
+
+<body>
+<noscript>
+    <strong>We're sorry but trade-vgo doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app">
+    <div class="header">
+        <div class="header__left">
+            <div class="header__social social">
+                <a href="#" class="social__item social__item--vk"></a>
+                <a href="#" class="social__item social__item--facebook"></a>
+                <a href="#" class="social__item social__item--twitter"></a>
+                <a href="#" class="social__item social__item--youtube"></a>
+                <a href="#" class="social__item social__item--instagram"></a>
+            </div>
+
+            <div class="header__language lang-selector">
+                <div class="lang-selector__button">
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+                <div class="lang-selector__list">
+                    <div class="lang-selector__item lang-selector__item--en">eng</div>
+                    <div class="lang-selector__item lang-selector__item--ru">rus</div>
+                </div>
+            </div>
+
+            <div class="header__menu">
+                <a href="#" class="header__menu-item">FAQ</a>
+                <a href="#" class="header__menu-item">Рефералы</a>
+            </div>
+        </div>
+        <div class="header__logo">
+            <div class="header__logo-wrapper">
+                <div class="header__logo-inner">
+                    <div class="logo"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="header__right">
+            <div class="header__bell"></div>
+
+            <a href="/authenticate" class="header__steam" style="display: none">
+                <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"
+                     class="header__steam-img" alt="">
+            </a>
+            <div class="header__login">
+                <div class="header__login-img" style="background: url(img/avatar.png);"></div>
+                <div class="header__login-nickname">
+                    <span class="header__login-nickname-item">Alexander Gudik</span>
+                    <span class="header__login-nickname-welcome">, welcome!</span>
+                </div>
+                <div class="header__login-control">
+                    <div class="header__login-arrow"></div>
+                    <a href="/logout" class="header__login-logout"></a>
+                </div>
+
+                <div class="header__login-menu">
+                    <div class="header__login-menu-item">
+                        <div class="header__login-menu-item-icon">
+                            <img src="img/icon-account.png" class="header__login-menu-item-icon-img">
+                        </div>
+                        <div class="header__login-menu-item-text">Личный кабинет</div>
+                    </div>
+                    <div class="header__login-menu-item">
+                        <div class="header__login-menu-item-icon">
+                            <img src="img/icon-change.png" class="header__login-menu-item-icon-img">
+                        </div>
+                        <div class="header__login-menu-item-text">Ссылка на обмен</div>
+                    </div>
+                    <div class="header__login-menu-item">
+                        <div class="header__login-menu-item-icon">
+                            <img src="img/icon-hint.png" class="header__login-menu-item-icon-img">
+                        </div>
+                        <div class="header__login-menu-item-text">Показать подсказки</div>
+                    </div>
+                    <div class="header__login-menu-item">
+                        <div class="header__login-menu-item-icon">
+                            <img src="img/icon-partnership.png" class="header__login-menu-item-icon-img">
+                        </div>
+                        <div class="header__login-menu-item-text">Сотрудничество</div>
+                    </div>
+                    <div class="header__login-menu-item">
+                        <div class="header__login-menu-item-icon">
+                            <img src="img/icon-exit.png" class="header__login-menu-item-icon-img">
+                        </div>
+                        <div class="header__login-menu-item-text">Выход</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------------------->
+    <!--Временный код для тестов-->
+
+    <div class="open-modal" data-modal="#modal_download" style="font-size: 20px">Модалка загрузки</div>
+    <div class="open-modal" data-modal="#modal_history" style="font-size: 20px">Модалка истории</div>
+    <div class="open-modal" data-modal="#modal_change" style="font-size: 20px">Модалка обмена</div>
+    <div class="open-modal" data-modal="#modal_send" style="font-size: 20px">Модалка отправки</div>
+    <div class="open-modal" data-modal="#modal_referal" style="font-size: 20px">Модалка реферальной программы</div>
+    <div class="open-modal" data-modal="#modal_confirm" style="font-size: 20px">Модалка подтверждения</div>
+    <div class="open-modal" data-modal="#modal_goods" style="font-size: 20px">Модалка товара</div>
+    <div class="open-modal" data-modal="#modal_faq" style="font-size: 20px">Модалка faq</div>
+    <script>
+        $(document).ready(function () {
+
+            var test_progress = 0;
+            download_progress('download-1', test_progress);
+            $('.modal__table-goods-img-block').on('click', function () {
+                test_progress = test_progress + 1;
+                download_progress('download-1', test_progress);
+            });
+
+        });
+    </script>
+
+    <!--Временный код для тестов-->
+    <!---------------------------->
+
+    <div class="modal__background"></div>
+
+    <div class="modal__block" id="modal_download">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__logo">
+                    <div class="modal__logo-inner">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+                <div class="modal__title">
+                    <div class="modal__title-name">
+                        Статус загрузок
+                    </div>
+                </div>
+                <div class="modal__social">
+                    <div class="social">
+                        <a href="#" class="social__item social__item--vk"></a>
+                        <a href="#" class="social__item social__item--facebook"></a>
+                        <a href="#" class="social__item social__item--twitter"></a>
+                        <a href="#" class="social__item social__item--youtube"></a>
+                        <a href="#" class="social__item social__item--instagram"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__table">
+                <div class="modal__table-row modal__table-row--header">
+                    <div class="modal__table-col modal__table-col--13">№</div>
+                    <div class="modal__table-col modal__table-col--24">наиминование</div>
+                    <div class="modal__table-col modal__table-col--20">Дата и время</div>
+                    <div class="modal__table-col modal__table-col--17">Статус</div>
+                    <div class="modal__table-col modal__table-col--26">Время загрузки</div>
+                </div>
+
+                <div class="modal__table-scroll-item">
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--13">47455</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-name">M4A1-B</div>
+                                    <div class="modal__table-goods-price">[150 RUB]</div>
+                                    <div class="modal__table-goods-state">прямо с завода</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">04.10.2018 19:00</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="download" id="download-1">
+                                <div class="download__line"></div>
+                                <div class="download__item">
+                                    <div class="download__item-text">0</div>
+                                    <div class="download__item-percent">%</div>
+                                </div>
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="modal__table-time">
+                                <div class="modal__table-time-count">0:00</div>
+                                <div class="modal__table-time-text">(минут осталось)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--13">47455</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-name">M4A1-B</div>
+                                    <div class="modal__table-goods-price">[150 RUB]</div>
+                                    <div class="modal__table-goods-state">прямо с завода</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">04.10.2018 19:00</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="download download--full">
+                                <div class="download__line"></div>
+                                <div class="download__item">
+                                    <div class="download__item-text">100</div>
+                                    <div class="download__item-percent">%</div>
+                                </div>
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="modal__table-time">
+                                <div class="modal__table-time-count">0:00</div>
+                                <div class="modal__table-time-text">(минут осталось)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--13">47455</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-name">M4A1-B</div>
+                                    <div class="modal__table-goods-price">[150 RUB]</div>
+                                    <div class="modal__table-goods-state">прямо с завода</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">04.10.2018 19:00</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="download download--full">
+                                <div class="download__line"></div>
+                                <div class="download__item">
+                                    <div class="download__item-text">100</div>
+                                    <div class="download__item-percent">%</div>
+                                </div>
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="modal__table-time">
+                                <div class="modal__table-time-count">0:00</div>
+                                <div class="modal__table-time-text">(минут осталось)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--13">47455</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-name">M4A1-B</div>
+                                    <div class="modal__table-goods-price">[150 RUB]</div>
+                                    <div class="modal__table-goods-state">прямо с завода</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">04.10.2018 19:00</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="download download--full">
+                                <div class="download__line"></div>
+                                <div class="download__item">
+                                    <div class="download__item-text">100</div>
+                                    <div class="download__item-percent">%</div>
+                                </div>
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="modal__table-time">
+                                <div class="modal__table-time-count">0:00</div>
+                                <div class="modal__table-time-text">(минут осталось)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--13">47455</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-name">M4A1-B</div>
+                                    <div class="modal__table-goods-price">[150 RUB]</div>
+                                    <div class="modal__table-goods-state">прямо с завода</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">04.10.2018 19:00</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="download download--full">
+                                <div class="download__line"></div>
+                                <div class="download__item">
+                                    <div class="download__item-text">100</div>
+                                    <div class="download__item-percent">%</div>
+                                </div>
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="modal__table-time">
+                                <div class="modal__table-time-count">0:00</div>
+                                <div class="modal__table-time-text">(минут осталось)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__table-row">
+                        <div class="modal__table-col modal__table-col--13">47455</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-name">M4A1-B</div>
+                                    <div class="modal__table-goods-price">[150 RUB]</div>
+                                    <div class="modal__table-goods-state">прямо с завода</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">04.10.2018 19:00</div>
+                        <div class="modal__table-col modal__table-col--17">
+                            <div class="download download--full">
+                                <div class="download__line"></div>
+                                <div class="download__item">
+                                    <div class="download__item-text">100</div>
+                                    <div class="download__item-percent">%</div>
+                                </div>
+                                <div class="download__state download__state--background"></div>
+                                <div class="download__state download__state--progress"></div>
+                            </div>
+                        </div>
+                        <div class="modal__table-col modal__table-col--26">
+                            <div class="modal__table-time">
+                                <div class="modal__table-time-count">0:00</div>
+                                <div class="modal__table-time-text">(минут осталось)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-left">
+                    <div class="modal__footer-desc">
+                        Если в течении <span>5 минут</span>, вам не отправиться Вещь, мы вернем деньги!
+                    </div>
+                </div>
+                <div class="modal__footer-center">
+                    <button class="modal__footer-button">
+                        <div class="modal__footer-button-item">
+                            Загрузить еще
+                        </div>
+                    </button>
+                </div>
+                <div class="modal__footer-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_history">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__logo">
+                    <div class="modal__logo-inner">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+                <div class="modal__title">
+                    <div class="modal__title-name">
+                        История
+                    </div>
+                </div>
+                <div class="modal__social">
+                    <div class="social">
+                        <a href="#" class="social__item social__item--vk"></a>
+                        <a href="#" class="social__item social__item--facebook"></a>
+                        <a href="#" class="social__item social__item--twitter"></a>
+                        <a href="#" class="social__item social__item--youtube"></a>
+                        <a href="#" class="social__item social__item--instagram"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__table">
+                <div class="modal__table-row modal__table-row--header">
+                    <div class="modal__table-col modal__table-col--13">ID</div>
+                    <div class="modal__table-col modal__table-col--24">наиминование</div>
+                    <div class="modal__table-col modal__table-col--20">время</div>
+                    <div class="modal__table-col modal__table-col--17">Сумма</div>
+                    <div class="modal__table-col modal__table-col--26">площадка</div>
+
+                </div>
+                <div class="modal__table-scroll-item">
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--blue">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--white">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--blue">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--blue">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--blue">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--white">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--blue">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                    <div class="modal__table-row modal__table-row--small">
+                        <div class="modal__table-col modal__table-col--13">474540705</div>
+                        <div class="modal__table-col modal__table-col--24">
+                            <div class="modal__table-goods-item">
+                                <div class="modal__table-goods-img-block modal__table-goods-img-block--small">
+                                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/1011983344/200fx125f"
+                                         class="modal__table-goods-img">
+                                </div>
+                                <div class="modal__table-goods-desc">
+                                    <div class="modal__table-goods-history-name modal__table-goods-history-name--blue">
+                                        Falocon Case
+                                    </div>
+                                    <div class="modal__table-goods-history-text">(Demo Text)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal__table-col modal__table-col--20">07.10.2018 13:40</div>
+                        <div class="modal__table-col modal__table-col--17">150 RUB</div>
+                        <div class="modal__table-col modal__table-col--26">Trade accepted</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-left">
+                </div>
+                <div class="modal__footer-center">
+                    <button class="modal__footer-button">
+                        <div class="modal__footer-button-item">
+                            Загрузить еще
+                        </div>
+                    </button>
+                </div>
+                <div class="modal__footer-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_change">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__logo">
+                    <div class="modal__logo-inner">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+                <div class="modal__title">
+                    <div class="modal__title-name">
+                        Обмен
+                    </div>
+                </div>
+                <div class="modal__social">
+                    <div class="social">
+                        <a href="#" class="social__item social__item--vk"></a>
+                        <a href="#" class="social__item social__item--facebook"></a>
+                        <a href="#" class="social__item social__item--twitter"></a>
+                        <a href="#" class="social__item social__item--youtube"></a>
+                        <a href="#" class="social__item social__item--instagram"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__change">
+                <div class="modal__change-header">
+                    <div class="button-color modal__change-header-button">Заказать скин</div>
+                    <div class="button-color modal__change-header-button">Проверить скин</div>
+                    <div class="button-color modal__change-header-button">Заказать скин</div>
+                    <div class="button-color modal__change-header-button">Проверить скин</div>
+                </div>
+                <div class="modal__change-block">
+                    <div class="modal__change-title">Вы можете заказать скин, какого в данный момент нет на сайте!</div>
+                    <div class="modal__change-subtitle">As soon as it becomes available, you will receive a
+                        notification.
+                    </div>
+
+                    <div class="modal__change-input-block">
+                        <div class="modal__change-input-name">Имя</div>
+                        <input type="text" placeholder="Stat Trak Knife: Super case" class="modal__change-input">
+                        <div class="modal__change-input-button button-color button-color--big">Заказать</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_send">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__logo">
+                    <div class="modal__logo-inner">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+                <div class="modal__title">
+                    <div class="modal__title-name">
+                        Перевод
+                    </div>
+                </div>
+                <div class="modal__social">
+                    <div class="social">
+                        <a href="#" class="social__item social__item--vk"></a>
+                        <a href="#" class="social__item social__item--facebook"></a>
+                        <a href="#" class="social__item social__item--twitter"></a>
+                        <a href="#" class="social__item social__item--youtube"></a>
+                        <a href="#" class="social__item social__item--instagram"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__section-background">
+                <div class="modal__section-inner">
+                    <div class="modal__change-input-block">
+                        <input type="text" placeholder="www.vgo.wiki.com/sds158@64094966" class="modal__change-input">
+                        <div class="modal__change-input-button button-color button-color--big">Сохранить</div>
+                    </div>
+
+                    <div class="modal__button-send button-color button-color--magenta button-color--big">где взять
+                        ссылку на оплату?
+                    </div>
+                </div>
+
+                <div class="modal__section-bottom">
+
+                    <div class="modal__send-title">
+                        Сколько пополнить?
+                    </div>
+                    <div class="modal__send-subtitle">
+                        <div class="modal__send-subtitle-inner">Баланс:</div>
+                        <div class="modal__send-subtitle-inner modal__send-subtitle-inner--blue">1,520 RUB</div>
+                    </div>
+
+                    <div class="modal__send-inputs">
+                        <div class="modal__send-input-block">
+                            <input type="text" placeholder="Введите сумму" class="modal__change-input">
+                        </div>
+                        <div class="modal__send-arrow"></div>
+                        <div class="modal__send-input-block">
+                            <input type="text" placeholder="Конечная сумма зачисления" class="modal__change-input">
+                        </div>
+                    </div>
+
+                    <div class="modal__change-input-button button-color button-color--big">Перевести</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_referal">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__logo">
+                    <div class="modal__logo-inner">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+                <div class="modal__title">
+                    <div class="modal__title-name">
+                        Реферальная программа
+                    </div>
+                </div>
+                <div class="modal__social">
+                    <div class="social">
+                        <a href="#" class="social__item social__item--vk"></a>
+                        <a href="#" class="social__item social__item--facebook"></a>
+                        <a href="#" class="social__item social__item--twitter"></a>
+                        <a href="#" class="social__item social__item--youtube"></a>
+                        <a href="#" class="social__item social__item--instagram"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__section-background modal__section-background--scroll">
+                <div class="modal__section-inner">
+
+                    <div class="modal__ref">
+                        <div class="modal__ref-photo">
+                            <div class="modal__ref-photo-inner" style="background: url(img/avatar.png)"></div>
+                        </div>
+                        <div class="modal__ref-desc">
+
+                            <div class="modal__ref-header">
+                                <div class="modal__ref-header-name">Alexanderr</div>
+                                <div class="modal__ref-header-account">
+                                    <div class="modal__ref-header-account-inner">00.00</div>
+                                    <div class="modal__ref-header-account-inner modal__ref-header-account-inner--blue">
+                                        RUB
+                                    </div>
+                                </div>
+                                <div class="modal__ref-header-bottom">Заработано вами</div>
+                            </div>
+                            <div class="modal__ref-numbers">
+                                <div class="modal__ref-numbers-item">
+                                    <div class="modal__ref-numbers-value">100%</div>
+                                    <div class="modal__ref-numbers-text">Размер бонуса</div>
+                                </div>
+                                <div class="modal__ref-numbers-item">
+                                    <div class="modal__ref-numbers-value">0</div>
+                                    <div class="modal__ref-numbers-text">Кол-во рефералов</div>
+                                </div>
+                                <div class="modal__ref-numbers-item">
+                                    <div class="modal__ref-numbers-value">0</div>
+                                    <div class="modal__ref-numbers-text">Рефералами открыто</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="modal__section-bottom">
+                    <div class="modal__ref-bottom-title">Как это работает?</div>
+                    <div class="modal__ref-bottom-text">
+                        Получайте выгоду, как администрация сайта! Приглашайте ваших друзей,
+                        открывать VGO кейсы на VGOWIKI и получите 100% (0,25%)- нашей комиссией
+                        с каждого кейса открытого вашим другом!
+                    </div>
+
+
+                    <div class="modal__change-input-block">
+                        <input type="text" placeholder="www.vgo.wiki.com/sds158@64094966" class="modal__change-input">
+                        <div class="modal__change-input-button button-color button-color--big">Сохранить</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_confirm">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__logo">
+                    <div class="modal__logo-img"></div>
+                </div>
+                <div class="modal__title">
+                    <div class="modal__title-name">
+                        Trade was<br>
+                        successfully sent
+                    </div>
+                </div>
+                <div class="modal__social">
+                    <a href="#" class="modal__social-item"><span class="flaticon-vk-social-network-logo"></span></a>
+                    <a href="#" class="modal__social-item"><span class="flaticon-facebook-logo"></span></a>
+                    <a href="#" class="modal__social-item"><span class="flaticon-twitter-logo-silhouette"></span></a>
+                    <a href="#" class="modal__social-item"><span class="flaticon-youtube"></span></a>
+                    <a href="#" class="modal__social-item"><span class="flaticon-instagram-logo"></span></a>
+                </div>
+            </div>
+
+            <div class="modal__section-background">
+                <div class="modal__confirm">
+                    <div class="modal__confirm-title">
+                        Please click on the below button to accept your trade.
+                    </div>
+
+                    <div class="modal__confirm-buttons">
+                        <div class="button-color button-color--big button-color--green modal__confirm-button">decline
+                        </div>
+                        <div class="button-color button-color--big button-color--red modal__confirm-button">Accept</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_goods">
+        <div class="modal__goods">
+            <div class="modal__goods-header">
+                <div class="modal__close modal__close--goods"></div>
+                <div class="modal__goods-header-logo">
+                    <div class="logo"></div>
+                </div>
+                <div class="modal__goods-header-name">
+                    MYVGO.COM
+                </div>
+            </div>
+            <div class="modal__goods-buttons">
+                <div class="modal__goods-button"><img src="img/modal_vgo.png" class="modal__goods-button-img"></div>
+                <div class="modal__goods-button"><img src="img/modal_reload.png" class="modal__goods-button-img"></div>
+                <div class="modal__goods-button"><img src="img/modal_csgo.png" class="modal__goods-button-img"></div>
+
+            </div>
+            <div class="modal__goods-content">
+                <div class="modal__goods-content-buttons">
+                    <div class="modal__goods-content-button-3d"></div>
+                    <div class="modal__goods-content-button-zoom"></div>
+                </div>
+                <img class="modal__goods-content-img"
+                     src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/310778121/200fx125f"
+                     alt=""/>
+            </div>
+            <div class="modal__goods-footer">
+                <div class="modal__goods-name-block">
+                    <div class="modal__goods-name">StatTrak™ USP-S | Lead Conduit</div>
+                    <div class="modal__goods-state">прямо с завода</div>
+
+                </div>
+                <div class="modal__goods-send-block">
+                    <div class="modal__goods-send-title">Предмет доставлен!</div>
+                    <div class="modal__goods-send-subtitle">спасибо, что вы с нами!</div>
+                </div>
+                <div class="modal__goods-social-block">
+                    <div class="social">
+                        <a href="#" class="social__item social__item--vk"></a>
+                        <a href="#" class="social__item social__item--facebook"></a>
+                        <a href="#" class="social__item social__item--twitter"></a>
+                        <a href="#" class="social__item social__item--youtube"></a>
+                        <a href="#" class="social__item social__item--instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__block" id="modal_faq">
+        <div class="modal__close modal__close--faq"></div>
+        <div class="modal__content modal__content--faq">
+            <div class="modal__faq-header">
+                <div class="modal__faq-header-title">
+                    FAQ
+                </div>
+                <div class="modal__faq-header-link">
+                    На главную
+                </div>
+            </div>
+
+            <div class="modal__faq">
+                <div class="modal__faq-items">
+                    <div class="modal__faq-item">
+                        <div class="modal__faq-item-title">How to register on the site and start earning the first
+                            money?
+                        </div>
+                        <div class="modal__faq-item-text">Respect forming clothes do in he. Course so piqued no an by
+                            appear.
+                            Themselves reasonable pianoforte so motionless he as difficulty be. Abode
+                            way begin ham there power whole.
+                            <br><br>
+                            Do unpleasing indulgence impossible to conviction. Suppose neither evident
+                            welcome it at do civilly uncivil. Sing tall much you get nor.
+                        </div>
+                    </div>
+
+                    <div class="modal__faq-item">
+                        <div class="modal__faq-item-title">How to register on the site and start earning the first
+                            money?
+                        </div>
+                        <div class="modal__faq-item-text">Respect forming clothes do in he. Course so piqued no an by
+                            appear.
+                            Themselves reasonable pianoforte so motionless he as difficulty be. Abode
+                            way begin ham there power whole.
+                            <br><br>
+                            Do unpleasing indulgence impossible to conviction. Suppose neither evident
+                            welcome it at do civilly uncivil. Sing tall much you get nor.
+                        </div>
+                    </div>
+
+                    <div class="modal__faq-item">
+                        <div class="modal__faq-item-title">How to register on the site and start earning the first
+                            money?
+                        </div>
+                        <div class="modal__faq-item-text">Respect forming clothes do in he. Course so piqued no an by
+                            appear.
+                            Themselves reasonable pianoforte so motionless he as difficulty be. Abode
+                            way begin ham there power whole.
+                            <br><br>
+                            Do unpleasing indulgence impossible to conviction. Suppose neither evident
+                            welcome it at do civilly uncivil. Sing tall much you get nor.
+                        </div>
+                    </div>
+
+                    <div class="modal__faq-item">
+                        <div class="modal__faq-item-title">How to register on the site and start earning the first
+                            money?
+                        </div>
+                        <div class="modal__faq-item-text">Respect forming clothes do in he. Course so piqued no an by
+                            appear.
+                            Themselves reasonable pianoforte so motionless he as difficulty be. Abode
+                            way begin ham there power whole.
+                            <br><br>
+                            Do unpleasing indulgence impossible to conviction. Suppose neither evident
+                            welcome it at do civilly uncivil. Sing tall much you get nor.
+                        </div>
+                    </div>
+                    <div class="modal__faq-item">
+                        <div class="modal__faq-item-title">How to register on the site and start earning the first
+                            money?
+                        </div>
+                        <div class="modal__faq-item-text">Respect forming clothes do in he. Course so piqued no an by
+                            appear.
+                            Themselves reasonable pianoforte so motionless he as difficulty be. Abode
+                            way begin ham there power whole.
+                            <br><br>
+                            Do unpleasing indulgence impossible to conviction. Suppose neither evident
+                            welcome it at do civilly uncivil. Sing tall much you get nor.
+                        </div>
+                    </div>
+                    <div class="modal__faq-item">
+                        <div class="modal__faq-item-title">How to register on the site and start earning the first
+                            money?
+                        </div>
+                        <div class="modal__faq-item-text">Respect forming clothes do in he. Course so piqued no an by
+                            appear.
+                            Themselves reasonable pianoforte so motionless he as difficulty be. Abode
+                            way begin ham there power whole.
+                            <br><br>
+                            Do unpleasing indulgence impossible to conviction. Suppose neither evident
+                            welcome it at do civilly uncivil. Sing tall much you get nor.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal__faq-form">
+                    <div class="modal__faq-form-title-block">
+                        <div class="modal__faq-form-title">Обратная связь</div>
+                        <div class="modal__faq-form-subtitle">Если вас интересует вопрос - задайте его!</div>
+                    </div>
+
+                    <div class="modal__faq-form-desc">* Обязательно заполните все поля. Это обязательно для
+                        заполнения!
+                    </div>
+                    <input class="modal__faq-form-input" placeholder="Тема письма" type="text">
+                    <input class="modal__faq-form-input" placeholder="email" type="text">
+                    <textarea class="modal__faq-form-input modal__faq-form-input--big"
+                              placeholder="Описание вопроса"></textarea>
+                    <button class="button-color modal__faq-form-button">Отправить</button>
+
+                    <div class="modal__faq-form-title-block">
+                        <div class="modal__faq-form-title">Информация о проекте</div>
+                        <div class="modal__faq-form-subtitle">Что представляет проект. Помощь.</div>
+                    </div>
+
+                    <div class="modal__faq-form-text">
+                        Обратите внимание, что “Гнильватер” станет вашим при одноразовой оплате 180
+                        дней игрового времени, а сама акция продлится до 21 октября 2018 года.
+                        <br><br>
+                        Также отметим, что если вы приобретали такую подписку в последние 30 дней, то
+                        маунт все равно придет вам по почте. А если такое длительное пребывание в World
+                        of Warcraft вами запланировано не было, но стать обладателем “Гнильватера” очень
+                        хочется - придется подождать до 2019 года. Именно тогда корабль появится в
+                        продаже.
+                        <br><br>
+                        Помимо этого, стартовала и необычная акция. За оплату шести месяцев игрового
+                        времени в World of Warcraft вы сможете получить летучий корабль “Гнильватер”, а
+                        в придачу к этому стильному пиратскому средству передвижения можно приобрести
+                        забавного питомца - Капитана Крекера.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+
+</html>

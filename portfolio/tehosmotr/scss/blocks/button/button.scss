@@ -1,0 +1,28 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  width: 370px;
+  @include flex-row-center;
+  background: $yellow;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  padding: 10px 0;
+  font-size: 31px;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: .8;
+  }
+
+  @media #{$tablet-small-screen} {
+    width: 100%;
+    letter-spacing: 3px;
+    font-size: 21px;
+  }
+
+}

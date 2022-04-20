@@ -1,0 +1,78 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+
+.main-workshop {
+  padding: 50px 0;
+  padding-bottom: 120px;
+
+  @media #{$mobile-big-screen} {
+    padding: 0;
+    padding-bottom: 80px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+
+    @media #{$tablet-small-screen} {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
+
+  &__list {
+    padding-right: 50px;
+
+    @media #{$mobile-big-screen} {
+      padding-right: 0;
+      order: 2;
+    }
+  }
+
+  &__list-item {
+    display: grid;
+    grid-template-columns: 69px 1fr;
+    grid-gap: 15px;
+    margin-bottom: 40px;
+
+    @media #{$mobile-big-screen} {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list-item-img {
+    height: 69px;
+    box-shadow: 0 6px 10px rgba(0, 146, 232, 0.24);
+    @include background-contain-center;
+    border-radius: 12px;
+  }
+
+  &__list-item-desc {
+  }
+
+  &__list-item-desc-title {
+    font-size: 20px;
+    font-weight: 500;
+
+  }
+
+  &__list-item-desc-text {
+    color: #7d9daf;
+    margin-top: 5px;
+  }
+
+  &__form {
+    box-shadow: 0 6px 10px rgba(0, 146, 232, 0.24)!important;
+    border-radius: 12px!important;
+    width: 100%!important;
+    margin: 0!important;
+
+
+    @media #{$mobile-big-screen} {
+      order: 1;
+    }
+  }
+}

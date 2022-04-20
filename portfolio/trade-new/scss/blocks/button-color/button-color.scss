@@ -1,0 +1,84 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button-color {
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+  padding: 10px 10px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #cddaec;
+  @include gradient;
+  border-radius: 5px;
+
+  &--big {
+    font-size: 16px;
+    font-weight: 900;
+    padding: 14px 10px 11px;
+  }
+
+  &--small {
+    padding: 10px 10px 8px;
+    min-width: 120px;
+    font-size: 15px;
+
+    @media #{$tablet-small-screen} {
+      padding: 6px 10px 4px;
+    }
+  }
+
+  &--gray {
+    background: #46505e;
+  }
+
+  &--magenta {
+    background: linear-gradient(to right, #824cfd, #4946f4);
+  }
+
+  &--green {
+    background: linear-gradient(to right, #90c857, #6b9e85);
+  }
+
+  &--red {
+    background: linear-gradient(to right, #823a5b, #827945);
+  }
+
+  &--cancel {
+    background: linear-gradient(to right, #e1293a, #e1293a);
+  }
+
+  &--tweet {
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 17px;
+      margin-bottom: -3px;
+      margin-right: 7px;
+      background: #cddaec;
+      mask: url(../../img/social-twitter.svg);
+      -webkit-mask: url(../../img/social-twitter.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &--disable {
+    background: #293035;
+    cursor: default;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

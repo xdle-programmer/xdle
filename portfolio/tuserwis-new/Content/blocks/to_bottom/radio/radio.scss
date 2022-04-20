@@ -1,0 +1,63 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.radio {
+    position: relative;
+
+    &.focus .warning.active {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.focus .placeholder {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__items {
+        @include flex-row;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__item-input {
+        position: absolute;
+        @include absolute-fill;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &__item-label {
+        height: 35px;
+        @include flex-row-center;
+        padding: 0 15px;
+        border: 1px solid #cccccc;
+        border-right: none;
+        cursor: pointer;
+    }
+
+
+    &__item:nth-of-type(1) &__item-label {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &__item:nth-last-of-type(1) &__item-label {
+        border-right: 1px solid #cccccc;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &__item-input:checked + &__item-label {
+        background-color: #cacaca;
+        color: #000;
+    }
+
+    &__item-input:focus + &__item-label {
+        background: #cacaca;
+        color: #000;
+    }
+}

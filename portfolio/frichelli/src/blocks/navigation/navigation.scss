@@ -1,0 +1,37 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.navigation {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+
+  @media #{$tablet-big-screen} {
+    right: 15px;
+  }
+
+  &__item {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 15px 0;
+    cursor: pointer;
+    opacity: .5;
+
+    @media #{$tablet-big-screen} {
+      width: 15px;
+      height: 15px;
+    }
+
+    &--active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}

@@ -1,0 +1,54 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.labels {
+  @include flex-row-center;
+
+  &__item {
+    width: 12vw;
+    height: 18.5vw;
+    margin: 0 1vw;
+    filter: drop-shadow(8px 15px 14px rgba(0, 0, 0, .3));
+    cursor: pointer;
+    transition: all .3s ease-out;
+
+    @media #{$tablet-big-screen} {
+      width: 15vh;
+      height: 23vh;
+      margin: 0 1vw;
+      max-width: 30vw;
+    }
+
+    &:hover {
+      filter: drop-shadow(8px 15px 14px rgba(0,0,0,.5));
+    }
+
+    &--1 {
+      background: url(../../../images/package-1.jpg);
+      @include background-cover-center;
+
+      @media #{$tablet-big-screen} {
+        @include background-contain-center;
+      }
+    }
+
+    &--2 {
+      background: url(../../../images/package-2.jpg);
+      @include background-cover-center;
+
+      @media #{$tablet-big-screen} {
+        @include background-contain-center;
+      }
+    }
+
+    &--3 {
+      background: url(../../../images/package-3.jpg);
+      @include background-cover-center;
+
+      @media #{$tablet-big-screen} {
+        @include background-contain-center;
+      }
+    }
+  }
+}

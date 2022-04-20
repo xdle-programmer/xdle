@@ -1,0 +1,151 @@
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom-select {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  background: #fff;
+  z-index: 100;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #c1c1c1;
+
+  & select {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 102;
+    opacity: 0;
+    display: none;
+    font-size: 16px;
+
+    @media (max-width: 1390px) {
+      display: block;
+    }
+  }
+
+  &--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 101;
+  }
+
+  &:hover {
+    border-color: #444444;
+  }
+
+  $open: '.custom-select--open';
+  $hover: '.custom-select:hover';
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__input-name {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 0 15px;
+    height: 100%;
+    @include unselectable;
+  }
+
+  &__input-icon {
+    position: absolute;
+    width: 18px;
+    height: 11px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    #{$open} & {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 72%;
+      height: 2px;
+      background: #7b7b7b;
+      bottom: 0;
+
+      #{$hover} & {
+        background: #444444;
+      }
+    }
+
+    &:before {
+      left: 50%;
+      transform: rotate(-45deg);
+      transform-origin: left bottom;
+    }
+
+    &:after {
+      right: 50%;
+      transform: rotate(45deg);
+      transform-origin: right bottom;
+    }
+
+  }
+
+  &__list {
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    width: calc(100% + 2px);
+    border: 1px solid;
+    background: inherit;
+    border-color: inherit;
+    border-top-color: transparent;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top;
+
+    #{$open} & {
+      transform: scaleX(1);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    padding: 10px 15px;
+    cursor: pointer;
+    @include unselectable;
+
+    &:hover {
+      background: #f3f3f3;
+    }
+
+    &--selected {
+      background: #f3f3f3;
+    }
+
+    &--disabled {
+      cursor: default;
+      opacity: .7;
+
+      &:hover {
+        background: inherit;
+      }
+
+    }
+
+  }
+}

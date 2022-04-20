@@ -1,0 +1,80 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.list-articles {
+  width: 100%;
+  border-top: 2px solid $black;
+  background: #f8f8f8;
+  padding: 10px 14px;
+  margin-bottom: 35px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #121212;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dfdfdf;
+    position: relative;
+
+    &--faq:after {
+      content: '';
+      position: absolute;
+      @include flex-row-center;
+      right: 0;
+      top: 0;
+      width: 36px;
+      height: 32px;
+      background: url(../../img/icon-question.png);
+      @include background-contain-center;
+    }
+
+
+    &--talk:after {
+      content: '';
+      position: absolute;
+      @include flex-row-center;
+      right: 0;
+      top: 0;
+      width: 34px;
+      height: 28px;
+      background: url(../../img/icon-talk-list.png);
+      @include background-contain-center;
+    }
+
+  }
+
+  &__item {
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dfdfdf;
+    cursor: pointer;
+    padding-right: 8px;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2) {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 15px;
+
+
+
+  }
+
+  &__more {
+
+  }
+
+}

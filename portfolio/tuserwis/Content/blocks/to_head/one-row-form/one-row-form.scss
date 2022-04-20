@@ -1,0 +1,54 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.one-row-form {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 178px;
+    height: 50px;
+    box-shadow: $main-shadow;
+    transition: $shadow-transition;
+
+    &:hover {
+        box-shadow: $focus-within-shadow;
+    }
+
+    @media #{$mobile-middle-screen} {
+        width: 95%;
+        grid-template-columns: 1fr 80px;
+    }
+
+
+    &__input {
+        background: $white;
+        font-size: 20px;
+        padding-left: 20px;
+        min-width: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+
+
+        @media #{$mobile-middle-screen} {
+            font-size: 18px;
+        }
+    }
+
+    &__button {
+        background: $blue;
+        color: $white;
+        font-size: 20px;
+        @include flex-row-center;
+
+        @media #{$tablet-small-screen} {
+        }
+
+        @media #{$mobile-middle-screen} {
+            font-size: 0;
+            background: $blue url("../../../img/search_icon.svg");
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            background-size: 30px 30px;
+        }
+    }
+}

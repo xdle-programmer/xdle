@@ -1,0 +1,51 @@
+<!-- 
+	<a href="#" class="product-card product-card_extended">
+		<div class="product-card__inner">
+			{% if bages %}
+				<div class="product-card__bages">
+				    {% if bages == "red" %}
+				   		<div class="bage bage_red">Акция</div>
+					{% endif %}
+					{% if bages == "green" %}
+				    	<div class="bage bage_green">Новинка</div>
+					{% endif %}
+				</div>
+			{% endif %}
+			<div class="product-card__preview">
+				<img src="{{img}}">
+			</div>
+			<div class="product-card__title">
+				{{name}}
+			</div>
+			<div class="product-card__rating">
+				<i class="rating-star"></i>
+				<i class="rating-star"></i>
+				<i class="rating-star"></i>
+				<i class="rating-star"></i>
+				<i class="rating-star rating-star_empty"></i>
+				<span class="rating__count">(2)</span>
+			</div>
+			{% if not notSale %}
+				<div class="price-row price-row_in-card">
+					<span class="price-row__old-price">204 000 руб.</span>
+					<span class="price-row__current-price">190 990 руб.</span>
+					<span class="price-row__saving-diff">Экономия: 10 000 руб.</span>
+				</div>
+				{% else %}
+				<div class="price-row price-row_in-card">
+					<span class="price-row__current-price">190 990 руб.</span>
+				</div>
+			{% endif %}
+			<button class="buy-button buy-button_in-card"></button>
+		</div>
+		<div class="product-card__bottom">
+			
+			<label class="checkbox checkbox_small-text product-card__compare-line">
+				<div class="checkbox__visual"></div>
+				<input type="checkbox" name="" class="checkbox__hidden-input">
+				<span class="checkbox__text">к сравнению</span>
+			</label>
+			<div class="product-card__date">Доставка с 14.08.2017</div>
+		</div>
+		
+	</a> -->

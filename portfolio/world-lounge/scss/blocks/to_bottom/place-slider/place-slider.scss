@@ -1,0 +1,112 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.place-slider {
+  padding-top: 48px;
+
+  @media #{$tablet-big-screen} {
+    padding-top: 0;
+    width: calc(100% - 40px);
+    @include margin-auto;
+  }
+
+  &__items {
+
+    & .owl-prev,
+    & .owl-next {
+      position: absolute;
+      width: 25px !important;
+      height: 45px !important;
+      background: url(../../../../img/slider_arrow.png) !important;
+      @include background-contain-center;
+      top: 50%;
+      transform: translateY(-50%) scaleX(-1);
+
+      &:focus,
+      &:active {
+        outline: none !important;
+      }
+
+    }
+
+    & .owl-next {
+      left: auto;
+      right: 0;
+      transform: translateY(-50%) scaleX(-1);
+
+      @media #{$tablet-big-screen} {
+        right: -33px;
+      }
+    }
+
+    & .owl-prev {
+      left: 0px;
+      right: auto;
+      transform: translateY(-50%);
+
+      @media #{$tablet-big-screen} {
+        left: -33px;
+      }
+    }
+
+    & .owl-prev span,
+    & .owl-next span {
+      display: none;
+    }
+
+  }
+
+
+
+  &__item {
+    width: 100%;
+    position: relative;
+    transform: scale(.7);
+    transition: all .4s ease-in;
+
+    @media #{$tablet-big-screen} {
+      transform: scale(1);
+    }
+
+    &:after {
+      @include after-absolute;
+      @include absolute-fill;
+      border-radius: 50%;
+      background: $brown;
+      opacity: 1;
+      transition: all .4s ease-in;
+      z-index: -1;
+    }
+
+    &.active {
+        transform: scale(1);
+    }
+
+  }
+
+  &__item-inner {
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    @include background-cover-center;
+    position: relative;
+    z-index: 1;
+    opacity: .7;
+    transition: all .4s ease-in;
+  }
+
+
+  &__item-inner-bottom {
+    position: absolute;
+    @include absolute-fill;
+    z-index: -1;
+    border-radius: 50%;
+    background: $brown;
+
+  }
+
+  &__item.active &__item-inner {
+    opacity: 1;
+  }
+}

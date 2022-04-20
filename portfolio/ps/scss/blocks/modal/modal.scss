@@ -1,0 +1,170 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.modal {
+
+  &__background {
+    display: none;
+
+    &.active {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, .9);
+      z-index: 10;
+    }
+
+  }
+
+  &__block {
+    display: none;
+
+    &.active {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+      display: block;
+      position: absolute;
+      width: 300px;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      background: $white;
+      transform: translate(-50%, -50%);
+      z-index: 11;
+      padding: 20px;
+      @include flex-row;
+      align-items: center;
+
+      @media #{$mobile-big-screen} {
+        min-width: auto;
+        width: 90%;
+        padding: 20px 10px;
+      }
+
+    }
+  }
+
+  &__close {
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: -50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    background: $white;
+    z-index: 10;
+    position: absolute;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 0 30px -1px rgba(0, 0, 0, .2);
+
+    &:after {
+      @include after-absolute;
+      opacity: .3;
+      width: 100%;
+      height: 100%;
+      background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ljk3MSA0Ny45NzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ljk3MSA0Ny45NzE7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMjguMjI4LDIzLjk4Nkw0Ny4wOTIsNS4xMjJjMS4xNzItMS4xNzEsMS4xNzItMy4wNzEsMC00LjI0MmMtMS4xNzItMS4xNzItMy4wNy0xLjE3Mi00LjI0MiwwTDIzLjk4NiwxOS43NDRMNS4xMjEsMC44OCAgIGMtMS4xNzItMS4xNzItMy4wNy0xLjE3Mi00LjI0MiwwYy0xLjE3MiwxLjE3MS0xLjE3MiwzLjA3MSwwLDQuMjQybDE4Ljg2NSwxOC44NjRMMC44NzksNDIuODVjLTEuMTcyLDEuMTcxLTEuMTcyLDMuMDcxLDAsNC4yNDIgICBDMS40NjUsNDcuNjc3LDIuMjMzLDQ3Ljk3LDMsNDcuOTdzMS41MzUtMC4yOTMsMi4xMjEtMC44NzlsMTguODY1LTE4Ljg2NEw0Mi44NSw0Ny4wOTFjMC41ODYsMC41ODYsMS4zNTQsMC44NzksMi4xMjEsMC44NzkgICBzMS41MzUtMC4yOTMsMi4xMjEtMC44NzljMS4xNzItMS4xNzEsMS4xNzItMy4wNzEsMC00LjI0MkwyOC4yMjgsMjMuOTg2eiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+      @include background-contain-center;
+      background-size: 50% !important;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+
+    @media #{$mobile-big-screen} {
+      width: 30px;
+      height: 30px;
+      top: -40px;
+      right: 0;
+    }
+
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__form {
+    background: $white;
+    padding: 10px;
+  }
+
+  &__form-title {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__form-inputs {
+    @include flex-column-center;
+  }
+
+  &__form-input-block {
+    position: relative;
+    height: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &:after {
+      @include after-absolute;
+      width: 100%;
+      height: 2px;
+      background: #c4c4c4;
+    }
+  }
+
+  &__form-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: none;
+    font-family: Montserrat-regular, sans-serif;
+  }
+
+  &__form-captcha-block {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: 75px;
+    @include flex-row-center;
+  }
+
+  &__form-captcha {
+    transform: scale(.8);
+    transform-origin: center center;
+  }
+
+  &__form-button {
+    background: $black;
+    border-color: $black;
+    font-size: 15px !important;
+  }
+
+  &__form-agree {
+    text-align: center;
+    font-family: Montserrat-regular, sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  &__form-agree-link {
+    color: #333;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: #333;
+    }
+
+    &:visited {
+      color: #333;
+    }
+  }
+
+
+}

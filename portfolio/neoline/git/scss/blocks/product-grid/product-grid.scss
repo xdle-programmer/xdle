@@ -1,0 +1,28 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+
+  &__item {
+    height: 135px;
+    @include background-cover-center;
+    background-position: right center!important;
+    border-radius: 10px;
+    padding: 25px;
+
+    &:hover {
+      box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.27);
+    }
+  }
+
+  &__item-name {
+    color: $white;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,1136 @@
+/*@font-face {*/
+    /*font-family: 'HelveticaNeueThin';*/
+    /*src: url('font/HelveticaNeueCyr-Thin.otf');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'HelveticaLight';*/
+    /*src: url('font/HelveticaNeueCyr-Light.otf');*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'HelveticaUltraLight';*/
+    /*src: url('font/HelveticaNeueCyr-UltraLight.otf');*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'HelveticaNeueMedium';*/
+    /*src: url('font/HelveticaNeueCyr-Medium.otf');*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'Helvetica1';*/
+    /*src: url('font/Helvetica.otf');*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'HelveticaLight2';*/
+    /*src: url('font/Helvetica_Light-Normal Regular.ttf');*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'HelveticaNeue';*/
+    /*src: url('font/HelveticaNeueCyr-Roman.otf');*/
+/*}*/
+
+@media all {
+    /* // ---- global typography ---- // */
+
+    .wrapper--static,
+    .content--static {
+        text-align: left;
+    }
+
+    /* Links
+    -------------------------------------------------------------- */
+    .content--static :link {
+        color: #4D87C7;
+        background: transparent;
+        text-decoration: none;
+    }
+
+    .content--static :visited {
+        color: #4D87C7;
+        text-decoration: none;
+    }
+
+    .content--static :link:hover, :visited:hover {
+        color: #4D87C7;
+        text-decoration: underline;
+    }
+
+    .content--static :link:focus, :visited:focus {
+        text-decoration: underline;
+    }
+
+    .content--static :link:active, :visited:active {
+        color: #4D87C7;
+        text-decoration: underline;
+    }
+
+    .content--static :link:hover, :visited:hover {
+    }
+
+    /*:link[rel=external]::after {content: " " url(i/external.png);} */
+    .content--static .nonreloadlink {
+        border-bottom: dashed 1px;
+        text-decoration: none !important;
+    }
+
+    /* Text elements
+    -------------------------------------------------------------- */
+    .content--static blockquote {
+        margin: 1.5em;
+        color: #666;
+    }
+
+    .content--static blockquote, cite, q {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+    }
+
+    .content--static strong {
+        font-weight: bold;
+    }
+
+    .content--static em, dfn, var {
+        font-style: italic;
+    }
+
+    .content--static dfn {
+        font-weight: bold;
+    }
+
+    .content--static sub, sup {
+        font-size: 91.6667%;
+        line-height: 0;
+    }
+
+    .content--static big {
+        font-size: 116.667%;
+    }
+
+    .content--static small {
+        font-size: 91.667%;
+    }
+
+    .content--static abbr {
+        font-variant: small-caps;
+        letter-spacing: .07em;
+    }
+
+    .content--static abbr[title], dfn[title] {
+        border-bottom: 1px #aaa dotted;
+        cursor: help;
+    }
+
+    .content--static address {
+        margin: 0 0 1.5em;
+        font-style: italic;
+    }
+
+    .content--static u, ins {
+        text-decoration: underline;
+    }
+
+    .content--static del {
+        color: #666;
+        text-decoration: line-through;
+    }
+
+    .content--static mark {
+        background-color: #ff9;
+        color: #000;
+        font-style: italic;
+    }
+
+    .content--static pre {
+        margin: 1.5em 0;
+        white-space: pre;
+    }
+
+    .content--static kbd, samp, var, tt {
+        color: #666;
+        font-weight: bold;
+    }
+
+    .content--static pre, code {
+        color: #800;
+    }
+
+    .content--static textarea, pre, code, kbd, samp, var, tt {
+        font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+    }
+
+    .content--static hr {
+        color: #ccc;
+        background-color: #ccc;
+        height: 1px;
+        border-width: 0px;
+    }
+
+    /* Lists
+    -------------------------------------------------------------- */
+    .content--static dl {
+        margin: 0 0 1.5em 0;
+    }
+
+    .content--static dl dt {
+        font-weight: bold;
+    }
+
+    .content--static dd {
+        margin-left: 1.5em;
+    }
+
+    /* Icons
+    -------------------------------------------------------------- */
+    .content--static .icons a, .icon {
+        padding: 1px 0 1px 20px;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+    /* Misc classes
+    -------------------------------------------------------------- */
+    .content--static .highlight {
+        color: #c30;
+    }
+
+    .content--static .dimmed {
+        color: #888;
+    }
+
+    .content--static .quiet {
+        color: #666;
+    }
+
+    .content--static .loud {
+        color: #000;
+    }
+
+    .content--static .info {
+        background: #f8f8f8;
+        color: #666;
+        padding: .818em;
+        margin-bottom: 1.636em;
+        font-size: 91.7%;
+    }
+
+    .content--static .note {
+        background: #efe;
+        color: #040;
+        border: 2px #484 solid;
+    }
+
+    .content--static .important {
+        background: #ffe;
+        color: #440;
+        border: 2px #884 solid;
+    }
+
+    .content--static .warning {
+        background: #fee;
+        color: #400;
+        border: 2px #844 solid;
+    }
+
+    .content--static .note, .important, .warning {
+        padding: .75em;
+        margin-bottom: 1.166em;
+    }
+
+    .content--static .small {
+        font-size: .8em;
+        margin-bottom: 1.875em;
+        line-height: 1.875em;
+    }
+
+    .content--static .large {
+        font-size: 1.2em;
+        line-height: 2.5em;
+        margin-bottom: 1.25em;
+    }
+
+    .content--static .hide {
+        display: none;
+    }
+
+    .content--static .added {
+        color: #484
+    }
+
+    .content--static .removed {
+        text-decoration: line-through;
+    }
+
+    .content--static .first {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .content--static .last {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .content--static .top {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .content--static .bottom {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .content--static .red, .content--static .red {
+        color: #fa3b00 !important
+    }
+
+    .content--static .blue, .content--static .blue {
+        color: #1f7ff5 !important
+    }
+
+    .content--static .green, .content--static .green {
+        color: #53a90d !important
+    }
+
+    .content--static .rose, .content--static .rose {
+        color: #ea619b !important
+    }
+
+    .content--static .rose_dark, .content--static .rose_dark {
+        color: #f13466 !important
+    }
+
+    .content--static .orange, .content--static .orange {
+        color: #f98819 !important
+    }
+
+    .content--static .aqua, .content--static .aqua {
+        color: #00a084 !important
+    }
+
+    .content--static .white, .content--static .white {
+        color: #fff !important
+    }
+
+    .content--static .gray, .content--static .gray {
+        color: #363636 !important
+    }
+
+    .content--static .gray_light, .content--static .gray_light {
+        color: #f0f0f0 !important
+    }
+
+    .content--static .red_border, .content--static .red_border {
+        border-color: #fb5a49;
+    }
+
+    .content--static .blue_border, .content--static .blue_border {
+        border-color: #1f7ff5;
+    }
+
+    .content--static .green_border, .content--static .green_border {
+        border-color: #53a90d;
+    }
+
+    .content--static .rose_border, .content--static .rose_border {
+        border-color: #ea619b;
+    }
+
+    .content--static .rose_dark_border, .content--static .rose_dark_border {
+        border-color: #f13466;
+    }
+
+    .content--static .orange_border, .content--static .orange_border {
+        border-color: #f98819;
+    }
+
+    .content--static .aqua_border, .content--static .aqua_border {
+        border-color: #00a084;
+    }
+
+    .content--static .white_border, .content--static .white_border {
+        border-color: White
+    }
+
+    .content--static .red_bg, .content--static .red_bg {
+        background-color: #fb5a49
+    }
+
+    .content--static .blue_bg, .content--static .blue_bg {
+        background-color: #1f7ff5
+    }
+
+    .content--static .green_bg, .content--static .green_bg {
+        background-color: #53a90d
+    }
+
+    .content--static .rose_bg, .content--static .rose_bg {
+        background-color: #ea619b
+    }
+
+    .content--static .rose_dark_bg, .content--static .rose_dark_bg {
+        background-color: #f13466
+    }
+
+    .content--static .orange_bg, .content--static .orange_bg {
+        background-color: #f98819
+    }
+
+    .content--static .aqua_bg, .content--static .aqua_bg {
+        background-color: #00a084
+    }
+
+    .content--static .white_bg, .content--static .white_bg {
+        background-color: #fff
+    }
+
+    .content--static .gray_light_bg, .content--static .gray_light_bg {
+        background-color: #f0f0f0
+    }
+
+    .content--static .left {
+        float: left
+    }
+
+    .content--static .right {
+        float: right
+    }
+
+    .content--static h1 {
+        
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 36px;
+        color: #363636;
+        font-weight: normal
+    }
+
+    .content--static h1.white {
+        color: #f8f8f8
+    }
+
+    .content--static h1.gray {
+        color: #f0f0f0
+    }
+
+    .content--static h1.blue {
+        color: #487fe4
+    }
+
+    .content--static h2 {
+        font-size: 40px;
+        line-height: 40px;
+        color: #363636;
+        margin-bottom: 18px;
+        
+        font-weight: normal
+    }
+
+    .content--static h3 {
+        font-size: 36px;
+        line-height: 36px;
+        color: #363636;
+        margin-bottom: 18px;
+        
+        font-weight: normal
+    }
+
+    .content--static h4 {
+        font-size: 24px;
+        line-height: 24px;
+        padding-top: 9px;
+        margin-bottom: 9px;
+        
+        font-weight: normal
+    }
+
+    .content--static h4.rose {
+        color: #e32f7b;
+        margin-bottom: 9px
+    }
+
+    .content--static h6 {
+        font-size: 22px;
+        line-height: 22px;
+        
+        margin-bottom: 9px;
+        font-weight: normal
+    }
+
+    /* -- ---- global typography ---- -- */
+    /* // ---- content typography ---- // */
+    /* Headings
+    -------------------------------------------------------------- */
+    .content--static h1, .content--static h2, .content--static h3, .content--static h4, .content--static h5, .content--static h6 {
+        font-weight: normal;
+        color: #363636;
+        
+        background-color: transparent
+    }
+
+    .content--static h1 {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 18px;
+    }
+
+    .content--static h2 {
+        font-size: 40px;
+        margin-bottom: 18px;
+        line-height: 40px;
+    }
+
+    .content--static h3 {
+        font-size: 32px;
+        line-height: 38px;
+        padding-top: 26px;
+        margin-bottom: 26px;
+    }
+
+    .content--static h4 {
+        font-size: 24px;
+        line-height: 24px;
+        padding-top: 9px;
+        margin-bottom: 9px;
+    }
+
+    .content--static h4.header {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: Arial
+    }
+
+    /*.content--static h4.rose {color:#e32f7b; margin-bottom:18px}*/
+    /* Optional - em units */
+    /*
+    .content--static h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+    .content--static h2 { font-size: 2em; margin-bottom: 0.75em; }
+    .content--static h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+    .content--static h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+    */
+    /* Headings the same size as text */
+    .content--static h5 {
+        font-size: 22px;
+        margin-bottom: 1em;
+        font-family: HelveticaItaicl;
+        line-height: 22px
+    }
+
+    .content--static h6 {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .content--static h1 img, .content--static h2 img, .content--static h3 img,
+    .content--static h4 img, .content--static h5 img, .content--static h6 img {
+        margin: 0;
+    }
+
+    /* Links
+    -------------------------------------------------------------- */
+    .content--static :link {
+        text-decoration: underline;
+    }
+
+    .content--static :visited {
+        text-decoration: underline;
+    }
+
+    .content--static .hidevisited :visited {
+        color: #4D87C7;
+        text-decoration: underline;
+    }
+
+    .content--static :link:hover, .content--static :visited:hover {
+        text-decoration: underline;
+    }
+
+    .content--static :link img {
+    }
+
+    .content--static :link:hover img {
+    }
+
+    /* Lists
+    -------------------------------------------------------------- */
+    .content--static li ul, .content--static li ol {
+        margin: 0 1.5em;
+    }
+
+    /*.content--static ul, .content--static ol {margin: 0 1.5em 1.5em 1.5em;}*/
+    .content--static ul {
+        list-style-type: disc;
+        margin-left: 15px
+    }
+
+    .content--static ol {
+        list-style-type: decimal;
+        margin-left: 20px
+    }
+
+    /* Text elements
+    -------------------------------------------------------------- */
+    .content--static p.blue {
+        background: transparent;
+    }
+
+    .content--static p {
+        margin: 0 0 1.5em;
+        color: #4d4d4d;
+        font-size: 16px;
+        background: transparent;
+        
+        line-height: 22px
+    }
+
+    .content--static p.blue {
+        color: #2b72c2
+    }
+
+    .content--static p.green {
+        color: #2f9601
+    }
+
+    .content--static p.gray {
+        color: #838383
+    }
+
+    .content--static p.white {
+        color: #fff
+    }
+
+    .content--static p.gray_light {
+        color: #bfbfbf
+    }
+
+    .content--static img.align-left, .content--static img.float-left {
+        float: left;
+        margin: 0em 1.5em 1.5em 0;
+    }
+
+    .content--static img.align-right, .content--static img.float-right {
+        float: right;
+        margin: 0em 0 1.5em 1.5em;
+    }
+
+    .content--static img.align-center {
+        display: block;
+        margin: 0 auto 1.5em;
+    }
+
+    /*.content--static img {margin:0 3em 1.5em 0}*/
+    /* Images with captions
+    -------------------------------------------------------------- */
+    .content--static p.icaption-left {
+        float: left;
+        display: inline;
+        margin: 0 1em 0.15em 0;
+    }
+
+    .content--static p.icaption-right {
+        float: right;
+        display: inline;
+        margin: 0 0 0.15em 1em;
+    }
+
+    .content--static p.icaption-left img,
+    .content--static p.icaption-right img {
+        padding: 0;
+        margin: 0;
+        border: 1px #888 solid;
+    }
+
+    .content--static p.icaption-left strong,
+    .content--static p.icaption-right strong {
+        display: block;
+        overflow: hidden;
+        margin-top: 2px;
+        padding: 0.3em 0.5em;
+        background: #eee;
+        font-weight: normal;
+        font-size: 91.667%;
+    }
+
+    /* Tables
+    -------------------------------------------------------------- */
+    .content--static table, table.content--static {
+        margin-bottom: 1.5em;
+        width: auto;
+    }
+
+    .content--static caption {
+        background: #eee;
+        font-variant: small-caps;
+    }
+
+    .content--static table.full {
+        width: 100%;
+    }
+
+    .content--static table tr td, .content--static table tr th {
+        border: 1px solid;
+        padding: 3px 10px
+    }
+
+    /* Separators
+    -------------------------------------------------------------- */
+    .content--static hr {
+        background: #ddd;
+        color: #ddd;
+        clear: both;
+        float: none;
+        width: 100%;
+        height: .1em;
+        margin: 0 0 1.45em;
+        border: none;
+    }
+
+    .content--static hr.space {
+        background: #fff;
+        color: #fff;
+    }
+
+    /* -- ---- content typography ---- -- */
+    /**
+     *  YAML Forms - visual styling
+     *
+     *  (en) visual form styling area  
+     */
+    .content--static .form {
+        background: #f4f4f4;
+        border: 1px #ddd solid;
+        margin: 0 0 1.5em 0;
+        padding: 8px;
+    }
+
+    .content--static .form p {
+        margin: 0 0 1.5em 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+    .content--static .form fieldset {
+        border: 1px #ddd solid;
+        background: #fafafa;
+        margin: 0 0 1.5em 0;
+        padding: 8px;
+    }
+
+    .content--static .form legend {
+        font-size: 125%;
+        font-weight: normal;
+        color: #000;
+    }
+
+    .content--static .form label {
+        color: #666;
+        cursor: pointer;
+    }
+
+    .content--static .form label.requredfield {
+        font-weight: bold;
+    }
+
+    .content--static .form .fieldcomment {
+        font-size: 0.833em;
+        cursor: default;
+    }
+
+    .content--static .form input,
+    .content--static .form textarea,
+    .content--static .form select,
+    .content--static .form optgroup {
+
+    }
+
+    .content--static .form input:focus {
+        color: #515151;
+    }
+
+    .content--static .form .type-text input,
+    .content--static .form .type-text textarea,
+    .content--static .form .type-select select {
+        border: 1px solid #ddd;
+    }
+
+    .content--static .form .type-checklist label {
+        display: inline !important;
+    }
+
+    /* :hover and :focus status on form fields */
+    .content--static .form div.type-text input:focus,
+    .content--static .form div select:focus,
+    .content--static .form div textarea:focus,
+    .content--static .form div.type-text input:hover,
+    .content--static .form div select:hover,
+    .content--static .form div textarea:hover,
+    .content--static .form div.type-text input:active,
+    .content--static .form div select:active,
+    .content--static .form div textarea:active {
+        border: 1px #a66 solid;
+        background: #fff;
+    }
+
+    /* Styling of custom styled buttons */
+    .content--static .form .type-button input {
+        border-top: 1px #ddd solid;
+        border-left: 1px #ddd solid;
+        border-right: 1px #444 solid;
+        border-bottom: 1px #444 solid;
+        color: #000;
+        background: #454545 url(i/button_gray.png) top left repeat-x;
+        padding: 5px 1em;
+    }
+
+    .content--static .form .type-button input[type=reset] {
+        color: #300;
+        background: #661717 url(i/button_red.png) top left repeat-x;
+    }
+
+    .content--static .form .type-button input[type=submit] {
+        color: #330;
+        background: #5e5607 url(i/button_yellow.png) top left repeat-x;
+    }
+
+    /* optional button styling for IE6 using classes */
+    .content--static .form .type-button input.reset {
+        color: #300;
+        background: #661717 url(i/button_red.png) top left repeat-x;
+    }
+
+    .content--static .form .type-button input.submit {
+        color: #330;
+        background: #5e5607 url(i/button_yellow.png) top left repeat-x;
+    }
+
+    /* :hover and :focus status on buttons */
+    .content--static .form div.type-button input:focus,
+    .content--static .form div.type-button input:hover,
+    .content--static .form div.type-button input:active {
+        border-top: 1px #444 solid;
+        border-left: 1px #444 solid;
+        border-right: 1px #ddd solid;
+        border-bottom: 1px #ddd solid;
+        color: #fff;
+        background: #555;
+    }
+
+    .content--static .form div.type-button input.reset:focus,
+    .content--static .form div.type-button input.reset:hover,
+    .content--static .form div.type-button input.reset:active {
+        background: #800;
+        color: #fff;
+    }
+
+    .content--static .form div.type-button input.submit:focus,
+    .content--static .form div.type-button input.submit:hover,
+    .content--static .form div.type-button input.submit:active {
+        background: #880;
+        color: #fff;
+    }
+
+    /* General form styling  */
+    .content--static .form {
+        overflow: hidden;
+    }
+
+    .content--static .form fieldset {
+        overflow: hidden;
+    }
+
+    .content--static .form legend {
+        background: transparent;
+        border: 0;
+        padding: 0 0.5em;
+    }
+
+    .content--static .form .message {
+        display: block;
+        margin-bottom: 0.5em;
+        color: #666;
+    }
+
+    /* Highlight mandatory fields */
+    .content--static .form sup {
+        color: #800;
+        font-weight: bold;
+    }
+
+    /* styling containing DIV elements */
+    .content--static .form div.type-text,
+    .content--static .form div.type-select,
+    .content--static .form div.type-check,
+    .content--static .form div.type-button {
+        margin: 0.5em 0;
+        padding: 3px 0.5em;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content--static .form div.type-button {
+        padding: 3px 0em;
+    }
+
+    .content--static .form .type-text input,
+    .content--static .form .type-text textarea,
+    .content--static .form .type-text .text {
+        position: relative;
+        padding: 0.3em 0.3em;
+    }
+
+    .content--static .form .type-select select {
+        position: relative;
+        padding: 0.3em 2px 0.3em 1px;
+        cursor: pointer;
+    }
+
+    .content--static .form .type-select select option {
+        padding: 2px 0
+    }
+
+    .content--static .form .type-select select optgroup {
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .content--static .form .type-check input {
+        cursor: pointer;
+    }
+
+    /* Styling of buttons */
+    .content--static .form .type-button input {
+        cursor: pointer;
+        overflow: visible; /* Fixes IE7 auto-padding bug */
+        width: auto;
+    }
+
+    /* Styling of error-messages */
+    .content--static .form div.fielderror {
+        border: 1px #a00 dashed;
+        background: #faf4f4;
+        padding: .75em .5em;
+    }
+
+    .content--static .form div.fielderror label {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .content--static .form div.fielderror .message {
+        color: #800;
+    }
+
+    /*------------------------------------------------------------------------------------------------------*/
+    /**
+     * Vertical-Forms - technical base (standard)
+     *
+     * |-------------------------------|
+     * | fieldset                      |
+     * |-------------------------------|
+     * |   label                       |
+     * |   input / select / textarea   |
+     * |-------------------------------|
+     * | /fieldset                     |
+     * |-------------------------------|
+     *
+     * (en) Styling of forms where both label and input/select/textarea are styled with display:block;  
+     */
+    .content--static .vertical label {
+        display: block;
+        padding: 0.3em 0;
+    }
+
+    /* styling standard form elements with 'almost' equal flexible width */
+    .content--static .vertical .type-text input,
+    .content--static .vertical .type-text textarea {
+        display: block;
+        width: 58.5%;
+    }
+
+    .content--static .vertical .type-text textarea {
+        height: 123px;
+    }
+
+    .content--static .vertical .type-select select, .vertical .type-text .text {
+        display: block;
+        width: 60%;
+    }
+
+    .content--static .vertical .type-check label {
+        display: inline;
+    }
+
+    .content--static .vertical div.type-button {
+        text-align: center;
+    }
+
+    /*------------------------------------------------------------------------------------------------------*/
+    /* Indent Checkbox fields to match label-width */
+    .content--static .full div.type-text input,
+    .content--static .full div.type-text textarea {
+        width: 95.5%;
+        margin-right: -3px;
+    }
+
+    .content--static .full div.type-select select {
+        width: 97.0%;
+        margin-right: -3px;
+    }
+
+    .content--static .full {
+        width: 100%
+    }
+
+    /*------------------------------------------------------------------------------------------------------*/
+    /**
+     * Columnar forms display - technical base (optional)
+     *
+     * |-------------------------------------------|
+     * | fieldset                                  |
+     * |-------------------------------------------|
+     * |                                           |
+     * |   label   |   input / select / textarea   |
+     * |                                           |
+     * |-------------------------------------------|
+     * | /fieldset                                 |
+     * |-------------------------------------------|
+     *
+     * (en) Styling of forms where label floats left of form-elements 
+     *
+     * WARNING:This part contains several IE-stability-fixes. Don't edit this part if you are not sure, what you're doing!
+     */
+    /* Columnar display */
+    .content--static .columnar div.type-text label,
+    .content--static .columnar div.type-select label {
+        float: left;
+        width: 30%; /* Can be fixed width too */
+    }
+
+    .content--static .columnar .type-text textarea {
+        height: 123px;
+    }
+
+    /* Indent Checkbox fields to match label-width */
+    .content--static .columnar div.type-check input, .columnar .fieldcomment {
+        margin-left: 30%;
+    }
+
+    .content--static .columnar div.error .message {
+        margin-left: 30%;
+    }
+
+    .content--static .columnar div.type-button { /*padding-left:30%*/
+        text-align: center;
+    }
+
+    .content--static .columnar div.type-text input,
+    .content--static .columnar div.type-text textarea {
+        float: left;
+        width: 67.8%;
+        margin-right: -3px;
+    }
+
+    .content--static .columnar div.type-select select {
+        float: left;
+        width: 69.4%;
+        margin-right: -3px;
+    }
+
+    /*------------------------------------------------------------------------------------------------------*/
+    /* Success, notice and error boxes
+    -------------------------------------------------------------- */
+    .content--static .form .error,
+    .content--static .form .notice,
+    .content--static .form .success {
+        padding: .7em;
+        margin-bottom: 1.5em;
+        border: 1px solid #ddd;
+    }
+
+    .content--static .form .error {
+        background: #FBE3E4;
+        color: #8a1f11;
+        border-color: #FBC2C4;
+    }
+
+    .content--static .form .notice {
+        background: #FFF6BF;
+        color: #514721;
+        border-color: #FFD324;
+    }
+
+    .content--static .form .success {
+        background: #E6EFC2;
+        color: #264409;
+        border-color: #C6D880;
+    }
+
+    .content--static .form .error a {
+        color: #8a1f11;
+        text-decoration: underline;
+    }
+
+    .content--static .form .notice a {
+        color: #514721;
+        text-decoration: underline;
+    }
+
+    .content--static .form .success a {
+        color: #264409;
+        text-decoration: underline;
+    }
+
+    .content--static .col_left {
+        float: left
+    }
+
+    .content--static .col_right {
+        float: right
+    }
+
+    .content--static .col_10 {
+        width: 10%
+    }
+
+    .content--static .col_20 {
+        width: 20%
+    }
+
+    .content--static .col_30 {
+        width: 30%
+    }
+
+    .content--static .col_40 {
+        width: 40%
+    }
+
+    .content--static .col_50 {
+        width: 50%
+    }
+
+    .content--static .col_60 {
+        width: 60%
+    }
+
+    .content--static .col_70 {
+        width: 70%
+    }
+
+    .content--static .col_80 {
+        width: 80%
+    }
+
+    .content--static .col_90 {
+        width: 90%
+    }
+
+    .content--static .col_100 {
+        width: 100%
+    }
+}

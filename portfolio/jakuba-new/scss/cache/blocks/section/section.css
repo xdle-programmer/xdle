@@ -1,0 +1,70 @@
+.section {
+  width: 100%; }
+  .section--background {
+    background-color: #101010 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 1279px) {
+      .section--background {
+        background-position: right bottom !important;
+        background-size: 200% auto !important; } }
+  .section--text-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%; }
+    @media (max-width: 1279px) {
+      .section--text-img {
+        flex-wrap: wrap; } }
+  .section--gray {
+    background: #e6e6e6; }
+  .section--dark-gray {
+    background: #303030;
+    color: #ffffff; }
+  .section__inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 100px; }
+    .section__inner--center {
+      text-align: center; }
+    @media (max-width: 1279px) {
+      .section__inner {
+        padding-top: 30px;
+        padding-bottom: 40px; } }
+  .section__img {
+    padding-left: calc(50vw - 585px);
+    width: calc(475px + (50vw - 585px));
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .section__img--right {
+      padding-right: calc(50vw - 585px); }
+    @media (max-width: 1279px) {
+      .section__img {
+        width: 100%;
+        padding-left: 0;
+        height: 320px; }
+        .section__img--right {
+          padding-right: 0;
+          margin-top: 20px; } }
+  .section__text {
+    padding-right: calc(50vw - 585px);
+    width: calc(695px + (50vw - 585px));
+    background: #f2f2f5;
+    padding-left: 120px; }
+    .section__text--left {
+      padding-left: calc(50vw - 585px); }
+    @media (max-width: 1279px) {
+      .section__text {
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%; }
+        .section__text--left {
+          padding-right: 15px;
+          padding-left: 15px; } }

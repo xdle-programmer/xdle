@@ -1,0 +1,34 @@
+.title-background {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px; }
+  .title-background--right .title-background__wrapper {
+    text-align: right; }
+  .title-background__item {
+    background: #ffb037;
+    height: 60px;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    font-size: 40px;
+    font-family: Antiqua,sans-serif;
+    line-height: 60px; }
+    .title-background__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #ffb037;
+      height: 100%;
+      width: 1000px;
+      top: 0;
+      left: -1000px; }
+    @media (max-width: 767px) {
+      .title-background__item {
+        height: auto;
+        padding: 5px 10px;
+        font-size: 24px;
+        line-height: 26px; } }
+  .title-background--right .title-background__item:after {
+    left: auto;
+    right: -1000px; }

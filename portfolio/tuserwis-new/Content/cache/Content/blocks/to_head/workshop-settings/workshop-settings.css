@@ -1,0 +1,79 @@
+.workshop-settings__block {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px; }
+
+.workshop-settings__main {
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-gap: 50px;
+  position: relative;
+  margin-bottom: 20px; }
+  @media (max-width: 767px) {
+    .workshop-settings__main {
+      grid-template-columns: 1fr;
+      padding-top: 40px; } }
+
+@media (max-width: 767px) {
+  .workshop-settings__desc {
+    text-align: center; } }
+
+.workshop-settings__desc-name {
+  font-size: 20px;
+  color: #0092E8;
+  margin-bottom: 20px; }
+
+.workshop-settings__desc-phone {
+  margin-bottom: 5px; }
+
+.workshop-settings__desc-email {
+  margin-bottom: 15px; }
+
+.workshop-settings__desc-text {
+  font-size: 13px; }
+
+.workshop-settings__subtitle {
+  color: #0092E8;
+  margin-bottom: 15px; }
+  @media (max-width: 767px) {
+    .workshop-settings__subtitle {
+      text-align: center; } }
+
+.workshop-settings__main-button {
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  @media (max-width: 767px) {
+    .workshop-settings__main-button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      top: auto;
+      z-index: 5;
+      height: 45px;
+      width: 100%; } }
+
+.workshop-settings__notification {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  position: relative; }
+  @media (max-width: 767px) {
+    .workshop-settings__notification {
+      grid-template-columns: 1fr; } }
+  .workshop-settings__notification:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6); }
+    .edit .workshop-settings__notification:after {
+      opacity: 0;
+      visibility: hidden; }
+
+.workshop-settings__input-block {
+  margin-bottom: 15px; }

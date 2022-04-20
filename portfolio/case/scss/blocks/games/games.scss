@@ -1,0 +1,203 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.games {
+  min-height: 805px;
+  padding-top: 20px;
+  position: relative;
+
+  @media #{$tablet-small-screen} {
+    min-height: auto;
+    padding-bottom: 300px;
+  }
+
+  @media #{$mobile-big-screen} {
+    padding-bottom: 230px;
+  }
+
+  &__header {
+    width: 100%;
+    height: 40px;
+    background: #2e3133;
+    @include flex-row-center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @media #{$mobile-big-screen} {
+      height: 60px;
+    }
+
+    //@media #{$mobile-small-screen} {
+    //  height: auto;
+    //  flex-wrap: wrap;
+    //}
+  }
+
+  &__header-title {
+    height: 100%;
+    padding: 0 15px;
+    @include flex-row-center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    background: #3d4145;
+
+    @media #{$mobile-big-screen} {
+      text-align: left;
+      padding: 0 6px;
+      font-size: 12px;
+    }
+
+    //@media #{$mobile-small-screen} {
+    //  width: 100%;
+    //  text-align: center;
+    //  margin-bottom: 5px;
+    //  padding: 10px;
+    //}
+  }
+  &__header-item {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffbb02;
+    text-decoration: underline;
+    flex-grow: 1;
+    padding: 0 10px;
+
+    @media #{$mobile-big-screen} {
+      text-align: left;
+      font-size: 12px;
+    }
+
+    //@media #{$mobile-small-screen} {
+    //  width: 100%;
+    //  text-align: center;
+    //  margin-bottom: 5px;
+    //  padding: 10px;
+    //}
+  }
+  &__header-button {
+    padding: 0 17px;
+    background: linear-gradient(to bottom, #73b119,#5b891a);
+    border-radius: 5px;
+    @include flex-row-center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 100%;
+    text-transform: uppercase;
+
+    @media #{$mobile-big-screen} {
+      text-align: left;
+      padding: 0 6px;
+      font-size: 12px;
+    }
+
+    //@media #{$mobile-small-screen} {
+    //  width: 100%;
+    //  text-align: center;
+    //  height: 40px;
+    //}
+  }
+
+  &__items {
+    @include flex-row-center;
+    flex-wrap: wrap;
+
+    @media #{$mobile-big-screen} {
+      margin-left: -10px;
+      margin-right: -10px;
+      justify-content: space-between;
+    }
+  }
+
+  &__item-wrapper {
+    width: 30%;
+    margin: 0 5%;
+
+    @media #{$mobile-big-screen} {
+      width: 48%;
+      margin: 0 1%;
+    }
+  }
+  &__item-block {
+    width: 100%;
+    position: relative;
+    padding-bottom: 111.53%;
+  }
+
+  &__item {
+    position: absolute;
+    @include absolute-fill;
+    background: url(../../img/games__item.png);
+    @include background-contain-center;
+
+    &--empty {
+      background: url(../../img/games__item-empty.png);
+      @include background-contain-center;
+    }
+  }
+
+  &__item-number {
+    position: absolute;
+    background: url(../../img/number-grid.png);
+    @include background-contain-center;
+    width: 40px;
+    height: 40px;
+    @include flex-row-center;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 18%;
+
+    @media #{$mobile-big-screen} {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__item-img-block {
+    position: absolute;
+    @include absolute-center;
+    width: 70%;
+    height: 70%;
+    @include flex-row-center;
+  }
+
+  &__item-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__item-price {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24%;
+    @include flex-row-center;
+
+    @media #{$mobile-big-screen} {
+      bottom: 7%;
+    }
+  }
+  &__item-price-value {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    @include text-shadow;
+    z-index: 1;
+    margin-right: 5px;
+  }
+  &__item-price-current {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    background: #fff;
+    @include text-shadow;
+    z-index: 1;
+  }
+}

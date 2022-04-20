@@ -1,0 +1,62 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.characteristics-dots {
+
+  &__block {
+    @include flex-row;
+    justify-content: space-between;
+    color: $black;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 100%;
+    padding: 6px 0;
+
+    &:nth-of-type(1) {
+      padding-top: 18px;
+    }
+
+    &:nth-last-of-type(1) {
+      padding-bottom: 18px;
+    }
+
+  }
+
+  &__name {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    position: relative;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: calc(100% - 11px);
+      padding-right: 5px;
+      height: 1px;
+      bottom: 4px;
+      opacity: 0.5;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBOTE0ODY4NTBDNkIxMUU4QjY5RkExMzk0MTA3RDdEMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBOTE0ODY4NjBDNkIxMUU4QjY5RkExMzk0MTA3RDdEMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE5MTQ4NjgzMEM2QjExRThCNjlGQTEzOTQxMDdEN0QwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkE5MTQ4Njg0MEM2QjExRThCNjlGQTEzOTQxMDdEN0QwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SjBqrQAAABNJREFUeNpikJCQ+A8EDDAMEGAAT/0KP52VvI0AAAAASUVORK5CYII=') 0 0 repeat-x;
+
+    }
+  }
+
+  &__name-item {
+    display: inline;
+    position: relative;
+    z-index: 1;
+    padding-right: 5px;
+  }
+
+  &__value {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+}

@@ -1,0 +1,48 @@
+.number-grid {
+  border: 1px solid #2d3032;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: calc(100% + 160px);
+  margin: 0 -80px; }
+  @media (max-width: 1365px) {
+    .number-grid {
+      width: calc(100% + 120px);
+      margin: 0 -60px; } }
+  @media (max-width: 1279px) {
+    .number-grid {
+      width: 100%;
+      margin: 0; } }
+  .number-grid__wrapper {
+    width: calc(100% / 8); }
+    @media (max-width: 1023px) {
+      .number-grid__wrapper {
+        width: calc(100% / 3); } }
+  .number-grid__item-block {
+    position: relative;
+    background: rgba(30, 32, 34, 0.5);
+    padding-bottom: 100%;
+    width: 100%;
+    border: 1px solid #2d3032;
+    cursor: pointer; }
+  .number-grid__item {
+    position: absolute;
+    background: url(../../img/number-grid.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px; }
+    .number-grid__item-block:hover .number-grid__item {
+      transform: translate(-50%, -50%) scale(1.2); }

@@ -1,0 +1,52 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.button {
+  color: $white;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  height: 50px;
+  background: $blue;
+  text-transform: uppercase;
+  border: 1px solid $blue;
+
+  &:hover {
+    background: $blue-dark;
+  }
+
+  &--white {
+    color: $blue;
+    background: $white;
+  }
+
+  &--white:hover {
+    background: $blue-dark;
+    color: $white;
+  }
+
+  &--pdf {
+    @include flex-row-center;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 20px;
+      height: 23px;
+      margin-right: 10px;
+      background: url(../../../img/pdf-blue.png);
+      @include background-contain-center;
+    }
+
+    &:hover:before {
+    }
+  }
+}

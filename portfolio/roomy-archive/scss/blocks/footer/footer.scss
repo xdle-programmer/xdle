@@ -1,0 +1,198 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.footer {
+  background: $black;
+  color: $white;
+  padding-top: 47px;
+
+  &__block {
+  }
+
+  &__top {
+    @include flex-row;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray-light;
+    padding-bottom: 18px;
+
+    @media #{$tablet-big-screen} {
+      @include flex-column;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__menu-item {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 29px;
+    text-decoration: underline;
+  }
+
+  &__buttons {
+
+    @media #{$tablet-big-screen} {
+      order: -1;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__buttons-contact {
+    @include flex-row;
+    margin-bottom: 44px;
+  }
+
+  &__buttons-contact-item {
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid $gray-light;
+    padding: 10px 23px;
+    padding-left: 52px;
+    margin-left: 18px;
+    white-space: nowrap;
+    border-radius: 5px;
+    color: #ffffff;
+    @include flex-row-center;
+    position: relative;
+    cursor: pointer;
+
+    @media #{$tablet-big-screen} {
+      margin-right: 10px;
+      margin-left: 0;
+      padding: 10px 15px;
+      padding-left: 40px;
+    }
+
+    &:hover {
+      border-color: $white;
+    }
+
+    &:after {
+      @include after-absolute;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 13px;
+      background: $white;
+
+      @media #{$tablet-big-screen} {
+        left: 7px;
+      }
+    }
+
+    &--chat:after {
+      mask: url(../../../img/icons/chat.svg);
+      -webkit-mask: url(../../../img/icons/chat.svg);
+      @include mask-contain-center;
+    }
+
+    &--mail:after {
+      mask: url(../../../img/icons/mail.svg);
+      -webkit-mask: url(../../../img/icons/mail.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__app {
+  }
+
+  &__app-title {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+    margin-bottom: 20px;
+
+    @media #{$tablet-big-screen} {
+      text-align: left;
+    }
+  }
+
+  &__app-buttons {
+    @include flex-row;
+    justify-content: flex-end;
+
+    @media #{$tablet-big-screen} {
+      justify-content: flex-start;
+    }
+  }
+
+  &__app-button {
+    background: $gray;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-left: 31px;
+    position: relative;
+
+    @media #{$tablet-big-screen} {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      background: $white;
+      width: 32px;
+      height: 32px;
+    }
+
+    &--apple:after {
+      mask: url(../../../img/icons/apple.svg);
+      -webkit-mask: url(../../../img/icons/apple.svg);
+      @include mask-contain-center;
+    }
+
+    &--android:after {
+      mask: url(../../../img/icons/googlepay.svg);
+      -webkit-mask: url(../../../img/icons/googlepay.svg);
+      @include mask-contain-center;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'logo links' 'copyright settings';
+    padding: 33px 0;
+    padding-bottom: 45px;
+  }
+
+  &__logo {
+    grid-area: logo;
+    margin-top: 13px;
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  &__links {
+    grid-area: links;
+    text-align: right;
+  }
+
+  &__link {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+  }
+
+  &__interface-settings {
+    grid-area: settings;
+    @include flex-row;
+    justify-content: flex-end;
+  }
+
+  &__interface-settings-item {
+    margin-left: 30px;
+  }
+
+}

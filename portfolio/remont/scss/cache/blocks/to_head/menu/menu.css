@@ -1,0 +1,156 @@
+.menu {
+  position: fixed;
+  width: 240px;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  z-index: 90; }
+  @media (max-width: 1023px) {
+    .menu {
+      width: 280px; } }
+  @media (max-width: 767px) {
+    .menu {
+      width: 100%; } }
+  .menu__logo {
+    display: block;
+    height: 109px;
+    width: 100%;
+    background: #242936;
+    position: relative;
+    z-index: 100; }
+    @media (max-width: 1023px) {
+      .menu__logo {
+        background: #181c27;
+        height: 90px; } }
+    .menu__logo:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 196px;
+      height: 73px;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      background: url(../../img/logo.png);
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important; }
+      @media (max-width: 1023px) {
+        .menu__logo:after {
+          width: 150px;
+          height: 56px;
+          transform: translate(0, -50%);
+          right: 17px; } }
+  .menu__items {
+    background: #242936;
+    padding-left: 20px;
+    height: 110vh;
+    position: relative;
+    z-index: 100; }
+    @media (max-width: 1023px) {
+      .menu__items {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100%);
+        position: fixed;
+        width: 280px;
+        top: 0;
+        z-index: 120; }
+        .menu.active .menu__items {
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(0); } }
+  .menu__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    height: 73px;
+    border-bottom: 1px solid #3a3f4a;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 17px; }
+    .menu__item:hover {
+      color: #242936;
+      background: #ffffff; }
+    @media (max-width: 767px) {
+      .menu__item {
+        height: 47px; } }
+  .menu__open {
+    display: none; }
+    @media (max-width: 1023px) {
+      .menu__open {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-items: flex-end;
+        width: 74px;
+        height: 74px;
+        background: #242936;
+        position: absolute;
+        z-index: 110;
+        top: 8px;
+        left: 17px;
+        font-size: 10px;
+        text-align: center;
+        font-weight: 300;
+        padding-bottom: 10px; }
+        .menu__open:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 20px;
+          height: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 10px;
+          background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ1OSA0NTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1OSA0NTk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0ibWVudSI+CgkJPHBhdGggZD0iTTAsMzgyLjVoNDU5di01MUgwVjM4Mi41eiBNMCwyNTVoNDU5di01MUgwVjI1NXogTTAsNzYuNXY1MWg0NTl2LTUxSDB6IiBmaWxsPSIjZjliNDAxIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          background-position: center center !important; } }
+  .menu__close {
+    display: none; }
+    @media (max-width: 1023px) {
+      .menu__close {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 8px;
+        background: #1d222e;
+        height: 74px;
+        margin-right: 17px;
+        font-size: 10px;
+        font-weight: 300; } }
+  .menu__close-icon {
+    width: 16px;
+    height: 16px;
+    background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDM1NyAzNTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM1NyAzNTc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iY2xvc2UiPgoJCTxwb2x5Z29uIHBvaW50cz0iMzU3LDM1LjcgMzIxLjMsMCAxNzguNSwxNDIuOCAzNS43LDAgMCwzNS43IDE0Mi44LDE3OC41IDAsMzIxLjMgMzUuNywzNTcgMTc4LjUsMjE0LjIgMzIxLjMsMzU3IDM1NywzMjEuMyAgICAgMjE0LjIsMTc4LjUgICAiIGZpbGw9IiNmOWI0MDEiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-right: 18px; }
+  .menu__close-text {
+    width: 53px;
+    font-weight: 500; }
+  .menu__background {
+    display: none; }
+    @media (max-width: 1023px) {
+      .menu__background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        background: #242936;
+        display: block;
+        z-index: 110; }
+        .menu.active .menu__background {
+          visibility: visible;
+          opacity: .8; } }

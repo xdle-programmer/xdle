@@ -1,0 +1,68 @@
+@greyish-brown: #555555;
+@white: #f4f4f4;
+@white-two: #d2d2d2;
+@black: #000000;
+@white-three: #ffffff;
+@coral-pink: #ff5859;
+@white-four: #e6e6e6;
+@black-two: #1d1a1a;
+
+.placeholder(@font-size: 15px, @color: @greyish-brown){
+	&::-webkit-input-placeholder {font-weight: 300; color: @color; font-size: @font-size;  font-family: 'Roboto', sans-serif;} //placeholder text color
+    &::-moz-placeholder          {font-weight: 300; color: @color; font-size: @font-size;  font-family: 'Roboto', sans-serif;}
+    &:-moz-placeholder           {font-weight: 300; color: @color; font-size: @font-size;  font-family: 'Roboto', sans-serif;}
+    &:-ms-input-placeholder      {font-weight: 300; color: @color; font-size: @font-size;  font-family: 'Roboto', sans-serif;}
+}
+.svg-in(@name: '', @fill: @greyish-brown, @position: before, @width: auto, @height: auto, @bsize: contain, @color: ''){
+	
+	& when (@position = before){
+		&:before{
+			content: '';
+			width: @width;
+			height: @height;
+			background-image: svg-load('../img/svgSprite/@{name}.svg', fill=@fill);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: @bsize;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	& when (@position = after){
+		&:after{
+			content: '';
+			width: @width;
+			height: @height;
+			background-image: svg-load('../img/svgSprite/@{name}.svg', fill=@fill);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: @bsize;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	& when (@position = background){
+		background-image: svg-load('../img/svgSprite/@{name}.svg', fill=@fill, color=@color);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: @bsize;
+	}
+	& when (@position = background-card){
+		background-image: svg-load('../img/svgSprite/@{name}.svg', fill=@fill);
+		background-repeat: no-repeat;
+		background-size: @bsize;
+	}
+}
+.flex-center(@justify: space-around){
+	display: flex;
+	align-items: center;
+	justify-content: @justify;
+}
+.clear-fix(){
+	&:after{
+		content: '';
+		display: table;
+		width: 100%;
+		clear: both;
+	}
+}

@@ -1,0 +1,213 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.filter-list {
+
+  &__button {
+    display: none !important;
+
+    @media #{$mobile-big-screen} {
+      display: flex !important;
+      width: calc(100% - 20px);
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+
+    @media #{$mobile-big-screen} {
+      background: $white;
+      position: fixed;
+      z-index: 20;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 50px;
+      height: 100vh;
+      overflow-y: scroll;
+      opacity: 0;
+      visibility: hidden;
+      transition: none;
+
+      & * {
+        transition: none;
+      }
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__button-close {
+    display: none;
+
+    @media #{$mobile-big-screen} {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      background: $black;
+      mask: url(../../../img/close.svg);
+      -webkit-mask: url(../../../img/close.svg);
+      @include mask-contain-center;
+      cursor: pointer;
+    }
+  }
+
+  &__button-search {
+    display: none !important;
+
+    @media #{$mobile-big-screen} {
+      display: flex !important;
+      width: 100% !important;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+  }
+
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  $has-submenu: '.filter-list__item--has-item';
+  $has-submenu-active: '.filter-list__item--has-item.active';
+
+  &__header {
+    margin-bottom: 15px;
+  }
+  &__header-title {
+    font-size: 22px;
+    color: $gray;
+
+    #{$has-submenu} & {
+      padding-left: 34px;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    #{$has-submenu} &:after {
+      @include after-absolute;
+      width: 27px;
+      height: 27px;
+      left: 0;
+      top: 1px;
+      background: url(../../../img/check-plus.svg);
+      @include background-contain-center;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    #{$has-submenu} &:before {
+      @include after-absolute;
+      width: 27px;
+      height: 27px;
+      left: 0;
+      top: 1px;
+      background: url(../../../img/check-minus.svg);
+      @include background-contain-center;
+      opacity: 1;
+      z-index: 1;
+    }
+
+    #{$has-submenu-active} &:after {
+      opacity: 1;
+    }
+  }
+  &__content {
+
+    #{$has-submenu} & {
+      display: none;
+    }
+
+    #{$has-submenu-active} & {
+      display: block;
+    }
+  }
+  &__content-sort-list {
+
+  }
+
+  &__content-sort-list-item {
+    color: $gray;
+    padding-left: 37px;
+    cursor: pointer;
+    font-size: 19px;
+    position: relative;
+    margin-bottom: 10px;
+
+    &:after {
+      @include after-absolute;
+      width: 27px;
+      height: 27px;
+      left: 0;
+      top: -1px;
+      background: url(../../../img/sort-icon.svg);
+      @include background-contain-center;
+      opacity: 0;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.active {
+      color: $black;
+    }
+
+    &.active:after {
+      opacity: 1;
+    }
+  }
+
+  &__content-check-list {
+    padding-left: 37px;
+
+    &--wide {
+      padding-left: 0;
+    }
+  }
+
+  &__content-check-list-item {
+    color: $gray;
+    padding-left: 24px;
+    cursor: pointer;
+    font-size: 19px;
+    position: relative;
+    margin-bottom: 10px;
+
+    &:after {
+      @include after-absolute;
+      width: 16px;
+      height: 15px;
+      left: 0;
+      top: 6px;
+      background: url(../../../img/check-plus.svg);
+      @include background-contain-center;
+      opacity: 0;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.active {
+      color: $black;
+    }
+
+    &.active:after {
+      opacity: 1;
+    }
+  }
+}

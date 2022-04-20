@@ -1,0 +1,39 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.mobile-switch {
+  display: none;
+
+  @media #{$mobile-big-screen} {
+    @include flex-row-center;
+  }
+
+  &__button {
+
+    @media #{$mobile-big-screen} {
+      & * {
+        font-size: 13px;
+      }
+
+      &:nth-of-type(1) {
+        display: flex;
+
+        &:after {
+          content: '/';
+          color: #dd9c0a;
+          margin: 0 7px;
+        }
+      }
+    }
+  }
+
+  &__item {
+
+    @media #{$mobile-big-screen} {
+      &.hide {
+        display: none;
+      }
+    }
+  }
+}

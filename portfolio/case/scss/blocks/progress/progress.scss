@@ -1,0 +1,137 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.progress {
+  @include flex-row;
+  align-items: center;
+  width: fit-content;
+  @include margin-auto;
+
+  &__level {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #2d3032, #545556);
+    border: 1px solid #8d7943;
+    position: relative;
+    @include flex-row-center;
+
+    &:after {
+      @include after-absolute;
+      @include absolute-center;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      filter: blur(20px);
+      background: #f6d175;
+      opacity: 0.7;
+    }
+
+  }
+
+  &__level-item {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    @include text-shadow;
+    z-index: 1;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    @include text-shadow;
+  }
+
+  &__level-desc {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    background: #232525;
+    border-radius: 50%;
+    line-height: 9px;
+    text-transform: uppercase;
+    font-size: 8px;
+    color: #fff;
+    border: 1px solid #4a4c4d;
+    width: 25px;
+    height: 25px;
+    @include flex-row-center;
+  }
+
+  &__desc {
+    margin-left: 10px;
+  }
+  &__desc-text {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    @include text-shadow;
+    z-index: 1;
+    background: #fff;
+    @include text-shadow;
+
+    &--yellow {
+      background: linear-gradient(to bottom, #f19e00, #dba500);
+      @include text-shadow;
+    }
+  }
+
+  &__line {
+    @include flex-row;
+    margin-top: 10px;
+  }
+
+  &__line-item {
+    height: 8px;
+    width: 17px;
+    margin-right: 2px;
+    background: linear-gradient(to bottom, #f19e00, #dba500);
+    box-shadow: inset 0 -1px 1px 0 rgb(250, 248, 243);
+    border-radius: 4px;
+  }
+
+  @mixin line-black {
+    background: #414141;
+    box-shadow: inset 0 -1px 1px 0 rgba(125, 125, 125, 0.8);
+  }
+
+  &__line--1 &__line-item:nth-of-type(1n+2) {
+    @include line-black;
+  }
+
+  &__line--2 &__line-item:nth-of-type(1n+3) {
+    @include line-black;
+  }
+
+  &__line--3 &__line-item:nth-of-type(1n+4) {
+    @include line-black;
+  }
+
+  &__line--4 &__line-item:nth-of-type(1n+5) {
+    @include line-black;
+  }
+
+  &__line--5 &__line-item:nth-of-type(1n+6) {
+    @include line-black;
+  }
+
+  &__line--6 &__line-item:nth-of-type(1n+7) {
+    @include line-black;
+  }
+
+  &__line--7 &__line-item:nth-of-type(1n+8) {
+    @include line-black;
+  }
+
+  &__line--8 &__line-item:nth-of-type(1n+9) {
+    @include line-black;
+  }
+
+  &__line--9 &__line-item:nth-of-type(1n+10) {
+    @include line-black;
+  }
+
+  &__line--10 &__line-item:nth-of-type(1n+11) {
+    @include line-black;
+  }
+}

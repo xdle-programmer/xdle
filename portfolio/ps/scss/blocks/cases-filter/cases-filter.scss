@@ -1,0 +1,32 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.cases-filter {
+  &__items {
+    @include flex-row-center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 5px;
+    padding: 5px 10px;
+    color: #000;
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .1s linear;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      background: #3b3b3b;
+      color: $white;
+    }
+
+  }
+}
+

@@ -1,0 +1,416 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.main-screen {
+  width: 100%;
+  height: 1750px;
+  margin-bottom: -1000px;
+  overflow: hidden;
+
+  &--history {
+    height: 1100px;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #eaf2f4 0%, #f2efe9 70%, #fbf9f7 100%);
+
+    @media #{$tablet-big-screen}{
+      height: auto;
+    }
+  }
+
+  &--structure,
+  &--about,
+  &--constitution {
+    height: auto;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #eaf2f4 0%, #f2efe9 70%, #fbf9f7 100%);
+
+    @media #{$tablet-big-screen}{
+      height: auto;
+    }
+  }
+
+  #{$night} & {
+    background: #11132d;
+  }
+
+  &__block {
+    position: relative;
+    padding-top: 191px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    @media #{$mobile-big-screen}{
+      grid-template-columns: 1fr;
+      padding-top: 141px;
+    }
+  }
+
+  &__menu {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__planets {
+    position: absolute;
+    @include absolute-fill;
+
+    @media #{$mobile-big-screen}{
+      //overflow: hidden;
+    }
+  }
+
+  &__planet-big {
+    transition: none;
+  }
+
+  &__planet-big-orbit {
+    background: url(assets/img/planet-big-orbit.svg);
+    @include background-contain-center;
+    width: 329px;
+    height: 329px;
+    position: absolute;
+    top: 174px;
+    left: 316px;
+
+    &--history {
+      top: 374px;
+      left: 06px;
+
+      @media #{$mobile-big-screen}{
+        display: none;
+      }
+    }
+
+    @media #{$mobile-big-screen}{
+      top: 343px;
+      left: -150px;
+    }
+
+    &--empty {
+      background: none;
+    }
+  }
+
+  &__planet-big-item-big-wrapper {
+    position: absolute;
+    @include absolute-fill;
+    z-index: 2;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    animation: rotate linear;
+    animation-duration: var(--speed-animation-big);
+    animation-iteration-count: infinite;
+  }
+
+  &__planet-big-item-big {
+    background: url(assets/img/planet-big-item-big.svg);
+    @include background-contain-center;
+
+    #{$night} & {
+      background: url(assets/img/planet-big-item-big-dark.svg);
+      @include background-contain-center;
+    }
+
+    width: 308px;
+    height: 308px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+
+    @keyframes rotate-inner {
+      0% {
+        transform: rotate(0) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+      50% {
+        transform: rotate(-210deg) rotate3d(1, 1, 1, -15deg) scale(0.3);
+      }
+      100% {
+        transform: rotate(-360deg) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+    }
+
+    animation: rotate-inner linear;
+    animation-duration: var(--speed-animation-big);
+    animation-iteration-count: infinite;
+  }
+
+  &__planet-big-item-small-wrapper {
+    position: absolute;
+    @include absolute-fill;
+    z-index: 1;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    animation: rotate linear;
+    animation-duration: var(--speed-animation-small);
+    animation-iteration-count: infinite;
+  }
+
+  &__planet-big-item-small {
+    background: url(assets/img/planet-big-item-small.svg);
+    @include background-contain-center;
+
+    #{$night} & {
+      background: url(assets/img/planet-big-item-small-dark.svg);
+      @include background-contain-center;
+    }
+
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 160px;
+    left: -28px;
+
+    @media #{$mobile-big-screen}{
+      top: -50px;
+      left: -160px;
+    }
+
+    @keyframes rotate-inner {
+      0% {
+        transform: rotate(0) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+      50% {
+        transform: rotate(-210deg) rotate3d(1, 1, 1, -15deg) scale(0.3);
+      }
+      100% {
+        transform: rotate(-360deg) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+    }
+
+    animation: rotate-inner linear;
+    animation-duration: var(--speed-animation-small);
+    animation-iteration-count: infinite;
+  }
+
+  &__planet-small {
+    transition: none;
+  }
+
+  &__planet-small-orbit {
+    background: url(assets/img/planet-big-orbit.svg);
+    @include background-contain-center;
+    width: 419px;
+    height: 419px;
+    position: absolute;
+    top: -220px;
+    left: 922px;
+
+    &--empty {
+      background: none;
+    }
+  }
+
+  &__planet-small-item-big-wrapper {
+    position: absolute;
+    @include absolute-fill;
+    z-index: 2;
+
+    @keyframes rotate-small {
+      0% {
+        transform: rotate(0)
+      }
+      40% {
+        transform: rotate(160deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    animation: rotate-small linear;
+    animation-duration: var(--speed-animation-middle);
+    animation-iteration-count: infinite;
+  }
+
+  &__planet-small-item-big {
+    background: url(assets/img/planet-small-item.svg);
+    @include background-contain-center;
+    width: 102px;
+    height: 102px;
+    position: absolute;
+    top: 335px;
+    left: 20px;
+
+    #{$night} & {
+      background: url(assets/img/planet-small-item-dark.svg);
+      @include background-contain-center;
+    }
+
+    @keyframes rotate-inner {
+      0% {
+        transform: rotate(0) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+      50% {
+        transform: rotate(-210deg) rotate3d(1, 1, 1, -15deg) scale(0.3);
+      }
+      100% {
+        transform: rotate(-360deg) rotate3d(1, 1, 1, 0deg) scale(1);
+      }
+    }
+
+    animation: rotate-inner linear;
+    animation-duration: var(--speed-animation-middle);
+    animation-iteration-count: infinite;
+  }
+
+  &__orbit-rotate {
+    transition: all .15s linear;
+  }
+
+  &__planet-free {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 751px;
+    top: 565px;
+    transform: rotate(-31deg);
+    background: url(assets/img/planet-free.svg);
+    @include background-contain-center;
+
+    #{$night} & {
+      background: url(assets/img/planet-free-dark.svg);
+      @include background-contain-center;
+    }
+
+    transition: none;
+  }
+
+  &__planet-star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 751px;
+    top: 565px;
+    background: url(assets/img/star.svg);
+    @include background-contain-center;
+    transition: none;
+
+    &--1 {
+      width: 9px;
+      height: 9px;
+      left: 238px;
+      top: 404px;
+    }
+
+    &--2 {
+      width: 18px;
+      height: 18px;
+      left: 218px;
+      top: 416px;
+    }
+
+    &--3 {
+      width: 9px;
+      height: 9px;
+      left: 287px;
+      top: 610px;
+    }
+
+    &--4 {
+      width: 18px;
+      height: 18px;
+      left: 1071px;
+      top: 337px;
+    }
+
+    &--5 {
+      width: 9px;
+      height: 9px;
+      left: 1053px;
+      top: 398px;
+    }
+  }
+
+  &__items {
+    position: relative;
+    z-index: 5;
+    padding-left: 208px;
+
+    @media #{$mobile-big-screen}{
+      padding-left: 40px;
+      padding-top: 40px;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+    color: var(--blue-color);
+    font-size: 47px;
+    line-height: 53px;
+    font-weight: 300;
+    position: relative;
+    cursor: default;
+
+    #{$night} & {
+      color: var(--white-color);
+    }
+
+    @media #{$mobile-big-screen}{
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+
+    &:after {
+      @include after-absolute;
+      left: -50px;
+      height: 2px;
+      width: 26px;
+      background: var(--beige-color);
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media #{$mobile-big-screen}{
+        left: -40px;
+        height: 1px;
+      }
+    }
+
+    &:before {
+      @include after-absolute;
+      left: -50px;
+      height: 26px;
+      width: 26px;
+      background: url(assets/img/star.svg);
+      @include background-contain-center;
+      top: 50%;
+      transform: translateY(-50%) scaleY(0);
+
+      @media #{$mobile-big-screen}{
+        left: -40px;
+      }
+    }
+
+    &:hover:after {
+      transform: translateY(-50%) scaleY(0);
+    }
+
+    &:hover:before {
+      transform: translateY(-50%) scaleY(1);
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.lang-selector {
+  width: 102px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  position: relative;
+  z-index: 100;
+
+  &.active {
+    background: #242930;
+  }
+
+  $active: '.lang-selector.active';
+
+
+  @media #{$mobile-big-screen} {
+    width: 50px;
+  }
+
+  &__button {
+    position: relative;
+
+    &:after {
+      @include after-absolute;
+      width: 9px;
+      height: 6px;
+      background: url(../../img/down-arrow.svg);
+      @include background-contain-center;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media #{$mobile-big-screen} {
+        right: 6px;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    transform: scaleY(0);
+    visibility: hidden;
+    transform-origin: top;
+
+    #{$active} & {
+      transform: scaleY(1);
+      visibility: visible;
+      background: #242930;
+    }
+
+    @media #{$mobile-big-screen} {
+      top: 28px;
+    }
+  }
+
+  &__item {
+    background: transparent;
+    text-transform: uppercase;
+    height: 30px;
+    font-size: 11px;
+    font-weight: 300;
+    width: 100%;
+    cursor: pointer;
+    @include flex-row;
+    align-items: center;
+    padding-left: 46px;
+    color: #cddaec;
+    position: relative;
+    border-radius: 2px;
+
+    &:hover {
+      color: #616f83;
+
+      @media #{$mobile-big-screen} {
+        color: transparent;
+      }
+    }
+
+    &:after {
+      @include after-absolute;
+      left: 16px;
+      width: 18px;
+      height: 12px;
+      border-radius: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../../img/flag-sprite.png);
+      background-size: 700% 100%;
+
+      @media #{$mobile-big-screen} {
+        left: 6px;
+      }
+    }
+
+    &--ru:after {
+      background-position-x: 0
+    }
+    &--en:after {
+      background-position-x: -100%
+    }
+    &--fr:after {
+      background-position-x: -200%
+    }
+    &--de:after {
+      background-position-x: -300%
+    }
+    &--es:after {
+      background-position-x: -400%
+    }
+    &--jp:after {
+      background-position-x: -500%
+    }
+    &--pl:after {
+      background-position-x: -600%
+    }
+
+    @media #{$mobile-big-screen} {
+      padding-left: 0;
+      color: transparent;
+    }
+
+  }
+
+}

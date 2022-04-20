@@ -1,0 +1,66 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.checkbox {
+  position: relative;
+  margin: 8px 0;
+  width: 100%;
+
+  &__input {
+    position: absolute;
+    @include absolute-fill;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  $checked: '.checkbox__input:checked';
+  $focus: '.checkbox__input:focus';
+
+  &__label {
+    cursor: pointer;
+    padding-left: 25px;
+    display: block;
+    color: $white;
+    font-size: 13px;
+    font-weight: 300;
+
+    &:before,
+    &:after {
+      @include after-absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid transparent;
+      width: 16px;
+      height: 16px;
+      border-radius: 5px;
+    }
+
+    &:before {
+      border-color: #cccccc;
+      background: $white;
+    }
+
+    &:after {
+      background: $blue;
+      mask: url(../../../img/checkbox.svg);
+      -webkit-mask: url(../../../img/checkbox.svg);
+      @include mask-contain-center;
+      opacity: 0;
+      width: 12px;
+      height: 12px;
+      left: 2px;
+    }
+
+    #{$checked} + &:before {
+      border-color: $blue;
+      //background: $blue;
+    }
+
+    #{$checked} + &:after {
+      opacity: 1;
+    }
+  }
+
+}

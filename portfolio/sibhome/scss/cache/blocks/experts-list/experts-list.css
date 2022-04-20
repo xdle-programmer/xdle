@@ -1,0 +1,165 @@
+.experts-list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 405px;
+  padding: 10px;
+  background: #ededed;
+  border: 1px solid #545555;
+  margin-bottom: 20px; }
+  @media (max-width: 1279px) {
+    .experts-list__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: auto; } }
+
+.experts-list__item-slider-wrapper {
+  width: 33%;
+  height: 100%;
+  position: relative; }
+  @media (max-width: 1279px) {
+    .experts-list__item-slider-wrapper {
+      width: 100%;
+      height: auto; } }
+
+.experts-list .owl-prev,
+.experts-list .owl-next {
+  position: absolute;
+  width: 25px !important;
+  height: 90px !important;
+  background: url(../../img/arrow-white.svg) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%) scaleX(-1); }
+
+.experts-list .owl-next {
+  left: auto;
+  right: 15px;
+  transform: translateY(-50%); }
+
+.experts-list .owl-prev span,
+.experts-list .owl-next span {
+  display: none; }
+
+.experts-list__item-slider-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  height: 385px; }
+
+.experts-list__item-slider-item-title {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center; }
+
+.experts-list__item-text {
+  width: 33%;
+  height: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 300;
+  overflow: hidden; }
+  @media (max-width: 1279px) {
+    .experts-list__item-text {
+      width: 100%;
+      height: auto;
+      padding: 30px 0; } }
+
+.experts-list__item-person {
+  width: 33%;
+  height: 100%; }
+  @media (max-width: 1279px) {
+    .experts-list__item-person {
+      width: 100%;
+      height: auto; } }
+
+.experts-list__item-person-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 10px; }
+
+.experts-list__item-person-author-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important; }
+
+.experts-list__item-person-author-name {
+  width: 0;
+  margin-left: 20px;
+  flex-grow: 1; }
+
+.experts-list__item-person-author-name-value {
+  font-size: 24px;
+  font-weight: 300; }
+
+.experts-list__item-person-author-name-position {
+  font-size: 18px;
+  font-weight: 300; }
+
+.experts-list__item-person-contacts-item {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 300;
+  color: #545555;
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center; }
+  .experts-list__item-person-contacts-item:before {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; }
+  .experts-list__item-person-contacts-item--address:before {
+    background-image: url(../../img/map-green.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+  .experts-list__item-person-contacts-item--phone:before {
+    background-image: url(../../img/phone-green.svg);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+
+.experts-list__item-person-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.experts-list__item-person-link-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  color: #ffffff;
+  height: 45px;
+  padding: 0 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  background: url(../../img/pattern.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important; }

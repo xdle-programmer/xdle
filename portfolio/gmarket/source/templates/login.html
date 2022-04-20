@@ -1,0 +1,83 @@
+{% include "partials/header.html" with {
+	auth: true
+} %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<a href="#" class="breadcrumbs__item">
+				<span>Главная</span>
+			</a>
+			<span class="breadcrumbs__item">
+				<span>Личный кабинет</span>
+			</span>
+		</div>
+	</div>
+	<main>
+		
+		<div class="container">
+			<section class="order-wrap">
+				<div class="half-wrap half-wrap_mobile-full half-wrap_space">
+					
+					<div class="frame-block mobile-stretch frame-block_full-height frame-block_no-space">
+						<div class="frame-block__head">
+							<div class="frame-block__center">
+								<i class="icon icon-user frame-block__head-icon"></i>
+								<b>Войти</b>
+							</div>
+						</div>
+						<div class="frame-block__inner">
+							<div class="frame-block__center">
+								<div class="input-row">
+									<div class="input-row__name required-mark">Телефон или Email</div>
+									<div class="regular-input">
+										<input type="text" name="" class="regular-input__input" data-validation="login">
+									</div>
+								</div>
+								<div class="input-row">
+									<div class="input-row__name required-mark">Пароль</div>
+									<div class="regular-input">
+										<input type="password" name="" class="regular-input__input">
+									</div>
+								</div>
+								<div class="button-row">
+									<button class="button button_auto-width">Войти</button>
+									<a href="#" class="underline-button font-reg">
+										Забыли пароль?
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="half-wrap half-wrap_space half-wrap_mobile-full">
+					
+					<div class="frame-block mobile-stretch frame-block_full-height frame-block_no-space">
+						<div class="frame-block__head">
+							<div class="frame-block__center">
+								<i class="icon icon-add frame-block__head-icon"></i>
+								<b>Регистрация</b>
+							</div>
+						</div>
+						<div class="frame-block__inner">
+							<div class="frame-block__center">
+								<ul class="check-list">
+	                                <li>Отсслеживание заказов</li>
+	                                <li>Акции и персональные предложения</li>
+	                                <li>История заказов</li>
+	                                <li>Бонусная программа</li>
+	                                <li>Бонусная программа</li>
+	                            </ul>
+								<div class="button-row button-row_bottom-sticky">
+									<a href="#" class="button button_full-width">Зарегистрироваться</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
+		
+		
+	</main>
+{% include "partials/footer.html" %}

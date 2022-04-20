@@ -1,0 +1,31 @@
+.button-gradient {
+  border-radius: 100px;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 700;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap; }
+  .button-gradient:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #554ae8, #de92c2);
+    background-size: 200% 100%;
+    animation: poster-button 5s ease infinite paused;
+    z-index: -2; }
+
+@keyframes poster-button {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+  .button-gradient:hover:before {
+    animation-play-state: running; }

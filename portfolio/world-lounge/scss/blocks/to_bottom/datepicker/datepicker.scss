@@ -1,0 +1,38 @@
+@import "../../to_head/base/variables";
+@import "../../to_head/base/media-queries";
+@import "../../to_head/base/mixins";
+
+.ui-datepicker {
+  @include font-default;
+  width: 280px !important;
+  z-index: 2000!important;
+}
+
+.ui-widget-header {
+  background: $brown !important;
+  border-radius: 0 !important;
+  color: $white !important;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  border: 1px solid transparent !important;
+  top: 1px !important;
+}
+
+.ui-datepicker-prev {
+  left: 1px !important;
+}
+
+.ui-datepicker-next {
+  right: 1px !important;
+}
+
+.ui-state-hover {
+  background: $brown !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  color: $white !important;
+}
+
+//ui-datepicker-prev ui-state-hover ui-corner-all

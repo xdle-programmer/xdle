@@ -1,0 +1,156 @@
+.about-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  flex-wrap: wrap; }
+  .about-desc__half {
+    width: calc(50% - 80px);
+    position: relative; }
+    @media (max-width: 767px) {
+      .about-desc__half {
+        width: 100%; } }
+  .about-desc__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background: #ffffff; }
+    .about-desc__title span {
+      color: #959595; }
+    @media (max-width: 767px) {
+      .about-desc__title {
+        font-size: 24px;
+        margin-bottom: 20px; } }
+  .about-desc__subtitle {
+    position: absolute;
+    transform: rotate(-90deg);
+    color: #959595;
+    font-size: 48px;
+    font-weight: 700;
+    left: -220px;
+    top: 140px; }
+  .about-desc__faq-item {
+    position: relative;
+    padding-bottom: 0;
+    overflow: hidden; }
+  .about-desc__faq-item-title {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1;
+    cursor: pointer;
+    background: #ffffff;
+    z-index: 2;
+    position: relative; }
+  .about-desc__faq-item-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    color: #8a8a8a;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0; }
+    .about-desc__faq-item.active .about-desc__faq-item-text {
+      opacity: 1;
+      visibility: visible; }
+  .about-desc__faq-item-list {
+    margin-bottom: 15px; }
+  .about-desc__faq-item-list-inner {
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 5px; }
+    .about-desc__faq-item-list-inner:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #8a8a8a;
+      width: 10px;
+      height: 1px;
+      left: 0;
+      top: 5px; }
+  .about-desc__faq-item-link {
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer; }
+  .about-desc__presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start; }
+    @media (max-width: 767px) {
+      .about-desc__presentation {
+        justify-content: space-between;
+        width: 100%; } }
+  .about-desc__sign {
+    margin-left: 70px;
+    width: 130px;
+    height: 37px;
+    background: url(../../../img/sign.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    @media (max-width: 767px) {
+      .about-desc__sign {
+        margin-left: 0;
+        width: 100px;
+        height: 30px; } }
+  .about-desc__partner-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .about-desc__partner-title {
+        margin-bottom: 20px; } }
+  .about-desc__partner-title-inner {
+    width: 45%;
+    font-size: 48px;
+    font-weight: 700;
+    background: #ffffff; }
+    .about-desc__partner-title-inner span {
+      color: #959595; }
+    @media (max-width: 767px) {
+      .about-desc__partner-title-inner {
+        font-size: 24px;
+        width: 100%;
+        margin-bottom: 20px; } }
+  .about-desc__partner-text {
+    width: 55%;
+    color: #959595;
+    line-height: 20px; }
+    @media (max-width: 767px) {
+      .about-desc__partner-text {
+        width: 100%;
+        line-height: 20px; } }
+  .about-desc__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px 4%;
+    width: 100%;
+    padding-top: 40px;
+    grid-template-areas: 'name type' 'phone message' 'email message'; }
+    @media (max-width: 767px) {
+      .about-desc__items {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        grid-template-areas: 'name' 'phone' 'email' 'type' 'message'; } }
+  .about-desc__input-item--name {
+    grid-area: name; }
+  .about-desc__input-item--phone {
+    grid-area: phone; }
+  .about-desc__input-item--email {
+    grid-area: email; }
+  .about-desc__input-item--type {
+    grid-area: type; }
+  .about-desc__input-item--message {
+    grid-area: message; }

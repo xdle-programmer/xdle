@@ -1,0 +1,39 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.advertising {
+
+  &__item {
+    border-radius: 3px;
+    width: 100%;
+    @include background-cover-center;
+
+    &--1220x200 {
+      padding-bottom: 16.39%;
+    }
+
+    &--1220x290 {
+      padding-bottom: 23.77%;
+    }
+
+    &--600x390 {
+      height: 390px;
+
+      @media #{$tablet-small-screen} {
+        height: 0;
+        padding-bottom: 65%;
+      }
+    }
+
+    &--290x620 {
+      height: 620px;
+
+      @media #{$tablet-small-screen} {
+        height: 0;
+        padding-bottom: 213.79%;
+      }
+    }
+  }
+
+}

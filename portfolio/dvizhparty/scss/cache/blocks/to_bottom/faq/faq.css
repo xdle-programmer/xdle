@@ -1,0 +1,85 @@
+.faq {
+  padding-bottom: 23%;
+  padding-top: 3%;
+  position: relative; }
+  .faq:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/img/faq_background.jpg);
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    z-index: -2; }
+  .faq:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 400px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 400px);
+    background: linear-gradient(to bottom, rgba(0, 35, 161, 0) 0, #0021a2 70%);
+    z-index: -1; }
+  .faq__items {
+    background: rgba(15, 21, 44, 0.7);
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5; }
+  .faq__item {
+    margin-bottom: 15px;
+    position: relative; }
+  .faq__item-name {
+    background: linear-gradient(135deg, #007aec 0%, #004694 100%);
+    height: 60px;
+    padding: 0 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    padding-left: 70px;
+    position: relative; }
+    @media (max-width: 767px) {
+      .faq__item-name {
+        font-size: 16px;
+        padding-left: 40px; } }
+    .faq__item-name:before, .faq__item-name:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 35px;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 8px;
+      height: 2px;
+      background: #ffffff; }
+      @media (max-width: 767px) {
+        .faq__item-name:before, .faq__item-name:after {
+          left: 20px; } }
+    .faq__item-name:before {
+      transform: translateY(-50%) translateX(-50%) rotate(90deg);
+      transition: all .3s ease-in-out; }
+    .faq__item-name.active:before {
+      transform: translateY(-50%) translateX(-50%) rotate(180deg);
+      transition: all .3s ease-in-out; }
+  .faq__item-text-inner {
+    position: relative; }
+  .faq__item-text {
+    padding: 26px 25px;
+    color: #ffffff;
+    padding-left: 50px;
+    line-height: 23px;
+    font-size: 16px;
+    display: none;
+    transition: none; }
+    @media (max-width: 767px) {
+      .faq__item-text {
+        padding: 10px; } }

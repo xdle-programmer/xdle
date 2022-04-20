@@ -1,0 +1,138 @@
+@import "../base/variables";
+@import "../base/media-queries";
+@import "../base/mixins";
+
+.process-list {
+  padding: 50px 0;
+  position: relative;
+
+  &:before,
+  &:after {
+    @include after-absolute;
+    width: 50%;
+    top: 0;
+    height: 100%;
+  }
+
+  &:before {
+    background: #1d519d;
+    left: 0;
+
+    @media #{$tablet-big-screen} {
+      width: 94px;
+    }
+  }
+
+  &:after {
+    background: #2a5eab;
+    right: 0;
+
+    @media #{$tablet-big-screen} {
+      width: calc(100% - 94px);
+    }
+  }
+
+  &__block {
+  }
+
+  &__title {
+    color: $white!important;
+    margin-bottom: 68px;
+    position: relative;
+    z-index: 2;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $white;
+    z-index: 2;
+    position: relative;
+    @include margin-auto;
+    width: 945px;
+    padding-right: 64px;
+
+    @media #{$tablet-big-screen} {
+      grid-template-columns: 1fr;
+      width: 100%;
+
+      padding-right: 0;
+    }
+  }
+
+  &__column {
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 97px;
+    padding-top: 4px;
+    min-height: 135px;
+
+    @media #{$tablet-big-screen} {
+      height: auto;
+      min-height: auto;
+      padding-bottom: 25px;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-number {
+    width: 64px;
+    height: 64px;
+    background-color: #3769b3;
+    border-radius: 50%;
+    position: absolute;
+    @include flex-row-center;
+    font-size: 24px;
+    font-weight: bold;
+    left: 0;
+    top: 0;
+
+    &:after {
+      @include after-absolute;
+      width: 16px;
+      height: 40px;
+      background: url(../../../img/process-list/step.svg);
+      @include background-contain-center;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% + 15px);
+
+      @media #{$tablet-big-screen} {
+        display: none;
+      }
+    }
+  }
+
+  &__item:nth-last-of-type(1) &__item-number:after {
+    display: none;
+  }
+
+  &__item-desc {
+  }
+
+  &__item-desc-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 17px;
+
+    @media #{$tablet-big-screen} {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__item-desc-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    [[blocks/head.html*1]]
+    <title>Анкета</title>
+</head>
+
+<body class="body-gray">
+
+[[blocks/header.html*1]]
+
+<div class="head-banner head-banner--form head-banner--small head-banner--center">
+    <div class="layout">
+        <div class="head-banner__block head-banner__block--center">
+            <div class="head-banner__title head-banner__title--small">Анкета стартапа</div>
+            <div class="head-banner__icons">
+                <a href="#" class="head-banner__icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="head-banner__icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="head-banner__icon"><i class="fab fa-youtube-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="layout">
+    <div class="form-title">
+        Расскажите о вашем проекте в форме ниже, либо заполните анкету и отправьте её нам на grow@yrockets.com.
+    </div>
+
+    <div class="question">
+        <div class="question__item question__item--required">Заголовок обязательного блока вопросов</div>
+        <div class="question-label">Фамилия</div>
+        <input class="question-input" placeholder="Фамилия">
+        <div class="question-label">Имя</div>
+        <input class="question-input" placeholder="Имя">
+        <div class="question-label">Отчество</div>
+        <input class="question-input" placeholder="Отчество">
+    </div>
+
+    <div class="question">
+        <div class="question__item">Заголовок не обязательного блока вопросов</div>
+        <div class="question-label">Ваш e-mail</div>
+        <input class="question-input" placeholder="Ваш e-mail">
+        <div class="question-label">Ваш номер телефона</div>
+        <input class="question-input" placeholder="Ваш номер телефона">
+    </div>
+
+    <div class="question">
+        <div class="question__item question__item--required">Текстовое поле</div>
+        <textarea class="question-input question-input--textarea"
+                  placeholder="Описание проекта в 140 символах"></textarea>
+    </div>
+
+
+    <div class="question">
+        <div class="question__item question__item--required">Набор чекбоксов</div>
+        <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="1" class="checkbox__input"/><label for="1" class="checkbox__label">3D печать</label>
+            <input type="checkbox" name="checkbox" id="2" class="checkbox__input"/><label for="2" class="checkbox__label">Робототехника</label>
+            <input type="checkbox" name="checkbox" id="3" class="checkbox__input"/><label for="3" class="checkbox__label">Решения для производства</label>
+        </div>
+
+    </div>
+
+
+    <div class="form-agree">
+        <input type="checkbox" name="checkbox" id="5" class="checkbox__input"/><label for="5" class="checkbox__label form-agree__checkbox">Отправляя настоящую анкету, я соглашаюсь с тем, что переданная и полученная мной информация в рамках рассмотрения настоящей анкеты и иных связанных документов в целях инвестирования считается конфиденциальной для меня и принимающей анкету стороны.</label>
+        <input type="checkbox" name="checkbox" id="6" class="checkbox__input"/><label for="6" class="checkbox__label form-agree__checkbox">Я даю согласие на обработку персональных данных в соответствии с Политикой и Соглашением.</label>
+        <div class="button form-agree__button">Отправить</div>
+    </div>
+
+
+
+
+</div>
+
+[[blocks/footer.html*1]]
+
+</body>
+</html>
